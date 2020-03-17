@@ -1,0 +1,451 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tutorials & Workshops - ZITNIK LAB</title>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="shortcut icon" type="image/png"
+           href="favicon.png" 
+    />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Tutorials &amp; Workshops | ZITNIK LAB</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Tutorials &amp; Workshops" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="/tutorials-workshops/" />
+<meta property="og:url" content="/tutorials-workshops/" />
+<meta property="og:site_name" content="ZITNIK LAB" />
+<script type="application/ld+json">
+{"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"WebPage","url":"/tutorials-workshops/","headline":"Tutorials &amp; Workshops","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- head scripts --></head>
+
+  <body>
+    
+<nav class="navbar is-primary" >
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item"><b>
+                ZITNIK LAB
+            </b></a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+                <a href="/" class="navbar-item "><b>Home</b></a>
+                
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a href="/#" class="navbar-link "><b>Marinka Zitnik</b></a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/bio/" class="navbar-item "><b>Bio</b></a>
+                            
+                            <a href="/contact/" class="navbar-item "><b>Contact</b></a>
+                            
+                            <a href="/talks/" class="navbar-item "><b>Recent Talks</b></a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                <a href="/research/" class="navbar-item "><b>Research</b></a>
+                    
+                
+                    
+                <a href="/publications/" class="navbar-item "><b>Publications</b></a>
+                    
+                
+                    
+                <a href="/people/" class="navbar-item "><b>Research Group</b></a>
+                    
+                
+                    
+                <a href="/tutorials-workshops/" class="navbar-item is-active"><b>Tutorials & Workshops</b></a>
+                    
+                
+                    
+                <a href="/data/" class="navbar-item "><b>Data</b></a>
+                    
+                
+                    
+                <a href="/software/" class="navbar-item "><b>Software</b></a>
+                    
+                
+                    
+                <a href="/jobs/" class="navbar-item "><b>Join Us</b></a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+
+    
+        <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
+    <div class="hero-body">
+        <div class="container">
+            <p class="title is-2">Tutorials & Workshops</p>
+            <p class="subtitle is-3"></p>
+            
+        </div>
+    </div>
+</section>
+    
+    
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+                <div class="column is-8">
+                    
+                    
+                    
+    
+    
+
+<div class="contents">
+    <div class="menu">
+        <p class="menu-label">Contents</p>
+        <ul class="menu-list">
+  <li><a href="#tutorial-deep-learning-for-network-biology">Tutorial: Deep learning for network biology</a></li>
+  <li><a href="#tutorial-biomedical-data-fusion">Tutorial: Biomedical data fusion</a></li>
+  <li><a href="#workshop-representation-learning-on-graphs-and-manifolds">Workshop: Representation learning on graphs and manifolds</a></li>
+</ul>
+    </div>
+</div>
+
+
+
+
+<div class="content">
+    <h2 id="tutorial-deep-learning-for-network-biology">Tutorial: Deep learning for network biology</h2>
+
+<div class="box has-background-info has-text-white">
+Networks are ubiquitous in biology where they encode connectivity patterns at all scales of organization, from molecular to the biome. This tutorial investigates key advancements in representation learning for networks over the last few years, with an emphasis on fundamentally new opportunities in network biology enabled by these advancements.
+</div>
+
+<p>Biological networks are powerful resources for the discovery of interactions and emergent properties in biological systems, ranging from single-cell to population level. Network approaches have been used many times to combine and amplify signals from individual genes, and have led to remarkable discoveries in biology, including drug discovery, protein function prediction, disease diagnosis, and precision medicine. Furthermore, these approaches have shown broad utility in uncovering new biology and have contributed to new discoveries in wet laboratory experiments.</p>
+
+<p>Mathematical machinery that is central to these approaches is machine learning on networks. The main challenge in machine learning on networks is to find a way to extract information about interactions between nodes and to incorporate that information into a machine learning model. To extract this information from networks, classic machine learning approaches often rely on summary statistics (e.g., degrees or clustering coefficients) or carefully engineered features to measure local neighborhood structures (e.g., network motifs). These classic approaches can be limited because these hand-engineered features are inflexible, they often do not generalize to networks derived from other organisms, tissues and experimental technologies, and can fail on datasets with low experimental coverage.</p>
+
+<p>Recent years have seen a surge in approaches that automatically learn to encode network structure into low-dimensional representations, using transformation techniques based on deep learning and nonlinear dimensionality reduction. The idea behind these <em>representation learning</em> approaches is to learn a data transformation function that maps nodes to points in a low-dimensional vector space, also termed <em>embeddings</em>. Representation learning methods have revolutionized the state-of-the-art in network science and the goal of this tutorial is to open the door for these methods to computational biology and bioinformatics.</p>
+
+<p>This tutorial was presented at the <a href="https://www.iscb.org/ismb2018">ISMB</a> conference.</p>
+
+<p><img src="/img/deepnetbio-ismb.png" alt="deepnetbio-ismb" /></p>
+
+<div class="box has-text-centered is-shadowless">
+    <a class="button is-primary" href="http://snap.stanford.edu/deepnetbio-ismb/">Tutorial Slides</a>
+    <a class="button is-primary" href="http://snap.stanford.edu/deepnetbio-ismb/ipynb/Human+Disease+Network.html">Demo Diseases</a>
+    <a class="button is-primary" href="http://snap.stanford.edu/deepnetbio-ismb/ipynb/Graph+Convolutional+Prediction+of+Protein+Interactions+in+Yeast.html">Demo Yeast</a>
+</div>
+
+<hr />
+
+<h2 id="tutorial-biomedical-data-fusion">Tutorial: Biomedical data fusion</h2>
+
+<div class="box has-background-info has-text-white">
+Because of the complex and interconnected nature of biomedical systems, any single model trained on any single dataset can touch only a small part of the entire biomedical knowledge. It is thus critical to integrate diverse sources of information to gain a comprehensive understanding of the system.
+</div>
+
+<p>New technologies have enabled the investigation of biology and human health at an unprecedented scale and in multiple dimensions. These dimensions include a myriad of properties describing genome, epigenome, transcriptome, microbiome, phenotype, and lifestyle. No single data type, however, can capture the complexity of all the factors relevant to understanding a phenomenon such as a disease. Integrative methods that combine data from multiple technologies have thus emerged as critical statistical and computational approaches.</p>
+
+<p>The key challenge in developing such approaches is the identification of effective models to provide a comprehensive and relevant systems view. An ideal method can answer a biological or medical question, identifying important features and predicting outcomes, by harnessing heterogeneous data across several dimensions of biological variation.</p>
+
+<p>This tutorial was presented at the <a href="https://embc.embs.org">EMBC</a> and <a href="https://www.bc2.ch/">[BC]^2</a> conferences.</p>
+
+<p><img src="/img/biomedical-data-fusion.png" alt="biomedical-data-fusion" /></p>
+
+<div class="box has-text-centered is-shadowless">
+    <a class="button is-primary" href="http://helikoid.si/embc15/embc-slides.pdf">Tutorial Slides Part 1</a>
+    <a class="button is-primary" href="http://helikoid.si/embc15/embc15-fusion.pdf">Tutorial Slides Part 2</a>
+    <a class="button is-primary" href="http://helikoid.si/embc15/embc-handouts.pdf">Tutorial Handouts</a>
+</div>
+
+<hr />
+
+<h2 id="workshop-representation-learning-on-graphs-and-manifolds">Workshop: Representation learning on graphs and manifolds</h2>
+
+<div class="box has-background-info has-text-white">
+Many scientific fields study data with an underlying graph or manifold structure—such as social networks, sensor networks, biomedical knowledge graphs, and meshed surfaces in computer graphics. Recent years have seen a surge in research on these problems—often under the umbrella terms of graph representation learning and geometric deep learning. 
+</div>
+
+<p>The need for new optimization methods and neural network architectures that can accommodate these relational and non-Euclidean structures is becoming increasingly clear. In parallel, there is a growing interest in how we can leverage insights from these domains to incorporate new kinds of relational and non-Euclidean inductive biases into deep learning.</p>
+
+<p>This workshop was presented at the <a href="https://iclr.cc/Conferences/2019">ICLR</a> conference.</p>
+
+<p><img src="/img/decagon-architecture.png" alt="decagon-architecture" /></p>
+
+<div class="box has-text-centered is-shadowless">
+    <a class="button is-primary" href="http://snap.stanford.edu/deepnetbio-ismb/">Workshop Website</a>
+</div>
+
+
+</div>
+                </div>
+                
+                <div class="column is-4-desktop is-12-tablet">
+                    <p class="title is-4">Latest News</p>
+
+<div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2020/03/02/graphl-ml-workshop/">Graph ML workshop at ICML 2020</a>-->
+        <p class="card-header-title">Mar 2020: &nbsp; <span class="has-text-primary">Graph ML workshop at ICML 2020</span></p>
+<!--        <p class="card-header-item">Mar 2020</p>-->
+<!--        <p class="card-footer-item">Mar 2, 2020</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>We will co-organize a workshop of Graph Representation Learning at <a href="https://icml.cc/Conferences/2020/Dates">ICML 2020</a>. Stay tuned for a call for papers and more details!</p>
+</p>-->
+            <p>We will co-organize a workshop of Graph Representation Learning at <a href="https://icml.cc/Conferences/2020/Dates">ICML 2020</a>. Stay tuned for a call for papers and more details!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2020/03/02/graphl-ml-workshop/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 2, 2020</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2020/03/02/IJCAI-tutorial/">Accepted tutorial at IJCAI!</a>-->
+        <p class="card-header-title">Mar 2020: &nbsp; <span class="has-text-primary">Accepted tutorial at IJCAI!</span></p>
+<!--        <p class="card-header-item">Mar 2020</p>-->
+<!--        <p class="card-footer-item">Mar 2, 2020</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>We will present a tutorial or Machine Learning for Drug Development at IJCAI 2020! Stay tuned for details.</p>
+</p>-->
+            <p>We will present a tutorial or Machine Learning for Drug Development at IJCAI 2020! Stay tuned for details.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2020/03/02/IJCAI-tutorial/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 2, 2020</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2020/03/01/welcome-to-new-students/">Welcome new students!</a>-->
+        <p class="card-header-title">Mar 2020: &nbsp; <span class="has-text-primary">Welcome new students!</span></p>
+<!--        <p class="card-header-item">Mar 2020</p>-->
+<!--        <p class="card-footer-item">Mar 1, 2020</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Haoxin, Michelle, and Xiang joined the lab. Welcome! We look forward to meeting you all in the lab!</p>
+</p>-->
+            <p>Haoxin, Michelle, and Xiang joined the lab. Welcome! We look forward to meeting you all in the lab!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2020/03/01/welcome-to-new-students/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 1, 2020</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2020/02/01/new-preprint-MARS/">Meta learing for single-cell biology</a>-->
+        <p class="card-header-title">Feb 2020: &nbsp; <span class="has-text-primary">Meta learing for single-cell biology</span></p>
+<!--        <p class="card-header-item">Feb 2020</p>-->
+<!--        <p class="card-footer-item">Feb 1, 2020</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p><a href="https://www.biorxiv.org/content/10.1101/2020.02.25.960302v1">New preprint on meta learning for identifying and naming cell types</a>, even cell types that have never been seen before and do not exist in the training data. Check it out!</p>
+</p>-->
+            <p><a href="https://www.biorxiv.org/content/10.1101/2020.02.25.960302v1">New preprint on meta learning for identifying and naming cell types</a>, even cell types that have never been seen before and do not exist in the training data. Check it out!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2020/02/01/new-preprint-MARS/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 1, 2020</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2019/12/20/new-paper-ICLR/">Pre-training graph neural networks</a>-->
+        <p class="card-header-title">Dec 2019: &nbsp; <span class="has-text-primary">Pre-training graph neural networks</span></p>
+<!--        <p class="card-header-item">Dec 2019</p>-->
+<!--        <p class="card-footer-item">Dec 20, 2019</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p><a href="https://openreview.net/forum?id=HJlWWJSFDH">Strategies for Pre-training Graph Neural Networks</a> accepted as a spotlight paper at <a href="https://iclr.cc/">ICLR 2020</a>.</p>
+</p>-->
+            <p><a href="https://openreview.net/forum?id=HJlWWJSFDH">Strategies for Pre-training Graph Neural Networks</a> accepted as a spotlight paper at <a href="https://iclr.cc/">ICLR 2020</a>.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2019/12/20/new-paper-ICLR/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 20, 2019</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2019/12/01/special-issue-deep-learning/">Deep learning for network biology</a>-->
+        <p class="card-header-title">Dec 2019: &nbsp; <span class="has-text-primary">Deep learning for network biology</span></p>
+<!--        <p class="card-header-item">Dec 2019</p>-->
+<!--        <p class="card-footer-item">Dec 1, 2019</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Marinka is co-editing a special issue of ACM/IEEE TCBB on <a href="https://www.computer.org/digital-library/journals/tb/call-for-papers-special-issue-on-deep-learning-and-graph-embeddings-for-network-biology">Deep Learning and Graph Embeddings for Network Biology</a>. Submit your finest work!</p>
+</p>-->
+            <p>Marinka is co-editing a special issue of ACM/IEEE TCBB on <a href="https://www.computer.org/digital-library/journals/tb/call-for-papers-special-issue-on-deep-learning-and-graph-embeddings-for-network-biology">Deep Learning and Graph Embeddings for Network Biology</a>. Submit your finest work!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2019/12/01/special-issue-deep-learning/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 1, 2019</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2019/12/01/welcome-to-new-students/">Welcome new students!</a>-->
+        <p class="card-header-title">Dec 2019: &nbsp; <span class="has-text-primary">Welcome new students!</span></p>
+<!--        <p class="card-header-item">Dec 2019</p>-->
+<!--        <p class="card-footer-item">Dec 1, 2019</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Kathleen, Jingyi, Kexin, Yujie, and Stone joined the lab. Welcome!</p>
+</p>-->
+            <p>Kathleen, Jingyi, Kexin, Yujie, and Stone joined the lab. Welcome!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2019/12/01/welcome-to-new-students/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 1, 2019</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2019/12/01/tweets/">Tweets</a>-->
+    <p class="card-header-title"><span class="has-text-primary">Tweets</span></p>
+<!--        <p class="card-header-item">Dec 2019</p>-->
+<!--        <p class="card-footer-item">Dec 1, 2019</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p><a class="twitter-timeline" data-width="500" data-height="500" data-theme="light" href="https://twitter.com/marinkazitnik?ref_src=twsrc%5Etfw" data-chrome="noheader transparent nofooter nofooter noborders">Tweets by marinkazitnik</a> <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+</p>-->
+            <p><a class="twitter-timeline" data-width="500" data-height="500" data-theme="light" href="https://twitter.com/marinkazitnik?ref_src=twsrc%5Etfw" data-chrome="noheader transparent nofooter nofooter noborders">Tweets by marinkazitnik</a> <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2019/12/01/tweets/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 1, 2019</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+</div>
+
+
+
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts -->
+<div style="background-color:#A41034">
+        <div class="content is-normal has-text-centered">
+            <p style="color:white;padding-top:20px;padding-bottom:20px;"><a href="https://scholar.harvard.edu/marinka" style="color:white"><b>Zitnik Lab</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://harvard.edu" style="color:white"><b>Harvard</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://dbmi.hms.harvard.edu/" style="color:white"><b>Department of Biomedical Informatics</b></a></p>
+        </div>
+</div></body>
+</html>
+

@@ -1,0 +1,120 @@
+/*.container {
+  width:90%;
+    margin:0 auto 0 auto;
+    margin-top: 30px;
+}
+*/
+
+.pub
+{
+  /*margin-bottom: 15px;*/
+  /*Indentation for year*/
+  /*margin-left: 10px;*/
+  font-size: 15px;
+}
+
+.pubInfo
+{
+  font-size: 100%;
+  margin-bottom: 100px;
+}
+
+.me
+{
+    font-weight: bolder;
+    color: black;
+}
+
+.title
+{
+    /*font-weight: bolder;*/
+    font-size:16px;
+    color:rgb(145,20,20);
+}
+
+.comment
+{
+    font-weight: bolder;
+    font-size: 15px;
+    color: black;
+}
+
+.authorship
+{
+    /*font-weight: bolder;*/
+    /*font-size: 15px;*/
+    color: gray;
+}
+
+.venue
+{
+    color: gray;
+}
+
+
+.thumbnail
+{
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    border:1px solid #021a40;
+    border-radius: 0px;
+}
+
+.award-icon
+{
+    margin-left:10px;
+    margin-right:5px;
+}
+
+.award-text
+{
+    font-size:14px;
+    vertical-align:text-top;
+    color: #474747;
+    text-decoration: underline;
+}
+
+
+
+.authors
+{
+    /*color: #185A7C;*/
+    color: #474747;
+}
+
+.type-tag
+{
+  font-size:13px;
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+  padding-left: 7;
+  padding-right: 7;
+  border-radius: 5px;
+}
+
+.supp
+{
+  color: #474747;
+  background-color: white;
+}
+
+/*h3
+{
+  color: #707070;
+  margin-left: 15px;
+
+}
+
+
+a:link, a:visited
+{
+    color:rgb(145,20,20);
+		text-decoration: none;
+}
+
+a:hover, a:active {
+  	color:rgb(145,20,20);
+  	text-decoration: underline;
+}*/

@@ -1,0 +1,788 @@
+{
+
+  "pub_grouping": {
+    "conference": "conference/workshop",
+    "workshop": "conference/workshop",
+    "journal": "journal/chapter",
+    "dissertation": "journal/chapter",
+    "chapter": "journal/chapter",
+    "poster": "other",
+    "article": "other",
+    "demo": "other",
+    "tech report": "other"
+  },
+
+  "publications": [
+     {
+      "key": "submission20b",
+      "author": ["Maria Brbic", "Marinka Zitnik", "Sheng Wang", "Angela O. Pisco",  "Russ B. Altman",  "Spyros Darmanis", "Jure Leskovec"],
+      "title": "Discovering Novel Cell Types Across Heterogeneous Single-Cell Experiments",
+      "venue": "In Review",
+      "year": "2020",
+      "thumbnail": "gnn-pretrain19.png",
+      "pdf": "",
+      "url": "https://www.biorxiv.org/content/10.1101/2020.02.25.960302v1",
+      "type": "journal",
+      "supp": 
+      {
+        "bioRxiv": "https://www.biorxiv.org/content/10.1101/2020.02.25.960302v1"
+      }
+    },
+
+     {
+      "key": "submission20c",
+      "author": ["Gregor Stiglic", "Primoz Kocbek", "Nino Fijacko", "Marinka Zitnik", "Katrien Verbert", "Leona Cilar"],
+      "title": "Interpretability of Machine Learning Based Prediction Models in Healthcare",
+      "venue": "In Review",
+      "year": "2020",
+      "thumbnail": "gnn-pretrain19.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2002.08596",
+      "type": "journal",
+      "supp": 
+      {
+        "arXiv": "https://arxiv.org/abs/2002.08596"
+      }
+    },
+
+     {
+      "key": "submission20a",
+      "author": ["Sheng Wang", "Angela O. Pisco", "Aaron McGeever", "Maria Brbic", "Marinka Zitnik", "Spyros Darmanis", "Jure Leskovec", "Jim Karkanias", "Russ B. Altman"],
+      "title": "Unifying Single-Cell Annotations Based on the Cell Ontology",
+      "venue": "In Review",
+      "year": "2020",
+      "thumbnail": "gnn-pretrain19.png",
+      "pdf": "",
+      "url": "https://www.biorxiv.org/content/10.1101/810234v2",
+      "type": "journal",
+      "supp": 
+      {
+        "bioRxiv": "https://www.biorxiv.org/content/10.1101/810234v2"
+      }
+    },
+
+     {
+      "key": "submission19e",
+      "author": ["Weihua Hu", "Bowen Liu", "Joseph Gomes", "Marinka Zitnik", "Percy Liang", "Vijay Pande", "Jure Leskovec"],
+      "title": "Pre-training Graph Neural Networks",
+      "venue": "Proceedings of the International Conference on Learning Representations, ICLR",
+      "year": "2020",
+      "thumbnail": "gnn-pretrain19.png",
+      "pdf": "papers/pretrain-iclr2020.pdf",
+      "url": "https://openreview.net/pdf?id=HJlWWJSFDH",
+      "type": "conference",
+      "supp": 
+      {
+        "arXiv": "http://arxiv.org/abs/1905.12265",
+        "website": "http://snap.stanford.edu/gnn-pretrain/",
+        "ICLR 2020 spotlight": "https://openreview.net/pdf?id=HJlWWJSFDH"
+      }
+    },
+
+    {
+      "key": "submission17c",
+      "author": ["Marinka Zitnik", "Russ Altman", "Jure Leskovec"],
+      "title": "Network-Based Discovery of Drug Indications",
+      "venue": "In Review",
+      "year": 2019,
+      "thumbnail": "ismb16.png",
+      "url": "",
+      "pdf": "",
+      "type": "journal"
+    },
+
+     {
+      "key": "submission19b",
+      "author": ["Rex Ying", "Dylan Bourgeois", "Jiaxuan You", "Marinka Zitnik", "Jure Leskovec"],
+      "title": "GNN Explainer: Generating Explanations for Graph Neural Networks",
+      "venue": "Proceedings of Neural Information Processing Systems, NeurIPS",
+      "year": "2019",
+      "thumbnail": "gnn-expl19.png",
+      "pdf": "papers/gnnexplainer-neurips19.pdf",
+      "url": "https://papers.nips.cc/paper/9123-gnnexplainer-generating-explanations-for-graph-neural-networks",
+      "type": "conference",
+      "supp": 
+      {
+        "arXiv": "https://arxiv.org/abs/1903.03894"
+      }
+    },
+
+   {
+      "key": "submission19a",
+      "author": ["Marinka Zitnik", "Rok Sosic", "Marcus W. Feldman", "Jure Leskovec"],
+      "title": "Evolution of Resilience in Protein Interactomes Across the Tree of Life",
+      "venue": "Proceedings of the National Academy of Sciences (PNAS)",
+      "year": 2019,
+      "thumbnail": "pnas19.png",
+      "url": "https://doi.org/10.1073/pnas.1818013116",
+      "pdf": "papers/tol-pnas19.pdf",
+      "type": "journal",
+      "supp": 
+      {
+        "supplementary information": "papers/tol-pnas19-SI.pdf",
+        "website": "http://snap.stanford.edu/tree-of-life",
+        "bioRxiv": "https://doi.org/10.1101/454033",
+        "poster": "posters/zitnik-ISMB2019.png",
+        "video": "https://youtu.be/1OVK9FwK7i0",
+        "slides CEHG 2019": "slides/lifetree-cehg19.pdf", 
+        "slides ISMB 2019": "slides/lifetree-ismb19.pdf", 
+        "Stanford News": "https://engineering.stanford.edu/magazine/article/new-research-shows-species-evolve-ways-backup-life-s-machinery"
+      }
+    },
+
+     {
+      "key": "submission19c",
+      "author": ["Walter Nelson", "Marinka Zitnik", "Bo Wang", "Jure Leskovec", "Anna Goldenberg", "Roded Sharan"],
+      "title": "To Embed or Not: Network Embedding as a Paradigm in Computational Biology",
+      "venue": "Frontiers in Genetics",
+      "year": "2019",
+      "thumbnail": "embed-frontiers19.png",
+      "pdf": "papers/embed-frontiers19.pdf",
+      "url": "https://doi.org/10.3389/fgene.2019.00381",
+      "type": "journal"
+    },
+
+    {
+      "key": "submission18d",
+      "author": ["Marinka Zitnik", "Francis Nguyen", "Bo Wang", "Jure Leskovec", "Anna Goldenberg", "Michael M. Hoffman"],
+      "title": "Machine Learning for Integrating Data in Biology and Medicine: Principles, Practice, and Opportunities",
+      "venue": "Information Fusion",
+      "year": "2019",
+      "thumbnail": "survey-fusion19.png",
+      "url": "https://doi.org/10.1016/j.inffus.2018.09.012",
+      "pdf": "papers/review-inffus19.pdf",
+      "type": "journal",
+      "supp": 
+      {
+        "arXiv": "https://arxiv.org/abs/1807.00123",
+        "Techology Feature in Nature Methods": "https://doi.org/10.1038/s41592-019-0432-9"
+      }
+    },
+
+    {
+      "key": "submission19d",
+      "author": ["Sarah Kunz", "Marinka Zitnik", "John Zupancic", "Jure Leskovec", "Joseph Rigdon", "Jochen Profit"],
+      "title": "Variation in Neonatal Referral Networks across Patient Groups",
+      "venue": "Pediatric Academic Societies Meeting, PAS",
+      "year": 2019,
+      "thumbnail": "pas19.png",
+      "url": "https://www.xcdsystem.com/pas2019/program/2019/index.cfm?pgid=156&sid=994",
+      "pdf": "https://www.xcdsystem.com/pas2019/program/2019/index.cfm?pgid=156&sid=994",
+      "type": "journal"
+    },
+
+    {
+      "key": "submission19f",
+      "author": ["Andrej Copar", "Blaz Zupan", "Marinka Zitnik"],
+      "title": "Fast Optimization of Non-negative Matrix Tri-factorization",
+      "venue": "PLoS One",
+      "year": 2019,
+      "thumbnail": "pone19.png",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0217994",
+      "pdf": "papers/fnmtf-pone19.pdf",
+      "type": "journal",
+      "supp": 
+      {
+        "code and data": "https://github.com/acopar/fast-nmtf"
+      }
+    },
+
+    {
+      "key": "submission17d",
+      "author": ["Marinka Zitnik", "Rok Sosic", "Jure Leskovec"],
+      "title": "Prioritizing Network Communities",
+      "venue": "Nature Communications",
+      "year": 2018,
+      "thumbnail": "crank-ncomms18.png",
+      "url": "https://www.nature.com/articles/s41467-018-04948-5",
+      "pdf": "papers/crank-ncomms18.pdf",
+      "type": "journal",
+      "supp":
+      {
+        "website": "http://snap.stanford.edu/crank/",
+        "invited talk at JMM 2018 Graph Clustering Session": "http://jointmathematicsmeetings.org/meetings/national/jmm2018/2197_program_ss63.html",
+        "arXiv": "https://arxiv.org/abs/1805.02411",
+        "bioRxiv": "https://www.biorxiv.org/content/early/2018/05/07/315903"
+      }
+    },
+
+    {
+      "key": "submission17f",
+      "author": ["Bo Wang*", "Armin Pourshafeie*", "Marinka Zitnik*", "Junjie Zhu", "Carlos Bustamante", "Serafim Batzoglou", "Jure Leskovec"],
+      "title": "Network Enhancement as a General Method to Denoise Weighted Biological Networks",
+      "venue": "Nature Communications",
+      "year": 2018,
+      "thumbnail": "ne-ncomms18.png",
+      "url": "https://www.nature.com/articles/s41467-018-05469-x",
+      "pdf": "papers/ne-ncomms18.pdf",
+      "type": "journal",
+      "supp":
+      {
+        "website": "http://snap.stanford.edu/ne/",
+        "arXiv": "https://arxiv.org/abs/1805.03327",
+        "bioRxiv": "https://www.biorxiv.org/content/early/2018/05/09/317941"
+      }
+    },
+
+    {
+      "key": "submission18b",
+      "author": ["Xuan Wang", "Yu Zhang", "Xiang Ren", "Yuhao Zhang", "Marinka Zitnik", "Jingbo Shang", "Curtis Langlotz", "Jiawei Han"],
+      "title": "Cross-type Biomedical Named Entity Recognition with Deep Multi-Task Learning",
+      "venue": "Bioinformatics",
+      "year": "2018",
+      "thumbnail": "bioinf18.png",
+      "url": "https://doi.org/10.1093/bioinformatics/bty869",
+      "pdf": "papers/bioner-bioinf18.pdf",
+      "type": "conference",
+      "supp": 
+      {
+        "arXiv": "https://arxiv.org/abs/1801.09851",
+        "bioRxiv": "https://www.biorxiv.org/content/early/2018/01/31/256453",
+        "code and data": "https://github.com/yuzhimanhua/lm-lstm-crf"
+      }
+    },
+
+    {
+      "key": "submission18f",
+      "author": ["William Hamilton", "Payal Bajaj", "Marinka Zitnik", "Dan Jurafsky", "Jure Leskovec"],
+      "title": "Embedding Logical Queries on Knowledge Graphs",
+      "venue": "Proceedings of Neural Information Processing Systems, NeurIPS",
+      "year": "2018",
+      "thumbnail": "nips18.png",
+      "pdf": "papers/gqe-nips18.pdf",
+      "url": "https://papers.nips.cc/paper/7473-embedding-logical-queries-on-knowledge-graphs",
+      "type": "conference",
+      "supp": 
+      {
+        "arXiv": "https://arxiv.org/abs/1806.01445"
+      }
+    },
+
+    {
+      "key": "submission18e",
+      "author": ["Marinka Zitnik", "Rok Sosic", "Sagar Maheshwari", "Jure Leskovec"],
+      "title": "BioSNAP Datasets: Open Stanford Biomedical Dataset Collection",
+      "venue": "",
+      "year": 2018,
+      "thumbnail": "biosnap18.png",
+      "url": "http://snap.stanford.edu/biodata",
+      "type": "dataset",
+      "biosnapwebsite": "http://snap.stanford.edu/biodata",
+      "supp": 
+      {
+        "mambo website": "http://snap.stanford.edu/mambo"
+      }
+    },
+
+    {
+      "key": "submission17e",
+      "author": ["Claire Donnat", "Marinka Zitnik", "David Hallac", "Jure Leskovec"],
+      "title": "Learning Structural Node Embeddings via Diffusion Wavelets",
+      "venue": "International ACM Conference on Knowledge Discovery and Data Mining, KDD",
+      "year": 2018,
+      "thumbnail": "kdd18.png",
+      "url": "https://dl.acm.org/citation.cfm?id=3220025",
+      "pdf": "papers/graphwave-kdd18.pdf",
+      "type": "conference",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/1710.10321",
+        "website": "http://snap.stanford.edu/graphwave/",
+        "video": "http://www.kdd.org/kdd2018/accepted-papers/view/learning-structural-node-embeddings-via-diffusion-wavelets"
+      }
+    },
+
+     {
+      "key": "submission18c",
+      "author": ["Marinka Zitnik", "Jure Leskovec"],
+      "title": "Deep Learning for Network Biology",
+      "venue": "International Conference on Intelligent Systems for Molecular Biology, ISMB",
+      "year": 2018,
+      "thumbnail": "ismb18-tutorial.png",
+      "url": "http://snap.stanford.edu/deepnetbio-ismb/",
+      "type": "tutorial",
+      "tutorialwebsite": "http://snap.stanford.edu/deepnetbio-ismb/",
+      "supp": 
+      {
+        "conference website": "https://www.iscb.org/ismb2018-program/ismb2018-tutorials"
+      },
+      "comment": "Tutorial at ISMB'18"
+    },
+
+    {
+      "key": "submission18a",
+      "author": ["Marinka Zitnik", "Monica Agrawal", "Jure Leskovec"],
+      "title": "Modeling Polypharmacy Side Effects with Graph Convolutional Networks",
+      "venue": "Bioinformatics",
+      "year": 2018,
+      "thumbnail": "ismb18.png",
+      "url": "https://academic.oup.com/bioinformatics/article/34/13/i457/5045770",
+      "pdf": "papers/decagon-ismb18.pdf",
+      "type": "conference",
+      "supp": 
+      {
+        "arXiv": "https://arxiv.org/abs/1802.00543",
+        "bioRxiv": "https://www.biorxiv.org/content/early/2018/02/02/258814",
+        "website": "http://snap.stanford.edu/decagon/",
+        "poster": "posters/zitnik-ISMB2018.png",
+        "slides": "slides/decagon-ismb18.pdf",
+        "talk": "https://youtu.be/B5j9AqzKGGM", 
+        "Stanford News": "https://news.stanford.edu/2018/07/10/ai-predicts-drug-pair-side-effects/",
+        "Phys.org": "https://phys.org/news/2018-07-artificial-intelligence-drug-combinations-side.html",
+        "ScienceDaily": "https://www.sciencedaily.com/releases/2018/07/180710072013.htm", 
+        "6th most-read paper in Bioinformatics ever (source: Altmetric)": "https://oxfordjournals.altmetric.com/details/32668326/",
+        "other news stories": "https://oxfordjournals.altmetric.com/details/32668326/"
+
+      },
+      "comment": "Oral presentation at ISMB'18"
+    },
+
+    {
+      "key": "submission18a",
+      "author": ["Monica Agrawal*", "Marinka Zitnik*", "Jure Leskovec"],
+      "title": "Large-Scale Analysis of Disease Pathways in the Human Interactome",
+      "venue": "Pacific Symposium on Biocomputing, PSB",
+      "year": 2018,
+      "thumbnail": "psb18.png",
+      "url": "http://psb.stanford.edu/psb-online/proceedings/psb18/agrawal.pdf",
+      "pdf": "papers/pathways-psb18.pdf",
+      "type": "conference",
+      "supp": 
+      {
+        "bioRxiv": "https://www.biorxiv.org/content/early/2017/09/16/189787",
+        "website": "http://snap.stanford.edu/pathways/",
+        "poster": "posters/zitnik-PSB2018.png",
+        "slides": "slides/pathways-psb18.pdf"
+      }
+    },
+
+    {
+      "key": "submission17b",
+      "author": ["Andrej Copar", "Marinka Zitnik", "Blaz Zupan"],
+      "title": "Scalable Non-Negative Matrix Tri-Factorization",
+      "venue": "BioData Mining",
+      "year": 2017,
+      "thumbnail": "nmtf-bdm17.png",
+      "url": "https://biodatamining.biomedcentral.com/articles/10.1186/s13040-017-0160-6",
+      "pdf": "papers/nmtf-bdm17.pdf",
+      "type": "journal",
+      "supp":
+      {
+        "materials and code": "https://github.com/acopar/crow"
+      }
+    },
+
+    {
+      "key": "submission17a",
+      "author": ["J.C. Puigvert", "Marinka Zitnik", "A.-S. Jemth", "M. Carter", "J. Unterlass",
+        "B. Hallstrom", "O. Loseva", "Z. Karem",  "J.M. Calderon-Montano",  "C. Lindskog", 
+        "P.H. Edqvist", "D. Matuszewski", "H.A. Blal", 
+        "R. Berntsson", "M. Haggblad", "U. Martens", "M. Studham", "M. Uhlen", "B. Lundgren", "C. Wahlby", 
+        "E. Sonnhammer", "E. Lundberg", "P. Stenmark", "B. Zupan", "T. Helleday"],
+      "title": "A Comprehensive Structural, Biochemical and Biological Profiling of the Human NUDIX Hydrolase Family",
+      "venue": "Nature Communications",
+      "year": 2017,
+      "thumbnail": "nudix-natcommun17.png",
+      "url": "https://www.nature.com/articles/s41467-017-01642-w",
+      "pdf": "papers/nudix-natcommun17.pdf",
+      "type": "journal",
+      "supp": 
+      {
+        "SciLifeLab News": "https://www.scilifelab.se/news/nudix-hydrolases/",
+        "Karolinska Institutet News": "http://ki.se/en/news/mapping-biological-functions-of-nudix-enzymes",
+        "Phys.org News": "https://phys.org/news/2017-11-biological-functions-nudix-enzymes.html"
+      }
+    },
+
+    {
+      "key": "ismb17",
+      "author": ["Marinka Zitnik", "Jure Leskovec"],
+      "title": "Predicting Multicellular Function Through Multi-Layer Tissue Networks",
+      "venue": "Bioinformatics",
+      "year": 2017,
+      "thumbnail": "ismb17.png",
+      "url": "https://academic.oup.com/bioinformatics/article/33/14/i190/3953967/Predicting-multicellular-function-through-multi",
+      "pdf": "papers/ohmnet-ismb17.pdf",
+      "type": "journal",
+      "supp":
+      {
+      	"website": "http://snap.stanford.edu/ohmnet/",
+      	"code": "http://github.com/marinkaz/ohmnet",
+        "poster": "posters/zitnik-ISMB2017.png",
+        "invited talk at NetSci 2017 Network Medicine": "http://sharmalab.bwh.harvard.edu/netmed17",
+        "slides NetSci 2017": "slides/ohmnet-netsci17.pdf",
+        "slides ISMB 2017": "slides/ohmnet-ismb17.pdf",
+        "talk": "https://www.iscb.org/cms_addon/multimedia/flvmedia.php?i=3979"
+      },
+      "comment": "Oral presentation at ISMB/ECCB'17"
+    },
+
+    {
+      "key": "science17",
+      "author": ["A. Keller", "R.C. Gerkin", "Y. Guan", "A. Dhurandhar", "G. Turu", "B. Szalai", "J.D. Mainland", 
+        "Y. Ihara", "C.W. Yu", "R. Wolfinger", "C. Vens", "L. Schietgat", "K. De Grave", "R. Norel", 
+        "DREAM Olfaction Consortium", "G. Stolovitzky", "G. Cecchi", "L.B. Vosshall", "P. Meyer"],
+      "title": "Predicting Human Olfactory Perception from Chemical Features of Odor Molecules",
+      "venue": "Science",
+      "year": 2017,
+      "thumbnail": "science17.png",
+      "url": "http://science.sciencemag.org/content/355/6327/820",
+      "pdf": "papers/olfaction-science17.pdf",
+      "type": "journal",
+      "supp": 
+      {
+        "The Atlantic": "https://www.theatlantic.com/science/archive/2016/11/how-to-reverse-engineer-smells/507608/"
+      },
+      "comment": "Dream Olfaction Prediction Challenge"
+    },
+
+    {
+      "key": "ismb16",
+      "author": ["Marinka Zitnik", "Blaz Zupan"],
+      "title": "Jumping Across Biomedical Contexts Using Compressive Data Fusion",
+      "venue": "Bioinformatics",
+      "year": 2016,
+      "thumbnail": "ismb16.png",
+      "url": "http://bioinformatics.oxfordjournals.org/content/32/12/i90.full",
+      "pdf": "papers/jumping-ismb16.pdf",
+      "type": "journal",
+      "supp": 
+      {
+        "slides": "http://helikoid.si/ismb16/ZitnikTP063.pdf",
+        "materials and code": "https://github.com/marinkaz/medusa",
+        "talk": "https://www.iscb.org/cms_addon/multimedia/flvmedia.php?i=2708"
+      },
+      "comment": "Oral presentation at ISMB'16"
+    },
+
+    {
+      "key": "bioinf16",
+      "author": ["Martin Strazar", "Marinka Zitnik", "Blaz Zupan", "Jernej Ule", "Tomaz Curk"],
+      "title": "Orthogonal Matrix Factorization Enables Integrative Analysis of Multiple RNA Binding Proteins",
+      "venue": "Bioinformatics",
+      "year": 2016,
+      "thumbnail": "bioinf16.png",
+      "url": "http://bioinformatics.oxfordjournals.org/content/32/10/1527.full",
+      "pdf": "papers/ortho-bioinf16.pdf",
+      "type": "journal",
+      "supp": 
+      {
+        "materials and code": "https://github.com/mstrazar/ionmf"
+      }
+    },
+
+    {
+      "key": "psb16",
+      "author": ["Marinka Zitnik", "Blaz Zupan"],
+      "title": "Collective Pairwise Classification for Multi-Way Analysis of Disease and Drug Data",
+      "venue": "Pacific Symposium on Biocomputing, PSB",
+      "year": 2016,
+      "thumbnail": "psb16.png",
+      "url": "http://psb.stanford.edu/psb-online/proceedings/psb16/zitnik.pdf",
+      "pdf": "papers/multiway-psb16.pdf",
+      "type": "conference",
+      "supp": 
+      {
+        "slides": "http://helikoid.si/psb16/zitnik-psb16.pdf",
+        "materials and code": "https://github.com/marinkaz/copacar"
+      }
+    },
+
+    {
+      "key": "bmcbioinf15",
+      "author": ["Slavko Zitnik", "Marinka Zitnik", "Blaz Zupan", "Marko Bajec"],
+      "title": "Sieve-Based Relation Extraction of Gene Regulatory Networks from Biological Literature",
+      "venue": "BMC Bioinformatics",
+      "year": 2015,
+      "thumbnail": "bmcbioinf15.png",
+      "url": "http://www.biomedcentral.com/1471-2105/16/S16/S1",
+      "pdf": "papers/sieve-bmcbioinf15.pdf",
+      "type": "journal",
+      "supp": 
+      {
+        "materials": "http://2013.bionlp-st.org/tasks/gene-regulation-network"
+      },
+      "comment": "First place winner in extracting gene regulatory networks from text at ACL BioNLP-13"
+    },
+
+    {
+      "key": "ploscb15",
+      "author": ["Marinka Zitnik", "Edward A Nam", "Christopher Dinh", "Adam Kuspa", "Gad Shaulsky", "Blaz Zupan"],
+      "title": " Gene Prioritization by Compressive Data Fusion and Chaining",
+      "venue": "PLoS Computational Biology",
+      "year": 2015,
+      "thumbnail": "ploscb15.png",
+      "url": "http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004552",
+      "pdf": "papers/prioritize-ploscb15.pdf",
+      "type": "journal",
+      "supp": 
+      {
+        "materials and code": "https://github.com/marinkaz/collage-dicty"
+      }
+    },
+
+    {
+      "key": "ismb15",
+      "author": ["Marinka Zitnik", "Blaz Zupan"],
+      "title": "Gene Network Inference by Fusing Data from Diverse Distributions",
+      "venue": "Bioinformatics",
+      "year": 2015,
+      "thumbnail": "ismb15.png",
+      "url": "http://bioinformatics.oxfordjournals.org/content/31/12/i230.full",
+      "pdf": "papers/netinf-ismb15.pdf",
+      "type": "journal",
+      "supp": 
+      {
+        "slides": "http://helikoid.si/ismb15/zitnik-ismb15.pdf",
+        "materials and code": "https://github.com/marinkaz/fusenet",
+        "talk": "http://www.iscb.org/ismb-mm/media-ismbeccb2015"
+      },
+      "comment": "Oral presentation at ISMB'15"
+    },
+
+    {
+      "key": "jmb15",
+      "author": ["Mojca M Usaj*", "Mojca Brloznik*", "Petra Kaferle*", "Marinka Zitnik", "H. Wolinski", "F. Leitner", "S. D. Kohlwein", "Blaz Zupan", "Uros Petrovic"],
+      "title": "Genome-Wide Localization Study of Yeast Pex11 Identifies Peroxisome-Mitochondria Interactions Through the ERMES Complex",
+      "venue": "Journal of Molecular Biology",
+      "year": 2015,
+      "thumbnail": "jmb15.png",
+      "url": "http://dx.doi.org/10.1016/j.jmb.2015.03.004",
+      "pdf": "papers/pex11-jmb15.pdf",
+      "type": "journal",
+      "supp": 
+      {
+        "materials": "http://yplpex.uni-graz.at/"
+      }
+    },
+
+    {
+      "key": "sb15",
+      "author": ["Marinka Zitnik", "Blaz Zupan"],
+      "title": "Survival Regression by Data Fusion",
+      "venue": "Systems Biomedicine",
+      "year": 2015,
+      "thumbnail": "sb15.png",
+      "url": "http://www.tandfonline.com/doi/full/10.1080/21628130.2015.1016702",
+      "pdf": "papers/survival-sb15.pdf",
+      "type": "journal",
+      "supp": 
+      {
+        "materials": "http://camda2014.bioinf.jku.at/doku.php",
+        "slides": "http://prezi.com/ktuxqsyie5mt/?utm_campaign=share&utm_medium=copy&rc=ex0share"
+      },
+      "comment": "First prize winner for excellent research at ISMB/CAMDA'14"
+    },
+
+    {
+      "key": "jcb15",
+      "author": ["Marinka Zitnik", "Blaz Zupan"],
+      "title": "Data Imputation in Epistatic MAPs by Network-Guided Matrix Completion",
+      "venue": "Journal of Computational Biology",
+      "year": 2015,
+      "thumbnail": "jcb15.png",
+      "url": "http://online.liebertpub.com/doi/abs/10.1089/cmb.2014.0158",
+      "pdf": "papers/impute-jcb15.pdf",
+      "type": "journal",
+      "supp": 
+      {
+        "slides": "http://prezi.com/er2durhu0krs/?utm_campaign=share&utm_medium=copy&rc=ex0share",
+        "materials and code": "https://github.com/marinkaz/ngmc"
+      },
+      "comment": "Oral presentation at RECOMB'14"
+    },
+
+    {
+      "key": "tpami15",
+      "author": ["Marinka Zitnik", "Blaz Zupan"],
+      "title": " Data Fusion by Matrix Factorization",
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "year": 2015,
+      "thumbnail": "tpami15.png",
+      "url": "http://dx.doi.org/10.1109/TPAMI.2014.2343973",
+      "pdf": "papers/fuse-tpami15.pdf",
+      "type": "journal",
+      "supp": 
+      {
+        "materials and code": "https://github.com/marinkaz/scikit-fusion"
+      }
+    },
+
+   {
+      "key": "embc15",
+      "author": ["Marinka Zitnik", "Blaz Zupan"],
+      "title": "Large-Scale Data Fusion",
+      "venue": "37th Annnual International Conference of the IEEE Engineering in Medicine and Biology, EMBC",
+      "year": 2015,
+      "thumbnail": "embc15.png",
+      "url": "http://emb.citengine.com/event/embc-2015/paper-details?pdID=5089",
+      "pdf": "http://emb.citengine.com/event/embc-2015/paper-details?pdID=5089",
+      "type": "conference",
+      "supp": 
+      {
+        "talk slides": "http://helikoid.si/embc15/embc15-fusion.pdf",
+        "tutorial slides": "http://helikoid.si/embc15/embc-slides.pdf",
+        "tutorial handouts": "http://helikoid.si/embc15/embc-handouts.pdf"
+      }
+    },
+
+    {
+      "key": "bc15",
+      "author": ["Marinka Zitnik", "Edward Nam", "Christopher Dinh", "Adam Kuspa", "Gad Shaulsky", "Blaz Zupan"],
+      "title": "Gene Prioritization by Compressive Data Fusion and Chaining",
+      "venue": "Basel Computational Biology Conference, [BC]^2",
+      "year": 2015,
+      "thumbnail": "bc15.png",
+      "url": "http://helikoid.si/bc215/zitnik-zupan-bc215.png",
+      "pdf": "http://helikoid.si/bc215/zitnik-zupan-bc215.png",
+      "type": "conference",
+      "comment": "Best Poster Award at [BC]^2",
+      "supp":
+      {
+        "tutorial slides": "http://helikoid.si/bc215/bc2-slides.pdf",
+        "tutorial handouts": "http://helikoid.si/bc215/bc2-handouts.pdf"
+      }
+    },
+
+    {
+      "key": "ismb15-2",
+      "author": ["Marinka Zitnik", "Blaz Zupan"],
+      "title": "Integrate Everything but the Kitchen Sink: Data Set Selection and Sensitivity Estimation in Collective Factor Models",
+      "venue": "International Conference on Intelligent Systems for Molecular Biology, ISMB",
+      "year": 2015,
+      "thumbnail": "ismb15-2.png",
+      "url": "http://dx.doi.org/10.7490/f1000research.1110242.1",
+      "pdf": "http://helikoid.si/ismb15/zitnik-zupan-ismb15.png",
+      "type": "conference"
+    },
+
+    {
+      "key": "ismb14",
+      "author": ["Marinka Zitnik", "Blaz Zupan"],
+      "title": "Gene Network Inference by Probabilistic Scoring of Relationships from a Factorized Model of Interactions",
+      "venue": "Bioinformatics",
+      "year": 2014,
+      "thumbnail": "ismb14.png",
+      "url": "http://bioinformatics.oxfordjournals.org/content/30/12/i246.full",
+      "pdf": "papers/epistasic-ismb14.pdf",
+      "type": "journal",
+      "supp": 
+      {
+        "slides": "http://prezi.com/tspce1sriaeh/?utm_campaign=share&utm_medium=copy&rc=ex0share",
+        "materials and code": "https://github.com/biolab/red",
+        "talk": "http://www.iscb.org/ismb-mm/media-ismb2014"
+      },
+      "comment": "Oral presentation at ISMB'14"
+    },
+
+    {
+      "key": "sb14",
+      "author": ["Marinka Zitnik", "Blaz Zupan"],
+      "title": "Matrix Factorization-Based Data Fusion for Drug-Induced Liver Injury Prediction",
+      "venue": "Systems Biomedicine",
+      "year": 2014,
+      "thumbnail": "sb14.png",
+      "url": "http://www.tandfonline.com/doi/full/10.4161/sysb.29072",
+      "pdf": "papers/drug-sb14.pdf",
+      "type": "journal",
+      "supp": 
+      {
+        "slides": "http://prezi.com/jf0hotfsqzd9/?utm_campaign=share&utm_medium=copy&rc=ex0share",
+        "materials": "http://dokuwiki.bioinf.jku.at/doku.php"
+      },
+      "comment": "First prize winner for excellent research at ISMB/CAMDA'13"
+    },
+
+    {
+      "key": "recomb14",
+      "author": ["Marinka Zitnik", "Blaz Zupan"],
+      "title": "Imputation of Quantitative Genetic Interactions in Epistatic MAPs by Interaction Propagation Matrix Completion",
+      "venue": "18th Annual International Conference on Research in Computational Molecular Biology, RECOMB",
+      "year": 2014,
+      "thumbnail": "recomb14.png",
+      "url": "http://link.springer.com/chapter/10.1007%2F978-3-319-05269-4_35",
+      "pdf": "papers/emap-recomb14.pdf",
+      "type": "conference",
+      "supp": 
+      {
+        "slides": "http://prezi.com/er2durhu0krs/?utm_campaign=share&utm_medium=copy",
+        "materials and code": "https://github.com/marinkaz/ngmc"
+      }
+    },
+
+    {
+      "key": "psb14",
+      "author": ["Marinka Zitnik", "Blaz Zupan"],
+      "title": "Matrix Factorization-Based Data Fusion For Gene Function Prediction in Baker’s Yeast and Slime Mold",
+      "venue": "Pacific Symposium on Biocomputing, PSB",
+      "year": 2014,
+      "thumbnail": "psb14.png",
+      "url": "http://psb.stanford.edu/psb-online/proceedings/psb14/zitnik.pdf",
+      "pdf": "papers/function-psb14.pdf",
+      "type": "conference"
+    },
+
+    {
+      "key": "recomb14-2",
+      "author": ["Marinka Zitnik", "Blaz Zupan"],
+      "title": "Biomedical Data Fusion by Simultaneous Matrix Tri-factorization",
+      "venue": "18th Annual International Conference on Research in Computational Molecular Biology, RECOMB",
+      "year": 2014,
+      "thumbnail": "recomb14-2.png",
+      "url": "http://helikoid.si/recomb14/zitnik-zupan-recomb14.png",
+      "pdf": "http://helikoid.si/recomb14/zitnik-zupan-recomb14.png",
+      "type": "conference",
+      "comment": "Best Poster Award at RECOMB'14",
+       "supp": 
+      {
+        "Highlights at Heidelberg Laureate Forum 2014": "https://scilogs.spektrum.de/hlf/an-engaging-poster/"
+      }
+    },
+
+    {
+      "key": "sr13",
+      "author": ["Marinka Zitnik", "Vuk Janjic", "Chris Larminie", "Blaz Zupan", "Natasa Przulj"],
+      "title": " Discovering Disease-Disease Associations by Fusing Systems-Level Molecular Data",
+      "venue": "Scientific Reports",
+      "year": 2013,
+      "thumbnail": "sr13.png",
+      "url": "http://www.nature.com/srep/2013/131115/srep03202/full/srep03202.html",
+      "pdf": "papers/disease-sr13.pdf",
+      "type": "journal",
+      "supp": 
+      {
+        "Bio Techniques News": "http://www.biotechniques.com/news/Finding-Connections-Between-Genes-and-Diseases/biotechniques-348720.html#.VmX1Xt-rSHr"
+      }
+    },
+
+    {
+      "key": "acl13",
+      "author": ["Slavko Zitnik", "Marinka Zitnik", "Blaz Zupan", "Marko Bajec"],
+      "title": "Extracting Gene Regulation Networks Using Linear-Chain Conditional Random Fields and Rules",
+      "venue": "Association for Computational Linguistics, ACL, BioNLP Shared Task Workshop",
+      "year": 2013,
+      "thumbnail": "acl13.png",
+      "url": "http://www.aclweb.org/anthology/W13-2026",
+      "pdf": "papers/genreg-acl13.pdf",
+      "type": "conference",
+      "comment": "First-prize winner in gene regulatory network extraction at ACL BioNLP 2013"
+    },
+
+    {
+      "key": "jmlr12",
+      "author": ["Marinka Zitnik", "Blaz Zupan"],
+      "title": "Nimfa: A Python Library for Nonnegative Matrix Factorization",
+      "venue": "Journal of Machine Learning Research",
+      "year": 2012,
+      "thumbnail": "jmlr12.png",
+      "url": "http://jmlr.csail.mit.edu/papers/v13/zitnik12a.html",
+      "pdf": "papers/nimfa-jmlr12.pdf",
+      "type": "journal",
+      "supp": 
+      {
+        "website": "http://ai.stanford.edu/~marinka/nimfa/",
+        "materials and code": "https://github.com/marinkaz/nimfa"
+      }
+    }
+  ]
+}
