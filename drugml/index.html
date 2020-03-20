@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Machine Learning for Drug Development - ZITNIK LAB</title>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="shortcut icon" type="image/png"
+           href="favicon.png" 
+    />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Machine Learning for Drug Development | ZITNIK LAB</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Machine Learning for Drug Development" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Artificial Intelligence for Medicine and Science" />
+<meta property="og:description" content="Artificial Intelligence for Medicine and Science" />
+<link rel="canonical" href="/drugml/" />
+<meta property="og:url" content="/drugml/" />
+<meta property="og:site_name" content="ZITNIK LAB" />
+<script type="application/ld+json">
+{"description":"Artificial Intelligence for Medicine and Science","@type":"WebPage","url":"/drugml/","headline":"Machine Learning for Drug Development","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- head scripts --></head>
+
+  <body>
+    
+<nav class="navbar is-primary" >
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item"><b>
+                ZITNIK LAB
+            </b></a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+                <a href="/" class="navbar-item "><b>Home</b></a>
+                
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a href="/#" class="navbar-link "><b>Marinka Zitnik</b></a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/bio/" class="navbar-item "><b>Bio</b></a>
+                            
+                            <a href="/contact/" class="navbar-item "><b>Contact</b></a>
+                            
+                            <a href="/talks/" class="navbar-item "><b>Recent Talks</b></a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                <a href="/research/" class="navbar-item "><b>Research</b></a>
+                    
+                
+                    
+                <a href="/publications/" class="navbar-item "><b>Publications</b></a>
+                    
+                
+                    
+                <a href="/people/" class="navbar-item "><b>Research Group</b></a>
+                    
+                
+                    
+                <a href="/tutorials-workshops/" class="navbar-item "><b>Tutorials & Workshops</b></a>
+                    
+                
+                    
+                <a href="/data/" class="navbar-item "><b>Data</b></a>
+                    
+                
+                    
+                <a href="/software/" class="navbar-item "><b>Tools</b></a>
+                    
+                
+                    
+                <a href="/jobs/" class="navbar-item "><b>Join Us</b></a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+
+    
+        <section class="hero  is-medium  is-bold is-primary" >
+    <div class="hero-body">
+        <div class="container">
+            <p class="title is-2">Machine Learning for Drug Development</p>
+            <p class="subtitle is-3"><a href="https://ijcai20.org/">IJCAI 2020 Tutorial</a></p>
+            
+        </div>
+    </div>
+</section>
+    
+    
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+                <div class="column is-12">
+                    
+                    
+                    
+<div class="content">
+    <div class="box has-background-info has-text-white">
+<p>
+    With remarkable successes of machine learning in a variety of application areas, we are witnessing an increasing interest in applications of machine learning to drug discovery and development.   
+</p>
+<p>
+    In this tutorial, we cover key advancements in machine learning over the last few years, with an emphasis on fundamentally new opportunities in drug development enabled by these advancements. We are interested in why and how these advances can help drug-related tasks. We elaborate uses of machine learning in drug development through six key tasks: (a) synthesis prediction and de novo drug design, (b) molecular property prediction, (c) virtual drug screening and drug-target interactions, (d) clinical trial recruitment, (e) drug repurposing, (f) adverse drug effects and polypharmacy. 
+</p>
+<p>
+    We discuss theoretical foundations behind methods for these key drug-related tasks, illustrate various approaches based on different formulations, and summarize representative applications. We cover generative models, reinforcement learning, as well as very recent advancements in deep representation learning and embeddings. In doing so, we present a toolbox of AI algorithms for end-to-end drug development.
+</p>
+</div>
+
+<p><img src="/img/drugml-ijcai.png" alt="drugml-ijcai" /></p>
+
+<h2 id="overview">Overview</h2>
+
+<p>Drug discovery and development is a long and expensive process. It usually starts with experimental discovery of molecules and targets (i.e., <em>de novo</em> drug design), and validation of discoveries with <em>in vitro</em> experiments on cell lines, organoids, and animals before moving to clinical testing. The entire process from discovery to the regulatory approval of a new drug can take as much as 12 years and cost upwards of US$2.8 billion. Furthermore, huge uncertainty (1:5000 success rate) is associated with each drug development stage.</p>
+
+<p>Machine learning methods have emerged as a promising tool to address these challenges and accelerate drug development. In the tutorial, we cover the following key drug-related tasks:</p>
+
+<ol type="a">
+  <li><b>Synthesis prediction and <i>de novo</i> drug design</b> (i.e., designing an entirely new molecule from scratch) aims to generate chemically correct structures to assist in complex molecule synthesis.</li>
+  <li><b>Molecular property prediction</b> aims to identify therapeutic effects of molecules by predicting properties, such as potency, bioactivity, and toxicity, from the molecular data.</li>
+  <li><b>Virtual drug screening and drug target identification</b> aim to predict how drugs affect the human body by binding to target proteins and affecting their downstream activity.</li>
+  <li><b>Clinical trial recruitment</b> aims to identify the right doctors to help conduct the trials as well as find qualified patients to participate the trials.</li>
+  <li><b>Drug repurposing</b> seeks to find new uses for known drugs as well as for novel molecules through the use of drug chemical, target and side effect similarity between drugs and diseases.</li>
+  <li><b>Adverse drug effects, polypharmacy, and drug-food interaction prediction</b> aims to predict mechanisms causing adverse drug effects, suggest alternative drug members for the intended pharmacological effects without negative health effects, and predict the effects of food constituents on interacting drugs.</li>
+</ol>
+
+<p>We then discuss key classes of methods for tackling these drug-related tasks:</p>
+
+<ul>
+  <li><strong>Generative models.</strong> We focus on variational autoencoders (VAE) and generative adversarial networks (GAN) that are well suited for de novo molecule design. They take as input line or graph-based compound representations with known therapeutic properties, encode the compounds into latent spaces, and then decode them into new drug samples.</li>
+  <li><strong>Reinforcement learning.</strong> We mainly talk about policy gradient methods, state-of-the-art methods for molecule generation that can incorporate domain-specific knowledge about molecule synthesis.</li>
+  <li><strong>Deep representation learning.</strong> We present major neural architectures for learning representations of drug-related data. These methods are relevant because they achieve state-of-the-art performance on drug-related tasks. For example, the methods were used to automatically learn drug fingerprints, learn drug-protein binding affinity, and recruit patients into clinical trials. Further, graph embedding methods are used to study drug combinations and predict drug effects as they spread throughout biological networks beyond the molecules to which they directly bind.</li>
+</ul>
+
+<h2 id="agenda">Agenda</h2>
+
+<p>Our half-day tutorial has the following agenda:</p>
+
+<ul>
+  <li>(30 min): <strong>Overview</strong> and introduction to machine learning for drug development</li>
+  <li>(60 min): <strong>Methods:</strong> Generative models, reinforcement learning, and learning deep representation and embeddings</li>
+  <li>(90 min): <strong>Applications</strong> to problems in drug development</li>
+  <li>(15 min): <strong>Future directions</strong> and <strong>Q&amp;A</strong> session</li>
+  <li>(15 min): <strong>Hands-on exercise</strong> with demos, implementation details, tools, and tips</li>
+</ul>
+
+<h2 id="tutorial-materials">Tutorial materials</h2>
+
+<p>The tutorial slides and materials for hands-on exercises (e.g., code implementation, datasets) will be <strong>posted on this website</strong> and made available to all participants.</p>
+
+<h2 id="tutorial-info">Tutorial info</h2>
+
+<p>The tutorial will be held at the <a href="https://ijcai20.org/">IJCAI</a> conference in Yokohama, Japan, in July 2020.</p>
+
+<p>The primary goal for this tutorial is to introduce AI audiences to drug development, an external topic that can motivate and use AI research.</p>
+
+<p>The target audience for this tutorial are entry-level participants with knowledge of the fundamentals of data mining and machine learning and some experience in deep learning (Intermediate). Although the first half of the tutorial focuses on introducing tasks and AI research used in this area, it is helpful to have a preliminary understanding of deep learning.</p>
+
+<p>No special software or other package installation is needed to follow this tutorial.</p>
+
+<h2 id="presenters">Presenters</h2>
+
+<p><a href="http://zitniklab.hms.harvard.edu/"><strong>Marinka Zitnik</strong></a> is Assistant Professor at Harvard and Associate Member at the Broad Institute of MIT and Harvard. Her research investigates artificial intelligence and machine learning to advance science, medicine, and health. Before Harvard, she was a postdoc in Computer Science at Stanford. She received her Ph.D. in Computer Science from University of Ljubljana while also researching at Imperial College London, University of Toronto, Baylor College of Medicine, and Stanford. Her work received several best paper, poster, and research awards from the International Society for Computational Biology. She has been named a Rising Star in EECS by MIT and also a Next Generation in Biomedicine by The Broad Institute. She has published in top ML venues (e.g., NeurIPS, ICLR) and top journals (e.g., Nature Communications, Proceedings of the National Academy of Sciences, PNAS), co-organized a tutorial in the area at ISMB 2018, a related workshop at ICLR 2019, gave invited talks on this topic in big pharma and at major conferences, and she co-edits a <a href="https://www.computer.org/digital-library/journals/tb/call-for-papers-special-issue-on-deep-learning-and-graph-embeddings-for-network-biology">Special Issue on these topics at IEEE/ACM Transactions on Computational Biology and Bioinformatics</a>.</p>
+
+<p><a href="https://sites.google.com/view/danicaxiao"><strong>Cao (Danica) Xiao</strong></a> is the Director of Machine Learning at Analytics Center of Excellence of IQVIA. She is leading IQVIA’s North America machine learning team to drive next generation healthcare AI. Her team works on various projects on disease prediction, in silico drug modeling (e.g., adverse drug reaction detection, drug repositioning and de novo design) and clinical trial recruitment prediction. Her research focuses on using ML/AI approaches to solve diverse real world healthcare challenges. Particularly, she is interested in phenotyping on electronic health records, data mining for in-silico drug modeling, patient segmentation for neuro-degenerative diseases. Her research has been published in leading AI conferences including KDD, NIPS, ICLR, AAAI, IJCAI, SDM, ICDM, WWW and top health informatics journals such as Nature Scientific Reports and JAMIA. Prior to IQVIA, she was a research staff member in the AI for Healthcare team at IBM Research from 2017 to 2019 and served as member of the IBM Global Technology Outlook Committee from 2018 to 2019. She acquired her Ph.D. degree from University of Washington, Seattle in 2016.</p>
+
+<p><a href="http://www.sunlab.org"><strong>Jimeng Sun</strong></a> is Professor in the Computer Science Department at University of Illinois Urbana-Champaign (UIUC). Prior to UIUC, he worked at Georgia Tech and IBM Research. His research is on artificial intelligence (AI) for healthcare. And the core topics include 1) Deep learning for drug discovery, 2) Clinical trial optimization, 3) Computational phenotyping, 4) Clinical predictive modeling, 5) Treatment recommendation and 6) Health monitoring. Dr. Sun has been collaborating with many healthcare organizations. He published over 200 papers with h-index 59 and filed over 20 patents. He has received SDM/IBM early career research award 2017, ICDM best research paper award in 2008, SDM best research paper award in 2007, and KDD Dissertation runner-up award in 2008. In 2019, he was recognized as Top 100 AI Leaders in Drug Discovery and Advanced Healthcare. Dr. Sun received B.S. and M.Phil. in Computer Science from Hong Kong University of Science and Technology in 2002 and 2003, M.Sc and PhD in Computer Science from Carnegie Mellon University in 2006 and 2007.</p>
+
+</div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts -->
+<div style="background-color:#A41034">
+        <div class="content is-normal has-text-centered">
+            <p style="color:white;padding-top:20px;padding-bottom:20px;"><a href="https://scholar.harvard.edu/marinka" style="color:white"><b>Zitnik Lab</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://harvard.edu" style="color:white"><b>Harvard</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://dbmi.hms.harvard.edu/" style="color:white"><b>Department of Biomedical Informatics</b></a></p>
+        </div>
+</div></body>
+</html>
+
