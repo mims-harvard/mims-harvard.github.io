@@ -1,4 +1,4 @@
-# mims-harvard.github.io
+# zitniklab.hms.harvard.edu
 
 Run a production build:
 
