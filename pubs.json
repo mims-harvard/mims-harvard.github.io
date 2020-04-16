@@ -14,6 +14,22 @@
 
   "publications": [
      {
+      "key": "submission20d",
+      "author": ["Deisy Morselli Gysi*", "Italo Do Valle*", "Marinka Zitnik*", "Asher Ameli*", "Xiao Gan*", "Onur Varol", "Helia Sanchez", "Rebecca Marlene Baron", "Dina Ghiassian", "Joseph Loscalzo", "Albert-Laszlo Barabasi"],
+      "title": "Network Medicine Framework for Identifying Drug Repurposing Opportunities for COVID-19",
+      "venue": "In Review",
+      "year": "2020",
+      "thumbnail": "netmed-covid19.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2004.07229",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2004.07229"
+      }
+    },
+
+     {
       "key": "submission20b",
       "author": ["Maria Brbic", "Marinka Zitnik", "Sheng Wang", "Angela O. Pisco",  "Russ B. Altman",  "Spyros Darmanis", "Jure Leskovec"],
       "title": "Discovering Novel Cell Types Across Heterogeneous Single-Cell Experiments",
@@ -61,6 +77,18 @@
       }
     },
 
+    {
+      "key": "submission17c",
+      "author": ["Marinka Zitnik", "Russ Altman", "Jure Leskovec"],
+      "title": "Network-Based Discovery of Drug Indications",
+      "venue": "In Review",
+      "year": 2019,
+      "thumbnail": "ismb16.png",
+      "url": "",
+      "pdf": "",
+      "type": "journal"
+    },
+
      {
       "key": "submission19e",
       "author": ["Weihua Hu", "Bowen Liu", "Joseph Gomes", "Marinka Zitnik", "Percy Liang", "Vijay Pande", "Jure Leskovec"],
@@ -77,18 +105,6 @@
         "website": "http://snap.stanford.edu/gnn-pretrain/",
         "ICLR 2020 spotlight": "https://openreview.net/pdf?id=HJlWWJSFDH"
       }
-    },
-
-    {
-      "key": "submission17c",
-      "author": ["Marinka Zitnik", "Russ Altman", "Jure Leskovec"],
-      "title": "Network-Based Discovery of Drug Indications",
-      "venue": "In Review",
-      "year": 2019,
-      "thumbnail": "ismb16.png",
-      "url": "",
-      "pdf": "",
-      "type": "journal"
     },
 
      {
