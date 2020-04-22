@@ -25,7 +25,9 @@
       "type": "journal",
       "supp":
       {
-        "arXiv": "https://arxiv.org/abs/2004.07229"
+        "arXiv": "https://arxiv.org/abs/2004.07229",
+        "slides": "https://www.dropbox.com/s/epo7np04dzofrll/2020-COVID-19-Final.pptx?dl=0",
+        "YouTube webinar": "https://www.youtube.com/watch?v=jS8__WViNj4"
       }
     },
 
@@ -79,7 +81,7 @@
 
     {
       "key": "submission17c",
-      "author": ["Marinka Zitnik", "Russ Altman", "Jure Leskovec"],
+      "author": ["Marinka Zitnik", "Russ B. Altman", "Jure Leskovec"],
       "title": "Network-Based Discovery of Drug Indications",
       "venue": "In Review",
       "year": 2019,
