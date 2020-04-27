@@ -13,6 +13,24 @@
   },
 
   "publications": [
+
+     {
+      "key": "submission20e",
+      "author": ["Kexin Huang", "Cao Xiao", "Lucas Glass", "Marinka Zitnik", "Jimeng Sun"],
+      "title": "SkipGNN: Predicting Molecular Interactions with Skip-Graph Networks",
+      "venue": "In Review",
+      "year": "2020",
+      "thumbnail": "netmed-covid19.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2004.14949",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2004.14949",
+        "code": "https://github.com/kexinhuang12345/SkipGNN"
+      }
+    },
+
      {
       "key": "submission20d",
       "author": ["Deisy Morselli Gysi*", "Italo Do Valle*", "Marinka Zitnik*", "Asher Ameli*", "Xiao Gan*", "Onur Varol", "Helia Sanchez", "Rebecca Marlene Baron", "Dina Ghiassian", "Joseph Loscalzo", "Albert-Laszlo Barabasi"],
@@ -84,7 +102,7 @@
       "author": ["Marinka Zitnik", "Russ B. Altman", "Jure Leskovec"],
       "title": "Network-Based Discovery of Drug Indications",
       "venue": "In Review",
-      "year": 2019,
+      "year": 2020,
       "thumbnail": "ismb16.png",
       "url": "",
       "pdf": "",
