@@ -15,12 +15,44 @@
   "publications": [
 
      {
+      "key": "submission20g",
+      "author": ["Weihua Hu", "Matthias Fey", "Marinka Zitnik", "Yuxiao Dong", "Hongyu Ren", "Bowen Liu", "Michele Catasta", "Jure Leskovec"],
+      "title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
+      "venue": "In Review",
+      "year": "2020",
+      "thumbnail": "ogb20.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2005.00687",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2005.00687"
+      }
+    },
+
+     {
+      "key": "submission20f",
+      "author": ["Camilo Ruiz", "Marinka Zitnik", "Jure Leskovec"],
+      "title": "Discovery of Disease Treatment Mechanisms through the Multiscale Interactome",
+      "venue": "In Review",
+      "year": "2020",
+      "thumbnail": "multiscale-disease20.png",
+      "pdf": "",
+      "url": "https://doi.org/10.1101/2020.04.30.069690",
+      "type": "journal",
+      "supp":
+      {
+        "bioRxiv": "https://doi.org/10.1101/2020.04.30.069690"
+      }
+    },
+
+     {
       "key": "submission20e",
       "author": ["Kexin Huang", "Cao Xiao", "Lucas Glass", "Marinka Zitnik", "Jimeng Sun"],
       "title": "SkipGNN: Predicting Molecular Interactions with Skip-Graph Networks",
       "venue": "In Review",
       "year": "2020",
-      "thumbnail": "netmed-covid19.png",
+      "thumbnail": "skipgnn20.png",
       "pdf": "",
       "url": "https://arxiv.org/abs/2004.14949",
       "type": "journal",

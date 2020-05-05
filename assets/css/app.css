@@ -1,5 +1,8 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Libre+Baskerville");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,700;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@300&family=Roboto&display=swap");
 a:link {
   color: #A41034;
   text-decoration: none; }
@@ -292,7 +295,7 @@ button,
 input,
 select,
 textarea {
-  font-family: "Libre Baskerville", serif; }
+  font-family: "Alegreya", serif; }
 
 code,
 pre {
@@ -828,13 +831,13 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   font-weight: 700 !important; }
 
 .is-family-primary {
-  font-family: "Libre Baskerville", serif !important; }
+  font-family: "Alegreya", serif !important; }
 
 .is-family-secondary {
-  font-family: "Libre Baskerville", serif !important; }
+  font-family: "Alegreya", serif !important; }
 
 .is-family-sans-serif {
-  font-family: "Libre Baskerville", serif !important; }
+  font-family: "Alegreya", serif !important; }
 
 .is-family-monospace {
   font-family: monospace !important; }
@@ -7480,7 +7483,7 @@ button,
 input,
 select,
 textarea {
-  font-family: "Libre Baskerville", serif; }
+  font-family: "Alegreya", serif; }
 
 code,
 pre {
@@ -8016,13 +8019,13 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   font-weight: 700 !important; }
 
 .is-family-primary {
-  font-family: "Libre Baskerville", serif !important; }
+  font-family: "Alegreya", serif !important; }
 
 .is-family-secondary {
-  font-family: "Libre Baskerville", serif !important; }
+  font-family: "Alegreya", serif !important; }
 
 .is-family-sans-serif {
-  font-family: "Libre Baskerville", serif !important; }
+  font-family: "Alegreya", serif !important; }
 
 .is-family-monospace {
   font-family: monospace !important; }
