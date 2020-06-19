@@ -15,6 +15,54 @@
   "publications": [
 
      {
+      "key": "submission20j",
+      "author": ["Emily Alsentzer*", "Samuel G. Finlayson*", "Michelle M. Li", "Marinka Zitnik"],
+      "title": "Subgraph Neural Networks",
+      "venue": "In Review",
+      "year": "2020",
+      "thumbnail": "subgnn.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2006.10538",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2006.10538"
+      }
+    },
+
+     {
+      "key": "submission20i",
+      "author": ["Xiang Zhang", "Marinka Zitnik"],
+      "title": "GNNGuard: Defending Graph Neural Networks against Adversarial Attacks",
+      "venue": "In Review",
+      "year": "2020",
+      "thumbnail": "gnnguard.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2006.08149",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2006.08149"
+      }
+    },
+
+     {
+      "key": "submission20h",
+      "author": ["Kexin Huang", "Marinka Zitnik"],
+      "title": "Graph Meta Learning via Local Subgraphs",
+      "venue": "In Review",
+      "year": "2020",
+      "thumbnail": "gmeta.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2006.07889",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2006.07889"
+      }
+    },
+
+     {
       "key": "submission20g",
       "author": ["Weihua Hu", "Matthias Fey", "Marinka Zitnik", "Yuxiao Dong", "Hongyu Ren", "Bowen Liu", "Michele Catasta", "Jure Leskovec"],
       "title": "Open Graph Benchmark: Datasets for Machine Learning on Graphs",
