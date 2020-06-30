@@ -146,22 +146,6 @@
     },
 
      {
-      "key": "submission20c",
-      "author": ["Gregor Stiglic", "Primoz Kocbek", "Nino Fijacko", "Marinka Zitnik", "Katrien Verbert", "Leona Cilar"],
-      "title": "Interpretability of Machine Learning Based Prediction Models in Healthcare",
-      "venue": "In Review",
-      "year": "2020",
-      "thumbnail": "gnn-pretrain19.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2002.08596",
-      "type": "journal",
-      "supp": 
-      {
-        "arXiv": "https://arxiv.org/abs/2002.08596"
-      }
-    },
-
-     {
       "key": "submission20a",
       "author": ["Sheng Wang", "Angela O. Pisco", "Aaron McGeever", "Maria Brbic", "Marinka Zitnik", "Spyros Darmanis", "Jure Leskovec", "Jim Karkanias", "Russ B. Altman"],
       "title": "Unifying Single-Cell Annotations Based on the Cell Ontology",
@@ -187,6 +171,22 @@
       "url": "",
       "pdf": "",
       "type": "journal"
+    },
+
+     {
+      "key": "submission20c",
+      "author": ["Gregor Stiglic", "Primoz Kocbek", "Nino Fijacko", "Marinka Zitnik", "Katrien Verbert", "Leona Cilar"],
+      "title": "Interpretability of Machine Learning Based Prediction Models in Healthcare",
+      "venue": "WIREs Data Mining and Knowledge Discovery",
+      "year": "2020",
+      "thumbnail": "interpretableML-survey20.png",
+      "pdf": "papers/interpretableML-survey20.pdf",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/widm.1379",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2002.08596"
+      }
     },
 
      {
