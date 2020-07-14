@@ -20,7 +20,7 @@
       "title": "Subgraph Neural Networks",
       "venue": "In Review",
       "year": "2020",
-      "thumbnail": "subgnn.png",
+      "thumbnail": "subgnn20.png",
       "pdf": "",
       "url": "https://arxiv.org/abs/2006.10538",
       "type": "journal",
@@ -36,7 +36,7 @@
       "title": "GNNGuard: Defending Graph Neural Networks against Adversarial Attacks",
       "venue": "In Review",
       "year": "2020",
-      "thumbnail": "gnnguard.png",
+      "thumbnail": "gnnguard20.png",
       "pdf": "",
       "url": "https://arxiv.org/abs/2006.08149",
       "type": "journal",
@@ -52,13 +52,31 @@
       "title": "Graph Meta Learning via Local Subgraphs",
       "venue": "In Review",
       "year": "2020",
-      "thumbnail": "gmeta.png",
+      "thumbnail": "gmeta20.png",
       "pdf": "",
       "url": "https://arxiv.org/abs/2006.07889",
       "type": "journal",
       "supp":
       {
         "arXiv": "https://arxiv.org/abs/2006.07889"
+      }
+    },
+
+     {
+      "key": "submission20k",
+      "author": ["Kexin Huang", "Tianfan Fu", "Lucas Glass", "Marinka Zitnik", "Cao Xiao", "Jimeng Sun"],
+      "title": "DeepPurpose: a Deep Learning Library for Drug-Target Interaction Prediction and Applications to Repurposing and Screening",
+      "venue": "In Review",
+      "year": "2020",
+      "thumbnail": "deeppurpose20.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2004.08919",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2004.08919",
+        "code": "https://github.com/kexinhuang12345/DeepPurpose",
+        "blog": "https://towardsdatascience.com/drug-discovery-with-deep-learning-under-10-lines-of-codes-742ee306732a"
       }
     },
 
