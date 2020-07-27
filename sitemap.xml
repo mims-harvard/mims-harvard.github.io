@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://zitniklab.hms.harvard.edu/2019/12/01/tweets/</loc>
-<lastmod>2019-12-01T00:00:00-05:00</lastmod>
-</url>
-<url>
 <loc>https://zitniklab.hms.harvard.edu/2019/12/01/welcome-to-new-students/</loc>
 <lastmod>2019-12-01T00:00:00-05:00</lastmod>
 </url>
@@ -77,6 +73,18 @@
 <lastmod>2020-06-18T00:00:00-04:00</lastmod>
 </url>
 <url>
+<loc>https://zitniklab.hms.harvard.edu/2020/07/01/new-preprint-deeppurpose/</loc>
+<lastmod>2020-07-01T00:00:00-04:00</lastmod>
+</url>
+<url>
+<loc>https://zitniklab.hms.harvard.edu/2020/07/27/postdoc-job-ad/</loc>
+<lastmod>2020-07-27T00:00:00-04:00</lastmod>
+</url>
+<url>
+<loc>https://zitniklab.hms.harvard.edu/2020/07/29/podcat-bioinformatics-chat/</loc>
+<lastmod>2020-07-29T00:00:00-04:00</lastmod>
+</url>
+<url>
 <loc>https://zitniklab.hms.harvard.edu/404/</loc>
 </url>
 <url>
@@ -102,6 +110,9 @@
 </url>
 <url>
 <loc>https://zitniklab.hms.harvard.edu/people/</loc>
+</url>
+<url>
+<loc>https://zitniklab.hms.harvard.edu/postdoc/</loc>
 </url>
 <url>
 <loc>https://zitniklab.hms.harvard.edu/publications/</loc>
@@ -189,6 +200,10 @@
 <url>
 <loc>https://zitniklab.hms.harvard.edu/publications/papers/impute-jcb15.pdf</loc>
 <lastmod>2016-12-18T17:14:39-05:00</lastmod>
+</url>
+<url>
+<loc>https://zitniklab.hms.harvard.edu/publications/papers/interpretableML-survey20.pdf</loc>
+<lastmod>2020-06-29T20:52:45-04:00</lastmod>
 </url>
 <url>
 <loc>https://zitniklab.hms.harvard.edu/publications/papers/jumping-ismb16.pdf</loc>
