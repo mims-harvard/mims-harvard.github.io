@@ -191,6 +191,23 @@
       "type": "journal"
     },
 
+    {
+      "key": "submission17k",
+      "author": ["Kexin Huang", "Tianfan Fu", "Dawood Khan", "Ali Abid", "Ali Abdalla", "Abubakar Abid", "Lucas M. Glass", "Marinka Zitnik", "Cao Xiao", "Jimeng Sun"],
+      "title": "MolDesigner: Interactive Design of Efficacious Drugs with Deep Learning",
+      "venue": "Proceedings of Neural Information Processing Systems, NeurIPS (Demo)",
+      "year": 2020,
+      "thumbnail": "moldesigner20.png",
+      "url": "https://arxiv.org/abs/2010.03951",
+      "pdf": "papers/moldesigner-neuripsdemo2020.pdf",
+      "type": "conference",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2010.03951",
+        "YouTube Demo video": "https://www.youtube.com/watch?v=TC266Lffv2Q&feature=youtu.be"
+      }
+    },
+
      {
       "key": "submission20c",
       "author": ["Gregor Stiglic", "Primoz Kocbek", "Nino Fijacko", "Marinka Zitnik", "Katrien Verbert", "Leona Cilar"],
