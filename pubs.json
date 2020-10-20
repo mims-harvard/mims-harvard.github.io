@@ -42,7 +42,8 @@
       "type": "journal",
       "supp":
       {
-        "arXiv": "https://arxiv.org/abs/2006.08149"
+        "arXiv": "https://arxiv.org/abs/2006.08149",
+        "code": "https://github.com/mims-harvard/GNNGuard"
       }
     },
 
@@ -58,25 +59,8 @@
       "type": "journal",
       "supp":
       {
-        "arXiv": "https://arxiv.org/abs/2006.07889"
-      }
-    },
-
-     {
-      "key": "submission20k",
-      "author": ["Kexin Huang", "Tianfan Fu", "Lucas Glass", "Marinka Zitnik", "Cao Xiao", "Jimeng Sun"],
-      "title": "DeepPurpose: A Deep Learning Library for Drug-Target Interaction Prediction",
-      "venue": "In Review",
-      "year": "2020",
-      "thumbnail": "deeppurpose20.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2004.08919",
-      "type": "journal",
-      "supp":
-      {
-        "arXiv": "https://arxiv.org/abs/2004.08919",
-        "code": "https://github.com/kexinhuang12345/DeepPurpose",
-        "blog": "https://towardsdatascience.com/drug-discovery-with-deep-learning-under-10-lines-of-codes-742ee306732a"
+        "arXiv": "https://arxiv.org/abs/2006.07889",
+        "code": "https://github.com/mims-harvard/G-Meta"
       }
     },
 
@@ -93,6 +77,24 @@
       "supp":
       {
         "arXiv": "https://arxiv.org/abs/2005.00687"
+      }
+    },
+
+    {
+      "key": "submission20k",
+      "author": ["Kexin Huang", "Tianfan Fu", "Lucas Glass", "Marinka Zitnik", "Cao Xiao", "Jimeng Sun"],
+      "title": "DeepPurpose: A Deep Learning Library for Drug-Target Interaction Prediction",
+      "venue": "In Review",
+      "year": "2020",
+      "thumbnail": "deeppurpose20.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2004.08919",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2004.08919",
+        "code": "https://github.com/kexinhuang12345/DeepPurpose",
+        "blog": "https://towardsdatascience.com/drug-discovery-with-deep-learning-under-10-lines-of-codes-742ee306732a"
       }
     },
 
@@ -148,22 +150,6 @@
     },
 
      {
-      "key": "submission20b",
-      "author": ["Maria Brbic", "Marinka Zitnik", "Sheng Wang", "Angela O. Pisco",  "Russ B. Altman",  "Spyros Darmanis", "Jure Leskovec"],
-      "title": "Discovering Novel Cell Types Across Heterogeneous Single-Cell Experiments",
-      "venue": "In Review",
-      "year": "2020",
-      "thumbnail": "gnn-pretrain19.png",
-      "pdf": "",
-      "url": "https://www.biorxiv.org/content/10.1101/2020.02.25.960302v1",
-      "type": "journal",
-      "supp": 
-      {
-        "bioRxiv": "https://www.biorxiv.org/content/10.1101/2020.02.25.960302v1"
-      }
-    },
-
-     {
       "key": "submission20a",
       "author": ["Sheng Wang", "Angela O. Pisco", "Aaron McGeever", "Maria Brbic", "Marinka Zitnik", "Spyros Darmanis", "Jure Leskovec", "Jim Karkanias", "Russ B. Altman"],
       "title": "Unifying Single-Cell Annotations Based on the Cell Ontology",
@@ -189,6 +175,22 @@
       "url": "",
       "pdf": "",
       "type": "journal"
+    },
+
+    {
+      "key": "submission20b",
+      "author": ["Maria Brbic", "Marinka Zitnik", "Sheng Wang", "Angela O. Pisco",  "Russ B. Altman",  "Spyros Darmanis", "Jure Leskovec"],
+      "title": "MARS: Discovering Novel Cell Types across Heterogeneous Single-Cell Experiments",
+      "venue": "Nature Methods",
+      "year": "2020",
+      "thumbnail": "mars-nmethods20.png",
+      "pdf": "papers/mars-nmethods20.pdf",
+      "url": "https://www.nature.com/articles/s41592-020-00979-3",
+      "type": "journal",
+      "supp":
+      {
+        "bioRxiv": "https://www.biorxiv.org/content/10.1101/2020.02.25.960302v1"
+      }
     },
 
     {

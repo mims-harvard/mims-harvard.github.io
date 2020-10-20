@@ -1,0 +1,759 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SubGNN - MARINKA ZITNIK</title>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="shortcut icon" type="image/png"
+           href="/favicon.png" 
+    />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>SubGNN | MARINKA ZITNIK</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="SubGNN" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Machine Learning for Medicine and Science" />
+<meta property="og:description" content="Machine Learning for Medicine and Science" />
+<link rel="canonical" href="https://zitniklab.hms.harvard.edu/projects/SubGNN/" />
+<meta property="og:url" content="https://zitniklab.hms.harvard.edu/projects/SubGNN/" />
+<meta property="og:site_name" content="MARINKA ZITNIK" />
+<script type="application/ld+json">
+{"description":"Machine Learning for Medicine and Science","@type":"WebPage","url":"https://zitniklab.hms.harvard.edu/projects/SubGNN/","headline":"SubGNN","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
+<script>
+  window['ga-disable-UA-162129505-1'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-162129505-1');
+</script><!-- head scripts --></head>
+
+  <body>
+    
+<nav class="navbar is-primary" >
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item"><b>
+                MARINKA ZITNIK
+            </b></a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+<!--                <a href="/" class="navbar-item "><b>Home</b></a>-->
+                
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a href="/#" class="navbar-link "><b>About</b></a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/bio/" class="navbar-item "><b>Bio</b></a>
+                            
+                            <a href="/contact/" class="navbar-item "><b>Contact</b></a>
+                            
+                            <a href="/talks/" class="navbar-item "><b>Recent Talks</b></a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                <a href="/research/" class="navbar-item "><b>Research</b></a>
+                    
+                
+                    
+                <a href="/publications/" class="navbar-item "><b>Publications</b></a>
+                    
+                
+                    
+                <a href="/people/" class="navbar-item "><b>Members</b></a>
+                    
+                
+                    
+                <a href="/meetings/" class="navbar-item "><b>Organizing</b></a>
+                    
+                
+                    
+                <a href="/DMAI/" class="navbar-item "><b>DMAI</b></a>
+                    
+                
+                    
+                <a href="/data/" class="navbar-item "><b>Data</b></a>
+                    
+                
+                    
+                <a href="/software/" class="navbar-item "><b>Software</b></a>
+                    
+                
+                    
+                <a href="/news/" class="navbar-item "><b>News</b></a>
+                    
+                
+                    
+                <a href="/jobs/" class="navbar-item "><b>Join Us</b></a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+
+    
+        <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
+    <div class="hero-body">
+        <div class="container">
+            <p class="title is-2">SubGNN</p>
+            <p class="subtitle is-3"></p>
+            
+        </div>
+    </div>
+</section>
+    
+    
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+                <div class="column is-8">
+                    
+                    
+                    
+<div class="content">
+    
+
+</div>
+                </div>
+                
+                <div class="column is-4-desktop is-12-tablet">
+                    <p class="title is-4">Latest News</p>
+
+<div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2020/10/19/new-paper-MARS/">MARS: novel cell types in single-cell datasets</a>-->
+        <p class="card-header-title">Oct 2020: &nbsp; <span class="has-text-primary">MARS: novel cell types in single-cell datasets</span></p>
+<!--        <p class="card-header-item">Oct 2020</p>-->
+<!--        <p class="card-footer-item">Oct 19, 2020</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Hot off the press! <a href="https://www.nature.com/articles/s41592-020-00979-3">MARS, an approach for discovering novel cell types across heterogeneous single-cell experiments</a> is just published in Nature Methods.</p>
+</p>-->
+            <p>Hot off the press! <a href="https://www.nature.com/articles/s41592-020-00979-3">MARS, an approach for discovering novel cell types across heterogeneous single-cell experiments</a> is just published in Nature Methods.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2020/10/19/new-paper-MARS/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Oct 19, 2020</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2020/09/25/neurips-acceptance/">Four Papers Accepted at NeurIPS</a>-->
+        <p class="card-header-title">Sep 2020: &nbsp; <span class="has-text-primary">Four Papers Accepted at NeurIPS</span></p>
+<!--        <p class="card-header-item">Sep 2020</p>-->
+<!--        <p class="card-footer-item">Sep 25, 2020</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Thrilled that our lab has 4 papers accepted at <a href="https://nips.cc/">NeurIPS 2020</a>! Congratulations to fantastic students and collaborators, <a href="https://scholar.harvard.edu/michelleli">Michelle</a>, <a href="http://xiangzhang.info/">Xiang</a>, <a href="https://www.kexinhuang.com/">Kexin</a>, <a href="https://sgfin.github.io/">Sam</a>, and <a href="https://emilyalsentzer.github.io/">Emily</a>.</p>
+</p>-->
+            <p>Thrilled that our lab has 4 papers accepted at <a href="https://nips.cc/">NeurIPS 2020</a>! Congratulations to fantastic students and collaborators, <a href="https://scholar.harvard.edu/michelleli">Michelle</a>, <a href="http://xiangzhang.info/">Xiang</a>, <a href="https://www.kexinhuang.com/">Kexin</a>, <a href="https://sgfin.github.io/">Sam</a>, and <a href="https://emilyalsentzer.github.io/">Emily</a>.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2020/09/25/neurips-acceptance/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 25, 2020</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2020/09/09/mitxharvard-women-ai-copy/">MITxHarvard Women in AI Interview</a>-->
+        <p class="card-header-title">Sep 2020: &nbsp; <span class="has-text-primary">MITxHarvard Women in AI Interview</span></p>
+<!--        <p class="card-header-item">Sep 2020</p>-->
+<!--        <p class="card-footer-item">Sep 9, 2020</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>The <a href="https://mitharvardwai.github.io/">MITxHarvard Women in AI</a> initiative talked with Marinka about AI, machine learning, and the role of new technologies in biomedical research.</p>
+</p>-->
+            <p>The <a href="https://mitharvardwai.github.io/">MITxHarvard Women in AI</a> initiative talked with Marinka about AI, machine learning, and the role of new technologies in biomedical research.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2020/09/09/mitxharvard-women-ai-copy/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 9, 2020</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2020/08/24/aaai-workshop/">Trustworthy AI for Healthcare</a>-->
+        <p class="card-header-title">Aug 2020: &nbsp; <span class="has-text-primary">Trustworthy AI for Healthcare</span></p>
+<!--        <p class="card-header-item">Aug 2020</p>-->
+<!--        <p class="card-footer-item">Aug 24, 2020</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>We are excited to be co-organizing a workshop at <a href="https://aaai.org/Conferences/AAAI-21/">AAAI 2021</a> on <a href="https://taih20.github.io/">Trustworthy AI for Healthcare</a>! We have a stellar lineup of speakers. Details to follow soon!</p>
+</p>-->
+            <p>We are excited to be co-organizing a workshop at <a href="https://aaai.org/Conferences/AAAI-21/">AAAI 2021</a> on <a href="https://taih20.github.io/">Trustworthy AI for Healthcare</a>! We have a stellar lineup of speakers. Details to follow soon!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2020/08/24/aaai-workshop/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Aug 24, 2020</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2020/08/12/covid19-networkdrugs/">Network Drugs for COVID-19</a>-->
+        <p class="card-header-title">Aug 2020: &nbsp; <span class="has-text-primary">Network Drugs for COVID-19</span></p>
+<!--        <p class="card-header-item">Aug 2020</p>-->
+<!--        <p class="card-footer-item">Aug 12, 2020</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>What are network drugs? Drugs for COVID-19 predicted by network medicine, our <a href="https://zitniklab.hms.harvard.edu/research/">graph neural networks (GNNs)</a>, and our <a href="https://www.nature.com/articles/s41467-018-04948-5">rank aggregation algorithms</a>, followed by experimental confirmations. <a href="https://arxiv.org/abs/2004.07229">The full paper is finally out!</a></p>
+</p>-->
+            <p>What are network drugs? Drugs for COVID-19 predicted by network medicine, our <a href="https://zitniklab.hms.harvard.edu/research/">graph neural networks (GNNs)</a>, and our <a href="https://www.nature.com/articles/s41467-018-04948-5">rank aggregation algorithms</a>, followed by experimental confirmations. <a href="https://arxiv.org/abs/2004.07229">The full paper is finally out!</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2020/08/12/covid19-networkdrugs/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Aug 12, 2020</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2020/07/29/podcat-bioinformatics-chat/">Podcast on ML for Drug Development</a>-->
+        <p class="card-header-title">Jul 2020: &nbsp; <span class="has-text-primary">Podcast on ML for Drug Development</span></p>
+<!--        <p class="card-header-item">Jul 2020</p>-->
+<!--        <p class="card-footer-item">Jul 29, 2020</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Tune in to the podcast with Marinka about <a href="https://bioinformatics.chat/drug-development">machine learning to drug development</a>. The discussion focuses on open research questions in the field, including how to limit the search space of high-throughput screens, design drugs entirely from scratch, and identify likely side-effects of combining drugs in novel ways.</p>
+</p>-->
+            <p>Tune in to the podcast with Marinka about <a href="https://bioinformatics.chat/drug-development">machine learning to drug development</a>. The discussion focuses on open research questions in the field, including how to limit the search space of high-throughput screens, design drugs entirely from scratch, and identify likely side-effects of combining drugs in novel ways.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2020/07/29/podcat-bioinformatics-chat/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jul 29, 2020</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2020/07/27/postdoc-job-ad/">Postdoctoral Research Fellowship</a>-->
+        <p class="card-header-title">Jul 2020: &nbsp; <span class="has-text-primary">Postdoctoral Research Fellowship</span></p>
+<!--        <p class="card-header-item">Jul 2020</p>-->
+<!--        <p class="card-footer-item">Jul 27, 2020</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>We have a new opening for a <a href="https://zitniklab.hms.harvard.edu/postdoc">postdoctoral research fellow in novel machine learning methods to combat COVID-19!</a> Submit your application by September 1, 2020.</p>
+</p>-->
+            <p>We have a new opening for a <a href="https://zitniklab.hms.harvard.edu/postdoc">postdoctoral research fellow in novel machine learning methods to combat COVID-19!</a> Submit your application by September 1, 2020.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2020/07/27/postdoc-job-ad/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jul 27, 2020</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2020/07/01/new-preprint-deeppurpose/">DeepPurpose Library</a>-->
+        <p class="card-header-title">Jul 2020: &nbsp; <span class="has-text-primary">DeepPurpose Library</span></p>
+<!--        <p class="card-header-item">Jul 2020</p>-->
+<!--        <p class="card-footer-item">Jul 1, 2020</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p><a href="https://arxiv.org/abs/2004.08919">DeepPurpose</a> is a deep learning library for drug-target interaction prediction and applications to drug repurposing and virtual screening.</p>
+</p>-->
+            <p><a href="https://arxiv.org/abs/2004.08919">DeepPurpose</a> is a deep learning library for drug-target interaction prediction and applications to drug repurposing and virtual screening.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2020/07/01/new-preprint-deeppurpose/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jul 1, 2020</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2020/06/18/new-preprint-subgnn/">Subgraph Neural Networks</a>-->
+        <p class="card-header-title">Jun 2020: &nbsp; <span class="has-text-primary">Subgraph Neural Networks</span></p>
+<!--        <p class="card-header-item">Jun 2020</p>-->
+<!--        <p class="card-footer-item">Jun 18, 2020</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p><a href="https://arxiv.org/abs/2006.10538">Subgraph neural networks</a> learn powerful subgraph representations that create 
+fundamentally new opportunities for predictions beyond nodes, edges, and entire graphs.</p>
+</p>-->
+            <p><a href="https://arxiv.org/abs/2006.10538">Subgraph neural networks</a> learn powerful subgraph representations that create 
+fundamentally new opportunities for predictions beyond nodes, edges, and entire graphs.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2020/06/18/new-preprint-subgnn/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jun 18, 2020</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2020/06/17/new-preprint-gnnguard/">Defense Against Adversarial Attacks</a>-->
+        <p class="card-header-title">Jun 2020: &nbsp; <span class="has-text-primary">Defense Against Adversarial Attacks</span></p>
+<!--        <p class="card-header-item">Jun 2020</p>-->
+<!--        <p class="card-footer-item">Jun 17, 2020</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p><a href="https://arxiv.org/abs/2006.08149">GNNGuard can defend graph neural networks</a> against a variety
+of training-time attacks. Remarkably, 
+GNNGuard can restore state-of-the-art performance of any GNN in the face of adversarial attacks.</p>
+</p>-->
+            <p><a href="https://arxiv.org/abs/2006.08149">GNNGuard can defend graph neural networks</a> against a variety
+of training-time attacks. Remarkably, 
+GNNGuard can restore state-of-the-art performance of any GNN in the face of adversarial attacks.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2020/06/17/new-preprint-gnnguard/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jun 17, 2020</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2020/06/15/new-preprint-gmeta/">Graph Meta Learning via Subgraphs</a>-->
+        <p class="card-header-title">Jun 2020: &nbsp; <span class="has-text-primary">Graph Meta Learning via Subgraphs</span></p>
+<!--        <p class="card-header-item">Jun 2020</p>-->
+<!--        <p class="card-footer-item">Jun 15, 2020</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p><a href="https://arxiv.org/abs/2006.07889">G-Meta is a meta-learning approach for graphs</a> that quickly adapts 
+to new prediction tasks using only a handful of data points. G-Meta works in most challenging, 
+few-shot learning settings and scales to massive interactomics data as we show
+on our new <em>Networks of Life</em> dataset comprising of 1,840 networks.</p>
+</p>-->
+            <p><a href="https://arxiv.org/abs/2006.07889">G-Meta is a meta-learning approach for graphs</a> that quickly adapts 
+to new prediction tasks using only a handful of data points. G-Meta works in most challenging, 
+few-shot learning settings and scales to massive interactomics data as we show
+on our new <em>Networks of Life</em> dataset comprising of 1,840 networks.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2020/06/15/new-preprint-gmeta/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jun 15, 2020</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2020/05/06/new-preprint-ogb/">The Open Graph Benchmark</a>-->
+        <p class="card-header-title">May 2020: &nbsp; <span class="has-text-primary">The Open Graph Benchmark</span></p>
+<!--        <p class="card-header-item">May 2020</p>-->
+<!--        <p class="card-footer-item">May 6, 2020</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>A new <a href="https://arxiv.org/abs/2005.00687">paper introducing the Open Graph Benchmark,</a> a diverse set of challenging and realistic benchmark datasets for graph machine learning.</p>
+</p>-->
+            <p>A new <a href="https://arxiv.org/abs/2005.00687">paper introducing the Open Graph Benchmark,</a> a diverse set of challenging and realistic benchmark datasets for graph machine learning.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2020/05/06/new-preprint-ogb/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: May 6, 2020</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2020/05/04/special-issue-covid19/">Special Issue on AI for COVID-19</a>-->
+        <p class="card-header-title">May 2020: &nbsp; <span class="has-text-primary">Special Issue on AI for COVID-19</span></p>
+<!--        <p class="card-header-item">May 2020</p>-->
+<!--        <p class="card-footer-item">May 4, 2020</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Marinka is co-editing a special issue of IEEE Big Data on <a href="https://www.computer.org/digital-library/journals/bd/call-for-papers-special-issue-on-ai-for-covid-19">AI for COVID-19</a>. In light of the urgent need for data-driven solutions to mitigate the COVID-19 pandemic, the special issue will aim for a fast-track peer review.</p>
+</p>-->
+            <p>Marinka is co-editing a special issue of IEEE Big Data on <a href="https://www.computer.org/digital-library/journals/bd/call-for-papers-special-issue-on-ai-for-covid-19">AI for COVID-19</a>. In light of the urgent need for data-driven solutions to mitigate the COVID-19 pandemic, the special issue will aim for a fast-track peer review.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2020/05/04/special-issue-covid19/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: May 4, 2020</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2020/05/03/new-preprint-multiscaleinteractome/">Multiscale Interactome</a>-->
+        <p class="card-header-title">May 2020: &nbsp; <span class="has-text-primary">Multiscale Interactome</span></p>
+<!--        <p class="card-header-item">May 2020</p>-->
+<!--        <p class="card-footer-item">May 3, 2020</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>A new preprint on <a href="https://doi.org/10.1101/2020.04.30.069690">discovering disease treatment mechanisms through the multiscale interactome</a>.</p>
+</p>-->
+            <p>A new preprint on <a href="https://doi.org/10.1101/2020.04.30.069690">discovering disease treatment mechanisms through the multiscale interactome</a>.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2020/05/03/new-preprint-multiscaleinteractome/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: May 3, 2020</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2020/05/01/new-preprint-skipgnn/">Molecular Interaction Networks</a>-->
+        <p class="card-header-title">May 2020: &nbsp; <span class="has-text-primary">Molecular Interaction Networks</span></p>
+<!--        <p class="card-header-item">May 2020</p>-->
+<!--        <p class="card-footer-item">May 1, 2020</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>A new preprint describing a <a href="https://arxiv.org/abs/2004.14949">graph neural network approach for the prediction of molecular interactions</a>, including drug-drug, drug-target, protein-protein, and gene-disease interactions.</p>
+</p>-->
+            <p>A new preprint describing a <a href="https://arxiv.org/abs/2004.14949">graph neural network approach for the prediction of molecular interactions</a>, including drug-drug, drug-target, protein-protein, and gene-disease interactions.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2020/05/01/new-preprint-skipgnn/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: May 1, 2020</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2020/04/27/ecmlpkdd-phd-forum/">Submit to PhD Forum at ECML</a>-->
+        <p class="card-header-title">Apr 2020: &nbsp; <span class="has-text-primary">Submit to PhD Forum at ECML</span></p>
+<!--        <p class="card-header-item">Apr 2020</p>-->
+<!--        <p class="card-footer-item">Apr 27, 2020</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>The call for <a href="https://ecmlpkdd2020.net/submissions/phdforum">ECML-PKDD 2020 PhD Forum Track</a> is now online. If you are a PhD student, submit your work on machine learning and knowledge discovery.</p>
+
+</p>-->
+            <p>The call for <a href="https://ecmlpkdd2020.net/submissions/phdforum">ECML-PKDD 2020 PhD Forum Track</a> is now online. If you are a PhD student, submit your work on machine learning and knowledge discovery.</p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2020/04/27/ecmlpkdd-phd-forum/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Apr 27, 2020</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2020/04/15/network-medicine-covid19/">Drug Repurposing for COVID-19</a>-->
+        <p class="card-header-title">Apr 2020: &nbsp; <span class="has-text-primary">Drug Repurposing for COVID-19</span></p>
+<!--        <p class="card-header-item">Apr 2020</p>-->
+<!--        <p class="card-footer-item">Apr 15, 2020</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>We are excited to share our latest results on how <a href="https://arxiv.org/abs/2004.07229">networks and graph machine-learning help us search for a cure for COVID-19.</a></p>
+</p>-->
+            <p>We are excited to share our latest results on how <a href="https://arxiv.org/abs/2004.07229">networks and graph machine-learning help us search for a cure for COVID-19.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2020/04/15/network-medicine-covid19/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Apr 15, 2020</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2020/03/26/aicures-participation/">AI Cures</a>-->
+        <p class="card-header-title">Mar 2020: &nbsp; <span class="has-text-primary">AI Cures</span></p>
+<!--        <p class="card-header-item">Mar 2020</p>-->
+<!--        <p class="card-footer-item">Mar 26, 2020</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>We are joining <a href="https://www.aicures.mit.edu/">AI Cures</a> initiative at MIT! We will develop machine learning methods for finding promising antiviral molecules for COVID-19 and other emerging pathogens.</p>
+</p>-->
+            <p>We are joining <a href="https://www.aicures.mit.edu/">AI Cures</a> initiative at MIT! We will develop machine learning methods for finding promising antiviral molecules for COVID-19 and other emerging pathogens.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2020/03/26/aicures-participation/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 26, 2020</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2020/03/25/covid-19-task-force/">COVID-19 Task Force</a>-->
+        <p class="card-header-title">Mar 2020: &nbsp; <span class="has-text-primary">COVID-19 Task Force</span></p>
+<!--        <p class="card-header-item">Mar 2020</p>-->
+<!--        <p class="card-footer-item">Mar 25, 2020</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>We are excited to be working with <a href="https://scholar.google.com/citations?user=vsj2slIAAAAJ&amp;hl=en">László Barabási</a> and his amazing team of scientists as we <a href="https://covid.barabasilab.com/">search for a cure for COVID-19</a>.</p>
+</p>-->
+            <p>We are excited to be working with <a href="https://scholar.google.com/citations?user=vsj2slIAAAAJ&amp;hl=en">László Barabási</a> and his amazing team of scientists as we <a href="https://covid.barabasilab.com/">search for a cure for COVID-19</a>.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2020/03/25/covid-19-task-force/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 25, 2020</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2020/03/02/graphl-ml-workshop/">Graph ML Workshop at ICML 2020</a>-->
+        <p class="card-header-title">Mar 2020: &nbsp; <span class="has-text-primary">Graph ML Workshop at ICML 2020</span></p>
+<!--        <p class="card-header-item">Mar 2020</p>-->
+<!--        <p class="card-footer-item">Mar 2, 2020</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>We will co-organize a workshop on <a href="https://grlplus.github.io/">Graph Representation Learning and Beyond</a> at <a href="https://icml.cc/Conferences/2020">ICML 2020</a>. Submit your finest work!</p>
+</p>-->
+            <p>We will co-organize a workshop on <a href="https://grlplus.github.io/">Graph Representation Learning and Beyond</a> at <a href="https://icml.cc/Conferences/2020">ICML 2020</a>. Submit your finest work!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2020/03/02/graphl-ml-workshop/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 2, 2020</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+
+    <div class="column is-12">
+        <div class="card">
+            <header class="card-header">
+        <!--        <a class="card-header-title" href=""></a>-->
+            <p class="card-header-title"><span class="has-text-primary">Tweets</span></p>
+        <!--        <p class="card-header-item"></p>-->
+        <!--        <p class="card-footer-item"></p>-->
+            </header>
+        <div class="card-content">
+        <!--        <div class="content">-->
+        <!--            -->
+        <!--            <p></p>-->
+        <a class="twitter-timeline" data-width="500" data-height="500" data-theme="light" href="https://twitter.com/marinkazitnik?ref_src=twsrc%5Etfw" data-chrome="noheader transparent nofooter nofooter noborders">Tweets by marinkazitnik</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <!--        </div>-->
+        <!--        <div class="has-text-centered">-->
+        <!--            <a href="" class="button is-primary">Read more</a>-->
+        <!--        </div>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts -->
+<div style="background-color:#A41034">
+        <div class="content is-normal has-text-centered">
+            <p style="color:white;padding-top:20px;padding-bottom:20px;"><a href="https://scholar.harvard.edu/marinka" style="color:white"><b>Zitnik Lab</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://harvard.edu" style="color:white"><b>Harvard</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://dbmi.hms.harvard.edu/" style="color:white"><b>Department of Biomedical Informatics</b></a></p>
+        </div>
+</div></body>
+</html>
+
