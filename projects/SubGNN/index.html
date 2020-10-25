@@ -4,16 +4,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SubGNN - MARINKA ZITNIK</title>
+    <title>Subgraph Neural Networks - MARINKA ZITNIK</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="shortcut icon" type="image/png"
            href="/favicon.png" 
     />
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>SubGNN | MARINKA ZITNIK</title>
+<title>Subgraph Neural Networks | MARINKA ZITNIK</title>
 <meta name="generator" content="Jekyll v3.8.6" />
-<meta property="og:title" content="SubGNN" />
+<meta property="og:title" content="Subgraph Neural Networks" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Machine Learning for Medicine and Science" />
 <meta property="og:description" content="Machine Learning for Medicine and Science" />
@@ -21,7 +21,7 @@
 <meta property="og:url" content="https://zitniklab.hms.harvard.edu/projects/SubGNN/" />
 <meta property="og:site_name" content="MARINKA ZITNIK" />
 <script type="application/ld+json">
-{"description":"Machine Learning for Medicine and Science","@type":"WebPage","url":"https://zitniklab.hms.harvard.edu/projects/SubGNN/","headline":"SubGNN","@context":"https://schema.org"}</script>
+{"description":"Machine Learning for Medicine and Science","@type":"WebPage","url":"https://zitniklab.hms.harvard.edu/projects/SubGNN/","headline":"Subgraph Neural Networks","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
 <script>
@@ -91,7 +91,7 @@
                     
                 
                     
-                <a href="/software/" class="navbar-item "><b>Software</b></a>
+                <a href="/software/" class="navbar-item "><b>ML Tools</b></a>
                     
                 
                     
@@ -112,7 +112,7 @@
         <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
     <div class="hero-body">
         <div class="container">
-            <p class="title is-2">SubGNN</p>
+            <p class="title is-2">Subgraph Neural Networks</p>
             <p class="subtitle is-3"></p>
             
         </div>
@@ -131,7 +131,89 @@
                     
                     
 <div class="content">
-    
+    <div class="box has-background-info has-text-white">
+SubGNN is a general framework for subgraph representation learning. SubGNN learns meaningful representations for subgraphs and supports prediction of any subgraph properties.
+</div>
+
+<p>We present SubGNN, a general method for subgraph representation learning. It addresses a fundamental gap in current graph neural network (GNN) methods that are not yet optimized for subgraph-level predictions.</p>
+
+<p>Our method implements in a neural message passing scheme three distinct channels to each capture a key property of subgraphs: neighborhood, structure, and position. We have generated four synthetic datasets highlighting a specific subgraph property. By performing an ablation study over the channels, we demonstrate that the performance of individual channels aligns closely with their inductive biases.</p>
+
+<p>SubGNN outperforms baseline methods across both synthetic and real-world datasets. Along with SubGNN, we have released eight new datasets representing a diverse collection of tasks to pave the way for innovating subgraph neural networks in the future.</p>
+
+<h2 id="publication">Publication</h2>
+
+<p>Subgraph Neural Networks<br />
+Emily Alsentzer, Samuel G. Finlayson, Michelle M. Li, Marinka Zitnik.<br />
+<em>NeurIPS</em> 2020. [<a href="https://arxiv.org/abs/2006.10538">arXiv</a>]</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{alsentzer2020subgraph,
+  title={Subgraph Neural Networks},
+  author={Alsentzer, Emily and Finlayson, Samuel G and Li, Michelle M and Zitnik, Marinka},
+  journal={Proceedings of Neural Information Processing Systems, NeurIPS},
+  year={2020}
+}
+</code></pre></div></div>
+
+<h2 id="motivation">Motivation</h2>
+
+<p>Encoding subgraphs for GNNs is not well-studied or commonly used. Rather, current GNN methods are optimized for node-, edge-, and graph-level predictions, but not yet at the subgraph-level.</p>
+
+<p>Representation learning for subgraphs presents unique challenges.</p>
+<ul>
+  <li><strong>Subgraphs require that we make joint predictions over structures of varying sizes.</strong> They do not necessarily cluster together, and can even be composed of multiple disparate components that are far apart from each other in the graph.</li>
+  <li><strong>Subgraphs contain rich higher-order connectivity patterns, both internally and externally with the rest of the graph.</strong> The challenge is to inject information about border and external subgraph structure into the GNN’s neural message passing.</li>
+  <li><strong>Subgraphs can be localized or distributed throughout the graph.</strong> We must effectively learn about subgraph positions within the underlying graph.</li>
+</ul>
+
+<p>The following figure depicts a simple base graph and five subgraphs, each with different structures. For instance, subgraphs S2, S3, and S5 comprise of single connected components in the graph, whereas subgraphs S1 and S4 each form two isolated components. Colors indicate subgraph labels. The right panel illustrates an example of internal connectivity versus border structure</p>
+
+<p><img align="center" src="/img/subgnn-1.png" /></p>
+
+<h2 id="subgnn-framework">SubGNN framework</h2>
+
+<p>SubGNN takes as input a base graph and subgraph information to train embeddings for each subgraph. Each channel’s output embeddings are then concatenated to generate one final subgraph embedding.</p>
+
+<p><img align="center" src="/img/subgnn-2.png" /></p>
+
+<p>The figure above depicts SubGNN’s architecture. The left panel illustrates how property-specific messages are propagated from anchor node patches to subgraph components. The right panel shows the three channels designed to capture a distinct subgraph property.</p>
+
+<h2 id="datasets">Datasets</h2>
+
+<p>We present four new synthetic datasets and four novel real-world social and biological datasets to stimulate subgraph representation learning research.</p>
+
+<h3 id="synthetic-datasets">Synthetic datasets</h3>
+
+<p>Each synthetic dataset challenges the ability of our methods to capture:</p>
+<ul>
+  <li><em>DENSITY:</em> Internal structure of subgraph topology.</li>
+  <li><em>CUT RATIO:</em> Border structure of subgraph topology.</li>
+  <li><em>CORENESS:</em> Border structure and position of subgraph topology.</li>
+  <li><em>COMPONENT:</em> Internal and external position of subgraph topology.</li>
+</ul>
+
+<h3 id="real-world-datasets">Real-world datasets</h3>
+
+<ul>
+  <li><em>PPI-BP</em> is a molecular biology dataset, where the subgraphs are a group of genes and their labels are the genes’ collective cellular function. The base graph is a human protein-protein interaction network.</li>
+  <li><em>UDN-METAB</em> is a clinical dataset, where the subgraphs are a collection of phenotypes associated with a rare monogenic disease and their labels are the subcategory of the metabolic disorder most consistent with those phenotypes. The base graph is a knowledge graph containing phenotype and genotype information about rare diseases.</li>
+  <li><em>UDN-NEURO</em> is similar to UDN-METAB but for one or more neurological disorders (multilabel classification), and shares the same base graph.</li>
+  <li><em>EM</em> is a social dataset, where the subgraphs are the workout history of a user and their labels are the gender of the user. The base graph is a social fitness network from Endomondo.</li>
+</ul>
+
+<h2 id="code">Code</h2>
+
+<p>Source code is available in the <a href="https://github.com/mims-harvard/SubGNN">GitHub repository</a>.</p>
+
+<h2 id="authors">Authors</h2>
+
+<ul>
+  <li><a href="https://emilyalsentzer.github.io">Emily Alsentzer</a> (co-first authors)</li>
+  <li><a href="https://sgfin.github.io">Samuel G Finlayson</a> (co-first authors)</li>
+  <li><a href="https://scholar.harvard.edu/michelleli">Michelle M Li</a></li>
+  <li><a href="https://zitniklab.hms.harvard.edu/">Marinka Zitnik</a></li>
+</ul>
+
 
 </div>
                 </div>

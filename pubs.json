@@ -26,7 +26,8 @@
       "type": "journal",
       "supp":
       {
-        "arXiv": "https://arxiv.org/abs/2006.10538"
+        "arXiv": "https://arxiv.org/abs/2006.10538",
+        "project website": "/projects/SubGNN"
       }
     },
 
@@ -43,7 +44,8 @@
       "supp":
       {
         "arXiv": "https://arxiv.org/abs/2006.08149",
-        "code": "https://github.com/mims-harvard/GNNGuard"
+        "code": "https://github.com/mims-harvard/GNNGuard",
+        "project website": "/projects/GNNGuard"
       }
     },
 
@@ -60,7 +62,8 @@
       "supp":
       {
         "arXiv": "https://arxiv.org/abs/2006.07889",
-        "code": "https://github.com/mims-harvard/G-Meta"
+        "code": "https://github.com/mims-harvard/G-Meta",
+        "project website": "/projects/G-Meta"
       }
     },
 

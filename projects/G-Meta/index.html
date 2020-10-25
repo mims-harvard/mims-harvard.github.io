@@ -4,16 +4,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>G-Meta - MARINKA ZITNIK</title>
+    <title>Graph Meta Learning - MARINKA ZITNIK</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="shortcut icon" type="image/png"
            href="/favicon.png" 
     />
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>G-Meta | MARINKA ZITNIK</title>
+<title>Graph Meta Learning | MARINKA ZITNIK</title>
 <meta name="generator" content="Jekyll v3.8.6" />
-<meta property="og:title" content="G-Meta" />
+<meta property="og:title" content="Graph Meta Learning" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Machine Learning for Medicine and Science" />
 <meta property="og:description" content="Machine Learning for Medicine and Science" />
@@ -21,7 +21,7 @@
 <meta property="og:url" content="https://zitniklab.hms.harvard.edu/projects/G-Meta/" />
 <meta property="og:site_name" content="MARINKA ZITNIK" />
 <script type="application/ld+json">
-{"description":"Machine Learning for Medicine and Science","@type":"WebPage","url":"https://zitniklab.hms.harvard.edu/projects/G-Meta/","headline":"G-Meta","@context":"https://schema.org"}</script>
+{"description":"Machine Learning for Medicine and Science","@type":"WebPage","url":"https://zitniklab.hms.harvard.edu/projects/G-Meta/","headline":"Graph Meta Learning","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
 <script>
@@ -91,7 +91,7 @@
                     
                 
                     
-                <a href="/software/" class="navbar-item "><b>Software</b></a>
+                <a href="/software/" class="navbar-item "><b>ML Tools</b></a>
                     
                 
                     
@@ -112,7 +112,7 @@
         <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
     <div class="hero-body">
         <div class="container">
-            <p class="title is-2">G-Meta</p>
+            <p class="title is-2">Graph Meta Learning</p>
             <p class="subtitle is-3"></p>
             
         </div>
@@ -131,7 +131,68 @@
                     
                     
 <div class="content">
-    
+    <div class="box has-background-info has-text-white">
+G-Meta is broadly applicable, theoretically motivated, and scalable graph network framework for few-shot and meta learning.
+</div>
+
+<h2 id="graph-few-shot-and-meta-learning">Graph few-shot and meta learning</h2>
+
+<p>Prevailing methods for graphs require abundant label and edge information for learning, yet many real-world graphs only have a few labels available. This presents a new challenge: how to make accurate predictions in the low-data regimes?</p>
+
+<p><img align="center" src="/img/gmeta-1.png" /></p>
+
+<p>When data for a new task are scarce, meta learning can learn from prior experiences and form much-needed inductive biases for fast adaptation to new tasks. However, a systematic way to formulate meta learning problems on graph-structured data is missing. In this work, we first formulate three important but distinct graph meta learning problems. The main idea is to adapt to the graph or label set of interest by learning from related graphs or label sets.</p>
+
+<p><img align="center" src="/img/gmeta-2.png" /></p>
+
+<h2 id="g-meta-algorithm">G-Meta algorithm</h2>
+
+<p>G-Meta is a meta learning algorithm that excels at all of the above meta learning problems. In contrast to the status quo that propagate messages through the entire graph, G-Meta uses local subgraphs to transfer subgraph-specific information and learn transferable knowledge faster via meta gradients.</p>
+
+<p><img align="center" src="/img/gmeta-3.png" /></p>
+
+<h2 id="attractive-properties-of-g-meta">Attractive properties of G-Meta</h2>
+
+<p>(1) <strong>Theoretically justified:</strong> We show theoretically that the evidence for a prediction can be found in the local subgraph surrounding the target node or edge.</p>
+
+<p>(2) <strong>Inductive:</strong> As the input of GNN is a different subgraph for each propagation during meta-training, it can generalize to never-before-seen subgraphs, such as the ones in the meta-testing. This is in contrast to previous works where inductiveness means using the same weight generated from one single trained graph and applying it to a never-before-seen structurally different graph.</p>
+
+<p>(3) <strong>Scalable:</strong> In a typical graph meta learning setting, we have many graphs and each have large amounts of nodes and edges. But each task is only looking at a few data points scattered across graphs. Previous works propagate through all of the graphs to generate embeddings for a few nodes, which is wasteful. In contrast, G-Meta simply extracts the small subgraphs around a few data points for every task, and is thus not restricted by any number of nodes, edges, and graphs.</p>
+
+<p>(4) <strong>Broadly applicable:</strong> G-Meta uses an individual subgraph for each data point and thus breaks the dependency across graphs and labels. While previous works only excel at one of the graph meta learning problems for either node classification or link prediction tasks, G-Meta works for all of the three graph meta learning problems and both node and link prediction tasks.</p>
+
+<h2 id="g-meta-excels-at-graph-meta-learning">G-Meta excels at graph meta learning</h2>
+
+<p>Empirically, experiments on seven datasets and nine baseline methods show that G-Meta outperforms existing methods by up to 16.3%. Unlike previous methods, G-Meta successfully learns in challenging, few-shot learning settings that require generalization to completely new graphs and never-before-seen labels. Finally, G-Meta scales to large graphs, which we demonstrate on a new Tree-of-Life dataset consisting of 1,840 graphs, a two-orders of magnitude increase in the number of graphs used in prior work.</p>
+
+<h2 id="publication">Publication</h2>
+
+<p>Graph Meta Learning via Local Subgraphs<br />
+Kexin Huang, Marinka Zitnik.<br />
+<em>NeurIPS</em> 2020. [<a href="https://arxiv.org/abs/2006.07889">arXiv</a>]</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{G-Meta2020,
+  title={Graph Meta Learning via Local Subgraphs},
+  author={Huang, Kexin and Zitnik, Marinka},
+  journal={Proceedings of Neural Information Processing Systems, NeurIPS},
+  year={2020}
+}
+</code></pre></div></div>
+
+<h2 id="code">Code</h2>
+
+<p>Source code is available in the <a href="https://github.com/mims-harvard/G-Meta">GitHub repository</a>.</p>
+
+<h2 id="datasets">Datasets</h2>
+
+<p>ML-ready datasets used in the paper are provided in the <a href="https://drive.google.com/file/d/1TC06A02wmIQteKzqGSbl_i3VIQzsHVop/view?usp=drivesdk">HU data repository</a> and, alternatively, the <a href="https://hu-my.sharepoint.com/:u:/g/personal/kexinhuang_hsph_harvard_edu/EbSj1CehKDtKniKqtICWsScBESs9ldWWcTttGdADnFc6Wg?e=gJhl7c">Microsoft repository</a>.</p>
+
+<h2 id="authors">Authors</h2>
+
+<ul>
+  <li><a href="https://www.kexinhuang.com">Kexin Huang</a></li>
+  <li><a href="https://zitniklab.hms.harvard.edu">Marinka Zitnik</a></li>
+</ul>
 
 </div>
                 </div>
