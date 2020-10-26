@@ -79,7 +79,8 @@
       "type": "journal",
       "supp":
       {
-        "arXiv": "https://arxiv.org/abs/2005.00687"
+        "arXiv": "https://arxiv.org/abs/2005.00687",
+        "project website":  "https://ogb.stanford.edu/"
       }
     },
 

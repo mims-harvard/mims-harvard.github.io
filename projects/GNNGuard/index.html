@@ -4,24 +4,29 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GNNGuard - MARINKA ZITNIK</title>
+    <title>Defending Graph Neural Networks against Adversarial Attacks - MARINKA ZITNIK</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="shortcut icon" type="image/png"
            href="/favicon.png" 
     />
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>GNNGuard | MARINKA ZITNIK</title>
+<title>Defending Graph Neural Networks against Adversarial Attacks | MARINKA ZITNIK</title>
 <meta name="generator" content="Jekyll v3.8.6" />
-<meta property="og:title" content="GNNGuard" />
+<meta property="og:title" content="Defending Graph Neural Networks against Adversarial Attacks" />
+<meta name="author" content="Marinka Zitnik" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Machine Learning for Medicine and Science" />
 <meta property="og:description" content="Machine Learning for Medicine and Science" />
 <link rel="canonical" href="https://zitniklab.hms.harvard.edu/projects/GNNGuard/" />
 <meta property="og:url" content="https://zitniklab.hms.harvard.edu/projects/GNNGuard/" />
 <meta property="og:site_name" content="MARINKA ZITNIK" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Defending Graph Neural Networks against Adversarial Attacks" />
+<meta name="twitter:site" content="@marinkazitnik" />
+<meta name="twitter:creator" content="@Marinka Zitnik" />
 <script type="application/ld+json">
-{"description":"Machine Learning for Medicine and Science","@type":"WebPage","url":"https://zitniklab.hms.harvard.edu/projects/GNNGuard/","headline":"GNNGuard","@context":"https://schema.org"}</script>
+{"description":"Machine Learning for Medicine and Science","author":{"@type":"Person","name":"Marinka Zitnik"},"@type":"WebPage","url":"https://zitniklab.hms.harvard.edu/projects/GNNGuard/","headline":"Defending Graph Neural Networks against Adversarial Attacks","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
 <script>
@@ -79,7 +84,7 @@
                     
                 
                     
-                <a href="/meetings/" class="navbar-item "><b>Organizing</b></a>
+                <a href="/meetings/" class="navbar-item "><b>Events</b></a>
                     
                 
                     
@@ -112,7 +117,7 @@
         <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
     <div class="hero-body">
         <div class="container">
-            <p class="title is-2">GNNGuard</p>
+            <p class="title is-2">Defending Graph Neural Networks against Adversarial Attacks</p>
             <p class="subtitle is-3"></p>
             
         </div>
@@ -131,7 +136,60 @@
                     
                     
 <div class="content">
-    
+    <div class="box has-background-info has-text-white">
+GNNGuard is a model-agnostic approach that can defend any Graph Neural Network against a variety of adversarial attacks.
+</div>
+
+<p>Deep learning methods for graphs achieve remarkable performance on many tasks. However, despite the proliferation of such methods and their success, recent findings indicate that even the strongest and most popular Graph Neural Networks (GNNs) are highly vulnerable to adversarial attacks.  Adversarial attacks mean that an attacker injects small but carefully-designed perturbations to the graph structures in order to degrade the performance of GNN classifiers.</p>
+
+<p>The vulnerability is a significant issue preventing GNNs from being used in real-world applications. For example, under adversarial attack, small and unnoticeable perturbations of graph structure (e.g., adding two edges on the poisoned node) can catastrophically reduce performance (panel <strong>A</strong> in the figure).</p>
+
+<p>We develop GNNGuard, a general algorithm to defend against a variety of training-time attacks that perturb the discrete graph structure. GNNGuard can be straightforwardly incorporated into any GNN. By integrating GNNGuard, the GNN classifier can make correct predictions even when trained on the attacked graph (panel <strong>B</strong> in the figure).</p>
+
+<p><img align="center" src="/img/gnnguard-1.png" /></p>
+
+<h2 id="gnnguard-algorithm">GNNGuard algorithm</h2>
+
+<p>Most damaging attacks add fake edges between nodes that have different features and labels. Because of that, the key idea of GNNGuard is to detect and quantify the relationship between the graph structure and node features, if one exists, and then exploit that relationship to mitigate negative effects of the attack. GNNGuard learns how to best assign higher weights to edges connecting similar nodes while pruning edges between unrelated nodes. In specific, instead of the neural message passing of a typical GNN (panel <strong>A</strong> in the figure), GNNGuard (panel <strong>B</strong> in the figure) controls the message stream, such as blocking the message from irrelevant neighbors while strengthening messages from highly-related ones.</p>
+
+<p>Remarkably, GNNGuard can effectively restore state-of-the-art performance of GNNs in the face of various adversarial attacks, including targeted and non-targeted attacks, and can defend against attacks on both homophily and heterophily graphs.</p>
+
+<p><img align="center" src="/img/gnnguard-2.png" /></p>
+
+<h2 id="attractive-properties-of-gnnguard">Attractive properties of GNNGuard</h2>
+
+<ul>
+  <li><strong>Defense against a variety of attacks:</strong> GNNGuard is a general defense approach that is effective against a variety of training-time attacks, including directly targeted, influence, and non-targeted attacks.</li>
+  <li><strong>Integrates with any GNNs:</strong> GNNGuard can defend any modern GNN architecture against adversarial attacks.</li>
+  <li><strong>State-of-the-art performance on clean graphs:</strong> In real-world settings, we do not know whether a graph has been attacked or not. GNNGuard can restore state-of-the-art performance of a GNN when the graph is attached as well as sustain the original performance on non-attacked graphs.</li>
+  <li><strong>Homophily and heterophily graphs:</strong> GNNGuard is the first technique that can defend GNNs against attacks on homophily and heterophily graphs. GNNGuard can be easily generalized to graphs with abundant structural equivalences, where connected nodes have different node features yet similar structural roles.</li>
+</ul>
+
+<h2 id="publication">Publication</h2>
+
+<p>GNNGuard: Defending Graph Neural Networks against Adversarial Attacks <br />
+Xiang Zhang and Marinka Zitnik <br />
+<em>NeurIPS</em> 2020 [<a href="https://arxiv.org/abs/2006.08149">arXiv</a>]</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{zhang2020gnnguard,
+title     = {GNNGuard: Defending Graph Neural Networks against Adversarial Attacks},
+author    = {Zhang, Xiang and Zitnik, Marinka},
+booktitle = {Proceedings of Neural Information Processing Systems, NeurIPS},
+year      = {2020}
+}
+</code></pre></div></div>
+
+<h2 id="code-and-datasets">Code and datasets</h2>
+
+<p>Pytorch implementation of GNNGuard and all datasets are available in the <a href="https://github.com/mims-harvard/GNNGuard">GitHub repository</a>.</p>
+
+<h2 id="authors">Authors</h2>
+
+<ul>
+  <li><a href="https://xiangzhang.info/">Xiang Zhang</a></li>
+  <li><a href="https://zitniklab.hms.harvard.edu/">Marinka Zitnik</a></li>
+</ul>
+
 
 </div>
                 </div>
@@ -145,8 +203,36 @@
         <div class="card">
     
     <header class="card-header">
-<!--        <a class="card-header-title" href="/2020/10/19/new-paper-MARS/">MARS: novel cell types in single-cell datasets</a>-->
-        <p class="card-header-title">Oct 2020: &nbsp; <span class="has-text-primary">MARS: novel cell types in single-cell datasets</span></p>
+<!--        <a class="card-header-title" href="/2020/11/01/futuretx20-symposium/">National Symposium on the Future of Drugs</a>-->
+        <p class="card-header-title">Nov 2020: &nbsp; <span class="has-text-primary">National Symposium on the Future of Drugs</span></p>
+<!--        <p class="card-header-item">Nov 2020</p>-->
+<!--        <p class="card-footer-item">Nov 1, 2020</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>On behalf of the NSF, we are organizing the National Symposium on Drug Repurposing for Future Pandemics. We have a stellar lineup of invited speakers! Register at <a href="https://www.drugsymposium.org/">www.drugsymposium.org</a>.</p>
+</p>-->
+            <p>On behalf of the NSF, we are organizing the National Symposium on Drug Repurposing for Future Pandemics. We have a stellar lineup of invited speakers! Register at <a href="https://www.drugsymposium.org/">www.drugsymposium.org</a>.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2020/11/01/futuretx20-symposium/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Nov 1, 2020</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2020/10/19/new-paper-MARS/">MARS: Novel Cell Types in Single-cell Datasets</a>-->
+        <p class="card-header-title">Oct 2020: &nbsp; <span class="has-text-primary">MARS: Novel Cell Types in Single-cell Datasets</span></p>
 <!--        <p class="card-header-item">Oct 2020</p>-->
 <!--        <p class="card-footer-item">Oct 19, 2020</p>-->
     </header>
@@ -683,34 +769,6 @@ on our new <em>Networks of Life</em> dataset comprising of 1,840 networks.</p>
     </div>
 <!--    <footer class="card-footer">-->
 <!--        <p class="card-footer-item">Published: Mar 25, 2020</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2020/03/02/graphl-ml-workshop/">Graph ML Workshop at ICML 2020</a>-->
-        <p class="card-header-title">Mar 2020: &nbsp; <span class="has-text-primary">Graph ML Workshop at ICML 2020</span></p>
-<!--        <p class="card-header-item">Mar 2020</p>-->
-<!--        <p class="card-footer-item">Mar 2, 2020</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>We will co-organize a workshop on <a href="https://grlplus.github.io/">Graph Representation Learning and Beyond</a> at <a href="https://icml.cc/Conferences/2020">ICML 2020</a>. Submit your finest work!</p>
-</p>-->
-            <p>We will co-organize a workshop on <a href="https://grlplus.github.io/">Graph Representation Learning and Beyond</a> at <a href="https://icml.cc/Conferences/2020">ICML 2020</a>. Submit your finest work!</p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2020/03/02/graphl-ml-workshop/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Mar 2, 2020</p>-->
 <!--    </footer>-->
 </div>
     </div>
