@@ -21,13 +21,16 @@
       "venue": "Proceedings of Neural Information Processing Systems, NeurIPS",
       "year": "2020",
       "thumbnail": "subgnn20.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2006.10538",
+      "pdf": "papers/subgnn-neurips20.pdf",
+      "url": "https://papers.nips.cc/paper/2020/hash/5bca8566db79f3788be9efd96c9ed70d-Abstract.html",
       "type": "journal",
       "supp":
       {
         "arXiv": "https://arxiv.org/abs/2006.10538",
-        "project website": "/projects/SubGNN"
+        "project website": "/projects/SubGNN",
+        "code": "https://github.com/mims-harvard/SubGNN",
+        "poster": "posters/SubGNN-NeurIPS20.pdf",
+        "supplementary": "papers/subgnn-neurips20-supp.pdf"
       }
     },
 
@@ -38,14 +41,16 @@
       "venue": "Proceedings of Neural Information Processing Systems, NeurIPS",
       "year": "2020",
       "thumbnail": "gnnguard20.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2006.08149",
+      "pdf": "papers/gnnguard-neurips20.pdf",
+      "url": "https://papers.nips.cc/paper/2020/hash/690d83983a63aa1818423fd6edd3bfdb-Abstract.html",
       "type": "journal",
       "supp":
       {
         "arXiv": "https://arxiv.org/abs/2006.08149",
         "code": "https://github.com/mims-harvard/GNNGuard",
-        "project website": "/projects/GNNGuard"
+        "project website": "/projects/GNNGuard",
+        "poster": "posters/GNNGuard-NeurIPS20.pdf",
+        "supplementary": "papers/gnnguard-neurips20-supp.pdf"
       }
     },
 
@@ -56,14 +61,16 @@
       "venue": "Proceedings of Neural Information Processing Systems, NeurIPS",
       "year": "2020",
       "thumbnail": "gmeta20.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2006.07889",
+      "pdf": "papers/gmeta-neurips20.pdf",
+      "url": "https://papers.nips.cc/paper/2020/hash/412604be30f701b1b1e3124c252065e6-Abstract.html",
       "type": "journal",
       "supp":
       {
         "arXiv": "https://arxiv.org/abs/2006.07889",
         "code": "https://github.com/mims-harvard/G-Meta",
-        "project website": "/projects/G-Meta"
+        "project website": "/projects/G-Meta",
+        "poster": "posters/GMeta-NeurIPS20.pdf",
+        "supplementary": "papers/gmeta-neurips20-supp.pdf"
       }
     },
 
@@ -74,13 +81,14 @@
       "venue": "Proceedings of Neural Information Processing Systems, NeurIPS",
       "year": "2020",
       "thumbnail": "ogb20.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2005.00687",
+      "pdf": "papers/ogb-neurips20.pdf",
+      "url": "https://papers.nips.cc/paper/2020/hash/fb60d411a5c5b72b2e7d3527cfc84fd0-Abstract.html",
       "type": "journal",
       "supp":
       {
         "arXiv": "https://arxiv.org/abs/2005.00687",
-        "project website":  "https://ogb.stanford.edu/"
+        "project website":  "https://ogb.stanford.edu/",
+        "supplementary": "papers/ogb-neurips20-supp.pdf"
       }
     },
 
