@@ -92,24 +92,6 @@
       }
     },
 
-    {
-      "key": "submission20k",
-      "author": ["Kexin Huang", "Tianfan Fu", "Lucas Glass", "Marinka Zitnik", "Cao Xiao", "Jimeng Sun"],
-      "title": "DeepPurpose: A Deep Learning Library for Drug-Target Interaction Prediction",
-      "venue": "In Review",
-      "year": "2020",
-      "thumbnail": "deeppurpose20.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2004.08919",
-      "type": "journal",
-      "supp":
-      {
-        "arXiv": "https://arxiv.org/abs/2004.08919",
-        "code": "https://github.com/kexinhuang12345/DeepPurpose",
-        "blog": "https://towardsdatascience.com/drug-discovery-with-deep-learning-under-10-lines-of-codes-742ee306732a"
-      }
-    },
-
      {
       "key": "submission20f",
       "author": ["Camilo Ruiz", "Marinka Zitnik", "Jure Leskovec"],
@@ -123,23 +105,6 @@
       "supp":
       {
         "bioRxiv": "https://doi.org/10.1101/2020.04.30.069690"
-      }
-    },
-
-     {
-      "key": "submission20e",
-      "author": ["Kexin Huang", "Cao Xiao", "Lucas Glass", "Marinka Zitnik", "Jimeng Sun"],
-      "title": "SkipGNN: Predicting Molecular Interactions with Skip-Graph Networks",
-      "venue": "In Review",
-      "year": "2020",
-      "thumbnail": "skipgnn20.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2004.14949",
-      "type": "journal",
-      "supp":
-      {
-        "arXiv": "https://arxiv.org/abs/2004.14949",
-        "code": "https://github.com/kexinhuang12345/SkipGNN"
       }
     },
 
@@ -187,6 +152,41 @@
       "url": "",
       "pdf": "",
       "type": "journal"
+    },
+
+    {
+      "key": "submission20k",
+      "author": ["Kexin Huang", "Tianfan Fu", "Lucas Glass", "Marinka Zitnik", "Cao Xiao", "Jimeng Sun"],
+      "title": "DeepPurpose: A Deep Learning Library for Drug-Target Interaction Prediction",
+      "venue": "Bioinformatics",
+      "year": "2020",
+      "thumbnail": "deeppurpose20.png",
+      "pdf": "papers/deeppurpose20.pdf",
+      "url": "https://doi.org/10.1093/bioinformatics/btaa1005",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2004.08919",
+        "code": "https://github.com/kexinhuang12345/DeepPurpose",
+        "blog": "https://towardsdatascience.com/drug-discovery-with-deep-learning-under-10-lines-of-codes-742ee306732a"
+      }
+    },
+
+     {
+      "key": "submission20e",
+      "author": ["Kexin Huang", "Cao Xiao", "Lucas Glass", "Marinka Zitnik", "Jimeng Sun"],
+      "title": "SkipGNN: Predicting Molecular Interactions with Skip-Graph Networks",
+      "venue": "Scientific Reports",
+      "year": "2020",
+      "thumbnail": "skipGNN-scirep20.png",
+      "pdf": "papers/skipGNN-scirep20.pdf",
+      "url": "https://www.nature.com/articles/s41598-020-77766-9",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2004.14949",
+        "code": "https://github.com/kexinhuang12345/SkipGNN"
+      }
     },
 
     {
