@@ -15,6 +15,38 @@
   "publications": [
 
      {
+      "key": "submission21a",
+      "author": ["Xiang Zhang", "Marissa Sumathipala", "Marinka Zitnik"],
+      "title": "Population-Scale Patient Safety Data Reveal Inequalities in Adverse Events Before and During COVID-19 Pandemic",
+      "venue": "In Review",
+      "year": "2021",
+      "thumbnail": "subgnn20.png",
+      "pdf": "",
+      "url": "https://www.medrxiv.org/content/10.1101/2021.01.17.21249988v1",
+      "type": "journal",
+      "supp":
+      {
+        "medRxiv": "https://www.medrxiv.org/content/10.1101/2021.01.17.21249988v1"
+      }
+    },
+
+     {
+      "key": "submission21b",
+      "author": ["Tingyi Wanyan", "Hossein Honarvar", "Suraj K. Jaladanki", "Chengxi Zang", "Nidhi Naik", "Sulaiman Somani", "Jessica K. De Freitas", "Ishan Paranjpe", "Akhil Vaid", "Riccardo Miotto", "Girish N. Nadkarni", "Marinka Zitnik", "Ariful Azad", "Fei Wang", "Ying Ding", "Benjamin S. Glicksberg"],
+      "title": "Contrastive Learning Improves Critical Event Prediction in COVID-19 Patients",
+      "venue": "In Review",
+      "year": "2021",
+      "thumbnail": "subgnn20.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2101.04013",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2101.04013"
+      }
+    },
+
+     {
       "key": "submission20j",
       "author": ["Emily Alsentzer*", "Samuel G. Finlayson*", "Michelle M. Li", "Marinka Zitnik"],
       "title": "Subgraph Neural Networks",
@@ -95,8 +127,8 @@
      {
       "key": "submission20f",
       "author": ["Camilo Ruiz", "Marinka Zitnik", "Jure Leskovec"],
-      "title": "Discovery of Disease Treatment Mechanisms through the Multiscale Interactome",
-      "venue": "In Review",
+      "title": "Identification} of disease treatment mechanisms through the multiscale interactome",
+      "venue": "Nature Communications (in press)",
       "year": "2020",
       "thumbnail": "multiscale-disease20.png",
       "pdf": "",
