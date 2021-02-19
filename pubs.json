@@ -15,6 +15,22 @@
   "publications": [
 
      {
+      "key": "submission21c",
+      "author": ["Kexin Huang", "Tianfan Fu", "Wenhao Gao", "Yue Zhao", "Yusuf Roohani", "Jure Leskovec", "Connor W. Coley", "Cao Xiao", "Jimeng Sun", "Marinka Zitnik"],
+      "title": "Therapeutics Data Commons: Machine Learning Datasets and Tasks for Therapeutics",
+      "venue": "In Review",
+      "year": "2021",
+      "thumbnail": "subgnn20.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2102.09548",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2102.09548"
+      }
+    },
+
+     {
       "key": "submission21a",
       "author": ["Xiang Zhang", "Marissa Sumathipala", "Marinka Zitnik"],
       "title": "Population-Scale Patient Safety Data Reveal Inequalities in Adverse Events Before and During COVID-19 Pandemic",
