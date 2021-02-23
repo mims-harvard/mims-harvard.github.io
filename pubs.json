@@ -15,6 +15,38 @@
   "publications": [
 
      {
+      "key": "submission21e",
+      "author": ["Matthew B. A. McDermott", "Brendan Yap", "Peter Szolovits", "Marinka Zitnik"],
+      "title": "Rethinking Relational Encoding in Language Model: Pre-Training for General Sequences",
+      "venue": "In Review",
+      "year": "2021",
+      "thumbnail": "subgnn20.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2103.10334",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2103.10334"
+      }
+    },
+
+     {
+      "key": "submission21d",
+      "author": ["Chirag Agarwal", "Himabindu Lakkaraju", "Marinka Zitnik"],
+      "title": "Towards a Unified Framework for Fair and Stable Graph Representation Learning",
+      "venue": "In Review",
+      "year": "2021",
+      "thumbnail": "subgnn20.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2102.13186",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2102.13186"
+      }
+    },
+
+     {
       "key": "submission21c",
       "author": ["Kexin Huang", "Tianfan Fu", "Wenhao Gao", "Yue Zhao", "Yusuf Roohani", "Jure Leskovec", "Connor W. Coley", "Cao Xiao", "Jimeng Sun", "Marinka Zitnik"],
       "title": "Therapeutics Data Commons: Machine Learning Datasets and Tasks for Therapeutics",
@@ -26,7 +58,9 @@
       "type": "journal",
       "supp":
       {
-        "arXiv": "https://arxiv.org/abs/2102.09548"
+        "arXiv": "https://arxiv.org/abs/2102.09548",
+        "project website":  "https://tdcommons.ai",
+        "Github repo": "https://github.com/mims-harvard/TDC"
       }
     },
 
@@ -42,7 +76,9 @@
       "type": "journal",
       "supp":
       {
-        "medRxiv": "https://www.medrxiv.org/content/10.1101/2021.01.17.21249988v1"
+        "medRxiv": "https://www.medrxiv.org/content/10.1101/2021.01.17.21249988v2",
+        "project website": "/projects/patient-safety",
+        "code": "https://github.com/mims-harvard/patient-safety"
       }
     },
 
@@ -143,9 +179,9 @@
      {
       "key": "submission20f",
       "author": ["Camilo Ruiz", "Marinka Zitnik", "Jure Leskovec"],
-      "title": "Identification} of disease treatment mechanisms through the multiscale interactome",
+      "title": "Identification} of Disease Treatment Mechanisms through the Multiscale Interactome",
       "venue": "Nature Communications (in press)",
-      "year": "2020",
+      "year": "2021",
       "thumbnail": "multiscale-disease20.png",
       "pdf": "",
       "url": "https://doi.org/10.1101/2020.04.30.069690",
@@ -161,7 +197,7 @@
       "author": ["Deisy Morselli Gysi*", "Italo Do Valle*", "Marinka Zitnik*", "Asher Ameli*", "Xiao Gan*", "Onur Varol", "Helia Sanchez", "Rebecca Marlene Baron", "Dina Ghiassian", "Joseph Loscalzo", "Albert-Laszlo Barabasi"],
       "title": "Network Medicine Framework for Identifying Drug Repurposing Opportunities for COVID-19",
       "venue": "In Review",
-      "year": "2020",
+      "year": "2021",
       "thumbnail": "netmed-covid19.png",
       "pdf": "",
       "url": "https://arxiv.org/abs/2004.07229",
@@ -179,7 +215,7 @@
       "author": ["Sheng Wang", "Angela O. Pisco", "Aaron McGeever", "Maria Brbic", "Marinka Zitnik", "Spyros Darmanis", "Jure Leskovec", "Jim Karkanias", "Russ B. Altman"],
       "title": "Unifying Single-Cell Annotations Based on the Cell Ontology",
       "venue": "In Review",
-      "year": "2020",
+      "year": "2021",
       "thumbnail": "gnn-pretrain19.png",
       "pdf": "",
       "url": "https://www.biorxiv.org/content/10.1101/810234v2",
@@ -195,7 +231,7 @@
       "author": ["Marinka Zitnik", "Russ B. Altman", "Jure Leskovec"],
       "title": "Network-Based Discovery of Drug Indications",
       "venue": "In Review",
-      "year": 2020,
+      "year": "2021",
       "thumbnail": "ismb16.png",
       "url": "",
       "pdf": "",
