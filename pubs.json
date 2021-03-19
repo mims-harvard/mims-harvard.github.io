@@ -15,6 +15,22 @@
   "publications": [
 
      {
+      "key": "submission21f",
+      "author": ["Michelle M. Li", "Kexin Huang", "Marinka Zitnik"],
+      "title": "Representation Learning for Networks in Biology and Medicine: Advancements, Challenges, and Opportunities",
+      "venue": "In Review",
+      "year": "2021",
+      "thumbnail": "subgnn20.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2104.04883",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2104.04883"
+      }
+    },
+
+     {
       "key": "submission21e",
       "author": ["Matthew B. A. McDermott", "Brendan Yap", "Peter Szolovits", "Marinka Zitnik"],
       "title": "Rethinking Relational Encoding in Language Model: Pre-Training for General Sequences",
@@ -99,6 +115,75 @@
     },
 
      {
+      "key": "submission20f",
+      "author": ["Camilo Ruiz", "Marinka Zitnik", "Jure Leskovec"],
+      "title": "Identification of Disease Treatment Mechanisms through the Multiscale Interactome",
+      "venue": "Nature Communications",
+      "year": "2021",
+      "thumbnail": "multiscale-disease20.png",
+      "pdf": "papers/multiscaleinteractomes-ncomms21.pdf",
+      "url": "https://www.nature.com/articles/s41467-021-21770-8",
+      "type": "journal",
+      "supp":
+      {
+        "bioRxiv": "https://doi.org/10.1101/2020.04.30.069690",
+        "code": "https://github.com/snap-stanford/multiscale-interactome",
+        "supplementary": "papers/multiscaleinteractomes-ncomms21-supp.pdf"
+      }
+    },
+
+     {
+      "key": "submission20d",
+      "author": ["Deisy Morselli Gysi*", "Italo Do Valle*", "Marinka Zitnik*", "Asher Ameli*", "Xiao Gan*", "Onur Varol", "Susan Dina Ghiassian", "J.J. Patten", "Robert A. Devey", "Joseph Loscalzo", "Albert-Laszlo Barabasi"],
+      "title": "Network Medicine Framework for Identifying Drug Repurposing Opportunities for COVID-19",
+      "venue": "Proceedings of the National Academy of Sciences (PNAS)",
+      "year": "2021",
+      "thumbnail": "netmed-covid19.png",
+      "pdf": "papers/repurposing-covid19.pdf",
+      "url": "https://doi.org/10.1073/pnas.2025581118",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2004.07229",
+        "slides": "https://www.dropbox.com/s/epo7np04dzofrll/2020-COVID-19-Final.pptx?dl=0",
+        "YouTube webinar": "https://www.youtube.com/watch?v=jS8__WViNj4",
+        "supplementary": "papers/repurposing-covid19-supp.pdf"
+      }
+    },
+
+     {
+      "key": "submission20a",
+      "author": ["Sheng Wang", "Angela O. Pisco", "Aaron McGeever", "Maria Brbic", "Marinka Zitnik", "Spyros Darmanis", "Jure Leskovec", "Jim Karkanias", "Russ B. Altman"],
+      "title": "Unifying Single-Cell Annotations Based on the Cell Ontology",
+      "venue": "In Review",
+      "year": "2021",
+      "thumbnail": "gnn-pretrain19.png",
+      "pdf": "",
+      "url": "https://www.biorxiv.org/content/10.1101/810234v2",
+      "type": "journal",
+      "supp":
+      {
+        "bioRxiv": "https://www.biorxiv.org/content/10.1101/810234v2"
+      }
+    },
+
+    {
+      "key": "submission21g",
+      "author": ["J.J. Patten", "P.T. Keiser", "D. Gysi", "G. Menichetti", "H. Mori", "C.J. Donahue", "X. Gan", "I. Do Valle", "K. Geoghegan-Barek", "M. Anantpadma", "J. L. Berrigan", "S. Jalloh", "T. Ayazika", "F. Wagner", "Marinka Zitnik", "S. Ayehunie", "D. Anderson", "J. Loscalzo", "S. Gummuluru",  "M.N. Namchuk", "A. L. Barabasi", "R. A. Davey"],
+      "title": "Multidose Evaluation of 6,710 Drug Repurposing Library Identifies Potent SARS-CoV-2 Infection Inhibitors In Vitro and In Vivo",
+      "venue": "In Review",
+      "year": "2021",
+      "thumbnail": "ismb16.png",
+      "url": "https://www.biorxiv.org/content/10.1101/2021.04.20.440626v2",
+      "pdf": "",
+      "type": "journal",
+      "supp":
+      {
+        "bioRxiv": "https://www.biorxiv.org/content/10.1101/2021.04.20.440626v2"
+      }
+    },
+
+     {
       "key": "submission20j",
       "author": ["Emily Alsentzer*", "Samuel G. Finlayson*", "Michelle M. Li", "Marinka Zitnik"],
       "title": "Subgraph Neural Networks",
@@ -174,68 +259,6 @@
         "project website":  "https://ogb.stanford.edu/",
         "supplementary": "papers/ogb-neurips20-supp.pdf"
       }
-    },
-
-     {
-      "key": "submission20f",
-      "author": ["Camilo Ruiz", "Marinka Zitnik", "Jure Leskovec"],
-      "title": "Identification} of Disease Treatment Mechanisms through the Multiscale Interactome",
-      "venue": "Nature Communications (in press)",
-      "year": "2021",
-      "thumbnail": "multiscale-disease20.png",
-      "pdf": "",
-      "url": "https://doi.org/10.1101/2020.04.30.069690",
-      "type": "journal",
-      "supp":
-      {
-        "bioRxiv": "https://doi.org/10.1101/2020.04.30.069690"
-      }
-    },
-
-     {
-      "key": "submission20d",
-      "author": ["Deisy Morselli Gysi*", "Italo Do Valle*", "Marinka Zitnik*", "Asher Ameli*", "Xiao Gan*", "Onur Varol", "Helia Sanchez", "Rebecca Marlene Baron", "Dina Ghiassian", "Joseph Loscalzo", "Albert-Laszlo Barabasi"],
-      "title": "Network Medicine Framework for Identifying Drug Repurposing Opportunities for COVID-19",
-      "venue": "In Review",
-      "year": "2021",
-      "thumbnail": "netmed-covid19.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2004.07229",
-      "type": "journal",
-      "supp":
-      {
-        "arXiv": "https://arxiv.org/abs/2004.07229",
-        "slides": "https://www.dropbox.com/s/epo7np04dzofrll/2020-COVID-19-Final.pptx?dl=0",
-        "YouTube webinar": "https://www.youtube.com/watch?v=jS8__WViNj4"
-      }
-    },
-
-     {
-      "key": "submission20a",
-      "author": ["Sheng Wang", "Angela O. Pisco", "Aaron McGeever", "Maria Brbic", "Marinka Zitnik", "Spyros Darmanis", "Jure Leskovec", "Jim Karkanias", "Russ B. Altman"],
-      "title": "Unifying Single-Cell Annotations Based on the Cell Ontology",
-      "venue": "In Review",
-      "year": "2021",
-      "thumbnail": "gnn-pretrain19.png",
-      "pdf": "",
-      "url": "https://www.biorxiv.org/content/10.1101/810234v2",
-      "type": "journal",
-      "supp": 
-      {
-        "bioRxiv": "https://www.biorxiv.org/content/10.1101/810234v2"
-      }
-    },
-
-    {
-      "key": "submission17c",
-      "author": ["Marinka Zitnik", "Russ B. Altman", "Jure Leskovec"],
-      "title": "Network-Based Discovery of Drug Indications",
-      "venue": "In Review",
-      "year": "2021",
-      "thumbnail": "ismb16.png",
-      "url": "",
-      "pdf": "",
-      "type": "journal"
     },
 
     {
