@@ -165,6 +165,14 @@
 <lastmod>2021-04-27T00:00:00-04:00</lastmod>
 </url>
 <url>
+<loc>https://zitniklab.hms.harvard.edu/2021/05/15/nifty-UAI/</loc>
+<lastmod>2021-05-15T00:00:00-04:00</lastmod>
+</url>
+<url>
+<loc>https://zitniklab.hms.harvard.edu/2021/06/05/nifty-AWARE/</loc>
+<lastmod>2021-06-05T00:00:00-04:00</lastmod>
+</url>
+<url>
 <loc>https://zitniklab.hms.harvard.edu/404/</loc>
 </url>
 <url>
@@ -175,6 +183,9 @@
 </url>
 <url>
 <loc>https://zitniklab.hms.harvard.edu/projects/GNNGuard/</loc>
+</url>
+<url>
+<loc>https://zitniklab.hms.harvard.edu/projects/NIFTY/</loc>
 </url>
 <url>
 <loc>https://zitniklab.hms.harvard.edu/projects/SubGNN/</loc>
@@ -226,7 +237,7 @@
 </url>
 <url>
 <loc>https://zitniklab.hms.harvard.edu/docs/marinka_zitnik_CV.pdf</loc>
-<lastmod>2021-03-22T01:31:05-04:00</lastmod>
+<lastmod>2021-06-11T09:07:30-04:00</lastmod>
 </url>
 <url>
 <loc>https://zitniklab.hms.harvard.edu/docs/slides/IJCAI-T27-000-intro.pdf</loc>
@@ -373,6 +384,10 @@
 <lastmod>2016-12-18T17:12:11-05:00</lastmod>
 </url>
 <url>
+<loc>https://zitniklab.hms.harvard.edu/publications/papers/nifty-uai21.pdf</loc>
+<lastmod>2021-06-16T23:32:10-04:00</lastmod>
+</url>
+<url>
 <loc>https://zitniklab.hms.harvard.edu/publications/papers/nimfa-jmlr12.pdf</loc>
 <lastmod>2016-12-18T17:17:16-05:00</lastmod>
 </url>
@@ -421,6 +436,10 @@
 <lastmod>2016-12-18T17:11:40-05:00</lastmod>
 </url>
 <url>
+<loc>https://zitniklab.hms.harvard.edu/publications/papers/referralnets-perinatology21.pdf</loc>
+<lastmod>2021-05-29T22:46:50-04:00</lastmod>
+</url>
+<url>
 <loc>https://zitniklab.hms.harvard.edu/publications/papers/repurposing-covid19-supp.pdf</loc>
 <lastmod>2021-04-27T23:13:49-04:00</lastmod>
 </url>
@@ -467,6 +486,10 @@
 <url>
 <loc>https://zitniklab.hms.harvard.edu/publications/posters/GNNGuard-NeurIPS20.pdf</loc>
 <lastmod>2020-11-29T20:42:48-05:00</lastmod>
+</url>
+<url>
+<loc>https://zitniklab.hms.harvard.edu/publications/posters/NIFTY-UAI21.pdf</loc>
+<lastmod>2021-06-16T17:14:21-04:00</lastmod>
 </url>
 <url>
 <loc>https://zitniklab.hms.harvard.edu/publications/posters/SubGNN-NeurIPS20.pdf</loc>

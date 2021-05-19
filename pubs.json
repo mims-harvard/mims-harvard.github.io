@@ -15,6 +15,22 @@
   "publications": [
 
      {
+      "key": "submission21i",
+      "author": ["Michelle M. Li", "Marinka Zitnik"],
+      "title": "Deep Contextual Learners for Protein Networks",
+      "venue": "In Review",
+      "year": "2021",
+      "thumbnail": "subgnn20.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2106.02246",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2106.02246"
+      }
+    },
+
+     {
       "key": "submission21f",
       "author": ["Michelle M. Li", "Kexin Huang", "Marinka Zitnik"],
       "title": "Representation Learning for Networks in Biology and Medicine: Advancements, Challenges, and Opportunities",
@@ -48,17 +64,20 @@
 
      {
       "key": "submission21d",
-      "author": ["Chirag Agarwal", "Himabindu Lakkaraju", "Marinka Zitnik"],
+      "author": ["Chirag Agarwal", "Himabindu Lakkaraju*", "Marinka Zitnik*"],
       "title": "Towards a Unified Framework for Fair and Stable Graph Representation Learning",
-      "venue": "In Review",
+      "venue": "Conference on Uncertainty in Artificial Intelligence, UAI",
       "year": "2021",
-      "thumbnail": "subgnn20.png",
-      "pdf": "",
+      "thumbnail": "nifty21.png",
+      "pdf": "papers/nifty-uai21.pdf",
       "url": "https://arxiv.org/abs/2102.13186",
       "type": "journal",
       "supp":
       {
-        "arXiv": "https://arxiv.org/abs/2102.13186"
+        "arXiv": "https://arxiv.org/abs/2102.13186",
+        "project website": "/projects/NIFTY",
+        "code": "https://github.com/chirag126/nifty",
+        "poster": "posters/NIFTY-UAI21.pdf"
       }
     },
 
@@ -181,6 +200,18 @@
       {
         "bioRxiv": "https://www.biorxiv.org/content/10.1101/2021.04.20.440626v2"
       }
+    },
+
+     {
+      "key": "submission21h",
+      "author": ["Sarah N. Kunz", "Daniel Helkey", "Marinka Zitnik", "Ciaran S. Phibbs", "Joseph Rigdon", "John A. F. Zupancic", "Jochen Profit"],
+      "title": "Quantifying the Variation in Neonatal Transport Referral Patterns Using Network Analysis",
+      "venue": "Journal of Perinatology",
+      "year": "2021",
+      "thumbnail": "referralnets-perinatology21.png",
+      "pdf": "papers/referralnets-perinatology21.pdf",
+      "url": "https://www.nature.com/articles/s41372-021-01091-w",
+      "type": "journal"
     },
 
      {
