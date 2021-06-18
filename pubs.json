@@ -15,18 +15,37 @@
   "publications": [
 
      {
-      "key": "submission21i",
-      "author": ["Michelle M. Li", "Marinka Zitnik"],
-      "title": "Deep Contextual Learners for Protein Networks",
+      "key": "submission21j",
+      "author": ["Chirag Agarwal", "Marinka Zitnik*", "Himabindu Lakkaraju*"],
+      "title": "Towards a Rigorous Theoretical Analysis and Evaluation of GNN Explanations",
       "venue": "In Review",
       "year": "2021",
-      "thumbnail": "subgnn20.png",
+      "thumbnail": "nifty21.png",
       "pdf": "",
-      "url": "https://arxiv.org/abs/2106.02246",
+      "url": "https://arxiv.org/abs/2106.09078",
       "type": "journal",
       "supp":
       {
-        "arXiv": "https://arxiv.org/abs/2106.02246"
+        "arXiv": "https://arxiv.org/abs/2106.09078",
+        "ICML Theoretic Foundation, Criticism, and Application Trend of Explainable AI": "https://icml2021-xai.github.io/"
+      }
+    },
+
+     {
+      "key": "submission21i",
+      "author": ["Michelle M. Li", "Marinka Zitnik"],
+      "title": "Deep Contextual Learners for Protein Networks",
+      "venue": "International Conference on Machine Learning (ICML), Workshop on Computational Biology",
+      "year": "2021",
+      "thumbnail": "aware21.png",
+      "pdf": "papers/aware-icml21.pdf",
+      "url": "https://icml-compbio.github.io/2021/papers/WCBICML2021_paper_46.pdf",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2106.02246",
+        "spotlight": "https://icml-compbio.github.io/#papers",
+        "Best Poster Award": "https://icml-compbio.github.io/"
       }
     },
 
@@ -77,17 +96,18 @@
         "arXiv": "https://arxiv.org/abs/2102.13186",
         "project website": "/projects/NIFTY",
         "code": "https://github.com/chirag126/nifty",
-        "poster": "posters/NIFTY-UAI21.pdf"
+        "poster": "posters/NIFTY-UAI21.pdf",
+        "ICML Socially Responsible ML": "https://icmlsrml2021.github.io/"
       }
     },
 
      {
       "key": "submission21c",
       "author": ["Kexin Huang", "Tianfan Fu", "Wenhao Gao", "Yue Zhao", "Yusuf Roohani", "Jure Leskovec", "Connor W. Coley", "Cao Xiao", "Jimeng Sun", "Marinka Zitnik"],
-      "title": "Therapeutics Data Commons: Machine Learning Datasets and Tasks for Therapeutics",
-      "venue": "In Review",
+      "title": "Therapeutics Data Commons: Machine Learning Datasets and Tasks for Drug Discovery and Development",
+      "venue": "Proceedings of Neural Information Processing Systems, NeurIPS Datasets and Benchmarks",
       "year": "2021",
-      "thumbnail": "subgnn20.png",
+      "thumbnail": "tdc21.png",
       "pdf": "",
       "url": "https://arxiv.org/abs/2102.09548",
       "type": "journal",
@@ -103,7 +123,7 @@
       "key": "submission21a",
       "author": ["Xiang Zhang", "Marissa Sumathipala", "Marinka Zitnik"],
       "title": "Population-Scale Patient Safety Data Reveal Inequalities in Adverse Events Before and During COVID-19 Pandemic",
-      "venue": "In Review",
+      "venue": "Nature Computational Science (in press)",
       "year": "2021",
       "thumbnail": "subgnn20.png",
       "pdf": "",
@@ -114,6 +134,23 @@
         "medRxiv": "https://www.medrxiv.org/content/10.1101/2021.01.17.21249988v2",
         "project website": "/projects/patient-safety",
         "code": "https://github.com/mims-harvard/patient-safety"
+      }
+    },
+
+     {
+      "key": "submission21k",
+      "author": ["Qianwen Wang*", "Kexin Huang*", "Payal Chandak*", "Nils Gehlenborg", "Marinka Zitnik"],
+      "title": "Interactive Visual Explanations for Deep Drug Repurposing ",
+      "venue": "International Conference on Machine Learning (ICML), Workshop on Interpretable ML in Healthcare",
+      "year": "2021",
+      "thumbnail": "drugvis21.png",
+      "pdf": "papers/drugvis-icml21.pdf",
+      "url": "https://www.cse.cuhk.edu.hk/~qdou/papers/IMLH2021_files/52_CameraReady_drug_gnn_vis_7.08-2.pdf",
+      "type": "journal",
+      "supp":
+      {
+        "video": "https://drive.google.com/file/d/1UaXnLPULGBUdtzozZUDEOTgmgkAco7XJ/view?usp=sharing",
+        "Best Paper Award": "https://sites.google.com/view/imlh2021/program?authuser=0"
       }
     },
 
@@ -173,16 +210,17 @@
      {
       "key": "submission20a",
       "author": ["Sheng Wang", "Angela O. Pisco", "Aaron McGeever", "Maria Brbic", "Marinka Zitnik", "Spyros Darmanis", "Jure Leskovec", "Jim Karkanias", "Russ B. Altman"],
-      "title": "Unifying Single-Cell Annotations Based on the Cell Ontology",
-      "venue": "In Review",
+      "title": "Leveraging the Cell Ontology to Classify Unseen Cell Types",
+      "venue": "Nature Communications",
       "year": "2021",
-      "thumbnail": "gnn-pretrain19.png",
-      "pdf": "",
-      "url": "https://www.biorxiv.org/content/10.1101/810234v2",
+      "thumbnail": "onclass21.png",
+      "pdf": "papers/onclass-natcommun21.pdf",
+      "url": "https://www.nature.com/articles/s41467-021-25725-x",
       "type": "journal",
       "supp":
       {
-        "bioRxiv": "https://www.biorxiv.org/content/10.1101/810234v2"
+        "bioRxiv": "https://www.biorxiv.org/content/10.1101/810234v2",
+        "supplementary information": "papers/onclass-natcommun21SI.pdf"
       }
     },
 
@@ -505,7 +543,8 @@
         "website": "http://snap.stanford.edu/crank/",
         "invited talk at JMM 2018 Graph Clustering Session": "http://jointmathematicsmeetings.org/meetings/national/jmm2018/2197_program_ss63.html",
         "arXiv": "https://arxiv.org/abs/1805.02411",
-        "bioRxiv": "https://www.biorxiv.org/content/early/2018/05/07/315903"
+        "bioRxiv": "https://www.biorxiv.org/content/early/2018/05/07/315903",
+        "supplementary information": "papers/crank-ncomms18SI.pdf"
       }
     },
 
