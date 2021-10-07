@@ -15,19 +15,19 @@
   "publications": [
 
      {
-      "key": "submission21j",
-      "author": ["Chirag Agarwal", "Marinka Zitnik*", "Himabindu Lakkaraju*"],
-      "title": "Towards a Rigorous Theoretical Analysis and Evaluation of GNN Explanations",
+      "key": "submission21k",
+      "author": ["Xiang Zhang", "Marko Zeman", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
+      "title": "Graph-Guided Network for Irregularly Sampled Multivariate Time Series",
       "venue": "In Review",
       "year": "2021",
-      "thumbnail": "nifty21.png",
+      "thumbnail": "subgnn20.png",
       "pdf": "",
-      "url": "https://arxiv.org/abs/2106.09078",
+      "url": "https://arxiv.org/abs/2110.05357",
       "type": "journal",
       "supp":
       {
-        "arXiv": "https://arxiv.org/abs/2106.09078",
-        "ICML Theoretic Foundation, Criticism, and Application Trend of Explainable AI": "https://icml2021-xai.github.io/"
+        "arXiv": "https://arxiv.org/abs/2110.05357",
+        "code": "https://github.com/mims-harvard/Raindrop"
       }
     },
 
@@ -41,18 +41,38 @@
       "pdf": "papers/aware-icml21.pdf",
       "url": "https://icml-compbio.github.io/2021/papers/WCBICML2021_paper_46.pdf",
       "type": "journal",
+      "comment": "Best Poster Award at ICML 2021 Workshop on Computational Biology",
       "supp":
       {
         "arXiv": "https://arxiv.org/abs/2106.02246",
-        "spotlight": "https://icml-compbio.github.io/#papers",
-        "Best Poster Award": "https://icml-compbio.github.io/"
+        "spotlight": "https://icml-compbio.github.io/#papers"
+      }
+    },
+
+     {
+      "key": "submission21a",
+      "author": ["Xiang Zhang", "Marissa Sumathipala", "Marinka Zitnik"],
+      "title": "Population-Scale Identification of Differential Adverse Events Before and During a Pandemic",
+      "venue": "Nature Computational Science",
+      "year": "2021",
+      "thumbnail": "diffAE21.png",
+      "pdf": "papers/diffAE-natcomputsci21.pdf",
+      "url": "https://www.nature.com/articles/s43588-021-00138-4",
+      "type": "journal",
+      "supp":
+      {
+        "medRxiv": "https://www.medrxiv.org/content/10.1101/2021.01.17.21249988v2",
+        "project website": "/projects/patient-safety",
+        "code": "https://github.com/mims-harvard/patient-safety",
+        "supplementary information": "papers/diffAE-natcomputsci21SI.pdf",
+        "Harvard Medicine News": "https://hms.harvard.edu/news/adverse-drug-effects-during-covid-19-pandemic"
       }
     },
 
      {
       "key": "submission21f",
       "author": ["Michelle M. Li", "Kexin Huang", "Marinka Zitnik"],
-      "title": "Representation Learning for Networks in Biology and Medicine: Advancements, Challenges, and Opportunities",
+      "title": "Graph Representation Learning in Biomedicine",
       "venue": "In Review",
       "year": "2021",
       "thumbnail": "subgnn20.png",
@@ -66,9 +86,60 @@
     },
 
      {
+      "key": "submission21n",
+      "author": ["Ryan T. Scott", "...", "Marinka Zitnik", "Sylvain V. Costes"],
+      "title": "Beyond Low Earth Orbit: Biomonitoring, Artificial Intelligence, and Precision Space Health",
+      "venue": "In Review",
+      "year": "2021",
+      "thumbnail": "spacehealth21.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2112.12554",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2112.12554"
+      }
+    },
+
+     {
+      "key": "submission21m",
+      "author": ["Lauren M. Sanders", "...", "Marinka Zitnik", "Sylvain V. Costes"],
+      "title": "Beyond Low Earth Orbit: Biological Research, Artificial Intelligence, and Self-Driving Labs",
+      "venue": "In Review",
+      "year": "2021",
+      "thumbnail": "spacebiology21.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2112.12582",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2112.12582"
+      }
+    },
+
+     {
+      "key": "submission21l",
+      "author": ["Joshua Pan", "Jason J. Kwon", "Jessica A. Talamas", "Ashir A. Borah", "Francisca Vazquez", "Jesse S. Boehm", "Aviad Tsherniak", "Marinka Zitnik", "James M. McFarland", "William C. Hahn"],
+      "title": "Sparse Dictionary Learning Recovers Pleiotropy from Human Cell Fitness Screens",
+      "venue": "Cell Systems (in press)",
+      "year": "2021",
+      "thumbnail": "subgnn20.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2111.06247",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2111.06247",
+        "code": "https://github.com/joshbiology/gene_fn",
+        "Machine Learning in Computational Biology (MLCB) meeting 2021": "https://sites.google.com/cs.washington.edu/mlcb2021/",
+        "Learning Meaningful Representations of Life (LMRL) at NeurIPS 2021": "https://www.lmrl.org/"
+      }
+    },
+
+     {
       "key": "submission21e",
       "author": ["Matthew B. A. McDermott", "Brendan Yap", "Peter Szolovits", "Marinka Zitnik"],
-      "title": "Rethinking Relational Encoding in Language Model: Pre-Training for General Sequences",
+      "title": "Structure Inducing Pre-Training",
       "venue": "In Review",
       "year": "2021",
       "thumbnail": "subgnn20.png",
@@ -77,8 +148,25 @@
       "type": "journal",
       "supp":
       {
-        "arXiv": "https://arxiv.org/abs/2103.10334"
+        "arXiv": "https://arxiv.org/abs/2103.10334",
+        "code": "https://github.com/mmcdermott/structure_preserving_pre-training"
       }
+    },
+
+     {
+      "key": "submission20l",
+      "author": ["Doron Stupp", "Elad Sharon", "Idit Bloch", "Marinka Zitnik", "Or Zuk", "Yuval Tabach"],
+      "title": "Co-Evolution Based Machine-Learning for Predicting Functional Interactions Between Human Genes",
+      "venue": "Nature Communications",
+      "year": "2021",
+      "thumbnail": "phylogenetic-funinter21.png",
+      "pdf": "papers/phylogenetic-natcommun21.pdf",
+      "url": "https://www.nature.com/articles/s41467-021-26792-w",
+      "type": "journal",
+      "supp":
+       {
+         "webserver": "https://mlpp.cs.huji.ac.il/"
+       }
     },
 
      {
@@ -120,24 +208,6 @@
     },
 
      {
-      "key": "submission21a",
-      "author": ["Xiang Zhang", "Marissa Sumathipala", "Marinka Zitnik"],
-      "title": "Population-Scale Patient Safety Data Reveal Inequalities in Adverse Events Before and During COVID-19 Pandemic",
-      "venue": "Nature Computational Science (in press)",
-      "year": "2021",
-      "thumbnail": "subgnn20.png",
-      "pdf": "",
-      "url": "https://www.medrxiv.org/content/10.1101/2021.01.17.21249988v1",
-      "type": "journal",
-      "supp":
-      {
-        "medRxiv": "https://www.medrxiv.org/content/10.1101/2021.01.17.21249988v2",
-        "project website": "/projects/patient-safety",
-        "code": "https://github.com/mims-harvard/patient-safety"
-      }
-    },
-
-     {
       "key": "submission21k",
       "author": ["Qianwen Wang*", "Kexin Huang*", "Payal Chandak*", "Nils Gehlenborg", "Marinka Zitnik"],
       "title": "Interactive Visual Explanations for Deep Drug Repurposing ",
@@ -145,28 +215,29 @@
       "year": "2021",
       "thumbnail": "drugvis21.png",
       "pdf": "papers/drugvis-icml21.pdf",
-      "url": "https://www.cse.cuhk.edu.hk/~qdou/papers/IMLH2021_files/52_CameraReady_drug_gnn_vis_7.08-2.pdf",
+      "url": "https://zitniklab.hms.harvard.edu/publications/papers/drugvis-icml21.pdf",
       "type": "journal",
+      "comment": "Best Paper Award at ICML 2021 Workshop on Interpretable ML in Healthcare",
       "supp":
       {
-        "video": "https://drive.google.com/file/d/1UaXnLPULGBUdtzozZUDEOTgmgkAco7XJ/view?usp=sharing",
-        "Best Paper Award": "https://sites.google.com/view/imlh2021/program?authuser=0"
+        "video": "https://drive.google.com/file/d/1UaXnLPULGBUdtzozZUDEOTgmgkAco7XJ/view?usp=sharing"
       }
     },
 
-     {
-      "key": "submission21b",
-      "author": ["Tingyi Wanyan", "Hossein Honarvar", "Suraj K. Jaladanki", "Chengxi Zang", "Nidhi Naik", "Sulaiman Somani", "Jessica K. De Freitas", "Ishan Paranjpe", "Akhil Vaid", "Riccardo Miotto", "Girish N. Nadkarni", "Marinka Zitnik", "Ariful Azad", "Fei Wang", "Ying Ding", "Benjamin S. Glicksberg"],
-      "title": "Contrastive Learning Improves Critical Event Prediction in COVID-19 Patients",
+    {
+      "key": "submission21j",
+      "author": ["Chirag Agarwal", "Marinka Zitnik*", "Himabindu Lakkaraju*"],
+      "title": "Towards a Rigorous Theoretical Analysis and Evaluation of GNN Explanations",
       "venue": "In Review",
       "year": "2021",
-      "thumbnail": "subgnn20.png",
+      "thumbnail": "nifty21.png",
       "pdf": "",
-      "url": "https://arxiv.org/abs/2101.04013",
+      "url": "https://arxiv.org/abs/2106.09078",
       "type": "journal",
       "supp":
       {
-        "arXiv": "https://arxiv.org/abs/2101.04013"
+        "arXiv": "https://arxiv.org/abs/2106.09078",
+        "ICML Theoretic Foundation, Criticism, and Application Trend of Explainable AI": "https://icml2021-xai.github.io/"
       }
     },
 
@@ -237,6 +308,22 @@
       "supp":
       {
         "bioRxiv": "https://www.biorxiv.org/content/10.1101/2021.04.20.440626v2"
+      }
+    },
+
+     {
+      "key": "submission21b",
+      "author": ["Tingyi Wanyan", "Hossein Honarvar", "Suraj K. Jaladanki", "Chengxi Zang", "Nidhi Naik", "Sulaiman Somani", "Jessica K. De Freitas", "Ishan Paranjpe", "Akhil Vaid", "Jing Zhang", "Riccardo Miotto", "Zhangyang Wang", "Girish N. Nadkarni", "Marinka Zitnik", "Ariful Azad", "Fei Wang", "Ying Ding", "Benjamin S. Glicksberg"],
+      "title": "Contrastive Learning Improves Critical Event Prediction in COVID-19 Patients",
+      "venue": "Patterns",
+      "year": "2021",
+      "thumbnail": "contrastiveCOVID21.png",
+      "pdf": "papers/contrastive-patterns21.pdf",
+      "url": "https://www.cell.com/patterns/fulltext/S2666-3899(21)00256-7",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2101.04013"
       }
     },
 
@@ -677,7 +764,7 @@
         "other news stories": "https://oxfordjournals.altmetric.com/details/32668326/"
 
       },
-      "comment": "Oral presentation at ISMB'18"
+      "comment": "Oral presentation at ISMB 2018"
     },
 
     {
@@ -757,7 +844,7 @@
         "slides ISMB 2017": "slides/ohmnet-ismb17.pdf",
         "talk": "https://www.iscb.org/cms_addon/multimedia/flvmedia.php?i=3979"
       },
-      "comment": "Oral presentation at ISMB/ECCB'17"
+      "comment": "Oral presentation at ISMB/ECCB 2017"
     },
 
     {
@@ -795,7 +882,7 @@
         "materials and code": "https://github.com/marinkaz/medusa",
         "talk": "https://www.iscb.org/cms_addon/multimedia/flvmedia.php?i=2708"
       },
-      "comment": "Oral presentation at ISMB'16"
+      "comment": "Oral presentation at ISMB 2016"
     },
 
     {
@@ -845,7 +932,7 @@
       {
         "materials": "http://2013.bionlp-st.org/tasks/gene-regulation-network"
       },
-      "comment": "First place winner in extracting gene regulatory networks from text at ACL BioNLP-13"
+      "comment": "1st Place Winner at ACL BioNLP 2013"
     },
 
     {
@@ -880,7 +967,7 @@
         "materials and code": "https://github.com/marinkaz/fusenet",
         "talk": "http://www.iscb.org/ismb-mm/media-ismbeccb2015"
       },
-      "comment": "Oral presentation at ISMB'15"
+      "comment": "Oral presentation at ISMB 2015"
     },
 
     {
@@ -914,7 +1001,7 @@
         "materials": "http://camda2014.bioinf.jku.at/doku.php",
         "slides": "http://prezi.com/ktuxqsyie5mt/?utm_campaign=share&utm_medium=copy&rc=ex0share"
       },
-      "comment": "First prize winner for excellent research at ISMB/CAMDA'14"
+      "comment": "First prize winner for excellent research at ISMB/CAMDA 2014"
     },
 
     {
@@ -932,7 +1019,7 @@
         "slides": "http://prezi.com/er2durhu0krs/?utm_campaign=share&utm_medium=copy&rc=ex0share",
         "materials and code": "https://github.com/marinkaz/ngmc"
       },
-      "comment": "Oral presentation at RECOMB'14"
+      "comment": "Oral presentation at RECOMB 2014"
     },
 
     {
@@ -979,7 +1066,7 @@
       "url": "http://helikoid.si/bc215/zitnik-zupan-bc215.png",
       "pdf": "http://helikoid.si/bc215/zitnik-zupan-bc215.png",
       "type": "conference",
-      "comment": "Best Poster Award at [BC]^2",
+      "comment": "Best Poster Award at [BC]^2 2015",
       "supp":
       {
         "tutorial slides": "http://helikoid.si/bc215/bc2-slides.pdf",
@@ -1015,7 +1102,7 @@
         "materials and code": "https://github.com/biolab/red",
         "talk": "http://www.iscb.org/ismb-mm/media-ismb2014"
       },
-      "comment": "Oral presentation at ISMB'14"
+      "comment": "Oral presentation at ISMB 2014"
     },
 
     {
@@ -1033,7 +1120,7 @@
         "slides": "http://prezi.com/jf0hotfsqzd9/?utm_campaign=share&utm_medium=copy&rc=ex0share",
         "materials": "http://dokuwiki.bioinf.jku.at/doku.php"
       },
-      "comment": "First prize winner for excellent research at ISMB/CAMDA'13"
+      "comment": "First prize winner for excellent research at ISMB/CAMDA 2013"
     },
 
     {
@@ -1075,7 +1162,7 @@
       "url": "http://helikoid.si/recomb14/zitnik-zupan-recomb14.png",
       "pdf": "http://helikoid.si/recomb14/zitnik-zupan-recomb14.png",
       "type": "conference",
-      "comment": "Best Poster Award at RECOMB'14",
+      "comment": "Best Poster Award at RECOMB 2014",
        "supp": 
       {
         "Highlights at Heidelberg Laureate Forum 2014": "https://scilogs.spektrum.de/hlf/an-engaging-poster/"
