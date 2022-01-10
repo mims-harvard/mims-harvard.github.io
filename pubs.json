@@ -18,8 +18,8 @@
       "key": "submission21k",
       "author": ["Xiang Zhang", "Marko Zeman", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
       "title": "Graph-Guided Network for Irregularly Sampled Multivariate Time Series",
-      "venue": "In Review",
-      "year": "2021",
+      "venue": "Proceedings of the International Conference on Learning Representations, ICLR (in press)",
+      "year": "2022",
       "thumbnail": "subgnn20.png",
       "pdf": "",
       "url": "https://arxiv.org/abs/2110.05357",
@@ -28,6 +28,43 @@
       {
         "arXiv": "https://arxiv.org/abs/2110.05357",
         "code": "https://github.com/mims-harvard/Raindrop"
+      }
+    },
+
+    {
+      "key": "submission21j",
+      "author": ["Chirag Agarwal", "Marinka Zitnik*", "Himabindu Lakkaraju*"],
+      "title": "Probing GNN Explainers: A Rigorous Theoretical and Empirical Analysis of GNN Explanation Methods",
+      "venue": "International Conference on Artificial Intelligence and Statistics, AISTATS (in press)",
+      "year": "2022",
+      "thumbnail": "nifty21.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2106.09078",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2106.09078",
+        "ICML Theoretic Foundation, Criticism, and Application Trend of Explainable AI": "https://icml2021-xai.github.io/"
+      }
+    },
+
+     {
+      "key": "submission21l",
+      "author": ["Joshua Pan", "Jason J. Kwon", "Jessica A. Talamas", "Ashir A. Borah", "Francisca Vazquez", "Jesse S. Boehm", "Aviad Tsherniak", "Marinka Zitnik", "James M. McFarland", "William C. Hahn"],
+      "title": "Sparse Dictionary Learning Recovers Pleiotropy from Human Cell Fitness Screens",
+      "venue": "Cell Systems",
+      "year": "2022",
+      "thumbnail": "webster-cellsystems22.png",
+      "pdf": "papers/webster-cellsystems22.pdf",
+      "url": "https://www.cell.com/cell-systems/fulltext/S2405-4712(21)00488-9",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2111.06247",
+        "code": "https://github.com/joshbiology/gene_fn",
+        "web portal": "https://depmap.org/webster/#/",
+        "Machine Learning in Computational Biology (MLCB) meeting 2021": "https://sites.google.com/cs.washington.edu/mlcb2021/",
+        "Learning Meaningful Representations of Life (LMRL) at NeurIPS 2021": "https://www.lmrl.org/"
       }
     },
 
@@ -118,25 +155,6 @@
     },
 
      {
-      "key": "submission21l",
-      "author": ["Joshua Pan", "Jason J. Kwon", "Jessica A. Talamas", "Ashir A. Borah", "Francisca Vazquez", "Jesse S. Boehm", "Aviad Tsherniak", "Marinka Zitnik", "James M. McFarland", "William C. Hahn"],
-      "title": "Sparse Dictionary Learning Recovers Pleiotropy from Human Cell Fitness Screens",
-      "venue": "Cell Systems (in press)",
-      "year": "2021",
-      "thumbnail": "subgnn20.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2111.06247",
-      "type": "journal",
-      "supp":
-      {
-        "arXiv": "https://arxiv.org/abs/2111.06247",
-        "code": "https://github.com/joshbiology/gene_fn",
-        "Machine Learning in Computational Biology (MLCB) meeting 2021": "https://sites.google.com/cs.washington.edu/mlcb2021/",
-        "Learning Meaningful Representations of Life (LMRL) at NeurIPS 2021": "https://www.lmrl.org/"
-      }
-    },
-
-     {
       "key": "submission21e",
       "author": ["Matthew B. A. McDermott", "Brendan Yap", "Peter Szolovits", "Marinka Zitnik"],
       "title": "Structure Inducing Pre-Training",
@@ -221,23 +239,6 @@
       "supp":
       {
         "video": "https://drive.google.com/file/d/1UaXnLPULGBUdtzozZUDEOTgmgkAco7XJ/view?usp=sharing"
-      }
-    },
-
-    {
-      "key": "submission21j",
-      "author": ["Chirag Agarwal", "Marinka Zitnik*", "Himabindu Lakkaraju*"],
-      "title": "Towards a Rigorous Theoretical Analysis and Evaluation of GNN Explanations",
-      "venue": "In Review",
-      "year": "2021",
-      "thumbnail": "nifty21.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2106.09078",
-      "type": "journal",
-      "supp":
-      {
-        "arXiv": "https://arxiv.org/abs/2106.09078",
-        "ICML Theoretic Foundation, Criticism, and Application Trend of Explainable AI": "https://icml2021-xai.github.io/"
       }
     },
 
