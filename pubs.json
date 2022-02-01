@@ -15,19 +15,39 @@
   "publications": [
 
      {
+      "key": "submission22a",
+      "author": ["Yucong Lin", "Keming Lu", "Sheng Yu", "Tianxi Cai", "Marinka Zitnik"],
+      "title": "Multimodal Learning on Graphs for Disease Relation Extraction",
+      "venue": "In Review",
+      "year": "2022",
+      "thumbnail": "raindrop22.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2203.08893",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2203.08893",
+        "code": "https://github.com/Lukeming-tsinghua/REMAP",
+        "project website": "/projects/REMAP"
+      }
+    },
+
+     {
       "key": "submission21k",
       "author": ["Xiang Zhang", "Marko Zeman", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
       "title": "Graph-Guided Network for Irregularly Sampled Multivariate Time Series",
-      "venue": "Proceedings of the International Conference on Learning Representations, ICLR (in press)",
+      "venue": "Proceedings of the International Conference on Learning Representations, ICLR",
       "year": "2022",
-      "thumbnail": "subgnn20.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2110.05357",
+      "thumbnail": "raindrop22.png",
+      "pdf": "papers/raindrop-iclr22.pdf",
+      "url": "https://openreview.net/pdf?id=Kwm8I7dU-l5",
       "type": "journal",
       "supp":
       {
         "arXiv": "https://arxiv.org/abs/2110.05357",
-        "code": "https://github.com/mims-harvard/Raindrop"
+        "code": "https://github.com/mims-harvard/Raindrop",
+        "project website": "/projects/Raindrop",
+        "slides": "slides/raindrop-AAAI22.pdf"
       }
     },
 
@@ -35,10 +55,10 @@
       "key": "submission21j",
       "author": ["Chirag Agarwal", "Marinka Zitnik*", "Himabindu Lakkaraju*"],
       "title": "Probing GNN Explainers: A Rigorous Theoretical and Empirical Analysis of GNN Explanation Methods",
-      "venue": "International Conference on Artificial Intelligence and Statistics, AISTATS (in press)",
+      "venue": "International Conference on Artificial Intelligence and Statistics, AISTATS",
       "year": "2022",
-      "thumbnail": "nifty21.png",
-      "pdf": "",
+      "thumbnail": "probingGNN22.png",
+      "pdf": "papers/probingGNNExplainers-aistats22.pdf",
       "url": "https://arxiv.org/abs/2106.09078",
       "type": "journal",
       "supp":
@@ -64,7 +84,24 @@
         "code": "https://github.com/joshbiology/gene_fn",
         "web portal": "https://depmap.org/webster/#/",
         "Machine Learning in Computational Biology (MLCB) meeting 2021": "https://sites.google.com/cs.washington.edu/mlcb2021/",
-        "Learning Meaningful Representations of Life (LMRL) at NeurIPS 2021": "https://www.lmrl.org/"
+        "Learning Meaningful Representations of Life (LMRL) at NeurIPS 2021": "https://www.lmrl.org/",
+        "Cover of Cell Systems": "https://www.cell.com/cell-systems/issue?pii=S2405-4712(21)X0005-1#fullCover"
+      }
+    },
+
+     {
+      "key": "submission22b",
+      "author": ["Qianwen Wang", "Kexin Huang", "Payal Chandak", "Marinka Zitnik", "Nils Gehlenborg"],
+      "title": "Towards Usable Explanations: Extending the Nested Model of Visualization Design for User-Centric XAI",
+      "venue": "In Review",
+      "year": "2022",
+      "thumbnail": "DrugExplorer22.png",
+      "pdf": "",
+      "url": "https://doi.org/10.31219/osf.io/yhdpv",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://doi.org/10.31219/osf.io/yhdpv"
       }
     },
 

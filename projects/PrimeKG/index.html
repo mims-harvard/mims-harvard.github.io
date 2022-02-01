@@ -1,0 +1,811 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Precision Medicine Oriented Knowledge Graph - MARINKA ZITNIK</title>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="shortcut icon" type="image/png"
+           href="/favicon.png" 
+    />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Precision Medicine Oriented Knowledge Graph | MARINKA ZITNIK</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Precision Medicine Oriented Knowledge Graph" />
+<meta name="author" content="Marinka Zitnik" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Machine Learning for Medicine and Science" />
+<meta property="og:description" content="Machine Learning for Medicine and Science" />
+<link rel="canonical" href="https://zitniklab.hms.harvard.edu/projects/PrimeKG/" />
+<meta property="og:url" content="https://zitniklab.hms.harvard.edu/projects/PrimeKG/" />
+<meta property="og:site_name" content="MARINKA ZITNIK" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Precision Medicine Oriented Knowledge Graph" />
+<meta name="twitter:site" content="@marinkazitnik" />
+<meta name="twitter:creator" content="@Marinka Zitnik" />
+<script type="application/ld+json">
+{"url":"https://zitniklab.hms.harvard.edu/projects/PrimeKG/","author":{"@type":"Person","name":"Marinka Zitnik"},"headline":"Precision Medicine Oriented Knowledge Graph","description":"Machine Learning for Medicine and Science","@type":"WebPage","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
+<script>
+  window['ga-disable-UA-162129505-1'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-162129505-1');
+</script><!-- head scripts --></head>
+
+  <body>
+    
+<nav class="navbar is-primary" >
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item"><b>
+                MARINKA ZITNIK
+            </b></a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+<!--                <a href="/" class="navbar-item "><b>Home</b></a>-->
+                
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a href="/#" class="navbar-link "><b>About</b></a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/bio/" class="navbar-item "><b>Bio</b></a>
+                            
+                            <a href="/contact/" class="navbar-item "><b>Contact</b></a>
+                            
+                            <a href="/talks/" class="navbar-item "><b>Recent Talks</b></a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                <a href="/research/" class="navbar-item "><b>Research</b></a>
+                    
+                
+                    
+                <a href="/publications/" class="navbar-item "><b>Publications</b></a>
+                    
+                
+                    
+                <a href="/people/" class="navbar-item "><b>Members</b></a>
+                    
+                
+                    
+                <a href="/meetings/" class="navbar-item "><b>Conferences</b></a>
+                    
+                
+                    
+                <a href="/DMAI/" class="navbar-item "><b>DMAI</b></a>
+                    
+                
+                    
+                <a href="/data/" class="navbar-item "><b>Datasets</b></a>
+                    
+                
+                    
+                <a href="/software/" class="navbar-item "><b>ML Tools</b></a>
+                    
+                
+                    
+                <a href="https://zitniklab.hms.harvard.edu/TDC/" class="navbar-item "><b>TDC</b></a>
+                    
+                
+                    
+                <a href="/news/" class="navbar-item "><b>News</b></a>
+                    
+                
+                    
+                <a href="/jobs/" class="navbar-item "><b>Join Us</b></a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+
+    
+        <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
+    <div class="hero-body">
+        <div class="container">
+            <p class="title is-2">Precision Medicine Oriented Knowledge Graph</p>
+            <p class="subtitle is-3"></p>
+            
+        </div>
+    </div>
+</section>
+    
+    
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+                <div class="column is-8">
+                    
+                    
+                    
+<div class="content">
+    <div class="box has-background-info has-text-white">
+<p>
+Developing personalized diagnostic strategies and targeted treatments requires a deep understanding of disease biology and the ability to dissect the relationship between molecular and genetic factors and their phenotypic consequences. However, such knowledge is fragmented across publications, non-standardized research repositories, and evolving ontologies describing various scales of biological organization between genotypes and clinical phenotypes. 
+</p>
+
+<p>
+We introduce PrimeKG, a precision medicine-oriented knowledge graph that provides a holistic view of diseases. PrimeKG integrates 20 high-quality resources to describe 17,080 diseases with 4,050,249 relationships representing ten major biological scales, including disease-associated protein perturbations, biological processes and pathways, anatomical and phenotypic scale, and the entire range of approved and experimental drugs with their therapeutic action, considerably expanding previous efforts in disease-rooted knowledge graphs. 
+</p>
+
+<p>
+PrimeKG supports drug-disease prediction by including an abundance of ’indications’, ’contradictions’ and ’off-label use’ edges, which are usually missing in other knowledge graphs. We accompany PrimeKG's graph structure with text descriptions of clinical guidelines for drugs and diseases to enable multi-modal analyses.
+</p>
+</div>
+
+<p>The figure below provides an overview of PrimeKG. Panel a shows a schematic overview of the various types of nodes in PrimeKG and the relationships they have with other nodes in the graph.</p>
+
+<p>Panel b shows all disease nodes in PrimeKG visualized in a circular layout together with disease-associated information. Shown are relationships between disease nodes and any other node type. Disease nodes are densely connected to four other node types in PrimeKG through seven types of relations.</p>
+
+<p>Panel c shows an example of paths in PrimeKG between the disease node ‘Autism’ and the drug node ‘Risperidone’. Intermediate nodes
+are colored by their node type from panel a. We also display snippets of text features for both nodes to demonstrate the
+multimodal nature of PrimeKG.</p>
+
+<p><img src="/img/PrimeKG.png" /></p>
+
+<p>Abbreviations - MF: molecular function, BP: biological process, CC: cellular component, APZ: Apiprazole, EPI: epilepsy, ABP: abdominal pain, + / - associations: positive and negative associations.</p>
+
+<h2 id="publication">Publication</h2>
+
+<p>Building a knowledge graph to enable precision medicine<br />
+Payal Chandak*, Kexin Huang*, and Marinka Zitnik<br />
+<em>In Review</em> 2022</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{chandak22building,
+  title={Building a knowledge graph to enable precision medicine},
+  author={Chandak, Payal and Huang, Kexin and Zitnik, Marinka},
+  journal={In Review},
+  volume={},
+  number={},
+  pages={},
+  year={2022}
+}
+</code></pre></div></div>
+
+<h2 id="code">Code</h2>
+
+<p>The code to reproduce results, together with documentation and tutorials, is available in <a href="https://github.com/mims-harvard/PrimeKG">PrimeKG’s Github repository.</a></p>
+
+<h2 id="data-availability">Data availability</h2>
+
+<p>PrimeKG is hosted on <a href="https://doi.org/10.7910/DVN/IXA7BM">Harvard Dataverse</a>. We deposited the knowledge graph along with all relevant intermediate files at this repository.</p>
+
+<h2 id="authors">Authors</h2>
+
+<ul>
+  <li><a href="https://www.linkedin.com/in/payal-chandak-366403132">Payal Chandak</a></li>
+  <li><a href="https://www.kexinhuang.com/">Kexin Huang</a></li>
+  <li><a href="https://zitniklab.hms.harvard.edu/">Marinka Zitnik</a></li>
+</ul>
+
+</div>
+                </div>
+                
+                <div class="column is-4-desktop is-12-tablet">
+                    <p class="title is-4">Latest News</p>
+
+<div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/05/01/PrimeKG/">PrimeKG: Precision Medicine KG</a>-->
+        <p class="card-header-title">May 2022: &nbsp; <span class="has-text-primary">PrimeKG: Precision Medicine KG</span></p>
+<!--        <p class="card-header-item">May 2022</p>-->
+<!--        <p class="card-footer-item">May 1, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>We created <a href="https://zitniklab.hms.harvard.edu/projects/PrimeKG/">PrimeKG, a precision medicine-oriented knowledge graph that AI analyses of network medicine.</a></p>
+</p>-->
+            <p>We created <a href="https://zitniklab.hms.harvard.edu/projects/PrimeKG/">PrimeKG, a precision medicine-oriented knowledge graph that AI analyses of network medicine.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/05/01/PrimeKG/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: May 1, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/04/21/CellSystemsCover/">Webster on the Cover of Cell Systems</a>-->
+        <p class="card-header-title">Apr 2022: &nbsp; <span class="has-text-primary">Webster on the Cover of Cell Systems</span></p>
+<!--        <p class="card-header-item">Apr 2022</p>-->
+<!--        <p class="card-footer-item">Apr 21, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Webster is on the <a href="/img/webster-cell-systems-cover.jpg">cover of April issue</a> of <a href="https://www.cell.com/cell-systems/issue?pii=S2405-4712(21)X0005-1">Cell Systems</a>. <a href="https://doi.org/10.1016/j.cels.2021.12.005">Webster uses cell viability changes following gene perturbation</a> to automatically learn cellular functions and pathways from data.</p>
+</p>-->
+            <p>Webster is on the <a href="/img/webster-cell-systems-cover.jpg">cover of April issue</a> of <a href="https://www.cell.com/cell-systems/issue?pii=S2405-4712(21)X0005-1">Cell Systems</a>. <a href="https://doi.org/10.1016/j.cels.2021.12.005">Webster uses cell viability changes following gene perturbation</a> to automatically learn cellular functions and pathways from data.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/04/21/CellSystemsCover/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Apr 21, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/04/20/NASASpaceBiology/">NASA Space Biology</a>-->
+        <p class="card-header-title">Apr 2022: &nbsp; <span class="has-text-primary">NASA Space Biology</span></p>
+<!--        <p class="card-header-item">Apr 2022</p>-->
+<!--        <p class="card-footer-item">Apr 20, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Dr. Zitnik will serve on the Science Working Group at <a href="https://science.nasa.gov/">NASA Space Biology</a>.</p>
+</p>-->
+            <p>Dr. Zitnik will serve on the Science Working Group at <a href="https://science.nasa.gov/">NASA Space Biology</a>.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/04/20/NASASpaceBiology/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Apr 20, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/03/31/NDSEG-fellowship/">Yasha's Graduate Research Fellowship</a>-->
+        <p class="card-header-title">Mar 2022: &nbsp; <span class="has-text-primary">Yasha's Graduate Research Fellowship</span></p>
+<!--        <p class="card-header-item">Mar 2022</p>-->
+<!--        <p class="card-footer-item">Mar 31, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Yasha won the National Defense Science and Engineering Graduate (NDSEG) Fellowship. Congratulations!</p>
+</p>-->
+            <p>Yasha won the National Defense Science and Engineering Graduate (NDSEG) Fellowship. Congratulations!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/03/31/NDSEG-fellowship/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 31, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/03/18/ICML-AI4Science/">AI4Science at ICML 2022</a>-->
+        <p class="card-header-title">Mar 2022: &nbsp; <span class="has-text-primary">AI4Science at ICML 2022</span></p>
+<!--        <p class="card-header-item">Mar 2022</p>-->
+<!--        <p class="card-footer-item">Mar 18, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>We are excited to be selected to organize the AI4Science meeting at <a href="https://icml.cc/Conferences/2022/CallForPapers">ICML 2022.</a> Stay tuned for details. <a href="http://www.ai4science.net/icml22">http://www.ai4science.net/icml22</a></p>
+</p>-->
+            <p>We are excited to be selected to organize the AI4Science meeting at <a href="https://icml.cc/Conferences/2022/CallForPapers">ICML 2022.</a> Stay tuned for details. <a href="http://www.ai4science.net/icml22">http://www.ai4science.net/icml22</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/03/18/ICML-AI4Science/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 18, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/03/17/PSB-graph-session/">Graph Algorithms in Biomedicine at PSB 2023</a>-->
+        <p class="card-header-title">Mar 2022: &nbsp; <span class="has-text-primary">Graph Algorithms in Biomedicine at PSB 2023</span></p>
+<!--        <p class="card-header-item">Mar 2022</p>-->
+<!--        <p class="card-footer-item">Mar 17, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited to be organizing a session on Graph Algorithms at <a href="https://psb.stanford.edu/">PSB 2023.</a> Stay tuned for details.</p>
+</p>-->
+            <p>Excited to be organizing a session on Graph Algorithms at <a href="https://psb.stanford.edu/">PSB 2023.</a> Stay tuned for details.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/03/17/PSB-graph-session/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 17, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/03/15/Multimodal-Graphs-Disease/">Multimodal Learning on Graphs</a>-->
+        <p class="card-header-title">Mar 2022: &nbsp; <span class="has-text-primary">Multimodal Learning on Graphs</span></p>
+<!--        <p class="card-header-item">Mar 2022</p>-->
+<!--        <p class="card-footer-item">Mar 15, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New preprint! We introduce <a href="https://arxiv.org/abs/2203.08893">REMAP, a multimodal AI approach</a> for disease relation extraction and classification. <a href="/projects/REMAP">Project website.</a></p>
+</p>-->
+            <p>New preprint! We introduce <a href="https://arxiv.org/abs/2203.08893">REMAP, a multimodal AI approach</a> for disease relation extraction and classification. <a href="/projects/REMAP">Project website.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/03/15/Multimodal-Graphs-Disease/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 15, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/02/27/Posters-on-the-Hill/">Explainable Graph AI on the Capitol Hill</a>-->
+        <p class="card-header-title">Feb 2022: &nbsp; <span class="has-text-primary">Explainable Graph AI on the Capitol Hill</span></p>
+<!--        <p class="card-header-item">Feb 2022</p>-->
+<!--        <p class="card-footer-item">Feb 27, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Owen has been selected to present our research on explainable biomedical AI to members of the US Congress at the “Posters on the Hill” symposium. Congrats Owen!</p>
+</p>-->
+            <p>Owen has been selected to present our research on explainable biomedical AI to members of the US Congress at the “Posters on the Hill” symposium. Congrats Owen!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/02/27/Posters-on-the-Hill/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 27, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/02/06/Raindrop-GNN/">Graph Neural Networks for Time Series</a>-->
+        <p class="card-header-title">Feb 2022: &nbsp; <span class="has-text-primary">Graph Neural Networks for Time Series</span></p>
+<!--        <p class="card-header-item">Feb 2022</p>-->
+<!--        <p class="card-footer-item">Feb 6, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Hot off the press at <a href="https://openreview.net/forum?id=Kwm8I7dU-l5">ICLR 2022</a>. Check out Raindrop, our graph neural network with unique predictive capability to learn from irregular time series. <a href="/projects/Raindrop/">Project website</a>.</p>
+</p>-->
+            <p>Hot off the press at <a href="https://openreview.net/forum?id=Kwm8I7dU-l5">ICLR 2022</a>. Check out Raindrop, our graph neural network with unique predictive capability to learn from irregular time series. <a href="/projects/Raindrop/">Project website</a>.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/02/06/Raindrop-GNN/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 6, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/02/02/ISMB-tutorial/">Biomedical Graph ML Tutorial Accepted to ISMB</a>-->
+        <p class="card-header-title">Feb 2022: &nbsp; <span class="has-text-primary">Biomedical Graph ML Tutorial Accepted to ISMB</span></p>
+<!--        <p class="card-header-item">Feb 2022</p>-->
+<!--        <p class="card-footer-item">Feb 2, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited to present a tutorial at <a href="https://www.iscb.org/ismb2022">ISMB 2022</a> on <a href="/biomedgraphml">graph representation learning for precision medicine</a>. Congratulations, Michelle!</p>
+</p>-->
+            <p>Excited to present a tutorial at <a href="https://www.iscb.org/ismb2022">ISMB 2022</a> on <a href="/biomedgraphml">graph representation learning for precision medicine</a>. Congratulations, Michelle!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/02/02/ISMB-tutorial/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 2, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/02/01/Gates-Scholarship/">Marissa Won the Gates Cambridge Scholarship</a>-->
+        <p class="card-header-title">Feb 2022: &nbsp; <span class="has-text-primary">Marissa Won the Gates Cambridge Scholarship</span></p>
+<!--        <p class="card-header-item">Feb 2022</p>-->
+<!--        <p class="card-footer-item">Feb 1, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Marissa Sumathipala is among the 23 outstanding US scholars selected be part of the <a href="https://www.gatescambridge.org/about/news/first-cohort-of-gates-cambridge-class-of-2022-announced/">2022 class of Gates Cambridge Scholars at the University of Cambridge.</a> Congratulations, Marissa!</p>
+</p>-->
+            <p>Marissa Sumathipala is among the 23 outstanding US scholars selected be part of the <a href="https://www.gatescambridge.org/about/news/first-cohort-of-gates-cambridge-class-of-2022-announced/">2022 class of Gates Cambridge Scholars at the University of Cambridge.</a> Congratulations, Marissa!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/02/01/Gates-Scholarship/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 1, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/01/26/Webster-paper/">Inferring Gene Multifunctionality</a>-->
+        <p class="card-header-title">Jan 2022: &nbsp; <span class="has-text-primary">Inferring Gene Multifunctionality</span></p>
+<!--        <p class="card-header-item">Jan 2022</p>-->
+<!--        <p class="card-footer-item">Jan 26, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Hot off the press in Cell Systems. Webster is a <a href="https://www.cell.com/cell-systems/fulltext/S2405-4712(21)00488-9">tool to infer gene multifunctionality from high-dimensional gene perturbation data by applying sparse representation learning</a> to large CRISPR-Cas9 fitness screens. Explore <a href="https://depmap.org/webster/#/">Webster’s web portal.</a></p>
+</p>-->
+            <p>Hot off the press in Cell Systems. Webster is a <a href="https://www.cell.com/cell-systems/fulltext/S2405-4712(21)00488-9">tool to infer gene multifunctionality from high-dimensional gene perturbation data by applying sparse representation learning</a> to large CRISPR-Cas9 fitness screens. Explore <a href="https://depmap.org/webster/#/">Webster’s web portal.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/01/26/Webster-paper/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jan 26, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/01/21/ICLR-paper/">Deep Graph AI for Time Series Accepted to ICLR</a>-->
+        <p class="card-header-title">Jan 2022: &nbsp; <span class="has-text-primary">Deep Graph AI for Time Series Accepted to ICLR</span></p>
+<!--        <p class="card-header-item">Jan 2022</p>-->
+<!--        <p class="card-footer-item">Jan 21, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Paper on <a href="https://arxiv.org/abs/2110.05357">graph representation learning for time series</a> accepted to <a href="https://iclr.cc/">ICLR</a>. Congratulations, Xiang!</p>
+</p>-->
+            <p>Paper on <a href="https://arxiv.org/abs/2110.05357">graph representation learning for time series</a> accepted to <a href="https://iclr.cc/">ICLR</a>. Congratulations, Xiang!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/01/21/ICLR-paper/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jan 21, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/01/20/AISTATS-paper/">Probing GNN Explainers Accepted to AISTATS</a>-->
+        <p class="card-header-title">Jan 2022: &nbsp; <span class="has-text-primary">Probing GNN Explainers Accepted to AISTATS</span></p>
+<!--        <p class="card-header-item">Jan 2022</p>-->
+<!--        <p class="card-footer-item">Jan 20, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Paper on probing <a href="https://arxiv.org/abs/2106.09078">GNN explainers through rigorous theoretical and empirical analysis of GNN explanation methods</a> accepted to <a href="http://aistats.org/aistats2022/">AISTATS</a>. Congratulations, Chirag!</p>
+</p>-->
+            <p>Paper on probing <a href="https://arxiv.org/abs/2106.09078">GNN explainers through rigorous theoretical and empirical analysis of GNN explanation methods</a> accepted to <a href="http://aistats.org/aistats2022/">AISTATS</a>. Congratulations, Chirag!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/01/20/AISTATS-paper/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jan 20, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/01/15/Churchill-Scholarship/">Marissa Sumathipala selected as Churchill Scholar</a>-->
+        <p class="card-header-title">Jan 2022: &nbsp; <span class="has-text-primary">Marissa Sumathipala selected as Churchill Scholar</span></p>
+<!--        <p class="card-header-item">Jan 2022</p>-->
+<!--        <p class="card-footer-item">Jan 15, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Marissa Sumathipala is selected for the <a href="https://news.harvard.edu/gazette/story/newsplus/harvard-college-senior-and-harvard-medical-student-selected-as-churchill-scholars/">prestigious Churchill Scholarship.</a> Congratulations, Marissa!</p>
+</p>-->
+            <p>Marissa Sumathipala is selected for the <a href="https://news.harvard.edu/gazette/story/newsplus/harvard-college-senior-and-harvard-medical-student-selected-as-churchill-scholars/">prestigious Churchill Scholarship.</a> Congratulations, Marissa!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/01/15/Churchill-Scholarship/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jan 15, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/01/09/TDC-user-meetup/">Therapeutics Data Commons User Meetup</a>-->
+        <p class="card-header-title">Jan 2022: &nbsp; <span class="has-text-primary">Therapeutics Data Commons User Meetup</span></p>
+<!--        <p class="card-header-item">Jan 2022</p>-->
+<!--        <p class="card-footer-item">Jan 9, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>We invite you to join the growing open-science community at the <a href="https://shoutout.wix.com/so/d1Nv1pC2d#/main">User Group Meetup of Therapeutics Data Commons</a>! <a href="https://tinyurl.com/tdc-meeting">Register</a> for the first live user group meeting on Tuesday, January 25 at 11:00 AM EST.</p>
+</p>-->
+            <p>We invite you to join the growing open-science community at the <a href="https://shoutout.wix.com/so/d1Nv1pC2d#/main">User Group Meetup of Therapeutics Data Commons</a>! <a href="https://tinyurl.com/tdc-meeting">Register</a> for the first live user group meeting on Tuesday, January 25 at 11:00 AM EST.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/01/09/TDC-user-meetup/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jan 9, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/01/03/GLB-workshop/">Workshop on Graph Learning Benchmarks</a>-->
+        <p class="card-header-title">Jan 2022: &nbsp; <span class="has-text-primary">Workshop on Graph Learning Benchmarks</span></p>
+<!--        <p class="card-header-item">Jan 2022</p>-->
+<!--        <p class="card-footer-item">Jan 3, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Submit your papers to our <a href="https://graph-learning-benchmarks.github.io/glb2022">Workshop on Graph Learning Benchmarks</a> organized at <a href="https://www2022.thewebconf.org/">The Web Conference (WWW)</a>. <a href="https://graph-learning-benchmarks.github.io/glb2022#call-for-papers">Call for papers!</a></p>
+</p>-->
+            <p>Submit your papers to our <a href="https://graph-learning-benchmarks.github.io/glb2022">Workshop on Graph Learning Benchmarks</a> organized at <a href="https://www2022.thewebconf.org/">The Web Conference (WWW)</a>. <a href="https://graph-learning-benchmarks.github.io/glb2022#call-for-papers">Call for papers!</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/01/03/GLB-workshop/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jan 3, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2021/12/24/SpacePrecisionHealth/">NASA: Precision Space Health System</a>-->
+        <p class="card-header-title">Dec 2021: &nbsp; <span class="has-text-primary">NASA: Precision Space Health System</span></p>
+<!--        <p class="card-header-item">Dec 2021</p>-->
+<!--        <p class="card-footer-item">Dec 24, 2021</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Human space exploration beyond low Earth orbit will involve missions of significant distance and duration. To effectively mitigate myriad space health hazards, paradigm shifts in data and space health systems are necessary to enable Earth independence. Delighted to be working with <a href="https://www.nasa.gov/">NASA</a> and can share <a href="https://arxiv.org/abs/2112.12554">our recommendations</a>!</p>
+</p>-->
+            <p>Human space exploration beyond low Earth orbit will involve missions of significant distance and duration. To effectively mitigate myriad space health hazards, paradigm shifts in data and space health systems are necessary to enable Earth independence. Delighted to be working with <a href="https://www.nasa.gov/">NASA</a> and can share <a href="https://arxiv.org/abs/2112.12554">our recommendations</a>!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2021/12/24/SpacePrecisionHealth/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 24, 2021</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2021/12/23/SpaceBiology/">Beyond Low Earth Orbit: Biological Research & AI</a>-->
+        <p class="card-header-title">Dec 2021: &nbsp; <span class="has-text-primary">Beyond Low Earth Orbit: Biological Research & AI</span></p>
+<!--        <p class="card-header-item">Dec 2021</p>-->
+<!--        <p class="card-footer-item">Dec 23, 2021</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>As space exploration is extended beyond low Earth orbit, experiments must be maximally autonomous and intelligent to guide biological research. Excited to be working with <a href="https://www.nasa.gov/">NASA</a> and can share <a href="https://arxiv.org/abs/2112.12582">our recommendations</a>!</p>
+</p>-->
+            <p>As space exploration is extended beyond low Earth orbit, experiments must be maximally autonomous and intelligent to guide biological research. Excited to be working with <a href="https://www.nasa.gov/">NASA</a> and can share <a href="https://arxiv.org/abs/2112.12582">our recommendations</a>!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2021/12/23/SpaceBiology/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 23, 2021</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2021/12/13/NeurIPSAI4Science/">Attend Our AI4Science Workshop at NeurIPS 2021</a>-->
+        <p class="card-header-title">Dec 2021: &nbsp; <span class="has-text-primary">Attend Our AI4Science Workshop at NeurIPS 2021</span></p>
+<!--        <p class="card-header-item">Dec 2021</p>-->
+<!--        <p class="card-footer-item">Dec 13, 2021</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Join us at <a href="https://nips.cc/Conferences/2021">NeurIPS 2021</a> for the <a href="https://ai4sciencecommunity.github.io/">AI for Science Workshop</a> on Monday, Dec 13, 8am-6pm ET. This will be a great day to celebrate AI achievements in scientific discovery and highlight open challenges that need to be addressed to move the field forward.</p>
+</p>-->
+            <p>Join us at <a href="https://nips.cc/Conferences/2021">NeurIPS 2021</a> for the <a href="https://ai4sciencecommunity.github.io/">AI for Science Workshop</a> on Monday, Dec 13, 8am-6pm ET. This will be a great day to celebrate AI achievements in scientific discovery and highlight open challenges that need to be addressed to move the field forward.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2021/12/13/NeurIPSAI4Science/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 13, 2021</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+
+    <div class="column is-12">
+        <div class="card">
+            <header class="card-header">
+        <!--        <a class="card-header-title" href=""></a>-->
+            <p class="card-header-title"><span class="has-text-primary">Tweets</span></p>
+        <!--        <p class="card-header-item"></p>-->
+        <!--        <p class="card-footer-item"></p>-->
+            </header>
+        <div class="card-content">
+        <!--        <div class="content">-->
+        <!--            -->
+        <!--            <p></p>-->
+        <a class="twitter-timeline" data-width="500" data-height="500" data-theme="light" href="https://twitter.com/marinkazitnik?ref_src=twsrc%5Etfw" data-chrome="noheader transparent nofooter nofooter noborders">Tweets by marinkazitnik</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <!--        </div>-->
+        <!--        <div class="has-text-centered">-->
+        <!--            <a href="" class="button is-primary">Read more</a>-->
+        <!--        </div>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts -->
+<div style="background-color:#A41034">
+        <div class="content is-normal has-text-centered">
+            <p style="color:white;padding-top:20px;padding-bottom:20px;"><a href="https://scholar.harvard.edu/marinka" style="color:white"><b>Zitnik Lab</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://harvard.edu" style="color:white"><b>Harvard</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://dbmi.hms.harvard.edu/" style="color:white"><b>Department of Biomedical Informatics</b></a></p>
+        </div>
+</div></body>
+</html>
+

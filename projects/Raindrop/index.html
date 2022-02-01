@@ -1,0 +1,838 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Graph-Guided Networks For Irregular & Complex Time Series - MARINKA ZITNIK</title>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="shortcut icon" type="image/png"
+           href="/favicon.png" 
+    />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Graph-Guided Networks For Irregular &amp; Complex Time Series | MARINKA ZITNIK</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Graph-Guided Networks For Irregular &amp; Complex Time Series" />
+<meta name="author" content="Marinka Zitnik" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Machine Learning for Medicine and Science" />
+<meta property="og:description" content="Machine Learning for Medicine and Science" />
+<link rel="canonical" href="https://zitniklab.hms.harvard.edu/projects/Raindrop/" />
+<meta property="og:url" content="https://zitniklab.hms.harvard.edu/projects/Raindrop/" />
+<meta property="og:site_name" content="MARINKA ZITNIK" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Graph-Guided Networks For Irregular &amp; Complex Time Series" />
+<meta name="twitter:site" content="@marinkazitnik" />
+<meta name="twitter:creator" content="@Marinka Zitnik" />
+<script type="application/ld+json">
+{"url":"https://zitniklab.hms.harvard.edu/projects/Raindrop/","author":{"@type":"Person","name":"Marinka Zitnik"},"headline":"Graph-Guided Networks For Irregular &amp; Complex Time Series","description":"Machine Learning for Medicine and Science","@type":"WebPage","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
+<script>
+  window['ga-disable-UA-162129505-1'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-162129505-1');
+</script><!-- head scripts --></head>
+
+  <body>
+    
+<nav class="navbar is-primary" >
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item"><b>
+                MARINKA ZITNIK
+            </b></a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+<!--                <a href="/" class="navbar-item "><b>Home</b></a>-->
+                
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a href="/#" class="navbar-link "><b>About</b></a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/bio/" class="navbar-item "><b>Bio</b></a>
+                            
+                            <a href="/contact/" class="navbar-item "><b>Contact</b></a>
+                            
+                            <a href="/talks/" class="navbar-item "><b>Recent Talks</b></a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                <a href="/research/" class="navbar-item "><b>Research</b></a>
+                    
+                
+                    
+                <a href="/publications/" class="navbar-item "><b>Publications</b></a>
+                    
+                
+                    
+                <a href="/people/" class="navbar-item "><b>Members</b></a>
+                    
+                
+                    
+                <a href="/meetings/" class="navbar-item "><b>Conferences</b></a>
+                    
+                
+                    
+                <a href="/DMAI/" class="navbar-item "><b>DMAI</b></a>
+                    
+                
+                    
+                <a href="/data/" class="navbar-item "><b>Datasets</b></a>
+                    
+                
+                    
+                <a href="/software/" class="navbar-item "><b>ML Tools</b></a>
+                    
+                
+                    
+                <a href="https://zitniklab.hms.harvard.edu/TDC/" class="navbar-item "><b>TDC</b></a>
+                    
+                
+                    
+                <a href="/news/" class="navbar-item "><b>News</b></a>
+                    
+                
+                    
+                <a href="/jobs/" class="navbar-item "><b>Join Us</b></a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+
+    
+        <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
+    <div class="hero-body">
+        <div class="container">
+            <p class="title is-2">Graph-Guided Networks For Irregular & Complex Time Series</p>
+            <p class="subtitle is-3"></p>
+            
+        </div>
+    </div>
+</section>
+    
+    
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+                <div class="column is-8">
+                    
+                    
+                    
+<div class="content">
+    <div class="box has-background-info has-text-white">
+<p>
+In many domains, including healthcare, biology, and climate science, time series are irregularly sampled with varying time intervals between successive readouts and different subsets of variables (sensors) observed at different time points. Practical issues often exist in collecting sensor measurements that lead to various types of irregularities caused by missing observations, such as cost saving, sensor failures, external forces in physical scenarios, medical interventions, to name a few. 
+</p>
+
+<p>
+While machine learning methods for time series usually assume fully observable and fixed-size inputs, irregularly sampled time series raise considerable challenges. For example, sensors' observations might not be aligned, time intervals among adjacent readouts can vary across sensors, different samples can have varying numbers of readouts recorded at different times. 
+</p>
+
+<p>
+We introduce Raindrop, a graph neural network that learns to embed irregularly sampled and multivariate time series while simultaneously learning the dynamics of sensors purely from observational data. Raindrop can handle misaligned observations, varying time gaps, arbitrary numbers of observations, thus producing fixed-dimensional embeddings via neural message passing and temporal self-attention.
+</p>
+</div>
+
+<p>Multivariate time series are prevalent in various domains, including healthcare, space science, cyber security, biology, and finance. Practical issues often exist in collecting sensor measurements that lead to various types of irregularities caused by missing observations, such as saving costs, sensor failures, external forces in physical systems, medical interventions, to name a few.</p>
+
+<p>Prior methods for dealing with irregularly sampled time series involve filling in missing values using interpolation, kernel methods, and probabilistic approaches. However, the absence of observations can be informative on its own, and thus imputing missing observations is not necessarily beneficial. While modern techniques involve recurrent neural network architectures (e.g., RNN, LSTM, GRU) and transformers, they are restricted to regular sampling or assume aligned measurements across modalities. For misaligned measurements, existing methods rely on a two-stage approach that first imputes missing values to produce a regularly-sampled dataset and then optimizes a model of choice for downstream performance. This decoupled approach does not fully exploit informative missingness patterns or deal with irregular sampling, thus producing suboptimal performance. Therefore, recent methods circumvent the imputation stage and directly model irregularly sampled time series.</p>
+
+<p>To address the characteristics of irregularly sampled time series, we propose to model temporal dynamics of sensor dependencies and how those relationships evolve over time. Our intuitive assumption is that the observed sensors can indicate how the unobserved sensors currently behave, further improving the representation learning of irregular multivariate time series. We develop Raindrop, a graph neural network that leverages relational structure to embed and classify irregularly sampled multivariate time series. Raindrop can handle misaligned observations, varying time gaps, arbitrary numbers of observations, and produce multi-scale embeddings via a novel hierarchical attention.</p>
+
+<h2 id="motivation-for-raindrop">Motivation for Raindrop</h2>
+
+<p>Raindrop takes <em>samples</em> as input, every sample containing multiple <em>sensors</em> and each sensor consisting of irregularly recorded <em>observations</em> (e.g., in clinical data, an individual patient’s state of health is recorded at irregular time intervals with different subsets of sensors observed at different times). Every <em>observation</em> is a real-value scalar (sensor readout).</p>
+
+<p><strong>Raindrop is inspired by how raindrops hit a surface at varying time intervals and create ripple effects that propagate throughout the surface (as shown in the following figure). Mathematically, in Raindrop, observations (i.e., raindrops) hit the sensor graph (i.e., the surface) asynchronously and at irregular time intervals; each observation is processed by passing messages to neighboring sensors (i.e., creating ripples), taking into account the learned sensor dependencies.</strong></p>
+
+<p>The key idea of Raindrop is that the observed sensors can indicate how the unobserved sensors currently behave, which can further improve the representation learning of irregular multivariate time series. Taking advantage of the inter-sensor dependencies and temporal attention, Raindrop leans a fixed-dimensional embedding for irregularly sampled time series.</p>
+
+<center>
+<img width="500" src="/img/raindrop-motivation.png" />
+</center>
+
+<h2 id="raindrop-approach">Raindrop approach</h2>
+
+<p>Raindrop learns sample embeddings in a hierarchical architecture that processes individual observations, combines them into sensors, which, in turn, are aggregated to produce sample embeddings:</p>
+
+<ol>
+  <li>We first construct a graph for each sample where nodes represent sensors and edges indicate relations between sensors.</li>
+  <li>Raindrop generates <em>observation embedding</em> based on observed value, passes messages to neighbor sensors, and generates observation  embedding through inter-sensor dependencies (as shown in panel <strong>a</strong>).</li>
+  <li>We apply the message passing to all timestamps and produce corresponding observation embeddings. We aggregate an arbitrary number of observation embeddings into a fixed-length <em>sensor embedding</em>, while paying distinctive attention to different observations (as shown in panel <strong>b</strong>) through temporal self-attention. We independently apply the sensor-level processing procedure to all sensors.</li>
+  <li>At last, we use a readout function to merge all sensor embeddings to obtain a <em>sample embedding</em>. The learned sampled embedding can be fed into a downstream task such as classification.</li>
+</ol>
+
+<p><img align="center" src="/img/raindrop-model.png" /></p>
+
+<h2 id="attractive-properties-of-raindrop">Attractive properties of Raindrop</h2>
+
+<ul>
+  <li><strong>Unique capability to model irregularly sampled time series</strong>: Raindrop can learn fixed-dimensional embedding for irregularly sampled multivariate time series while addressing challenges including misaligned observations, varying time gaps, and arbitrary numbers of observations.</li>
+  <li><strong>Modeling of inter-sensor structure</strong>: To the best of our knowledge, Raindrop is the first model adopting neural message passing to model inter-sensor dependencies in irregular time series.</li>
+  <li><strong>Excellent performance on leave-sensor-out scenarios</strong>: Raindrop outperforms five state-of-the-art methods across three datasets and four experimental settings, including a setup where a subset of sensors in the test set have malfunctioned (i.e., have no readouts at all).</li>
+</ul>
+
+<h2 id="publication">Publication</h2>
+
+<p><a href="https://openreview.net/pdf?id=Kwm8I7dU-l5">Graph-Guided Network For Irregularly Sampled Multivariate Time Series</a><br />
+Xiang Zhang, Marko Zeman, Theodoros Tsiligkaridis, and Marinka Zitnik<br />
+<em>International Conference on Learning Representations, ICLR</em> 2022</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{zhang2022graph,
+title = {Graph-Guided Network For Irregularly Sampled Multivariate Time Series},
+author = {Zhang, Xiang and Zeman, Marko and Tsiligkaridis, Theodoros and Zitnik, Marinka},
+booktitle = {International Conference on Learning Representations, ICLR},
+year      = {2022}
+}
+</code></pre></div></div>
+
+<h2 id="code">Code</h2>
+
+<p>Pytorch implementation of Raindrop are available in the <a href="https://github.com/mims-harvard/Raindrop">GitHub repository</a>.</p>
+
+<p>Physical activity monitoring dataset is deposited in the <a href="https://doi.org/10.6084/m9.figshare.19514347">Figshare</a>.</p>
+
+<h2 id="slides">Slides</h2>
+
+<p>Slides describing Raindrop <a href="/publications/slides/raindrop-AAAI22.pdf">are available here.</a></p>
+
+<h2 id="authors">Authors</h2>
+
+<ul>
+  <li><a href="https://xiangzhang.info/">Xiang Zhang</a></li>
+  <li><a href="">Marko Zeman</a></li>
+  <li><a href="https://scholar.google.com/citations?user=hVUVOTIAAAAJ&amp;hl=en">Theodoros Tsiligkaridis</a></li>
+  <li><a href="https://zitniklab.hms.harvard.edu/">Marinka Zitnik</a></li>
+</ul>
+
+</div>
+                </div>
+                
+                <div class="column is-4-desktop is-12-tablet">
+                    <p class="title is-4">Latest News</p>
+
+<div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/05/01/PrimeKG/">PrimeKG: Precision Medicine KG</a>-->
+        <p class="card-header-title">May 2022: &nbsp; <span class="has-text-primary">PrimeKG: Precision Medicine KG</span></p>
+<!--        <p class="card-header-item">May 2022</p>-->
+<!--        <p class="card-footer-item">May 1, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>We created <a href="https://zitniklab.hms.harvard.edu/projects/PrimeKG/">PrimeKG, a precision medicine-oriented knowledge graph that AI analyses of network medicine.</a></p>
+</p>-->
+            <p>We created <a href="https://zitniklab.hms.harvard.edu/projects/PrimeKG/">PrimeKG, a precision medicine-oriented knowledge graph that AI analyses of network medicine.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/05/01/PrimeKG/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: May 1, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/04/21/CellSystemsCover/">Webster on the Cover of Cell Systems</a>-->
+        <p class="card-header-title">Apr 2022: &nbsp; <span class="has-text-primary">Webster on the Cover of Cell Systems</span></p>
+<!--        <p class="card-header-item">Apr 2022</p>-->
+<!--        <p class="card-footer-item">Apr 21, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Webster is on the <a href="/img/webster-cell-systems-cover.jpg">cover of April issue</a> of <a href="https://www.cell.com/cell-systems/issue?pii=S2405-4712(21)X0005-1">Cell Systems</a>. <a href="https://doi.org/10.1016/j.cels.2021.12.005">Webster uses cell viability changes following gene perturbation</a> to automatically learn cellular functions and pathways from data.</p>
+</p>-->
+            <p>Webster is on the <a href="/img/webster-cell-systems-cover.jpg">cover of April issue</a> of <a href="https://www.cell.com/cell-systems/issue?pii=S2405-4712(21)X0005-1">Cell Systems</a>. <a href="https://doi.org/10.1016/j.cels.2021.12.005">Webster uses cell viability changes following gene perturbation</a> to automatically learn cellular functions and pathways from data.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/04/21/CellSystemsCover/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Apr 21, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/04/20/NASASpaceBiology/">NASA Space Biology</a>-->
+        <p class="card-header-title">Apr 2022: &nbsp; <span class="has-text-primary">NASA Space Biology</span></p>
+<!--        <p class="card-header-item">Apr 2022</p>-->
+<!--        <p class="card-footer-item">Apr 20, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Dr. Zitnik will serve on the Science Working Group at <a href="https://science.nasa.gov/">NASA Space Biology</a>.</p>
+</p>-->
+            <p>Dr. Zitnik will serve on the Science Working Group at <a href="https://science.nasa.gov/">NASA Space Biology</a>.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/04/20/NASASpaceBiology/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Apr 20, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/03/31/NDSEG-fellowship/">Yasha's Graduate Research Fellowship</a>-->
+        <p class="card-header-title">Mar 2022: &nbsp; <span class="has-text-primary">Yasha's Graduate Research Fellowship</span></p>
+<!--        <p class="card-header-item">Mar 2022</p>-->
+<!--        <p class="card-footer-item">Mar 31, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Yasha won the National Defense Science and Engineering Graduate (NDSEG) Fellowship. Congratulations!</p>
+</p>-->
+            <p>Yasha won the National Defense Science and Engineering Graduate (NDSEG) Fellowship. Congratulations!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/03/31/NDSEG-fellowship/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 31, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/03/18/ICML-AI4Science/">AI4Science at ICML 2022</a>-->
+        <p class="card-header-title">Mar 2022: &nbsp; <span class="has-text-primary">AI4Science at ICML 2022</span></p>
+<!--        <p class="card-header-item">Mar 2022</p>-->
+<!--        <p class="card-footer-item">Mar 18, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>We are excited to be selected to organize the AI4Science meeting at <a href="https://icml.cc/Conferences/2022/CallForPapers">ICML 2022.</a> Stay tuned for details. <a href="http://www.ai4science.net/icml22">http://www.ai4science.net/icml22</a></p>
+</p>-->
+            <p>We are excited to be selected to organize the AI4Science meeting at <a href="https://icml.cc/Conferences/2022/CallForPapers">ICML 2022.</a> Stay tuned for details. <a href="http://www.ai4science.net/icml22">http://www.ai4science.net/icml22</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/03/18/ICML-AI4Science/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 18, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/03/17/PSB-graph-session/">Graph Algorithms in Biomedicine at PSB 2023</a>-->
+        <p class="card-header-title">Mar 2022: &nbsp; <span class="has-text-primary">Graph Algorithms in Biomedicine at PSB 2023</span></p>
+<!--        <p class="card-header-item">Mar 2022</p>-->
+<!--        <p class="card-footer-item">Mar 17, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited to be organizing a session on Graph Algorithms at <a href="https://psb.stanford.edu/">PSB 2023.</a> Stay tuned for details.</p>
+</p>-->
+            <p>Excited to be organizing a session on Graph Algorithms at <a href="https://psb.stanford.edu/">PSB 2023.</a> Stay tuned for details.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/03/17/PSB-graph-session/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 17, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/03/15/Multimodal-Graphs-Disease/">Multimodal Learning on Graphs</a>-->
+        <p class="card-header-title">Mar 2022: &nbsp; <span class="has-text-primary">Multimodal Learning on Graphs</span></p>
+<!--        <p class="card-header-item">Mar 2022</p>-->
+<!--        <p class="card-footer-item">Mar 15, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New preprint! We introduce <a href="https://arxiv.org/abs/2203.08893">REMAP, a multimodal AI approach</a> for disease relation extraction and classification. <a href="/projects/REMAP">Project website.</a></p>
+</p>-->
+            <p>New preprint! We introduce <a href="https://arxiv.org/abs/2203.08893">REMAP, a multimodal AI approach</a> for disease relation extraction and classification. <a href="/projects/REMAP">Project website.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/03/15/Multimodal-Graphs-Disease/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 15, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/02/27/Posters-on-the-Hill/">Explainable Graph AI on the Capitol Hill</a>-->
+        <p class="card-header-title">Feb 2022: &nbsp; <span class="has-text-primary">Explainable Graph AI on the Capitol Hill</span></p>
+<!--        <p class="card-header-item">Feb 2022</p>-->
+<!--        <p class="card-footer-item">Feb 27, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Owen has been selected to present our research on explainable biomedical AI to members of the US Congress at the “Posters on the Hill” symposium. Congrats Owen!</p>
+</p>-->
+            <p>Owen has been selected to present our research on explainable biomedical AI to members of the US Congress at the “Posters on the Hill” symposium. Congrats Owen!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/02/27/Posters-on-the-Hill/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 27, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/02/06/Raindrop-GNN/">Graph Neural Networks for Time Series</a>-->
+        <p class="card-header-title">Feb 2022: &nbsp; <span class="has-text-primary">Graph Neural Networks for Time Series</span></p>
+<!--        <p class="card-header-item">Feb 2022</p>-->
+<!--        <p class="card-footer-item">Feb 6, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Hot off the press at <a href="https://openreview.net/forum?id=Kwm8I7dU-l5">ICLR 2022</a>. Check out Raindrop, our graph neural network with unique predictive capability to learn from irregular time series. <a href="/projects/Raindrop/">Project website</a>.</p>
+</p>-->
+            <p>Hot off the press at <a href="https://openreview.net/forum?id=Kwm8I7dU-l5">ICLR 2022</a>. Check out Raindrop, our graph neural network with unique predictive capability to learn from irregular time series. <a href="/projects/Raindrop/">Project website</a>.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/02/06/Raindrop-GNN/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 6, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/02/02/ISMB-tutorial/">Biomedical Graph ML Tutorial Accepted to ISMB</a>-->
+        <p class="card-header-title">Feb 2022: &nbsp; <span class="has-text-primary">Biomedical Graph ML Tutorial Accepted to ISMB</span></p>
+<!--        <p class="card-header-item">Feb 2022</p>-->
+<!--        <p class="card-footer-item">Feb 2, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited to present a tutorial at <a href="https://www.iscb.org/ismb2022">ISMB 2022</a> on <a href="/biomedgraphml">graph representation learning for precision medicine</a>. Congratulations, Michelle!</p>
+</p>-->
+            <p>Excited to present a tutorial at <a href="https://www.iscb.org/ismb2022">ISMB 2022</a> on <a href="/biomedgraphml">graph representation learning for precision medicine</a>. Congratulations, Michelle!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/02/02/ISMB-tutorial/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 2, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/02/01/Gates-Scholarship/">Marissa Won the Gates Cambridge Scholarship</a>-->
+        <p class="card-header-title">Feb 2022: &nbsp; <span class="has-text-primary">Marissa Won the Gates Cambridge Scholarship</span></p>
+<!--        <p class="card-header-item">Feb 2022</p>-->
+<!--        <p class="card-footer-item">Feb 1, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Marissa Sumathipala is among the 23 outstanding US scholars selected be part of the <a href="https://www.gatescambridge.org/about/news/first-cohort-of-gates-cambridge-class-of-2022-announced/">2022 class of Gates Cambridge Scholars at the University of Cambridge.</a> Congratulations, Marissa!</p>
+</p>-->
+            <p>Marissa Sumathipala is among the 23 outstanding US scholars selected be part of the <a href="https://www.gatescambridge.org/about/news/first-cohort-of-gates-cambridge-class-of-2022-announced/">2022 class of Gates Cambridge Scholars at the University of Cambridge.</a> Congratulations, Marissa!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/02/01/Gates-Scholarship/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 1, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/01/26/Webster-paper/">Inferring Gene Multifunctionality</a>-->
+        <p class="card-header-title">Jan 2022: &nbsp; <span class="has-text-primary">Inferring Gene Multifunctionality</span></p>
+<!--        <p class="card-header-item">Jan 2022</p>-->
+<!--        <p class="card-footer-item">Jan 26, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Hot off the press in Cell Systems. Webster is a <a href="https://www.cell.com/cell-systems/fulltext/S2405-4712(21)00488-9">tool to infer gene multifunctionality from high-dimensional gene perturbation data by applying sparse representation learning</a> to large CRISPR-Cas9 fitness screens. Explore <a href="https://depmap.org/webster/#/">Webster’s web portal.</a></p>
+</p>-->
+            <p>Hot off the press in Cell Systems. Webster is a <a href="https://www.cell.com/cell-systems/fulltext/S2405-4712(21)00488-9">tool to infer gene multifunctionality from high-dimensional gene perturbation data by applying sparse representation learning</a> to large CRISPR-Cas9 fitness screens. Explore <a href="https://depmap.org/webster/#/">Webster’s web portal.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/01/26/Webster-paper/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jan 26, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/01/21/ICLR-paper/">Deep Graph AI for Time Series Accepted to ICLR</a>-->
+        <p class="card-header-title">Jan 2022: &nbsp; <span class="has-text-primary">Deep Graph AI for Time Series Accepted to ICLR</span></p>
+<!--        <p class="card-header-item">Jan 2022</p>-->
+<!--        <p class="card-footer-item">Jan 21, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Paper on <a href="https://arxiv.org/abs/2110.05357">graph representation learning for time series</a> accepted to <a href="https://iclr.cc/">ICLR</a>. Congratulations, Xiang!</p>
+</p>-->
+            <p>Paper on <a href="https://arxiv.org/abs/2110.05357">graph representation learning for time series</a> accepted to <a href="https://iclr.cc/">ICLR</a>. Congratulations, Xiang!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/01/21/ICLR-paper/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jan 21, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/01/20/AISTATS-paper/">Probing GNN Explainers Accepted to AISTATS</a>-->
+        <p class="card-header-title">Jan 2022: &nbsp; <span class="has-text-primary">Probing GNN Explainers Accepted to AISTATS</span></p>
+<!--        <p class="card-header-item">Jan 2022</p>-->
+<!--        <p class="card-footer-item">Jan 20, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Paper on probing <a href="https://arxiv.org/abs/2106.09078">GNN explainers through rigorous theoretical and empirical analysis of GNN explanation methods</a> accepted to <a href="http://aistats.org/aistats2022/">AISTATS</a>. Congratulations, Chirag!</p>
+</p>-->
+            <p>Paper on probing <a href="https://arxiv.org/abs/2106.09078">GNN explainers through rigorous theoretical and empirical analysis of GNN explanation methods</a> accepted to <a href="http://aistats.org/aistats2022/">AISTATS</a>. Congratulations, Chirag!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/01/20/AISTATS-paper/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jan 20, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/01/15/Churchill-Scholarship/">Marissa Sumathipala selected as Churchill Scholar</a>-->
+        <p class="card-header-title">Jan 2022: &nbsp; <span class="has-text-primary">Marissa Sumathipala selected as Churchill Scholar</span></p>
+<!--        <p class="card-header-item">Jan 2022</p>-->
+<!--        <p class="card-footer-item">Jan 15, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Marissa Sumathipala is selected for the <a href="https://news.harvard.edu/gazette/story/newsplus/harvard-college-senior-and-harvard-medical-student-selected-as-churchill-scholars/">prestigious Churchill Scholarship.</a> Congratulations, Marissa!</p>
+</p>-->
+            <p>Marissa Sumathipala is selected for the <a href="https://news.harvard.edu/gazette/story/newsplus/harvard-college-senior-and-harvard-medical-student-selected-as-churchill-scholars/">prestigious Churchill Scholarship.</a> Congratulations, Marissa!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/01/15/Churchill-Scholarship/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jan 15, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/01/09/TDC-user-meetup/">Therapeutics Data Commons User Meetup</a>-->
+        <p class="card-header-title">Jan 2022: &nbsp; <span class="has-text-primary">Therapeutics Data Commons User Meetup</span></p>
+<!--        <p class="card-header-item">Jan 2022</p>-->
+<!--        <p class="card-footer-item">Jan 9, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>We invite you to join the growing open-science community at the <a href="https://shoutout.wix.com/so/d1Nv1pC2d#/main">User Group Meetup of Therapeutics Data Commons</a>! <a href="https://tinyurl.com/tdc-meeting">Register</a> for the first live user group meeting on Tuesday, January 25 at 11:00 AM EST.</p>
+</p>-->
+            <p>We invite you to join the growing open-science community at the <a href="https://shoutout.wix.com/so/d1Nv1pC2d#/main">User Group Meetup of Therapeutics Data Commons</a>! <a href="https://tinyurl.com/tdc-meeting">Register</a> for the first live user group meeting on Tuesday, January 25 at 11:00 AM EST.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/01/09/TDC-user-meetup/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jan 9, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/01/03/GLB-workshop/">Workshop on Graph Learning Benchmarks</a>-->
+        <p class="card-header-title">Jan 2022: &nbsp; <span class="has-text-primary">Workshop on Graph Learning Benchmarks</span></p>
+<!--        <p class="card-header-item">Jan 2022</p>-->
+<!--        <p class="card-footer-item">Jan 3, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Submit your papers to our <a href="https://graph-learning-benchmarks.github.io/glb2022">Workshop on Graph Learning Benchmarks</a> organized at <a href="https://www2022.thewebconf.org/">The Web Conference (WWW)</a>. <a href="https://graph-learning-benchmarks.github.io/glb2022#call-for-papers">Call for papers!</a></p>
+</p>-->
+            <p>Submit your papers to our <a href="https://graph-learning-benchmarks.github.io/glb2022">Workshop on Graph Learning Benchmarks</a> organized at <a href="https://www2022.thewebconf.org/">The Web Conference (WWW)</a>. <a href="https://graph-learning-benchmarks.github.io/glb2022#call-for-papers">Call for papers!</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/01/03/GLB-workshop/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jan 3, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2021/12/24/SpacePrecisionHealth/">NASA: Precision Space Health System</a>-->
+        <p class="card-header-title">Dec 2021: &nbsp; <span class="has-text-primary">NASA: Precision Space Health System</span></p>
+<!--        <p class="card-header-item">Dec 2021</p>-->
+<!--        <p class="card-footer-item">Dec 24, 2021</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Human space exploration beyond low Earth orbit will involve missions of significant distance and duration. To effectively mitigate myriad space health hazards, paradigm shifts in data and space health systems are necessary to enable Earth independence. Delighted to be working with <a href="https://www.nasa.gov/">NASA</a> and can share <a href="https://arxiv.org/abs/2112.12554">our recommendations</a>!</p>
+</p>-->
+            <p>Human space exploration beyond low Earth orbit will involve missions of significant distance and duration. To effectively mitigate myriad space health hazards, paradigm shifts in data and space health systems are necessary to enable Earth independence. Delighted to be working with <a href="https://www.nasa.gov/">NASA</a> and can share <a href="https://arxiv.org/abs/2112.12554">our recommendations</a>!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2021/12/24/SpacePrecisionHealth/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 24, 2021</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2021/12/23/SpaceBiology/">Beyond Low Earth Orbit: Biological Research & AI</a>-->
+        <p class="card-header-title">Dec 2021: &nbsp; <span class="has-text-primary">Beyond Low Earth Orbit: Biological Research & AI</span></p>
+<!--        <p class="card-header-item">Dec 2021</p>-->
+<!--        <p class="card-footer-item">Dec 23, 2021</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>As space exploration is extended beyond low Earth orbit, experiments must be maximally autonomous and intelligent to guide biological research. Excited to be working with <a href="https://www.nasa.gov/">NASA</a> and can share <a href="https://arxiv.org/abs/2112.12582">our recommendations</a>!</p>
+</p>-->
+            <p>As space exploration is extended beyond low Earth orbit, experiments must be maximally autonomous and intelligent to guide biological research. Excited to be working with <a href="https://www.nasa.gov/">NASA</a> and can share <a href="https://arxiv.org/abs/2112.12582">our recommendations</a>!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2021/12/23/SpaceBiology/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 23, 2021</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2021/12/13/NeurIPSAI4Science/">Attend Our AI4Science Workshop at NeurIPS 2021</a>-->
+        <p class="card-header-title">Dec 2021: &nbsp; <span class="has-text-primary">Attend Our AI4Science Workshop at NeurIPS 2021</span></p>
+<!--        <p class="card-header-item">Dec 2021</p>-->
+<!--        <p class="card-footer-item">Dec 13, 2021</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Join us at <a href="https://nips.cc/Conferences/2021">NeurIPS 2021</a> for the <a href="https://ai4sciencecommunity.github.io/">AI for Science Workshop</a> on Monday, Dec 13, 8am-6pm ET. This will be a great day to celebrate AI achievements in scientific discovery and highlight open challenges that need to be addressed to move the field forward.</p>
+</p>-->
+            <p>Join us at <a href="https://nips.cc/Conferences/2021">NeurIPS 2021</a> for the <a href="https://ai4sciencecommunity.github.io/">AI for Science Workshop</a> on Monday, Dec 13, 8am-6pm ET. This will be a great day to celebrate AI achievements in scientific discovery and highlight open challenges that need to be addressed to move the field forward.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2021/12/13/NeurIPSAI4Science/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 13, 2021</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+
+    <div class="column is-12">
+        <div class="card">
+            <header class="card-header">
+        <!--        <a class="card-header-title" href=""></a>-->
+            <p class="card-header-title"><span class="has-text-primary">Tweets</span></p>
+        <!--        <p class="card-header-item"></p>-->
+        <!--        <p class="card-footer-item"></p>-->
+            </header>
+        <div class="card-content">
+        <!--        <div class="content">-->
+        <!--            -->
+        <!--            <p></p>-->
+        <a class="twitter-timeline" data-width="500" data-height="500" data-theme="light" href="https://twitter.com/marinkazitnik?ref_src=twsrc%5Etfw" data-chrome="noheader transparent nofooter nofooter noborders">Tweets by marinkazitnik</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <!--        </div>-->
+        <!--        <div class="has-text-centered">-->
+        <!--            <a href="" class="button is-primary">Read more</a>-->
+        <!--        </div>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts -->
+<div style="background-color:#A41034">
+        <div class="content is-normal has-text-centered">
+            <p style="color:white;padding-top:20px;padding-bottom:20px;"><a href="https://scholar.harvard.edu/marinka" style="color:white"><b>Zitnik Lab</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://harvard.edu" style="color:white"><b>Harvard</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://dbmi.hms.harvard.edu/" style="color:white"><b>Department of Biomedical Informatics</b></a></p>
+        </div>
+</div></body>
+</html>
+

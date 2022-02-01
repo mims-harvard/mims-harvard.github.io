@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Towards Precision Medicine with Graph Representation Learning - MARINKA ZITNIK</title>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="shortcut icon" type="image/png"
+           href="/favicon.png" 
+    />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Towards Precision Medicine with Graph Representation Learning | MARINKA ZITNIK</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Towards Precision Medicine with Graph Representation Learning" />
+<meta name="author" content="Marinka Zitnik" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Machine Learning for Medicine and Science" />
+<meta property="og:description" content="Machine Learning for Medicine and Science" />
+<link rel="canonical" href="https://zitniklab.hms.harvard.edu/biomedgraphml/" />
+<meta property="og:url" content="https://zitniklab.hms.harvard.edu/biomedgraphml/" />
+<meta property="og:site_name" content="MARINKA ZITNIK" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Towards Precision Medicine with Graph Representation Learning" />
+<meta name="twitter:site" content="@marinkazitnik" />
+<meta name="twitter:creator" content="@Marinka Zitnik" />
+<script type="application/ld+json">
+{"url":"https://zitniklab.hms.harvard.edu/biomedgraphml/","author":{"@type":"Person","name":"Marinka Zitnik"},"headline":"Towards Precision Medicine with Graph Representation Learning","description":"Machine Learning for Medicine and Science","@type":"WebPage","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
+<script>
+  window['ga-disable-UA-162129505-1'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-162129505-1');
+</script><!-- head scripts --></head>
+
+  <body>
+    
+<nav class="navbar is-primary" >
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item"><b>
+                MARINKA ZITNIK
+            </b></a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+<!--                <a href="/" class="navbar-item "><b>Home</b></a>-->
+                
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a href="/#" class="navbar-link "><b>About</b></a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/bio/" class="navbar-item "><b>Bio</b></a>
+                            
+                            <a href="/contact/" class="navbar-item "><b>Contact</b></a>
+                            
+                            <a href="/talks/" class="navbar-item "><b>Recent Talks</b></a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                <a href="/research/" class="navbar-item "><b>Research</b></a>
+                    
+                
+                    
+                <a href="/publications/" class="navbar-item "><b>Publications</b></a>
+                    
+                
+                    
+                <a href="/people/" class="navbar-item "><b>Members</b></a>
+                    
+                
+                    
+                <a href="/meetings/" class="navbar-item "><b>Conferences</b></a>
+                    
+                
+                    
+                <a href="/DMAI/" class="navbar-item "><b>DMAI</b></a>
+                    
+                
+                    
+                <a href="/data/" class="navbar-item "><b>Datasets</b></a>
+                    
+                
+                    
+                <a href="/software/" class="navbar-item "><b>ML Tools</b></a>
+                    
+                
+                    
+                <a href="https://zitniklab.hms.harvard.edu/TDC/" class="navbar-item "><b>TDC</b></a>
+                    
+                
+                    
+                <a href="/news/" class="navbar-item "><b>News</b></a>
+                    
+                
+                    
+                <a href="/jobs/" class="navbar-item "><b>Join Us</b></a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+
+    
+        <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
+    <div class="hero-body">
+        <div class="container">
+            <p class="title is-2">Towards Precision Medicine with Graph Representation Learning</p>
+            <p class="subtitle is-3">Tutorial at <a href="https://www.iscb.org/ismb2022"> the 30th International Conference on Intelligent Systems for Molecular Biology (ISMB)</a></p>
+            
+        </div>
+    </div>
+</section>
+    
+    
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+                <div class="column is-12">
+                    
+                    
+                    
+<div class="content">
+    <div class="box has-background-info has-text-white">
+Graph representation learning has matured immensely as a field within the last few years. Graph machine learning approaches, also known as geometric deep learning, or graph neural networks has become widely used in biomedical applications. This tutorial surveys impact areas in precision medicine (e.g., modeling disease progression, candidate biomarker discovery for targeted therapies, rapid disease diagnostics, treatment regimen recommendations) and highlights new opportunities enabled by these approaches.
+</div>
+
+<p><img src="/img/biomedgraphml-ismb.png" alt="biomedgraphml-ismb" /></p>
+
+<h2 id="motivation">Motivation</h2>
+
+<p>Networks (or graphs) are pervasive in biology and medicine, from molecular interaction maps to population-scale social and health interactions. For instance, molecular struc- ture can be translated from atoms and bonds into nodes and edges, respectively; protein interactions naturally form a network based on the existence of a physical interaction or functional relationship; networks can be composed of drugs (e.g., small compounds), proteins, and diseases to allow the modeling of drug-drug interactions, binding of drugs to target proteins, and identification of drug-disease therapeutic opportunities; and patient records can be represented as networks, where edges may indicate co-occurrences of medical codes in health records.</p>
+
+<p><strong>Graph representation learning, also known as machine learning on graphs, geometric deep learning, or graph neural networks (GNNs), has emerged as a leading paradigm for deep learning on networked datasets.</strong> Deep learning on graphs is particularly challenging because graphs contain complex topographical structures, no fixed node ordering, and no reference points. Graphs can also comprise many different kinds of entities (nodes) and rich interactions (edges) relating them to each other. Classic deep learning methods cannot consider such diverse structural properties and rich interactions, which are the essence of networks, because they are designed for fixed-size grids (i.e., images and tabular datasets) or sequences (i.e., text). Akin to how deep learning on images and text has revolutionized the image analysis and natural language processing fields, <em>advances in graph representation learning have enabled the scientific community to use deep learning much more broadly, not only for images and text datasets but for any interconnected, networked data system. These algorithmic advances have created new frontiers for applications of deep learning in biology and medicine.</em> Moreover, they have facilitated scientific innovation in biology and medicine, which we will cover in the tutorial. Thus, to further stimulate algorithmic and scientific innovation, our tutorial aims to provide a synthesis and review of graph representation learning in biomedicine that would be accessible to a broad scientific audience.</p>
+
+<h2 id="program">Program</h2>
+
+<ul>
+  <li>(30 min) <strong>Overview: Introduction to graph representation learning for biomedicine</strong></li>
+  <li>(60 min) <strong>Methods: Neural message passing, graph neural networks, equivariant neural networks</strong></li>
+  <li>(90 min) <strong>Applications: Precision medicine</strong>
+    <ul>
+      <li>Reasoning about diseases, including methods that inject transcriptomic data into protein interaction networks to identify candidate biomarkers for disease progression, model the effects of non-coding regions on disease, and incorporate non-coding RNA interactions into protein interaction networks to capture genome-wide associations.</li>
+      <li>Reasoning about therapeutics, including methods for modeling molecular graphs for small compounds, quanti- fying drug-drug and drug-target interactions, and identifying drug-disease associations and biomarkers for complex disease.</li>
+      <li>Reasoning about precision medicine, focusing specifically on personalizing medical knowledge networks with
+patient records.</li>
+    </ul>
+  </li>
+  <li>(15 min) <strong>Outlook: Future directions and Q&amp;A session</strong></li>
+  <li>(30 min) <strong>Hands-on exercises: Demos, implementation details, tools, and tips</strong></li>
+</ul>
+
+<h2 id="tutorial-materials">Tutorial materials</h2>
+
+<p>The tutorial slides and materials for hands-on exercises (e.g., code implementation, datasets) will be <strong>posted on this website</strong> and made publicly available.</p>
+
+<h2 id="tutorial-info">Tutorial info</h2>
+
+<p>The tutorial will be held at the <a href="https://www.iscb.org/ismb2022">ISMB 2022</a> conference, July 10-14, 2022. Details will be announced in Spring 2022.</p>
+
+<p>The target audiences are graduate students, researchers, scientists and practitioners in both academia and industry who are interested in applying graph machine learning to precision medicine problems.</p>
+
+<h2 id="presenters">Presenters</h2>
+
+<p><a href="https://michellemli.com/"><strong>Michelle M. Li</strong></a> is a Ph.D candidate in Biomedical Informatics at Harvard University. Her research focuses on developing deep graph representation learning algorithms that inject specific bi- ological context to enrich predictions in low sample settings (e.g., diagnosing patients with rare diseases, predicting patients’ response to novel drugs). Prior to Harvard, she studied mathematics and computer science at Stanford University, where she also developed bioinformatics and machine learning methods to disentangle the mechanisms of antimicrobial resistance and susceptibility. Her work has been selected for spotlight presentations (IJCAI 2021, ICML 2021) and a best poster award (ICML 2021), and her recently released review paper on graph representation learning for biomedicine—the topic of this tutorial—has been very well received by both the machine learning and computational biology communities.</p>
+
+<p><a href="https://zitniklab.hms.harvard.edu/"><strong>Marinka Zitnik</strong></a> is an Assistant Professor at Harvard University with appointments in the Department of Biomedical Informatics, Broad Institute of MIT and Harvard, and Harvard Data Science. Dr. Zitnik has published extensively in top ML venues (e.g., NeurIPS, ICLR, ICML) and leading journals (e.g., Nature Methods, Nature Communications, PNAS). This research won best paper and research awards from the International Society for Computa- tional Biology, Bayer Early Excellence in Science Award, Amazon Faculty Research Award, Roche Alliance with Distinguished Scientists Award, Rising Star Award in Electrical Engineering and Computer Science, and Next Generation in Biomedicine Recognition, being the only young scientist who received such recognition in both EECS and Biomedicine.</p>
+
+<h2 id="read-our-survey-on-graph-representation-learning-in-biomedicine"><a href="https://arxiv.org/abs/2104.04883">Read our Survey on Graph Representation Learning in Biomedicine…</a></h2>
+
+</div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts -->
+<div style="background-color:#A41034">
+        <div class="content is-normal has-text-centered">
+            <p style="color:white;padding-top:20px;padding-bottom:20px;"><a href="https://scholar.harvard.edu/marinka" style="color:white"><b>Zitnik Lab</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://harvard.edu" style="color:white"><b>Harvard</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://dbmi.hms.harvard.edu/" style="color:white"><b>Department of Biomedical Informatics</b></a></p>
+        </div>
+</div></body>
+</html>
+
