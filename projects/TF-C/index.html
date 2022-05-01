@@ -4,29 +4,29 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Publications - MARINKA ZITNIK</title>
+    <title>Self-Supervised Contrastive Pre-Training For Time Series - MARINKA ZITNIK</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="shortcut icon" type="image/png"
            href="/favicon.png" 
     />
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Publications | MARINKA ZITNIK</title>
+<title>Self-Supervised Contrastive Pre-Training For Time Series | MARINKA ZITNIK</title>
 <meta name="generator" content="Jekyll v3.8.6" />
-<meta property="og:title" content="Publications" />
+<meta property="og:title" content="Self-Supervised Contrastive Pre-Training For Time Series" />
 <meta name="author" content="Marinka Zitnik" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Machine Learning for Medicine and Science" />
 <meta property="og:description" content="Machine Learning for Medicine and Science" />
-<link rel="canonical" href="https://zitniklab.hms.harvard.edu/publications/" />
-<meta property="og:url" content="https://zitniklab.hms.harvard.edu/publications/" />
+<link rel="canonical" href="https://zitniklab.hms.harvard.edu/projects/TF-C/" />
+<meta property="og:url" content="https://zitniklab.hms.harvard.edu/projects/TF-C/" />
 <meta property="og:site_name" content="MARINKA ZITNIK" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Publications" />
+<meta property="twitter:title" content="Self-Supervised Contrastive Pre-Training For Time Series" />
 <meta name="twitter:site" content="@marinkazitnik" />
 <meta name="twitter:creator" content="@Marinka Zitnik" />
 <script type="application/ld+json">
-{"url":"https://zitniklab.hms.harvard.edu/publications/","author":{"@type":"Person","name":"Marinka Zitnik"},"headline":"Publications","description":"Machine Learning for Medicine and Science","@type":"WebPage","@context":"https://schema.org"}</script>
+{"url":"https://zitniklab.hms.harvard.edu/projects/TF-C/","author":{"@type":"Person","name":"Marinka Zitnik"},"headline":"Self-Supervised Contrastive Pre-Training For Time Series","description":"Machine Learning for Medicine and Science","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
 <script>
@@ -76,7 +76,7 @@
                     
                 
                     
-                <a href="/publications/" class="navbar-item is-active"><b>Publications</b></a>
+                <a href="/publications/" class="navbar-item "><b>Publications</b></a>
                     
                 
                     
@@ -121,7 +121,7 @@
         <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
     <div class="hero-body">
         <div class="container">
-            <p class="title is-2">Publications</p>
+            <p class="title is-2">Self-Supervised Contrastive Pre-Training For Time Series</p>
             <p class="subtitle is-3"></p>
             
         </div>
@@ -140,18 +140,131 @@
                     
                     
 <div class="content">
-    <p>‘*’ Those authors contributed equally.</p>
+    <div class="box has-background-info has-text-white">
+<p>
+Time series datasets present a unique challenge for pre-training because of the potential mismatch between pre-training and fine-tuning that can lead to poor performance on predictive tasks. Domain adaptation methods can mitigate the unwanted mismatch, including shifts in dynamics, varying trends, and long-range and short-range cyclic effects. However, the critical gap in these methods is that they can only do that by peeking into the target domain, meaning they need access to fine-tuning data points while pre-training the model. 
+</p>
 
-<link rel="stylesheet" type="text/css" href="css/pubs.css" />
-
-<script src="js/d3.min.js"></script>
-
-<script src="js/generate_pubs.js"></script>
-
-<div class="label">
-    <div id="publications" style="margin-top:20px;"></div>
+<p>
+To address this challenge, we put forward a representation learning principle rooted in signal processing theory, saying that representations of time series need to demonstrate consistent time-based and frequency-based representations—a generalizable property of time series to facilitate transfer from pre-training to fine-tuning datasets. Using this principle, we develop time-frequency consistency (TF-C), a self-supervised pre-training method producing an embedding space where time-based and frequency-based representations are located in a consistent manner.
+</p>
 </div>
 
+<p>Time series are relevant for many areas, including medical diagnosis and healthcare settings. While representation learning has considerably advanced analysis of time series, learning broadly generalizable representations for time series remains a fundamentally challenging problem. Being able to generate such representations directly improves pre-training which is important in practice. The central problem is how to transfer knowledge from a time series dataset to other different datasets during fine-tuning. The difficulty due to distribution shifts and other issues is compounded by the complexity of time series: large variations of temporal dynamics across datasets, varying semantic meaning, system factors, etc.</p>
+
+<p>Supervised pre-training requires large annotated datasets, creating an obstacle to deep learning deployment. For example, in medical domains, experts often disagree on ground-truth labeling, which can introduce unintended biases (e.g., ECG signals falling outside of normal and abnormal rhythms).</p>
+
+<p>To address the challenges of pre-training in time series and the lack of annotations in pre-training datasets, we develop a generalizable strategy for pre-training in time series by introducing a concept, which we refer to as <strong>Time-Frequency Consistency (TF-C).</strong></p>
+
+<h2 id="motivation-for-tf-c">Motivation for TF-C</h2>
+
+<p>To ensure the successful transfer of knowledge across different time series domains, our TF-C approach focuses on learning a pre-training model, through self-supervised contrastive learning, that can produce robust representations of time series. TF-C is inspired by the fundamental duality between the time-domain and frequency-domain representation of time signal grounded in the Fourier theorem. We reasonably expect that if we apply contrastive learning in both the time and the frequency domain, then the learned representations should be similar. Formally, TF-C means the time-based representation and the frequency-based representation, which are learned from the same time series sample, are closer to each other in a joint time-frequency space; the representations are farther apart if they are associated with different time series samples.</p>
+
+<p>As the time-frequency duality is universal in a real-valued sequence, our method is uniquely suitable for capturing the underlying common pattern in time-series datasets. The generality of the assumption means that we can anticipate our model to empower knowledge transfer across different time-series datasets, even when they are compounded by complexity in terms of large variations of temporal dynamics across datasets, varying semantic meaning, irregular sampling, and systemic factors.</p>
+
+<p>The following illustration provides an overview of the idea behind and the broad applicability of our TF-C approach. The idea is shown in (a): given a time series sample, time-based and frequency-based embeddings are made close to each other in a latent time-frequency space. The application scenarios are shown in (b): leveraging TF-C in time series, we can generalize pre-train models to diverse scenarios such as gesture recognition, fault detection, and seizure analysis.</p>
+
+<center>
+<img src="/img/TF-C-motivation.png" />
+</center>
+
+<h2 id="tf-c-approach">TF-C approach</h2>
+
+<p>TF-C has four neural network components (as shown in the following figure):</p>
+
+<ul>
+  <li>a time encoder,</li>
+  <li>a frequency encoder, and</li>
+  <li>two cross-space projectors that map time-based and frequency-based representations to the same time-frequency space.</li>
+</ul>
+
+<center>
+<img src="/img/TF-C-model.png" />
+</center>
+
+<p>To position time-based and frequency-based embeddings close together, TF-C specifies the following constrastive learning objective:</p>
+
+<ol>
+  <li>
+    <p>We first apply time-domain augmentations to the input time series sample. The embeddings of the original and the augmented views produced by the time-domain encoder are used to compute a term in the contrastive loss.</p>
+  </li>
+  <li>
+    <p>We transform the input time series to its frequency spectrum. Then, similarly to before, we apply frequency-domain augmentations to the input time series sample, produce the embeddings, and compute another term in the contrastive loss.</p>
+  </li>
+  <li>
+    <p>TF-C requires the consistency between time-domain and frequency-domain representations, and that is achieved by a well-designed consistency loss item which is measured in the time-frequency space. As shown in the figure, our total contrastive loss is a weighted sum of these three terms.</p>
+  </li>
+  <li>
+    <p>At last, during the fine-tuning phase, we concatenate the time-domain and frequency-domain embeddings to form the sample embedding. This learned sample embedding can be fed into a downstream task such as classification.</p>
+  </li>
+</ol>
+
+<h2 id="attractive-properties-of-tf-c">Attractive properties of TF-C</h2>
+
+<ul>
+  <li>
+    <p><strong>A generalizable assumption (TF-C) for time series</strong>: It is grounded in the signal theory that a time series can be represented equivalently in either the time or frequency domain. Hence, our assumption is very reasonable that  TF-C is invariant to different time-series datasets and can guide the development of effective pre-training models.</p>
+  </li>
+  <li>
+    <p><strong>Self-supervised pretraining for diverse scenarios</strong>: The TF-C model can be used with pre-training dataset that are entirely unlabelled. Results show that TF-C provides effective transfer across four scenarios involving time series datasets with different kinds of sensors and measurements and still achieve strong performance when the domain gap is large (e.g., when pre-training and fine-tuning data points are given in different feature spaces or have different semantic meaning).</p>
+  </li>
+</ul>
+
+<h2 id="publication">Publication</h2>
+
+<p><a href="#">Self-Supervised Contrastive Pre-Training For Time Series via Time-Frequency Consistency</a><br />
+Xiang Zhang, Ziyuan Zhao, Theodoros Tsiligkaridis, and Marinka Zitnik.<br />
+<em>In Review</em> <a href="#">[arXiv]</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{zhang2022self,
+title = {Self-Supervised Contrastive Pre-Training For Time Series via Time-Frequency Consistency},
+author = {Zhang, Xiang and Zhao, Ziyuan and Tsiligkaridis, Theodoros and Zitnik, Marinka},
+booktitle = {arXiv},
+year      = {2022}
+}
+</code></pre></div></div>
+
+<h2 id="code">Code</h2>
+
+<p>PyTorch implementation of TF-C and all datasets are available in the <a href="https://github.com/mims-harvard/TFC-pretraining">GitHub repository</a>.</p>
+
+<h2 id="datasets">Datasets</h2>
+
+<ul>
+  <li>
+    <p><a href="https://figshare.com/articles/dataset/TF-C_Pretrain_SleepEEG/19930178">SleepEEG</a> dataset of whole-night EEG recordings monitored by a sleep cassette</p>
+  </li>
+  <li>
+    <p><a href="https://figshare.com/articles/dataset/TF-C_Pretrain_Epilepsy/19930199">Epilepsy</a> dataset of single-channel EEG measurements from 500 subjects</p>
+  </li>
+  <li>
+    <p><a href="https://figshare.com/articles/dataset/TF-C_Pretrain_FD-A/19930205">FD-A</a> dataset of an electromechanical drive system monitoring the condition of rolling bearings</p>
+  </li>
+  <li>
+    <p><a href="https://figshare.com/articles/dataset/TF-C_Pretrain_FD-B/19930226">FD-B</a> dataset of an electromechanical drive system monitoring the condition of rolling bearings</p>
+  </li>
+  <li>
+    <p><a href="https://figshare.com/articles/dataset/TF-C_Pretrain_HAR/19930244">HAR</a> dataset of human daily activities, including walking, walking upstaris, walking downstairs, sitting, standing, and laying</p>
+  </li>
+  <li>
+    <p><a href="https://figshare.com/articles/dataset/TF-C_Pretrain_Gesture/19930247">Gesture</a> dataset of accelerometer measurements for eight hand gestures</p>
+  </li>
+  <li>
+    <p><a href="https://figshare.com/articles/dataset/TF-C_Pretrain_ECG/19930253">ECG</a> dataset of ECG measuruments across four underlying conditions of cardiac arrhythmias</p>
+  </li>
+  <li>
+    <p><a href="https://figshare.com/articles/dataset/TF-C_Pretrain_EMG/19930250">EMG</a> dataset of EMG recordings of muscular dystrophies and neuropathies</p>
+  </li>
+</ul>
+
+<h2 id="authors">Authors</h2>
+
+<ul>
+  <li><a href="https://xiangzhang.info/">Xiang Zhang</a></li>
+  <li><a href="">Ziyuan Zhao</a></li>
+  <li><a href="https://scholar.google.com/citations?user=hVUVOTIAAAAJ&amp;hl=en">Theodoros Tsiligkaridis</a></li>
+  <li><a href="https://zitniklab.hms.harvard.edu/">Marinka Zitnik</a></li>
+</ul>
 
 </div>
                 </div>

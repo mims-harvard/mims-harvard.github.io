@@ -15,8 +15,26 @@
   "publications": [
 
      {
+      "key": "submission22b",
+      "author": ["Payal Chandak*", "Kexin Huang*", "Marinka Zitnik"],
+      "title": "Building a Knowledge Graph to Enable Precision Medicine",
+      "venue": "In Review",
+      "year": "2022",
+      "thumbnail": "PrimeKG22.png",
+      "pdf": "",
+      "url": "https://biorxiv.org/cgi/content/short/2022.05.01.489928",
+      "type": "journal",
+      "supp":
+      {
+        "bioRxiv": "https://biorxiv.org/cgi/content/short/2022.05.01.489928",
+        "code": "https://github.com/mims-harvard/PrimeKG",
+        "project website": "/projects/PrimeKG"
+      }
+    },
+
+     {
       "key": "submission22a",
-      "author": ["Yucong Lin", "Keming Lu", "Sheng Yu", "Tianxi Cai", "Marinka Zitnik"],
+      "author": ["Yucong Lin*", "Keming Lu*", "Sheng Yu", "Tianxi Cai", "Marinka Zitnik"],
       "title": "Multimodal Learning on Graphs for Disease Relation Extraction",
       "venue": "In Review",
       "year": "2022",
@@ -36,7 +54,7 @@
       "key": "submission21k",
       "author": ["Xiang Zhang", "Marko Zeman", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
       "title": "Graph-Guided Network for Irregularly Sampled Multivariate Time Series",
-      "venue": "Proceedings of the International Conference on Learning Representations, ICLR",
+      "venue": "International Conference on Learning Representations, ICLR",
       "year": "2022",
       "thumbnail": "raindrop22.png",
       "pdf": "papers/raindrop-iclr22.pdf",
@@ -93,7 +111,7 @@
       "key": "submission22b",
       "author": ["Qianwen Wang", "Kexin Huang", "Payal Chandak", "Marinka Zitnik", "Nils Gehlenborg"],
       "title": "Towards Usable Explanations: Extending the Nested Model of Visualization Design for User-Centric XAI",
-      "venue": "In Review",
+      "venue": "IEEE Visualization Conference, IEEE VIS",
       "year": "2022",
       "thumbnail": "DrugExplorer22.png",
       "pdf": "",
@@ -171,7 +189,8 @@
       "type": "journal",
       "supp":
       {
-        "arXiv": "https://arxiv.org/abs/2112.12554"
+        "arXiv": "https://arxiv.org/abs/2112.12554",
+        "NASA White Paper": "http://surveygizmoresponseuploads.s3.amazonaws.com/fileuploads/623127/6392490/153-51083399580a7b71d52378a0d6012a73_SandersLaurenM.pdf"
       }
     },
 
@@ -187,7 +206,8 @@
       "type": "journal",
       "supp":
       {
-        "arXiv": "https://arxiv.org/abs/2112.12582"
+        "arXiv": "https://arxiv.org/abs/2112.12582",
+        "NASA White Paper": "http://surveygizmoresponseuploads.s3.amazonaws.com/fileuploads/623127/6392490/153-51083399580a7b71d52378a0d6012a73_SandersLaurenM.pdf"
       }
     },
 
@@ -299,7 +319,7 @@
 
      {
       "key": "submission20d",
-      "author": ["Deisy Morselli Gysi*", "Italo Do Valle*", "Marinka Zitnik*", "Asher Ameli*", "Xiao Gan*", "Onur Varol", "Susan Dina Ghiassian", "J.J. Patten", "Robert A. Devey", "Joseph Loscalzo", "Albert-Laszlo Barabasi"],
+      "author": ["Deisy Morselli Gysi*", "Italo Do Valle*", "Marinka Zitnik*", "Asher Ameli*", "Xiao Gan*", "Onur Varol", "Susan Dina Ghiassian", "J.J. Patten", "Robert A. Davey", "Joseph Loscalzo", "Albert-Laszlo Barabasi"],
       "title": "Network Medicine Framework for Identifying Drug Repurposing Opportunities for COVID-19",
       "venue": "Proceedings of the National Academy of Sciences (PNAS)",
       "year": "2021",
@@ -336,7 +356,7 @@
     {
       "key": "submission21g",
       "author": ["J.J. Patten", "P.T. Keiser", "D. Gysi", "G. Menichetti", "H. Mori", "C.J. Donahue", "X. Gan", "I. Do Valle", "K. Geoghegan-Barek", "M. Anantpadma", "J. L. Berrigan", "S. Jalloh", "T. Ayazika", "F. Wagner", "Marinka Zitnik", "S. Ayehunie", "D. Anderson", "J. Loscalzo", "S. Gummuluru",  "M.N. Namchuk", "A. L. Barabasi", "R. A. Davey"],
-      "title": "Multidose Evaluation of 6,710 Drug Repurposing Library Identifies Potent SARS-CoV-2 Infection Inhibitors In Vitro and In Vivo",
+      "title": "Identification of druggable host targets needed for SARS-CoV-2 infection by combined pharmacological evaluation and cellular network directed prioritization both in vitro and in vivo",
       "venue": "In Review",
       "year": "2021",
       "thumbnail": "ismb16.png",
@@ -345,7 +365,7 @@
       "type": "journal",
       "supp":
       {
-        "bioRxiv": "https://www.biorxiv.org/content/10.1101/2021.04.20.440626v2"
+        "bioRxiv": "https://www.biorxiv.org/content/10.1101/2021.04.20.440626"
       }
     },
 
