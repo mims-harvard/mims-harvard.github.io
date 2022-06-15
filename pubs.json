@@ -15,6 +15,24 @@
   "publications": [
 
      {
+      "key": "submission22c",
+      "author": ["Xiang Zhang", "Ziyuan Zhao", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
+      "title": "Self-Supervised Contrastive Pre-Training For Time Series via Time-Frequency Consistency",
+      "venue": "In Review",
+      "year": "2022",
+      "thumbnail": "TF-C.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2206.08496",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2206.08496",
+        "code": "https://github.com/mims-harvard/TFC-pretraining",
+        "project website": "/projects/TF-C"
+      }
+    },
+
+     {
       "key": "submission22b",
       "author": ["Payal Chandak*", "Kexin Huang*", "Marinka Zitnik"],
       "title": "Building a Knowledge Graph to Enable Precision Medicine",
@@ -120,6 +138,22 @@
       "supp":
       {
         "arXiv": "https://doi.org/10.31219/osf.io/yhdpv"
+      }
+    },
+
+     {
+      "key": "submission22d",
+      "author": ["Chirag Agarwal", "Eshika Saxena", "Satyapriya Krishna", "Martin Pawelczyk", "Nari Johnson", "Isha Puri", "Marinka Zitnik", "Himabindu Lakkaraju"],
+      "title": "OpenXAI: Towards a Transparent Evaluation of Model Explanations",
+      "venue": "In Review",
+      "year": "2022",
+      "thumbnail": "TF-C.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2206.11104",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2206.11104"
       }
     },
 

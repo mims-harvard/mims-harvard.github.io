@@ -142,11 +142,11 @@
 <div class="content">
     <div class="box has-background-info has-text-white">
 <p>
-Time series datasets present a unique challenge for pre-training because of the potential mismatch between pre-training and fine-tuning that can lead to poor performance on predictive tasks. Domain adaptation methods can mitigate the unwanted mismatch, including shifts in dynamics, varying trends, and long-range and short-range cyclic effects. However, the critical gap in these methods is that they can only do that by peeking into the target domain, meaning they need access to fine-tuning data points while pre-training the model. 
+Time series present a unique challenge for pre-training because of the potential mismatch between pre-training and fine-tuning that can lead to poor performance. Domain adaptation methods can mitigate unwanted distribution shifts, including shifts in dynamics, varying trends, and long-range and short-range cyclic effects. To do so, these methods require access to data points in the target (fine-tuning) domain, meaning they must access target data points early on during pre-training, which is not possible in real world.  
 </p>
 
 <p>
-To address this challenge, we put forward a representation learning principle rooted in signal processing theory, saying that representations of time series need to demonstrate consistent time-based and frequency-based representations—a generalizable property of time series to facilitate transfer from pre-training to fine-tuning datasets. Using this principle, we develop time-frequency consistency (TF-C), a self-supervised pre-training method producing an embedding space where time-based and frequency-based representations are located in a consistent manner.
+To address this challenge, we put forward a principle: time-based and frequency-based representations of the same time series and its local augmentations must produce consistent latent representations and predictions. This generalizable property, called Time-Frequency Consistency (TF-C), is theoretically rooted in signal processing theory and leads to effective pre-training. 
 </p>
 </div>
 
@@ -154,15 +154,15 @@ To address this challenge, we put forward a representation learning principle ro
 
 <p>Supervised pre-training requires large annotated datasets, creating an obstacle to deep learning deployment. For example, in medical domains, experts often disagree on ground-truth labeling, which can introduce unintended biases (e.g., ECG signals falling outside of normal and abnormal rhythms).</p>
 
-<p>To address the challenges of pre-training in time series and the lack of annotations in pre-training datasets, we develop a generalizable strategy for pre-training in time series by introducing a concept, which we refer to as <strong>Time-Frequency Consistency (TF-C).</strong></p>
+<p>We introduce a generalizable concept, which we refer to as Time-Frequency Consistency (TF-C) and use it to develop a broadly generalizable pre-training strategy.</p>
 
 <h2 id="motivation-for-tf-c">Motivation for TF-C</h2>
 
-<p>To ensure the successful transfer of knowledge across different time series domains, our TF-C approach focuses on learning a pre-training model, through self-supervised contrastive learning, that can produce robust representations of time series. TF-C is inspired by the fundamental duality between the time-domain and frequency-domain representation of time signal grounded in the Fourier theorem. We reasonably expect that if we apply contrastive learning in both the time and the frequency domain, then the learned representations should be similar. Formally, TF-C means the time-based representation and the frequency-based representation, which are learned from the same time series sample, are closer to each other in a joint time-frequency space; the representations are farther apart if they are associated with different time series samples.</p>
+<p>The TF-C approach uses self-supervised contrastive learning to transfer knowledge across time series domains and pre-train models. The approach builds on the fundamental duality between time and frequency views of time signals. TF-C embeds time-based and frequency-based views learned from the same time series sample such that they are closer to each other in the joint time-frequency space; the embeddings are farther apart if they are associated with different time series samples.</p>
 
-<p>As the time-frequency duality is universal in a real-valued sequence, our method is uniquely suitable for capturing the underlying common pattern in time-series datasets. The generality of the assumption means that we can anticipate our model to empower knowledge transfer across different time-series datasets, even when they are compounded by complexity in terms of large variations of temporal dynamics across datasets, varying semantic meaning, irregular sampling, and systemic factors.</p>
+<p>The TF-C approach is uniquely suited for time-series datasets. The broad generality of the TF-C principle means that the approach promotes knowledge transfer between different time-series datasets. That is true even when datasets are complex in terms of considerable variations of temporal dynamics across datasets, varying semantic meaning, irregular sampling, and systemic factors.</p>
 
-<p>The following illustration provides an overview of the idea behind and the broad applicability of our TF-C approach. The idea is shown in (a): given a time series sample, time-based and frequency-based embeddings are made close to each other in a latent time-frequency space. The application scenarios are shown in (b): leveraging TF-C in time series, we can generalize pre-train models to diverse scenarios such as gesture recognition, fault detection, and seizure analysis.</p>
+<p>The following figure gives an overview of the TF-C approach. Given a time series sample, the resulting time and frequency based embeddings are close to each other in a latent time-frequency space (panel a). TF-C expands the scope and applicability of pre-training; it can transfer pre-trained models to diverse scenarios (panel b).</p>
 
 <center>
 <img src="/img/TF-C-motivation.png" />
@@ -212,14 +212,14 @@ To address this challenge, we put forward a representation learning principle ro
 
 <h2 id="publication">Publication</h2>
 
-<p><a href="#">Self-Supervised Contrastive Pre-Training For Time Series via Time-Frequency Consistency</a><br />
+<p><a href="https://arxiv.org/abs/2206.08496">Self-Supervised Contrastive Pre-Training For Time Series via Time-Frequency Consistency</a><br />
 Xiang Zhang, Ziyuan Zhao, Theodoros Tsiligkaridis, and Marinka Zitnik.<br />
-<em>In Review</em> <a href="#">[arXiv]</a></p>
+<em>In Review</em> <a href="https://arxiv.org/abs/2206.08496">[arXiv]</a></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{zhang2022self,
 title = {Self-Supervised Contrastive Pre-Training For Time Series via Time-Frequency Consistency},
 author = {Zhang, Xiang and Zhao, Ziyuan and Tsiligkaridis, Theodoros and Zitnik, Marinka},
-booktitle = {arXiv},
+booktitle = {arXiv:2206.08496},
 year      = {2022}
 }
 </code></pre></div></div>
@@ -273,6 +273,34 @@ year      = {2022}
                     <p class="title is-4">Latest News</p>
 
 <div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/06/20/ContrastivePreTrainingTimeSeries/">Broadly Generalizable Pre-Training Approach</a>-->
+        <p class="card-header-title">Jun 2022: &nbsp; <span class="has-text-primary">Broadly Generalizable Pre-Training Approach</span></p>
+<!--        <p class="card-header-item">Jun 2022</p>-->
+<!--        <p class="card-footer-item">Jun 20, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited to share a <a href="https://arxiv.org/abs/2206.08496">preprint on self-supervised method for pre-training</a>. <a href="/projects/TF-C">Project website</a> with evaluation on eight datasets, including electrodiagnostic testing, human daily activity recognition, and health state monitoring.</p>
+</p>-->
+            <p>Excited to share a <a href="https://arxiv.org/abs/2206.08496">preprint on self-supervised method for pre-training</a>. <a href="/projects/TF-C">Project website</a> with evaluation on eight datasets, including electrodiagnostic testing, human daily activity recognition, and health state monitoring.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/06/20/ContrastivePreTrainingTimeSeries/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jun 20, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
     
     <div class="column is-12">
         <div class="card">
@@ -362,8 +390,8 @@ year      = {2022}
         <div class="card">
     
     <header class="card-header">
-<!--        <a class="card-header-title" href="/2022/05/01/PrimeKG/">PrimeKG: Precision Medicine KG</a>-->
-        <p class="card-header-title">May 2022: &nbsp; <span class="has-text-primary">PrimeKG: Precision Medicine KG</span></p>
+<!--        <a class="card-header-title" href="/2022/05/01/PrimeKG/">Building KGs to Support Precision Medicine</a>-->
+        <p class="card-header-title">May 2022: &nbsp; <span class="has-text-primary">Building KGs to Support Precision Medicine</span></p>
 <!--        <p class="card-header-item">May 2022</p>-->
 <!--        <p class="card-footer-item">May 1, 2022</p>-->
     </header>
@@ -802,34 +830,6 @@ year      = {2022}
     </div>
 <!--    <footer class="card-footer">-->
 <!--        <p class="card-footer-item">Published: Jan 9, 2022</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2022/01/03/GLB-workshop/">Workshop on Graph Learning Benchmarks</a>-->
-        <p class="card-header-title">Jan 2022: &nbsp; <span class="has-text-primary">Workshop on Graph Learning Benchmarks</span></p>
-<!--        <p class="card-header-item">Jan 2022</p>-->
-<!--        <p class="card-footer-item">Jan 3, 2022</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>Submit your papers to our <a href="https://graph-learning-benchmarks.github.io/glb2022">Workshop on Graph Learning Benchmarks</a> organized at <a href="https://www2022.thewebconf.org/">The Web Conference (WWW)</a>. <a href="https://graph-learning-benchmarks.github.io/glb2022#call-for-papers">Call for papers!</a></p>
-</p>-->
-            <p>Submit your papers to our <a href="https://graph-learning-benchmarks.github.io/glb2022">Workshop on Graph Learning Benchmarks</a> organized at <a href="https://www2022.thewebconf.org/">The Web Conference (WWW)</a>. <a href="https://graph-learning-benchmarks.github.io/glb2022#call-for-papers">Call for papers!</a></p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2022/01/03/GLB-workshop/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Jan 3, 2022</p>-->
 <!--    </footer>-->
 </div>
     </div>
