@@ -286,7 +286,7 @@
       "year": "2021",
       "thumbnail": "nifty21.png",
       "pdf": "papers/nifty-uai21.pdf",
-      "url": "https://arxiv.org/abs/2102.13186",
+      "url": "https://proceedings.mlr.press/v161/agarwal21b.html",
       "type": "journal",
       "supp":
       {
@@ -294,7 +294,7 @@
         "project website": "/projects/NIFTY",
         "code": "https://github.com/chirag126/nifty",
         "poster": "posters/NIFTY-UAI21.pdf",
-        "ICML Socially Responsible ML": "https://icmlsrml2021.github.io/"
+        "ICML 2021 Socially Responsible ML": "https://icmlsrml2021.github.io/"
       }
     },
 
@@ -305,13 +305,15 @@
       "venue": "Proceedings of Neural Information Processing Systems, NeurIPS Datasets and Benchmarks",
       "year": "2021",
       "thumbnail": "tdc21.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2102.09548",
+      "pdf": "papers/TDC-neurips21-main.pdf",
+      "url": "https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/4c56ff4ce4aaf9573aa5dff913df997a-Abstract-round1.html",
       "type": "journal",
       "supp":
       {
         "arXiv": "https://arxiv.org/abs/2102.09548",
         "project website":  "https://tdcommons.ai",
+        "NeurIPS 2021 video": "https://nips.cc/virtual/2021/datasets-and-benchmarks/38447#wse-detail-22769",
+        "supplementary": "papers/TDC-neurips21-supp.pdf",
         "Github repo": "https://github.com/mims-harvard/TDC"
       }
     },
