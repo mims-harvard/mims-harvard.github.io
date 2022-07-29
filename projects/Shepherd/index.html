@@ -4,29 +4,29 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Graph Meta Learning - Zitnik Lab</title>
+    <title>Few-shot AI for Diagnosing Patients with Rare Genetic Diseases - Zitnik Lab</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="shortcut icon" type="image/png"
            href="/favicon.png" 
     />
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Graph Meta Learning | Zitnik Lab</title>
+<title>Few-shot AI for Diagnosing Patients with Rare Genetic Diseases | Zitnik Lab</title>
 <meta name="generator" content="Jekyll v3.8.6" />
-<meta property="og:title" content="Graph Meta Learning" />
+<meta property="og:title" content="Few-shot AI for Diagnosing Patients with Rare Genetic Diseases" />
 <meta name="author" content="Marinka Zitnik" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Artificial Intelligence (AI), Medicine, Science, and Drug Discovery" />
-<meta property="og:description" content="Artificial Intelligence (AI), Medicine, Science, and Drug Discovery" />
-<link rel="canonical" href="https://zitniklab.hms.harvard.edu/projects/G-Meta/" />
-<meta property="og:url" content="https://zitniklab.hms.harvard.edu/projects/G-Meta/" />
+<meta name="description" content="Artificial Intelligence, Graph AI, Rare Diseases, Diagnosis" />
+<meta property="og:description" content="Artificial Intelligence, Graph AI, Rare Diseases, Diagnosis" />
+<link rel="canonical" href="https://zitniklab.hms.harvard.edu/projects/Shepherd/" />
+<meta property="og:url" content="https://zitniklab.hms.harvard.edu/projects/Shepherd/" />
 <meta property="og:site_name" content="Zitnik Lab" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Graph Meta Learning" />
+<meta property="twitter:title" content="Few-shot AI for Diagnosing Patients with Rare Genetic Diseases" />
 <meta name="twitter:site" content="@marinkazitnik" />
 <meta name="twitter:creator" content="@Marinka Zitnik" />
 <script type="application/ld+json">
-{"url":"https://zitniklab.hms.harvard.edu/projects/G-Meta/","author":{"@type":"Person","name":"Marinka Zitnik"},"headline":"Graph Meta Learning","description":"Artificial Intelligence (AI), Medicine, Science, and Drug Discovery","@type":"WebPage","@context":"https://schema.org"}</script>
+{"url":"https://zitniklab.hms.harvard.edu/projects/Shepherd/","author":{"@type":"Person","name":"Marinka Zitnik"},"headline":"Few-shot AI for Diagnosing Patients with Rare Genetic Diseases","description":"Artificial Intelligence, Graph AI, Rare Diseases, Diagnosis","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
 <script>
@@ -121,7 +121,7 @@
         <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
     <div class="hero-body">
         <div class="container">
-            <p class="title is-2">Graph Meta Learning</p>
+            <p class="title is-2">Few-shot AI for Diagnosing Patients with Rare Genetic Diseases</p>
             <p class="subtitle is-3"></p>
             
         </div>
@@ -141,66 +141,74 @@
                     
 <div class="content">
     <div class="box has-background-info has-text-white">
-G-Meta is broadly applicable, theoretically motivated, and scalable graph network framework for few-shot and meta learning.
+<p>
+Shepherd is a few-shot AI technology for multi-faceted diagnosis of patients with rare genetic diseases. It operates at multiple facets throughout the rare disease diagnosis process: performing causal gene discovery, finding other "patients-like-me" with the same causal gene or disease, and providing interpretable characterizations of novel disease presentations. Shepherd shows that graph AI can advance the medical problem at frontier of research where labeled information is incredibly scarce. 
+</p>
 </div>
 
-<h2 id="graph-few-shot-and-meta-learning">Graph few-shot and meta learning</h2>
+<p>Rare diseases affect 300-400 million people worldwide, yet each disease has a very low prevalence, affecting no more than 50 per 100,000 individuals. Due to their low prevalence, most front-line clinicians lack experience with the disorders, resulting in many specialty referrals and expensive clinical workups for patients across multiple years and institutions. Furthermore, patients with the same disorder can present variable symptoms, disease severity, and age of onset. These challenges make rare disease diagnosis extremely difficult; approximately 70% of individuals seeking a diagnosis and up to half of the suspected Mendelian conditions remain undiagnosed.</p>
 
-<p>Prevailing methods for graphs require abundant label and edge information for learning, yet many real-world graphs only have a few labels available. This presents a new challenge: how to make accurate predictions in the low-data regimes?</p>
+<p>Given a set of phenotypes describing a patient’s clinical presentation, Shepherd performs a multi-faceted patient diagnosis to identify causal genes, retrieve “patients-like-me” with the same causal gene or disease, or provide interpretable characterizations of novel disease presentations. Shepherd assists in the rare disease diagnosis at multiple points:</p>
 
-<p><img align="center" src="/img/gmeta-1.png" /></p>
+<ul>
+  <li>to find similar patients after the patient’s clinical workup,</li>
+  <li>to identify candidate genes after genome sequencing analysis or in conjunction with the clinical case review, and</li>
+  <li>to characterize the patient’s disease and find other patients with the same causal gene or disease.</li>
+</ul>
 
-<p>When data for a new task are scarce, meta learning can learn from prior experiences and form much-needed inductive biases for fast adaptation to new tasks. However, a systematic way to formulate meta learning problems on graph-structured data is missing. In this work, we first formulate three important but distinct graph meta learning problems. The main idea is to adapt to the graph or label set of interest by learning from related graphs or label sets.</p>
+<center>
+<img width="800" src="/img/shepherd1.png" />
+</center>
 
-<p><img align="center" src="/img/gmeta-2.png" /></p>
+<h2 id="overview-of-shepherd">Overview of Shepherd</h2>
 
-<h2 id="g-meta-algorithm">G-Meta algorithm</h2>
+<p>Shepherd is a few-shot learning approach for multi-faceted diagnosis of patients with rare genetic conditions. Shepherd operates at multiple points throughout the rare disease diagnosis process to perform causal gene discovery, retrieve “patients-like-me” with similar conditions, and provide interpretable names for novel disease presentations.</p>
 
-<p>G-Meta is a meta learning algorithm that excels at all of the above meta learning problems. In contrast to the status quo that propagate messages through the entire graph, G-Meta uses local subgraphs to transfer subgraph-specific information and learn transferable knowledge faster via meta gradients.</p>
+<center>
+<img width="500" src="/img/shepherd2.png" />
+</center>
 
-<p><img align="center" src="/img/gmeta-3.png" /></p>
+<p>To overcome the limitations of supervised AI, Shepherd performs label-efficient training via knowledge-grounded metric learning, a deep learning paradigm uniquely suited for diagnostic analyses where patient diagnostic labels are incredibly scarce. This capability is achieved by projecting patient phenotypes in an embedding space whose geometry is optimized by the broader knowledge of phenotypes and genes.</p>
 
-<h2 id="attractive-properties-of-g-meta">Attractive properties of G-Meta</h2>
+<p>When a new patient arrives, Shepherd projects the patient into the embedding space such that the patient is close to their most promising causal gene and disease and other patients with the same gene or disease. Using this embedding space for prediction, Shepherd nominates a patient’s genes and diseases even when no other patients are diagnosed with the same disease.</p>
 
-<p>(1) <strong>Theoretically justified:</strong> We show theoretically that the evidence for a prediction can be found in the local subgraph surrounding the target node or edge.</p>
+<center>
+<img width="800" src="/img/shepherd3.png" />
+</center>
 
-<p>(2) <strong>Inductive:</strong> As the input of GNN is a different subgraph for each propagation during meta-training, it can generalize to never-before-seen subgraphs, such as the ones in the meta-testing. This is in contrast to previous works where inductiveness means using the same weight generated from one single trained graph and applying it to a never-before-seen structurally different graph.</p>
+<h2 id="evaluation-on-external-patient-cohorts">Evaluation on external patient cohorts</h2>
 
-<p>(3) <strong>Scalable:</strong> In a typical graph meta learning setting, we have many graphs and each have large amounts of nodes and edges. But each task is only looking at a few data points scattered across graphs. Previous works propagate through all of the graphs to generate embeddings for a few nodes, which is wasteful. In contrast, G-Meta simply extracts the small subgraphs around a few data points for every task, and is thus not restricted by any number of nodes, edges, and graphs.</p>
+<p>We evaluate Shepherd on an external cohort of patients in the Undiagnosed Diseases Network (UDN), a nationwide US study with 12 clinical sites that diagnose patients with rare, difficult to diagnose genetic conditions. Shepherd identifies the correct causal gene in 40% of patients spanning 16 disease areas.</p>
 
-<p>(4) <strong>Broadly applicable:</strong> G-Meta uses an individual subgraph for each data point and thus breaks the dependency across graphs and labels. While previous works only excel at one of the graph meta learning problems for either node classification or link prediction tasks, G-Meta works for all of the three graph meta learning problems and both node and link prediction tasks.</p>
+<p>Further, we show that Shepherd produces models with strong predictive performance across disease areas, clinical sites, and diagnosis years, successfully mitigating data mismatches between patient groups and pointing to Shepherd’s ability to minimize model performance gaps between patient groups.</p>
 
-<h2 id="g-meta-excels-at-graph-meta-learning">G-Meta excels at graph meta learning</h2>
+<p>Shepherd also generates meaningful patient representations that capture patient similarity and enable retrieval of “patients-like-me” with similar genetic conditions. Finally, our analyses demonstrate that Shepherd can nominate the correct diagnosis for patients with novel genetic diseases and provide interpretable characterizations of novel disease presentations.</p>
 
-<p>Empirically, experiments on seven datasets and nine baseline methods show that G-Meta outperforms existing methods by up to 16.3%. Unlike previous methods, G-Meta successfully learns in challenging, few-shot learning settings that require generalization to completely new graphs and never-before-seen labels. Finally, G-Meta scales to large graphs, which we demonstrate on a new Tree-of-Life dataset consisting of 1,840 graphs, a two-orders of magnitude increase in the number of graphs used in prior work.</p>
+<center>
+<img width="600" src="/img/shepherd4.png" />
+</center>
 
 <h2 id="publication">Publication</h2>
 
-<p><a href="https://papers.nips.cc/paper/2020/hash/412604be30f701b1b1e3124c252065e6-Abstract.html">Graph Meta Learning via Local Subgraphs</a><br />
-Kexin Huang, Marinka Zitnik<br />
-<em>NeurIPS</em> 2020 [<a href="https://arxiv.org/abs/2006.07889">arXiv</a>] [<a href="/publications/posters/GMeta-NeurIPS20.pdf">poster</a>]</p>
+<p><a href="#">Few-shot AI for diagnosing patients with rare genetic diseases</a><br />
+Emily Alsentzer*, Michelle M. Li*, Shilpa N. Kobren, Undiagnosed Diseases Network, Isaac S. Kohane and Marinka Zitnik<br />
+<em>In Review</em> 2022</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{huangG-Meta2020,
-  title={Graph Meta Learning via Local Subgraphs},
-  author={Huang, Kexin and Zitnik, Marinka},
-  booktitle={Proceedings of Neural Information Processing Systems, NeurIPS},
-  year={2020}
-}
-</code></pre></div></div>
+<p>* Equal Contribution</p>
 
 <h2 id="code">Code</h2>
 
-<p>Source code is available in the <a href="https://github.com/mims-harvard/G-Meta">GitHub repository</a>.</p>
-
-<h2 id="datasets">Datasets</h2>
-
-<p>ML-ready datasets used in the paper are provided in the <a href="https://drive.google.com/file/d/1TC06A02wmIQteKzqGSbl_i3VIQzsHVop/view?usp=drivesdk">HU data repository</a> and, alternatively, the <a href="https://hu-my.sharepoint.com/:u:/g/personal/kexinhuang_hsph_harvard_edu/EbSj1CehKDtKniKqtICWsScBESs9ldWWcTttGdADnFc6Wg?e=gJhl7c">Microsoft repository</a>.</p>
+<p>Datasets and Pytorch implementation of Shepherd are available in the <a href="#">GitHub repository</a>.</p>
 
 <h2 id="authors">Authors</h2>
 
 <ul>
-  <li><a href="https://www.kexinhuang.com">Kexin Huang</a></li>
-  <li><a href="https://zitniklab.hms.harvard.edu">Marinka Zitnik</a></li>
+  <li><a href="https://emilyalsentzer.com/">Emily Alsentzer*</a></li>
+  <li><a href="https://michellemli.com/">Michelle M. Li*</a></li>
+  <li><a href="http://shilpakobren.com/">Shilpa N. Kobren</a></li>
+  <li><a href="https://undiagnosed.hms.harvard.edu/">Undiagnosed Diseases Network</a></li>
+  <li><a href="https://zaklab.org/">Isaac S. Kohane</a></li>
+  <li><a href="https://zitniklab.hms.harvard.edu/">Marinka Zitnik</a></li>
 </ul>
 
 </div>
