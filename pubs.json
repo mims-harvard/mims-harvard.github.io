@@ -15,6 +15,39 @@
   "publications": [
 
      {
+      "key": "submission21f",
+      "author": ["Michelle M. Li", "Kexin Huang", "Marinka Zitnik"],
+      "title": "Graph Representation Learning in Biomedicine",
+      "venue": "Nature Biomedical Engineering (in press)",
+      "year": "2022",
+      "thumbnail": "subgnn20.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2104.04883",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2104.04883"
+      }
+    },
+
+     {
+      "key": "submission22e",
+      "author": ["Kexin Huang", "Tianfan Fu", "Wenhao Gao", "Yue Zhao", "Yusuf Roohani", "Jure Leskovec", "Connor W. Coley", "Cao Xiao", "Jimeng Sun", "Marinka Zitnik"],
+      "title": "Artificial Intelligence Foundation for Therapeutic Science",
+      "venue": "Nature Chemical Biology (in press)",
+      "year": "2022",
+      "thumbnail": "tdc21.png",
+      "pdf": "",
+      "url": "",
+      "type": "journal",
+      "supp":
+      {
+        "project website":  "https://tdcommons.ai",
+        "Github repo": "https://github.com/mims-harvard/TDC"
+      }
+    },
+
+     {
       "key": "submission22c",
       "author": ["Xiang Zhang", "Ziyuan Zhao", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
       "title": "Self-Supervised Contrastive Pre-Training For Time Series via Time-Frequency Consistency",
@@ -192,22 +225,6 @@
         "code": "https://github.com/mims-harvard/patient-safety",
         "supplementary information": "papers/diffAE-natcomputsci21SI.pdf",
         "Harvard Medicine News": "https://hms.harvard.edu/news/adverse-drug-effects-during-covid-19-pandemic"
-      }
-    },
-
-     {
-      "key": "submission21f",
-      "author": ["Michelle M. Li", "Kexin Huang", "Marinka Zitnik"],
-      "title": "Graph Representation Learning in Biomedicine",
-      "venue": "In Review",
-      "year": "2021",
-      "thumbnail": "subgnn20.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2104.04883",
-      "type": "journal",
-      "supp":
-      {
-        "arXiv": "https://arxiv.org/abs/2104.04883"
       }
     },
 
