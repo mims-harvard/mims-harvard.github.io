@@ -17,7 +17,7 @@
      {
       "key": "submission21f",
       "author": ["Michelle M. Li", "Kexin Huang", "Marinka Zitnik"],
-      "title": "Graph Representation Learning in Biomedicine",
+      "title": "Graph Representation Learning in Biomedicine and Healthcare",
       "venue": "Nature Biomedical Engineering (in press)",
       "year": "2022",
       "thumbnail": "subgnn20.png",
@@ -43,7 +43,7 @@
       "supp":
       {
         "project website":  "https://tdcommons.ai",
-        "Github repo": "https://github.com/mims-harvard/TDC"
+        "code": "https://github.com/mims-harvard/TDC"
       }
     },
 
@@ -147,6 +147,7 @@
       "pdf": "papers/webster-cellsystems22.pdf",
       "url": "https://www.cell.com/cell-systems/fulltext/S2405-4712(21)00488-9",
       "type": "journal",
+      "comment": "Selected as the Cover of Cell Systems",
       "supp":
       {
         "arXiv": "https://arxiv.org/abs/2111.06247",
@@ -168,9 +169,58 @@
       "pdf": "",
       "url": "https://doi.org/10.31219/osf.io/yhdpv",
       "type": "journal",
+      "comment": "Honorable Mention Award at IEEE VIS 2022",
       "supp":
       {
         "arXiv": "https://doi.org/10.31219/osf.io/yhdpv"
+      }
+    },
+
+    {
+      "key": "submission21g",
+      "author": ["J.J. Patten", "P.T. Keiser", "D. Gysi", "G. Menichetti", "H. Mori", "C.J. Donahue", "X. Gan", "I. Do Valle", "K. Geoghegan-Barek", "M. Anantpadma", "R.M. Boytz", "J. L. Berrigan", "S. Stubbs", "T. Ayazika", "C. O'Leary", "S. Jalloh", "F. Wagner", "S. Ayehunie", "S.J. Elledge", "D. Anderson", "J. Loscalzo", "Marinka Zitnik", "S. Gummuluru",  "M.N. Namchuk", "A. L. Barabasi", "R. A. Davey"],
+      "title": "Identification of Potent Inhibitors of SARS-CoV-2 Infection by Combined Pharmacological Evaluation and Cellular Network Prioritization",
+      "venue": "iScience",
+      "year": "2022",
+      "thumbnail": "covidscreen22.png",
+      "url": "https://www.sciencedirect.com/science/article/pii/S258900422201197X",
+      "pdf": "",
+      "type": "journal",
+      "supp":
+      {
+        "bioRxiv": "https://www.biorxiv.org/content/10.1101/2021.04.20.440626"
+      }
+    },
+
+     {
+      "key": "submission22f",
+      "author": ["Hossein Honarvar", "Chirag Agarwal", "Sulaiman Somani", "Akhil Vaid", "Joshua Lampert", "Tingyi Wanyan", "Vivek Y. Reddy", "Girish N. Nadkarni", "Riccardo Miotto", "Marinka Zitnik", "Fei Wang", "Benjamin S. Glicksberg"],
+      "title": "Enhancing Convolutional Neural Network Predictions of Electrocardiograms with Left Ventricular Dysfunction Using a Novel Sub-waveform Representation",
+      "venue": "Cardiovascular Digital Health Journal",
+      "year": "2022",
+      "thumbnail": "sub-waveform22.png",
+      "pdf": "https://www.cvdigitalhealthjournal.com/action/showPdf?pii=S2666-6936%2822%2900133-5",
+      "url": "https://doi.org/10.1016/j.cvdhj.2022.07.074",
+      "type": "journal",
+      "supp":
+      {
+      }
+    },
+
+    {
+      "key": "submission22g",
+      "author": ["Chirag Agarwal", "Owen Queen", "Himabindu Lakkaraju", "Marinka Zitnik"],
+      "title": "Evaluating Explainability for Graph Neural Networks",
+      "venue": "In Review",
+      "year": "2022",
+      "thumbnail": "GraphXAI.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2208.09339",
+      "type": "journal",
+      "supp":
+      {
+        "project website": "https://zitniklab.hms.harvard.edu/projects/GraphXAI/",
+        "code": "https://github.com/mims-harvard/graphXAI"
       }
     },
 
@@ -275,7 +325,8 @@
       "supp":
       {
         "arXiv": "https://arxiv.org/abs/2103.10334",
-        "code": "https://github.com/mmcdermott/structure_preserving_pre-training"
+        "code": "https://github.com/mmcdermott/structure_inducing_pre-training",
+        "project website": "/projects/SIPT"
       }
     },
 
@@ -403,22 +454,6 @@
       {
         "bioRxiv": "https://www.biorxiv.org/content/10.1101/810234v2",
         "supplementary information": "papers/onclass-natcommun21SI.pdf"
-      }
-    },
-
-    {
-      "key": "submission21g",
-      "author": ["J.J. Patten", "P.T. Keiser", "D. Gysi", "G. Menichetti", "H. Mori", "C.J. Donahue", "X. Gan", "I. Do Valle", "K. Geoghegan-Barek", "M. Anantpadma", "J. L. Berrigan", "S. Jalloh", "T. Ayazika", "F. Wagner", "Marinka Zitnik", "S. Ayehunie", "D. Anderson", "J. Loscalzo", "S. Gummuluru",  "M.N. Namchuk", "A. L. Barabasi", "R. A. Davey"],
-      "title": "Identification of druggable host targets needed for SARS-CoV-2 infection by combined pharmacological evaluation and cellular network directed prioritization both in vitro and in vivo",
-      "venue": "In Review",
-      "year": "2021",
-      "thumbnail": "ismb16.png",
-      "url": "https://www.biorxiv.org/content/10.1101/2021.04.20.440626v2",
-      "pdf": "",
-      "type": "journal",
-      "supp":
-      {
-        "bioRxiv": "https://www.biorxiv.org/content/10.1101/2021.04.20.440626"
       }
     },
 
