@@ -1,0 +1,821 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mutual Interactors as a Principle for Phenotype Discovery in Molecular Interaction Networks - Zitnik Lab</title>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="shortcut icon" type="image/png"
+           href="/favicon.png" 
+    />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Mutual Interactors as a Principle for Phenotype Discovery in Molecular Interaction Networks | Zitnik Lab</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Mutual Interactors as a Principle for Phenotype Discovery in Molecular Interaction Networks" />
+<meta name="author" content="Marinka Zitnik" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Artificial Intelligence (AI), Network Biology, Network Medicine" />
+<meta property="og:description" content="Artificial Intelligence (AI), Network Biology, Network Medicine" />
+<link rel="canonical" href="https://zitniklab.hms.harvard.edu/projects/Milieu/" />
+<meta property="og:url" content="https://zitniklab.hms.harvard.edu/projects/Milieu/" />
+<meta property="og:site_name" content="Zitnik Lab" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Mutual Interactors as a Principle for Phenotype Discovery in Molecular Interaction Networks" />
+<meta name="twitter:site" content="@marinkazitnik" />
+<meta name="twitter:creator" content="@Marinka Zitnik" />
+<script type="application/ld+json">
+{"url":"https://zitniklab.hms.harvard.edu/projects/Milieu/","author":{"@type":"Person","name":"Marinka Zitnik"},"headline":"Mutual Interactors as a Principle for Phenotype Discovery in Molecular Interaction Networks","description":"Artificial Intelligence (AI), Network Biology, Network Medicine","@type":"WebPage","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
+<script>
+  window['ga-disable-UA-162129505-1'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-162129505-1');
+</script><!-- head scripts --></head>
+
+  <body>
+    
+<nav class="navbar is-primary" >
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item"><b>
+                Zitnik Lab
+            </b></a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+<!--                <a href="/" class="navbar-item "><b>Home</b></a>-->
+                
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a href="/#" class="navbar-link "><b>About</b></a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/bio/" class="navbar-item "><b>Bio</b></a>
+                            
+                            <a href="/contact/" class="navbar-item "><b>Contact</b></a>
+                            
+                            <a href="/talks/" class="navbar-item "><b>Recent Talks</b></a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                <a href="/research/" class="navbar-item "><b>Research</b></a>
+                    
+                
+                    
+                <a href="/publications/" class="navbar-item "><b>Publications</b></a>
+                    
+                
+                    
+                <a href="/people/" class="navbar-item "><b>Members</b></a>
+                    
+                
+                    
+                <a href="/meetings/" class="navbar-item "><b>Conferences</b></a>
+                    
+                
+                    
+                <a href="/DMAI/" class="navbar-item "><b>DMAI</b></a>
+                    
+                
+                    
+                <a href="/data/" class="navbar-item "><b>Datasets</b></a>
+                    
+                
+                    
+                <a href="/software/" class="navbar-item "><b>ML Tools</b></a>
+                    
+                
+                    
+                <a href="https://zitniklab.hms.harvard.edu/TDC/" class="navbar-item "><b>TDC</b></a>
+                    
+                
+                    
+                <a href="/news/" class="navbar-item "><b>News</b></a>
+                    
+                
+                    
+                <a href="/jobs/" class="navbar-item "><b>Join Us</b></a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+
+    
+        <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
+    <div class="hero-body">
+        <div class="container">
+            <p class="title is-2">Mutual Interactors as a Principle for Phenotype Discovery in Molecular Interaction Networks</p>
+            <p class="subtitle is-3"></p>
+            
+        </div>
+    </div>
+</section>
+    
+    
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+                <div class="column is-8">
+                    
+                    
+                    
+<div class="content">
+    <div class="box has-background-info has-text-white">
+<p>
+Biological networks are powerful representations for the discovery of molecular phenotypes. Fundamental to network analysis is the principle—rooted in social networks—that nodes that interact in the network tend to have similar properties. While this long-standing principle underlies powerful methods in biology that associate molecules with phenotypes on the basis of network proximity, interacting molecules are not necessarily similar, and molecules with similar properties do not necessarily interact. 
+</p>
+
+<p>
+Here, we show that molecules are more likely to have similar phenotypes, not if they directly interact in a molecular network, but if they interact with the same molecules. We call this the mutual interactor principle and show that it holds for several kinds of molecular networks, including protein-protein interaction, genetic interaction, and signaling networks. 
+</p>
+
+<p>
+We develop a machine learning framework for predicting molecular phenotypes on the basis of mutual interactors. Strikingly, the framework can predict drug targets, disease proteins, and protein functions in different species, and it performs better than much more complex algorithms. The framework is robust to incomplete biological data and is capable of generalizing to phenotypes it has not seen during training. Our work represents a network-based predictive platform for phenotypic characterization of biological molecules.
+</p>
+</div>
+
+<p>Molecules in and across living cells are constantly interacting, giving rise to complex biological networks. These networks serve as a powerful resource for the study of human disease, molecular function and drug-target interactions. For instance, evidence from multiple sources suggests that causative genes from the same or similar diseases tend to reside in the same neighborhood of protein-protein interaction networks. Similarly, proteins associated with the same molecular functions form highly-connected modules within protein-protein interaction networks.</p>
+
+<p>These observations have motivated the development of bioinformatics methods that use molecular networks to infer associations between proteins and molecular phenotypes, including diseases, molecular functions, and drug targets. Many of these methods assume that molecular networks obey the organizing principle of homophily: the idea that similarity breeds connection. However, while this principle has been well-documented in social networks of many types (e.g. friendship, work, co-membership), it is unclear whether it captures the dynamics of biological networks. If not, existing bioinformatics methods that assume homophily may not realize the full potential of biological networks for scientific discovery.</p>
+
+<h2 id="motivation-for-mutual-interactors">Motivation for Mutual Interactors</h2>
+
+<p>To better understand the place for homophily in bioinformatics, we consider groups of phenotypically similar molecules (e.g. molecules associated with the same disease, involved in the same function, or targeted by the same drug) and study their interactions in large-scale biological networks. We find that most molecules associated with similar phenotypes do not interact directly in molecular networks, a result which puts into question the assumption of homophily, an assumption that is taken for granted by so many bioinformatics methods.</p>
+
+<p>In fact, a different principle better explains how phenotypic similarity relates to network structure in biology. On average, two molecules that interact directly with one another will have less in common than two molecules that share many mutual interactors, just as people in a social network may share mutual friends. We call this the mutual interactor principle and validate it empirically on a diverse set of biological networks (see Figure 1c).</p>
+
+<center>
+<img src="/img/milieu-motivation.png" />
+</center>
+
+<h2 id="mutual-interactors-approach">Mutual Interactors Approach</h2>
+
+<p>Motivated by our findings, we develop a machine learning framework, Mutual Interactors, that can predict a molecule’s phenotype based on the mutual interactors it shares with other molecules. We demonstrate the power, robustness, and scalability of Mutual Interactors on three key prediction tasks: disease protein prediction, drug target identification, and protein function prediction. With experiments across three different kinds of molecular networks (protein-protein interaction, signaling and genetic interaction) and four species (H. sapiens, S. cerevisiae, A. thaliana, M. musculus), we find that Mutual Interactors substantially outperforms existing methods, with gains in recall up to 61%. Additionally, we show that the weights learned by our method provide insight into the functional properties and druggability of mutual interactors.</p>
+
+<p>Mutual Interactors is an approach based on a different network principle than existing bioinformatics methods. That it can outperform state-of-the-art approaches suggests a need to rethink the fundamental assumptions underlying machine learning methods for network biology</p>
+
+<h3 id="uncovering-disease-driving-proteins-using-mutual-interactors">Uncovering Disease-Driving Proteins Using Mutual Interactors</h3>
+
+<p><img align="center" src="/img/milieu-disease.png" /></p>
+
+<h3 id="identifying-drug-targets-using-mutual-interactors">Identifying Drug Targets Using Mutual Interactors</h3>
+
+<p><img align="center" src="/img/milieu-drug.png" /></p>
+
+<h2 id="publication">Publication</h2>
+
+<p><a href="#">Mutual Interactors as a Principle for Phenotype Discovery in Molecular Interaction Networks</a><br />
+Sabri Eyuboglu*, Marinka Zitnik*, and Jure Leskovec<br />
+<em>Pacific Symposium on Biocomputing, PSB</em> 2023</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{eyuboglu2023mutual,
+title = {Mutual Interactors as a Principle for Phenotype Discovery in Molecular Interaction Networks},
+author = {Eyuboglu, Sabri and Zitnik, Marinka and Leskovec, Jure},
+booktitle = {Pacific Symposium on Biocomputing, PSB},
+year      = {2023}
+}
+</code></pre></div></div>
+
+<h2 id="code">Code</h2>
+
+<p>Python implementation of Mutual Interactors are available in the <a href="https://github.com/seyuboglu/milieu">GitHub repository</a>.</p>
+
+<h2 id="authors">Authors</h2>
+
+<ul>
+  <li><a href="https://sabrieyuboglu.com/">Sabri Eyuboglu</a></li>
+  <li><a href="https://zitniklab.hms.harvard.edu/">Marinka Zitnik</a></li>
+  <li><a href="https://cs.stanford.edu/~jure/">Jure Leskovec</a></li>
+</ul>
+
+</div>
+                </div>
+                
+                <div class="column is-4-desktop is-12-tablet">
+                    <p class="title is-4">Latest News</p>
+
+<div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/09/14/TF-C-NeurIPS/">Self-Supervised Pre-Training at NeurIPS 2022</a>-->
+        <p class="card-header-title">Sep 2022: &nbsp; <span class="has-text-primary">Self-Supervised Pre-Training at NeurIPS 2022</span></p>
+<!--        <p class="card-header-item">Sep 2022</p>-->
+<!--        <p class="card-footer-item">Sep 14, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper on self-supervised contrastive pre-training accepted at <a href="https://nips.cc/Conferences/2022">NeurIPS 2022.</a> <a href="https://zitniklab.hms.harvard.edu/projects/TF-C/">Project page.</a> Thankful for this collaboration with the <a href="https://www.ll.mit.edu/">Lincoln National Laboratory</a>.</p>
+</p>-->
+            <p>New paper on self-supervised contrastive pre-training accepted at <a href="https://nips.cc/Conferences/2022">NeurIPS 2022.</a> <a href="https://zitniklab.hms.harvard.edu/projects/TF-C/">Project page.</a> Thankful for this collaboration with the <a href="https://www.ll.mit.edu/">Lincoln National Laboratory</a>.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/09/14/TF-C-NeurIPS/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 14, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/09/06/BestPaperAwardIEEEVIS/">Best Paper Honorable Mention Award at IEEE VIS</a>-->
+        <p class="card-header-title">Sep 2022: &nbsp; <span class="has-text-primary">Best Paper Honorable Mention Award at IEEE VIS</span></p>
+<!--        <p class="card-header-item">Sep 2022</p>-->
+<!--        <p class="card-footer-item">Sep 6, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Our paper on <a href="https://osf.io/yhdpv">user-centric AI of drug repurposing</a> received the <a href="http://ieeevis.org/year/2022/info/awards/best-paper-awards">Best Paper Honorable Mention Award</a> at IEEE VIS 2022. Thankful for this collaboration with <a href="http://gehlenborglab.org/">Gehlenborg Lab.</a></p>
+</p>-->
+            <p>Our paper on <a href="https://osf.io/yhdpv">user-centric AI of drug repurposing</a> received the <a href="http://ieeevis.org/year/2022/info/awards/best-paper-awards">Best Paper Honorable Mention Award</a> at IEEE VIS 2022. Thankful for this collaboration with <a href="http://gehlenborglab.org/">Gehlenborg Lab.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/09/06/BestPaperAwardIEEEVIS/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 6, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/09/05/MGLPreprint/">Multimodal Representation Learning with Graphs</a>-->
+        <p class="card-header-title">Sep 2022: &nbsp; <span class="has-text-primary">Multimodal Representation Learning with Graphs</span></p>
+<!--        <p class="card-header-item">Sep 2022</p>-->
+<!--        <p class="card-footer-item">Sep 5, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New preprint! We present the <a href="https://arxiv.org/abs/2209.03299">blueprint for graph-centric multimodal learning.</a></p>
+</p>-->
+            <p>New preprint! We present the <a href="https://arxiv.org/abs/2209.03299">blueprint for graph-centric multimodal learning.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/09/05/MGLPreprint/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 5, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/08/24/ISMB22-Tutorial-Recording/">On Graph AI for Precision Medicine</a>-->
+        <p class="card-header-title">Aug 2022: &nbsp; <span class="has-text-primary">On Graph AI for Precision Medicine</span></p>
+<!--        <p class="card-header-item">Aug 2022</p>-->
+<!--        <p class="card-footer-item">Aug 24, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>The recording of our <a href="https://zitniklab.hms.harvard.edu/biomedgraphml/">tutorial on using graph AI to advance precision medicine</a> is available. <a href="https://iscb.junolive.co/ismb2022/library/search/OnDemand_ismb2022_tutorial_vt4">Tune into four hours of interactive lectures</a> about state-of-the-art graph AI methods and applications in precision medicine.</p>
+</p>-->
+            <p>The recording of our <a href="https://zitniklab.hms.harvard.edu/biomedgraphml/">tutorial on using graph AI to advance precision medicine</a> is available. <a href="https://iscb.junolive.co/ismb2022/library/search/OnDemand_ismb2022_tutorial_vt4">Tune into four hours of interactive lectures</a> about state-of-the-art graph AI methods and applications in precision medicine.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/08/24/ISMB22-Tutorial-Recording/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Aug 24, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/08/22/GraphXAI/">Evaluating Explainability for GNNs</a>-->
+        <p class="card-header-title">Aug 2022: &nbsp; <span class="has-text-primary">Evaluating Explainability for GNNs</span></p>
+<!--        <p class="card-header-item">Aug 2022</p>-->
+<!--        <p class="card-footer-item">Aug 22, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New preprint! We introduce a resource for <a href="https://arxiv.org/abs/2208.09339">broad evaluation of the quality and reliability of GNN explanations</a>, addressing challenges and providing solutions for GNN explainability. <a href="https://zitniklab.hms.harvard.edu/projects/GraphXAI/">Project website.</a></p>
+</p>-->
+            <p>New preprint! We introduce a resource for <a href="https://arxiv.org/abs/2208.09339">broad evaluation of the quality and reliability of GNN explanations</a>, addressing challenges and providing solutions for GNN explainability. <a href="https://zitniklab.hms.harvard.edu/projects/GraphXAI/">Project website.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/08/22/GraphXAI/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Aug 22, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/07/16/NeurIPS-NewFrontiersGraphs/">New Frontiers in Graph Learning at NeurIPS</a>-->
+        <p class="card-header-title">Jul 2022: &nbsp; <span class="has-text-primary">New Frontiers in Graph Learning at NeurIPS</span></p>
+<!--        <p class="card-header-item">Jul 2022</p>-->
+<!--        <p class="card-footer-item">Jul 16, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited to organize the <a href="https://glfrontiers.github.io/">New Frontiers in Graph Learning</a> workshop at NeurIPS.</p>
+</p>-->
+            <p>Excited to organize the <a href="https://glfrontiers.github.io/">New Frontiers in Graph Learning</a> workshop at NeurIPS.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/07/16/NeurIPS-NewFrontiersGraphs/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jul 16, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/07/16/NeurIPS-AI4Science/">AI4Science at NeurIPS</a>-->
+        <p class="card-header-title">Jul 2022: &nbsp; <span class="has-text-primary">AI4Science at NeurIPS</span></p>
+<!--        <p class="card-header-item">Jul 2022</p>-->
+<!--        <p class="card-footer-item">Jul 16, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>We are excited to host the <a href="https://ai4sciencecommunity.github.io/index.html">AI4Science meeting</a> at NeurIPS discussing AI-driven scientific discovery, implementation and verification of AI in science, the influence AI has on the conduct of science, and more.</p>
+</p>-->
+            <p>We are excited to host the <a href="https://ai4sciencecommunity.github.io/index.html">AI4Science meeting</a> at NeurIPS discussing AI-driven scientific discovery, implementation and verification of AI in science, the influence AI has on the conduct of science, and more.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/07/16/NeurIPS-AI4Science/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jul 16, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/07/09/ISMB-Tutorial-Materials/">Graph AI for Precision Medicine at ISMB</a>-->
+        <p class="card-header-title">Jul 2022: &nbsp; <span class="has-text-primary">Graph AI for Precision Medicine at ISMB</span></p>
+<!--        <p class="card-header-item">Jul 2022</p>-->
+<!--        <p class="card-footer-item">Jul 9, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Check out our half-day tutorial with resources on <a href="/biomedgraphml/">methods and applications in graph representation learning for precision medicine.</a></p>
+</p>-->
+            <p>Check out our half-day tutorial with resources on <a href="/biomedgraphml/">methods and applications in graph representation learning for precision medicine.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/07/09/ISMB-Tutorial-Materials/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jul 9, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/07/04/SummerInterns/">Welcoming Fellows and Summer Students</a>-->
+        <p class="card-header-title">Jul 2022: &nbsp; <span class="has-text-primary">Welcoming Fellows and Summer Students</span></p>
+<!--        <p class="card-header-item">Jul 2022</p>-->
+<!--        <p class="card-footer-item">Jul 4, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Welcoming a research fellow Julia Balla and three Summer students, Nicholas Ho, Satvik Tripathi, and Isuru Herath.</p>
+</p>-->
+            <p>Welcoming a research fellow Julia Balla and three Summer students, Nicholas Ho, Satvik Tripathi, and Isuru Herath.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/07/04/SummerInterns/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jul 4, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/06/20/ContrastivePreTrainingTimeSeries/">Broadly Generalizable Pre-Training Approach</a>-->
+        <p class="card-header-title">Jun 2022: &nbsp; <span class="has-text-primary">Broadly Generalizable Pre-Training Approach</span></p>
+<!--        <p class="card-header-item">Jun 2022</p>-->
+<!--        <p class="card-footer-item">Jun 20, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited to share a <a href="https://arxiv.org/abs/2206.08496">preprint on self-supervised method for pre-training</a>. <a href="/projects/TF-C">Project website</a> with evaluation on eight datasets, including electrodiagnostic testing, human daily activity recognition, and health state monitoring.</p>
+</p>-->
+            <p>Excited to share a <a href="https://arxiv.org/abs/2206.08496">preprint on self-supervised method for pre-training</a>. <a href="/projects/TF-C">Project website</a> with evaluation on eight datasets, including electrodiagnostic testing, human daily activity recognition, and health state monitoring.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/06/20/ContrastivePreTrainingTimeSeries/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jun 20, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/06/07/NewPostdocs/">Welcoming New Postdocs</a>-->
+        <p class="card-header-title">Jun 2022: &nbsp; <span class="has-text-primary">Welcoming New Postdocs</span></p>
+<!--        <p class="card-header-item">Jun 2022</p>-->
+<!--        <p class="card-footer-item">Jun 7, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited to welcome George Dasoulas and Huan He, new postdocs joining us this Summer.</p>
+</p>-->
+            <p>Excited to welcome George Dasoulas and Huan He, new postdocs joining us this Summer.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/06/07/NewPostdocs/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jun 7, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/05/20/DasoulasHDSIFellow/">George Named the 2022 Wojcicki Troper Fellow</a>-->
+        <p class="card-header-title">May 2022: &nbsp; <span class="has-text-primary">George Named the 2022 Wojcicki Troper Fellow</span></p>
+<!--        <p class="card-header-item">May 2022</p>-->
+<!--        <p class="card-footer-item">May 20, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Congratulations to <a href="https://www.hdsi.news/post/the-2022-harvard-data-science-initiative-postdoctoral-fellows">George Dasoulas, our incoming postdoctoral fellow, on being named the 2022 Wojcicki Troper HDSI Postdoctoral Fellow</a>. We are delighted to welcome George in our group.</p>
+</p>-->
+            <p>Congratulations to <a href="https://www.hdsi.news/post/the-2022-harvard-data-science-initiative-postdoctoral-fellows">George Dasoulas, our incoming postdoctoral fellow, on being named the 2022 Wojcicki Troper HDSI Postdoctoral Fellow</a>. We are delighted to welcome George in our group.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/05/20/DasoulasHDSIFellow/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: May 20, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/05/01/PrimeKGPreprint/">New preprint on PrimeKG</a>-->
+        <p class="card-header-title">May 2022: &nbsp; <span class="has-text-primary">New preprint on PrimeKG</span></p>
+<!--        <p class="card-header-item">May 2022</p>-->
+<!--        <p class="card-footer-item">May 1, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p><a href="https://www.biorxiv.org/content/10.1101/2022.05.01.489928">New preprint on building knowledge graphs</a> to enable precision medicine applications.</p>
+</p>-->
+            <p><a href="https://www.biorxiv.org/content/10.1101/2022.05.01.489928">New preprint on building knowledge graphs</a> to enable precision medicine applications.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/05/01/PrimeKGPreprint/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: May 1, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/05/01/PrimeKG/">Building KGs to Support Precision Medicine</a>-->
+        <p class="card-header-title">May 2022: &nbsp; <span class="has-text-primary">Building KGs to Support Precision Medicine</span></p>
+<!--        <p class="card-header-item">May 2022</p>-->
+<!--        <p class="card-footer-item">May 1, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>We created <a href="https://zitniklab.hms.harvard.edu/projects/PrimeKG/">PrimeKG, a precision medicine-oriented knowledge graph to support graph AI analyses in medicine.</a></p>
+</p>-->
+            <p>We created <a href="https://zitniklab.hms.harvard.edu/projects/PrimeKG/">PrimeKG, a precision medicine-oriented knowledge graph to support graph AI analyses in medicine.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/05/01/PrimeKG/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: May 1, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/04/21/CellSystemsCover/">Webster on the Cover of Cell Systems</a>-->
+        <p class="card-header-title">Apr 2022: &nbsp; <span class="has-text-primary">Webster on the Cover of Cell Systems</span></p>
+<!--        <p class="card-header-item">Apr 2022</p>-->
+<!--        <p class="card-footer-item">Apr 21, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Webster is on the <a href="/img/webster-cell-systems-cover.jpg">cover of April issue</a> of <a href="https://www.cell.com/cell-systems/issue?pii=S2405-4712(21)X0005-1">Cell Systems</a>. <a href="https://doi.org/10.1016/j.cels.2021.12.005">Webster uses cell viability changes following gene perturbation</a> to automatically learn cellular functions and pathways from data.</p>
+</p>-->
+            <p>Webster is on the <a href="/img/webster-cell-systems-cover.jpg">cover of April issue</a> of <a href="https://www.cell.com/cell-systems/issue?pii=S2405-4712(21)X0005-1">Cell Systems</a>. <a href="https://doi.org/10.1016/j.cels.2021.12.005">Webster uses cell viability changes following gene perturbation</a> to automatically learn cellular functions and pathways from data.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/04/21/CellSystemsCover/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Apr 21, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/04/20/NASASpaceBiology/">NASA Space Biology</a>-->
+        <p class="card-header-title">Apr 2022: &nbsp; <span class="has-text-primary">NASA Space Biology</span></p>
+<!--        <p class="card-header-item">Apr 2022</p>-->
+<!--        <p class="card-footer-item">Apr 20, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Dr. Zitnik will serve on the Science Working Group at <a href="https://science.nasa.gov/">NASA Space Biology</a>.</p>
+</p>-->
+            <p>Dr. Zitnik will serve on the Science Working Group at <a href="https://science.nasa.gov/">NASA Space Biology</a>.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/04/20/NASASpaceBiology/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Apr 20, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/03/31/NDSEG-fellowship/">Yasha's Graduate Research Fellowship</a>-->
+        <p class="card-header-title">Mar 2022: &nbsp; <span class="has-text-primary">Yasha's Graduate Research Fellowship</span></p>
+<!--        <p class="card-header-item">Mar 2022</p>-->
+<!--        <p class="card-footer-item">Mar 31, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Yasha won the National Defense Science and Engineering Graduate (NDSEG) Fellowship. Congratulations!</p>
+</p>-->
+            <p>Yasha won the National Defense Science and Engineering Graduate (NDSEG) Fellowship. Congratulations!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/03/31/NDSEG-fellowship/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 31, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/03/18/ICML-AI4Science/">AI4Science at ICML 2022</a>-->
+        <p class="card-header-title">Mar 2022: &nbsp; <span class="has-text-primary">AI4Science at ICML 2022</span></p>
+<!--        <p class="card-header-item">Mar 2022</p>-->
+<!--        <p class="card-footer-item">Mar 18, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>We are excited to be selected to organize the AI4Science meeting at <a href="https://icml.cc/Conferences/2022/CallForPapers">ICML 2022.</a> Stay tuned for details. <a href="http://www.ai4science.net/icml22">http://www.ai4science.net/icml22</a></p>
+</p>-->
+            <p>We are excited to be selected to organize the AI4Science meeting at <a href="https://icml.cc/Conferences/2022/CallForPapers">ICML 2022.</a> Stay tuned for details. <a href="http://www.ai4science.net/icml22">http://www.ai4science.net/icml22</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/03/18/ICML-AI4Science/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 18, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/03/17/PSB-graph-session/">Graph Algorithms in Biomedicine at PSB 2023</a>-->
+        <p class="card-header-title">Mar 2022: &nbsp; <span class="has-text-primary">Graph Algorithms in Biomedicine at PSB 2023</span></p>
+<!--        <p class="card-header-item">Mar 2022</p>-->
+<!--        <p class="card-footer-item">Mar 17, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited to be organizing a session on Graph Algorithms at <a href="https://psb.stanford.edu/">PSB 2023.</a> Stay tuned for details.</p>
+</p>-->
+            <p>Excited to be organizing a session on Graph Algorithms at <a href="https://psb.stanford.edu/">PSB 2023.</a> Stay tuned for details.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/03/17/PSB-graph-session/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 17, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/03/15/Multimodal-Graphs-Disease/">Multimodal Learning on Graphs</a>-->
+        <p class="card-header-title">Mar 2022: &nbsp; <span class="has-text-primary">Multimodal Learning on Graphs</span></p>
+<!--        <p class="card-header-item">Mar 2022</p>-->
+<!--        <p class="card-footer-item">Mar 15, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New preprint! We introduce <a href="https://arxiv.org/abs/2203.08893">REMAP, a multimodal AI approach</a> for disease relation extraction and classification. <a href="/projects/REMAP">Project website.</a></p>
+</p>-->
+            <p>New preprint! We introduce <a href="https://arxiv.org/abs/2203.08893">REMAP, a multimodal AI approach</a> for disease relation extraction and classification. <a href="/projects/REMAP">Project website.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/03/15/Multimodal-Graphs-Disease/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 15, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+
+    <div class="column is-12">
+        <div class="card">
+            <header class="card-header">
+        <!--        <a class="card-header-title" href=""></a>-->
+            <p class="card-header-title"><span class="has-text-primary">Tweets</span></p>
+        <!--        <p class="card-header-item"></p>-->
+        <!--        <p class="card-footer-item"></p>-->
+            </header>
+        <div class="card-content">
+        <!--        <div class="content">-->
+        <!--            -->
+        <!--            <p></p>-->
+        <a class="twitter-timeline" data-width="500" data-height="500" data-theme="light" href="https://twitter.com/marinkazitnik?ref_src=twsrc%5Etfw" data-chrome="noheader transparent nofooter nofooter noborders">Tweets by marinkazitnik</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <!--        </div>-->
+        <!--        <div class="has-text-centered">-->
+        <!--            <a href="" class="button is-primary">Read more</a>-->
+        <!--        </div>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts -->
+<div style="background-color:#A41034">
+        <div class="content is-normal has-text-centered">
+            <p style="color:white;padding-top:20px;padding-bottom:20px;"><a href="https://scholar.harvard.edu/marinka" style="color:white"><b>Zitnik Lab</b></a>
+                &nbsp;&middot;&nbsp; <a href="#" style="color:white"><b>Artificial Intelligence in Medicine and Science</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://harvard.edu" style="color:white"><b>Harvard</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://dbmi.hms.harvard.edu/" style="color:white"><b>Department of Biomedical Informatics</b></a></p>
+        </div>
+</div></body>
+</html>
+

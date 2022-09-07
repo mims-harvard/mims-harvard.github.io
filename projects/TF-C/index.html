@@ -142,7 +142,7 @@
 <div class="content">
     <div class="box has-background-info has-text-white">
 <p>
-Time series present a unique challenge for pre-training because of the potential mismatch between pre-training and fine-tuning that can lead to poor performance. Domain adaptation methods can mitigate unwanted distribution shifts, including shifts in dynamics, varying trends, and long-range and short-range cyclic effects. To do so, these methods require access to data points in the target (fine-tuning) domain, meaning they must access target data points early on during pre-training, which is not possible in real world.  
+Time series datasets present a unique challenge for pre-training because of the potential mismatch between pre-training and fine-tuning that can lead to poor performance. Domain adaptation methods can mitigate unwanted distribution shifts, including shifts in dynamics, varying trends, and long-range and short-range cyclic effects. To do so, these methods require access to data points in the target (fine-tuning) domain, meaning they must access target data points early on during pre-training, which is not possible in the real world.  
 </p>
 
 <p>
@@ -150,17 +150,17 @@ To address this challenge, we put forward a principle: time-based and frequency-
 </p>
 </div>
 
-<p>Time series are relevant for many areas, including medical diagnosis and healthcare settings. While representation learning has considerably advanced analysis of time series, learning broadly generalizable representations for time series remains a fundamentally challenging problem. Being able to generate such representations directly improves pre-training which is important in practice. The central problem is how to transfer knowledge from a time series dataset to other different datasets during fine-tuning. The difficulty due to distribution shifts and other issues is compounded by the complexity of time series: large variations of temporal dynamics across datasets, varying semantic meaning, system factors, etc.</p>
+<p>Time series are relevant for many areas, including medical diagnosis and healthcare settings. While representation learning has considerably advanced analysis of time series, learning broadly generalizable representations for time series remains a fundamentally challenging problem. Being able to generate such representations can directly improve pre-training. The central problem is transferring knowledge from a time series dataset to other different datasets during fine-tuning. The difficulty due to distribution shifts and other issues is compounded by the complexity of time series: large variations of temporal dynamics across datasets, varying semantic meaning, system factors, etc.</p>
 
 <p>Supervised pre-training requires large annotated datasets, creating an obstacle to deep learning deployment. For example, in medical domains, experts often disagree on ground-truth labeling, which can introduce unintended biases (e.g., ECG signals falling outside of normal and abnormal rhythms).</p>
 
-<p>We introduce a generalizable concept, which we refer to as Time-Frequency Consistency (TF-C) and use it to develop a broadly generalizable pre-training strategy.</p>
+<p>We introduce a generalizable concept called Time-Frequency Consistency (TF-C) and use it to develop a broadly generalizable pre-training strategy.</p>
 
 <h2 id="motivation-for-tf-c">Motivation for TF-C</h2>
 
 <p>The TF-C approach uses self-supervised contrastive learning to transfer knowledge across time series domains and pre-train models. The approach builds on the fundamental duality between time and frequency views of time signals. TF-C embeds time-based and frequency-based views learned from the same time series sample such that they are closer to each other in the joint time-frequency space; the embeddings are farther apart if they are associated with different time series samples.</p>
 
-<p>The TF-C approach is uniquely suited for time-series datasets. The broad generality of the TF-C principle means that the approach promotes knowledge transfer between different time-series datasets. That is true even when datasets are complex in terms of considerable variations of temporal dynamics across datasets, varying semantic meaning, irregular sampling, and systemic factors.</p>
+<p>The broad scope of the TF-C principle indicates that the approach promotes positive transfer across different time-series datasets. That is true even when datasets are complex in terms of considerable variations of temporal dynamics across datasets, varying semantic meaning, irregular sampling, and systemic factors.</p>
 
 <p>The following figure gives an overview of the TF-C approach. Given a time series sample, the resulting time and frequency based embeddings are close to each other in a latent time-frequency space (panel a). TF-C expands the scope and applicability of pre-training; it can transfer pre-trained models to diverse scenarios (panel b).</p>
 
@@ -173,8 +173,8 @@ To address this challenge, we put forward a principle: time-based and frequency-
 <p>TF-C has four neural network components (as shown in the following figure):</p>
 
 <ul>
-  <li>a time encoder,</li>
-  <li>a frequency encoder, and</li>
+  <li>Contrastive time encoder,</li>
+  <li>Contrastive frequency encoder, and</li>
   <li>two cross-space projectors that map time-based and frequency-based representations to the same time-frequency space.</li>
 </ul>
 
@@ -192,10 +192,10 @@ To address this challenge, we put forward a principle: time-based and frequency-
     <p>We transform the input time series to its frequency spectrum. Then, similarly to before, we apply frequency-domain augmentations to the input time series sample, produce the embeddings, and compute another term in the contrastive loss.</p>
   </li>
   <li>
-    <p>TF-C requires the consistency between time-domain and frequency-domain representations, and that is achieved by a well-designed consistency loss item which is measured in the time-frequency space. As shown in the figure, our total contrastive loss is a weighted sum of these three terms.</p>
+    <p>TF-C requires the consistency between time-domain and frequency-domain representations, which is achieved by a well-designed consistency loss item measured in the time-frequency space. As shown in the figure, our total contrastive loss is a weighted sum of these three terms.</p>
   </li>
   <li>
-    <p>At last, during the fine-tuning phase, we concatenate the time-domain and frequency-domain embeddings to form the sample embedding. This learned sample embedding can be fed into a downstream task such as classification.</p>
+    <p>Finally, during the fine-tuning phase, we concatenate the time-domain and frequency-domain embeddings to form the sample embedding. This learned sample embedding can be fed into a downstream task such as classification.</p>
   </li>
 </ol>
 
@@ -213,13 +213,13 @@ To address this challenge, we put forward a principle: time-based and frequency-
 <h2 id="publication">Publication</h2>
 
 <p><a href="https://arxiv.org/abs/2206.08496">Self-Supervised Contrastive Pre-Training For Time Series via Time-Frequency Consistency</a><br />
-Xiang Zhang, Ziyuan Zhao, Theodoros Tsiligkaridis, and Marinka Zitnik.<br />
-<em>In Review</em> <a href="https://arxiv.org/abs/2206.08496">[arXiv]</a></p>
+Xiang Zhang, Ziyuan Zhao, Theodoros Tsiligkaridis, and Marinka Zitnik<br />
+<em>Proceedings of Neural Information Processing Systems, NeurIPS 2022</em> <a href="https://arxiv.org/abs/2206.08496">[arXiv]</a></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{zhang2022self,
 title = {Self-Supervised Contrastive Pre-Training For Time Series via Time-Frequency Consistency},
 author = {Zhang, Xiang and Zhao, Ziyuan and Tsiligkaridis, Theodoros and Zitnik, Marinka},
-booktitle = {arXiv:2206.08496},
+booktitle = {Proceedings of Neural Information Processing Systems, NeurIPS},
 year      = {2022}
 }
 </code></pre></div></div>
@@ -273,6 +273,90 @@ year      = {2022}
                     <p class="title is-4">Latest News</p>
 
 <div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/09/14/TF-C-NeurIPS/">Self-Supervised Pre-Training at NeurIPS 2022</a>-->
+        <p class="card-header-title">Sep 2022: &nbsp; <span class="has-text-primary">Self-Supervised Pre-Training at NeurIPS 2022</span></p>
+<!--        <p class="card-header-item">Sep 2022</p>-->
+<!--        <p class="card-footer-item">Sep 14, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper on self-supervised contrastive pre-training accepted at <a href="https://nips.cc/Conferences/2022">NeurIPS 2022.</a> <a href="https://zitniklab.hms.harvard.edu/projects/TF-C/">Project page.</a> Thankful for this collaboration with the <a href="https://www.ll.mit.edu/">Lincoln National Laboratory</a>.</p>
+</p>-->
+            <p>New paper on self-supervised contrastive pre-training accepted at <a href="https://nips.cc/Conferences/2022">NeurIPS 2022.</a> <a href="https://zitniklab.hms.harvard.edu/projects/TF-C/">Project page.</a> Thankful for this collaboration with the <a href="https://www.ll.mit.edu/">Lincoln National Laboratory</a>.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/09/14/TF-C-NeurIPS/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 14, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/09/06/BestPaperAwardIEEEVIS/">Best Paper Honorable Mention Award at IEEE VIS</a>-->
+        <p class="card-header-title">Sep 2022: &nbsp; <span class="has-text-primary">Best Paper Honorable Mention Award at IEEE VIS</span></p>
+<!--        <p class="card-header-item">Sep 2022</p>-->
+<!--        <p class="card-footer-item">Sep 6, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Our paper on <a href="https://osf.io/yhdpv">user-centric AI of drug repurposing</a> received the <a href="http://ieeevis.org/year/2022/info/awards/best-paper-awards">Best Paper Honorable Mention Award</a> at IEEE VIS 2022. Thankful for this collaboration with <a href="http://gehlenborglab.org/">Gehlenborg Lab.</a></p>
+</p>-->
+            <p>Our paper on <a href="https://osf.io/yhdpv">user-centric AI of drug repurposing</a> received the <a href="http://ieeevis.org/year/2022/info/awards/best-paper-awards">Best Paper Honorable Mention Award</a> at IEEE VIS 2022. Thankful for this collaboration with <a href="http://gehlenborglab.org/">Gehlenborg Lab.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/09/06/BestPaperAwardIEEEVIS/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 6, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/09/05/MGLPreprint/">Multimodal Representation Learning with Graphs</a>-->
+        <p class="card-header-title">Sep 2022: &nbsp; <span class="has-text-primary">Multimodal Representation Learning with Graphs</span></p>
+<!--        <p class="card-header-item">Sep 2022</p>-->
+<!--        <p class="card-footer-item">Sep 5, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New preprint! We present the <a href="https://arxiv.org/abs/2209.03299">blueprint for graph-centric multimodal learning.</a></p>
+</p>-->
+            <p>New preprint! We present the <a href="https://arxiv.org/abs/2209.03299">blueprint for graph-centric multimodal learning.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/09/05/MGLPreprint/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 5, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
     
     <div class="column is-12">
         <div class="card">
@@ -746,90 +830,6 @@ year      = {2022}
     </div>
 <!--    <footer class="card-footer">-->
 <!--        <p class="card-footer-item">Published: Mar 15, 2022</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2022/02/27/Posters-on-the-Hill/">Explainable Graph AI on the Capitol Hill</a>-->
-        <p class="card-header-title">Feb 2022: &nbsp; <span class="has-text-primary">Explainable Graph AI on the Capitol Hill</span></p>
-<!--        <p class="card-header-item">Feb 2022</p>-->
-<!--        <p class="card-footer-item">Feb 27, 2022</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>Owen has been selected to present our research on explainable biomedical AI to members of the US Congress at the “Posters on the Hill” symposium. Congrats Owen!</p>
-</p>-->
-            <p>Owen has been selected to present our research on explainable biomedical AI to members of the US Congress at the “Posters on the Hill” symposium. Congrats Owen!</p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2022/02/27/Posters-on-the-Hill/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Feb 27, 2022</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2022/02/06/Raindrop-GNN/">Graph Neural Networks for Time Series</a>-->
-        <p class="card-header-title">Feb 2022: &nbsp; <span class="has-text-primary">Graph Neural Networks for Time Series</span></p>
-<!--        <p class="card-header-item">Feb 2022</p>-->
-<!--        <p class="card-footer-item">Feb 6, 2022</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>Hot off the press at <a href="https://openreview.net/forum?id=Kwm8I7dU-l5">ICLR 2022</a>. Check out Raindrop, our graph neural network with unique predictive capability to learn from irregular time series. <a href="/projects/Raindrop/">Project website</a>.</p>
-</p>-->
-            <p>Hot off the press at <a href="https://openreview.net/forum?id=Kwm8I7dU-l5">ICLR 2022</a>. Check out Raindrop, our graph neural network with unique predictive capability to learn from irregular time series. <a href="/projects/Raindrop/">Project website</a>.</p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2022/02/06/Raindrop-GNN/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Feb 6, 2022</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2022/02/02/ISMB-tutorial/">Biomedical Graph ML Tutorial Accepted to ISMB</a>-->
-        <p class="card-header-title">Feb 2022: &nbsp; <span class="has-text-primary">Biomedical Graph ML Tutorial Accepted to ISMB</span></p>
-<!--        <p class="card-header-item">Feb 2022</p>-->
-<!--        <p class="card-footer-item">Feb 2, 2022</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>Excited to present a tutorial at <a href="https://www.iscb.org/ismb2022">ISMB 2022</a> on <a href="/biomedgraphml">graph representation learning for precision medicine</a>. Congratulations, Michelle!</p>
-</p>-->
-            <p>Excited to present a tutorial at <a href="https://www.iscb.org/ismb2022">ISMB 2022</a> on <a href="/biomedgraphml">graph representation learning for precision medicine</a>. Congratulations, Michelle!</p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2022/02/02/ISMB-tutorial/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Feb 2, 2022</p>-->
 <!--    </footer>-->
 </div>
     </div>

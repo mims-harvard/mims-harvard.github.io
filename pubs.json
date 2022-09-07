@@ -48,12 +48,28 @@
     },
 
      {
+      "key": "submission22h",
+      "author": ["Yasha Ektefaie", "George Dasoulas", "Ayush Noori", "Maha Farhat", "Marinka Zitnik"],
+      "title": "Geometric Multimodal Representation Learning",
+      "venue": "In Review",
+      "year": "2022",
+      "thumbnail": "MGL22.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2209.03299",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2209.03299"
+      }
+    },
+
+     {
       "key": "submission22c",
       "author": ["Xiang Zhang", "Ziyuan Zhao", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
       "title": "Self-Supervised Contrastive Pre-Training For Time Series via Time-Frequency Consistency",
-      "venue": "In Review",
+      "venue": "Proceedings of Neural Information Processing Systems, NeurIPS (in press)",
       "year": "2022",
-      "thumbnail": "TF-C.png",
+      "thumbnail": "TF-C22.png",
       "pdf": "",
       "url": "https://arxiv.org/abs/2206.08496",
       "type": "journal",
@@ -80,6 +96,23 @@
         "bioRxiv": "https://biorxiv.org/cgi/content/short/2022.05.01.489928",
         "code": "https://github.com/mims-harvard/PrimeKG",
         "project website": "/projects/PrimeKG"
+      }
+    },
+
+     {
+      "key": "submission22i",
+      "author": ["Sabri Eyuboglu*", "Marinka Zitnik*", "Jure Leskovec"],
+      "title": "Mutual Interactors as a Principle for Phenotype Discovery in Molecular Interaction Networks",
+      "venue": "Pacific Symposium on Biocomputing, PSB (in press)",
+      "year": "2023",
+      "thumbnail": "Milieu23.png",
+      "pdf": "",
+      "url": "",
+      "type": "journal",
+      "supp":
+      {
+        "code": "https://github.com/seyuboglu/milieu",
+        "project website": "/projects/Milieu"
       }
     },
 
@@ -147,7 +180,7 @@
       "pdf": "papers/webster-cellsystems22.pdf",
       "url": "https://www.cell.com/cell-systems/fulltext/S2405-4712(21)00488-9",
       "type": "journal",
-      "comment": "Selected as the Cover of Cell Systems",
+      "comment": "Appeared on the Cover of Cell Systems",
       "supp":
       {
         "arXiv": "https://arxiv.org/abs/2111.06247",
@@ -162,17 +195,18 @@
      {
       "key": "submission22b",
       "author": ["Qianwen Wang", "Kexin Huang", "Payal Chandak", "Marinka Zitnik", "Nils Gehlenborg"],
-      "title": "Towards Usable Explanations: Extending the Nested Model of Visualization Design for User-Centric XAI",
+      "title": "Extending the Nested Model for User-Centric XAI: A Design Study on GNN-based Drug Repurposing",
       "venue": "IEEE Visualization Conference, IEEE VIS",
       "year": "2022",
       "thumbnail": "DrugExplorer22.png",
-      "pdf": "",
+      "pdf": "papers/DrugExplorer-ieeevis22.pdf",
       "url": "https://doi.org/10.31219/osf.io/yhdpv",
       "type": "journal",
-      "comment": "Honorable Mention Award at IEEE VIS 2022",
+      "comment": "Best Paper Honorable Mention Award at IEEE VIS 2022",
       "supp":
       {
-        "arXiv": "https://doi.org/10.31219/osf.io/yhdpv"
+        "arXiv": "https://doi.org/10.31219/osf.io/yhdpv",
+        "IEEE VIS Award": "http://ieeevis.org/year/2022/info/awards/best-paper-awards"
       }
     },
 
@@ -184,7 +218,7 @@
       "year": "2022",
       "thumbnail": "covidscreen22.png",
       "url": "https://www.sciencedirect.com/science/article/pii/S258900422201197X",
-      "pdf": "",
+      "pdf": "papers/covidscreen-iscience22.pdf",
       "type": "journal",
       "supp":
       {
@@ -213,7 +247,7 @@
       "title": "Evaluating Explainability for Graph Neural Networks",
       "venue": "In Review",
       "year": "2022",
-      "thumbnail": "GraphXAI.png",
+      "thumbnail": "GraphXAI22.png",
       "pdf": "",
       "url": "https://arxiv.org/abs/2208.09339",
       "type": "journal",
