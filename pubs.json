@@ -34,11 +34,11 @@
       "key": "submission22e",
       "author": ["Kexin Huang", "Tianfan Fu", "Wenhao Gao", "Yue Zhao", "Yusuf Roohani", "Jure Leskovec", "Connor W. Coley", "Cao Xiao", "Jimeng Sun", "Marinka Zitnik"],
       "title": "Artificial Intelligence Foundation for Therapeutic Science",
-      "venue": "Nature Chemical Biology (in press)",
+      "venue": "Nature Chemical Biology",
       "year": "2022",
-      "thumbnail": "tdc21.png",
-      "pdf": "",
-      "url": "",
+      "thumbnail": "tdc22.png",
+      "pdf": "https://www.nature.com/articles/s41589-022-01131-2",
+      "url": "https://www.nature.com/articles/s41589-022-01131-2",
       "type": "journal",
       "supp":
       {
@@ -113,6 +113,24 @@
       {
         "code": "https://github.com/seyuboglu/milieu",
         "project website": "/projects/Milieu"
+      }
+    },
+
+     {
+      "key": "submission22j",
+      "author": ["Ayush Noori", "Amelia L. M. Tan", "Michelle M. Li", "Marinka Zitnik"],
+      "title": "metapaths: Similarity Search in Heterogeneous Knowledge Graphs via Meta Paths",
+      "venue": "In Review",
+      "year": "2022",
+      "thumbnail": "Milieu23.png",
+      "pdf": "",
+      "url": "",
+      "type": "journal",
+      "supp":
+      {
+        "code": "https://github.com/ayushnoori/metapaths",
+        "package": " https://www.ayushnoori.com/metapaths",
+        "project website": "/projects/metapaths"
       }
     },
 
@@ -233,11 +251,12 @@
       "venue": "Cardiovascular Digital Health Journal",
       "year": "2022",
       "thumbnail": "sub-waveform22.png",
-      "pdf": "https://www.cvdigitalhealthjournal.com/action/showPdf?pii=S2666-6936%2822%2900133-5",
+      "pdf": "papers/sub-waveform22.pdf",
       "url": "https://doi.org/10.1016/j.cvdhj.2022.07.074",
       "type": "journal",
       "supp":
       {
+        "code": "https://github.com/Glicksberg-Lab/ECG_Representation"
       }
     },
 
@@ -262,9 +281,9 @@
       "key": "submission22d",
       "author": ["Chirag Agarwal", "Eshika Saxena", "Satyapriya Krishna", "Martin Pawelczyk", "Nari Johnson", "Isha Puri", "Marinka Zitnik", "Himabindu Lakkaraju"],
       "title": "OpenXAI: Towards a Transparent Evaluation of Model Explanations",
-      "venue": "In Review",
+      "venue": "Proceedings of Neural Information Processing Systems, NeurIPS Datasets and Benchmarks (in press)",
       "year": "2022",
-      "thumbnail": "TF-C.png",
+      "thumbnail": "GraphXAI22.png",
       "pdf": "",
       "url": "https://arxiv.org/abs/2206.11104",
       "type": "journal",
@@ -317,7 +336,7 @@
       "author": ["Ryan T. Scott", "...", "Marinka Zitnik", "Sylvain V. Costes"],
       "title": "Beyond Low Earth Orbit: Biomonitoring, Artificial Intelligence, and Precision Space Health",
       "venue": "In Review",
-      "year": "2021",
+      "year": "2022",
       "thumbnail": "spacehealth21.png",
       "pdf": "",
       "url": "https://arxiv.org/abs/2112.12554",
@@ -334,7 +353,7 @@
       "author": ["Lauren M. Sanders", "...", "Marinka Zitnik", "Sylvain V. Costes"],
       "title": "Beyond Low Earth Orbit: Biological Research, Artificial Intelligence, and Self-Driving Labs",
       "venue": "In Review",
-      "year": "2021",
+      "year": "2022",
       "thumbnail": "spacebiology21.png",
       "pdf": "",
       "url": "https://arxiv.org/abs/2112.12582",
@@ -351,9 +370,9 @@
       "author": ["Matthew B. A. McDermott", "Brendan Yap", "Peter Szolovits", "Marinka Zitnik"],
       "title": "Structure Inducing Pre-Training",
       "venue": "In Review",
-      "year": "2021",
+      "year": "2022",
       "thumbnail": "subgnn20.png",
-      "pdf": "",
+      "pdf": "papers/SIPT22.pdf",
       "url": "https://arxiv.org/abs/2103.10334",
       "type": "journal",
       "supp":
