@@ -214,16 +214,17 @@
       "key": "submission22b",
       "author": ["Qianwen Wang", "Kexin Huang", "Payal Chandak", "Marinka Zitnik", "Nils Gehlenborg"],
       "title": "Extending the Nested Model for User-Centric XAI: A Design Study on GNN-based Drug Repurposing",
-      "venue": "IEEE Visualization Conference, IEEE VIS",
+      "venue": "IEEE Transactions on Visualization and Computer Graphics",
       "year": "2022",
       "thumbnail": "DrugExplorer22.png",
       "pdf": "papers/DrugExplorer-ieeevis22.pdf",
-      "url": "https://doi.org/10.31219/osf.io/yhdpv",
+      "url": "https://ieeexplore.ieee.org/document/9916585",
       "type": "journal",
       "comment": "Best Paper Honorable Mention Award at IEEE VIS 2022",
       "supp":
       {
         "arXiv": "https://doi.org/10.31219/osf.io/yhdpv",
+        "Presented at IEEE 2022 Visualization Conference": "https://virtual.ieeevis.org/year/2022/papers.html?filter=authors&search=Marinka+Zitnik",
         "IEEE VIS Award": "http://ieeevis.org/year/2022/info/awards/best-paper-awards"
       }
     },
@@ -274,6 +275,21 @@
       {
         "project website": "https://zitniklab.hms.harvard.edu/projects/GraphXAI/",
         "code": "https://github.com/mims-harvard/graphXAI"
+      }
+    },
+
+     {
+      "key": "submission22k",
+      "author": ["Carlo Combi", "Beatrice Amico", "Riccardo Bellazzi", "Andreas Holzinger", "Jason H. Moore", "Marinka Zitnik", "John H.Holmes"],
+      "title": "A Manifesto on Explainability for Artificial Intelligence in Medicine",
+      "venue": "Artificial Intelligence in Medicine",
+      "year": "2022",
+      "thumbnail": "XAIManifesto22.png",
+      "pdf": "papers/XAIPerspective22.pdf",
+      "url": "https://doi.org/10.1016/j.artmed.2022.102423",
+      "type": "journal",
+      "supp":
+      {
       }
     },
 
