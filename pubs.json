@@ -18,11 +18,11 @@
       "key": "submission21f",
       "author": ["Michelle M. Li", "Kexin Huang", "Marinka Zitnik"],
       "title": "Graph Representation Learning in Biomedicine and Healthcare",
-      "venue": "Nature Biomedical Engineering (in press)",
+      "venue": "Nature Biomedical Engineering",
       "year": "2022",
-      "thumbnail": "subgnn20.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2104.04883",
+      "thumbnail": "grl22.png",
+      "pdf": "https://www.nature.com/articles/s41551-022-00942-x",
+      "url": "https://www.nature.com/articles/s41551-022-00942-x",
       "type": "journal",
       "supp":
       {
