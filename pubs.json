@@ -32,7 +32,7 @@
 
      {
       "key": "submission22e",
-      "author": ["Kexin Huang", "Tianfan Fu", "Wenhao Gao", "Yue Zhao", "Yusuf Roohani", "Jure Leskovec", "Connor W. Coley", "Cao Xiao", "Jimeng Sun", "Marinka Zitnik"],
+      "author": ["Kexin Huang*", "Tianfan Fu*", "Wenhao Gao*", "Yue Zhao", "Yusuf Roohani", "Jure Leskovec", "Connor W. Coley", "Cao Xiao", "Jimeng Sun", "Marinka Zitnik"],
       "title": "Artificial Intelligence Foundation for Therapeutic Science",
       "venue": "Nature Chemical Biology",
       "year": "2022",
@@ -43,15 +43,16 @@
       "supp":
       {
         "project website":  "https://tdcommons.ai",
-        "code": "https://github.com/mims-harvard/TDC"
+        "code": "https://github.com/mims-harvard/TDC",
+        "Harvard Medicine News": "https://hms.harvard.edu/news/can-ai-transform-way-we-discover-new-drugs"
       }
     },
 
      {
       "key": "submission22h",
-      "author": ["Yasha Ektefaie", "George Dasoulas", "Ayush Noori", "Maha Farhat", "Marinka Zitnik"],
-      "title": "Geometric Multimodal Representation Learning",
-      "venue": "In Review",
+      "author": ["Yasha Ektefaie*", "George Dasoulas*", "Ayush Noori", "Maha Farhat", "Marinka Zitnik"],
+      "title": "Multimodal Learning with Graphs",
+      "venue": "Nature Machine Intelligence (in press)",
       "year": "2022",
       "thumbnail": "MGL22.png",
       "pdf": "",
@@ -59,25 +60,60 @@
       "type": "journal",
       "supp":
       {
-        "arXiv": "https://arxiv.org/abs/2209.03299"
+        "arXiv": "https://arxiv.org/abs/2209.03299",
+        "project website": "https://yashaektefaie.github.io/mgl/"
       }
     },
 
      {
       "key": "submission22c",
-      "author": ["Xiang Zhang", "Ziyuan Zhao", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
+      "author": ["Xiang Zhang*", "Ziyuan Zhao*", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
       "title": "Self-Supervised Contrastive Pre-Training For Time Series via Time-Frequency Consistency",
-      "venue": "Proceedings of Neural Information Processing Systems, NeurIPS (in press)",
+      "venue": "Proceedings of Neural Information Processing Systems, NeurIPS",
       "year": "2022",
       "thumbnail": "TF-C22.png",
       "pdf": "",
-      "url": "https://arxiv.org/abs/2206.08496",
+      "url": "https://openreview.net/pdf?id=OJ4mMfGKLN",
       "type": "journal",
       "supp":
       {
         "arXiv": "https://arxiv.org/abs/2206.08496",
         "code": "https://github.com/mims-harvard/TFC-pretraining",
         "project website": "/projects/TF-C"
+      }
+    },
+
+     {
+      "key": "submission22l",
+      "author": ["Jiali Cheng", "George Dasoulas", "Huan He", "Chirag Agarwal", "Marinka Zitnik"],
+      "title": "GNNDelete: A General Unlearning Strategy for Graph Neural Networks",
+      "venue": "In Review ",
+      "year": "2022",
+      "thumbnail": "TF-C22.png",
+      "pdf": "",
+      "url": "",
+      "type": "journal",
+      "supp":
+      {
+      }
+    },
+
+     {
+      "key": "submission22n",
+      "author": ["Emily Alsentzer*", "Michelle M. Li*", "Shilpa N. Kobren", "Undiagnosed Diseases Network", "Isaac S. Kohane", "Marinka Zitnik"],
+      "title": "Deep Learning for Diagnosing Patients with Rare Genetic Diseases",
+      "venue": "In Review ",
+      "year": "2022",
+      "thumbnail": "SHEPHERD23.png",
+      "pdf": "",
+      "url": "https://www.medrxiv.org/content/10.1101/2022.12.07.22283238",
+      "type": "journal",
+      "supp":
+      {
+        "medRxiv": "https://www.medrxiv.org/content/10.1101/2022.12.07.22283238v1",
+        "code": "https://github.com/mims-harvard/SHEPHERD",
+        "project website": "https://zitniklab.hms.harvard.edu/projects/SHEPHERD/",
+        "HuggingFace space": "https://huggingface.co/spaces/emilyalsentzer/SHEPHERD"
       }
     },
 
@@ -103,11 +139,11 @@
       "key": "submission22i",
       "author": ["Sabri Eyuboglu*", "Marinka Zitnik*", "Jure Leskovec"],
       "title": "Mutual Interactors as a Principle for Phenotype Discovery in Molecular Interaction Networks",
-      "venue": "Pacific Symposium on Biocomputing, PSB (in press)",
+      "venue": "Pacific Symposium on Biocomputing, PSB",
       "year": "2023",
       "thumbnail": "Milieu23.png",
-      "pdf": "",
-      "url": "",
+      "pdf": "papers/MutualInteractors-psb23.pdf",
+      "url": "http://psb.stanford.edu/psb-online/proceedings/psb23/eyuboglu.pdf",
       "type": "journal",
       "supp":
       {
@@ -261,6 +297,21 @@
       }
     },
 
+     {
+      "key": "submission22m",
+      "author": ["Alexander Turchin", "Stanislav Masharsky", "Marinka Zitnik"],
+      "title": "Comparison of BERT Implementations for Natural Language Processing of Narrative Medical Documents",
+      "venue": "Informatics in Medicine Unlocked",
+      "year": "2022",
+      "thumbnail": "bert-comparison22.png",
+      "pdf": "papers/bert-comparison22.pdf",
+      "url": "https://doi.org/10.1016/j.imu.2022.101139",
+      "type": "journal",
+      "supp":
+      {
+      }
+    },
+
     {
       "key": "submission22g",
       "author": ["Chirag Agarwal", "Owen Queen", "Himabindu Lakkaraju", "Marinka Zitnik"],
@@ -297,7 +348,7 @@
       "key": "submission22d",
       "author": ["Chirag Agarwal", "Eshika Saxena", "Satyapriya Krishna", "Martin Pawelczyk", "Nari Johnson", "Isha Puri", "Marinka Zitnik", "Himabindu Lakkaraju"],
       "title": "OpenXAI: Towards a Transparent Evaluation of Model Explanations",
-      "venue": "Proceedings of Neural Information Processing Systems, NeurIPS Datasets and Benchmarks (in press)",
+      "venue": "Proceedings of Neural Information Processing Systems, NeurIPS",
       "year": "2022",
       "thumbnail": "GraphXAI22.png",
       "pdf": "",
@@ -719,7 +770,7 @@
      {
       "key": "submission19e",
       "author": ["Weihua Hu", "Bowen Liu", "Joseph Gomes", "Marinka Zitnik", "Percy Liang", "Vijay Pande", "Jure Leskovec"],
-      "title": "Pre-training Graph Neural Networks",
+      "title": "Pre-Training Graph Neural Networks",
       "venue": "Proceedings of the International Conference on Learning Representations, ICLR",
       "year": "2020",
       "thumbnail": "gnn-pretrain19.png",

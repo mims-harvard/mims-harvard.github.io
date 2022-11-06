@@ -84,7 +84,7 @@
                     
                 
                     
-                <a href="/meetings/" class="navbar-item "><b>Conferences</b></a>
+                <a href="/meetings/" class="navbar-item "><b>Education</b></a>
                     
                 
                     
@@ -140,63 +140,39 @@
                     
                     
 <div class="content">
-    <p>Our research develops AI and machine learning methods to address grand challenges in science and medicine. In doing so, we:</p>
-<ol>
-  <li>Invent ways to infuse knowledge &amp; structure into AI models to reduce uncertainty and enable generalization to new scenarios not seen during training.</li>
-  <li>Develop methods that produce actionable &amp; trustworthy representations and can reason over massive datasets.</li>
-  <li>Translate machine learning research into innovative applications.</li>
-</ol>
+    <h2 id="large-knowledge-graph-and-biological-language-models">Large Knowledge Graph and Biological Language Models</h2>
 
-<p>Our research strategy is to create <strong>foundational models (e.g., pre-trained models, self-supervised models, general-purpose models, multi-purpose models, and multi-modal models)</strong> trained on broad data at scale and can be adapted to a wide range of downstream tasks. This research opens up new avenues for understanding network and disease biology, developing safe &amp; effective medicines, and can impact the way predictive modeling is performed today at the fundamental level.</p>
+<p>Broad use of AI in medicine and science depends on our ability to incorporate progressively more complex descriptors, constraints, and causal structures into ML architectures. We expect that modeling knowledge in the form of compact mathematical statements of physical relationships, knowledge graphs, prior distributions, and other complex rationales is needed to achieve deeper reasoning. For example, knowledge about a biological problem, such as knowing the laws of chemical biology or rotational and translational equivariances of molecular binding to therapeutic targets, helps human experts navigate the problem seamlessly.</p>
 
-<div align="center">
-<img style="margin-bottom:20px;margin-top:20px;width:80%" src="/img/our-approach.png" />
-</div>
+<p>Our research is making progress in changing that. We develop techniques to incorporate different inductive biases (the set of assumptions that algorithms use to make predictions for inputs they have not encountered during training) that can vary by data modality (i.e., graphs vs. biological sequences) into machine learning methods. Our research strategy creates foundational models (e.g., pre-trained models, self-supervised models, general-purpose models, multi-purpose models, and multimodal models) trained on broad data at scale that can be adapted to a wide range of downstream tasks.</p>
 
-<hr />
-
-<h2 id="knowledge-guided-ai-fusing-biomedical-knowledge-and-patient-data">Knowledge-guided AI: Fusing biomedical knowledge and patient data</h2>
-
-<p><em>Methods: Knowledge graphs, multi-modal learning, foundational models</em></p>
-
-<p>Soon, the state of a person will be characterized with increasing precision by incorporating data modalities like genetic code, behaviors, therapeutics, nutrients, and the environment—the challenge is how to computationally operationalize these data to make them amenable to decision making.</p>
-
-<p>Further, data are of many different types, including experimental readouts, curated annotations, and metadata—no single data type can capture all the factors necessary to understand a phenomenon such as a disease. These high-dimensional datasets lead to far more complex characterizations than are currently in use, requiring fundamentally new approaches.</p>
-
-<p>To this end, we invent methods to fuse rich, heterogeneous data into knowledge graphs to bridge the divide between biomedical research and patient data. This approach combines data in their broadest sense to reduce redundancy, resolve contradictory observations, and model uncertainty. Using our methods, we could, for example, construct one of the largest biological networks ever created, with over 2.3 billion edges and more than 2,000 modes.</p>
-
-<p>Ultimately, we believe that science and medicine are among the most exciting areas for machine learning, with many hard problems and applications of immense impact. For this reason, we build high-quality open-source data repositories whenever possible to bring biomedical data closer to other scientists who can now readily use these datasets in their research.</p>
+<p>We develop techniques for self-supervised learning, particularly multi-layered neural nets capable of identifying essential, compact features useful to solve many tasks simultaneously without relying on pre-defined labels. This strategy of pre-training big models can train neural nets on unlabeled data, and transfer concepts learned in one domain to a different domain, even when no labels in the target domain are available, and thus standard supervised learning does not work. We are looking to advance the algorithms to train more with less data, transfer prediction prowess from one data type to another, and design contextually adaptive AI that can extrapolate to new tasks and situations (e.g., new molecular scaffolds, new cell types, new diseases) as they encounter them.</p>
 
 <div align="center">
-<img style="margin-top:20px;margin-bottom:20px;width:100%" src="/img/research-fuse.png" />
+<img style="margin-top:20px;margin-bottom:20px;width:100%" src="/img/research-KG-LM.png" />
 </div>
 
 <h4 id="example-related-publications">Example related publications:</h4>
 
-<p><a href="https://doi.org/10.1016/j.inffus.2018.09.012">Machine Learning for Integrating Data in Biology and Medicine: Principles, Practice, and Opportunities</a><br />
-<a href="https://www.nature.com/articles/s41467-017-01642-w">A Comprehensive Structural, Biochemical and Biological Profiling of the Human NUDIX Hydrolase Family</a><br />
-<a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004552">Gene Prioritization by Compressive Data Fusion and Chaining</a><br />
-<a href="http://bioinformatics.oxfordjournals.org/content/31/12/i230.full">Gene Network Inference by Fusing Data from Diverse Distributions</a><br />
+<p><a href="https://arxiv.org/abs/2103.10334">Structure Inducing Pre-Training</a><br />
+<a href="https://openreview.net/pdf?id=OJ4mMfGKLN">Self-Supervised Contrastive Pre-Training For Time Series via Time-Frequency Consistency</a><br />
+<a href="https://openreview.net/pdf?id=Kwm8I7dU-l5">Graph-Guided Network for Irregularly Sampled Multivariate Time Series</a><br />
+<a href="https://papers.nips.cc/paper/2020/hash/412604be30f701b1b1e3124c252065e6-Abstract.html">Graph Meta Learning via Local Subgraphs</a><br />
+<a href="https://doi.org/10.1016/j.inffus.2018.09.012">Machine Learning for Integrating Data in Biology and Medicine: Principles, Practice, and Opportunities</a><br />
 <a href="http://dx.doi.org/10.1109/TPAMI.2014.2343973">Data Fusion by Matrix Factorization</a></p>
 
 <hr />
 
-<h2 id="graph-ai-learning-trustworthy-representations-for-complex-and-networked-systems">Graph AI: Learning trustworthy representations for complex and networked systems</h2>
+<h2 id="geometric-deep-learning">Geometric Deep Learning</h2>
 
-<p><em>Methods: Graph representation learning, graph neural networks, geometric deep learning, few-shot learning, transfer learning</em></p>
+<p>The critical capability expected of machine learning used in medicine and science is to incorporate structure, geometry, symmetry and be grounded in knowledge. The challenge, however, is that prevailing deep and representation learning algorithms are designed for data with a regular, grid-like structure (e.g., images have a 2D grid structure, and sequences have a linear 1D structure). As a result, these algorithms cannot truly exploit complex, interconnected data with irregular interactions between entities, i.e., edges, the essence of graphs.</p>
 
-<p>The success of machine learning is heavily dependent on the choice of data features to which the methods are applied. For that reason, much of the actual efforts in deploying algorithms go into the engineering of features that support effective machine learning. We have already made substantial progress in developing representation learning methods that expand the scope and ease the applicability of machine learning in sciences and medicine.</p>
+<p>We are developing methods to address these challenges. The notion of flexible representations is at the technical core of these methods. We formalize this idea by specifying deep transformation functions, or graph neural networks, that map nodes, or larger graph structures, to points in a low-dimensional space, termed embeddings. Importantly, these functions are optimized to embed the input dataset to perform algebraic operations in the learned latent spaces reflecting the dataset’s structure and topology.</p>
 
-<p>The challenge, however, is that prevailing deep and representation learning algorithms are designed for data with a regular, grid-like structure (e.g., images have a 2D grid structure, and sequences have a linear 1D structure). As a result, these algorithms cannot truly exploit complex, interconnected data with irregular interactions between entities, i.e., edges, the essence of graphs. We are developing methods to address these challenges. The notion of vector space embeddings is at the technical core of these methods. We formalize this idea by specifying deep transformation functions, or graph neural networks, that map nodes, or larger graph structures, to points in a low-dimensional space, termed embeddings. Importantly, these functions are optimized to embed the input network to perform algebraic operations in this learned space to reflect the network’s topology.</p>
-
-<p>Our research has pioneered graph neural networks in bioinformatics and deep learning for network biology and medicine. This allowed us to apply neural networks much more broadly and set sights on new frontiers beyond classic applications of neural networks that learn from images and sequences. We show, for example, how embeddings enable the repurposing of drugs for new indications and the discovery of dozens of safe drug combinations in patients with considerably fewer unwanted side effects than today’s treatments. Further, embeddings allow for accurate molecular phenotyping by identifying drug targets, disease proteins, molecular functions, and other phenotypes better than complex algorithms.</p>
-
-<p>We are also actively developing machine learning methods for learning actionable representations—lending themselves to actionable hypotheses—and allow users of our models to ask what-if questions and receive predictions that are accurate, precise, robust, and can be interpreted meaningfully.</p>
-
-<p>Within the context of biomedical data, we are looking to advance the algorithms to train more with less data, exploit the ability of models to apply prediction prowess acquired from one data type to another type, and design contextually adaptive AI for classes of phenomena that can learn and reason about never-before-seen systems as they encounter new tasks and situations (e.g., new patients, diseases, or cell types).</p>
+<p>Our research has been at the forefront of geometric deep learning research and pioneered graph neural networks (GNNs) for biology and medicine. This allows us to apply deep learning much more broadly and set sights on new frontiers beyond classic applications of deep learning in computer vision and natural language processing.</p>
 
 <div align="center">
-<img style="margin-top:20px;margin-bottom:20px;width:100%" src="/img/research-learn.png" />
+<img style="margin-top:20px;margin-bottom:20px;width:100%" src="/img/research-GDL.png" />
 </div>
 
 <h4 id="perspective">Perspective</h4>
@@ -205,33 +181,38 @@
 
 <h4 id="example-related-publications-1">Example related publications:</h4>
 
-<p><a href="https://academic.oup.com/bioinformatics/article/34/13/i457/5045770">Modeling Polypharmacy Side Effects with Graph Convolutional Networks</a><br />
-<a href="https://doi.org/10.3389/fgene.2019.00381">To Embed or Not: Network Embedding as a Paradigm in Computational Biology</a><br />
-<a href="https://academic.oup.com/bioinformatics/article/33/14/i190/3953967/Predicting-multicellular-function-through-multi">Predicting Multicellular Function Through Multi-Layer Tissue Networks</a><br />
+<p><a href="https://proceedings.mlr.press/v161/agarwal21b.html">Towards a Unified Framework for Fair and Stable Graph Representation Learning</a><br />
+<a href="https://arxiv.org/abs/2209.03299">Multimodal Learning with Graphs</a><br />
+<a href="https://proceedings.mlr.press/v151/agarwal22b/agarwal22b.pdf">Probing GNN Explainers: A Rigorous Theoretical and Empirical Analysis of GNN Explanation Methods</a><br />
 <a href="https://papers.nips.cc/paper/9123-gnnexplainer-generating-explanations-for-graph-neural-networks">GNN Explainer: Generating Explanations for Graph Neural Networks</a><br />
 <a href="https://papers.nips.cc/paper/7473-embedding-logical-queries-on-knowledge-graphs">Embedding Logical Queries on Knowledge Graphs</a><br />
-<a href="https://dl.acm.org/citation.cfm?id=3220025">Learning Structural Node Embeddings via Diffusion Wavelets</a></p>
+<a href="https://openreview.net/pdf?id=HJlWWJSFDH">Pre-Training Graph Neural Networks</a><br />
+<a href="https://papers.nips.cc/paper/2020/hash/5bca8566db79f3788be9efd96c9ed70d-Abstract.html">Subgraph Neural Networks</a><br />
+<a href="https://dl.acm.org/citation.cfm?id=3220025">Learning Structural Node Embeddings via Diffusion Wavelets</a><br />
+<a href="https://academic.oup.com/bioinformatics/article/34/13/i457/5045770">Modeling Polypharmacy Side Effects with Graph Convolutional Networks</a><br />
+<a href="https://papers.nips.cc/paper/2020/hash/690d83983a63aa1818423fd6edd3bfdb-Abstract.html">GNNGuard: Defending Graph Neural Networks against Adversarial Attacks</a><br /></p>
 
 <h4 id="podcasts">Podcasts:</h4>
 
 <p><a href="https://mitharvardwai.github.io/">MITxHarvard Women in Artificial Intelligence</a> [<a href="https://www.youtube.com/watch?v=myv4E5gBnmQ">YouTube Interview</a>]</p>
 
-<h4 id="lectures">Lectures:</h4>
+<h4 id="educational-resources">Educational resources:</h4>
 
 <p><a href="../publications/slides/marinka-zitnik-cs224w.pdf">Slides: Graph Neural Networks in Computational Biology</a><br />
-<a href="https://youtu.be/_hy9AgZXhbQ">Recording: Graph Neural Networks in Computational Biology</a></p>
+<a href="https://youtu.be/_hy9AgZXhbQ">Recording: Graph Neural Networks in Computational Biology</a>
+<a href="https://zitniklab.hms.harvard.edu/biomedgraphml/">Towards Precision Medicine with Graph Representation Learning</a></p>
 
 <hr />
 
-<h2 id="actionable-ai-reasoning-about-interconnected-biology-and-medicine">Actionable AI: Reasoning about interconnected biology and medicine</h2>
+<h2 id="multi-scale-individualized-contextualized-and-network-learning-systems">Multi-Scale Individualized, Contextualized, and Network Learning Systems</h2>
 
-<p><em>Methods: Heterogeneous and multi-scale networks, model interpretability, graph explainability</em></p>
+<p>Networks, or graphs, pervade biomedical data — from the molecular level to the level of connections between diseases in a person and the societal level encompassing all human interactions. These interactions at different levels give rise to a bewildering degree of complexity which is only likely to be fully understood through a holistic and integrated systems view and the study of combined, multi-level networks.</p>
 
-<p>Networks, or graphs, pervade biomedical data—from the molecular level to the level of connections between diseases in a person and the societal level encompassing all human interactions. These interactions at different levels give rise to a bewildering degree of complexity which is only likely to be fully understood through a holistic and integrated systems view and the study of combined, multi-level networks.</p>
+<p>We focus on designing algorithmic solutions to optimize and manipulate networked systems for useful purposes and to predict their behavior, such as how genomics influences human traits in a particular environment. We also actively develop methods to harness rich interaction data and network dynamics. We scale up the analyses to see structure in massive amounts of data that are too complex to be detected with other methods.</p>
 
-<p>We focus on designing algorithmic solutions to optimize and manipulate networked systems for useful purposes and to predict their behavior, such as how genomics influences human traits in a particular environment. For example, using protein-protein interaction data that have only recently become available, we composed and analyzed interactome networks from 1,840 species across the tree of life, expanding the number of species from about 5 in previous studies to 1,840. This unique dataset allowed us to conduct the largest ever study of protein interactomes and quantify the resilience of interactomes—a critical property as the breakdown of proteins may lead to cell death or disease, showing, for the first time, how interactomes change during evolution, and how these changes impact their response to environmental unpredictability.</p>
+<p>Many diseases are controlled by more than one gene with very different patterns of mutations across different cells within the same disease. A powerful way to interpret these genetic events is to organize them into interactomes — networks of genes that participate in dysregulated processes. Disruptions of normal gene behavior may be infrequent at the nucleotide or gene level but can be substantially more common when considering impacts in a larger biological process. Understanding the disease in this way suggests that effective therapies might need to target biological systems — interactomes — larger than those encoded by single genes to successfully intervene against the disease.</p>
 
-<p>We also actively develop methods to harness rich interaction data and network dynamics. We scale up the analyses to see structure in massive amounts of data that are too complex to be detected with other methods.</p>
+<p>In our work, we develop geometric machine learning methods to study the impact of drugs on proteins perturbed in disease. Among others, we used the methods to predict drugs effective for coronavirus infections. We showed that 76 of the 77 predicted drugs that reduced viral infection in human cells do not bind the proteins targeted by the virus, indicating that these “network drugs” rely on network mechanisms, targeting proteins near the viral module.</p>
 
 <div align="center">
 <img style="margin-top:20px;margin-bottom:20px;width:100%" src="/img/research-reason.png" />
@@ -239,20 +220,25 @@
 
 <h4 id="example-related-publications-2">Example related publications:</h4>
 
-<p><a href="https://doi.org/10.1073/pnas.1818013116">Evolution of Resilience in Protein Interactomes Across the Tree of Life</a><br />
+<p><a href="https://www.medrxiv.org/content/10.1101/2022.12.07.22283238">Deep Learning for Diagnosing Patients with Rare Genetic Diseases</a><br />
+<a href="https://doi.org/10.1073/pnas.1818013116">Evolution of Resilience in Protein Interactomes Across the Tree of Life</a><br />
+<a href="https://www.nature.com/articles/s41467-021-21770-8">Identification of Disease Treatment Mechanisms through the Multiscale Interactome</a><br />
 <a href="https://www.nature.com/articles/s41467-018-05469-x">Network Enhancement as a General Method to Denoise Weighted Biological Networks</a><br />
-<a href="http://psb.stanford.edu/psb-online/proceedings/psb18/agrawal.pdf">Large-Scale Analysis of Disease Pathways in the Human Interactome</a></p>
+<a href="https://www.biorxiv.org/content/10.1101/2020.02.25.960302v1">Discovering Novel Cell Types Across Heterogeneous Single-Cell Experiments</a><br />
+<a href="http://psb.stanford.edu/psb-online/proceedings/psb23/eyuboglu.pdf">Mutual Interactors as a Principle for Phenotype Discovery in Molecular Interaction Networks</a><br />
+<a href="https://academic.oup.com/bioinformatics/article/33/14/i190/3953967/Predicting-multicellular-function-through-multi">Predicting Multicellular Function Through Multi-Layer Tissue Networks</a><br />
+<a href="https://www.cell.com/cell-systems/fulltext/S2405-4712(21)00488-9">Sparse Dictionary Learning Recovers Pleiotropy From Human Cell Fitness Screens</a></p>
 
 <hr />
 
-<h2 id="ai4science-accelerating-the-discovery-of-safe-and-effective-medicines">AI4Science: Accelerating the discovery of safe and effective medicines</h2>
+<h2 id="better-drug-design-molecule-optimization-high-throughput-perturbations-interaction-screening">Better Drug Design, Molecule Optimization, High-Throughput Perturbations, Interaction Screening</h2>
 
-<p>For centuries, the scientific method—the fundamental practice of science that scientists use to explain the natural world systematically and logically—has remained essentially the same. We have already made substantial progress in using machine learning to change that.</p>
+<p>For centuries, the scientific method — the fundamental practice of science that scientists use to explain the natural world systematically and logically — has remained essentially the same. We have already made substantial progress in using machine learning to change that. Within the context of drug development, we develop methods that accelerate the discovery of safer and more effective medicines and advance therapeutic science. We ask fundamental questions about machine learning methods needed to advance therapeutic science, and, critically, also conduct in-depth work that integrates algorithmic advances with experimental collaborators.</p>
 
-<p>Within the context of drug development, we develop methods that accelerate the discovery of safer and more effective medicines. For example, it can take 15 years and cost $1 billion for a new drug to reach patients, as the question of identifying which diseases a new drug (compound) could treat is tremendously complex. However, diseases are not independent of each other, and many genes are shared between often quite distinct conditions. Similarly, the effects of drugs are not limited to the molecules to which they directly bind in the body; instead, these effects spread throughout the molecular networks in which they act. Therefore, the effect of a drug on a disease is inherently a network phenomenon. We leverage this understanding to develop AI assistants for drug discovery and development.</p>
+<p>The study of how two or more molecular structures (e.g., drug and enzyme or protein) fit together is typically accomplished by either molecular docking or perturbation-response and chemo-genetic profiling, both of which are beginning to harness the power of existing machine learning. At this moment, however, molecular modeling is conducted in a highly constrained design space, owing to the lack of interactomes in different cell types and the limited power to explore larger design spaces. We study the role of cellular and tissue contexts in interactomes, particularly those affected by the disease, and design machine learning model to help design chemical and genetic perturbations that reverse disease effects. We develop predictive and generative AI models that produce interpretable outputs and actionable hypotheses to maximize the yield of downstream experiments in the lab.</p>
 
 <div align="center">
-<img style="margin-bottom:20px;margin-top:20px;width:100%" src="/img/research-accelerate1.png" />
+<img style="margin-bottom:20px;margin-top:20px;width:100%" src="/img/research-drugxAI.png" />
 </div>
 
 <h4 id="example-related-publications-3">Example related publications:</h4>
@@ -260,12 +246,11 @@
 <p><a href="https://arxiv.org/abs/2004.07229">Network Medicine Framework for Identifying Drug Repurposing Opportunities for COVID-19</a><br />
 <a href="https://academic.oup.com/bioinformatics/article/34/13/i457/5045770">Modeling Polypharmacy Side Effects with Graph Convolutional Networks</a><br />
 <a href="https://www.nature.com/articles/s41467-018-04948-5">Prioritizing Network Communities</a><br />
-<a href="https://openreview.net/pdf?id=HJlWWJSFDH">Pre-training Graph Neural Networks</a><br />
-<a href="https://www.biorxiv.org/content/10.1101/2020.02.25.960302v1">Discovering Novel Cell Types Across Heterogeneous Single-Cell Experiments</a><br />
+<a href="https://ieeexplore.ieee.org/document/9916585">Extending the Nested Model for User-Centric XAI: A Design Study on GNN-based Drug Repurposing</a><br />
+<a href="https://doi.org/10.1093/bioinformatics/btaa1005">DeepPurpose: A Deep Learning Library for Drug-Target Interaction Prediction</a><br />
+<a href="https://www.nature.com/articles/s43588-021-00138-4">Population-Scale Identification of Differential Adverse Events Before and During a Pandemic</a><br />
 <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004552">Gene Prioritization by Compressive Data Fusion and Chaining</a><br />
-<a href="https://www.tandfonline.com/doi/full/10.4161/sysb.29072">Matrix Factorization-based Data Fusion for Drug-induced Liver Injury Prediction</a><br />
-<a href="https://www.nature.com/articles/srep03202">Discovering Disease-disease Associations by Fusing Systems-level Molecular Data</a><br />
-<a href="https://psb.stanford.edu/psb-online/proceedings/psb16/zitnik.pdf">Collective Pairwise Classification for Multi-way Analysis of Disease and Drug Data</a></p>
+<a href="https://www.nature.com/articles/s41467-017-01642-w">A Comprehensive Structural, Biochemical and Biological Profiling of the Human NUDIX Hydrolase Family</a></p>
 
 <h4 id="podcasts-1">Podcasts:</h4>
 
@@ -274,13 +259,35 @@
 <a href="https://omny.fm/shows/pharmacy-podcast-network/data-science-a-i-futuredose-tech">FutureDose Tech</a><br />
 <a href="https://www.jclinic.mit.edu/post/a-sweeping-computational-search-for-drugs-against-covid-19">MIT AI Cures Blog</a></p>
 
+<h4 id="initiatives">Initiatives:</h4>
+
+<p><a href="https://ai4sciencecommunity.github.io/">AI4Science</a></p>
+
 <hr />
 
-<h2 id="modern-data-management-ai-infrastructure-and-ai-ready-datasets-for-biomedical-discovery">Modern data management: AI infrastructure and AI-ready datasets for biomedical discovery</h2>
+<h2 id="robust-foundation-modern-data-management-scalable-ai-infrastructure">Robust Foundation, Modern Data Management, Scalable AI Infrastructure</h2>
 
-<p>The attention of the ML community to therapeutics remains relatively limited compared to application areas such as natural language processing and computer vision, even though therapeutics offer many challenging problems and applications of immense impact. We posit that this is due to the following key challenges: (1) The lack of high-quality therapeutic datasets and biomedical knowledge prevents researchers from formulating relevant therapeutic tasks as solvable machine-learning problems—the challenge is how to computationally operationalize these data to make them amenable to ML; (2) Datasets are of many different types, including experimental readouts, curated annotations, and metadata, and are scattered around the biorepositories—the challenge for non-domain experts is how to identify, process, and curate datasets relevant to a task of interest; and (3) Despite promising prediction accuracies of computational models, their use in practice, such as for rare diseases and novel drugs in development, is hindered—the challenge is how to assess algorithmic advances in a manner that allows for robust and fair model comparison and represents what one would expect in a  real-world deployment or clinical implementation.</p>
+<p>Faced with skyrocketing costs and high failure rates, researchers are looking at ways to make drug discovery and development more efficient through automation, AI and new data modalities. AI has become woven into therapeutic discovery since the emergence of deep learning. To support the adoption of AI in therapeutic science, we need a composable machine learning foundation spanning the stages of drug discovery that can help implement AI methods most suitable for drug discovery applications.</p>
 
-<p>To address these challenges, we founded <a href="https://zitniklab.hms.harvard.edu/TDC/">Therapeutics Data Commons (TDC)</a> <a href="/publications/slides/TDC-futuretx20.pdf">[Slides]</a>, an open-science data platform with AI/ML-ready datasets and learning tasks for therapeutics. Therapeutics Data Commons is a collection of machine learning tasks spread across the entire range of therapeutics. Datasets and benchmarks in TDC provide a systematic model development and evaluation framework that allows more machine learning researchers to contribute to the field. We envision that TDC can considerably accelerate machine-learning model development, validation, and transition into production and clinical implementation.</p>
+<p>Although biological and chemical research generates a wealth of data, most generated datasets are not readily suitable for AI analyses because they are incomplete.</p>
+
+<ul>
+  <li>
+    <p>First, the lack of AI-ready datasets and standardized knowledge representations prevent scientists from formulating relevant questions in drug discovery as solvable AI tasks — posing the challenge of how to link scientific workflows, protocols and other information into computable knowledge.</p>
+  </li>
+  <li>
+    <p>Second, datasets can be multimodal and of many different types, including experimental readouts, curated annotations and metadata, and are scattered around biochemical repositories — posing the challenge of how to collect and annotate datasets to establish best practices for AI analysis, as poor understanding of the data can lead to misinterpreted results and misused methods.</p>
+  </li>
+  <li>
+    <p>Finally, despite the promising in silico performance of AI methods, their use in practice, such as for rare diseases and novel drugs in development, has been limited — posing the challenge of how to assess methodological advances in a manner that allows robust and transparent comparison and represents what one would expect in a real-world implementation.</p>
+  </li>
+</ul>
+
+<p>To this end, AI methods and datasets must be integrated, and data stewardship strategies must be developed to reduce data-processing and data-sharing burdens. This includes optimally balanced and algorithmically sound approaches to ensure that biochemical information (including genomic data) is findable, accessible, interoperable and reusable10, as well as engaging communities in determining what data are needed.</p>
+
+<p>We founded <a href="https://tdcommons.ai/">Therapeutics Data Commons (TDC)</a>, an initiative to access and evaluate AI capability across therapeutic modalities and stages of discovery, establishing a foundation for understanding which AI methods are most suitable for advancing therapeutic science and why. At its core, the Commons is a collection of AI-solvable tasks, AI-ready datasets, and curated benchmarks that cover a wide range of therapeutic products (AI tasks for small molecules, including drug response and synergy prediction, AI tasks for macromolecules, including paratope and epitope prediction; and AI tasks for cell and gene therapies, including CRISPR repair prediction) across all stages of discovery (target-discovery tasks, such as identification of disease-associated therapeutic targets; activity-modeling tasks, such as quantum-mechanical energy prediction; drug efficacy and safety tasks, such as molecule generation; and manufacturing tasks, such as yield outcome prediction).</p>
+
+<p>Achieving broad use of AI in therapeutic science requires coordinated community initiatives that earn the trust of diverse groups of scientists. The Commons creates a meeting point between biochemical and AI scientists. This makes it possible to look at AI from different perspectives and with a wide variety of mindsets across traditional boundaries and multiple disciplines. We envision that the Commons can considerably accelerate machine learning model development, validation, and transition into biomedical and clinical implementation.</p>
 
 <div align="center">
 <a href="https://zitniklab.hms.harvard.edu/TDC/"><img style="margin-bottom:20px;margin-top:20px;width:100%" src="/img/futuretx20-TDC.png" /></a>
@@ -292,10 +299,12 @@
 
 <h4 id="example-related-publications-4">Example related publications:</h4>
 
-<p><a href="https://arxiv.org/abs/2102.09548">Therapeutics Data Commons: Machine Learning Datasets and Tasks for Therapeutics</a><br />
+<p><a href="https://arxiv.org/abs/2102.09548">Therapeutics Data Commons: Machine Learning Datasets and Tasks for Therapeutics</a> [<a href="/publications/slides/TDC-futuretx20.pdf">Slides</a>]<br />
+<a href="https://biorxiv.org/cgi/content/short/2022.05.01.489928">Building a Knowledge Graph to Enable Precision Medicine</a><br />
+<a href="https://arxiv.org/abs/2208.09339">Evaluating Explainability for Graph Neural Networks</a><br />
 <a href="https://jmlr.csail.mit.edu/papers/volume13/zitnik12a/zitnik12a.pdf">NIMFA: A Python Library for Non-negative Matrix Factorization</a></p>
 
-<h4 id="initiatives">Initiatives:</h4>
+<h4 id="initiatives-1">Initiatives:</h4>
 
 <p><a href="https://zitniklab.hms.harvard.edu/TDC/">Therapeutics Data Commons</a></p>
 
