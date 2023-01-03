@@ -4,29 +4,29 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Unified Framework for Fair and Stable Graph Representation Learning - Zitnik Lab</title>
+    <title>Zero-shot Prediction of Therapeutic Use <br/>with Human-Centered Geometric Deep Learning - Zitnik Lab</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="shortcut icon" type="image/png"
            href="/favicon.png" 
     />
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Unified Framework for Fair and Stable Graph Representation Learning | Zitnik Lab</title>
+<title>Zero-shot Prediction of Therapeutic Use with Human-Centered Geometric Deep Learning | Zitnik Lab</title>
 <meta name="generator" content="Jekyll v3.8.6" />
-<meta property="og:title" content="Unified Framework for Fair and Stable Graph Representation Learning" />
+<meta property="og:title" content="Zero-shot Prediction of Therapeutic Use with Human-Centered Geometric Deep Learning" />
 <meta name="author" content="Marinka Zitnik" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Artificial Intelligence (AI), Medicine, Science, and Drug Discovery" />
-<meta property="og:description" content="Artificial Intelligence (AI), Medicine, Science, and Drug Discovery" />
-<link rel="canonical" href="https://zitniklab.hms.harvard.edu/projects/NIFTY/" />
-<meta property="og:url" content="https://zitniklab.hms.harvard.edu/projects/NIFTY/" />
+<meta name="description" content="Therapeutic use prediction, knowledge graphs, artificial intelligence, machine learning" />
+<meta property="og:description" content="Therapeutic use prediction, knowledge graphs, artificial intelligence, machine learning" />
+<link rel="canonical" href="https://zitniklab.hms.harvard.edu/projects/TxGNN/" />
+<meta property="og:url" content="https://zitniklab.hms.harvard.edu/projects/TxGNN/" />
 <meta property="og:site_name" content="Zitnik Lab" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Unified Framework for Fair and Stable Graph Representation Learning" />
+<meta property="twitter:title" content="Zero-shot Prediction of Therapeutic Use with Human-Centered Geometric Deep Learning" />
 <meta name="twitter:site" content="@marinkazitnik" />
 <meta name="twitter:creator" content="@Marinka Zitnik" />
 <script type="application/ld+json">
-{"url":"https://zitniklab.hms.harvard.edu/projects/NIFTY/","author":{"@type":"Person","name":"Marinka Zitnik"},"headline":"Unified Framework for Fair and Stable Graph Representation Learning","description":"Artificial Intelligence (AI), Medicine, Science, and Drug Discovery","@type":"WebPage","@context":"https://schema.org"}</script>
+{"url":"https://zitniklab.hms.harvard.edu/projects/TxGNN/","author":{"@type":"Person","name":"Marinka Zitnik"},"headline":"Zero-shot Prediction of Therapeutic Use with Human-Centered Geometric Deep Learning","description":"Therapeutic use prediction, knowledge graphs, artificial intelligence, machine learning","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
 <script>
@@ -121,7 +121,7 @@
         <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
     <div class="hero-body">
         <div class="container">
-            <p class="title is-2">Unified Framework for Fair and Stable Graph Representation Learning</p>
+            <p class="title is-2">Zero-shot Prediction of Therapeutic Use <br/>with Human-Centered Geometric Deep Learning</p>
             <p class="subtitle is-3"></p>
             
         </div>
@@ -141,92 +141,63 @@
                     
 <div class="content">
     <div class="box has-background-info has-text-white">
-As the representations output by Graph Neural Networks (GNNs) are increasingly employed in real-world applications, it becomes important to ensure that these representations are fair and stable. We establish a key connection between counterfactual fairness and stability and use it to develop a novel framework, NIFTY (uNIfying Fairness and stabiliTY), which can be used with any GNN to learn fair and stable representations. 
+<p>
+Driven by aging populations and increasing insight into disease burden, we need treatments that can directly improve human health. Several thousand diseases affect humans of which only about 500 have any U.S. Food and Drug Administration-approved treatment (source: NIH’s National Center for Advancing Translational Sciences). Even for diseases with treatments, finding new drugs can give alternative treatment options with less severe side effects in patients and replacements for drugs that are ineffective in subsets of patients.
+
+Predicting therapeutic use of candidate drugs remains, however, a difficult task that current algorithms often fail to perform accurately, leaving many diseases with no existing treatments inaccessible to machine learning.   
+</p>
+<p>
+Here we leverage recent advances in geometric deep learning and human-centered AI to introduce TxGNN, a flexible model to identify therapeutic opportunities for diseases with few or no treatments available and limited molecular understanding.
+
+TxGNN is a graph neural network pre-trained on a comprehensive knowledge graph of 17,080 clinically-recognized diseases and 7,957 therapeutic candidates that can process various therapeutic tasks in a unified formulation. Once trained, we show that TxGNN can perform zero-shot inference on novel diseases without introducing additional parameters or requiring fine-tuning on ground truth labels. 
+</p>
+<p>
+TxGNN improves by up to 49.2% on indication tasks and 35.1% on contraindication tasks over existing methods and predicts therapeutic use for new therapies developed since June 2021. We develop an interpretable human-AI interaction interface for TxGNN, evaluate its usability in a study with human experts, and use it to examine TxGNN's novel predictions in a large electronic health record system. TxGNN paves the way to improvements on many therapeutic tasks for neglected diseases.
+</p>
 </div>
 
-<p>We establish a key connection between counterfactual fairness and stability and leverage it to develop NIFTY (uNIfying Fairness and stabiliTY), a novel framework that can be used with any GNN to learn fair and stable representations.</p>
+<center>
+<img src="/img/TxGNN-method.png" />
+</center>
 
-<p>We introduce a novel objective function that simultaneously accounts for fairness and stability and develop a layer-wise weight normalization using the Lipschitz constant to enhance neural message passing in GNNs. In doing so, we enforce fairness and stability both in the objective function as well as in the GNN architecture. Further, we show theoretically that our layer-wise weight normalization promotes counterfactual fairness and stability in the resulting representations.</p>
+<hr />
 
-<p>We introduce three new graph datasets comprising of high-stakes decisions in criminal justice and financial lending domains. Extensive experimentation with the above datasets demonstrates the efficacy of our framework.</p>
+<center>
+<img src="/img/TxGNN-results1.png" />
+</center>
 
 <h2 id="publication">Publication</h2>
 
-<p><a href="https://proceedings.mlr.press/v161/agarwal21b.html">Towards a Unified Framework for Fair and Stable Graph Representation Learning</a><br />
-Chirag Agarwal, Himabindu Lakkaraju*, Marinka Zitnik*<br />
-<em>Conference on Uncertainty in Artificial Intelligence, UAI</em> 2021 [<a href="https://arxiv.org/abs/2102.13186">arXiv</a>] [<a href="/publications/posters/NIFTY-UAI21.pdf">poster</a>] [<a href="https://icmlsrml2021.github.io/">ICML 2021 Socially Responsible ML</a>]</p>
+<p><a href="#">Zero-shot Prediction of Therapeutic Use with Human-Centered Geometric Deep Learning</a><br />
+Kexin Huang*, Payal Chandak*, Qianwen Wang, Benjamin Glicksberg, Nils Gehlenborg and Marinka Zitnik<br />
+<em>In Review</em> 2023 <a href="">[arXiv]</a></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{agarwal2021towards,
-  title={Towards a Unified Framework for Fair and Stable Graph Representation Learning},
-  author={Agarwal, Chirag and Lakkaraju, Himabindu and Zitnik, Marinka},
-  booktitle={Proceedings of Conference on Uncertainty in Artificial Intelligence, UAI},
-  year={2021}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{huang2023zeroshot,
+  title={Zero-shot Prediction of Therapeutic Use with Human-Centered Geometric Deep Learning},
+  author={Huang, Kexin and Chandak, Payal and Wang, Qianwen and Glicksberg, Benjamin and Gehlenborg, Nils and Zitnik, Marinka},
+  journal={},
+  volume={},
+  number={},
+  pages={},
+  year={2023},
+  publisher={}
 }
 </code></pre></div></div>
 
-<h2 id="motivation">Motivation</h2>
-
-<p>Over the past decade, there has been a surge of interest in leveraging GNNs for graph representation learning. GNNs
-have been used to learn powerful representations that enabled critical predictions in downstream applications—e.g.,
-predicting protein-protein interactions, drug repurposing, crime forecasting, news and product recommendations.</p>
-
-<p>As GNNs are increasingly implemented in real-world applications, it becomes important to ensure that these models and
-the resulting representations are safe and reliable. More specifically, it is important to ensure that:</p>
-
-<ul>
-  <li>these models and the representations they produce are not perpetrating undesirable discriminatory biases (i.e., <strong>they are fair</strong>), and</li>
-  <li>these models and the representations they produce are robust to attacks resulting from small perturbations to the graph structure and node attributes (i.e., <strong>they are stable</strong>).</li>
-</ul>
-
-<h2 id="nifty-framework">NIFTY framework</h2>
-
-<p>We first identify a key connection between counterfactual fairness and stability. While stability accounts
-for robustness w.r.t. small random perturbations to node attributes and/or edges, counterfactual fairness accounts for
-robustness w.r.t. modifications of the sensitive attribute.</p>
-
-<p>We leverage this connection to develop NIFTY that can be used with any existing GNN model to learn fair and stable
-representations. Our framework exploits the aforementioned connection to enforce fairness and stability both in the
-objective function as well as in the GNN architecture.</p>
-
-<p>More specifically, we introduce a novel objective function which
-simultaneously optimizes for counterfactual fairness and stability by maximizing the similarity between representations
-of the original nodes in the graph, and their counterparts in the augmented graph. Nodes in the augmented
-graph are generated by slightly perturbing the original node attributes and edges or by considering counterfactuals of
-the original nodes where the value of the sensitive attribute is modified. We also develop a novel method for improving
-neural message passing by carrying out layer-wise weight normalization using the Lipschitz constant.</p>
-
-<p>We theoretically show that this normalization promotes counterfactual fairness and stability of learned representations. To the best of our
-knowledge, this work is the first to tackle the problem of learning node representations that are both fair and stable.</p>
-
-<p><img align="center" src="/img/nifty.png" /></p>
-
-<p>The figure above gives an overview of NIFTY. NIFTY can learn node representations that are both fair and stable (i.e., invariant to the
-sensitive attribute value and perturbations to the graph structure and non-sensitive attributes) by maximizing the
-similarity between representations from diverse augmented graphs.</p>
-
-<h2 id="datasets">Datasets</h2>
-
-<p>We introduce and experiment with <a href="https://github.com/chirag126/nifty/tree/main/dataset">three new graph datasets</a> comprising of critical decisions in criminal justice (if a
-defendant should be released on bail) and financial lending (if an individual should be given loan) domains.</p>
-
-<ul>
-  <li><a href="https://github.com/chirag126/nifty/tree/main/dataset"><strong>German credit graph</strong></a> has 1,000 nodes representing clients in a  German bank that are connected based on the similarity of their credit accounts. The task is to classify clients into good vs. bad credit risks considering clients’ gender as the sensitive attribute.</li>
-  <li><a href="https://github.com/chirag126/nifty/tree/main/dataset"><strong>Recidivism graph</strong></a> has 18,876 nodes representing defendants who got released on bail at the U.S state courts during 1990-2009. Defendants are connected based on the similarity of past criminal records and demographics. The task is to classify defendants into bail (i.e., unlikely to commit a violent crime if released) vs. no bail (i.e., likely to commit a violent crime) considering race information as the protected attribute.</li>
-  <li><a href="https://github.com/chirag126/nifty/tree/main/dataset"><strong>Credit defaulter graph</strong></a> has 30,000 nodes representing individuals that we connected based on the similarity of their spending and payment patterns. The task is to predict whether an individual will default on the credit card payment or not while considering age as the sensitive attribute.</li>
-</ul>
-
 <h2 id="code">Code</h2>
 
-<p>Source code is available in the <a href="https://github.com/chirag126/nifty">GitHub repository</a>.</p>
+<p>PyTorch implementation together with documentation and examples of usage is available in the <a href="https://github.com/mims-harvard/TxGNN">GitHub repository</a>.</p>
 
 <h2 id="authors">Authors</h2>
 
 <ul>
-  <li><a href="https://chirag126.github.io/">Chirag Agarwal</a></li>
-  <li><a href="https://himalakkaraju.github.io/">Himabindu Lakkaraju</a></li>
+  <li><a href="https://www.kexinhuang.com/">Kexin Huang*</a></li>
+  <li><a href="">Payal Chandak*</a></li>
+  <li><a href="https://qianwen.info/">Qianwen Wang</a></li>
+  <li><a href="">Benjamin S. Glicksberg</a></li>
+  <li><a href="http://gehlenborglab.org/">Nils Gehlenborg</a></li>
   <li><a href="https://zitniklab.hms.harvard.edu/">Marinka Zitnik</a></li>
 </ul>
-
 
 </div>
                 </div>

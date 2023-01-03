@@ -15,6 +15,39 @@
   "publications": [
 
      {
+      "key": "submission23a",
+      "author": ["Hanchen Wang*", "Tianfan Fu*", "Yuanqi Du*", "Wenhao Gao", "Kexin Huang", "Ziming Liu", "Payal Chandak", "Shengchao Liu", "Peter Van Katwyk", "Andreea Deac", "Anima Anandkumar", "Karianne Bergen", "Carla P. Gomez", "Shirley Ho", "Pushmeet Kohli", "Joan Lasenby", "Jure Leskovec", "Tie-Yan Liu", "Arjun Manrai", "Debora Marks", "Bharath Ramsundar", "Le Song", "Jimeng Sun", "Jian Tang", "Petar Velickovic", "Max Welling", "Connor W. Coley", "Yoshua Bengio", "Marinka Zitnik"],
+      "title": "Enabling Scientific Discovery with Artificial Intelligence",
+      "venue": "Nature (in press)",
+      "year": "2023",
+      "thumbnail": "AI4Science-nature23.png",
+      "type": "journal",
+      "pdf": "",
+      "url": "",
+      "supp":
+      {
+        "AI4Science Initiative": "https://ai4sciencecommunity.github.io/"
+      }
+    },
+
+     {
+      "key": "submission22h",
+      "author": ["Yasha Ektefaie*", "George Dasoulas*", "Ayush Noori", "Maha Farhat", "Marinka Zitnik"],
+      "title": "Multimodal Learning with Graphs",
+      "venue": "Nature Machine Intelligence (in press)",
+      "year": "2023",
+      "thumbnail": "MGL22.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2209.03299",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2209.03299",
+        "project website": "https://yashaektefaie.github.io/mgl/"
+      }
+    },
+
+     {
       "key": "submission21f",
       "author": ["Michelle M. Li", "Kexin Huang", "Marinka Zitnik"],
       "title": "Graph Representation Learning in Biomedicine and Healthcare",
@@ -49,23 +82,6 @@
     },
 
      {
-      "key": "submission22h",
-      "author": ["Yasha Ektefaie*", "George Dasoulas*", "Ayush Noori", "Maha Farhat", "Marinka Zitnik"],
-      "title": "Multimodal Learning with Graphs",
-      "venue": "Nature Machine Intelligence (in press)",
-      "year": "2022",
-      "thumbnail": "MGL22.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2209.03299",
-      "type": "journal",
-      "supp":
-      {
-        "arXiv": "https://arxiv.org/abs/2209.03299",
-        "project website": "https://yashaektefaie.github.io/mgl/"
-      }
-    },
-
-     {
       "key": "submission22c",
       "author": ["Xiang Zhang*", "Ziyuan Zhao*", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
       "title": "Self-Supervised Contrastive Pre-Training For Time Series via Time-Frequency Consistency",
@@ -88,7 +104,7 @@
       "author": ["Jiali Cheng", "George Dasoulas", "Huan He", "Chirag Agarwal", "Marinka Zitnik"],
       "title": "GNNDelete: A General Unlearning Strategy for Graph Neural Networks",
       "venue": "In Review ",
-      "year": "2022",
+      "year": "2023",
       "thumbnail": "TF-C22.png",
       "pdf": "",
       "url": "",
@@ -103,7 +119,7 @@
       "author": ["Emily Alsentzer*", "Michelle M. Li*", "Shilpa N. Kobren", "Undiagnosed Diseases Network", "Isaac S. Kohane", "Marinka Zitnik"],
       "title": "Deep Learning for Diagnosing Patients with Rare Genetic Diseases",
       "venue": "In Review ",
-      "year": "2022",
+      "year": "2023",
       "thumbnail": "SHEPHERD23.png",
       "pdf": "",
       "url": "https://www.medrxiv.org/content/10.1101/2022.12.07.22283238",
@@ -122,7 +138,7 @@
       "author": ["Payal Chandak*", "Kexin Huang*", "Marinka Zitnik"],
       "title": "Building a Knowledge Graph to Enable Precision Medicine",
       "venue": "In Review",
-      "year": "2022",
+      "year": "2023",
       "thumbnail": "PrimeKG22.png",
       "pdf": "",
       "url": "https://biorxiv.org/cgi/content/short/2022.05.01.489928",
@@ -157,7 +173,7 @@
       "author": ["Ayush Noori", "Amelia L. M. Tan", "Michelle M. Li", "Marinka Zitnik"],
       "title": "metapaths: Similarity Search in Heterogeneous Knowledge Graphs via Meta Paths",
       "venue": "In Review",
-      "year": "2022",
+      "year": "2023",
       "thumbnail": "Milieu23.png",
       "pdf": "",
       "url": "",
@@ -175,7 +191,7 @@
       "author": ["Yucong Lin*", "Keming Lu*", "Sheng Yu", "Tianxi Cai", "Marinka Zitnik"],
       "title": "Multimodal Learning on Graphs for Disease Relation Extraction",
       "venue": "In Review",
-      "year": "2022",
+      "year": "2023",
       "thumbnail": "raindrop22.png",
       "pdf": "",
       "url": "https://arxiv.org/abs/2203.08893",
@@ -316,8 +332,8 @@
       "key": "submission22g",
       "author": ["Chirag Agarwal", "Owen Queen", "Himabindu Lakkaraju", "Marinka Zitnik"],
       "title": "Evaluating Explainability for Graph Neural Networks",
-      "venue": "In Review",
-      "year": "2022",
+      "venue": "Scientific Data (in press)",
+      "year": "2023",
       "thumbnail": "GraphXAI22.png",
       "pdf": "",
       "url": "https://arxiv.org/abs/2208.09339",
@@ -403,7 +419,7 @@
       "author": ["Ryan T. Scott", "...", "Marinka Zitnik", "Sylvain V. Costes"],
       "title": "Beyond Low Earth Orbit: Biomonitoring, Artificial Intelligence, and Precision Space Health",
       "venue": "In Review",
-      "year": "2022",
+      "year": "2023",
       "thumbnail": "spacehealth21.png",
       "pdf": "",
       "url": "https://arxiv.org/abs/2112.12554",
@@ -420,7 +436,7 @@
       "author": ["Lauren M. Sanders", "...", "Marinka Zitnik", "Sylvain V. Costes"],
       "title": "Beyond Low Earth Orbit: Biological Research, Artificial Intelligence, and Self-Driving Labs",
       "venue": "In Review",
-      "year": "2022",
+      "year": "2023",
       "thumbnail": "spacebiology21.png",
       "pdf": "",
       "url": "https://arxiv.org/abs/2112.12582",
@@ -437,7 +453,7 @@
       "author": ["Matthew B. A. McDermott", "Brendan Yap", "Peter Szolovits", "Marinka Zitnik"],
       "title": "Structure Inducing Pre-Training",
       "venue": "In Review",
-      "year": "2022",
+      "year": "2023",
       "thumbnail": "subgnn20.png",
       "pdf": "papers/SIPT22.pdf",
       "url": "https://arxiv.org/abs/2103.10334",
