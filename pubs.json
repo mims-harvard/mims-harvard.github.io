@@ -88,11 +88,12 @@
       "venue": "Proceedings of Neural Information Processing Systems, NeurIPS",
       "year": "2022",
       "thumbnail": "TF-C22.png",
-      "pdf": "",
+      "pdf": "papers/TF-C-self_supervised_contrastive_main.pdf",
       "url": "https://openreview.net/pdf?id=OJ4mMfGKLN",
       "type": "journal",
       "supp":
       {
+        "supplementary": "papers/TF-C-self_supervised_contrastive_SI.pdf",
         "arXiv": "https://arxiv.org/abs/2206.08496",
         "code": "https://github.com/mims-harvard/TFC-pretraining",
         "project website": "/projects/TF-C"
@@ -103,14 +104,15 @@
       "key": "submission22l",
       "author": ["Jiali Cheng", "George Dasoulas", "Huan He", "Chirag Agarwal", "Marinka Zitnik"],
       "title": "GNNDelete: A General Unlearning Strategy for Graph Neural Networks",
-      "venue": "In Review ",
+      "venue": "International Conference on Learning Representations, ICLR",
       "year": "2023",
-      "thumbnail": "TF-C22.png",
+      "thumbnail": "GNNDelete23.png",
       "pdf": "",
-      "url": "",
+      "url": "https://openreview.net/pdf?id=X9yCkmT5Qrl",
       "type": "journal",
       "supp":
       {
+        "project website": "/projects/GNNDelete"
       }
     },
 
@@ -137,11 +139,11 @@
       "key": "submission22b",
       "author": ["Payal Chandak*", "Kexin Huang*", "Marinka Zitnik"],
       "title": "Building a Knowledge Graph to Enable Precision Medicine",
-      "venue": "In Review",
+      "venue": "Scientific Data",
       "year": "2023",
       "thumbnail": "PrimeKG22.png",
-      "pdf": "",
-      "url": "https://biorxiv.org/cgi/content/short/2022.05.01.489928",
+      "pdf": "papers/PrimeKG-scientificdata23.pdf",
+      "url": "https://www.nature.com/articles/s41597-023-01960-3",
       "type": "journal",
       "supp":
       {
