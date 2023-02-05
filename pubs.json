@@ -48,6 +48,24 @@
     },
 
      {
+      "key": "submission21e",
+      "author": ["Matthew B. A. McDermott", "Brendan Yap", "Peter Szolovits", "Marinka Zitnik"],
+      "title": "Structure Inducing Pre-Training",
+      "venue": "Nature Machine Intelligence (in press)",
+      "year": "2023",
+      "thumbnail": "subgnn20.png",
+      "pdf": "papers/SIPT22.pdf",
+      "url": "https://arxiv.org/abs/2103.10334",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2103.10334",
+        "code": "https://github.com/mmcdermott/structure_inducing_pre-training",
+        "project website": "/projects/SIPT"
+      }
+    },
+
+     {
       "key": "submission21f",
       "author": ["Michelle M. Li", "Kexin Huang", "Marinka Zitnik"],
       "title": "Graph Representation Learning in Biomedicine and Healthcare",
@@ -82,6 +100,41 @@
     },
 
      {
+      "key": "submission23b",
+      "author": ["Huan He", "Owen Queen", "Teddy Koker", "Consuelo Cuevas", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
+      "title": "Domain Adaptation for Time Series Under Feature and Label Shifts",
+      "venue": "In Review",
+      "year": "2023",
+      "thumbnail": "TF-C22.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2302.03133",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2302.03133",
+        "code": "https://github.com/mims-harvard/Raincoat",
+        "project website": "/projects/Raincoat"
+      }
+    },
+
+     {
+      "key": "submission22l",
+      "author": ["Jiali Cheng", "George Dasoulas", "Huan He", "Chirag Agarwal", "Marinka Zitnik"],
+      "title": "GNNDelete: A General Strategy for Unlearning in Graph Neural Networks ",
+      "venue": "International Conference on Learning Representations, ICLR",
+      "year": "2023",
+      "thumbnail": "GNNDelete23.png",
+      "pdf": "papers/GNNDelete-iclr23.pdf",
+      "url": "https://openreview.net/pdf?id=X9yCkmT5Qrl",
+      "type": "journal",
+      "supp":
+      {
+        "code": "https://github.com/mims-harvard/GNNDelete",
+        "project website": "/projects/GNNDelete"
+      }
+    },
+
+     {
       "key": "submission22c",
       "author": ["Xiang Zhang*", "Ziyuan Zhao*", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
       "title": "Self-Supervised Contrastive Pre-Training For Time Series via Time-Frequency Consistency",
@@ -97,22 +150,6 @@
         "arXiv": "https://arxiv.org/abs/2206.08496",
         "code": "https://github.com/mims-harvard/TFC-pretraining",
         "project website": "/projects/TF-C"
-      }
-    },
-
-     {
-      "key": "submission22l",
-      "author": ["Jiali Cheng", "George Dasoulas", "Huan He", "Chirag Agarwal", "Marinka Zitnik"],
-      "title": "GNNDelete: A General Unlearning Strategy for Graph Neural Networks",
-      "venue": "International Conference on Learning Representations, ICLR",
-      "year": "2023",
-      "thumbnail": "GNNDelete23.png",
-      "pdf": "",
-      "url": "https://openreview.net/pdf?id=X9yCkmT5Qrl",
-      "type": "journal",
-      "supp":
-      {
-        "project website": "/projects/GNNDelete"
       }
     },
 
@@ -203,6 +240,89 @@
         "arXiv": "https://arxiv.org/abs/2203.08893",
         "code": "https://github.com/Lukeming-tsinghua/REMAP",
         "project website": "/projects/REMAP"
+      }
+    },
+
+    {
+      "key": "submission22g",
+      "author": ["Chirag Agarwal", "Owen Queen", "Himabindu Lakkaraju", "Marinka Zitnik"],
+      "title": "Evaluating Explainability for Graph Neural Networks",
+      "venue": "Scientific Data (in press)",
+      "year": "2023",
+      "thumbnail": "GraphXAI22.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2208.09339",
+      "type": "journal",
+      "supp":
+      {
+        "project website": "https://zitniklab.hms.harvard.edu/projects/GraphXAI/",
+        "code": "https://github.com/mims-harvard/graphXAI"
+      }
+    },
+
+     {
+      "key": "submission21n",
+      "author": ["Ryan T. Scott", "...", "Marinka Zitnik", "Sylvain V. Costes"],
+      "title": "Beyond Low Earth Orbit: Biomonitoring, Artificial Intelligence, and Precision Space Health",
+      "venue": "Nature Machine Intelligence (in press)",
+      "year": "2023",
+      "thumbnail": "spacehealth21.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2112.12554",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2112.12554",
+        "NASA White Paper": "http://surveygizmoresponseuploads.s3.amazonaws.com/fileuploads/623127/6392490/153-51083399580a7b71d52378a0d6012a73_SandersLaurenM.pdf"
+      }
+    },
+
+     {
+      "key": "submission21m",
+      "author": ["Lauren M. Sanders", "...", "Marinka Zitnik", "Sylvain V. Costes"],
+      "title": "Beyond Low Earth Orbit: Biological Research, Artificial Intelligence, and Self-Driving Labs",
+      "venue": "Nature Machine Intelligence (in press)",
+      "year": "2023",
+      "thumbnail": "spacebiology21.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2112.12582",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2112.12582",
+        "NASA White Paper": "http://surveygizmoresponseuploads.s3.amazonaws.com/fileuploads/623127/6392490/153-51083399580a7b71d52378a0d6012a73_SandersLaurenM.pdf"
+      }
+    },
+
+     {
+      "key": "submission23c",
+      "author": ["Jun Wen", "Xiang Zhang", "Everett Rush", "Vidul A Panickan", "Xingyu Li", "Tianrun Cai", "Doudou Zhou", "Yuk-Lam Ho", "Lauren Costa", "Edmon Begoli", "Chuan Hong", "J Michael Gaziano", "Kelly Cho", "Junwei Lu", "Katherine P Liao", "Marinka Zitnik", "Tianxi Cai"],
+      "title": "Multimodal Representation Learning for Predicting Molecule–Disease Relations ",
+      "venue": "Bioinformatics",
+      "year": "2023",
+      "thumbnail": "M2REMAP23.png",
+      "pdf": "papers/M2REMAP23.pdf",
+      "url": "https://doi.org/10.1093/bioinformatics/btad085",
+      "type": "journal",
+      "supp":
+      {
+        "code": "https://github.com/celehs/M2REMAP",
+        "web server": "https://shiny.parse-health.org/drugs-diseases-dev/"
+      }
+    },
+
+     {
+      "key": "submission22m",
+      "author": ["Alexander Turchin", "Stanislav Masharsky", "Marinka Zitnik"],
+      "title": "Comparison of BERT Implementations for Natural Language Processing of Narrative Medical Documents",
+      "venue": "Informatics in Medicine Unlocked",
+      "year": "2023",
+      "thumbnail": "bert-comparison22.png",
+      "pdf": "papers/bert-comparison22.pdf",
+      "url": "https://doi.org/10.1016/j.imu.2022.101139",
+      "type": "journal",
+      "supp":
+      {
       }
     },
 
@@ -316,38 +436,6 @@
     },
 
      {
-      "key": "submission22m",
-      "author": ["Alexander Turchin", "Stanislav Masharsky", "Marinka Zitnik"],
-      "title": "Comparison of BERT Implementations for Natural Language Processing of Narrative Medical Documents",
-      "venue": "Informatics in Medicine Unlocked",
-      "year": "2022",
-      "thumbnail": "bert-comparison22.png",
-      "pdf": "papers/bert-comparison22.pdf",
-      "url": "https://doi.org/10.1016/j.imu.2022.101139",
-      "type": "journal",
-      "supp":
-      {
-      }
-    },
-
-    {
-      "key": "submission22g",
-      "author": ["Chirag Agarwal", "Owen Queen", "Himabindu Lakkaraju", "Marinka Zitnik"],
-      "title": "Evaluating Explainability for Graph Neural Networks",
-      "venue": "Scientific Data (in press)",
-      "year": "2023",
-      "thumbnail": "GraphXAI22.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2208.09339",
-      "type": "journal",
-      "supp":
-      {
-        "project website": "https://zitniklab.hms.harvard.edu/projects/GraphXAI/",
-        "code": "https://github.com/mims-harvard/graphXAI"
-      }
-    },
-
-     {
       "key": "submission22k",
       "author": ["Carlo Combi", "Beatrice Amico", "Riccardo Bellazzi", "Andreas Holzinger", "Jason H. Moore", "Marinka Zitnik", "John H.Holmes"],
       "title": "A Manifesto on Explainability for Artificial Intelligence in Medicine",
@@ -413,58 +501,6 @@
         "code": "https://github.com/mims-harvard/patient-safety",
         "supplementary information": "papers/diffAE-natcomputsci21SI.pdf",
         "Harvard Medicine News": "https://hms.harvard.edu/news/adverse-drug-effects-during-covid-19-pandemic"
-      }
-    },
-
-     {
-      "key": "submission21n",
-      "author": ["Ryan T. Scott", "...", "Marinka Zitnik", "Sylvain V. Costes"],
-      "title": "Beyond Low Earth Orbit: Biomonitoring, Artificial Intelligence, and Precision Space Health",
-      "venue": "In Review",
-      "year": "2023",
-      "thumbnail": "spacehealth21.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2112.12554",
-      "type": "journal",
-      "supp":
-      {
-        "arXiv": "https://arxiv.org/abs/2112.12554",
-        "NASA White Paper": "http://surveygizmoresponseuploads.s3.amazonaws.com/fileuploads/623127/6392490/153-51083399580a7b71d52378a0d6012a73_SandersLaurenM.pdf"
-      }
-    },
-
-     {
-      "key": "submission21m",
-      "author": ["Lauren M. Sanders", "...", "Marinka Zitnik", "Sylvain V. Costes"],
-      "title": "Beyond Low Earth Orbit: Biological Research, Artificial Intelligence, and Self-Driving Labs",
-      "venue": "In Review",
-      "year": "2023",
-      "thumbnail": "spacebiology21.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2112.12582",
-      "type": "journal",
-      "supp":
-      {
-        "arXiv": "https://arxiv.org/abs/2112.12582",
-        "NASA White Paper": "http://surveygizmoresponseuploads.s3.amazonaws.com/fileuploads/623127/6392490/153-51083399580a7b71d52378a0d6012a73_SandersLaurenM.pdf"
-      }
-    },
-
-     {
-      "key": "submission21e",
-      "author": ["Matthew B. A. McDermott", "Brendan Yap", "Peter Szolovits", "Marinka Zitnik"],
-      "title": "Structure Inducing Pre-Training",
-      "venue": "In Review",
-      "year": "2023",
-      "thumbnail": "subgnn20.png",
-      "pdf": "papers/SIPT22.pdf",
-      "url": "https://arxiv.org/abs/2103.10334",
-      "type": "journal",
-      "supp":
-      {
-        "arXiv": "https://arxiv.org/abs/2103.10334",
-        "code": "https://github.com/mmcdermott/structure_inducing_pre-training",
-        "project website": "/projects/SIPT"
       }
     },
 

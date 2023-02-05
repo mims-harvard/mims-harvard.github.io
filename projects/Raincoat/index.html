@@ -1,0 +1,851 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Domain Adaptation for Time Series Under Feature and Label Shifts - Zitnik Lab</title>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="shortcut icon" type="image/png"
+           href="/favicon.png" 
+    />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Domain Adaptation for Time Series Under Feature and Label Shifts | Zitnik Lab</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Domain Adaptation for Time Series Under Feature and Label Shifts" />
+<meta name="author" content="Marinka Zitnik" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Time series, feature shifts, distribution shifts, machine unlearning, representation learning" />
+<meta property="og:description" content="Time series, feature shifts, distribution shifts, machine unlearning, representation learning" />
+<link rel="canonical" href="https://zitniklab.hms.harvard.edu/projects/Raincoat/" />
+<meta property="og:url" content="https://zitniklab.hms.harvard.edu/projects/Raincoat/" />
+<meta property="og:site_name" content="Zitnik Lab" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Domain Adaptation for Time Series Under Feature and Label Shifts" />
+<meta name="twitter:site" content="@marinkazitnik" />
+<meta name="twitter:creator" content="@Marinka Zitnik" />
+<script type="application/ld+json">
+{"url":"https://zitniklab.hms.harvard.edu/projects/Raincoat/","author":{"@type":"Person","name":"Marinka Zitnik"},"headline":"Domain Adaptation for Time Series Under Feature and Label Shifts","description":"Time series, feature shifts, distribution shifts, machine unlearning, representation learning","@type":"WebPage","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
+<script>
+  window['ga-disable-UA-162129505-1'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-162129505-1');
+</script><!-- head scripts --></head>
+
+  <body>
+    
+<nav class="navbar is-primary" >
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item"><b>
+                Zitnik Lab
+            </b></a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+<!--                <a href="/" class="navbar-item "><b>Home</b></a>-->
+                
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a href="/#" class="navbar-link "><b>About</b></a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/bio/" class="navbar-item "><b>Bio</b></a>
+                            
+                            <a href="/contact/" class="navbar-item "><b>Contact</b></a>
+                            
+                            <a href="/talks/" class="navbar-item "><b>Recent Talks</b></a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                <a href="/research/" class="navbar-item "><b>Research</b></a>
+                    
+                
+                    
+                <a href="/publications/" class="navbar-item "><b>Publications</b></a>
+                    
+                
+                    
+                <a href="/people/" class="navbar-item "><b>Members</b></a>
+                    
+                
+                    
+                <a href="/meetings/" class="navbar-item "><b>Education</b></a>
+                    
+                
+                    
+                <a href="/DMAI/" class="navbar-item "><b>DMAI</b></a>
+                    
+                
+                    
+                <a href="/data/" class="navbar-item "><b>Datasets</b></a>
+                    
+                
+                    
+                <a href="/software/" class="navbar-item "><b>AI Tools</b></a>
+                    
+                
+                    
+                <a href="https://zitniklab.hms.harvard.edu/TDC/" class="navbar-item "><b>TDC</b></a>
+                    
+                
+                    
+                <a href="/news/" class="navbar-item "><b>News</b></a>
+                    
+                
+                    
+                <a href="/jobs/" class="navbar-item "><b>Join Us</b></a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+
+    
+        <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
+    <div class="hero-body">
+        <div class="container">
+            <p class="title is-2">Domain Adaptation for Time Series Under Feature and Label Shifts</p>
+            <p class="subtitle is-3"></p>
+            
+        </div>
+    </div>
+</section>
+    
+    
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+                <div class="column is-8">
+                    
+                    
+                    
+<div class="content">
+    <div class="box has-background-info has-text-white">
+<p>
+The transfer of models trained on labeled datasets from a source domain to unlabeled target domains is facilitated by unsupervised domain adaptation (UDA). However, when dealing with complex time series models, transferability becomes challenging due to differences in dynamic temporal structures between domains, which can result in feature shifts and gaps in time and frequency representations. Additionally, the label distributions in the source and target domains can be vastly different, making it difficult for UDA to address label shifts and recognize labels unique to the target domain.
+</p>
+</div>
+
+<p>We introduce Raincoat, a domain adaptation method for time series that can handle both feature and label shifts.</p>
+
+<center>
+<img src="/img/Raincoat-capability.png" />
+</center>
+
+<p>Despite multiple recent methods being proposed to solve the time series UniDA problem under the assumption of feature shift, none of them take into account situations where changes in the frequency domain also act as an implicit feature shift. Furthermore, the field of universal DA for time series without making assumptions about label overlap between source and target domains is an unexplored area of research.</p>
+
+<h2 id="raincoat-approach">Raincoat Approach</h2>
+
+<p>Raincoat has three steps, as illustrated in the following figure:</p>
+
+<ul>
+  <li>
+    <p><strong>Step 1: Align</strong> - It employs time and frequency-based encoders to learn time series representations, using Sinkhorn divergence for source-target feature alignment as frequency features may not have the same support.</p>
+  </li>
+  <li>
+    <p><strong>Step 2: Correct</strong> - It retrains an encoder on the target domain to correct any potential misalignments.</p>
+  </li>
+  <li>
+    <p><strong>Step 3: Inference</strong> - It calculates the difference between the aligned and corrected representations of target samples to identify unknown target samples through a bi-modality test and binary classification task.</p>
+  </li>
+</ul>
+
+<center>
+<img src="/img/Raincoat-method.png" />
+</center>
+
+<h2 id="properties-of-raincoat">Properties of Raincoat</h2>
+
+<p>To address feature shift, Raincoat takes into account implicit frequency feature shift and incorporates additional frequency feature inductive bias in the encoder, to uncover potential invariant features across domains and enhance transferability.</p>
+
+<p>To address label shifts, it employs target-specific feature encoders that retain the semantic meaning of the target domain, enabling inference without relying on user-specified input.</p>
+
+<p>Our experiments using 5 datasets and comparing with 13 state-of-the-art domain adaptation methods show that Raincoat outperforms these methods in the presence of both feature and label shifts. The following figure illustrates the superiority of Raincoat for closed-set domain adaptation.</p>
+
+<center>
+<img src="/img/Raincoat-results.png" />
+</center>
+
+<h2 id="publication">Publication</h2>
+
+<p><a href="https://arxiv.org/abs/2302.03133">Domain Adaptation for Time Series Under Feature and Label Shifts</a><br />
+Huan He, Owen Queen, Teddy Koker, Consuelo Cuevas, Theodoros Tsiligkaridis, Marinka Zitnik<br />
+<em>In Review</em> 2023 [<a href="https://arxiv.org/abs/2302.03133">arXiv</a>]</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{he2023domain,
+title = {Domain Adaptation for Time Series Under Feature and Label Shifts},
+author = {He, Huan and Queen, Owen and Koker, Teddy and Cuevas, Consuelo and Tsiligkaridis, Theodoros and Zitnik, Marinka},
+booktitle = {https://arxiv.org/abs/2302.03133},
+year      = {2023}
+}
+</code></pre></div></div>
+
+<h2 id="datasets">Datasets</h2>
+
+<ul>
+  <li>Human activity recognition datasets:
+    <ul>
+      <li><a href="https://dl.acm.org/doi/10.1145/1964897.1964918">WISDM dataset</a></li>
+      <li><a href="https://www.esann.org/sites/default/files/proceedings/legacy/es2013-84.pdf">HAR dataset</a></li>
+      <li><a href="https://dl.acm.org/doi/abs/10.1145/2809695.2809718">HHAR</a></li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="https://ieee-dataport.org/open-access/simulated-boiler-data-fault-detection-and-classification">Mechanical fault detection dataset</a></p>
+  </li>
+  <li><a href="https://pubmed.ncbi.nlm.nih.gov/10851218/">Polysomnograms of healthy subjects and of subjects with mild difficulty falling asleep and expert annotations of sleep stages</a></li>
+</ul>
+
+<h2 id="code">Code</h2>
+
+<p>PyTorch implementation together with documentation and examples of usage is available in the <a href="https://github.com/mims-harvard/Raincoat">GitHub repository</a>.</p>
+
+<h2 id="authors">Authors</h2>
+
+<ul>
+  <li><a href="https://hehuannb.github.io/">Huan He</a></li>
+  <li><a href="https://www.linkedin.com/in/owen-queen-0348561a2/">Owen Queen</a></li>
+  <li><a href="https://teddykoker.com/">Teddy Koker</a></li>
+  <li><a href="https://consuelo-cuevas.editorx.io/home">Consuelo Cuevas</a></li>
+  <li><a href="https://scholar.google.com/citations?user=hVUVOTIAAAAJ&amp;hl=en">Theodoros Tsiligkaridis</a></li>
+  <li><a href="https://zitniklab.hms.harvard.edu/">Marinka Zitnik</a></li>
+</ul>
+
+
+</div>
+                </div>
+                
+                <div class="column is-4-desktop is-12-tablet">
+                    <p class="title is-4">Latest News</p>
+
+<div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/02/20/NewPostdocs/">Welcoming New Postdoctoral Fellows</a>-->
+        <p class="card-header-title">Feb 2023: &nbsp; <span class="has-text-primary">Welcoming New Postdoctoral Fellows</span></p>
+<!--        <p class="card-header-item">Feb 2023</p>-->
+<!--        <p class="card-footer-item">Feb 20, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>A warm welcome to postdoctoral fellows Ruth Johnson and Wanxiang Shen. We are thrilled to have them joining us soon and look forward to working together.</p>
+
+</p>-->
+            <p>A warm welcome to postdoctoral fellows Ruth Johnson and Wanxiang Shen. We are thrilled to have them joining us soon and look forward to working together.</p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/02/20/NewPostdocs/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 20, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/02/08/RaincoatPreprint/">New Preprint on Distribution Shifts</a>-->
+        <p class="card-header-title">Feb 2023: &nbsp; <span class="has-text-primary">New Preprint on Distribution Shifts</span></p>
+<!--        <p class="card-header-item">Feb 2023</p>-->
+<!--        <p class="card-footer-item">Feb 8, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New preprint on <a href="https://arxiv.org/abs/2302.03133">domain adaptation for time series under feature and label shifts.</a> <a href="/projects/Raincoat/">Project website.</a></p>
+
+</p>-->
+            <p>New preprint on <a href="https://arxiv.org/abs/2302.03133">domain adaptation for time series under feature and label shifts.</a> <a href="/projects/Raincoat/">Project website.</a></p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/02/08/RaincoatPreprint/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 8, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/02/01/PrimeKG/">PrimeKG published in Scientific Data</a>-->
+        <p class="card-header-title">Feb 2023: &nbsp; <span class="has-text-primary">PrimeKG published in Scientific Data</span></p>
+<!--        <p class="card-header-item">Feb 2023</p>-->
+<!--        <p class="card-footer-item">Feb 1, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Paper introducing <a href="https://www.nature.com/articles/s41597-023-01960-3">PrimeKG, a multimodal knowledge graph for precision medicine,</a> is published in Scientific Data. <a href="/projects/PrimeKG/">Project website.</a></p>
+
+</p>-->
+            <p>Paper introducing <a href="https://www.nature.com/articles/s41597-023-01960-3">PrimeKG, a multimodal knowledge graph for precision medicine,</a> is published in Scientific Data. <a href="/projects/PrimeKG/">Project website.</a></p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/02/01/PrimeKG/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 1, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/01/20/GNNDelete/">GNNDelete published at ICLR 2023</a>-->
+        <p class="card-header-title">Jan 2023: &nbsp; <span class="has-text-primary">GNNDelete published at ICLR 2023</span></p>
+<!--        <p class="card-header-item">Jan 2023</p>-->
+<!--        <p class="card-footer-item">Jan 20, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper on <a href="https://openreview.net/pdf?id=X9yCkmT5Qrl">machine unlearning for graph neural networks</a> accepted at <a href="https://iclr.cc/">ICLR 2023.</a> <a href="/projects/GNNDelete/">Project website.</a></p>
+</p>-->
+            <p>New paper on <a href="https://openreview.net/pdf?id=X9yCkmT5Qrl">machine unlearning for graph neural networks</a> accepted at <a href="https://iclr.cc/">ICLR 2023.</a> <a href="/projects/GNNDelete/">Project website.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/01/20/GNNDelete/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jan 20, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/01/02/MutualInteractors/">New Network Principle for Molecular Phenotypes</a>-->
+        <p class="card-header-title">Jan 2023: &nbsp; <span class="has-text-primary">New Network Principle for Molecular Phenotypes</span></p>
+<!--        <p class="card-header-item">Jan 2023</p>-->
+<!--        <p class="card-footer-item">Jan 2, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper introducing <a href="https://psb.stanford.edu/psb-online/proceedings/psb23/eyuboglu.pdf">mutual interactor-based GNN for molecular phenotype prediction</a> at <a href="https://psb.stanford.edu/">PSB</a>. <a href="/projects/Milieu/">Project website.</a></p>
+</p>-->
+            <p>New paper introducing <a href="https://psb.stanford.edu/psb-online/proceedings/psb23/eyuboglu.pdf">mutual interactor-based GNN for molecular phenotype prediction</a> at <a href="https://psb.stanford.edu/">PSB</a>. <a href="/projects/Milieu/">Project website.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/01/02/MutualInteractors/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jan 2, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/12/14/SHEPHERD/">Can we shorten rare disease diagnostic odyssey?</a>-->
+        <p class="card-header-title">Dec 2022: &nbsp; <span class="has-text-primary">Can we shorten rare disease diagnostic odyssey?</span></p>
+<!--        <p class="card-header-item">Dec 2022</p>-->
+<!--        <p class="card-footer-item">Dec 14, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New preprint! <a href="https://www.medrxiv.org/content/10.1101/2022.12.07.22283238">Geometric deep learning for diagnosing patients with rare genetic diseases.</a> Implications for using deep learning on sparsely-labeled medical datasets. Thankful for this collaboration with <a href="https://zaklab.org/">Zak Lab.</a> <a href="/projects/SHEPHERD/">Project website.</a></p>
+</p>-->
+            <p>New preprint! <a href="https://www.medrxiv.org/content/10.1101/2022.12.07.22283238">Geometric deep learning for diagnosing patients with rare genetic diseases.</a> Implications for using deep learning on sparsely-labeled medical datasets. Thankful for this collaboration with <a href="https://zaklab.org/">Zak Lab.</a> <a href="/projects/SHEPHERD/">Project website.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/12/14/SHEPHERD/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 14, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/11/15/HarvardMedicineTDC/">Can AI transform the way we discover new drugs?</a>-->
+        <p class="card-header-title">Nov 2022: &nbsp; <span class="has-text-primary">Can AI transform the way we discover new drugs?</span></p>
+<!--        <p class="card-header-item">Nov 2022</p>-->
+<!--        <p class="card-footer-item">Nov 15, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Our <a href="https://hms.harvard.edu/news/can-ai-transform-way-we-discover-new-drugs">conversation with Harvard Medicine News</a> highlights recent developments and new features in <a href="https://tdcommons.ai/">Therapeutics Data Commons.</a></p>
+</p>-->
+            <p>Our <a href="https://hms.harvard.edu/news/can-ai-transform-way-we-discover-new-drugs">conversation with Harvard Medicine News</a> highlights recent developments and new features in <a href="https://tdcommons.ai/">Therapeutics Data Commons.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/11/15/HarvardMedicineTDC/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Nov 15, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/10/31/GRL-NatureBiomedEng/">New Paper in Nature Biomedical Engineering</a>-->
+        <p class="card-header-title">Oct 2022: &nbsp; <span class="has-text-primary">New Paper in Nature Biomedical Engineering</span></p>
+<!--        <p class="card-header-item">Oct 2022</p>-->
+<!--        <p class="card-footer-item">Oct 31, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper on <a href="https://www.nature.com/articles/s41551-022-00942-x">graph representation learning in biomedicine and healthcare</a> published in Nature Biomedical Engineering.</p>
+</p>-->
+            <p>New paper on <a href="https://www.nature.com/articles/s41551-022-00942-x">graph representation learning in biomedicine and healthcare</a> published in Nature Biomedical Engineering.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/10/31/GRL-NatureBiomedEng/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Oct 31, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/09/21/TDC-NatureChemBio/">New Paper in Nature Chemical Biology</a>-->
+        <p class="card-header-title">Sep 2022: &nbsp; <span class="has-text-primary">New Paper in Nature Chemical Biology</span></p>
+<!--        <p class="card-header-item">Sep 2022</p>-->
+<!--        <p class="card-footer-item">Sep 21, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Our paper on <a href="https://www.nature.com/articles/s41589-022-01131-2">artificial intelligence foundation for therapeutic science</a> is published in Nature Chemical Biology.</p>
+</p>-->
+            <p>Our paper on <a href="https://www.nature.com/articles/s41589-022-01131-2">artificial intelligence foundation for therapeutic science</a> is published in Nature Chemical Biology.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/09/21/TDC-NatureChemBio/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 21, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/09/14/TF-C-NeurIPS/">Self-Supervised Pre-Training at NeurIPS 2022</a>-->
+        <p class="card-header-title">Sep 2022: &nbsp; <span class="has-text-primary">Self-Supervised Pre-Training at NeurIPS 2022</span></p>
+<!--        <p class="card-header-item">Sep 2022</p>-->
+<!--        <p class="card-footer-item">Sep 14, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper on self-supervised contrastive pre-training accepted at <a href="https://nips.cc/Conferences/2022">NeurIPS 2022.</a> <a href="https://zitniklab.hms.harvard.edu/projects/TF-C/">Project page.</a> Thankful for this collaboration with the <a href="https://www.ll.mit.edu/">Lincoln National Laboratory</a>.</p>
+</p>-->
+            <p>New paper on self-supervised contrastive pre-training accepted at <a href="https://nips.cc/Conferences/2022">NeurIPS 2022.</a> <a href="https://zitniklab.hms.harvard.edu/projects/TF-C/">Project page.</a> Thankful for this collaboration with the <a href="https://www.ll.mit.edu/">Lincoln National Laboratory</a>.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/09/14/TF-C-NeurIPS/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 14, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/09/06/BestPaperAwardIEEEVIS/">Best Paper Honorable Mention Award at IEEE VIS</a>-->
+        <p class="card-header-title">Sep 2022: &nbsp; <span class="has-text-primary">Best Paper Honorable Mention Award at IEEE VIS</span></p>
+<!--        <p class="card-header-item">Sep 2022</p>-->
+<!--        <p class="card-footer-item">Sep 6, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Our paper on <a href="https://osf.io/yhdpv">user-centric AI of drug repurposing</a> received the <a href="http://ieeevis.org/year/2022/info/awards/best-paper-awards">Best Paper Honorable Mention Award</a> at IEEE VIS 2022. Thankful for this collaboration with <a href="http://gehlenborglab.org/">Gehlenborg Lab.</a></p>
+</p>-->
+            <p>Our paper on <a href="https://osf.io/yhdpv">user-centric AI of drug repurposing</a> received the <a href="http://ieeevis.org/year/2022/info/awards/best-paper-awards">Best Paper Honorable Mention Award</a> at IEEE VIS 2022. Thankful for this collaboration with <a href="http://gehlenborglab.org/">Gehlenborg Lab.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/09/06/BestPaperAwardIEEEVIS/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 6, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/09/05/MGLPreprint/">Multimodal Representation Learning with Graphs</a>-->
+        <p class="card-header-title">Sep 2022: &nbsp; <span class="has-text-primary">Multimodal Representation Learning with Graphs</span></p>
+<!--        <p class="card-header-item">Sep 2022</p>-->
+<!--        <p class="card-footer-item">Sep 5, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New preprint! We present the <a href="https://arxiv.org/abs/2209.03299">blueprint for graph-centric multimodal learning.</a></p>
+</p>-->
+            <p>New preprint! We present the <a href="https://arxiv.org/abs/2209.03299">blueprint for graph-centric multimodal learning.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/09/05/MGLPreprint/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 5, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/08/24/ISMB22-Tutorial-Recording/">On Graph AI for Precision Medicine</a>-->
+        <p class="card-header-title">Aug 2022: &nbsp; <span class="has-text-primary">On Graph AI for Precision Medicine</span></p>
+<!--        <p class="card-header-item">Aug 2022</p>-->
+<!--        <p class="card-footer-item">Aug 24, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>The recording of our <a href="https://zitniklab.hms.harvard.edu/biomedgraphml/">tutorial on using graph AI to advance precision medicine</a> is available. <a href="https://iscb.junolive.co/ismb2022/library/search/OnDemand_ismb2022_tutorial_vt4">Tune into four hours of interactive lectures</a> about state-of-the-art graph AI methods and applications in precision medicine.</p>
+</p>-->
+            <p>The recording of our <a href="https://zitniklab.hms.harvard.edu/biomedgraphml/">tutorial on using graph AI to advance precision medicine</a> is available. <a href="https://iscb.junolive.co/ismb2022/library/search/OnDemand_ismb2022_tutorial_vt4">Tune into four hours of interactive lectures</a> about state-of-the-art graph AI methods and applications in precision medicine.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/08/24/ISMB22-Tutorial-Recording/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Aug 24, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/08/22/GraphXAI/">Evaluating Explainability for GNNs</a>-->
+        <p class="card-header-title">Aug 2022: &nbsp; <span class="has-text-primary">Evaluating Explainability for GNNs</span></p>
+<!--        <p class="card-header-item">Aug 2022</p>-->
+<!--        <p class="card-footer-item">Aug 22, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New preprint! We introduce a resource for <a href="https://arxiv.org/abs/2208.09339">broad evaluation of the quality and reliability of GNN explanations</a>, addressing challenges and providing solutions for GNN explainability. <a href="https://zitniklab.hms.harvard.edu/projects/GraphXAI/">Project website.</a></p>
+</p>-->
+            <p>New preprint! We introduce a resource for <a href="https://arxiv.org/abs/2208.09339">broad evaluation of the quality and reliability of GNN explanations</a>, addressing challenges and providing solutions for GNN explainability. <a href="https://zitniklab.hms.harvard.edu/projects/GraphXAI/">Project website.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/08/22/GraphXAI/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Aug 22, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/07/16/NeurIPS-NewFrontiersGraphs/">New Frontiers in Graph Learning at NeurIPS</a>-->
+        <p class="card-header-title">Jul 2022: &nbsp; <span class="has-text-primary">New Frontiers in Graph Learning at NeurIPS</span></p>
+<!--        <p class="card-header-item">Jul 2022</p>-->
+<!--        <p class="card-footer-item">Jul 16, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited to organize the <a href="https://glfrontiers.github.io/">New Frontiers in Graph Learning</a> workshop at NeurIPS.</p>
+</p>-->
+            <p>Excited to organize the <a href="https://glfrontiers.github.io/">New Frontiers in Graph Learning</a> workshop at NeurIPS.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/07/16/NeurIPS-NewFrontiersGraphs/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jul 16, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/07/16/NeurIPS-AI4Science/">AI4Science at NeurIPS</a>-->
+        <p class="card-header-title">Jul 2022: &nbsp; <span class="has-text-primary">AI4Science at NeurIPS</span></p>
+<!--        <p class="card-header-item">Jul 2022</p>-->
+<!--        <p class="card-footer-item">Jul 16, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>We are excited to host the <a href="https://ai4sciencecommunity.github.io/index.html">AI4Science meeting</a> at NeurIPS discussing AI-driven scientific discovery, implementation and verification of AI in science, the influence AI has on the conduct of science, and more.</p>
+</p>-->
+            <p>We are excited to host the <a href="https://ai4sciencecommunity.github.io/index.html">AI4Science meeting</a> at NeurIPS discussing AI-driven scientific discovery, implementation and verification of AI in science, the influence AI has on the conduct of science, and more.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/07/16/NeurIPS-AI4Science/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jul 16, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/07/09/ISMB-Tutorial-Materials/">Graph AI for Precision Medicine at ISMB</a>-->
+        <p class="card-header-title">Jul 2022: &nbsp; <span class="has-text-primary">Graph AI for Precision Medicine at ISMB</span></p>
+<!--        <p class="card-header-item">Jul 2022</p>-->
+<!--        <p class="card-footer-item">Jul 9, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Check out our half-day tutorial with resources on <a href="/biomedgraphml/">methods and applications in graph representation learning for precision medicine.</a></p>
+</p>-->
+            <p>Check out our half-day tutorial with resources on <a href="/biomedgraphml/">methods and applications in graph representation learning for precision medicine.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/07/09/ISMB-Tutorial-Materials/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jul 9, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/07/04/SummerInterns/">Welcoming Fellows and Summer Students</a>-->
+        <p class="card-header-title">Jul 2022: &nbsp; <span class="has-text-primary">Welcoming Fellows and Summer Students</span></p>
+<!--        <p class="card-header-item">Jul 2022</p>-->
+<!--        <p class="card-footer-item">Jul 4, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Welcoming a research fellow Julia Balla and three Summer students, Nicholas Ho, Satvik Tripathi, and Isuru Herath.</p>
+</p>-->
+            <p>Welcoming a research fellow Julia Balla and three Summer students, Nicholas Ho, Satvik Tripathi, and Isuru Herath.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/07/04/SummerInterns/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jul 4, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/06/20/ContrastivePreTrainingTimeSeries/">Broadly Generalizable Pre-Training Approach</a>-->
+        <p class="card-header-title">Jun 2022: &nbsp; <span class="has-text-primary">Broadly Generalizable Pre-Training Approach</span></p>
+<!--        <p class="card-header-item">Jun 2022</p>-->
+<!--        <p class="card-footer-item">Jun 20, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited to share a <a href="https://arxiv.org/abs/2206.08496">preprint on self-supervised method for pre-training</a>. <a href="/projects/TF-C">Project website</a> with evaluation on eight datasets, including electrodiagnostic testing, human daily activity recognition, and health state monitoring.</p>
+</p>-->
+            <p>Excited to share a <a href="https://arxiv.org/abs/2206.08496">preprint on self-supervised method for pre-training</a>. <a href="/projects/TF-C">Project website</a> with evaluation on eight datasets, including electrodiagnostic testing, human daily activity recognition, and health state monitoring.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/06/20/ContrastivePreTrainingTimeSeries/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jun 20, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/06/07/NewPostdocs/">Welcoming New Postdocs</a>-->
+        <p class="card-header-title">Jun 2022: &nbsp; <span class="has-text-primary">Welcoming New Postdocs</span></p>
+<!--        <p class="card-header-item">Jun 2022</p>-->
+<!--        <p class="card-footer-item">Jun 7, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited to welcome George Dasoulas and Huan He, new postdocs joining us this Summer.</p>
+</p>-->
+            <p>Excited to welcome George Dasoulas and Huan He, new postdocs joining us this Summer.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/06/07/NewPostdocs/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jun 7, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+
+    <div class="column is-12">
+        <div class="card">
+            <header class="card-header">
+        <!--        <a class="card-header-title" href=""></a>-->
+            <p class="card-header-title"><span class="has-text-primary">Tweets</span></p>
+        <!--        <p class="card-header-item"></p>-->
+        <!--        <p class="card-footer-item"></p>-->
+            </header>
+        <div class="card-content">
+        <!--        <div class="content">-->
+        <!--            -->
+        <!--            <p></p>-->
+        <a class="twitter-timeline" data-width="500" data-height="500" data-theme="light" href="https://twitter.com/marinkazitnik?ref_src=twsrc%5Etfw" data-chrome="noheader transparent nofooter nofooter noborders">Tweets by marinkazitnik</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <!--        </div>-->
+        <!--        <div class="has-text-centered">-->
+        <!--            <a href="" class="button is-primary">Read more</a>-->
+        <!--        </div>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts -->
+<div style="background-color:#A41034">
+        <div class="content is-normal has-text-centered">
+            <p style="color:white;padding-top:20px;padding-bottom:20px;"><a href="https://scholar.harvard.edu/marinka" style="color:white"><b>Zitnik Lab</b></a>
+                &nbsp;&middot;&nbsp; <a href="#" style="color:white"><b>Artificial Intelligence in Medicine and Science</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://harvard.edu" style="color:white"><b>Harvard</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://dbmi.hms.harvard.edu/" style="color:white"><b>Department of Biomedical Informatics</b></a></p>
+        </div>
+</div></body>
+</html>
+
