@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Zero-shot Prediction of Therapeutic Use with<br/> Geometric Deep Learning and Clinician Centered Design - Zitnik Lab</title>
+    <title>Zero-shot Prediction of Therapeutic Use with Geometric Deep Learning and Clinician Centered Design - Zitnik Lab</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="shortcut icon" type="image/png"
            href="/favicon.png" 
@@ -121,7 +121,7 @@
         <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
     <div class="hero-body">
         <div class="container">
-            <p class="title is-2">Zero-shot Prediction of Therapeutic Use with<br/> Geometric Deep Learning and Clinician Centered Design</p>
+            <p class="title is-2">Zero-shot Prediction of Therapeutic Use with Geometric Deep Learning and Clinician Centered Design</p>
             <p class="subtitle is-3"></p>
             
         </div>
@@ -142,17 +142,16 @@
 <div class="content">
     <div class="box has-background-info has-text-white">
 <p>
-Driven by aging populations and increasing insight into disease burden, we need treatments that can directly improve human health. Several thousand diseases affect humans of which only about 500 have any U.S. Food and Drug Administration-approved treatment (source: NIH’s National Center for Advancing Translational Sciences). Even for diseases with treatments, finding new drugs can give alternative treatment options with less severe side effects in patients and replacements for drugs that are ineffective in subsets of patients.
-
-Predicting therapeutic use of candidate drugs remains, however, a difficult task that current algorithms often fail to perform accurately, leaving many diseases with no existing treatments inaccessible to machine learning.   
+Of the several thousand diseases that affect humans, only about 500 have treatments approved by the U.S. Food and Drug Administration. Even for those with approved treatments, discovering new drugs can offer alternative options that cause fewer side effects and replace drugs that are ineffective for certain patient groups. However, identifying new therapeutic opportunities for diseases with limited treatment options remains a challenge, as existing algorithms often perform poorly.  
 </p>
 <p>
-Here we leverage recent advances in geometric deep learning and human-centered AI to introduce TxGNN, a flexible model to identify therapeutic opportunities for diseases with few or no treatments available and limited molecular understanding.
-
-TxGNN is a graph neural network pre-trained on a comprehensive knowledge graph of 17,080 clinically-recognized diseases and 7,957 therapeutic candidates that can process various therapeutic tasks in a unified formulation. Once trained, we show that TxGNN can perform zero-shot inference on novel diseases without introducing additional parameters or requiring fine-tuning on ground truth labels. 
+Here, we leverage recent advances in geometric deep learning and human-centered AI to introduce TxGNN, a model for identifying therapeutic opportunities for diseases with limited treatment options and minimal molecular understanding. TxGNN is a graph neural network pre-trained on a comprehensive knowledge graph of 17,080 clinically-recognized diseases and 7,957 therapeutic candidates. The model can process various therapeutic tasks, such as indication and contraindication prediction, in a unified formulation. Once trained, we show that TxGNN can perform zero-shot inference on new diseases without additional parameters or fine-tuning on ground truth labels. 
 </p>
 <p>
-TxGNN improves by up to 49.2% on indication tasks and 35.1% on contraindication tasks over existing methods and predicts therapeutic use for new therapies developed since June 2021. We develop an interpretable human-AI explorer for TxGNN, evaluate its usability in a study with human experts, and use it to examine TxGNN's novel predictions in a large electronic health record system. TxGNN paves the way to improvements on many therapeutic tasks for neglected diseases.
+Evaluation of TxGNN shows significant improvements over existing methods, with up to 49.2% higher accuracy in indication tasks and 35.1% higher accuracy in contraindication tasks. TxGNN can also predict therapeutic use for new drugs developed since June 2021. To facilitate interpretation and analysis of the model's predictions by clinicians, we develop a human-AI explorer for TxGNN and evaluate its usability with medical experts. Finally, we demonstrate that TxGNN's novel predictions are consistent with off-label prescription decisions made by clinicians in a large healthcare system. 
+</p>
+<p>
+These label-efficient and clinician-centered learning systems pave the way for improvements for many therapeutic tasks.
 </p>
 </div>
 
@@ -168,14 +167,15 @@ TxGNN improves by up to 49.2% on indication tasks and 35.1% on contraindication 
 
 <h2 id="publication">Publication</h2>
 
-<p><a href="#">Zero-shot Prediction of Therapeutic Use with Geometric Deep Learning and Clinician Centered Design</a><br />
+<p><a href="https://www.medrxiv.org/content/10.1101/2023.03.19.23287458">Zero-shot Prediction of Therapeutic Use with Geometric Deep Learning and Clinician Centered Design</a><br />
 Kexin Huang*, Payal Chandak*, Qianwen Wang, Shreyas Havaldar, Akhil Vaid, Jure Leskovec, Girish Nadkarni, Benjamin S. Glicksberg, Nils Gehlenborg and Marinka Zitnik<br />
-<em>In Review</em> 2023 <a href="">[arXiv]</a></p>
+<em>In Review</em> 2023 <a href="https://www.medrxiv.org/content/10.1101/2023.03.19.23287458">[medRxiv]</a></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{huang2023zeroshot,
   title={Zero-shot Prediction of Therapeutic Use with Geometric Deep Learning and Clinician Centered Design},
   author={Huang, Kexin and Chandak, Payal and Wang, Qianwen and Havaldar, Shreyas and Vaid, Akhil and Leskovec, Jure and Nadkarni, Girish and Glicksberg, Benjamin and Gehlenborg, Nils and Zitnik, Marinka},
-  journal={},
+  journal = {medRxiv},
+  doi = {10.1101/2023.03.19.23287458},
   volume={},
   number={},
   pages={},
@@ -187,6 +187,10 @@ Kexin Huang*, Payal Chandak*, Qianwen Wang, Shreyas Havaldar, Akhil Vaid, Jure L
 <h2 id="code">Code</h2>
 
 <p>PyTorch implementation together with documentation and examples of usage is available in the <a href="https://github.com/mims-harvard/TxGNN">GitHub repository</a>.</p>
+
+<h2 id="human-ai-explorer-for-txgnn">Human-AI Explorer for TxGNN</h2>
+
+<p>To facilitate interpretation and analysis of the model’s predictions by clinicians, we develop a human-AI explorer for TxGNN and evaluate its usability with medical experts. The TxGNN explorer is available at <a href="http://txgnn.org">http://txgnn.org</a>.</p>
 
 <h2 id="authors">Authors</h2>
 
@@ -210,6 +214,66 @@ Kexin Huang*, Payal Chandak*, Qianwen Wang, Shreyas Havaldar, Akhil Vaid, Jure L
                     <p class="title is-4">Latest News</p>
 
 <div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/03/20/TxGNN/">TxGNN - Zero-shot prediction of therapeutic use</a>-->
+        <p class="card-header-title">Mar 2023: &nbsp; <span class="has-text-primary">TxGNN - Zero-shot prediction of therapeutic use</span></p>
+<!--        <p class="card-header-item">Mar 2023</p>-->
+<!--        <p class="card-footer-item">Mar 20, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New study on <a href="https://www.medrxiv.org/content/10.1101/2023.03.19.23287458">zero-shot prediction of therapeutic use with geometric deep learning and clinician centered design.</a> Check out our <a href="/projects/TxGNN/">project website</a> and <a href="http://txgnn.org">TxGNN Explorer.</a></p>
+
+</p>-->
+            <p>New study on <a href="https://www.medrxiv.org/content/10.1101/2023.03.19.23287458">zero-shot prediction of therapeutic use with geometric deep learning and clinician centered design.</a> Check out our <a href="/projects/TxGNN/">project website</a> and <a href="http://txgnn.org">TxGNN Explorer.</a></p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/03/20/TxGNN/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 20, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/03/15/GraphXAI/">GraphXAI published in Scientific Data</a>-->
+        <p class="card-header-title">Mar 2023: &nbsp; <span class="has-text-primary">GraphXAI published in Scientific Data</span></p>
+<!--        <p class="card-header-item">Mar 2023</p>-->
+<!--        <p class="card-footer-item">Mar 15, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p><a href="https://www.nature.com/articles/s41597-023-01974-x">Our approach evaluating explainability of geometric deep learning models</a> is published in Scientific Data. <a href="/projects/GraphXAI/">Project website.</a></p>
+
+</p>-->
+            <p><a href="https://www.nature.com/articles/s41597-023-01974-x">Our approach evaluating explainability of geometric deep learning models</a> is published in Scientific Data. <a href="/projects/GraphXAI/">Project website.</a></p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/03/15/GraphXAI/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 15, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
     
     <div class="column is-12">
         <div class="card">
@@ -284,10 +348,10 @@ Kexin Huang*, Payal Chandak*, Qianwen Wang, Shreyas Havaldar, Akhil Vaid, Jure L
     <div class="card-content">
 <!--        <div class="content">-->
 <!--            -->
-<!--            <p><p>Paper introducing <a href="https://www.nature.com/articles/s41597-023-01960-3">PrimeKG, a multimodal knowledge graph for precision medicine,</a> is published in Scientific Data. <a href="/projects/PrimeKG/">Project website.</a></p>
+<!--            <p><p><a href="https://www.nature.com/articles/s41597-023-01960-3">Our multimodal knowledge graph for precision medicine</a> is published in Scientific Data. <a href="/projects/PrimeKG/">Project website.</a></p>
 
 </p>-->
-            <p>Paper introducing <a href="https://www.nature.com/articles/s41597-023-01960-3">PrimeKG, a multimodal knowledge graph for precision medicine,</a> is published in Scientific Data. <a href="/projects/PrimeKG/">Project website.</a></p>
+            <p><a href="https://www.nature.com/articles/s41597-023-01960-3">Our multimodal knowledge graph for precision medicine</a> is published in Scientific Data. <a href="/projects/PrimeKG/">Project website.</a></p>
 
 
 <!--        </div>-->
@@ -717,62 +781,6 @@ Kexin Huang*, Payal Chandak*, Qianwen Wang, Shreyas Havaldar, Akhil Vaid, Jure L
     </div>
 <!--    <footer class="card-footer">-->
 <!--        <p class="card-footer-item">Published: Jul 4, 2022</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2022/06/20/ContrastivePreTrainingTimeSeries/">Broadly Generalizable Pre-Training Approach</a>-->
-        <p class="card-header-title">Jun 2022: &nbsp; <span class="has-text-primary">Broadly Generalizable Pre-Training Approach</span></p>
-<!--        <p class="card-header-item">Jun 2022</p>-->
-<!--        <p class="card-footer-item">Jun 20, 2022</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>Excited to share a <a href="https://arxiv.org/abs/2206.08496">preprint on self-supervised method for pre-training</a>. <a href="/projects/TF-C">Project website</a> with evaluation on eight datasets, including electrodiagnostic testing, human daily activity recognition, and health state monitoring.</p>
-</p>-->
-            <p>Excited to share a <a href="https://arxiv.org/abs/2206.08496">preprint on self-supervised method for pre-training</a>. <a href="/projects/TF-C">Project website</a> with evaluation on eight datasets, including electrodiagnostic testing, human daily activity recognition, and health state monitoring.</p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2022/06/20/ContrastivePreTrainingTimeSeries/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Jun 20, 2022</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2022/06/07/NewPostdocs/">Welcoming New Postdocs</a>-->
-        <p class="card-header-title">Jun 2022: &nbsp; <span class="has-text-primary">Welcoming New Postdocs</span></p>
-<!--        <p class="card-header-item">Jun 2022</p>-->
-<!--        <p class="card-footer-item">Jun 7, 2022</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>Excited to welcome George Dasoulas and Huan He, new postdocs joining us this Summer.</p>
-</p>-->
-            <p>Excited to welcome George Dasoulas and Huan He, new postdocs joining us this Summer.</p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2022/06/07/NewPostdocs/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Jun 7, 2022</p>-->
 <!--    </footer>-->
 </div>
     </div>
