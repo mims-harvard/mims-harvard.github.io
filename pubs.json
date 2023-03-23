@@ -85,40 +85,6 @@
     },
 
      {
-      "key": "submission21f",
-      "author": ["Michelle M. Li", "Kexin Huang", "Marinka Zitnik"],
-      "title": "Graph Representation Learning in Biomedicine and Healthcare",
-      "venue": "Nature Biomedical Engineering",
-      "year": "2022",
-      "thumbnail": "grl22.png",
-      "pdf": "https://www.nature.com/articles/s41551-022-00942-x",
-      "url": "https://www.nature.com/articles/s41551-022-00942-x",
-      "type": "journal",
-      "supp":
-      {
-        "arXiv": "https://arxiv.org/abs/2104.04883"
-      }
-    },
-
-     {
-      "key": "submission22e",
-      "author": ["Kexin Huang*", "Tianfan Fu*", "Wenhao Gao*", "Yue Zhao", "Yusuf Roohani", "Jure Leskovec", "Connor W. Coley", "Cao Xiao", "Jimeng Sun", "Marinka Zitnik"],
-      "title": "Artificial Intelligence Foundation for Therapeutic Science",
-      "venue": "Nature Chemical Biology",
-      "year": "2022",
-      "thumbnail": "tdc22.png",
-      "pdf": "https://www.nature.com/articles/s41589-022-01131-2",
-      "url": "https://www.nature.com/articles/s41589-022-01131-2",
-      "type": "journal",
-      "supp":
-      {
-        "project website":  "https://tdcommons.ai",
-        "code": "https://github.com/mims-harvard/TDC",
-        "Harvard Medicine News": "https://hms.harvard.edu/news/can-ai-transform-way-we-discover-new-drugs"
-      }
-    },
-
-     {
       "key": "submission23b",
       "author": ["Huan He", "Owen Queen", "Teddy Koker", "Consuelo Cuevas", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
       "title": "Domain Adaptation for Time Series Under Feature and Label Shifts",
@@ -150,25 +116,6 @@
       {
         "code": "https://github.com/mims-harvard/GNNDelete",
         "project website": "/projects/GNNDelete"
-      }
-    },
-
-     {
-      "key": "submission22c",
-      "author": ["Xiang Zhang*", "Ziyuan Zhao*", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
-      "title": "Self-Supervised Contrastive Pre-Training For Time Series via Time-Frequency Consistency",
-      "venue": "Proceedings of Neural Information Processing Systems, NeurIPS",
-      "year": "2022",
-      "thumbnail": "TF-C22.png",
-      "pdf": "papers/TF-C-self_supervised_contrastive_main.pdf",
-      "url": "https://openreview.net/pdf?id=OJ4mMfGKLN",
-      "type": "journal",
-      "supp":
-      {
-        "supplementary": "papers/TF-C-self_supervised_contrastive_SI.pdf",
-        "arXiv": "https://arxiv.org/abs/2206.08496",
-        "code": "https://github.com/mims-harvard/TFC-pretraining",
-        "project website": "/projects/TF-C"
       }
     },
 
@@ -284,12 +231,12 @@
      {
       "key": "submission21n",
       "author": ["Ryan T. Scott", "...", "Marinka Zitnik", "Sylvain V. Costes"],
-      "title": "Beyond Low Earth Orbit: Biomonitoring, Artificial Intelligence, and Precision Space Health",
-      "venue": "Nature Machine Intelligence (in press)",
+      "title": "Biomonitoring and Precision Health in Deep Space Supported by Artificial Intelligence",
+      "venue": "Nature Machine Intelligence",
       "year": "2023",
-      "thumbnail": "spacehealth21.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2112.12554",
+      "thumbnail": "spacehealth23.png",
+      "pdf": "https://www.nature.com/articles/s42256-023-00617-5",
+      "url": "https://www.nature.com/articles/s42256-023-00617-5",
       "type": "journal",
       "supp":
       {
@@ -301,12 +248,12 @@
      {
       "key": "submission21m",
       "author": ["Lauren M. Sanders", "...", "Marinka Zitnik", "Sylvain V. Costes"],
-      "title": "Beyond Low Earth Orbit: Biological Research, Artificial Intelligence, and Self-Driving Labs",
-      "venue": "Nature Machine Intelligence (in press)",
+      "title": "Biological Research and Self-Driving Labs in Deep Space Supported by Artificial Intelligence",
+      "venue": "Nature Machine Intelligence",
       "year": "2023",
-      "thumbnail": "spacebiology21.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2112.12582",
+      "thumbnail": "spacebiology23.png",
+      "pdf": "https://www.nature.com/articles/s42256-023-00618-4",
+      "url": "https://www.nature.com/articles/s42256-023-00618-4",
       "type": "journal",
       "supp":
       {
@@ -344,6 +291,59 @@
       "type": "journal",
       "supp":
       {
+      }
+    },
+
+     {
+      "key": "submission21f",
+      "author": ["Michelle M. Li", "Kexin Huang", "Marinka Zitnik"],
+      "title": "Graph Representation Learning in Biomedicine and Healthcare",
+      "venue": "Nature Biomedical Engineering",
+      "year": "2022",
+      "thumbnail": "grl22.png",
+      "pdf": "https://www.nature.com/articles/s41551-022-00942-x",
+      "url": "https://www.nature.com/articles/s41551-022-00942-x",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2104.04883"
+      }
+    },
+
+     {
+      "key": "submission22e",
+      "author": ["Kexin Huang*", "Tianfan Fu*", "Wenhao Gao*", "Yue Zhao", "Yusuf Roohani", "Jure Leskovec", "Connor W. Coley", "Cao Xiao", "Jimeng Sun", "Marinka Zitnik"],
+      "title": "Artificial Intelligence Foundation for Therapeutic Science",
+      "venue": "Nature Chemical Biology",
+      "year": "2022",
+      "thumbnail": "tdc22.png",
+      "pdf": "https://www.nature.com/articles/s41589-022-01131-2",
+      "url": "https://www.nature.com/articles/s41589-022-01131-2",
+      "type": "journal",
+      "supp":
+      {
+        "project website":  "https://tdcommons.ai",
+        "code": "https://github.com/mims-harvard/TDC",
+        "Harvard Medicine News": "https://hms.harvard.edu/news/can-ai-transform-way-we-discover-new-drugs"
+      }
+    },
+
+     {
+      "key": "submission22c",
+      "author": ["Xiang Zhang*", "Ziyuan Zhao*", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
+      "title": "Self-Supervised Contrastive Pre-Training For Time Series via Time-Frequency Consistency",
+      "venue": "Proceedings of Neural Information Processing Systems, NeurIPS",
+      "year": "2022",
+      "thumbnail": "TF-C22.png",
+      "pdf": "papers/TF-C-self_supervised_contrastive_main.pdf",
+      "url": "https://openreview.net/pdf?id=OJ4mMfGKLN",
+      "type": "journal",
+      "supp":
+      {
+        "supplementary": "papers/TF-C-self_supervised_contrastive_SI.pdf",
+        "arXiv": "https://arxiv.org/abs/2206.08496",
+        "code": "https://github.com/mims-harvard/TFC-pretraining",
+        "project website": "/projects/TF-C"
       }
     },
 
