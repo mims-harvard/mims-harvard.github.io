@@ -34,11 +34,11 @@
       "key": "submission22h",
       "author": ["Yasha Ektefaie*", "George Dasoulas*", "Ayush Noori", "Maha Farhat", "Marinka Zitnik"],
       "title": "Multimodal Learning with Graphs",
-      "venue": "Nature Machine Intelligence (in press)",
+      "venue": "Nature Machine Intelligence",
       "year": "2023",
       "thumbnail": "MGL22.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2209.03299",
+      "pdf": "https://www.nature.com/articles/s42256-023-00624-6",
+      "url": "https://www.nature.com/articles/s42256-023-00624-6",
       "type": "journal",
       "supp":
       {
