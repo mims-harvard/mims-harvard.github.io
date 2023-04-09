@@ -156,13 +156,23 @@ GNNDelete updates representations to delete nodes and edges from the model while
 
 <h2 id="background">Background</h2>
 
-<p>Despite the development of methods for machine unlearning, none of these approaches are applicable to GNNs due to fundamental differences arising from the dependencies between nodes connected by edges (which we show in this paper). Existing machine unlearning methods are unsuitable for data with underlying geometric and relational structure, as graph elements can exert a strong influence on other elements in their immediate vicinity. Furthermore, since the effectiveness of GNN models is based on the exchange of information across local graph neighborhoods, an adversarial agent can easily infer the presence of a data point from its neighbors if the impact of the data point on its local neighborhood is not limited. Given the wide range of GNN applications and the lack of graph unlearning methods, there is a pressing need to develop algorithms that enable GNN models to unlearn previously learned information. This would ensure that inaccurate, outdated, or privacy-concerned graph elements are no longer used by the model, thereby preventing security concerns and performance degradation. In this paper, we take a step towards building an efficient and general-purpose graph unlearning method for GNNs.</p>
+<p>Despite the development of methods for machine unlearning, none of these approaches are applicable to GNNs due to fundamental differences arising from the dependencies between nodes connected by edges (which we show in this paper). Existing machine unlearning methods are unsuitable for data with underlying geometric and relational structure, as graph elements can exert a strong influence on other elements in their immediate vicinity.</p>
 
-<p>Designing graph unlearning methods is a challenging task. Merely removing data is insufficient to comply with recent demands for increased data privacy because models trained on the original data may still contain information about removed features. A naive approach is to delete the data and retrain a model from scratch, but this can be prohibitively expensive, especially in large datasets. Recently, efforts have been made to achieve efficient unlearning based on exact unlearning. The core idea is to retrain several independent models by dividing a dataset into separate shards and then aggregating their predictions during inference. Such methods guarantee the removal of all information associated with the deleted data. However, in the context of GNNs, dividing graphs destroys the structure of the input graph, leading to poor performance on node-, edge- and graph-level tasks. To address this issue, uses a graph partitioning method to preserve graph structural information and aggregates predictions across individually retrained shards to produce predictions. However, this approach is still less efficient as the cost increases as the number of shards grows. In addition, choosing the optimal number of shards is still unresolved and may require extra hyperparameter tuning. Several approximation-based approaches avoid retraining a model from scratch on data subsets. While these approaches have shown promise, these unlearning methods change the underlying predictive model in a way that can harm model performance.</p>
+<p>Furthermore, since the effectiveness of GNN models is based on the exchange of information across local graph neighborhoods, an adversarial agent can easily infer the presence of a data point from its neighbors if the impact of the data point on its local neighborhood is not limited. Given the wide range of GNN applications and the lack of graph unlearning methods, there is a pressing need to develop algorithms that enable GNN models to unlearn previously learned information. This would ensure that inaccurate, outdated, or privacy-concerned graph elements are no longer used by the model, thereby preventing security concerns and performance degradation. In this paper, we take a step towards building an efficient and general-purpose graph unlearning method for GNNs.</p>
+
+<p>Designing graph unlearning methods is a challenging task. Merely removing data is insufficient to comply with recent demands for increased data privacy because models trained on the original data may still contain information about removed features. A naive approach is to delete the data and retrain a model from scratch, but this can be prohibitively expensive, especially in large datasets. Recently, efforts have been made to achieve efficient unlearning based on exact unlearning.</p>
+
+<p>The core idea is to retrain several independent models by dividing a dataset into separate shards and then aggregating their predictions during inference. Such methods guarantee the removal of all information associated with the deleted data. However, in the context of GNNs, dividing graphs destroys the structure of the input graph, leading to poor performance on node-, edge- and graph-level tasks. To address this issue, uses a graph partitioning method to preserve graph structural information and aggregates predictions across individually retrained shards to produce predictions.</p>
+
+<p>However, this approach is still less efficient as the cost increases as the number of shards grows. In addition, choosing the optimal number of shards is still unresolved and may require extra hyperparameter tuning. Several approximation-based approaches avoid retraining a model from scratch on data subsets. While these approaches have shown promise, these unlearning methods change the underlying predictive model in a way that can harm model performance.</p>
 
 <h2 id="gnndelete-a-general-strategy-for-unlearning-in-gnns">GNNDelete: A General Strategy for Unlearning in GNNs</h2>
 
-<p>We introduce GNNDelete, a general approach for graph unlearning that can delete nodes, node labels, and relationships from any trained GNN model. We formalize two essential properties that GNN deletion methods should satisfy: 1) <strong>Deleted Edge Consistency</strong>: predicted probabilities for deleted edges in the unlearned model should be similar to those for nonexistent edges. This property enforces GNNDelete to unlearn information such that deleted edges appear as unconnected nodes. 2) <strong>Neighborhood Influence</strong>: we establish a connection between graph unlearning and Granger causality to ensure that predictions in the local vicinity of the deletion maintain their original performance and are not affected by the deletion. However, existing graph unlearning methods do not consider this essential property, meaning they do not consider the influence of local connectivity, which can lead to sub-optimal deletion.</p>
+<p>We introduce GNNDelete, a general approach for graph unlearning that can delete nodes, node labels, and relationships from any trained GNN model. We formalize two essential properties that GNN deletion methods should satisfy:</p>
+
+<p>1) <strong>Deleted Edge Consistency</strong>: predicted probabilities for deleted edges in the unlearned model should be similar to those for nonexistent edges. This property enforces GNNDelete to unlearn information such that deleted edges appear as unconnected nodes.</p>
+
+<p>2) <strong>Neighborhood Influence</strong>: we establish a connection between graph unlearning and Granger causality to ensure that predictions in the local vicinity of the deletion maintain their original performance and are not affected by the deletion. However, existing graph unlearning methods do not consider this essential property, meaning they do not consider the influence of local connectivity, which can lead to sub-optimal deletion.</p>
 
 <p>To achieve both efficiency and scalability, GNNDelete uses a layer-wise deletion operator to revise a trained GNN model. When receiving deletion requests, GNNDelete freezes the model weights and learns additional small weight matrices that are shared across nodes in the graph. Unlike methods that attempt to retrain several small models from scratch or directly update model weights, which can be inefficient and suboptimal, GNNDelete learns small matrices for inference without changing GNN model weights. To optimize GNNDelete, we specify a novel objective function that satisfies Deleted Edge Consistency and Neighborhood Influence and achieves strong deletion performance.</p>
 
@@ -184,7 +194,7 @@ GNNDelete updates representations to delete nodes and edges from the model while
 
 <p><a href="https://openreview.net/pdf?id=X9yCkmT5Qrl">GNNDelete: A General Strategy for Unlearning in Graph Neural Networks</a><br />
 Jiali Cheng, George Dasoulas, Huan He, Chirag Agarwal, Marinka Zitnik<br />
-<em>International Conference on Learning Representations, ICLR</em> 2023</p>
+<em>International Conference on Learning Representations, ICLR</em> 2023 <a href="/publications/slides/GNNDelete-ICLR23.pdf">[Slides]</a></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{cheng2023gnndelete,
 title = {GNNDelete: A General Strategy for Unlearning in Graph Neural Networks},
@@ -220,8 +230,38 @@ year      = {2023}
         <div class="card">
     
     <header class="card-header">
-<!--        <a class="card-header-title" href="/2023/04/03/MultimodalGraphLearning-NatMachIntelligence/">New Paper in Nature Machine Intelligence</a>-->
-        <p class="card-header-title">Apr 2023: &nbsp; <span class="has-text-primary">New Paper in Nature Machine Intelligence</span></p>
+<!--        <a class="card-header-title" href="/2023/04/13/NewPostdoc/">Welcoming a New Postdoctoral Fellow</a>-->
+        <p class="card-header-title">Apr 2023: &nbsp; <span class="has-text-primary">Welcoming a New Postdoctoral Fellow</span></p>
+<!--        <p class="card-header-item">Apr 2023</p>-->
+<!--        <p class="card-footer-item">Apr 13, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>An enthusiastic welcome to <a href="https://tianlong-chen.github.io/about/">Tianlong Chen</a>, our newly appointed postdoctoral fellow.</p>
+
+</p>-->
+            <p>An enthusiastic welcome to <a href="https://tianlong-chen.github.io/about/">Tianlong Chen</a>, our newly appointed postdoctoral fellow.</p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/04/13/NewPostdoc/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Apr 13, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/04/03/MultimodalGraphLearning-NatMachIntelligence/">New Study in Nature Machine Intelligence</a>-->
+        <p class="card-header-title">Apr 2023: &nbsp; <span class="has-text-primary">New Study in Nature Machine Intelligence</span></p>
 <!--        <p class="card-header-item">Apr 2023</p>-->
 <!--        <p class="card-footer-item">Apr 3, 2023</p>-->
     </header>
@@ -229,10 +269,10 @@ year      = {2023}
     <div class="card-content">
 <!--        <div class="content">-->
 <!--            -->
-<!--            <p><p>New paper in Nature Machine Intelligence introducting the <a href="https://www.nature.com/articles/s42256-023-00624-6">blueprint for multimodal learning with graphs</a>.</p>
+<!--            <p><p>New paper in Nature Machine Intelligence introducing the <a href="https://www.nature.com/articles/s42256-023-00624-6">blueprint for multimodal learning with graphs</a>.</p>
 
 </p>-->
-            <p>New paper in Nature Machine Intelligence introducting the <a href="https://www.nature.com/articles/s42256-023-00624-6">blueprint for multimodal learning with graphs</a>.</p>
+            <p>New paper in Nature Machine Intelligence introducing the <a href="https://www.nature.com/articles/s42256-023-00624-6">blueprint for multimodal learning with graphs</a>.</p>
 
 
 <!--        </div>-->
@@ -250,8 +290,8 @@ year      = {2023}
         <div class="card">
     
     <header class="card-header">
-<!--        <a class="card-header-title" href="/2023/03/23/PrecisionHealthDeepSpace-NatMachIntelligence/">New Paper in Nature Machine Intelligence</a>-->
-        <p class="card-header-title">Mar 2023: &nbsp; <span class="has-text-primary">New Paper in Nature Machine Intelligence</span></p>
+<!--        <a class="card-header-title" href="/2023/03/23/PrecisionHealthDeepSpace-NatMachIntelligence/">Precision Health in Nature Machine Intelligence</a>-->
+        <p class="card-header-title">Mar 2023: &nbsp; <span class="has-text-primary">Precision Health in Nature Machine Intelligence</span></p>
 <!--        <p class="card-header-item">Mar 2023</p>-->
 <!--        <p class="card-footer-item">Mar 23, 2023</p>-->
     </header>
@@ -280,8 +320,8 @@ year      = {2023}
         <div class="card">
     
     <header class="card-header">
-<!--        <a class="card-header-title" href="/2023/03/23/BiologicalResearchDeepSpace-NatMachIntelligence/">New Paper in Nature Machine Intelligence</a>-->
-        <p class="card-header-title">Mar 2023: &nbsp; <span class="has-text-primary">New Paper in Nature Machine Intelligence</span></p>
+<!--        <a class="card-header-title" href="/2023/03/23/BiologicalResearchDeepSpace-NatMachIntelligence/">Self-Driving Labs in Nature Machine Intelligence</a>-->
+        <p class="card-header-title">Mar 2023: &nbsp; <span class="has-text-primary">Self-Driving Labs in Nature Machine Intelligence</span></p>
 <!--        <p class="card-header-item">Mar 2023</p>-->
 <!--        <p class="card-footer-item">Mar 23, 2023</p>-->
     </header>
@@ -377,10 +417,10 @@ year      = {2023}
     <div class="card-content">
 <!--        <div class="content">-->
 <!--            -->
-<!--            <p><p>A warm welcome to postdoctoral fellows Ruth Johnson and Wanxiang Shen. We are thrilled to have them joining us soon and look forward to working together.</p>
+<!--            <p><p>A warm welcome to postdoctoral fellows <a href="https://www.shenwx.com/">Wanxiang Shen</a> and <a href="https://ruthjohnson95.github.io/">Ruth Johnson</a>. Congratulations to Ruthie for being named a <a href="https://news.harvard.edu/gazette/story/2021/08/gift-launches-precision-medicine-research-at-harvard-and-in-tel-aviv/">Berkowitz Fellow</a>.</p>
 
 </p>-->
-            <p>A warm welcome to postdoctoral fellows Ruth Johnson and Wanxiang Shen. We are thrilled to have them joining us soon and look forward to working together.</p>
+            <p>A warm welcome to postdoctoral fellows <a href="https://www.shenwx.com/">Wanxiang Shen</a> and <a href="https://ruthjohnson95.github.io/">Ruth Johnson</a>. Congratulations to Ruthie for being named a <a href="https://news.harvard.edu/gazette/story/2021/08/gift-launches-precision-medicine-research-at-harvard-and-in-tel-aviv/">Berkowitz Fellow</a>.</p>
 
 
 <!--        </div>-->
@@ -758,34 +798,6 @@ year      = {2023}
     </div>
 <!--    <footer class="card-footer">-->
 <!--        <p class="card-footer-item">Published: Aug 22, 2022</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2022/07/16/NeurIPS-NewFrontiersGraphs/">New Frontiers in Graph Learning at NeurIPS</a>-->
-        <p class="card-header-title">Jul 2022: &nbsp; <span class="has-text-primary">New Frontiers in Graph Learning at NeurIPS</span></p>
-<!--        <p class="card-header-item">Jul 2022</p>-->
-<!--        <p class="card-footer-item">Jul 16, 2022</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>Excited to organize the <a href="https://glfrontiers.github.io/">New Frontiers in Graph Learning</a> workshop at NeurIPS.</p>
-</p>-->
-            <p>Excited to organize the <a href="https://glfrontiers.github.io/">New Frontiers in Graph Learning</a> workshop at NeurIPS.</p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2022/07/16/NeurIPS-NewFrontiersGraphs/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Jul 16, 2022</p>-->
 <!--    </footer>-->
 </div>
     </div>

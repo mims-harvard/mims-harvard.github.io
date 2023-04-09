@@ -1,0 +1,862 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contextualizing Protein Representations Using <br/>Deep Learning on Interactomes and Single-Cell Experiments - Zitnik Lab</title>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="shortcut icon" type="image/png"
+           href="/favicon.png" 
+    />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Contextualizing Protein Representations Using Deep Learning on Interactomes and Single-Cell Experiments | Zitnik Lab</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Contextualizing Protein Representations Using Deep Learning on Interactomes and Single-Cell Experiments" />
+<meta name="author" content="Marinka Zitnik" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Protein representations, drug target identification, geometric deep learning" />
+<meta property="og:description" content="Protein representations, drug target identification, geometric deep learning" />
+<link rel="canonical" href="https://zitniklab.hms.harvard.edu/projects/AWARE/" />
+<meta property="og:url" content="https://zitniklab.hms.harvard.edu/projects/AWARE/" />
+<meta property="og:site_name" content="Zitnik Lab" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Contextualizing Protein Representations Using Deep Learning on Interactomes and Single-Cell Experiments" />
+<meta name="twitter:site" content="@marinkazitnik" />
+<meta name="twitter:creator" content="@Marinka Zitnik" />
+<script type="application/ld+json">
+{"url":"https://zitniklab.hms.harvard.edu/projects/AWARE/","author":{"@type":"Person","name":"Marinka Zitnik"},"headline":"Contextualizing Protein Representations Using Deep Learning on Interactomes and Single-Cell Experiments","description":"Protein representations, drug target identification, geometric deep learning","@type":"WebPage","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
+<script>
+  window['ga-disable-UA-162129505-1'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-162129505-1');
+</script><!-- head scripts --></head>
+
+  <body>
+    
+<nav class="navbar is-primary" >
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item"><b>
+                Zitnik Lab
+            </b></a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+<!--                <a href="/" class="navbar-item "><b>Home</b></a>-->
+                
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a href="/#" class="navbar-link "><b>About</b></a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/bio/" class="navbar-item "><b>Bio</b></a>
+                            
+                            <a href="/contact/" class="navbar-item "><b>Contact</b></a>
+                            
+                            <a href="/talks/" class="navbar-item "><b>Recent Talks</b></a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                <a href="/research/" class="navbar-item "><b>Research</b></a>
+                    
+                
+                    
+                <a href="/publications/" class="navbar-item "><b>Publications</b></a>
+                    
+                
+                    
+                <a href="/people/" class="navbar-item "><b>Members</b></a>
+                    
+                
+                    
+                <a href="/meetings/" class="navbar-item "><b>Education</b></a>
+                    
+                
+                    
+                <a href="/DMAI/" class="navbar-item "><b>DMAI</b></a>
+                    
+                
+                    
+                <a href="/data/" class="navbar-item "><b>Datasets</b></a>
+                    
+                
+                    
+                <a href="/software/" class="navbar-item "><b>AI Tools</b></a>
+                    
+                
+                    
+                <a href="https://zitniklab.hms.harvard.edu/TDC/" class="navbar-item "><b>TDC</b></a>
+                    
+                
+                    
+                <a href="/news/" class="navbar-item "><b>News</b></a>
+                    
+                
+                    
+                <a href="/jobs/" class="navbar-item "><b>Join Us</b></a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+
+    
+        <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
+    <div class="hero-body">
+        <div class="container">
+            <p class="title is-2">Contextualizing Protein Representations Using <br/>Deep Learning on Interactomes and Single-Cell Experiments</p>
+            <p class="subtitle is-3"></p>
+            
+        </div>
+    </div>
+</section>
+    
+    
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+                <div class="column is-8">
+                    
+                    
+                    
+<div class="content">
+    <div class="box has-background-info has-text-white">
+
+<p>
+Protein interaction networks are a critical component in studying the function and therapeutic potential of proteins. However, accurately modeling protein interactions across diverse biological contexts, such as tissues and cell types, remains a significant challenge for existing algorithms. 
+</p>
+
+<p>
+We introduce AWARE, a flexible geometric deep learning approach that trains on contextualized protein interaction networks to generate context-aware protein representations. Leveraging a multi-organ single-cell transcriptomic atlas of humans, AWARE provides 394,760 protein representations split across 156 cell-type contexts from 24 tissues and organs. We demonstrate that AWARE's contextualized representations of proteins reflect cellular and tissue organization and AWARE's tissue representations enable zero-shot retrieval of tissue hierarchy. Our contextualized protein representations, infused with cellular and tissue organization, can easily be adapted for diverse downstream tasks. 
+</p>
+
+<p>
+We fine-tune AWARE to study the genomic effects of drugs in multiple cellular contexts and show that our context-aware model significantly outperforms state-of-the-art, yet context-agnostic, models. Enabled by our context-aware modeling of proteins, AWARE is able to nominate promising protein targets and cell-type contexts for further investigation. AWARE exemplifies and empowers the long-standing paradigm of incorporating context-specific effects for studying biological systems, especially the impact of disease and therapeutics.
+</p>
+</div>
+
+<p>Modeling interactions between proteins has been crucial for uncovering the structure, function, and therapeutic potential of proteins. Extensive efforts to develop experimental and computational technologies to construct and analyze protein interaction networks have improved the characterization of proteins. However, protein interaction networks are typically presented as generic maps without contextual information about tissues or celltypes. Despite the development of high-throughput methods for screening protein-protein interactions and sequencing technologies to measure gene expression with single-cell resolution, accurately modeling protein interactions across diverse biological contexts, such as tissues and celltypes, remains a critical experimental and computational challenge.</p>
+
+<p>The roles of proteins is influenced by biological contexts in which they are found:</p>
+
+<ul>
+  <li>While nearly every cell contains the same genome, the expression and function of a protein depends on the cell or tissue. Further, protein expression and function can differ significantly between healthy and diseased cells/tissues.</li>
+  <li>The ability to model and interrogate proteins in diverse biological contexts can improve the characterization of a disease’s mechanism of action and the design of safe and efficacious drugs.</li>
+</ul>
+
+<p>There is a growing need to develop methodologies that can effectively inject and leverage contextual information of proteins. Still, existing algorithms are limited in their capacity to model proteins with celltype or tissue specificity.</p>
+
+<h2 id="overview-of-aware">Overview of AWARE</h2>
+
+<p>AWARE is a self-supervised geometric deep learning model that can generate protein representations in different celltype contexts. AWARE integrates single cell transcriptomics data with a protein interaction network, celltype interaction network, and tissue hierarchy to generate protein representations with celltype resolution.</p>
+
+<center>
+<img src="/img/AWARE-1.png" />
+</center>
+
+<p>In this work, we focus on protein-coding genes and do not encode differences of protein isoforms (e.g., due to alternative splicing). Unlike existing methods that provide only one representation per protein (assuming each protein-coding gene encodes only one protein), resulting in fewer than 22,000 protein representations, AWARE generates a unique representation for each celltype that a protein is activated in.</p>
+
+<center>
+<img src="/img/AWARE-2.png" />
+</center>
+
+<p>With our 394,760 contextualized protein representations (i.e., protein representations injected with celltype-specificity), we demonstrate AWARE’s ability to integrate structured and transcriptomic data, perform transfer learning across proteins, celltypes, and tissues, and generate contextualized predictions for diverse biomedical tasks.</p>
+
+<center>
+<img src="/img/AWARE-3.png" />
+</center>
+
+<h2 id="aware-algorithm">AWARE Algorithm</h2>
+
+<p>AWARE is a self-supervised geometric deep learning model that can generate protein representations in diverse celltype contexts. AWARE is trained on a set of celltype specific protein interaction networks unified by a cellular and tissue network to produce contextualized protein representations based celltype activation. Unlike existing approaches, which do not consider biological context, AWARE produces multiple representations of proteins based on context, representations of the celltypes themselves, and representations of the tissues from which the celltypes are derived and the tissue hierarchy.</p>
+
+<p>Given the multi-scale nature of the model inputs, AWARE is equipped to learn protein-level, celltype-level, and tissue-level topology in a single unified embedding space. To fully leverage the multi-scale inputs, AWARE uses protein-, celltype-, and tissue-level attention mechanisms and objective functions to inject cellular and tissue organization into the embedding space. AWARE is designed such that pairs of nodes that share an edge are embedded nearby each other, protein representations of the same celltype are embedded close by (and far from protein representations of a different celltype), and protein representations are embedded close to the representation of their corresponding celltype (and far from other celltype representations).</p>
+
+<center>
+<img src="/img/AWARE-4.png" />
+</center>
+
+<p>AWARE propagates message on proteins, celltypes, and tissues using attention mechanisms specific to each node and relationship type:</p>
+
+<ol>
+  <li>The protein-level objective function, which considers self-supervised link prediction on the protein interactions and celltype-identity classification on the protein nodes, enables AWARE to produce an embedding space that captures both the topology of the celltype-specific protein interaction networks and the celltype identity of proteins.</li>
+  <li>The celltype- and tissue-specific components in celltype- and tissue-specific objective functions are based solely on self-supervised link prediction to learn cellular and tissue organization.</li>
+  <li>Such information is propagated to the protein representations using an attention bridge, imposing tissue and cellular organization to the protein representations.</li>
+</ol>
+
+<center>
+<img src="/img/AWARE-5.png" />
+</center>
+
+<h2 id="publication">Publication</h2>
+
+<p><a href="#">Contextualizing Protein Representations Using Deep Learning on Interactomes and Single-Cell Experiments</a><br />
+Michelle M. Li, Yepeng Huang, Marissa Sumathipala, Man Qing Liang, Alberto Valdeolivas, Katherine Liao, Daniel Marbach and Marinka Zitnik<br />
+<em>In Review</em> 2023</p>
+
+<h2 id="code-availability">Code availability</h2>
+
+<p>Pytorch implementation of AWARE is available in the <a href="https://github.com/mims-harvard/AWARE">GitHub repository</a>.</p>
+
+<p>We provide an interactive demo to explore AWARE’s protein representations through a visual interface in the <a href="https://huggingface.co/spaces/michellemli/AWARE">HuggingFace Space</a>.</p>
+
+<h2 id="authors">Authors</h2>
+
+<ul>
+  <li><a href="https://michellemli.com/">Michelle M. Li</a></li>
+  <li><a href="#">Yepeng Huang</a></li>
+  <li><a href="#">Marissa Sumathipala</a></li>
+  <li><a href="#">Man Qing Liang</a></li>
+  <li><a href="#">Alberto Valdeolivas</a></li>
+  <li><a href="#">Katherine Liao</a></li>
+  <li><a href="#">Daniel Marbach</a></li>
+  <li><a href="https://zitniklab.hms.harvard.edu/">Marinka Zitnik</a></li>
+</ul>
+
+</div>
+                </div>
+                
+                <div class="column is-4-desktop is-12-tablet">
+                    <p class="title is-4">Latest News</p>
+
+<div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/04/13/NewPostdoc/">Welcoming a New Postdoctoral Fellow</a>-->
+        <p class="card-header-title">Apr 2023: &nbsp; <span class="has-text-primary">Welcoming a New Postdoctoral Fellow</span></p>
+<!--        <p class="card-header-item">Apr 2023</p>-->
+<!--        <p class="card-footer-item">Apr 13, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>An enthusiastic welcome to <a href="https://tianlong-chen.github.io/about/">Tianlong Chen</a>, our newly appointed postdoctoral fellow.</p>
+
+</p>-->
+            <p>An enthusiastic welcome to <a href="https://tianlong-chen.github.io/about/">Tianlong Chen</a>, our newly appointed postdoctoral fellow.</p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/04/13/NewPostdoc/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Apr 13, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/04/03/MultimodalGraphLearning-NatMachIntelligence/">New Study in Nature Machine Intelligence</a>-->
+        <p class="card-header-title">Apr 2023: &nbsp; <span class="has-text-primary">New Study in Nature Machine Intelligence</span></p>
+<!--        <p class="card-header-item">Apr 2023</p>-->
+<!--        <p class="card-footer-item">Apr 3, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper in Nature Machine Intelligence introducing the <a href="https://www.nature.com/articles/s42256-023-00624-6">blueprint for multimodal learning with graphs</a>.</p>
+
+</p>-->
+            <p>New paper in Nature Machine Intelligence introducing the <a href="https://www.nature.com/articles/s42256-023-00624-6">blueprint for multimodal learning with graphs</a>.</p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/04/03/MultimodalGraphLearning-NatMachIntelligence/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Apr 3, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/03/23/PrecisionHealthDeepSpace-NatMachIntelligence/">Precision Health in Nature Machine Intelligence</a>-->
+        <p class="card-header-title">Mar 2023: &nbsp; <span class="has-text-primary">Precision Health in Nature Machine Intelligence</span></p>
+<!--        <p class="card-header-item">Mar 2023</p>-->
+<!--        <p class="card-footer-item">Mar 23, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper with NASA in Nature Machine Intelligence on <a href="https://www.nature.com/articles/s42256-023-00617-5">biomonitoring and precision health in deep space supported by artificial intelligence</a>.</p>
+
+</p>-->
+            <p>New paper with NASA in Nature Machine Intelligence on <a href="https://www.nature.com/articles/s42256-023-00617-5">biomonitoring and precision health in deep space supported by artificial intelligence</a>.</p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/03/23/PrecisionHealthDeepSpace-NatMachIntelligence/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 23, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/03/23/BiologicalResearchDeepSpace-NatMachIntelligence/">Self-Driving Labs in Nature Machine Intelligence</a>-->
+        <p class="card-header-title">Mar 2023: &nbsp; <span class="has-text-primary">Self-Driving Labs in Nature Machine Intelligence</span></p>
+<!--        <p class="card-header-item">Mar 2023</p>-->
+<!--        <p class="card-footer-item">Mar 23, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper with NASA in Nature Machine Intelligence on <a href="https://www.nature.com/articles/s42256-023-00618-4">biological research and self-driving labs in deep space supported by artificial intelligence</a>.</p>
+</p>-->
+            <p>New paper with NASA in Nature Machine Intelligence on <a href="https://www.nature.com/articles/s42256-023-00618-4">biological research and self-driving labs in deep space supported by artificial intelligence</a>.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/03/23/BiologicalResearchDeepSpace-NatMachIntelligence/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 23, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/03/20/TxGNN/">TxGNN - Zero-shot prediction of therapeutic use</a>-->
+        <p class="card-header-title">Mar 2023: &nbsp; <span class="has-text-primary">TxGNN - Zero-shot prediction of therapeutic use</span></p>
+<!--        <p class="card-header-item">Mar 2023</p>-->
+<!--        <p class="card-footer-item">Mar 20, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New study on <a href="https://www.medrxiv.org/content/10.1101/2023.03.19.23287458">zero-shot prediction of therapeutic use with geometric deep learning and clinician centered design.</a> Check out our <a href="/projects/TxGNN/">project website</a> and <a href="http://txgnn.org">TxGNN Explorer.</a></p>
+
+</p>-->
+            <p>New study on <a href="https://www.medrxiv.org/content/10.1101/2023.03.19.23287458">zero-shot prediction of therapeutic use with geometric deep learning and clinician centered design.</a> Check out our <a href="/projects/TxGNN/">project website</a> and <a href="http://txgnn.org">TxGNN Explorer.</a></p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/03/20/TxGNN/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 20, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/03/15/GraphXAI/">GraphXAI published in Scientific Data</a>-->
+        <p class="card-header-title">Mar 2023: &nbsp; <span class="has-text-primary">GraphXAI published in Scientific Data</span></p>
+<!--        <p class="card-header-item">Mar 2023</p>-->
+<!--        <p class="card-footer-item">Mar 15, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p><a href="https://www.nature.com/articles/s41597-023-01974-x">Our approach evaluating explainability of geometric deep learning models</a> is published in Scientific Data. <a href="/projects/GraphXAI/">Project website.</a></p>
+
+</p>-->
+            <p><a href="https://www.nature.com/articles/s41597-023-01974-x">Our approach evaluating explainability of geometric deep learning models</a> is published in Scientific Data. <a href="/projects/GraphXAI/">Project website.</a></p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/03/15/GraphXAI/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 15, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/02/20/NewPostdocs/">Welcoming New Postdoctoral Fellows</a>-->
+        <p class="card-header-title">Feb 2023: &nbsp; <span class="has-text-primary">Welcoming New Postdoctoral Fellows</span></p>
+<!--        <p class="card-header-item">Feb 2023</p>-->
+<!--        <p class="card-footer-item">Feb 20, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>A warm welcome to postdoctoral fellows <a href="https://www.shenwx.com/">Wanxiang Shen</a> and <a href="https://ruthjohnson95.github.io/">Ruth Johnson</a>. Congratulations to Ruthie for being named a <a href="https://news.harvard.edu/gazette/story/2021/08/gift-launches-precision-medicine-research-at-harvard-and-in-tel-aviv/">Berkowitz Fellow</a>.</p>
+
+</p>-->
+            <p>A warm welcome to postdoctoral fellows <a href="https://www.shenwx.com/">Wanxiang Shen</a> and <a href="https://ruthjohnson95.github.io/">Ruth Johnson</a>. Congratulations to Ruthie for being named a <a href="https://news.harvard.edu/gazette/story/2021/08/gift-launches-precision-medicine-research-at-harvard-and-in-tel-aviv/">Berkowitz Fellow</a>.</p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/02/20/NewPostdocs/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 20, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/02/08/RaincoatPreprint/">New Preprint on Distribution Shifts</a>-->
+        <p class="card-header-title">Feb 2023: &nbsp; <span class="has-text-primary">New Preprint on Distribution Shifts</span></p>
+<!--        <p class="card-header-item">Feb 2023</p>-->
+<!--        <p class="card-footer-item">Feb 8, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New preprint on <a href="https://arxiv.org/abs/2302.03133">domain adaptation for time series under feature and label shifts.</a> <a href="/projects/Raincoat/">Project website.</a></p>
+
+</p>-->
+            <p>New preprint on <a href="https://arxiv.org/abs/2302.03133">domain adaptation for time series under feature and label shifts.</a> <a href="/projects/Raincoat/">Project website.</a></p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/02/08/RaincoatPreprint/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 8, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/02/01/PrimeKG/">PrimeKG published in Scientific Data</a>-->
+        <p class="card-header-title">Feb 2023: &nbsp; <span class="has-text-primary">PrimeKG published in Scientific Data</span></p>
+<!--        <p class="card-header-item">Feb 2023</p>-->
+<!--        <p class="card-footer-item">Feb 1, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p><a href="https://www.nature.com/articles/s41597-023-01960-3">Our multimodal knowledge graph for precision medicine</a> is published in Scientific Data. <a href="/projects/PrimeKG/">Project website.</a></p>
+
+</p>-->
+            <p><a href="https://www.nature.com/articles/s41597-023-01960-3">Our multimodal knowledge graph for precision medicine</a> is published in Scientific Data. <a href="/projects/PrimeKG/">Project website.</a></p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/02/01/PrimeKG/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 1, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/01/20/GNNDelete/">GNNDelete published at ICLR 2023</a>-->
+        <p class="card-header-title">Jan 2023: &nbsp; <span class="has-text-primary">GNNDelete published at ICLR 2023</span></p>
+<!--        <p class="card-header-item">Jan 2023</p>-->
+<!--        <p class="card-footer-item">Jan 20, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper on <a href="https://openreview.net/pdf?id=X9yCkmT5Qrl">machine unlearning for graph neural networks</a> accepted at <a href="https://iclr.cc/">ICLR 2023.</a> <a href="/projects/GNNDelete/">Project website.</a></p>
+</p>-->
+            <p>New paper on <a href="https://openreview.net/pdf?id=X9yCkmT5Qrl">machine unlearning for graph neural networks</a> accepted at <a href="https://iclr.cc/">ICLR 2023.</a> <a href="/projects/GNNDelete/">Project website.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/01/20/GNNDelete/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jan 20, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/01/02/MutualInteractors/">New Network Principle for Molecular Phenotypes</a>-->
+        <p class="card-header-title">Jan 2023: &nbsp; <span class="has-text-primary">New Network Principle for Molecular Phenotypes</span></p>
+<!--        <p class="card-header-item">Jan 2023</p>-->
+<!--        <p class="card-footer-item">Jan 2, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper introducing <a href="https://psb.stanford.edu/psb-online/proceedings/psb23/eyuboglu.pdf">mutual interactor-based GNN for molecular phenotype prediction</a> at <a href="https://psb.stanford.edu/">PSB</a>. <a href="/projects/Milieu/">Project website.</a></p>
+</p>-->
+            <p>New paper introducing <a href="https://psb.stanford.edu/psb-online/proceedings/psb23/eyuboglu.pdf">mutual interactor-based GNN for molecular phenotype prediction</a> at <a href="https://psb.stanford.edu/">PSB</a>. <a href="/projects/Milieu/">Project website.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/01/02/MutualInteractors/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jan 2, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/12/14/SHEPHERD/">Can we shorten rare disease diagnostic odyssey?</a>-->
+        <p class="card-header-title">Dec 2022: &nbsp; <span class="has-text-primary">Can we shorten rare disease diagnostic odyssey?</span></p>
+<!--        <p class="card-header-item">Dec 2022</p>-->
+<!--        <p class="card-footer-item">Dec 14, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New preprint! <a href="https://www.medrxiv.org/content/10.1101/2022.12.07.22283238">Geometric deep learning for diagnosing patients with rare genetic diseases.</a> Implications for using deep learning on sparsely-labeled medical datasets. Thankful for this collaboration with <a href="https://zaklab.org/">Zak Lab.</a> <a href="/projects/SHEPHERD/">Project website.</a></p>
+</p>-->
+            <p>New preprint! <a href="https://www.medrxiv.org/content/10.1101/2022.12.07.22283238">Geometric deep learning for diagnosing patients with rare genetic diseases.</a> Implications for using deep learning on sparsely-labeled medical datasets. Thankful for this collaboration with <a href="https://zaklab.org/">Zak Lab.</a> <a href="/projects/SHEPHERD/">Project website.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/12/14/SHEPHERD/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 14, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/11/15/HarvardMedicineTDC/">Can AI transform the way we discover new drugs?</a>-->
+        <p class="card-header-title">Nov 2022: &nbsp; <span class="has-text-primary">Can AI transform the way we discover new drugs?</span></p>
+<!--        <p class="card-header-item">Nov 2022</p>-->
+<!--        <p class="card-footer-item">Nov 15, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Our <a href="https://hms.harvard.edu/news/can-ai-transform-way-we-discover-new-drugs">conversation with Harvard Medicine News</a> highlights recent developments and new features in <a href="https://tdcommons.ai/">Therapeutics Data Commons.</a></p>
+</p>-->
+            <p>Our <a href="https://hms.harvard.edu/news/can-ai-transform-way-we-discover-new-drugs">conversation with Harvard Medicine News</a> highlights recent developments and new features in <a href="https://tdcommons.ai/">Therapeutics Data Commons.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/11/15/HarvardMedicineTDC/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Nov 15, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/10/31/GRL-NatureBiomedEng/">New Paper in Nature Biomedical Engineering</a>-->
+        <p class="card-header-title">Oct 2022: &nbsp; <span class="has-text-primary">New Paper in Nature Biomedical Engineering</span></p>
+<!--        <p class="card-header-item">Oct 2022</p>-->
+<!--        <p class="card-footer-item">Oct 31, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper on <a href="https://www.nature.com/articles/s41551-022-00942-x">graph representation learning in biomedicine and healthcare</a> published in Nature Biomedical Engineering.</p>
+</p>-->
+            <p>New paper on <a href="https://www.nature.com/articles/s41551-022-00942-x">graph representation learning in biomedicine and healthcare</a> published in Nature Biomedical Engineering.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/10/31/GRL-NatureBiomedEng/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Oct 31, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/09/21/TDC-NatureChemBio/">New Paper in Nature Chemical Biology</a>-->
+        <p class="card-header-title">Sep 2022: &nbsp; <span class="has-text-primary">New Paper in Nature Chemical Biology</span></p>
+<!--        <p class="card-header-item">Sep 2022</p>-->
+<!--        <p class="card-footer-item">Sep 21, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Our paper on <a href="https://www.nature.com/articles/s41589-022-01131-2">artificial intelligence foundation for therapeutic science</a> is published in Nature Chemical Biology.</p>
+</p>-->
+            <p>Our paper on <a href="https://www.nature.com/articles/s41589-022-01131-2">artificial intelligence foundation for therapeutic science</a> is published in Nature Chemical Biology.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/09/21/TDC-NatureChemBio/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 21, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/09/14/TF-C-NeurIPS/">Self-Supervised Pre-Training at NeurIPS 2022</a>-->
+        <p class="card-header-title">Sep 2022: &nbsp; <span class="has-text-primary">Self-Supervised Pre-Training at NeurIPS 2022</span></p>
+<!--        <p class="card-header-item">Sep 2022</p>-->
+<!--        <p class="card-footer-item">Sep 14, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper on self-supervised contrastive pre-training accepted at <a href="https://nips.cc/Conferences/2022">NeurIPS 2022.</a> <a href="https://zitniklab.hms.harvard.edu/projects/TF-C/">Project page.</a> Thankful for this collaboration with the <a href="https://www.ll.mit.edu/">Lincoln National Laboratory</a>.</p>
+</p>-->
+            <p>New paper on self-supervised contrastive pre-training accepted at <a href="https://nips.cc/Conferences/2022">NeurIPS 2022.</a> <a href="https://zitniklab.hms.harvard.edu/projects/TF-C/">Project page.</a> Thankful for this collaboration with the <a href="https://www.ll.mit.edu/">Lincoln National Laboratory</a>.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/09/14/TF-C-NeurIPS/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 14, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/09/06/BestPaperAwardIEEEVIS/">Best Paper Honorable Mention Award at IEEE VIS</a>-->
+        <p class="card-header-title">Sep 2022: &nbsp; <span class="has-text-primary">Best Paper Honorable Mention Award at IEEE VIS</span></p>
+<!--        <p class="card-header-item">Sep 2022</p>-->
+<!--        <p class="card-footer-item">Sep 6, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Our paper on <a href="https://osf.io/yhdpv">user-centric AI of drug repurposing</a> received the <a href="http://ieeevis.org/year/2022/info/awards/best-paper-awards">Best Paper Honorable Mention Award</a> at IEEE VIS 2022. Thankful for this collaboration with <a href="http://gehlenborglab.org/">Gehlenborg Lab.</a></p>
+</p>-->
+            <p>Our paper on <a href="https://osf.io/yhdpv">user-centric AI of drug repurposing</a> received the <a href="http://ieeevis.org/year/2022/info/awards/best-paper-awards">Best Paper Honorable Mention Award</a> at IEEE VIS 2022. Thankful for this collaboration with <a href="http://gehlenborglab.org/">Gehlenborg Lab.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/09/06/BestPaperAwardIEEEVIS/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 6, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/09/05/MGLPreprint/">Multimodal Representation Learning with Graphs</a>-->
+        <p class="card-header-title">Sep 2022: &nbsp; <span class="has-text-primary">Multimodal Representation Learning with Graphs</span></p>
+<!--        <p class="card-header-item">Sep 2022</p>-->
+<!--        <p class="card-footer-item">Sep 5, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New preprint! We present the <a href="https://arxiv.org/abs/2209.03299">blueprint for graph-centric multimodal learning.</a></p>
+</p>-->
+            <p>New preprint! We present the <a href="https://arxiv.org/abs/2209.03299">blueprint for graph-centric multimodal learning.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/09/05/MGLPreprint/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 5, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/08/24/ISMB22-Tutorial-Recording/">On Graph AI for Precision Medicine</a>-->
+        <p class="card-header-title">Aug 2022: &nbsp; <span class="has-text-primary">On Graph AI for Precision Medicine</span></p>
+<!--        <p class="card-header-item">Aug 2022</p>-->
+<!--        <p class="card-footer-item">Aug 24, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>The recording of our <a href="https://zitniklab.hms.harvard.edu/biomedgraphml/">tutorial on using graph AI to advance precision medicine</a> is available. <a href="https://iscb.junolive.co/ismb2022/library/search/OnDemand_ismb2022_tutorial_vt4">Tune into four hours of interactive lectures</a> about state-of-the-art graph AI methods and applications in precision medicine.</p>
+</p>-->
+            <p>The recording of our <a href="https://zitniklab.hms.harvard.edu/biomedgraphml/">tutorial on using graph AI to advance precision medicine</a> is available. <a href="https://iscb.junolive.co/ismb2022/library/search/OnDemand_ismb2022_tutorial_vt4">Tune into four hours of interactive lectures</a> about state-of-the-art graph AI methods and applications in precision medicine.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/08/24/ISMB22-Tutorial-Recording/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Aug 24, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/08/22/GraphXAI/">Evaluating Explainability for GNNs</a>-->
+        <p class="card-header-title">Aug 2022: &nbsp; <span class="has-text-primary">Evaluating Explainability for GNNs</span></p>
+<!--        <p class="card-header-item">Aug 2022</p>-->
+<!--        <p class="card-footer-item">Aug 22, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New preprint! We introduce a resource for <a href="https://arxiv.org/abs/2208.09339">broad evaluation of the quality and reliability of GNN explanations</a>, addressing challenges and providing solutions for GNN explainability. <a href="https://zitniklab.hms.harvard.edu/projects/GraphXAI/">Project website.</a></p>
+</p>-->
+            <p>New preprint! We introduce a resource for <a href="https://arxiv.org/abs/2208.09339">broad evaluation of the quality and reliability of GNN explanations</a>, addressing challenges and providing solutions for GNN explainability. <a href="https://zitniklab.hms.harvard.edu/projects/GraphXAI/">Project website.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/08/22/GraphXAI/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Aug 22, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+
+    <div class="column is-12">
+        <div class="card">
+            <header class="card-header">
+        <!--        <a class="card-header-title" href=""></a>-->
+            <p class="card-header-title"><span class="has-text-primary">Tweets</span></p>
+        <!--        <p class="card-header-item"></p>-->
+        <!--        <p class="card-footer-item"></p>-->
+            </header>
+        <div class="card-content">
+        <!--        <div class="content">-->
+        <!--            -->
+        <!--            <p></p>-->
+        <a class="twitter-timeline" data-width="500" data-height="500" data-theme="light" href="https://twitter.com/marinkazitnik?ref_src=twsrc%5Etfw" data-chrome="noheader transparent nofooter nofooter noborders">Tweets by marinkazitnik</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <!--        </div>-->
+        <!--        <div class="has-text-centered">-->
+        <!--            <a href="" class="button is-primary">Read more</a>-->
+        <!--        </div>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts -->
+<div style="background-color:#A41034">
+        <div class="content is-normal has-text-centered">
+            <p style="color:white;padding-top:20px;padding-bottom:20px;"><a href="https://scholar.harvard.edu/marinka" style="color:white"><b>Zitnik Lab</b></a>
+                &nbsp;&middot;&nbsp; <a href="#" style="color:white"><b>Artificial Intelligence in Medicine and Science</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://harvard.edu" style="color:white"><b>Harvard</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://dbmi.hms.harvard.edu/" style="color:white"><b>Department of Biomedical Informatics</b></a></p>
+        </div>
+</div></body>
+</html>
+

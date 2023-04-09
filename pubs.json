@@ -115,6 +115,7 @@
       "supp":
       {
         "code": "https://github.com/mims-harvard/GNNDelete",
+        "slides": "slides/GNNDelete-ICLR23.pdf",
         "project website": "/projects/GNNDelete"
       }
     },
