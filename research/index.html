@@ -16,8 +16,8 @@
 <meta property="og:title" content="Research Directions" />
 <meta name="author" content="Marinka Zitnik" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Artificial Intelligence (AI), Medicine, Science, and Drug Discovery at Harvard" />
-<meta property="og:description" content="Artificial Intelligence (AI), Medicine, Science, and Drug Discovery at Harvard" />
+<meta name="description" content="Artificial Intelligence (AI), Machine Learning, Medicine, Science, and Drug Discovery at Harvard" />
+<meta property="og:description" content="Artificial Intelligence (AI), Machine Learning, Medicine, Science, and Drug Discovery at Harvard" />
 <link rel="canonical" href="https://zitniklab.hms.harvard.edu/research/" />
 <meta property="og:url" content="https://zitniklab.hms.harvard.edu/research/" />
 <meta property="og:site_name" content="Zitnik Lab" />
@@ -26,7 +26,7 @@
 <meta name="twitter:site" content="@marinkazitnik" />
 <meta name="twitter:creator" content="@Marinka Zitnik" />
 <script type="application/ld+json">
-{"url":"https://zitniklab.hms.harvard.edu/research/","author":{"@type":"Person","name":"Marinka Zitnik"},"headline":"Research Directions","description":"Artificial Intelligence (AI), Medicine, Science, and Drug Discovery at Harvard","@type":"WebPage","@context":"https://schema.org"}</script>
+{"url":"https://zitniklab.hms.harvard.edu/research/","author":{"@type":"Person","name":"Marinka Zitnik"},"headline":"Research Directions","description":"Artificial Intelligence (AI), Machine Learning, Medicine, Science, and Drug Discovery at Harvard","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
 <script>
@@ -140,13 +140,15 @@
                     
                     
 <div class="content">
-    <h2 id="knowledge-guided-ai-large-knowledge-graph-and-biological-language-models">Knowledge-Guided AI: Large Knowledge Graph and Biological Language Models</h2>
+    <h2 id="large-pretrained-ai-multimodal-knowledge-graph-and-biological-language-models">Large Pretrained AI: Multimodal Knowledge Graph and Biological Language Models</h2>
 
-<p>Broad use of AI in medicine and science depends on our ability to incorporate progressively more complex descriptors, constraints, and causal structures into ML architectures. We expect that modeling knowledge in the form of compact mathematical statements of physical relationships, knowledge graphs, prior distributions, and other complex rationales is needed to achieve deeper reasoning. For example, knowledge about a biological problem, such as knowing the laws of chemical biology or rotational and translational equivariances of molecular binding to therapeutic targets, helps human experts navigate the problems seamlessly.</p>
+<p>The widespread use of AI in medicine and science requires us to incorporate increasingly complex descriptors, constraints, and causal structures into ML models. To achieve deeper reasoning, we must model knowledge in the form of compact mathematical statements of physical relationships, knowledge graphs, prior distributions, and other complex rationales. For example, human experts use knowledge about tasks, such as understanding the laws of chemical biology or molecular binding, to navigate these tasks seamlessly.</p>
 
-<p>We develop techniques to incorporate different inductive biases (the set of assumptions that algorithms use to make predictions for inputs they have not encountered during training) that can vary by data modality (i.e., graphs vs. biological sequences) into machine learning models. Our research strategy creates foundational models (e.g., pre-trained models, self-supervised models, general-purpose models, multi-purpose models, and multimodal models) trained on broad data at scale that can be adapted to a wide range of downstream tasks.</p>
+<p>We develop techniques to incorporate such inductive biases (the assumptions that algorithms use to make predictions for inputs they have not encountered during training) into AI models. The resulting foundational models trained on broad data at scale can be adapted to a wide range of downstream tasks and can handle multiple modalities, such as molecular structures and biological sequences.</p>
 
-<p>We develop techniques for self-supervised learning, particularly multi-layered neural nets capable of identifying essential, compact features useful to solve many tasks simultaneously without relying on pre-defined labels. This strategy of pre-training big models can train neural nets on unlabeled data, and transfer concepts learned in one domain to a different domain, even when no labels in the target domain are available, and thus standard supervised learning does not work. We are looking to advance the algorithms to train more with less data, transfer prediction prowess from one data type to another, and design contextually adaptive AI that can extrapolate to new tasks and situations (e.g., new molecular scaffolds, new cell types, new diseases) as they encounter them.</p>
+<p>We are also developing techniques for self-supervised learning, particularly neural nets that can identify essential, compact features useful to solve many tasks simultaneously without relying on predefined labels. For example, pretraining large models on unlabeled data can transfer concepts learned in one domain to a different domain, even when no labels in the target domain are available. This strategy allows us to train neural nets on a large scale and to process different downstream tasks using shared parameters. These models can achieve competitive performance on pretraining tasks and perform zero-shot inference on novel tasks without introducing additional parameters.</p>
+
+<p>We are looking to transfer the prediction prowess of these models from one data type to another and design contextually adaptive AI that can extrapolate to new tasks and situations, such as new molecular scaffolds, new cell types, and new clinical diseases.</p>
 
 <div align="center">
 <img style="margin-top:20px;margin-bottom:20px;width:100%" src="/img/research-KG-LM.png" />

@@ -142,19 +142,35 @@
 <div class="content">
     <div class="box has-background-info has-text-white">
 <p>
-The transfer of models trained on labeled datasets from a source domain to unlabeled target domains is facilitated by unsupervised domain adaptation (UDA). However, when dealing with complex time series models, transferability becomes challenging due to differences in dynamic temporal structures between domains, which can result in feature shifts and gaps in time and frequency representations. Additionally, the label distributions in the source and target domains can be vastly different, making it difficult for UDA to address label shifts and recognize labels unique to the target domain.
+When we train a model to recognize patterns in one type of data, it might not work well when we apply it to a different type of data. This is where unsupervised domain adaptation (UDA) comes in, which helps us transfer the trained model to a different type of data without needing labeled examples.
+</p>
+<p>
+However, when dealing with complex time series data (like sensor readings over time), it becomes harder to transfer the model because the patterns in the data change over time and can be different between different domains (like different sensors or environments). Additionally, the labels that we use to train the model might be different between domains. This means that the model might not work well when we apply it to the new domain.
+</p>
+<p>
+To address this problem, a new model Raincoat can handle complex time series data by aligning the different patterns in the data across domains and correcting for any differences. It can also detect when the labels are different between domains and adjust the model accordingly.
 </p>
 </div>
 
-<p>We introduce Raincoat, a domain adaptation method for time series that can handle both feature and label shifts.</p>
+<h2 id="motivation">Motivation</h2>
+
+<p>Training models that can adapt to domain shifts is crucial for robust, real-world implementation. We often encounter data from different sources or domains, which can lead to issues with model performance. That is where domain adaptation comes in – it is all about creating models that can adapt to different domains and perform well in any setting. For example, in healthcare, time series data collection methods vary widely across clinical sites, leading to shifts in underlying features and labels. Endowing learning systems with domain adaptation capabilities increases their reliability and expands applicability across downstream tasks.</p>
+
+<p>However, building models that can adapt to different domains is no easy feat. There are a variety of challenges, including feature and label shifts, private labels, and more. Domain adaptation is a highly complex problem due to several factors, including private labels that do not exist in the source domain. Models trained for robustness to domain shifts must learn highly generalizable features to avoid relying on spurious correlations created by non-causal data artifacts. Shifts in label distributions across domains may result in private labels, making domain adaptation challenging. Traditional techniques often fall short when it comes to these challenges, and that is where new, innovative approaches are needed.</p>
+
+<p>One approach to domain adaptation is adversarial learning, where a model is trained to be invariant to differences between the source and target domains. Another is transfer learning, where a model is pre-trained on a large dataset and then fine-tuned on a smaller, domain-specific dataset. But perhaps the most exciting approach to domain adaptation is unsupervised learning, where a model is trained on data from the source domain and then applied to the target domain without any labeled data. This approach has enormous potential for real-world applications, as it does not require labeled data from every domain.</p>
+
+<h2 id="raincoat">Raincoat</h2>
+
+<p>We introduce Raincoat, a domain adaptation method for time series that can handle both feature and label shifts. Raincoat is the first model for both closed-set and universal domain adaptation on complex time series. It addresses feature and label shifts by considering both temporal and frequency features, aligning them across domains, and correcting for misalignments to detect private labels.</p>
+
+<p>Raincoat improves transferability by identifying label shifts in target domains. It produces generalizable representations robust to feature and label shifts, expanding the scope of existing domain adaptation methods.</p>
 
 <center>
 <img src="/img/Raincoat-capability.png" />
 </center>
 
-<p>Despite multiple recent methods being proposed to solve the time series UniDA problem under the assumption of feature shift, none of them take into account situations where changes in the frequency domain also act as an implicit feature shift. Furthermore, the field of universal DA for time series without making assumptions about label overlap between source and target domains is an unexplored area of research.</p>
-
-<h2 id="raincoat-approach">Raincoat Approach</h2>
+<h2 id="raincoat-model">Raincoat Model</h2>
 
 <p>Raincoat has three steps, as illustrated in the following figure:</p>
 
@@ -182,6 +198,8 @@ The transfer of models trained on labeled datasets from a source domain to unlab
 
 <p>Our experiments using 5 datasets and comparing with 13 state-of-the-art domain adaptation methods show that Raincoat outperforms these methods in the presence of both feature and label shifts. The following figure illustrates the superiority of Raincoat for closed-set domain adaptation.</p>
 
+<p>The results from testing Raincoat on different datasets show that it can improve the performance of the model by up to 16.33%. This means that Raincoat has the potential to be very useful for transferring models between different domains and making them more accurate.</p>
+
 <center>
 <img src="/img/Raincoat-results.png" />
 </center>
@@ -190,12 +208,12 @@ The transfer of models trained on labeled datasets from a source domain to unlab
 
 <p><a href="https://arxiv.org/abs/2302.03133">Domain Adaptation for Time Series Under Feature and Label Shifts</a><br />
 Huan He, Owen Queen, Teddy Koker, Consuelo Cuevas, Theodoros Tsiligkaridis, Marinka Zitnik<br />
-<em>In Review</em> 2023 [<a href="https://arxiv.org/abs/2302.03133">arXiv</a>]</p>
+<em>International Conference on Machine Learning, ICML</em> 2023 [<a href="https://arxiv.org/abs/2302.03133">arXiv</a>]</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{he2023domain,
 title = {Domain Adaptation for Time Series Under Feature and Label Shifts},
 author = {He, Huan and Queen, Owen and Koker, Teddy and Cuevas, Consuelo and Tsiligkaridis, Theodoros and Zitnik, Marinka},
-booktitle = {https://arxiv.org/abs/2302.03133},
+booktitle = {International Conference on Machine Learning, ICML},
 year      = {2023}
 }
 </code></pre></div></div>
@@ -239,6 +257,66 @@ year      = {2023}
                     <p class="title is-4">Latest News</p>
 
 <div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/04/24/RaincoatICML23/">Universal Domain Adaptation at ICML 2023</a>-->
+        <p class="card-header-title">Apr 2023: &nbsp; <span class="has-text-primary">Universal Domain Adaptation at ICML 2023</span></p>
+<!--        <p class="card-header-item">Apr 2023</p>-->
+<!--        <p class="card-footer-item">Apr 24, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper introducing <a href="https://arxiv.org/abs/2302.03133">the first model for closed-set and universal domain adaptation on time series</a> accepted at <a href="https://icml.cc/Conferences/2023">ICML 2023</a>. Raincoat addresses feature and label shifts and can detect private labels. <a href="https://zitniklab.hms.harvard.edu/projects/Raincoat/">Project website.</a></p>
+
+</p>-->
+            <p>New paper introducing <a href="https://arxiv.org/abs/2302.03133">the first model for closed-set and universal domain adaptation on time series</a> accepted at <a href="https://icml.cc/Conferences/2023">ICML 2023</a>. Raincoat addresses feature and label shifts and can detect private labels. <a href="https://zitniklab.hms.harvard.edu/projects/Raincoat/">Project website.</a></p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/04/24/RaincoatICML23/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Apr 24, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/04/13/Undergrads/">Celebrating Achievements of Our Undergrads</a>-->
+        <p class="card-header-title">Apr 2023: &nbsp; <span class="has-text-primary">Celebrating Achievements of Our Undergrads</span></p>
+<!--        <p class="card-header-item">Apr 2023</p>-->
+<!--        <p class="card-footer-item">Apr 13, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Undergraduate researchers Ziyuan, Nick, Yepeng, Jiali, Julia, and Marissa are moving onto their PhD research in Computer Science, Systems Biology, Neuroscience, and Biological &amp; Medical Sciences at Harvard, MIT, Carnegie Mellon University, and UMass Lowell. We are excited for the bright future they created for themselves.</p>
+
+</p>-->
+            <p>Undergraduate researchers Ziyuan, Nick, Yepeng, Jiali, Julia, and Marissa are moving onto their PhD research in Computer Science, Systems Biology, Neuroscience, and Biological &amp; Medical Sciences at Harvard, MIT, Carnegie Mellon University, and UMass Lowell. We are excited for the bright future they created for themselves.</p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/04/13/Undergrads/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Apr 13, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
     
     <div class="column is-12">
         <div class="card">
@@ -756,62 +834,6 @@ year      = {2023}
     </div>
 <!--    <footer class="card-footer">-->
 <!--        <p class="card-footer-item">Published: Sep 5, 2022</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2022/08/24/ISMB22-Tutorial-Recording/">On Graph AI for Precision Medicine</a>-->
-        <p class="card-header-title">Aug 2022: &nbsp; <span class="has-text-primary">On Graph AI for Precision Medicine</span></p>
-<!--        <p class="card-header-item">Aug 2022</p>-->
-<!--        <p class="card-footer-item">Aug 24, 2022</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>The recording of our <a href="https://zitniklab.hms.harvard.edu/biomedgraphml/">tutorial on using graph AI to advance precision medicine</a> is available. <a href="https://iscb.junolive.co/ismb2022/library/search/OnDemand_ismb2022_tutorial_vt4">Tune into four hours of interactive lectures</a> about state-of-the-art graph AI methods and applications in precision medicine.</p>
-</p>-->
-            <p>The recording of our <a href="https://zitniklab.hms.harvard.edu/biomedgraphml/">tutorial on using graph AI to advance precision medicine</a> is available. <a href="https://iscb.junolive.co/ismb2022/library/search/OnDemand_ismb2022_tutorial_vt4">Tune into four hours of interactive lectures</a> about state-of-the-art graph AI methods and applications in precision medicine.</p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2022/08/24/ISMB22-Tutorial-Recording/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Aug 24, 2022</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2022/08/22/GraphXAI/">Evaluating Explainability for GNNs</a>-->
-        <p class="card-header-title">Aug 2022: &nbsp; <span class="has-text-primary">Evaluating Explainability for GNNs</span></p>
-<!--        <p class="card-header-item">Aug 2022</p>-->
-<!--        <p class="card-footer-item">Aug 22, 2022</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>New preprint! We introduce a resource for <a href="https://arxiv.org/abs/2208.09339">broad evaluation of the quality and reliability of GNN explanations</a>, addressing challenges and providing solutions for GNN explainability. <a href="https://zitniklab.hms.harvard.edu/projects/GraphXAI/">Project website.</a></p>
-</p>-->
-            <p>New preprint! We introduce a resource for <a href="https://arxiv.org/abs/2208.09339">broad evaluation of the quality and reliability of GNN explanations</a>, addressing challenges and providing solutions for GNN explainability. <a href="https://zitniklab.hms.harvard.edu/projects/GraphXAI/">Project website.</a></p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2022/08/22/GraphXAI/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Aug 22, 2022</p>-->
 <!--    </footer>-->
 </div>
     </div>

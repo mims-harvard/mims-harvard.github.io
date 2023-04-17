@@ -85,12 +85,27 @@
     },
 
      {
+      "key": "submission23e",
+      "author": ["Jason J. Kwon*", "Joshua Pan*", "Guadalupe Gonzalez", "William C. Hahn", "Marinka Zitnik"],
+      "title": "On Knowing a Gene",
+      "venue": "In Review",
+      "year": "2023",
+      "thumbnail": "subgnn20.png",
+      "pdf": "",
+      "url": "",
+      "type": "journal",
+      "supp":
+      {
+      }
+    },
+
+     {
       "key": "submission23b",
       "author": ["Huan He", "Owen Queen", "Teddy Koker", "Consuelo Cuevas", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
       "title": "Domain Adaptation for Time Series Under Feature and Label Shifts",
-      "venue": "In Review",
+      "venue": "International Conference on Machine Learning, ICML",
       "year": "2023",
-      "thumbnail": "TF-C22.png",
+      "thumbnail": "Raincoat-ICML23.png",
       "pdf": "",
       "url": "https://arxiv.org/abs/2302.03133",
       "type": "journal",
@@ -178,7 +193,7 @@
       "key": "submission22j",
       "author": ["Ayush Noori", "Amelia L. M. Tan", "Michelle M. Li", "Marinka Zitnik"],
       "title": "metapaths: Similarity Search in Heterogeneous Knowledge Graphs via Meta Paths",
-      "venue": "In Review",
+      "venue": "Bioinformatics (in press)",
       "year": "2023",
       "thumbnail": "Milieu23.png",
       "pdf": "",
@@ -478,8 +493,8 @@
       "title": "OpenXAI: Towards a Transparent Evaluation of Model Explanations",
       "venue": "Proceedings of Neural Information Processing Systems, NeurIPS",
       "year": "2022",
-      "thumbnail": "GraphXAI22.png",
-      "pdf": "",
+      "thumbnail": "OpenXAI22.png",
+      "pdf": "papers/OpenXAI-NeurIPS22.pdf",
       "url": "https://arxiv.org/abs/2206.11104",
       "type": "journal",
       "supp":
