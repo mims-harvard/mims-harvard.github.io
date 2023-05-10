@@ -193,11 +193,11 @@
       "key": "submission22j",
       "author": ["Ayush Noori", "Amelia L. M. Tan", "Michelle M. Li", "Marinka Zitnik"],
       "title": "metapaths: Similarity Search in Heterogeneous Knowledge Graphs via Meta Paths",
-      "venue": "Bioinformatics (in press)",
+      "venue": "Bioinformatics",
       "year": "2023",
-      "thumbnail": "Milieu23.png",
-      "pdf": "",
-      "url": "",
+      "thumbnail": "metapaths23.png",
+      "pdf": "papers/metapaths23.pdf",
+      "url": "https://doi.org/10.1093/bioinformatics/btad297",
       "type": "journal",
       "supp":
       {
