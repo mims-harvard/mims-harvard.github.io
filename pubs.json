@@ -17,7 +17,7 @@
      {
       "key": "submission23a",
       "author": ["Hanchen Wang*", "Tianfan Fu*", "Yuanqi Du*", "Wenhao Gao", "Kexin Huang", "Ziming Liu", "Payal Chandak", "Shengchao Liu", "Peter Van Katwyk", "Andreea Deac", "Anima Anandkumar", "Karianne Bergen", "Carla P. Gomez", "Shirley Ho", "Pushmeet Kohli", "Joan Lasenby", "Jure Leskovec", "Tie-Yan Liu", "Arjun Manrai", "Debora Marks", "Bharath Ramsundar", "Le Song", "Jimeng Sun", "Jian Tang", "Petar Velickovic", "Max Welling", "Connor W. Coley", "Yoshua Bengio", "Marinka Zitnik"],
-      "title": "Enabling Scientific Discovery with Artificial Intelligence",
+      "title": "Scientific Discovery in the Age of Artificial Intelligence",
       "venue": "Nature (in press)",
       "year": "2023",
       "thumbnail": "AI4Science-nature23.png",
@@ -51,17 +51,18 @@
       "key": "submission21e",
       "author": ["Matthew B. A. McDermott", "Brendan Yap", "Peter Szolovits", "Marinka Zitnik"],
       "title": "Structure Inducing Pre-Training",
-      "venue": "Nature Machine Intelligence (in press)",
+      "venue": "Nature Machine Intelligence",
       "year": "2023",
-      "thumbnail": "subgnn20.png",
-      "pdf": "papers/SIPT22.pdf",
-      "url": "https://arxiv.org/abs/2103.10334",
+      "thumbnail": "NatureMachIntel-SIPT23.png",
+      "pdf": "https://www.nature.com/articles/s42256-023-00647-z",
+      "url": "https://www.nature.com/articles/s42256-023-00647-z",
       "type": "journal",
       "supp":
       {
         "arXiv": "https://arxiv.org/abs/2103.10334",
         "code": "https://github.com/mmcdermott/structure_inducing_pre-training",
-        "project website": "/projects/SIPT"
+        "project website": "/projects/SIPT",
+        "supplementary": "https://www.nature.com/articles/s42256-023-00647-z#Sec26"
       }
     },
 
@@ -81,6 +82,24 @@
         "code": "https://github.com/mims-harvard/TxGNN",
         "project website": "/projects/TxGNN",
         "TxGNN Explorer": "http://txgnn.org"
+      }
+    },
+
+     {
+      "key": "submission23f",
+      "author": ["Owen Queen", "Thomas Hartvigsen", "Teddy Koker", "Huan He", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
+      "title": "Encoding Time-Series Explanations through Self-Supervised Model Behavior Consistency",
+      "venue": "In Review",
+      "year": "2023",
+      "thumbnail": "TimeX23.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2306.02109",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2306.02109",
+        "code": "https://github.com/mims-harvard/TimeX",
+        "project website": "https://zitniklab.hms.harvard.edu/projects/TimeX/"
       }
     },
 
@@ -106,7 +125,7 @@
       "venue": "International Conference on Machine Learning, ICML",
       "year": "2023",
       "thumbnail": "Raincoat-ICML23.png",
-      "pdf": "",
+      "pdf": "papers/Raincoat-ICML23.pdf",
       "url": "https://arxiv.org/abs/2302.03133",
       "type": "journal",
       "supp":
@@ -211,11 +230,11 @@
       "key": "submission22a",
       "author": ["Yucong Lin*", "Keming Lu*", "Sheng Yu", "Tianxi Cai", "Marinka Zitnik"],
       "title": "Multimodal Learning on Graphs for Disease Relation Extraction",
-      "venue": "In Review",
+      "venue": "Journal of Biomedical Informatics",
       "year": "2023",
       "thumbnail": "raindrop22.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2203.08893",
+      "pdf": "https://doi.org/10.1016/j.jbi.2023.104415",
+      "url": "https://doi.org/10.1016/j.jbi.2023.104415",
       "type": "journal",
       "supp":
       {

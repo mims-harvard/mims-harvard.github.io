@@ -142,34 +142,32 @@
 <div class="content">
     <div class="box has-background-info has-text-white">
 <p>
-Disease knowledge graphs are a way to connect, organize, and access disparate information about diseases with numerous benefits for artificial intelligence (AI). To create knowledge graphs, it is necessary to extract knowledge from multimodal datasets in the form of relationships between disease concepts and normalize both concepts and relationship types. 
+Disease knowledge graphs have emerged as a powerful tool for AI, enabling the connection, organization, and access to diverse information about diseases. However, the relations between disease concepts are often distributed across multiple data formats, including plain language and incomplete disease knowledge graphs. As a result, extracting disease relations from multimodal data sources is crucial for constructing accurate and comprehensive disease knowledge graphs.
 </p>
 
 <p>
-We introduce REMAP, a multimodal approach for disease relation extraction and classification. The REMAP machine learning approach jointly embeds a partial, incomplete knowledge graph and a medical language dataset into a compact latent vector space, followed by aligning the multimodal embeddings for optimal disease relation extraction.  
+We introduce REMAP, a multimodal approach for disease relation extraction. The REMAP machine learning approach jointly embeds a partial, incomplete knowledge graph and a medical language dataset into a compact latent vector space, aligning the multimodal embeddings for optimal disease relation extraction. Additionally, REMAP utilizes a decoupled model structure to enable inference in single-modal data, which can be applied under missing modality scenarios.
 </p>
 
 <p>
-Systematized knowledge is becoming the backbone of AI, creating opportunities to inject semantics into AI and fully integrate it into machine learning algorithms. While prior semantic knowledge can assist in extracting disease relationships from text, existing methods can not fully leverage multimodal datasets. REMAP is a multimodal approach for extracting and classifying disease relationships by fusing structured knowledge and text information. REMAP provides a flexible neural architecture to easily find, access, and validate AI-driven relationships between disease concepts.
+We apply the REMAP approach to a disease knowledge graph with 96,913 relations and a text dataset of 1.24 million sentences. On a dataset annotated by human experts, REMAP improves language-based disease relation extraction by 10.0% (accuracy) and 17.2% (F1-score) by fusing disease knowledge graphs with language information. Furthermore, REMAP leverages text information to recommend new relationships in the knowledge graph, outperforming graph-based methods by 8.4% (accuracy) and 10.4% (F1-score).
 </p>
 </div>
 
-<p>We introduce REMAP (Relation Extraction with Multimodal Alignment Penalty), a multimodal approach for extracting and classifying disease-disease relations. REMAP is a flexible multimodal algorithm that jointly learns over text and graphs with a unique capability to make predictions even when a disease concept exists in only one data type.</p>
-
-<p>REMAP specifies graph-based and text-based deep transformation functions that embed each data type separately and optimize unimodal embedding spaces such that they capture the topology of a disease knowledge graph or the text semantics of disease concepts. To achieve data fusion, REMAP aligns unimodal embedding spaces through a novel alignment penalty loss using shared disease concepts as anchors. This way, REMAP can effectively model data type-specific distributions and diverse representations while also aligning embeddings of distinct data types. Further, REMAP can be jointly trained on both graph and text data types but evaluated on either of the two modalities alone.</p>
+<p>We introduce REMAP, a multimodal approach for extracting and classifying disease-disease relations. REMAP is a flexible algorithm that can jointly learn over language and graphs and can make predictions even under missing modality scenarios. To achieve this, REMAP specifies graph-based and language-based deep transformation functions that embed each data type separately and optimize unimodal embedding spaces to capture the topology of a disease KG or the text semantics of disease concepts. Finally, to fuse the two data REMAP aligns unimodal embedding spaces a novel alignment penalty loss using disease concepts as anchors. REMAP can effectively data type-specific distribution and diverse representations while aligning embeddings of distinct data types. Furthermore, REMAP can be on both graph and text data types but evaluated and implemented on either of the two modalities alone.</p>
 
 <center>
 <img width="800" src="/img/remap-overview.png" />
 </center>
 
-<p>In summary, the main contributions of this study are:</p>
+<p>Contributions of this study are:</p>
 
 <ul>
   <li>
-    <p>We develop REMAP, a flexible multimodal approach for extracting and classifying disease-disease relations. REMAP fuses knowledge graph embeddings with deep language models and can flexibly accommodate missing data types, which is necessary to facilitate REMAP’s validation and transition into biomedical implementation.</p>
+    <p>We introduce REMAP, a <strong>flexible multimodal approach for extracting and classifying disease-disease relations.</strong> REMAP combines knowledge graph embeddings with deep language models and can handle missing data types, which is a critical capability for disease relation extraction.</p>
   </li>
   <li>
-    <p>We rigorously evaluate REMAP for extraction and classification of disease-disease relations. To this end, we create a training dataset using distant supervision and a high-quality test dataset of gold-standard annotations provided by three domain experts, all medical doctors. Our evaluations show that REMAP achieves 88.6% micro-accuracy and 81.8% micro-F1 score on the human annotated dataset, outperforming text-based methods by 10 and 17.2 percentage points, respectively. Further, REMAP achieves the best performance, 89.8% micro-accuracy and 84.1% micro-F1 score, surpassing graph-based methods by 8.4 and 10.4 percentage points, respectively.</p>
+    <p>We rigorously evaluate REMAP for <strong>finding clinically significant disease-disease relations.</strong> We create a training dataset using distant supervision and a high-quality test dataset of gold-standard annotations provided by three clinical domain experts. Our evaluations demonstrate that REMAP achieves an 88.6% micro-accuracy and 81.8% micro-F1 score on the human-annotated dataset, outperforming text-based methods by 10.0% and 17.2%, respectively. Additionally, REMAP achieves the highest performance of 89.8% micro-accuracy and 84.1% micro-F1 score, surpassing graph-based methods by 8.4% and 10.4%, respectively.</p>
   </li>
 </ul>
 
@@ -187,15 +185,16 @@ Systematized knowledge is becoming the backbone of AI, creating opportunities to
 
 <h2 id="publication">Publication</h2>
 
-<p><a href="https://arxiv.org/abs/2203.08893">Multimodal Learning on Graphs for Disease Relation Extraction</a><br />
+<p><a href="https://www.sciencedirect.com/science/article/abs/pii/S1532046423001363">Multimodal Learning on Graphs for Disease Relation Extraction</a><br />
 Yucong Lin, Keming Lu, Sheng Yu, Tianxi Cai, and Marinka Zitnik<br />
-<em>In Review</em> 2022</p>
+<em>Journal of Biomedical Informatics</em> 2023 <a href="https://arxiv.org/abs/2203.08893">[arXiv]</a></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{lin2022multimodal,
-Title = {Multimodal Learning on Graphs for Disease Relation Extraction},
-author = {Lin, Yucong and Lu, Keming and Yu, Sheng and Cai, Tianxi and Zitnik, Marinka},
-booktitle = {In Review},
-year      = {2022}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{lin2023multimodal,
+  title={Multimodal Learning on Graphs for Disease Relation Extraction},
+  author={Lin, Yucong and Lu, Keming and Yu, Sheng and Cai, Tianxi and Zitnik, Marinka},
+  journal={Journal of Biomedical Informatics},
+  volume={143},
+  year={2023}
 }
 </code></pre></div></div>
 
@@ -220,6 +219,96 @@ year      = {2022}
                     <p class="title is-4">Latest News</p>
 
 <div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/06/21/Kempner/">Our Group is Joining the Kempner Institute</a>-->
+        <p class="card-header-title">Jun 2023: &nbsp; <span class="has-text-primary">Our Group is Joining the Kempner Institute</span></p>
+<!--        <p class="card-header-item">Jun 2023</p>-->
+<!--        <p class="card-footer-item">Jun 21, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited to join <a href="https://news.harvard.edu/gazette/story/newsplus/kempner-institute-announces-appointment-of-four-new-associate-faculty/">Kempner’s inaugural cohort of associate faculty</a> to advance Kempner’s mission of studying the intersection of natural and artificial intelligence.</p>
+
+</p>-->
+            <p>Excited to join <a href="https://news.harvard.edu/gazette/story/newsplus/kempner-institute-announces-appointment-of-four-new-associate-faculty/">Kempner’s inaugural cohort of associate faculty</a> to advance Kempner’s mission of studying the intersection of natural and artificial intelligence.</p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/06/21/Kempner/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jun 21, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/06/11/NewPostdoc/">Welcoming a New Postdoctoral Fellow</a>-->
+        <p class="card-header-title">Jun 2023: &nbsp; <span class="has-text-primary">Welcoming a New Postdoctoral Fellow</span></p>
+<!--        <p class="card-header-item">Jun 2023</p>-->
+<!--        <p class="card-footer-item">Jun 11, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>An enthusiastic welcome to <a href="https://scholar.google.com/citations?user=zW32dXsAAAAJ">Shanghua Gao</a> who is joining our group as a postdoctoral research fellow.</p>
+
+</p>-->
+            <p>An enthusiastic welcome to <a href="https://scholar.google.com/citations?user=zW32dXsAAAAJ">Shanghua Gao</a> who is joining our group as a postdoctoral research fellow.</p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/06/11/NewPostdoc/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jun 11, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/06/01/Pretraining-NatMachIntelligence/">On Pretraining in Nature Machine Intelligence</a>-->
+        <p class="card-header-title">Jun 2023: &nbsp; <span class="has-text-primary">On Pretraining in Nature Machine Intelligence</span></p>
+<!--        <p class="card-header-item">Jun 2023</p>-->
+<!--        <p class="card-footer-item">Jun 1, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited to share our new study on <a href="https://www.nature.com/articles/s42256-023-00647-z">language model pretraining and general-purpose methods for biological sequences.</a> <a href="https://zitniklab.hms.harvard.edu/projects/SIPT/">Project website.</a></p>
+
+</p>-->
+            <p>Excited to share our new study on <a href="https://www.nature.com/articles/s42256-023-00647-z">language model pretraining and general-purpose methods for biological sequences.</a> <a href="https://zitniklab.hms.harvard.edu/projects/SIPT/">Project website.</a></p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/06/01/Pretraining-NatMachIntelligence/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jun 1, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
     
     <div class="column is-12">
         <div class="card">
@@ -324,10 +413,10 @@ year      = {2022}
     <div class="card-content">
 <!--        <div class="content">-->
 <!--            -->
-<!--            <p><p>An enthusiastic welcome to <a href="https://tianlong-chen.github.io/about/">Tianlong Chen</a>, our newly appointed postdoctoral fellow.</p>
+<!--            <p><p>An enthusiastic welcome to <a href="https://scholar.google.com/citations?user=LE3ctn0AAAAJ&amp;hl=en">Tianlong Chen</a>, our newly appointed postdoctoral fellow.</p>
 
 </p>-->
-            <p>An enthusiastic welcome to <a href="https://tianlong-chen.github.io/about/">Tianlong Chen</a>, our newly appointed postdoctoral fellow.</p>
+            <p>An enthusiastic welcome to <a href="https://scholar.google.com/citations?user=LE3ctn0AAAAJ&amp;hl=en">Tianlong Chen</a>, our newly appointed postdoctoral fellow.</p>
 
 
 <!--        </div>-->
@@ -715,90 +804,6 @@ year      = {2022}
     </div>
 <!--    <footer class="card-footer">-->
 <!--        <p class="card-footer-item">Published: Oct 31, 2022</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2022/09/21/TDC-NatureChemBio/">New Paper in Nature Chemical Biology</a>-->
-        <p class="card-header-title">Sep 2022: &nbsp; <span class="has-text-primary">New Paper in Nature Chemical Biology</span></p>
-<!--        <p class="card-header-item">Sep 2022</p>-->
-<!--        <p class="card-footer-item">Sep 21, 2022</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>Our paper on <a href="https://www.nature.com/articles/s41589-022-01131-2">artificial intelligence foundation for therapeutic science</a> is published in Nature Chemical Biology.</p>
-</p>-->
-            <p>Our paper on <a href="https://www.nature.com/articles/s41589-022-01131-2">artificial intelligence foundation for therapeutic science</a> is published in Nature Chemical Biology.</p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2022/09/21/TDC-NatureChemBio/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Sep 21, 2022</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2022/09/14/TF-C-NeurIPS/">Self-Supervised Pre-Training at NeurIPS 2022</a>-->
-        <p class="card-header-title">Sep 2022: &nbsp; <span class="has-text-primary">Self-Supervised Pre-Training at NeurIPS 2022</span></p>
-<!--        <p class="card-header-item">Sep 2022</p>-->
-<!--        <p class="card-footer-item">Sep 14, 2022</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>New paper on self-supervised contrastive pre-training accepted at <a href="https://nips.cc/Conferences/2022">NeurIPS 2022.</a> <a href="https://zitniklab.hms.harvard.edu/projects/TF-C/">Project page.</a> Thankful for this collaboration with the <a href="https://www.ll.mit.edu/">Lincoln National Laboratory</a>.</p>
-</p>-->
-            <p>New paper on self-supervised contrastive pre-training accepted at <a href="https://nips.cc/Conferences/2022">NeurIPS 2022.</a> <a href="https://zitniklab.hms.harvard.edu/projects/TF-C/">Project page.</a> Thankful for this collaboration with the <a href="https://www.ll.mit.edu/">Lincoln National Laboratory</a>.</p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2022/09/14/TF-C-NeurIPS/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Sep 14, 2022</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2022/09/06/BestPaperAwardIEEEVIS/">Best Paper Honorable Mention Award at IEEE VIS</a>-->
-        <p class="card-header-title">Sep 2022: &nbsp; <span class="has-text-primary">Best Paper Honorable Mention Award at IEEE VIS</span></p>
-<!--        <p class="card-header-item">Sep 2022</p>-->
-<!--        <p class="card-footer-item">Sep 6, 2022</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>Our paper on <a href="https://osf.io/yhdpv">user-centric AI of drug repurposing</a> received the <a href="http://ieeevis.org/year/2022/info/awards/best-paper-awards">Best Paper Honorable Mention Award</a> at IEEE VIS 2022. Thankful for this collaboration with <a href="http://gehlenborglab.org/">Gehlenborg Lab.</a></p>
-</p>-->
-            <p>Our paper on <a href="https://osf.io/yhdpv">user-centric AI of drug repurposing</a> received the <a href="http://ieeevis.org/year/2022/info/awards/best-paper-awards">Best Paper Honorable Mention Award</a> at IEEE VIS 2022. Thankful for this collaboration with <a href="http://gehlenborglab.org/">Gehlenborg Lab.</a></p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2022/09/06/BestPaperAwardIEEEVIS/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Sep 6, 2022</p>-->
 <!--    </footer>-->
 </div>
     </div>

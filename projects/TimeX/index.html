@@ -1,0 +1,868 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Encoding Time-Series Explanations through Self-Supervised Model Behavior Consistency - Zitnik Lab</title>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="shortcut icon" type="image/png"
+           href="/favicon.png" 
+    />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Encoding Time-Series Explanations through Self-Supervised Model Behavior Consistency | Zitnik Lab</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Encoding Time-Series Explanations through Self-Supervised Model Behavior Consistency" />
+<meta name="author" content="Marinka Zitnik" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Self-supervised learning, artificial Intelligence, time series models, transformers" />
+<meta property="og:description" content="Self-supervised learning, artificial Intelligence, time series models, transformers" />
+<link rel="canonical" href="https://zitniklab.hms.harvard.edu/projects/TimeX/" />
+<meta property="og:url" content="https://zitniklab.hms.harvard.edu/projects/TimeX/" />
+<meta property="og:site_name" content="Zitnik Lab" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Encoding Time-Series Explanations through Self-Supervised Model Behavior Consistency" />
+<meta name="twitter:site" content="@marinkazitnik" />
+<meta name="twitter:creator" content="@Marinka Zitnik" />
+<script type="application/ld+json">
+{"url":"https://zitniklab.hms.harvard.edu/projects/TimeX/","author":{"@type":"Person","name":"Marinka Zitnik"},"headline":"Encoding Time-Series Explanations through Self-Supervised Model Behavior Consistency","description":"Self-supervised learning, artificial Intelligence, time series models, transformers","@type":"WebPage","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
+<script>
+  window['ga-disable-UA-162129505-1'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-162129505-1');
+</script><!-- head scripts --></head>
+
+  <body>
+    
+<nav class="navbar is-primary" >
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item"><b>
+                Zitnik Lab
+            </b></a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+<!--                <a href="/" class="navbar-item "><b>Home</b></a>-->
+                
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a href="/#" class="navbar-link "><b>About</b></a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/bio/" class="navbar-item "><b>Bio</b></a>
+                            
+                            <a href="/contact/" class="navbar-item "><b>Contact</b></a>
+                            
+                            <a href="/talks/" class="navbar-item "><b>Recent Talks</b></a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                <a href="/research/" class="navbar-item "><b>Research</b></a>
+                    
+                
+                    
+                <a href="/publications/" class="navbar-item "><b>Publications</b></a>
+                    
+                
+                    
+                <a href="/people/" class="navbar-item "><b>Members</b></a>
+                    
+                
+                    
+                <a href="/meetings/" class="navbar-item "><b>Education</b></a>
+                    
+                
+                    
+                <a href="/DMAI/" class="navbar-item "><b>DMAI</b></a>
+                    
+                
+                    
+                <a href="/data/" class="navbar-item "><b>Datasets</b></a>
+                    
+                
+                    
+                <a href="/software/" class="navbar-item "><b>AI Tools</b></a>
+                    
+                
+                    
+                <a href="https://zitniklab.hms.harvard.edu/TDC/" class="navbar-item "><b>TDC</b></a>
+                    
+                
+                    
+                <a href="/news/" class="navbar-item "><b>News</b></a>
+                    
+                
+                    
+                <a href="/jobs/" class="navbar-item "><b>Join Us</b></a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+
+    
+        <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
+    <div class="hero-body">
+        <div class="container">
+            <p class="title is-2">Encoding Time-Series Explanations through Self-Supervised Model Behavior Consistency</p>
+            <p class="subtitle is-3"></p>
+            
+        </div>
+    </div>
+</section>
+    
+    
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+                <div class="column is-8">
+                    
+                    
+                    
+<div class="content">
+    <div class="box has-background-info has-text-white">
+<p>
+Interpreting time series models is uniquely challenging because it requires identifying both the location of time series signals that drive model predictions and their matching to an interpretable temporal pattern. While explainers from other modalities can be applied to time series, their inductive biases do not transfer well to the inherently uninterpretable nature of time series.
+</p>
+<p>
+We present TimeX, a time series consistency model for training explainers. TimeX trains an interpretable surrogate to mimic the behavior of a pretrained time series model. It addresses the issue of model faithfulness by introducing <i>model behavior consistency</i>, a novel formulation that preserves relations in the latent space induced by the pretrained model with relations in the latent space induced by TimeX. TimeX provides discrete attribution maps and, unlike existing interpretability methods, it learns a latent space of explanations that can be used in various ways, such as to provide landmarks to visually aggregate similar explanations and easily recognize temporal patterns.
+</p>
+<p>
+We evaluate TimeX on eight synthetic and real-world datasets and compare its performance against state-of-the-art interpretability methods. We also conduct case studies using physiological time series, showing that the novel components of TimeX show potential for training faithful, interpretable models that capture the behavior of pretrained time series models. 
+</p>
+</div>
+
+<p>State-of-the-art time series models are high-capacity pre-trained neural networks often seen as black boxes due to their internal complexity and lack of interpretability. However, practical use requires techniques for auditing and interrogating these models to rationalize their predictions. Interpreting time series models poses a distinct set of challenges due to the need to achieve two goals:</p>
+
+<ul>
+  <li>pinpointing the specific <em>location</em> of time series signals that influence the model’s predictions,</li>
+  <li>aligning those signals with <em>interpretable temporal patterns</em>.</li>
+</ul>
+
+<p>Research in model understanding and interpretability developed <em>post-hoc</em> explainers that treat pretrained models as black boxes and do not need access to internal model parameters, activations, and gradients. Recent research, however, shows that such post hoc methods suffer from a lack of faithfulness and stability, among other issues. A model can also be understood by investigating what parts of the input it attends to through attention mapping and measuring the impact of modifying individual computational steps within a model. Another major line of inquiry investigates internal mechanisms by asking what information the model contains. For example, it has been found that even when a language model is conditioned to output falsehoods, it may include a hidden state that represents the true answer internally. Such a gap between external failure modes and internal states can only be identified by probing model internals. Such representation probing has been used to characterize the behaviors of language models, but leveraging these strategies to understand time series models has yet to be attempted.</p>
+
+<p>These lines of inquiry drive the development of <em>in-hoc</em> explainers that build inherent interpretability into the model through architectural modifications or regularization. However, no  <em>in-hoc</em> explainers have been developed for time series data. While explainers designed for other modalities can be adapted to time series, their inherent biases translate poorly to the uninterpretable nature of time series data and can miss important structures in time series.</p>
+
+<p>Explaining time series models is challenging for many reasons:</p>
+
+<ol>
+  <li>Large time series data <em>are not visually interpretable</em>, as opposed to imaging or text datasets.</li>
+  <li>Time series often exhibit dense informative features, in contrast to more explored modalities such as imaging, where informative features are often sparse. In time series datasets, timestep-to-timestep transitions can be negligible and temporal patterns only show up when <em>looking at time segments and long-term trends</em>. In contrast, in text datasets, word-to-word transitions are informative for language modeling and understanding. Time series interpretability involves understanding dynamics of the model and identifying trends or patterns.</li>
+  <li>Another key issue with applying prior methods is that they treat all <em>time steps as separate features</em>, ignoring potential time dependencies and contextual information; we need explanations that are <em>temporally connected</em> and <em>visually digestible</em>.</li>
+  <li>While understanding predictions of individual samples is valuable, the ability to establish <em>connections between explanations of various samples</em> (for example, in an appropriate latent space) could help alleviate these challenges.</li>
+</ol>
+
+<h2 id="overview-of-timex">Overview of TimeX</h2>
+
+<p>TimeX is a novel time series <em>in-hoc</em> explainer that produces interpretable attribution masks as explanations over time series inputs. An essential contribution of TimeX is the introduction of <strong>model behavior consistency,</strong> a novel formulation that ensures the preservation of relationships in the latent space induced by the pretrained model and the latent space induced by TimeX.</p>
+
+<center>
+<img width="500" src="/img/TimeX-MBC.png" />
+</center>
+
+<p>In addition to achieving model behavior consistency, TimeX offers interpretable attribution maps, which are valuable tools for interpreting the model’s predictions, generated using discrete straight-through estimators, a type of gradient estimator that enable end-to-end training of TimeX models.</p>
+
+<p>Unlike existing interpretability methods, TimeX goes further by learning a latent space of explanations. By incorporating model behavior consistency and leveraging a latent space of explanations, TimeX provides discrete attribution maps and visual summaries of similar explanations with interpretable temporal patterns.</p>
+
+<center>
+<img src="/img/TimeX-Method.png" />
+</center>
+
+<h2 id="landmark-explanation-analysis-using-an-ecg-dataset">Landmark Explanation Analysis Using an ECG Dataset</h2>
+
+<p>To demonstrate TimeX’s landmarks, we show how landmarks serve as summaries of diverse patterns in the ECG dataset. The figure below visualizes the learned landmarks in the latent space of explanations. We choose four representative landmarks. Every landmark occupies different regions of the latent space, capturing diverse types of explanations generated by the model.</p>
+
+<p>We show the three nearest explanations for the top two landmarks in terms of the nearest neighbor in the latent space. Explanations ①, ②, and ③ are all similar to each other while distinctly different from ④, ⑤, and ⑥, both in terms of attribution and temporal structure. This visualization shows how landmarks can partition the latent space of explanations into interpretable temporal patterns.</p>
+
+<center>
+<img src="/img/TimeX-Results.png" />
+</center>
+
+<h2 id="publication">Publication</h2>
+
+<p><a href="https://arxiv.org/abs/2306.02109">Encoding Time-Series Explanations through Self-Supervised Model Behavior Consistency</a><br />
+Owen Queen, Thomas Hartvigsen, Teddy Koker, Huan He, Theodoros Tsiligkaridis, Marinka Zitnik<br />
+<em>In Review</em> 2023 <a href="https://arxiv.org/abs/2306.02109">[arXiv]</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{queen2023encoding,
+title = {Encoding Time-Series Explanations through Self-Supervised Model Behavior Consistency},
+author = {Queen, Owen and Hartvigsen, Thomas and Koker, Teddy and Huan, He and Tsiligkaridis, Theodoros and Zitnik, Marinka},
+booktitle = {rXiv:2306.02109},
+year      = {2023}
+}
+</code></pre></div></div>
+
+<h2 id="code">Code</h2>
+
+<p>Pytorch implementation of TimeX is available in the <a href="https://github.com/mims-harvard/TimeX">GitHub repository</a>.</p>
+
+<h2 id="authors">Authors</h2>
+
+<ul>
+  <li><a href="#">Owen Queen</a></li>
+  <li><a href="https://www.tomhartvigsen.com/">Thomas Hartvigsen</a></li>
+  <li><a href="#">Teddy Koker</a></li>
+  <li><a href="https://hehuannb.github.io/">Huan He</a></li>
+  <li><a href="#">Theodoros Tsiligkaridis</a></li>
+  <li><a href="https://zitniklab.hms.harvard.edu/">Marinka Zitnik</a></li>
+</ul>
+
+</div>
+                </div>
+                
+                <div class="column is-4-desktop is-12-tablet">
+                    <p class="title is-4">Latest News</p>
+
+<div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/06/21/Kempner/">Our Group is Joining the Kempner Institute</a>-->
+        <p class="card-header-title">Jun 2023: &nbsp; <span class="has-text-primary">Our Group is Joining the Kempner Institute</span></p>
+<!--        <p class="card-header-item">Jun 2023</p>-->
+<!--        <p class="card-footer-item">Jun 21, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited to join <a href="https://news.harvard.edu/gazette/story/newsplus/kempner-institute-announces-appointment-of-four-new-associate-faculty/">Kempner’s inaugural cohort of associate faculty</a> to advance Kempner’s mission of studying the intersection of natural and artificial intelligence.</p>
+
+</p>-->
+            <p>Excited to join <a href="https://news.harvard.edu/gazette/story/newsplus/kempner-institute-announces-appointment-of-four-new-associate-faculty/">Kempner’s inaugural cohort of associate faculty</a> to advance Kempner’s mission of studying the intersection of natural and artificial intelligence.</p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/06/21/Kempner/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jun 21, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/06/11/NewPostdoc/">Welcoming a New Postdoctoral Fellow</a>-->
+        <p class="card-header-title">Jun 2023: &nbsp; <span class="has-text-primary">Welcoming a New Postdoctoral Fellow</span></p>
+<!--        <p class="card-header-item">Jun 2023</p>-->
+<!--        <p class="card-footer-item">Jun 11, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>An enthusiastic welcome to <a href="https://scholar.google.com/citations?user=zW32dXsAAAAJ">Shanghua Gao</a> who is joining our group as a postdoctoral research fellow.</p>
+
+</p>-->
+            <p>An enthusiastic welcome to <a href="https://scholar.google.com/citations?user=zW32dXsAAAAJ">Shanghua Gao</a> who is joining our group as a postdoctoral research fellow.</p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/06/11/NewPostdoc/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jun 11, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/06/01/Pretraining-NatMachIntelligence/">On Pretraining in Nature Machine Intelligence</a>-->
+        <p class="card-header-title">Jun 2023: &nbsp; <span class="has-text-primary">On Pretraining in Nature Machine Intelligence</span></p>
+<!--        <p class="card-header-item">Jun 2023</p>-->
+<!--        <p class="card-footer-item">Jun 1, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited to share our new study on <a href="https://www.nature.com/articles/s42256-023-00647-z">language model pretraining and general-purpose methods for biological sequences.</a> <a href="https://zitniklab.hms.harvard.edu/projects/SIPT/">Project website.</a></p>
+
+</p>-->
+            <p>Excited to share our new study on <a href="https://www.nature.com/articles/s42256-023-00647-z">language model pretraining and general-purpose methods for biological sequences.</a> <a href="https://zitniklab.hms.harvard.edu/projects/SIPT/">Project website.</a></p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/06/01/Pretraining-NatMachIntelligence/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jun 1, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/05/15/CongratsMichelleAda/">Congratulations to Ada and Michelle</a>-->
+        <p class="card-header-title">May 2023: &nbsp; <span class="has-text-primary">Congratulations to Ada and Michelle</span></p>
+<!--        <p class="card-header-item">May 2023</p>-->
+<!--        <p class="card-footer-item">May 15, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Congrats to PhD student Michelle on being selected as the <a href="http://www.albertjryanfoundation.org/fellows.cfm">2023 Albert J. Ryan Fellow</a> and also to participate in the <a href="https://www.heidelberg-laureate-forum.org/">Heidelberg Laureate Forum</a>. Congratulations to PhD student Ada for being selected as the <a href="https://www.harvard.edu/kempner-institute">Kempner Institute Graduate Fellow</a>!</p>
+
+</p>-->
+            <p>Congrats to PhD student Michelle on being selected as the <a href="http://www.albertjryanfoundation.org/fellows.cfm">2023 Albert J. Ryan Fellow</a> and also to participate in the <a href="https://www.heidelberg-laureate-forum.org/">Heidelberg Laureate Forum</a>. Congratulations to PhD student Ada for being selected as the <a href="https://www.harvard.edu/kempner-institute">Kempner Institute Graduate Fellow</a>!</p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/05/15/CongratsMichelleAda/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: May 15, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/04/24/RaincoatICML23/">Universal Domain Adaptation at ICML 2023</a>-->
+        <p class="card-header-title">Apr 2023: &nbsp; <span class="has-text-primary">Universal Domain Adaptation at ICML 2023</span></p>
+<!--        <p class="card-header-item">Apr 2023</p>-->
+<!--        <p class="card-footer-item">Apr 24, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper introducing <a href="https://arxiv.org/abs/2302.03133">the first model for closed-set and universal domain adaptation on time series</a> accepted at <a href="https://icml.cc/Conferences/2023">ICML 2023</a>. Raincoat addresses feature and label shifts and can detect private labels. <a href="https://zitniklab.hms.harvard.edu/projects/Raincoat/">Project website.</a></p>
+
+</p>-->
+            <p>New paper introducing <a href="https://arxiv.org/abs/2302.03133">the first model for closed-set and universal domain adaptation on time series</a> accepted at <a href="https://icml.cc/Conferences/2023">ICML 2023</a>. Raincoat addresses feature and label shifts and can detect private labels. <a href="https://zitniklab.hms.harvard.edu/projects/Raincoat/">Project website.</a></p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/04/24/RaincoatICML23/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Apr 24, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/04/13/Undergrads/">Celebrating Achievements of Our Undergrads</a>-->
+        <p class="card-header-title">Apr 2023: &nbsp; <span class="has-text-primary">Celebrating Achievements of Our Undergrads</span></p>
+<!--        <p class="card-header-item">Apr 2023</p>-->
+<!--        <p class="card-footer-item">Apr 13, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Undergraduate researchers Ziyuan, Nick, Yepeng, Jiali, Julia, and Marissa are moving onto their PhD research in Computer Science, Systems Biology, Neuroscience, and Biological &amp; Medical Sciences at Harvard, MIT, Carnegie Mellon University, and UMass Lowell. We are excited for the bright future they created for themselves.</p>
+
+</p>-->
+            <p>Undergraduate researchers Ziyuan, Nick, Yepeng, Jiali, Julia, and Marissa are moving onto their PhD research in Computer Science, Systems Biology, Neuroscience, and Biological &amp; Medical Sciences at Harvard, MIT, Carnegie Mellon University, and UMass Lowell. We are excited for the bright future they created for themselves.</p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/04/13/Undergrads/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Apr 13, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/04/13/NewPostdoc/">Welcoming a New Postdoctoral Fellow</a>-->
+        <p class="card-header-title">Apr 2023: &nbsp; <span class="has-text-primary">Welcoming a New Postdoctoral Fellow</span></p>
+<!--        <p class="card-header-item">Apr 2023</p>-->
+<!--        <p class="card-footer-item">Apr 13, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>An enthusiastic welcome to <a href="https://scholar.google.com/citations?user=LE3ctn0AAAAJ&amp;hl=en">Tianlong Chen</a>, our newly appointed postdoctoral fellow.</p>
+
+</p>-->
+            <p>An enthusiastic welcome to <a href="https://scholar.google.com/citations?user=LE3ctn0AAAAJ&amp;hl=en">Tianlong Chen</a>, our newly appointed postdoctoral fellow.</p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/04/13/NewPostdoc/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Apr 13, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/04/03/MultimodalGraphLearning-NatMachIntelligence/">New Study in Nature Machine Intelligence</a>-->
+        <p class="card-header-title">Apr 2023: &nbsp; <span class="has-text-primary">New Study in Nature Machine Intelligence</span></p>
+<!--        <p class="card-header-item">Apr 2023</p>-->
+<!--        <p class="card-footer-item">Apr 3, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper in Nature Machine Intelligence introducing the <a href="https://www.nature.com/articles/s42256-023-00624-6">blueprint for multimodal learning with graphs</a>.</p>
+
+</p>-->
+            <p>New paper in Nature Machine Intelligence introducing the <a href="https://www.nature.com/articles/s42256-023-00624-6">blueprint for multimodal learning with graphs</a>.</p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/04/03/MultimodalGraphLearning-NatMachIntelligence/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Apr 3, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/03/23/PrecisionHealthDeepSpace-NatMachIntelligence/">Precision Health in Nature Machine Intelligence</a>-->
+        <p class="card-header-title">Mar 2023: &nbsp; <span class="has-text-primary">Precision Health in Nature Machine Intelligence</span></p>
+<!--        <p class="card-header-item">Mar 2023</p>-->
+<!--        <p class="card-footer-item">Mar 23, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper with NASA in Nature Machine Intelligence on <a href="https://www.nature.com/articles/s42256-023-00617-5">biomonitoring and precision health in deep space supported by artificial intelligence</a>.</p>
+
+</p>-->
+            <p>New paper with NASA in Nature Machine Intelligence on <a href="https://www.nature.com/articles/s42256-023-00617-5">biomonitoring and precision health in deep space supported by artificial intelligence</a>.</p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/03/23/PrecisionHealthDeepSpace-NatMachIntelligence/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 23, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/03/23/BiologicalResearchDeepSpace-NatMachIntelligence/">Self-Driving Labs in Nature Machine Intelligence</a>-->
+        <p class="card-header-title">Mar 2023: &nbsp; <span class="has-text-primary">Self-Driving Labs in Nature Machine Intelligence</span></p>
+<!--        <p class="card-header-item">Mar 2023</p>-->
+<!--        <p class="card-footer-item">Mar 23, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper with NASA in Nature Machine Intelligence on <a href="https://www.nature.com/articles/s42256-023-00618-4">biological research and self-driving labs in deep space supported by artificial intelligence</a>.</p>
+</p>-->
+            <p>New paper with NASA in Nature Machine Intelligence on <a href="https://www.nature.com/articles/s42256-023-00618-4">biological research and self-driving labs in deep space supported by artificial intelligence</a>.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/03/23/BiologicalResearchDeepSpace-NatMachIntelligence/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 23, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/03/20/TxGNN/">TxGNN - Zero-shot prediction of therapeutic use</a>-->
+        <p class="card-header-title">Mar 2023: &nbsp; <span class="has-text-primary">TxGNN - Zero-shot prediction of therapeutic use</span></p>
+<!--        <p class="card-header-item">Mar 2023</p>-->
+<!--        <p class="card-footer-item">Mar 20, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New study on <a href="https://www.medrxiv.org/content/10.1101/2023.03.19.23287458">zero-shot prediction of therapeutic use with geometric deep learning and clinician centered design.</a> Check out our <a href="/projects/TxGNN/">project website</a> and <a href="http://txgnn.org">TxGNN Explorer.</a></p>
+
+</p>-->
+            <p>New study on <a href="https://www.medrxiv.org/content/10.1101/2023.03.19.23287458">zero-shot prediction of therapeutic use with geometric deep learning and clinician centered design.</a> Check out our <a href="/projects/TxGNN/">project website</a> and <a href="http://txgnn.org">TxGNN Explorer.</a></p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/03/20/TxGNN/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 20, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/03/15/GraphXAI/">GraphXAI published in Scientific Data</a>-->
+        <p class="card-header-title">Mar 2023: &nbsp; <span class="has-text-primary">GraphXAI published in Scientific Data</span></p>
+<!--        <p class="card-header-item">Mar 2023</p>-->
+<!--        <p class="card-footer-item">Mar 15, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p><a href="https://www.nature.com/articles/s41597-023-01974-x">Our approach evaluating explainability of geometric deep learning models</a> is published in Scientific Data. <a href="/projects/GraphXAI/">Project website.</a></p>
+
+</p>-->
+            <p><a href="https://www.nature.com/articles/s41597-023-01974-x">Our approach evaluating explainability of geometric deep learning models</a> is published in Scientific Data. <a href="/projects/GraphXAI/">Project website.</a></p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/03/15/GraphXAI/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 15, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/02/20/NewPostdocs/">Welcoming New Postdoctoral Fellows</a>-->
+        <p class="card-header-title">Feb 2023: &nbsp; <span class="has-text-primary">Welcoming New Postdoctoral Fellows</span></p>
+<!--        <p class="card-header-item">Feb 2023</p>-->
+<!--        <p class="card-footer-item">Feb 20, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>A warm welcome to postdoctoral fellows <a href="https://www.shenwx.com/">Wanxiang Shen</a> and <a href="https://ruthjohnson95.github.io/">Ruth Johnson</a>. Congratulations to Ruthie for being named a <a href="https://news.harvard.edu/gazette/story/2021/08/gift-launches-precision-medicine-research-at-harvard-and-in-tel-aviv/">Berkowitz Fellow</a>.</p>
+
+</p>-->
+            <p>A warm welcome to postdoctoral fellows <a href="https://www.shenwx.com/">Wanxiang Shen</a> and <a href="https://ruthjohnson95.github.io/">Ruth Johnson</a>. Congratulations to Ruthie for being named a <a href="https://news.harvard.edu/gazette/story/2021/08/gift-launches-precision-medicine-research-at-harvard-and-in-tel-aviv/">Berkowitz Fellow</a>.</p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/02/20/NewPostdocs/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 20, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/02/08/RaincoatPreprint/">New Preprint on Distribution Shifts</a>-->
+        <p class="card-header-title">Feb 2023: &nbsp; <span class="has-text-primary">New Preprint on Distribution Shifts</span></p>
+<!--        <p class="card-header-item">Feb 2023</p>-->
+<!--        <p class="card-footer-item">Feb 8, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New preprint on <a href="https://arxiv.org/abs/2302.03133">domain adaptation for time series under feature and label shifts.</a> <a href="/projects/Raincoat/">Project website.</a></p>
+
+</p>-->
+            <p>New preprint on <a href="https://arxiv.org/abs/2302.03133">domain adaptation for time series under feature and label shifts.</a> <a href="/projects/Raincoat/">Project website.</a></p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/02/08/RaincoatPreprint/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 8, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/02/01/PrimeKG/">PrimeKG published in Scientific Data</a>-->
+        <p class="card-header-title">Feb 2023: &nbsp; <span class="has-text-primary">PrimeKG published in Scientific Data</span></p>
+<!--        <p class="card-header-item">Feb 2023</p>-->
+<!--        <p class="card-footer-item">Feb 1, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p><a href="https://www.nature.com/articles/s41597-023-01960-3">Our multimodal knowledge graph for precision medicine</a> is published in Scientific Data. <a href="/projects/PrimeKG/">Project website.</a></p>
+
+</p>-->
+            <p><a href="https://www.nature.com/articles/s41597-023-01960-3">Our multimodal knowledge graph for precision medicine</a> is published in Scientific Data. <a href="/projects/PrimeKG/">Project website.</a></p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/02/01/PrimeKG/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 1, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/01/20/GNNDelete/">GNNDelete published at ICLR 2023</a>-->
+        <p class="card-header-title">Jan 2023: &nbsp; <span class="has-text-primary">GNNDelete published at ICLR 2023</span></p>
+<!--        <p class="card-header-item">Jan 2023</p>-->
+<!--        <p class="card-footer-item">Jan 20, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper on <a href="https://openreview.net/pdf?id=X9yCkmT5Qrl">machine unlearning for graph neural networks</a> accepted at <a href="https://iclr.cc/">ICLR 2023.</a> <a href="/projects/GNNDelete/">Project website.</a></p>
+</p>-->
+            <p>New paper on <a href="https://openreview.net/pdf?id=X9yCkmT5Qrl">machine unlearning for graph neural networks</a> accepted at <a href="https://iclr.cc/">ICLR 2023.</a> <a href="/projects/GNNDelete/">Project website.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/01/20/GNNDelete/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jan 20, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/01/02/MutualInteractors/">New Network Principle for Molecular Phenotypes</a>-->
+        <p class="card-header-title">Jan 2023: &nbsp; <span class="has-text-primary">New Network Principle for Molecular Phenotypes</span></p>
+<!--        <p class="card-header-item">Jan 2023</p>-->
+<!--        <p class="card-footer-item">Jan 2, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper introducing <a href="https://psb.stanford.edu/psb-online/proceedings/psb23/eyuboglu.pdf">mutual interactor-based GNN for molecular phenotype prediction</a> at <a href="https://psb.stanford.edu/">PSB</a>. <a href="/projects/Milieu/">Project website.</a></p>
+</p>-->
+            <p>New paper introducing <a href="https://psb.stanford.edu/psb-online/proceedings/psb23/eyuboglu.pdf">mutual interactor-based GNN for molecular phenotype prediction</a> at <a href="https://psb.stanford.edu/">PSB</a>. <a href="/projects/Milieu/">Project website.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/01/02/MutualInteractors/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jan 2, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/12/14/SHEPHERD/">Can we shorten rare disease diagnostic odyssey?</a>-->
+        <p class="card-header-title">Dec 2022: &nbsp; <span class="has-text-primary">Can we shorten rare disease diagnostic odyssey?</span></p>
+<!--        <p class="card-header-item">Dec 2022</p>-->
+<!--        <p class="card-footer-item">Dec 14, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New preprint! <a href="https://www.medrxiv.org/content/10.1101/2022.12.07.22283238">Geometric deep learning for diagnosing patients with rare genetic diseases.</a> Implications for using deep learning on sparsely-labeled medical datasets. Thankful for this collaboration with <a href="https://zaklab.org/">Zak Lab.</a> <a href="/projects/SHEPHERD/">Project website.</a></p>
+</p>-->
+            <p>New preprint! <a href="https://www.medrxiv.org/content/10.1101/2022.12.07.22283238">Geometric deep learning for diagnosing patients with rare genetic diseases.</a> Implications for using deep learning on sparsely-labeled medical datasets. Thankful for this collaboration with <a href="https://zaklab.org/">Zak Lab.</a> <a href="/projects/SHEPHERD/">Project website.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/12/14/SHEPHERD/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 14, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/11/15/HarvardMedicineTDC/">Can AI transform the way we discover new drugs?</a>-->
+        <p class="card-header-title">Nov 2022: &nbsp; <span class="has-text-primary">Can AI transform the way we discover new drugs?</span></p>
+<!--        <p class="card-header-item">Nov 2022</p>-->
+<!--        <p class="card-footer-item">Nov 15, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Our <a href="https://hms.harvard.edu/news/can-ai-transform-way-we-discover-new-drugs">conversation with Harvard Medicine News</a> highlights recent developments and new features in <a href="https://tdcommons.ai/">Therapeutics Data Commons.</a></p>
+</p>-->
+            <p>Our <a href="https://hms.harvard.edu/news/can-ai-transform-way-we-discover-new-drugs">conversation with Harvard Medicine News</a> highlights recent developments and new features in <a href="https://tdcommons.ai/">Therapeutics Data Commons.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/11/15/HarvardMedicineTDC/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Nov 15, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2022/10/31/GRL-NatureBiomedEng/">New Paper in Nature Biomedical Engineering</a>-->
+        <p class="card-header-title">Oct 2022: &nbsp; <span class="has-text-primary">New Paper in Nature Biomedical Engineering</span></p>
+<!--        <p class="card-header-item">Oct 2022</p>-->
+<!--        <p class="card-footer-item">Oct 31, 2022</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper on <a href="https://www.nature.com/articles/s41551-022-00942-x">graph representation learning in biomedicine and healthcare</a> published in Nature Biomedical Engineering.</p>
+</p>-->
+            <p>New paper on <a href="https://www.nature.com/articles/s41551-022-00942-x">graph representation learning in biomedicine and healthcare</a> published in Nature Biomedical Engineering.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2022/10/31/GRL-NatureBiomedEng/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Oct 31, 2022</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+
+    <div class="column is-12">
+        <div class="card">
+            <header class="card-header">
+        <!--        <a class="card-header-title" href=""></a>-->
+            <p class="card-header-title"><span class="has-text-primary">Tweets</span></p>
+        <!--        <p class="card-header-item"></p>-->
+        <!--        <p class="card-footer-item"></p>-->
+            </header>
+        <div class="card-content">
+        <!--        <div class="content">-->
+        <!--            -->
+        <!--            <p></p>-->
+        <a class="twitter-timeline" data-width="500" data-height="500" data-theme="light" href="https://twitter.com/marinkazitnik?ref_src=twsrc%5Etfw" data-chrome="noheader transparent nofooter nofooter noborders">Tweets by marinkazitnik</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <!--        </div>-->
+        <!--        <div class="has-text-centered">-->
+        <!--            <a href="" class="button is-primary">Read more</a>-->
+        <!--        </div>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts -->
+<div style="background-color:#A41034">
+        <div class="content is-normal has-text-centered">
+            <p style="color:white;padding-top:20px;padding-bottom:20px;"><a href="https://scholar.harvard.edu/marinka" style="color:white"><b>Zitnik Lab</b></a>
+                &nbsp;&middot;&nbsp; <a href="#" style="color:white"><b>Artificial Intelligence in Medicine and Science</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://harvard.edu" style="color:white"><b>Harvard</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://dbmi.hms.harvard.edu/" style="color:white"><b>Department of Biomedical Informatics</b></a></p>
+        </div>
+</div></body>
+</html>
+

@@ -153,25 +153,25 @@ We present a theoretical analysis of this framework from the first principles an
 </p>
 </div>
 
-<p>
-<b>Existing Pre-training (PT) Methods.</b> Our review summarized 71 existing natural language processing (NLP) and NLP-derived PT methods, which are categorized into clusters based on how they impose structural constraints over the PT per sample) latent space. Clusters are arranged on axes via manual judgments on whether the imposed constraint is shallow vs. deep and implicit vs. explicit. Clusters are sized such that the area corresponds to the number of citations methods included in that cluster have received on average per month since first publication, according to Google Scholar's citation count. In the following figure, "None" captures models that leverage no pre-training loss over the per-sample embedding. "NSP" refers to "Next sentence Prediction," the per-sample PT task introduced in BERT. "SOP" refers to "Sentence-order Prediction," the per-sample PT task introduced in ALBERT. Note that over 90 studies in total were considered in our review, but only 71 met the inclusion criteria to be included in this figure. These methods are described in more detail in the manuscript.
-</p>
+<h2 id="existing-pre-training-pt-methods">Existing Pre-training (PT) Methods</h2>
+
+<p>Our review summarized 71 existing natural language processing (NLP) and NLP-derived PT methods, which are categorized into clusters based on how they impose structural constraints over the PT per sample) latent space. Clusters are arranged on axes via manual judgments on whether the imposed constraint is shallow vs. deep and implicit vs. explicit. Clusters are sized such that the area corresponds to the number of citations methods included in that cluster have received on average per month since first publication, according to Google Scholar’s citation count. In the following figure, “None” captures models that leverage no pre-training loss over the per-sample embedding. “NSP” refers to “Next sentence Prediction,” the per-sample PT task introduced in BERT. “SOP” refers to “Sentence-order Prediction,” the per-sample PT task introduced in ALBERT. Note that over 90 studies in total were considered in our review, but only 71 met the inclusion criteria to be included in this figure. These methods are described in more detail in the manuscript.</p>
 
 <center>
 <img src="/img/SIPT-review.png" />
 </center>
 
-<p>
-<b>Per-sample vs. Per-token Latent Space.</b> Language model pre-training methods produce both per-sample and per-token latent spaces. Illustrated below via the RoBERTa model are traditional language modeling objectives, which use only a masked language model loss during pre-training) only constrain the per-token latent space.
-</p>
+<h2 id="per-sample-vs-per-token-latent-space">Per-sample vs. Per-token Latent Space</h2>
+
+<p>Language model pre-training methods produce both per-sample and per-token latent spaces. Illustrated below via the RoBERTa model are traditional language modeling objectives, which use only a masked language model loss during pre-training) only constrain the per-token latent space.</p>
 
 <center>
 <img src="/img/SIPT-RoBERTa.png" />
 </center>
 
-<p>
-<b>Our Pre-training (PT) Framework.</b> We re-cast the PT formulation by taking a pre-training graph G<sub>PT</sub> as an auxiliary input. G<sub>PT</sub> is used to define a new structure-inducing objective L<sub>SI</sub>, which pushes a pre-training encoder f<sub>θ</sub> to embed samples such that samples are close in the latent space if and only if they are linked in G<sub>PT</sub>.
-</p>
+<h2 id="structure-inducing-pre-training">Structure Inducing Pre-Training</h2>
+
+<p>We re-cast the PT formulation by taking a pre-training graph G<sub>PT</sub> as an auxiliary input. G<sub>PT</sub> is used to define a new structure-inducing objective L<sub>SI</sub>, which pushes a pre-training encoder f<sub>θ</sub> to embed samples such that samples are close in the latent space if and only if they are linked in G<sub>PT</sub>.</p>
 
 <center>
 <img src="/img/SIPT-overview.png" />
@@ -179,25 +179,26 @@ We present a theoretical analysis of this framework from the first principles an
 
 <h2 id="publication">Publication</h2>
 
-<p><a href="#">Structure Inducing Pre-Training</a><br />
+<p><a href="https://www.nature.com/articles/s42256-023-00647-z">Structure Inducing Pre-Training</a><br />
 Matthew B.A. McDermott, Brendan Yap, Peter Szolovits and Marinka Zitnik<br />
-<em>In Review</em> 2022 <a href="https://arxiv.org/abs/2103.10334">[arXiv]</a></p>
+<em>Nature Machine Intelligence</em> 2023 <a href="https://arxiv.org/abs/2103.10334">[arXiv]</a></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{mcdermott2021structure,
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{mcdermott2023structure,
   title={Structure Inducing Pre-Training},
   author={McDermott, Matthew and Yap, Brendan and Szolovits, Peter and Zitnik, Marinka},
-  journal={arXiv:2103.10334},
-  volume={},
-  number={},
-  pages={},
-  year={2022},
-  publisher={}
+  journal={Nature Machine Intelligence},
+  year={2023},
+  publisher={Nature Springer Group}
 }
 </code></pre></div></div>
 
 <h2 id="code">Code</h2>
 
 <p>PyTorch implementation together with documentation and examples of usage is available in the <a href="https://github.com/mmcdermott/structure_inducing_pre-training">GitHub repository</a>.</p>
+
+<h2 id="supplementary-information">Supplementary Information</h2>
+
+<p>Review of language model pre-training methods, Supplementary Figures 1–3 and Table 1 are available at <a href="https://www.nature.com/articles/s42256-023-00647-z#Sec26">Nature Machine Intelligence.</a></p>
 
 <h2 id="authors">Authors</h2>
 
@@ -215,6 +216,96 @@ Matthew B.A. McDermott, Brendan Yap, Peter Szolovits and Marinka Zitnik<br />
                     <p class="title is-4">Latest News</p>
 
 <div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/06/21/Kempner/">Our Group is Joining the Kempner Institute</a>-->
+        <p class="card-header-title">Jun 2023: &nbsp; <span class="has-text-primary">Our Group is Joining the Kempner Institute</span></p>
+<!--        <p class="card-header-item">Jun 2023</p>-->
+<!--        <p class="card-footer-item">Jun 21, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited to join <a href="https://news.harvard.edu/gazette/story/newsplus/kempner-institute-announces-appointment-of-four-new-associate-faculty/">Kempner’s inaugural cohort of associate faculty</a> to advance Kempner’s mission of studying the intersection of natural and artificial intelligence.</p>
+
+</p>-->
+            <p>Excited to join <a href="https://news.harvard.edu/gazette/story/newsplus/kempner-institute-announces-appointment-of-four-new-associate-faculty/">Kempner’s inaugural cohort of associate faculty</a> to advance Kempner’s mission of studying the intersection of natural and artificial intelligence.</p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/06/21/Kempner/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jun 21, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/06/11/NewPostdoc/">Welcoming a New Postdoctoral Fellow</a>-->
+        <p class="card-header-title">Jun 2023: &nbsp; <span class="has-text-primary">Welcoming a New Postdoctoral Fellow</span></p>
+<!--        <p class="card-header-item">Jun 2023</p>-->
+<!--        <p class="card-footer-item">Jun 11, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>An enthusiastic welcome to <a href="https://scholar.google.com/citations?user=zW32dXsAAAAJ">Shanghua Gao</a> who is joining our group as a postdoctoral research fellow.</p>
+
+</p>-->
+            <p>An enthusiastic welcome to <a href="https://scholar.google.com/citations?user=zW32dXsAAAAJ">Shanghua Gao</a> who is joining our group as a postdoctoral research fellow.</p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/06/11/NewPostdoc/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jun 11, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2023/06/01/Pretraining-NatMachIntelligence/">On Pretraining in Nature Machine Intelligence</a>-->
+        <p class="card-header-title">Jun 2023: &nbsp; <span class="has-text-primary">On Pretraining in Nature Machine Intelligence</span></p>
+<!--        <p class="card-header-item">Jun 2023</p>-->
+<!--        <p class="card-footer-item">Jun 1, 2023</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited to share our new study on <a href="https://www.nature.com/articles/s42256-023-00647-z">language model pretraining and general-purpose methods for biological sequences.</a> <a href="https://zitniklab.hms.harvard.edu/projects/SIPT/">Project website.</a></p>
+
+</p>-->
+            <p>Excited to share our new study on <a href="https://www.nature.com/articles/s42256-023-00647-z">language model pretraining and general-purpose methods for biological sequences.</a> <a href="https://zitniklab.hms.harvard.edu/projects/SIPT/">Project website.</a></p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2023/06/01/Pretraining-NatMachIntelligence/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jun 1, 2023</p>-->
+<!--    </footer>-->
+</div>
+    </div>
     
     <div class="column is-12">
         <div class="card">
@@ -319,10 +410,10 @@ Matthew B.A. McDermott, Brendan Yap, Peter Szolovits and Marinka Zitnik<br />
     <div class="card-content">
 <!--        <div class="content">-->
 <!--            -->
-<!--            <p><p>An enthusiastic welcome to <a href="https://tianlong-chen.github.io/about/">Tianlong Chen</a>, our newly appointed postdoctoral fellow.</p>
+<!--            <p><p>An enthusiastic welcome to <a href="https://scholar.google.com/citations?user=LE3ctn0AAAAJ&amp;hl=en">Tianlong Chen</a>, our newly appointed postdoctoral fellow.</p>
 
 </p>-->
-            <p>An enthusiastic welcome to <a href="https://tianlong-chen.github.io/about/">Tianlong Chen</a>, our newly appointed postdoctoral fellow.</p>
+            <p>An enthusiastic welcome to <a href="https://scholar.google.com/citations?user=LE3ctn0AAAAJ&amp;hl=en">Tianlong Chen</a>, our newly appointed postdoctoral fellow.</p>
 
 
 <!--        </div>-->
@@ -710,90 +801,6 @@ Matthew B.A. McDermott, Brendan Yap, Peter Szolovits and Marinka Zitnik<br />
     </div>
 <!--    <footer class="card-footer">-->
 <!--        <p class="card-footer-item">Published: Oct 31, 2022</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2022/09/21/TDC-NatureChemBio/">New Paper in Nature Chemical Biology</a>-->
-        <p class="card-header-title">Sep 2022: &nbsp; <span class="has-text-primary">New Paper in Nature Chemical Biology</span></p>
-<!--        <p class="card-header-item">Sep 2022</p>-->
-<!--        <p class="card-footer-item">Sep 21, 2022</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>Our paper on <a href="https://www.nature.com/articles/s41589-022-01131-2">artificial intelligence foundation for therapeutic science</a> is published in Nature Chemical Biology.</p>
-</p>-->
-            <p>Our paper on <a href="https://www.nature.com/articles/s41589-022-01131-2">artificial intelligence foundation for therapeutic science</a> is published in Nature Chemical Biology.</p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2022/09/21/TDC-NatureChemBio/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Sep 21, 2022</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2022/09/14/TF-C-NeurIPS/">Self-Supervised Pre-Training at NeurIPS 2022</a>-->
-        <p class="card-header-title">Sep 2022: &nbsp; <span class="has-text-primary">Self-Supervised Pre-Training at NeurIPS 2022</span></p>
-<!--        <p class="card-header-item">Sep 2022</p>-->
-<!--        <p class="card-footer-item">Sep 14, 2022</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>New paper on self-supervised contrastive pre-training accepted at <a href="https://nips.cc/Conferences/2022">NeurIPS 2022.</a> <a href="https://zitniklab.hms.harvard.edu/projects/TF-C/">Project page.</a> Thankful for this collaboration with the <a href="https://www.ll.mit.edu/">Lincoln National Laboratory</a>.</p>
-</p>-->
-            <p>New paper on self-supervised contrastive pre-training accepted at <a href="https://nips.cc/Conferences/2022">NeurIPS 2022.</a> <a href="https://zitniklab.hms.harvard.edu/projects/TF-C/">Project page.</a> Thankful for this collaboration with the <a href="https://www.ll.mit.edu/">Lincoln National Laboratory</a>.</p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2022/09/14/TF-C-NeurIPS/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Sep 14, 2022</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2022/09/06/BestPaperAwardIEEEVIS/">Best Paper Honorable Mention Award at IEEE VIS</a>-->
-        <p class="card-header-title">Sep 2022: &nbsp; <span class="has-text-primary">Best Paper Honorable Mention Award at IEEE VIS</span></p>
-<!--        <p class="card-header-item">Sep 2022</p>-->
-<!--        <p class="card-footer-item">Sep 6, 2022</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>Our paper on <a href="https://osf.io/yhdpv">user-centric AI of drug repurposing</a> received the <a href="http://ieeevis.org/year/2022/info/awards/best-paper-awards">Best Paper Honorable Mention Award</a> at IEEE VIS 2022. Thankful for this collaboration with <a href="http://gehlenborglab.org/">Gehlenborg Lab.</a></p>
-</p>-->
-            <p>Our paper on <a href="https://osf.io/yhdpv">user-centric AI of drug repurposing</a> received the <a href="http://ieeevis.org/year/2022/info/awards/best-paper-awards">Best Paper Honorable Mention Award</a> at IEEE VIS 2022. Thankful for this collaboration with <a href="http://gehlenborglab.org/">Gehlenborg Lab.</a></p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2022/09/06/BestPaperAwardIEEEVIS/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Sep 6, 2022</p>-->
 <!--    </footer>-->
 </div>
     </div>
