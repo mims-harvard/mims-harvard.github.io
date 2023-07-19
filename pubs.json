@@ -18,15 +18,38 @@
       "key": "submission23a",
       "author": ["Hanchen Wang*", "Tianfan Fu*", "Yuanqi Du*", "Wenhao Gao", "Kexin Huang", "Ziming Liu", "Payal Chandak", "Shengchao Liu", "Peter Van Katwyk", "Andreea Deac", "Anima Anandkumar", "Karianne Bergen", "Carla P. Gomez", "Shirley Ho", "Pushmeet Kohli", "Joan Lasenby", "Jure Leskovec", "Tie-Yan Liu", "Arjun Manrai", "Debora Marks", "Bharath Ramsundar", "Le Song", "Jimeng Sun", "Jian Tang", "Petar Velickovic", "Max Welling", "Connor W. Coley", "Yoshua Bengio", "Marinka Zitnik"],
       "title": "Scientific Discovery in the Age of Artificial Intelligence",
-      "venue": "Nature (in press)",
+      "venue": "Nature",
       "year": "2023",
-      "thumbnail": "AI4Science-nature23.png",
+      "thumbnail": "AI4Science-Nature23.png",
       "type": "journal",
-      "pdf": "",
-      "url": "",
+      "pdf": "https://rdcu.be/dinBA",
+      "url": "https://www.nature.com/articles/s41586-023-06221-2",
       "supp":
       {
-        "AI4Science Initiative": "https://ai4sciencecommunity.github.io/"
+        "AI4Science Initiative": "https://ai4sciencecommunity.github.io/",
+        "Harvard Medicine News": "https://dbmi.hms.harvard.edu/news/artificial-intelligence-beyond-clinic",
+        "The Economist": "https://www.economist.com/leaders/2023/09/14/how-artificial-intelligence-can-revolutionise-science",
+        "Chemical and Engineering News": "https://cen.acs.org/business/informatics/tricky-ethics-AI-lab/101/i31",
+        "Kempner Institute": "https://www.harvard.edu/kempner-institute/2023/09/15/zitnik-nature-publications/"
+      }
+    },
+
+
+     {
+      "key": "submission23g",
+      "author": ["Michelle M Li", "Yepeng Huang", "Marissa Sumathipala", "Man Qing Liang", "Alberto Valdeolivas", "Ashwin N Ananthakrishnan",  "Katherine Liao", "Daniel Marbach", "Marinka Zitnik"],
+      "title": "Contextualizing Protein Representations Using Deep Learning on Protein Networks and Single-Cell Data",
+      "venue": "In Review",
+      "year": "2023",
+      "thumbnail": "PINNACLE23.png",
+      "pdf": "https://www.biorxiv.org/content/10.1101/2023.07.18.549602v1",
+      "url": "https://www.biorxiv.org/content/10.1101/2023.07.18.549602v1",
+      "type": "journal",
+      "supp":
+      {
+        "bioRxiv": "https://www.biorxiv.org/content/10.1101/2023.07.18.549602v1",
+        "project website": "https://zitniklab.hms.harvard.edu/projects/PINNACLE/",
+        "code": "https://github.com/mims-harvard/PINNACLE"
       }
     },
 
@@ -86,6 +109,22 @@
     },
 
      {
+      "key": "submission23h",
+      "author": ["Marinka Zitnik*", "Michelle M. Li*", "Aydin Wells*", "Kimberly Glass", "Deisy Morselli Gysi", "Arjun Krishnan", "T. M. Murali", "Predrag Radivojac", "Sushmita Roy", "Anaïs Baudot", "Serdar Bozdag", "Danny Z. Chen", "Lenore Cowen", "Kapil Devkota", "Anthony Gitter", "Sara Gosline", "Pengfei Gu", "Pietro H. Guzzi", "Heng Huang", "Meng Jiang", "Ziynet Nesibe Kesimoglu", "Mehmet Koyuturk", "Jian Ma", "Alexander R. Pico", "Natasa Przulj", "Teresa M. Przytycka", "Benjamin J. Raphael", "Anna Ritz", "Roded Sharan", "Yang Shen", "Mona Singh", "Donna K. Slonim", "Hanghang Tong", "Xinan Holly Yang", "Byung-Jun Yoon", "Haiyuan Yu", "Tijana Milenkovic"],
+      "title": "Current and Future Directions in Network Biology",
+      "venue": "In Review",
+      "year": "2023",
+      "thumbnail": "Future-NetBio.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2309.08478",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2309.08478"
+      }
+    },
+
+     {
       "key": "submission23f",
       "author": ["Owen Queen", "Thomas Hartvigsen", "Teddy Koker", "Huan He", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
       "title": "Encoding Time-Series Explanations through Self-Supervised Model Behavior Consistency",
@@ -132,7 +171,8 @@
       {
         "arXiv": "https://arxiv.org/abs/2302.03133",
         "code": "https://github.com/mims-harvard/Raincoat",
-        "project website": "/projects/Raincoat"
+        "project website": "/projects/Raincoat",
+        "ICML 2023": "https://icml.cc/virtual/2023/poster/23456"
       }
     },
 
@@ -169,7 +209,8 @@
         "medRxiv": "https://www.medrxiv.org/content/10.1101/2022.12.07.22283238v1",
         "code": "https://github.com/mims-harvard/SHEPHERD",
         "project website": "https://zitniklab.hms.harvard.edu/projects/SHEPHERD/",
-        "HuggingFace space": "https://huggingface.co/spaces/emilyalsentzer/SHEPHERD"
+        "HuggingFace space": "https://huggingface.co/spaces/emilyalsentzer/SHEPHERD",
+        "Best Presentation Award in Translational Medicine at ISMB'23": "https://www.iscb.org/ismbeccb2023"
       }
     },
 
@@ -664,7 +705,7 @@
       "supp":
       {
         "arXiv": "https://arxiv.org/abs/2004.07229",
-        "slides": "https://www.dropbox.com/s/epo7np04dzofrll/2020-COVID-19-Final.pptx?dl=0",
+        "slides": "slides/2020-COVID-19-Final.pdf",
         "YouTube webinar": "https://www.youtube.com/watch?v=jS8__WViNj4",
         "supplementary": "papers/repurposing-covid19-supp.pdf"
       }
