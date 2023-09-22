@@ -90,6 +90,76 @@
     },
 
      {
+      "key": "submission23j",
+      "author": ["Ruth Johnson", "Michelle M. Li", "Ayush Noori", "Owen Queen", "Marinka Zitnik"],
+      "title": "Graph AI in Medicine",
+      "venue": "Annual Review of Biomedical Data Science",
+      "year": "2024",
+      "thumbnail": "GraphAIMedicine23.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2310.13767",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2310.13767"
+      }
+    },
+
+     {
+      "key": "submission23k",
+      "author": ["Zaixi Zhang", "Jiaxian Yan", "Qi Liu", "Enhong Chen", "Marinka Zitnik"],
+      "title": "Geometric Deep Learning for Structure-Based Drug Design: A Survey",
+      "venue": "In Review",
+      "year": "2023",
+      "thumbnail": "SBDD23.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2306.11768",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2306.11768",
+        "Awesome SBDD": "https://github.com/zaixizhang/Awesome-SBDD"
+      }
+    },
+
+     {
+      "key": "submission23f",
+      "author": ["Owen Queen", "Thomas Hartvigsen", "Teddy Koker", "Huan He", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
+      "title": "Encoding Time-Series Explanations through Self-Supervised Model Behavior Consistency",
+      "venue": "Proceedings of Neural Information Processing Systems, NeurIPS",
+      "year": "2023",
+      "thumbnail": "TimeX23.png",
+      "pdf": "papers/TimeX-NeurIPS23.pdf",
+      "url": "https://arxiv.org/abs/2306.02109",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2306.02109",
+        "code": "https://github.com/mims-harvard/TimeX",
+        "project website": "https://zitniklab.hms.harvard.edu/projects/TimeX/",
+        "NeurIPS Spotlight [Top 3%]": "https://neurips.cc/virtual/2023/papers.html?filter=titles"
+      }
+    },
+
+     {
+      "key": "submission23i",
+      "author": ["Zaixi Zhang", "Zepu Lu", "Zhongkai Hao", "Marinka Zitnik", "Qi Liu"],
+      "title": "Full-Atom Protein Pocket Design via Iterative Refinement",
+      "venue": "Proceedings of Neural Information Processing Systems, NeurIPS",
+      "year": "2023",
+      "thumbnail": "FAIR23.png",
+      "pdf": "papers/FAIR-NeurIPS23.pdf",
+      "url": "https://arxiv.org/abs/2310.02553",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2310.02553",
+        "code": "https://github.com/zaixizhang/FAIR",
+        "NeurIPS Spotlight [Top 3%]": "https://neurips.cc/virtual/2023/papers.html?filter=titles"
+      }
+    },
+
+     {
       "key": "submission23d",
       "author": ["Kexin Huang*", "Payal Chandak*", "Qianwen Wang", "Shreyas Havaldar", "Akhil Vaid", "Jure Leskovec", "Girish Nadkarni", "Benjamin S. Glicksberg", "Nils Gehlenborg", "Marinka Zitnik"],
       "title": "Zero-shot Prediction of Therapeutic Use with Geometric Deep Learning and Clinician Centered Design",
@@ -121,24 +191,6 @@
       "supp":
       {
         "arXiv": "https://arxiv.org/abs/2309.08478"
-      }
-    },
-
-     {
-      "key": "submission23f",
-      "author": ["Owen Queen", "Thomas Hartvigsen", "Teddy Koker", "Huan He", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
-      "title": "Encoding Time-Series Explanations through Self-Supervised Model Behavior Consistency",
-      "venue": "In Review",
-      "year": "2023",
-      "thumbnail": "TimeX23.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2306.02109",
-      "type": "journal",
-      "supp":
-      {
-        "arXiv": "https://arxiv.org/abs/2306.02109",
-        "code": "https://github.com/mims-harvard/TimeX",
-        "project website": "https://zitniklab.hms.harvard.edu/projects/TimeX/"
       }
     },
 
