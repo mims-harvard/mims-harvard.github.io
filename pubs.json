@@ -34,13 +34,31 @@
       }
     },
 
+     {
+      "key": "submission24a",
+      "author": ["Guadalupe Gonzalez", "Isuru Herath", "Kirill Veselkov", "Michael Bronstein", "Marinka Zitnik"],
+      "title": "Combinatorial Prediction of Therapeutic Perturbations Using Causally-Inspired Neural Networks",
+      "venue": "In Review",
+      "year": "2024",
+      "thumbnail": "PDGrapher24.png",
+      "pdf": "",
+      "url": "https://www.biorxiv.org/content/10.1101/2024.01.03.573985",
+      "type": "journal",
+      "supp":
+      {
+        "bioRxiv": "https://www.biorxiv.org/content/10.1101/2024.01.03.573985",
+        "project website": "https://zitniklab.hms.harvard.edu/projects/PDGrapher/",
+        "code": "https://github.com/mims-harvard/PDGrapher"
+      }
+    },
+
 
      {
       "key": "submission23g",
       "author": ["Michelle M Li", "Yepeng Huang", "Marissa Sumathipala", "Man Qing Liang", "Alberto Valdeolivas", "Ashwin N Ananthakrishnan",  "Katherine Liao", "Daniel Marbach", "Marinka Zitnik"],
       "title": "Contextualizing Protein Representations Using Deep Learning on Protein Networks and Single-Cell Data",
       "venue": "In Review",
-      "year": "2023",
+      "year": "2024",
       "thumbnail": "PINNACLE23.png",
       "pdf": "https://www.biorxiv.org/content/10.1101/2023.07.18.549602v1",
       "url": "https://www.biorxiv.org/content/10.1101/2023.07.18.549602v1",
@@ -106,11 +124,29 @@
     },
 
      {
+      "key": "submission24b",
+      "author": ["Lichao Sun", "Yue Huang", "Haoran Wang", "et al."],
+      "title": "TrustLLM: Trustworthiness in Large Language Models",
+      "venue": "In Review",
+      "year": "2024",
+      "thumbnail": "PDGrapher24.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2401.05561",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2401.05561",
+        "project website": "https://trustllmbenchmark.github.io/TrustLLM-Website/",
+        "code": "https://github.com/HowieHwong/TrustLLM"
+      }
+    },
+
+     {
       "key": "submission23k",
       "author": ["Zaixi Zhang", "Jiaxian Yan", "Qi Liu", "Enhong Chen", "Marinka Zitnik"],
       "title": "Geometric Deep Learning for Structure-Based Drug Design: A Survey",
       "venue": "In Review",
-      "year": "2023",
+      "year": "2024",
       "thumbnail": "SBDD23.png",
       "pdf": "",
       "url": "https://arxiv.org/abs/2306.11768",
@@ -119,6 +155,24 @@
       {
         "arXiv": "https://arxiv.org/abs/2306.11768",
         "Awesome SBDD": "https://github.com/zaixizhang/Awesome-SBDD"
+      }
+    },
+
+    {
+      "key": "submission23m",
+      "author": ["Shanshan Zhong", "Zhongzhan Huang", "Shanghua Gao", "Wushao Wen", "Liang Lin", "Marinka Zitnik", "Pan Zhou"],
+      "title": "Let's Think Outside the Box: Exploring Leap-of-Thought in Large Language Models with Creative Humor Generation",
+      "venue": "In Review",
+      "year": "2024",
+      "thumbnail": "Image-Graph-ML4H23.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2312.02439",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2312.02439",
+        "code": "https://github.com/sail-sg/CLoT",
+        "project website": "https://zhongshsh.github.io/CLoT/"
       }
     },
 
@@ -164,7 +218,7 @@
       "author": ["Kexin Huang*", "Payal Chandak*", "Qianwen Wang", "Shreyas Havaldar", "Akhil Vaid", "Jure Leskovec", "Girish Nadkarni", "Benjamin S. Glicksberg", "Nils Gehlenborg", "Marinka Zitnik"],
       "title": "Zero-shot Prediction of Therapeutic Use with Geometric Deep Learning and Clinician Centered Design",
       "venue": "In Review",
-      "year": "2023",
+      "year": "2024",
       "thumbnail": "subgnn20.png",
       "pdf": "",
       "url": "https://www.medrxiv.org/content/10.1101/2023.03.19.23287458",
@@ -183,7 +237,7 @@
       "author": ["Marinka Zitnik*", "Michelle M. Li*", "Aydin Wells*", "Kimberly Glass", "Deisy Morselli Gysi", "Arjun Krishnan", "T. M. Murali", "Predrag Radivojac", "Sushmita Roy", "Anaïs Baudot", "Serdar Bozdag", "Danny Z. Chen", "Lenore Cowen", "Kapil Devkota", "Anthony Gitter", "Sara Gosline", "Pengfei Gu", "Pietro H. Guzzi", "Heng Huang", "Meng Jiang", "Ziynet Nesibe Kesimoglu", "Mehmet Koyuturk", "Jian Ma", "Alexander R. Pico", "Natasa Przulj", "Teresa M. Przytycka", "Benjamin J. Raphael", "Anna Ritz", "Roded Sharan", "Yang Shen", "Mona Singh", "Donna K. Slonim", "Hanghang Tong", "Xinan Holly Yang", "Byung-Jun Yoon", "Haiyuan Yu", "Tijana Milenkovic"],
       "title": "Current and Future Directions in Network Biology",
       "venue": "In Review",
-      "year": "2023",
+      "year": "2024",
       "thumbnail": "Future-NetBio.png",
       "pdf": "",
       "url": "https://arxiv.org/abs/2309.08478",
@@ -194,12 +248,27 @@
       }
     },
 
+    {
+      "key": "submission23l",
+      "author": ["Sameer Khanna", "Daniel Michael", "Marinka Zitnik", "Pranav Rajpurkar"],
+      "title": "Learning Generalized Medical Image Representations Through Image-Graph Contrastive Pretraining",
+      "venue": "Machine Learning for Health",
+      "year": "2023",
+      "thumbnail": "Image-Graph-ML4H23.png",
+      "pdf": "papers/Image-Graph-ML4H23.pdf",
+      "url": "https://proceedings.mlr.press/v225/khanna23a.html",
+      "type": "journal",
+      "supp":
+      {
+      }
+    },
+
      {
       "key": "submission23e",
       "author": ["Jason J. Kwon*", "Joshua Pan*", "Guadalupe Gonzalez", "William C. Hahn", "Marinka Zitnik"],
       "title": "On Knowing a Gene",
       "venue": "In Review",
-      "year": "2023",
+      "year": "2024",
       "thumbnail": "subgnn20.png",
       "pdf": "",
       "url": "",
@@ -251,7 +320,7 @@
       "author": ["Emily Alsentzer*", "Michelle M. Li*", "Shilpa N. Kobren", "Undiagnosed Diseases Network", "Isaac S. Kohane", "Marinka Zitnik"],
       "title": "Deep Learning for Diagnosing Patients with Rare Genetic Diseases",
       "venue": "In Review ",
-      "year": "2023",
+      "year": "2024",
       "thumbnail": "SHEPHERD23.png",
       "pdf": "",
       "url": "https://www.medrxiv.org/content/10.1101/2022.12.07.22283238",
