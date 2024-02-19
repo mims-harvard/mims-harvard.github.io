@@ -52,6 +52,41 @@
       }
     },
 
+     {
+      "key": "submission24d",
+      "author": ["Zaixi Zhang", "Wanxiang Shen", "Qi Liu", "Marinka Zitnik"],
+      "title": "PocketGen: Generating Full-Atom Ligand-Binding Protein Pockets",
+      "venue": "In Review",
+      "year": "2024",
+      "thumbnail": "PocketGen.png",
+      "pdf": "",
+      "url": "https://www.biorxiv.org/content/10.1101/2024.02.25.581968",
+      "type": "journal",
+      "supp":
+      {
+        "bioRxiv": "https://www.biorxiv.org/content/10.1101/2024.02.25.581968",
+        "project website": "https://zitniklab.hms.harvard.edu/projects/PocketGen/",
+        "code": "https://github.com/zaixizhang/PocketGen"
+      }
+    },
+
+     {
+      "key": "submission24c",
+      "author": ["Yasha Ektefaie", "Andrew Shen", "Daria Bykova", "Maximillian Marin", "Marinka Zitnik*", "Maha R Farhat*"],
+      "title": "Evaluating Generalizability of Artificial Intelligence Models for Molecular Datasets",
+      "venue": "In Review",
+      "year": "2024",
+      "thumbnail": "SPECTRA.png",
+      "pdf": "",
+      "url": "https://www.biorxiv.org/content/10.1101/2024.02.25.581982",
+      "type": "journal",
+      "supp":
+      {
+        "bioRxiv": "https://www.biorxiv.org/content/10.1101/2024.02.25.581982",
+        "project website": "https://zitniklab.hms.harvard.edu/projects/SPECTRA/",
+        "code": "https://github.com/mims-harvard/SPECTRA"
+      }
+    },
 
      {
       "key": "submission23g",

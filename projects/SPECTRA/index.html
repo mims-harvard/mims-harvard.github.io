@@ -4,16 +4,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Evaluating Generalizability of Artificial Intelligence for Molecular Data - Zitnik Lab</title>
+    <title>Evaluating Generalizability of Artificial Intelligence Models for Molecular Datasets - Zitnik Lab</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="shortcut icon" type="image/png"
            href="/favicon.png" 
     />
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Evaluating Generalizability of Artificial Intelligence for Molecular Data | Zitnik Lab</title>
+<title>Evaluating Generalizability of Artificial Intelligence Models for Molecular Datasets | Zitnik Lab</title>
 <meta name="generator" content="Jekyll v3.8.6" />
-<meta property="og:title" content="Evaluating Generalizability of Artificial Intelligence for Molecular Data" />
+<meta property="og:title" content="Evaluating Generalizability of Artificial Intelligence Models for Molecular Datasets" />
 <meta name="author" content="Marinka Zitnik" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="SPECTRA paves the way for a more comprehensive evaluation of foundation models in molecular biology." />
@@ -22,11 +22,11 @@
 <meta property="og:url" content="https://zitniklab.hms.harvard.edu/projects/SPECTRA/" />
 <meta property="og:site_name" content="Zitnik Lab" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Evaluating Generalizability of Artificial Intelligence for Molecular Data" />
+<meta property="twitter:title" content="Evaluating Generalizability of Artificial Intelligence Models for Molecular Datasets" />
 <meta name="twitter:site" content="@marinkazitnik" />
 <meta name="twitter:creator" content="@Marinka Zitnik" />
 <script type="application/ld+json">
-{"url":"https://zitniklab.hms.harvard.edu/projects/SPECTRA/","author":{"@type":"Person","name":"Marinka Zitnik"},"headline":"Evaluating Generalizability of Artificial Intelligence for Molecular Data","description":"SPECTRA paves the way for a more comprehensive evaluation of foundation models in molecular biology.","@type":"WebPage","@context":"https://schema.org"}</script>
+{"url":"https://zitniklab.hms.harvard.edu/projects/SPECTRA/","author":{"@type":"Person","name":"Marinka Zitnik"},"headline":"Evaluating Generalizability of Artificial Intelligence Models for Molecular Datasets","description":"SPECTRA paves the way for a more comprehensive evaluation of foundation models in molecular biology.","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
 <script>
@@ -121,7 +121,7 @@
         <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
     <div class="hero-body">
         <div class="container">
-            <p class="title is-2">Evaluating Generalizability of Artificial Intelligence for Molecular Data</p>
+            <p class="title is-2">Evaluating Generalizability of Artificial Intelligence Models for Molecular Datasets</p>
             <p class="subtitle is-3"></p>
             
         </div>
@@ -143,19 +143,23 @@
     <div class="box has-background-info has-text-white">
 
 <p>
-Deep learning has made rapid advances in modeling molecular sequencing data. Despite achieving high performance on molecular sequencing benchmarks, it remains unclear to what extent machine learning models learn general molecular principles and can generalize to novel sequences. Prevailing approaches to interrogate model generalizability evaluate models by generating metadata-attribute based (MB) or sequence-similarity based (SB) train-test splits of input datasets before assessing model performance. 
+Deep learning has made rapid advances in modeling molecular sequencing data. Despite achieving high performance on benchmarks, it remains unclear to what extent deep learning models learn general principles and generalize to previously unseen sequences. 
 </p>
 
 <p>
-Here, we show how these approaches mischaracterize model generalizability by failing to consider the full spectrum of cross-split overlap or the similarity between train and test sequences. We do so by introducing the spectral framework for model evaluation (SPECTRA). For a given model and input dataset, SPECTRA generates a spectral performance curve (SPC) which plots model performance as a function of decreasing cross-split overlap and reports the area under the SPC (AUSPC) as a metric for model generalizability. 
+Benchmarks traditionally interrogate model generalizability by generating metadata based (MB) or sequence-similarity based (SB) train and test splits of input data before assessing model performance. Here, we show that this approach mischaracterizes model generalizability by failing to consider the full spectrum of cross-split overlap, i.e., similarity between train and test splits. 
 </p>
 
 <p>
-We apply SPECTRA to 18 molecular sequencing datasets with diverse phenotypes ranging from antibiotic resistance in Tuberculosis to amyloid beta protein aggregation in Alzheimer's to protein-ligand binding. In doing so, we demonstrate how existing SB and MB splits provide an incomplete understanding of model generalizability. To demonstrate the insights gained from applying SPECTRA we evaluate the generalizability of ten state-of-the-art machine learning models, including large language models (LLM), a graph neural network (GNN), and convolutional neural network (CNN), using previously published and generated results. 
+We introduce SPECTRA, a spectral framework for comprehensive model evaluation. For a given model and input data, SPECTRA plots model performance as a function of decreasing cross-split overlap and reports the area under this curve as a measure of generalizability. 
 </p>
 
 <p>
-We find that models experience a multi-fold decrease in performance as cross-split overlap decreases, and this decrease is task and model-specific. No machine learning model consistently had the highest AUSPC across all tasks though some models displayed high generalizability for specific tasks. By examining model spectral performance curves, we derived novel insights into the molecular sequence properties learned by models and demonstrate how SPECTRA can be used as a tool to evaluate foundation models in biology. SPECTRA paves the way for a more comprehensive evaluation of foundation models in molecular biology. 
+We use SPECTRA with 18 sequencing datasets and phenotypes ranging from antibiotic resistance in tuberculosis to protein-ligand binding to evaluate the generalizability of 19 state-of-the-art deep learning models, including large language models, graph neural networks, diffusion models, and convolutional neural networks. We show that SB and MB splits provide an incomplete assessment of model generalizability. 
+</p>
+
+<p>
+Using SPECTRA, we find as cross-split overlap decreases, deep learning models consistently exhibit a reduction in performance in a task- and model-dependent manner. Although no model consistently achieved the highest performance across all tasks, we show that deep learning models can, in some cases, generalize to previously unseen sequences on specific tasks. SPECTRA paves the way toward a better understanding of how foundation models generalize in biology.
 </p>
 </div>
 
@@ -165,15 +169,15 @@ We find that models experience a multi-fold decrease in performance as cross-spl
 
 <h2 id="publication">Publication</h2>
 
-<p><a href="#">Evaluating Generalizability of Artificial Intelligence for Molecular Data</a><br />
-Yasha Ektefaie, Maha Farhat* and Marinka Zitnik*<br />
-<em>In Review</em> 2024 <a href="#">[bioRxiv]</a></p>
+<p><a href="https://www.biorxiv.org/content/10.1101/2024.02.25.581982">Evaluating Generalizability of Artificial Intelligence Models for Molecular Datasets</a><br />
+Yasha Ektefaie, Andrew Shen, Daria Bykova, Maximillian Marin, Marinka Zitnik* and Maha Farhat*<br />
+<em>In Review</em> 2024 <a href="https://www.biorxiv.org/content/10.1101/2024.02.25.581982">[bioRxiv]</a></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{ektefaie2024evaluating,
-  title={Evaluating Generalizability of Artificial Intelligence for Molecular Data},
-  author={Ektefaie, Yasha and Farhat, Maha and Zitnik, Marinka},
+  title={Evaluating Generalizability of Artificial Intelligence Models for Molecular Datasets},
+  author={Ektefaie, Yasha and Shen, Andrew and Bykova, Daria and Maximillian, Marin and Zitnik, Marinka* and Farhat, Maha*},
   journal={bioRxiv},
-  url={},
+  url={https://www.biorxiv.org/content/10.1101/2024.02.25.581982v1},
   year={2024}
 }
 </code></pre></div></div>
@@ -186,8 +190,11 @@ Yasha Ektefaie, Maha Farhat* and Marinka Zitnik*<br />
 
 <ul>
   <li><a href="https://www.yashaektefaie.com/">Yasha Ektefaie</a></li>
-  <li><a href="https://dbmi.hms.harvard.edu/people/maha-farhat">Maha Farhat*</a></li>
+  <li><a href="">Andrew Shen</a></li>
+  <li><a href="">Daria Bykova</a></li>
+  <li><a href="">Maximillian Marin</a></li>
   <li><a href="https://zitniklab.hms.harvard.edu/">Marinka Zitnik*</a></li>
+  <li><a href="https://dbmi.hms.harvard.edu/people/maha-farhat">Maha Farhat*</a></li>
 </ul>
 
 </div>
@@ -197,6 +204,62 @@ Yasha Ektefaie, Maha Farhat* and Marinka Zitnik*<br />
                     <p class="title is-4">Latest News</p>
 
 <div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/03/01/PocketGen/">PocketGen - Generating Full-Atom Ligand-Binding Protein Pockets</a>-->
+        <p class="card-header-title">Mar 2024: &nbsp; <span class="has-text-primary">PocketGen - Generating Full-Atom Ligand-Binding Protein Pockets</span></p>
+<!--        <p class="card-header-item">Mar 2024</p>-->
+<!--        <p class="card-footer-item">Mar 1, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p><a href="https://www.biorxiv.org/content/10.1101/2024.02.25.581968">PocketGen is a deep generative model</a> that generates residue sequence and full-atom structure of protein pockets, maximizing binding to ligands. <a href="https://zitniklab.hms.harvard.edu/projects/PocketGen/">Project website.</a></p>
+</p>-->
+            <p><a href="https://www.biorxiv.org/content/10.1101/2024.02.25.581968">PocketGen is a deep generative model</a> that generates residue sequence and full-atom structure of protein pockets, maximizing binding to ligands. <a href="https://zitniklab.hms.harvard.edu/projects/PocketGen/">Project website.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/03/01/PocketGen/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 1, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/02/28/SPECTRA-model-generalizability/">SPECTRA - Generalizability of Molecular AI</a>-->
+        <p class="card-header-title">Feb 2024: &nbsp; <span class="has-text-primary">SPECTRA - Generalizability of Molecular AI</span></p>
+<!--        <p class="card-header-item">Feb 2024</p>-->
+<!--        <p class="card-footer-item">Feb 28, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p><a href="https://www.biorxiv.org/content/10.1101/2024.02.25.581982v1">SPECTRA is an approach for holistic evaluation of how AI models</a> generalize to new molecular datasets. <a href="https://zitniklab.hms.harvard.edu/projects/SPECTRA/">Project website.</a></p>
+</p>-->
+            <p><a href="https://www.biorxiv.org/content/10.1101/2024.02.25.581982v1">SPECTRA is an approach for holistic evaluation of how AI models</a> generalize to new molecular datasets. <a href="https://zitniklab.hms.harvard.edu/projects/SPECTRA/">Project website.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/02/28/SPECTRA-model-generalizability/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 28, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
     
     <div class="column is-12">
         <div class="card">
@@ -734,66 +797,6 @@ Yasha Ektefaie, Maha Farhat* and Marinka Zitnik*<br />
     </div>
 <!--    <footer class="card-footer">-->
 <!--        <p class="card-footer-item">Published: Apr 13, 2023</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2023/04/03/MultimodalGraphLearning-NatMachIntelligence/">New Study in Nature Machine Intelligence</a>-->
-        <p class="card-header-title">Apr 2023: &nbsp; <span class="has-text-primary">New Study in Nature Machine Intelligence</span></p>
-<!--        <p class="card-header-item">Apr 2023</p>-->
-<!--        <p class="card-footer-item">Apr 3, 2023</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>New paper in Nature Machine Intelligence introducing the <a href="https://www.nature.com/articles/s42256-023-00624-6">blueprint for multimodal learning with graphs</a>.</p>
-
-</p>-->
-            <p>New paper in Nature Machine Intelligence introducing the <a href="https://www.nature.com/articles/s42256-023-00624-6">blueprint for multimodal learning with graphs</a>.</p>
-
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2023/04/03/MultimodalGraphLearning-NatMachIntelligence/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Apr 3, 2023</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2023/03/23/PrecisionHealthDeepSpace-NatMachIntelligence/">Precision Health in Nature Machine Intelligence</a>-->
-        <p class="card-header-title">Mar 2023: &nbsp; <span class="has-text-primary">Precision Health in Nature Machine Intelligence</span></p>
-<!--        <p class="card-header-item">Mar 2023</p>-->
-<!--        <p class="card-footer-item">Mar 23, 2023</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>New paper with NASA in Nature Machine Intelligence on <a href="https://www.nature.com/articles/s42256-023-00617-5">biomonitoring and precision health in deep space supported by artificial intelligence</a>.</p>
-
-</p>-->
-            <p>New paper with NASA in Nature Machine Intelligence on <a href="https://www.nature.com/articles/s42256-023-00617-5">biomonitoring and precision health in deep space supported by artificial intelligence</a>.</p>
-
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2023/03/23/PrecisionHealthDeepSpace-NatMachIntelligence/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Mar 23, 2023</p>-->
 <!--    </footer>-->
 </div>
     </div>

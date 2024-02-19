@@ -4,29 +4,29 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Postdoctoral Research Fellow in AI for Cancer Drug Discovery - Zitnik Lab</title>
+    <title>PocketGen &#58; Generating Full-Atom Ligand-Binding Protein Pockets - Zitnik Lab</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="shortcut icon" type="image/png"
            href="/favicon.png" 
     />
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Postdoctoral Research Fellow in AI for Cancer Drug Discovery | Zitnik Lab</title>
+<title>PocketGen : Generating Full-Atom Ligand-Binding Protein Pockets | Zitnik Lab</title>
 <meta name="generator" content="Jekyll v3.8.6" />
-<meta property="og:title" content="Postdoctoral Research Fellow in AI for Cancer Drug Discovery" />
+<meta property="og:title" content="PocketGen : Generating Full-Atom Ligand-Binding Protein Pockets" />
 <meta name="author" content="Marinka Zitnik" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Artificial Intelligence (AI), Drug Discovery, Immunotherapy, Cancer" />
-<meta property="og:description" content="Artificial Intelligence (AI), Drug Discovery, Immunotherapy, Cancer" />
-<link rel="canonical" href="https://zitniklab.hms.harvard.edu/postdoc-cancerTxAI/" />
-<meta property="og:url" content="https://zitniklab.hms.harvard.edu/postdoc-cancerTxAI/" />
+<meta name="description" content="Protein design, geometric deep learning, generative models" />
+<meta property="og:description" content="Protein design, geometric deep learning, generative models" />
+<link rel="canonical" href="https://zitniklab.hms.harvard.edu/projects/PocketGen/" />
+<meta property="og:url" content="https://zitniklab.hms.harvard.edu/projects/PocketGen/" />
 <meta property="og:site_name" content="Zitnik Lab" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Postdoctoral Research Fellow in AI for Cancer Drug Discovery" />
+<meta property="twitter:title" content="PocketGen : Generating Full-Atom Ligand-Binding Protein Pockets" />
 <meta name="twitter:site" content="@marinkazitnik" />
 <meta name="twitter:creator" content="@Marinka Zitnik" />
 <script type="application/ld+json">
-{"url":"https://zitniklab.hms.harvard.edu/postdoc-cancerTxAI/","author":{"@type":"Person","name":"Marinka Zitnik"},"headline":"Postdoctoral Research Fellow in AI for Cancer Drug Discovery","description":"Artificial Intelligence (AI), Drug Discovery, Immunotherapy, Cancer","@type":"WebPage","@context":"https://schema.org"}</script>
+{"url":"https://zitniklab.hms.harvard.edu/projects/PocketGen/","author":{"@type":"Person","name":"Marinka Zitnik"},"headline":"PocketGen : Generating Full-Atom Ligand-Binding Protein Pockets","description":"Protein design, geometric deep learning, generative models","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
 <script>
@@ -121,7 +121,7 @@
         <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
     <div class="hero-body">
         <div class="container">
-            <p class="title is-2">Postdoctoral Research Fellow in AI for Cancer Drug Discovery</p>
+            <p class="title is-2">PocketGen &#58; Generating Full-Atom Ligand-Binding Protein Pockets</p>
             <p class="subtitle is-3"></p>
             
         </div>
@@ -140,46 +140,90 @@
                     
                     
 <div class="content">
-    <h2 id="overview">Overview</h2>
+    <div class="box has-background-info has-text-white">
 
-<p><a href="https://zitniklab.hms.harvard.edu">Prof. Marinka Zitnik</a> invites applications for a Postdoctoral Research Fellowship position at Harvard University. The fellow will lead the design, development, and implementation of novel AI methods for the analysis of clinical and biomarker data in oncology.</p>
+<p>
+Designing small-molecule-binding proteins, such as enzymes and biosensors, is crucial in protein biology and bioengineering. Generating the protein pocket—the area where the protein interacts with the ligand molecule—presents challenges due to the interactions between ligand molecules and proteins, the flexibility of ligand molecules, the chemistry of amino acid side chains, and multimodal sequence-structure dependencies.
+</p>
 
-<p>Immuno-oncology therapies are revolutionary in the treatment of cancer. However, there is much that is not understood about the drivers of efficacy, response, and resistance. The fellow will develop novel approaches in deep learning, graph AI, and transfer learning that will have multiple applications, including cancer biomarker discovery, target identification, selection of drug combination partners, patient enrichment, and disease characterization.</p>
+<p>
+We introduce PocketGen, a deep generative method for generating the residue sequence and the full-atom structure within the protein pocket region that leverages sequence-structure consistency. PocketGen consists of a bilevel graph transformer for structural encoding and a sequence refinement module that uses a protein language model (pLM) for sequence prediction. The bilevel graph transformer captures interactions at multiple granularities (atom-level and residue/ligand-level) and aspects (intra-protein and protein-ligand) with bilevel attention mechanisms.
+</p>
 
-<p>Harvard offers an exceedingly rich environment for education and career development, with opportunities for collaboration and learning not only within the Harvard Medical School but also at many other Harvard schools, institutes, and centers.</p>
+<p>
+Experiments and case studies indicate that PocketGen can efficiently generate protein pockets with higher binding affinity and validity than state-of-the-art methods. PocketGen is 10 times faster than physics-based methods and achieves a 95% success rate (the ratio of cases that generated pockets has higher binding affinity than the reference ones) with over 64% amino acid recovery rate on the Binding MOAD dataset.
+</p>
+</div>
 
-<p>Additionally, the fellow will benefit from close collaboration and mentorship by Roche computational and biomarker scientists through the “Roche Access to Distinguished Scientists Programme”. Roche is the world’s largest biotech company and has over 20 immunotherapy molecules in development. This collaboration opens the door to applying newly developed methods to patient data from ongoing clinical trials. Our vision is to combine machine learning research with unique clinical data assets to generate novel insights ensuring the right treatment for the right patient at the right time.</p>
+<h2 id="designing-full-atom-ligand-binding-protein-pockets">Designing Full-Atom Ligand-Binding Protein Pockets</h2>
 
-<h2 id="qualifications">Qualifications</h2>
+<p>A primary method for modulating protein functions involves the interaction between proteins and small molecule ligands. These interactions play a critical role in biological processes, such as enzymatic catalysis, signal transduction, and regulatory mechanisms within cells. The binding of small molecules to specific sites on proteins can induce conformational changes, modulate activity, or inhibit functions. This mechanism serves as a valuable tool for studying protein functions and designing small molecule-binding proteins with customized properties for therapeutic and industrial applications, including designing enzymes to catalyze reactions that do not have natural catalysts and developing biosensors that can detect compounds in the environment by transducing signals which can be used for environmental monitoring, clinical diagnostics, pathogen detection, drug delivery systems, and applications in food industry.</p>
 
-<p>We seek highly-motivated applicants with background in one or more of the following areas: deep learning, computational biology, therapeutic science, cancer data science, and network science. Successful applicants will be critical thinkers and problem solvers with the drive and demonstrated ability to translate ideas to action and complete projects effectively.</p>
+<p>These designs often involve modifying existing ligand-binding protein pockets to facilitate more precise interactions with specific ligands. The complexity of ligand molecule-protein interactions, ligand and side chain flexibility, and sequence-structure relationships, however, pose significant challenges for computational generation of high-validity, ligand-binding protein pockets.</p>
 
-<p>Applicants must possess a PhD degree or equivalent or be nearing the date of their thesis defense in computational biology, biomedical informatics, computer science, statistics or a closely related field. Strong programming skills and experience with deep learning frameworks and its biomedical applications are required.</p>
+<h2 id="overview-of-pocketgen">Overview of PocketGen</h2>
 
-<p>We value diligence, ingenuity, initiative, collegiality, and integrity. We are looking for applicants with demonstrably strong research skills, ideally, with multiple publications in top venues in data science, machine learning and computational biology. Strong analytical and oral communication skills and an ability to work both independently and as a cooperative member of a team are required. While accomplished candidates with expertise in various aspects of biomedical AI will be considered, those with a background in cancer data science or therapeutic science are especially encouraged to apply. A competitive salary and excellent benefits package are available.</p>
+<p>PocketGen implements a co-design scheme, where the model concurrently predicts the sequence and structure of the protein pocket based on the ligand molecule and the protein scaffold (excluding the pocket). PocketGen comprises two modules: the bilevel graph transformer and the sequence refinement module.</p>
 
-<h2 id="application-process">Application process</h2>
+<center>
+<img src="/img/PocketGen-1.png" />
+</center>
 
-<p>The position is available immediately and can be renewed annually. Interested applicants should submit the following documents via email to <a href="mailto:marinka@hms.harvard.edu">Prof. Zitnik</a> and use the subject line <strong>“Postdoctoral Fellowship in AI for Cancer Drug Discovery”</strong>:</p>
+<p>To achieve end-to-end molecular generation, PocketGen models the protein-ligand complex as a geometric graph of blocks to handle variable atom counts across different residues and ligands. Initially, the pocket residues are assigned the maximum possible number of atoms (14 atoms) and later are mapped back to specific residue types post-generation. The bilevel graph transformer captures interactions at multiple granularities (atom-level and residue/ligand-level) and aspects (intra-protein and protein-ligand) using bilevel attention mechanisms. To account for the influence of the redesigned pocket on the ligand, the ligand structure is updated during refinement to reflect potential changes in binding pose.</p>
+
+<center>
+<img src="/img/PocketGen-2.png" />
+</center>
+
+<p>To ensure consistency between protein sequence and structure domains and incorporate evolutionary information encoded in protein language models (the ESM series models), PocketGen implements a structural adapter into protein sequence updates. This adapter facilitates cross-attention between sequence and structure features, promoting information flow and achieving sequence-structure consistency. During training, only the adapter is fine-tuned, while the remaining layers of the protein language models remain unchanged.</p>
+
+<center>
+<img src="/img/PocketGen-3.png" />
+</center>
+
+<h2 id="evaluations-of-pocketgen">Evaluations of PocketGen</h2>
+
+<p>We evaluated PocketGen on redesigning pockets of ligand-binding antibodies, enzymes, and biosensors for the following target ligand molecules:</p>
 
 <ul>
-  <li>Cover letter describing your interest in the position, relevant experience, and career goals</li>
-  <li>Curriculum Vitae (include link to your academic webpage and links to software you developed)</li>
-  <li>Two representative publications (e.g., published or unpublished manuscripts)</li>
-  <li>Names and email addresses of three references</li>
+  <li><strong>Antibodies:</strong> Cortisol (HCY) is a primary stress hormone that elevates glucose levels in the bloodstream and serves as a biomarker for stress and other conditions. We redesign the pocket of a cortisol-specific antibody (<a href="https://www.rcsb.org/structure/8CBY">PDB ID 8cby</a>) to potentially aid in the development of immunoassays.</li>
+  <li><strong>Enzymes:</strong> Apixaban (APX) is an oral anticoagulant approved by the FDA in 2012 for patients with non-valvular atrial fibrillation to reduce the risk of stroke and blood clots. Apixaban targets Factor Xa (fXa) (<a href="https://www.rcsb.org/structure/2p16">PDB ID 2p16</a>), a crucial enzyme in blood coagulation that transforms prothrombin into thrombin for clot formation. Redesigning the pocket of fXa could therefore have therapeutic significance.</li>
+  <li><strong>Biosensors:</strong> Fentanyl (7V7) has become a widely abused drug contributing to the opioid crisis. Computational design of fentanyl-binding proteins (biosensors) can facilitate detection and neutralization of the toxin. For example, Baker et al. developed a biosensor (<a href="https://www.rcsb.org/structure/5TZO">PDB ID 5tzo</a>) for detecting fentanyl in plants.</li>
 </ul>
 
-<p>We are currently reviewing applications for this position. Interested candidates are encouraged to <strong>submit their applications as soon as possible.</strong></p>
+<p>PLIP is employed to describe the interactions between the designed protein pocket and ligands, comparing these predicted interactions to the original patterns. The pockets produced by PocketGen replicate most non-bonded interactions observed in experimentally measured protein-ligand complexes, and introduce additional physically plausible interaction patterns not present in the original complexes.</p>
 
-<h2 id="faculty-and-mentors">Faculty and mentors</h2>
+<center>
+<img src="/img/PocketGen-4.png" />
+</center>
 
-<p><a href="https://zitniklab.hms.harvard.edu"><strong>Dr. Marinka Zitnik</strong></a> is an Assistant Professor at Harvard with appointments in the <a href="https://dbmi.hms.harvard.edu/">Department of Biomedical Informatics</a>, <a href="https://www.broadinstitute.org/">Broad Institute of MIT and Harvard</a>, and <a href="https://datascience.harvard.edu/">Harvard Data Science</a>. Dr. Zitnik has published extensively in top ML venues and leading scientific journals. She has organized conferences and workshops in graph representation learning, drug discovery, and precision medicine at leading conferences (NeurIPS, ICLR, ICML, ISMB, AAAI, WWW), where she is also on the organizing committees. She is an ELLIS Scholar in the European Laboratory for Learning and Intelligent Systems (ELLIS) Society and a member of the Science Working Group at NASA Space Biology. Her research won paper and research awards from the International Society for Computational Biology, Bayer Early Excellence in Science, Amazon Faculty Research, Roche Alliance with Distinguished Scientists, Rising Star Award in Electrical Engineering and Computer Science, and Next Generation in Biomedicine Recognition, being the only young scientist with such recognition in both EECS and Biomedicine. She co-founded <a href="https://tdcommons.ai">Therapeutics Data Commons</a> and the <a href="https://ai4sciencecommunity.github.io/">AI for Science</a> initiatives. Dr. Zitnik is the recipient of the <a href="https://dicp.hms.harvard.edu/awards/excellence-mentoring-awards">2022 Young Mentor Award at Harvard Medical School</a>—this most prestigious award acknowledges her mentorship of the next generation of scientists who conduct research on artificial intelligence and biology.</p>
+<h2 id="publication">Publication</h2>
 
-<p><a href=""><strong>Dr. Daniel Marbach</strong></a>, a computational biologist and Principal Scientist Bioinformatics at Roche, will serve as mentor for the fellow, together with his team of scientists. Dr. Marbach has long been engaged in open science collaborations involving academia and industry as an organizer of multiple <a href="https://dreamchallenges.org/">DREAM Challenges</a>, which included hundreds of participating teams and were published in leading journals. Dr. Marbach is an expert in computational network biology and advanced analytics in drug discovery.</p>
+<p><a href="https://www.biorxiv.org/content/10.1101/2024.02.25.581968">PocketGen: Generating Full-Atom Ligand-Binding Protein Pockets</a><br />
+Zaixi Zhang, Wanxiang Shen, Qi Liu, Marinka Zitnik<br />
+<em>In Review</em> 2024 <a href="https://www.biorxiv.org/content/10.1101/2024.02.25.581968">[bioRxiv]</a></p>
 
-<hr />
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{zhang2024pocketgen,
+  title={PocketGen: Generating Full-Atom Ligand-Binding Protein Pockets},
+  author={Zhang, Zaixi and Shen, Wanxiang and Liu, Qi and Zitnik, Marinka},
+  journal={bioRxiv},
+  url={https://www.biorxiv.org/content/10.1101/2024.02.25.581968},
+  year={2024}
+}
+</code></pre></div></div>
 
-<p><em>Harvard is an Equal Opportunity Employer.</em></p>
+<h2 id="code-availability">Code Availability</h2>
+
+<p>Pytorch implementation of PocketGen is available in the <a href="https://github.com/zaixizhang/PocketGen">GitHub repository</a>.</p>
+
+<h2 id="authors">Authors</h2>
+
+<ul>
+  <li><a href="http://home.ustc.edu.cn/~zaixi/">Zaixi Zhang</a></li>
+  <li><a href="https://www.shenwx.com/">Wanxiang Shen</a></li>
+  <li><a href="http://staff.ustc.edu.cn/~qiliuql/">Qi Liu</a></li>
+  <li><a href="https://zitniklab.hms.harvard.edu/">Marinka Zitnik</a></li>
+</ul>
 
 </div>
                 </div>
