@@ -35,6 +35,23 @@
     },
 
      {
+      "key": "submission24f",
+      "author": ["Shanghua Gao", "Ada Fang*", "Yepeng Huang*", "Valentina Giunchiglia*", "Ayush Noori*", "Jonathan Richard Schwarz", "Yasha Ektefaie", "Jovana Kondic", "Marinka Zitnik"],
+      "title": "Empowering Biomedical Discovery with AI Agents",
+      "venue": "In Review",
+      "year": "2024",
+      "thumbnail": "AIAgents.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2404.02831",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2404.02831"
+      }
+    },
+
+
+     {
       "key": "submission24a",
       "author": ["Guadalupe Gonzalez", "Isuru Herath", "Kirill Veselkov", "Michael Bronstein", "Marinka Zitnik"],
       "title": "Combinatorial Prediction of Therapeutic Perturbations Using Causally-Inspired Neural Networks",
@@ -89,10 +106,28 @@
     },
 
      {
+      "key": "submission24e",
+      "author": ["Shanghua Gao", "Teddy Koker", "Owen Queen", "Thomas Hartvigsen", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
+      "title": "UniTS: Building a Unified Time Series Model",
+      "venue": "In Review",
+      "year": "2024",
+      "thumbnail": "UniTS.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2403.00131",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2403.00131",
+        "project website": "https://zitniklab.hms.harvard.edu/projects/UniTS/",
+        "code": "https://github.com/mims-harvard/UniTS"
+      }
+    },
+
+     {
       "key": "submission23g",
       "author": ["Michelle M Li", "Yepeng Huang", "Marissa Sumathipala", "Man Qing Liang", "Alberto Valdeolivas", "Ashwin N Ananthakrishnan",  "Katherine Liao", "Daniel Marbach", "Marinka Zitnik"],
       "title": "Contextualizing Protein Representations Using Deep Learning on Protein Networks and Single-Cell Data",
-      "venue": "In Review",
+      "venue": "Nature Methods (in press)",
       "year": "2024",
       "thumbnail": "PINNACLE23.png",
       "pdf": "https://www.biorxiv.org/content/10.1101/2023.07.18.549602v1",
@@ -197,10 +232,10 @@
       "key": "submission23m",
       "author": ["Shanshan Zhong", "Zhongzhan Huang", "Shanghua Gao", "Wushao Wen", "Liang Lin", "Marinka Zitnik", "Pan Zhou"],
       "title": "Let's Think Outside the Box: Exploring Leap-of-Thought in Large Language Models with Creative Humor Generation",
-      "venue": "In Review",
+      "venue": "Computer Vision and Pattern Recognition Conference, CVPR",
       "year": "2024",
       "thumbnail": "Image-Graph-ML4H23.png",
-      "pdf": "",
+      "pdf": "papers/CLoT-CVPR24.pdf",
       "url": "https://arxiv.org/abs/2312.02439",
       "type": "journal",
       "supp":
@@ -251,7 +286,7 @@
      {
       "key": "submission23d",
       "author": ["Kexin Huang*", "Payal Chandak*", "Qianwen Wang", "Shreyas Havaldar", "Akhil Vaid", "Jure Leskovec", "Girish Nadkarni", "Benjamin S. Glicksberg", "Nils Gehlenborg", "Marinka Zitnik"],
-      "title": "Zero-shot Prediction of Therapeutic Use with Geometric Deep Learning and Clinician Centered Design",
+      "title": "Zero-shot Drug Repurposing with Geometric Deep Learning and Clinician Centered Design",
       "venue": "In Review",
       "year": "2024",
       "thumbnail": "subgnn20.png",
@@ -283,6 +318,21 @@
       }
     },
 
+     {
+      "key": "submission23e",
+      "author": ["Jason J. Kwon*", "Joshua Pan*", "Guadalupe Gonzalez", "William C. Hahn", "Marinka Zitnik"],
+      "title": "On Knowing a Gene: A Distributional Hypothesis of Gene Function",
+      "venue": "Cell Systems (in press)",
+      "year": "2024",
+      "thumbnail": "subgnn20.png",
+      "pdf": "",
+      "url": "",
+      "type": "journal",
+      "supp":
+      {
+      }
+    },
+
     {
       "key": "submission23l",
       "author": ["Sameer Khanna", "Daniel Michael", "Marinka Zitnik", "Pranav Rajpurkar"],
@@ -292,21 +342,6 @@
       "thumbnail": "Image-Graph-ML4H23.png",
       "pdf": "papers/Image-Graph-ML4H23.pdf",
       "url": "https://proceedings.mlr.press/v225/khanna23a.html",
-      "type": "journal",
-      "supp":
-      {
-      }
-    },
-
-     {
-      "key": "submission23e",
-      "author": ["Jason J. Kwon*", "Joshua Pan*", "Guadalupe Gonzalez", "William C. Hahn", "Marinka Zitnik"],
-      "title": "On Knowing a Gene",
-      "venue": "In Review",
-      "year": "2024",
-      "thumbnail": "subgnn20.png",
-      "pdf": "",
-      "url": "",
       "type": "journal",
       "supp":
       {
