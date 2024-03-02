@@ -89,10 +89,28 @@
     },
 
      {
+      "key": "submission24e",
+      "author": ["Shanghua Gao", "Teddy Koker", "Owen Queen", "Thomas Hartvigsen", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
+      "title": "UniTS: Building a Unified Time Series Model",
+      "venue": "In Review",
+      "year": "2024",
+      "thumbnail": "UniTS.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2403.00131",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2403.00131",
+        "project website": "https://zitniklab.hms.harvard.edu/projects/UniTS/",
+        "code": "https://github.com/mims-harvard/UniTS"
+      }
+    },
+
+     {
       "key": "submission23g",
       "author": ["Michelle M Li", "Yepeng Huang", "Marissa Sumathipala", "Man Qing Liang", "Alberto Valdeolivas", "Ashwin N Ananthakrishnan",  "Katherine Liao", "Daniel Marbach", "Marinka Zitnik"],
       "title": "Contextualizing Protein Representations Using Deep Learning on Protein Networks and Single-Cell Data",
-      "venue": "In Review",
+      "venue": "Nature Methods (in press)",
       "year": "2024",
       "thumbnail": "PINNACLE23.png",
       "pdf": "https://www.biorxiv.org/content/10.1101/2023.07.18.549602v1",
@@ -197,10 +215,10 @@
       "key": "submission23m",
       "author": ["Shanshan Zhong", "Zhongzhan Huang", "Shanghua Gao", "Wushao Wen", "Liang Lin", "Marinka Zitnik", "Pan Zhou"],
       "title": "Let's Think Outside the Box: Exploring Leap-of-Thought in Large Language Models with Creative Humor Generation",
-      "venue": "In Review",
+      "venue": "Computer Vision and Pattern Recognition Conference, CVPR",
       "year": "2024",
       "thumbnail": "Image-Graph-ML4H23.png",
-      "pdf": "",
+      "pdf": "papers/CLoT-CVPR24.pdf",
       "url": "https://arxiv.org/abs/2312.02439",
       "type": "journal",
       "supp":
