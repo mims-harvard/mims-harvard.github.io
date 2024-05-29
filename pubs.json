@@ -197,11 +197,11 @@
       "key": "submission23e",
       "author": ["Jason J. Kwon*", "Joshua Pan*", "Guadalupe Gonzalez", "William C. Hahn", "Marinka Zitnik"],
       "title": "On Knowing a Gene: A Distributional Hypothesis of Gene Function",
-      "venue": "Cell Systems (in press)",
+      "venue": "Cell Systems",
       "year": "2024",
-      "thumbnail": "subgnn20.png",
-      "pdf": "",
-      "url": "",
+      "thumbnail": "DistributedGeneFunction-CellSystems24.png",
+      "pdf": "papers/DistributedGeneFunction-CellSystems24.pdf",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2405471224001236",
       "type": "journal",
       "supp":
       {
