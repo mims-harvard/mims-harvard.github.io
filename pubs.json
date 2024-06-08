@@ -124,6 +124,25 @@
     },
 
      {
+      "key": "submission23d",
+      "author": ["Kexin Huang*", "Payal Chandak*", "Qianwen Wang", "Shreyas Havaldar", "Akhil Vaid", "Jure Leskovec", "Girish Nadkarni", "Benjamin S. Glicksberg", "Nils Gehlenborg", "Marinka Zitnik"],
+      "title": "Zero-shot Drug Repurposing with Geometric Deep Learning and Clinician Centered Design",
+      "venue": "Nature Medicine (in press)",
+      "year": "2024",
+      "thumbnail": "subgnn20.png",
+      "pdf": "",
+      "url": "https://www.medrxiv.org/content/10.1101/2023.03.19.23287458",
+      "type": "journal",
+      "supp":
+      {
+        "medRxiv": "https://www.medrxiv.org/content/10.1101/2023.03.19.23287458",
+        "code": "https://github.com/mims-harvard/TxGNN",
+        "project website": "/projects/TxGNN",
+        "TxGNN Explorer": "http://txgnn.org"
+      }
+    },
+
+     {
       "key": "submission23g",
       "author": ["Michelle M Li", "Yepeng Huang", "Marissa Sumathipala", "Man Qing Liang", "Alberto Valdeolivas", "Ashwin N Ananthakrishnan",  "Katherine Liao", "Daniel Marbach", "Marinka Zitnik"],
       "title": "Contextualizing Protein Representations Using Deep Learning on Protein Networks and Single-Cell Data",
@@ -138,6 +157,24 @@
         "bioRxiv": "https://www.biorxiv.org/content/10.1101/2023.07.18.549602v1",
         "project website": "https://zitniklab.hms.harvard.edu/projects/PINNACLE/",
         "code": "https://github.com/mims-harvard/PINNACLE"
+      }
+    },
+
+     {
+      "key": "submission24h",
+      "author": ["Alejandro Velez-Arce", "Kexin Huang", "Michelle M Li", "Xiang Lin", "Wenhao Gao", "Tianfan Fu", "Manolis Kellis", "Bradley L. Pentelute", "Marinka Zitnik"],
+      "title": "TDC-2: Multimodal Foundation for Therapeutic Science",
+      "venue": "In Review",
+      "year": "2024",
+      "thumbnail": "PINNACLE23.png",
+      "pdf": "",
+      "url": "https://www.biorxiv.org/content/10.1101/2024.06.12.598655v2",
+      "type": "journal",
+      "supp":
+      {
+        "bioRxiv": "https://www.biorxiv.org/content/10.1101/2024.06.12.598655v2",
+        "project website": "https://tdcommons.ai/",
+        "code": "https://github.com/mims-harvard/TDC"
       }
     },
 
@@ -212,10 +249,10 @@
       "key": "submission24b",
       "author": ["Lichao Sun", "Yue Huang", "Haoran Wang", "et al."],
       "title": "TrustLLM: Trustworthiness in Large Language Models",
-      "venue": "International Conference on Machine Learning, ICML (in press)",
+      "venue": "International Conference on Machine Learning, ICML",
       "year": "2024",
       "thumbnail": "trustLLM24.png",
-      "pdf": "",
+      "pdf": "papers/TrustLLM-ICML24.pdf",
       "url": "https://arxiv.org/abs/2401.05561",
       "type": "journal",
       "supp":
@@ -229,15 +266,17 @@
      {
       "key": "submission24g",
       "author": ["Songtao Liu", "Jinghui Chen", "Tianfan Fu", "Lu Lin", "Marinka Zitnik", "Dinghao Wu"],
-      "title": "Graph Adversarial Diffusion Convolution via Laplacian Distance",
-      "venue": "International Conference on Machine Learning, ICML (in press)",
+      "title": "Graph Adversarial Diffusion Convolution",
+      "venue": "International Conference on Machine Learning, ICML",
       "year": "2024",
       "thumbnail": "GADC24.png",
-      "pdf": "",
-      "url": "",
+      "pdf": "papers/GADC-ICML24.pdf",
+      "url": "https://arxiv.org/abs/2406.02059v1",
       "type": "journal",
       "supp":
       {
+        "arXiv": "https://arxiv.org/abs/2406.02059",
+        "code": "https://github.com/SongtaoLiu0823/GADC"
       }
     },
 
@@ -273,25 +312,6 @@
         "arXiv": "https://arxiv.org/abs/2312.02439",
         "code": "https://github.com/sail-sg/CLoT",
         "project website": "https://zhongshsh.github.io/CLoT/"
-      }
-    },
-
-     {
-      "key": "submission23d",
-      "author": ["Kexin Huang*", "Payal Chandak*", "Qianwen Wang", "Shreyas Havaldar", "Akhil Vaid", "Jure Leskovec", "Girish Nadkarni", "Benjamin S. Glicksberg", "Nils Gehlenborg", "Marinka Zitnik"],
-      "title": "Zero-shot Drug Repurposing with Geometric Deep Learning and Clinician Centered Design",
-      "venue": "In Review",
-      "year": "2024",
-      "thumbnail": "subgnn20.png",
-      "pdf": "",
-      "url": "https://www.medrxiv.org/content/10.1101/2023.03.19.23287458",
-      "type": "journal",
-      "supp":
-      {
-        "medRxiv": "https://www.medrxiv.org/content/10.1101/2023.03.19.23287458",
-        "code": "https://github.com/mims-harvard/TxGNN",
-        "project website": "/projects/TxGNN",
-        "TxGNN Explorer": "http://txgnn.org"
       }
     },
 
