@@ -35,6 +35,43 @@
     },
 
      {
+      "key": "submission23g",
+      "author": ["Michelle M Li", "Yepeng Huang", "Marissa Sumathipala", "Man Qing Liang", "Alberto Valdeolivas", "Ashwin N Ananthakrishnan",  "Katherine Liao", "Daniel Marbach", "Marinka Zitnik"],
+      "title": "Contextual AI Models for Single-Cell Protein Biology",
+      "venue": "Nature Methods (in press)",
+      "year": "2024",
+      "thumbnail": "PINNACLE23.png",
+      "pdf": "https://www.biorxiv.org/content/10.1101/2023.07.18.549602",
+      "url": "https://www.biorxiv.org/content/10.1101/2023.07.18.549602",
+      "type": "journal",
+      "supp":
+      {
+        "bioRxiv": "https://www.biorxiv.org/content/10.1101/2023.07.18.549602",
+        "project website": "https://zitniklab.hms.harvard.edu/projects/PINNACLE/",
+        "code": "https://github.com/mims-harvard/PINNACLE"
+      }
+    },
+
+     {
+      "key": "submission23d",
+      "author": ["Kexin Huang*", "Payal Chandak*", "Qianwen Wang", "Shreyas Havaldar", "Akhil Vaid", "Jure Leskovec", "Girish Nadkarni", "Benjamin S. Glicksberg", "Nils Gehlenborg", "Marinka Zitnik"],
+      "title": "Zero-shot Drug Repurposing with Geometric Deep Learning and Clinician Centered Design",
+      "venue": "Nature Medicine (in press)",
+      "year": "2024",
+      "thumbnail": "subgnn20.png",
+      "pdf": "",
+      "url": "https://www.medrxiv.org/content/10.1101/2023.03.19.23287458",
+      "type": "journal",
+      "supp":
+      {
+        "medRxiv": "https://www.medrxiv.org/content/10.1101/2023.03.19.23287458",
+        "code": "https://github.com/mims-harvard/TxGNN",
+        "project website": "/projects/TxGNN",
+        "TxGNN Explorer": "http://txgnn.org"
+      }
+    },
+
+     {
       "key": "submission24f",
       "author": ["Shanghua Gao", "Ada Fang*", "Yepeng Huang*", "Valentina Giunchiglia*", "Ayush Noori*", "Jonathan Richard Schwarz", "Yasha Ektefaie", "Jovana Kondic", "Marinka Zitnik"],
       "title": "Empowering Biomedical Discovery with AI Agents",
@@ -124,68 +161,32 @@
     },
 
      {
-      "key": "submission23g",
-      "author": ["Michelle M Li", "Yepeng Huang", "Marissa Sumathipala", "Man Qing Liang", "Alberto Valdeolivas", "Ashwin N Ananthakrishnan",  "Katherine Liao", "Daniel Marbach", "Marinka Zitnik"],
-      "title": "Contextualizing Protein Representations Using Deep Learning on Protein Networks and Single-Cell Data",
-      "venue": "Nature Methods (in press)",
+      "key": "submission24h",
+      "author": ["Alejandro Velez-Arce", "Kexin Huang", "Michelle M Li", "Xiang Lin", "Wenhao Gao", "Tianfan Fu", "Manolis Kellis", "Bradley L. Pentelute", "Marinka Zitnik"],
+      "title": "TDC-2: Multimodal Foundation for Therapeutic Science",
+      "venue": "In Review",
       "year": "2024",
       "thumbnail": "PINNACLE23.png",
-      "pdf": "https://www.biorxiv.org/content/10.1101/2023.07.18.549602v1",
-      "url": "https://www.biorxiv.org/content/10.1101/2023.07.18.549602v1",
+      "pdf": "",
+      "url": "https://www.biorxiv.org/content/10.1101/2024.06.12.598655v2",
       "type": "journal",
       "supp":
       {
-        "bioRxiv": "https://www.biorxiv.org/content/10.1101/2023.07.18.549602v1",
-        "project website": "https://zitniklab.hms.harvard.edu/projects/PINNACLE/",
-        "code": "https://github.com/mims-harvard/PINNACLE"
-      }
-    },
-
-     {
-      "key": "submission22h",
-      "author": ["Yasha Ektefaie*", "George Dasoulas*", "Ayush Noori", "Maha Farhat", "Marinka Zitnik"],
-      "title": "Multimodal Learning with Graphs",
-      "venue": "Nature Machine Intelligence",
-      "year": "2023",
-      "thumbnail": "MGL22.png",
-      "pdf": "https://www.nature.com/articles/s42256-023-00624-6",
-      "url": "https://www.nature.com/articles/s42256-023-00624-6",
-      "type": "journal",
-      "supp":
-      {
-        "arXiv": "https://arxiv.org/abs/2209.03299",
-        "project website": "https://yashaektefaie.github.io/mgl/"
-      }
-    },
-
-     {
-      "key": "submission21e",
-      "author": ["Matthew B. A. McDermott", "Brendan Yap", "Peter Szolovits", "Marinka Zitnik"],
-      "title": "Structure Inducing Pre-Training",
-      "venue": "Nature Machine Intelligence",
-      "year": "2023",
-      "thumbnail": "NatureMachIntel-SIPT23.png",
-      "pdf": "https://www.nature.com/articles/s42256-023-00647-z",
-      "url": "https://www.nature.com/articles/s42256-023-00647-z",
-      "type": "journal",
-      "supp":
-      {
-        "arXiv": "https://arxiv.org/abs/2103.10334",
-        "code": "https://github.com/mmcdermott/structure_inducing_pre-training",
-        "project website": "/projects/SIPT",
-        "supplementary": "https://www.nature.com/articles/s42256-023-00647-z#Sec26"
+        "bioRxiv": "https://www.biorxiv.org/content/10.1101/2024.06.12.598655v2",
+        "project website": "https://tdcommons.ai/",
+        "code": "https://github.com/mims-harvard/TDC"
       }
     },
 
      {
       "key": "submission23j",
       "author": ["Ruth Johnson", "Michelle M. Li", "Ayush Noori", "Owen Queen", "Marinka Zitnik"],
-      "title": "Graph AI in Medicine",
+      "title": "Graph Artificial Intelligence in Medicine",
       "venue": "Annual Review of Biomedical Data Science (in press)",
       "year": "2024",
       "thumbnail": "GraphAIMedicine23.png",
       "pdf": "",
-      "url": "https://arxiv.org/abs/2310.13767",
+      "url": "https://www.annualreviews.org/content/journals/10.1146/annurev-biodatasci-110723-024625",
       "type": "journal",
       "supp":
       {
@@ -212,10 +213,10 @@
       "key": "submission24b",
       "author": ["Lichao Sun", "Yue Huang", "Haoran Wang", "et al."],
       "title": "TrustLLM: Trustworthiness in Large Language Models",
-      "venue": "International Conference on Machine Learning, ICML (in press)",
+      "venue": "International Conference on Machine Learning, ICML",
       "year": "2024",
       "thumbnail": "trustLLM24.png",
-      "pdf": "",
+      "pdf": "papers/TrustLLM-ICML24.pdf",
       "url": "https://arxiv.org/abs/2401.05561",
       "type": "journal",
       "supp":
@@ -229,15 +230,82 @@
      {
       "key": "submission24g",
       "author": ["Songtao Liu", "Jinghui Chen", "Tianfan Fu", "Lu Lin", "Marinka Zitnik", "Dinghao Wu"],
-      "title": "Graph Adversarial Diffusion Convolution via Laplacian Distance",
-      "venue": "International Conference on Machine Learning, ICML (in press)",
+      "title": "Graph Adversarial Diffusion Convolution",
+      "venue": "International Conference on Machine Learning, ICML",
       "year": "2024",
       "thumbnail": "GADC24.png",
-      "pdf": "",
-      "url": "",
+      "pdf": "papers/GADC-ICML24.pdf",
+      "url": "https://arxiv.org/abs/2406.02059v1",
       "type": "journal",
       "supp":
       {
+        "arXiv": "https://arxiv.org/abs/2406.02059",
+        "code": "https://github.com/SongtaoLiu0823/GADC"
+      }
+    },
+
+     {
+      "key": "submission24i",
+      "author": ["Kangyu Zheng", "Yingzhou Lu", "Zaixi Zhang", "Zhongwei Wan", "Yao Ma", "Marinka Zitnik", "Tianfan Fu"],
+      "title": "Structure-based Drug Design Benchmark: Do 3D Methods Really Dominate?",
+      "venue": "In Review",
+      "year": "2024",
+      "thumbnail": "GADC24.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2406.03403",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2406.03403"
+      }
+    },
+
+     {
+      "key": "submission24j",
+      "author": ["Xinxiu Li", "Joseph Loscalzo", "AKM Firoj Mahmud", "Dina Mansour Aly Aly", "Andrey Rzhetsky", "Marinka Zitnik", "Mikael Benson"],
+      "title": "Digital Twins as Global Learning Health and Disease Models of Individuals",
+      "venue": "In Review",
+      "year": "2024",
+      "thumbnail": "GADC24.png",
+      "pdf": "",
+      "url": "https://www.preprints.org/manuscript/202406.0357",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://www.preprints.org/manuscript/202406.0357"
+      }
+    },
+
+
+     {
+      "key": "submission24k",
+      "author": ["Jintai Chen", "Yaojun Hu", "Yue Wang", "Yingzhou Lu", "Xu Cao", "Miao Lin", "Hongxia Xu", "Jian Wu", "Cao Xiao", "Jimeng Sun", "Lucas Glass", "Kexin Huang", "Marinka Zitnik", "Tianfan Fu"],
+      "title": "TrialBench: Multi-Modal Artificial Intelligence-Ready Clinical Trial Datasets",
+      "venue": "In Review",
+      "year": "2024",
+      "thumbnail": "GADC24.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2407.00631",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2407.00631"
+      }
+    },
+
+     {
+      "key": "submission24l",
+      "author": ["Jintai Chen", "Yaojun Hu", "Yue Wang", "Yingzhou Lu", "Xu Cao", "Miao Lin", "Hongxia Xu", "Jian Wu", "Cao Xiao", "Jimeng Sun", "Lucas Glass", "Kexin Huang", "Marinka Zitnik", "Tianfan Fu"],
+      "title": "Composable Interventions for Language Models",
+      "venue": "In Review",
+      "year": "2024",
+      "thumbnail": "GADC24.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2407.06483",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2407.06483"
       }
     },
 
@@ -277,21 +345,38 @@
     },
 
      {
-      "key": "submission23d",
-      "author": ["Kexin Huang*", "Payal Chandak*", "Qianwen Wang", "Shreyas Havaldar", "Akhil Vaid", "Jure Leskovec", "Girish Nadkarni", "Benjamin S. Glicksberg", "Nils Gehlenborg", "Marinka Zitnik"],
-      "title": "Zero-shot Drug Repurposing with Geometric Deep Learning and Clinician Centered Design",
-      "venue": "In Review",
-      "year": "2024",
-      "thumbnail": "subgnn20.png",
-      "pdf": "",
-      "url": "https://www.medrxiv.org/content/10.1101/2023.03.19.23287458",
+      "key": "submission22h",
+      "author": ["Yasha Ektefaie*", "George Dasoulas*", "Ayush Noori", "Maha Farhat", "Marinka Zitnik"],
+      "title": "Multimodal Learning with Graphs",
+      "venue": "Nature Machine Intelligence",
+      "year": "2023",
+      "thumbnail": "MGL22.png",
+      "pdf": "https://www.nature.com/articles/s42256-023-00624-6",
+      "url": "https://www.nature.com/articles/s42256-023-00624-6",
       "type": "journal",
       "supp":
       {
-        "medRxiv": "https://www.medrxiv.org/content/10.1101/2023.03.19.23287458",
-        "code": "https://github.com/mims-harvard/TxGNN",
-        "project website": "/projects/TxGNN",
-        "TxGNN Explorer": "http://txgnn.org"
+        "arXiv": "https://arxiv.org/abs/2209.03299",
+        "project website": "https://yashaektefaie.github.io/mgl/"
+      }
+    },
+
+     {
+      "key": "submission21e",
+      "author": ["Matthew B. A. McDermott", "Brendan Yap", "Peter Szolovits", "Marinka Zitnik"],
+      "title": "Structure Inducing Pre-Training",
+      "venue": "Nature Machine Intelligence",
+      "year": "2023",
+      "thumbnail": "NatureMachIntel-SIPT23.png",
+      "pdf": "https://www.nature.com/articles/s42256-023-00647-z",
+      "url": "https://www.nature.com/articles/s42256-023-00647-z",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2103.10334",
+        "code": "https://github.com/mmcdermott/structure_inducing_pre-training",
+        "project website": "/projects/SIPT",
+        "supplementary": "https://www.nature.com/articles/s42256-023-00647-z#Sec26"
       }
     },
 
