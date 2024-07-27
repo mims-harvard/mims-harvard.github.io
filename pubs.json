@@ -38,15 +38,16 @@
       "key": "submission23g",
       "author": ["Michelle M Li", "Yepeng Huang", "Marissa Sumathipala", "Man Qing Liang", "Alberto Valdeolivas", "Ashwin N Ananthakrishnan",  "Katherine Liao", "Daniel Marbach", "Marinka Zitnik"],
       "title": "Contextual AI Models for Single-Cell Protein Biology",
-      "venue": "Nature Methods (in press)",
+      "venue": "Nature Methods",
       "year": "2024",
       "thumbnail": "PINNACLE23.png",
-      "pdf": "https://www.biorxiv.org/content/10.1101/2023.07.18.549602",
-      "url": "https://www.biorxiv.org/content/10.1101/2023.07.18.549602",
+      "pdf": "https://www.nature.com/articles/s41592-024-02341-3",
+      "url": "https://www.nature.com/articles/s41592-024-02341-3",
       "type": "journal",
       "supp":
       {
         "bioRxiv": "https://www.biorxiv.org/content/10.1101/2023.07.18.549602",
+        "Research Briefing in Nature Methods": "https://www.nature.com/articles/s41592-024-02342-2",
         "project website": "https://zitniklab.hms.harvard.edu/projects/PINNACLE/",
         "code": "https://github.com/mims-harvard/PINNACLE"
       }
@@ -55,7 +56,7 @@
      {
       "key": "submission23d",
       "author": ["Kexin Huang*", "Payal Chandak*", "Qianwen Wang", "Shreyas Havaldar", "Akhil Vaid", "Jure Leskovec", "Girish Nadkarni", "Benjamin S. Glicksberg", "Nils Gehlenborg", "Marinka Zitnik"],
-      "title": "Zero-shot Drug Repurposing with Geometric Deep Learning and Clinician Centered Design",
+      "title": "A Foundation Model for Clinician Centered Drug Repurposing",
       "venue": "Nature Medicine (in press)",
       "year": "2024",
       "thumbnail": "subgnn20.png",
