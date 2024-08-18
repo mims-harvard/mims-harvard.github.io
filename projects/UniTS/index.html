@@ -4,16 +4,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>UniTS - Building a Unified Time Series Model - Zitnik Lab</title>
+    <title>UniTS - A Unified Multi-Task Time Series Model - Zitnik Lab</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="shortcut icon" type="image/png"
            href="/favicon.png" 
     />
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>UniTS - Building a Unified Time Series Model | Zitnik Lab</title>
+<title>UniTS - A Unified Multi-Task Time Series Model | Zitnik Lab</title>
 <meta name="generator" content="Jekyll v3.8.6" />
-<meta property="og:title" content="UniTS - Building a Unified Time Series Model" />
+<meta property="og:title" content="UniTS - A Unified Multi-Task Time Series Model" />
 <meta name="author" content="Marinka Zitnik" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Time series, longitudinal datasets, forecasting, classification, anomaly detection, imputation, classification" />
@@ -22,11 +22,11 @@
 <meta property="og:url" content="https://zitniklab.hms.harvard.edu/projects/UniTS/" />
 <meta property="og:site_name" content="Zitnik Lab" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="UniTS - Building a Unified Time Series Model" />
+<meta property="twitter:title" content="UniTS - A Unified Multi-Task Time Series Model" />
 <meta name="twitter:site" content="@marinkazitnik" />
 <meta name="twitter:creator" content="@Marinka Zitnik" />
 <script type="application/ld+json">
-{"url":"https://zitniklab.hms.harvard.edu/projects/UniTS/","author":{"@type":"Person","name":"Marinka Zitnik"},"headline":"UniTS - Building a Unified Time Series Model","description":"Time series, longitudinal datasets, forecasting, classification, anomaly detection, imputation, classification","@type":"WebPage","@context":"https://schema.org"}</script>
+{"url":"https://zitniklab.hms.harvard.edu/projects/UniTS/","author":{"@type":"Person","name":"Marinka Zitnik"},"headline":"UniTS - A Unified Multi-Task Time Series Model","description":"Time series, longitudinal datasets, forecasting, classification, anomaly detection, imputation, classification","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
 <script>
@@ -121,7 +121,7 @@
         <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
     <div class="hero-body">
         <div class="container">
-            <p class="title is-2">UniTS - Building a Unified Time Series Model</p>
+            <p class="title is-2">UniTS - A Unified Multi-Task Time Series Model</p>
             <p class="subtitle is-3"></p>
             
         </div>
@@ -143,15 +143,15 @@
     <div class="box has-background-info has-text-white">
 
 <p>
-Foundation models, especially LLMs, are profoundly transforming deep learning. Instead of training many task-specific models, we can adapt a single pretrained model to many tasks via few-shot prompting or fine-tuning. However, current foundation models apply to sequence data but not to time series, which present unique challenges due to the inherent diverse and multi-domain time series datasets, diverging task specifications across forecasting, classification and other types of tasks, and the apparent need for task-specialized models. 
+Although pre-trained transformers and reprogrammed text-based LLMs have shown strong performance on time series tasks, the best-performing architectures vary widely across tasks, with most models narrowly focused on specific areas, such as time series forecasting. Unifying predictive and generative time series tasks within a single model remains challenging. 
 </p>
 
 <p>
-We developed UniTS, a unified time series model that supports a universal task specification, accommodating classification, forecasting, imputation, and anomaly detection tasks. This is achieved through a novel unified network backbone, which incorporates sequence and variable attention along with a dynamic linear operator and is trained as a unified model. 
+We introduce UniTS, a unified multi-task time series model that utilizes task tokenization to integrate predictive and generative tasks into a single framework. UniTS employs a modified transformer block to capture universal time series representations, enabling transferability from a heterogeneous, multi-domain pre-training dataset—characterized by diverse dynamic patterns, sampling rates, and temporal scales—to a wide range of downstream datasets with varied task specifications and data domains.
 </p>
 
 <p>
-Across 38 multi-domain datasets, UniTS demonstrates superior performance compared to task-specific models and repurposed natural language-based LLMs. UniTS exhibits remarkable zero-shot, few-shot, and prompt learning capabilities when evaluated on new data domains and tasks. We will release the source code and datasets.
+Tested on 38 datasets across human activity sensors, healthcare, engineering, and finance, UniTS achieves superior performance compared to 12 forecasting models, 20 classification models, 18 anomaly detection models, and 16 imputation models, including adapted text-based LLMs. UniTS also demonstrates strong few-shot and prompt capabilities when applied to new domains and tasks. In single-task settings, UniTS outperforms competitive task-specialized time series models.
 </p>
 </div>
 
@@ -179,16 +179,16 @@ Across 38 multi-domain datasets, UniTS demonstrates superior performance compare
 
 <h2 id="overview-of-units">Overview of UniTS</h2>
 
-<p>UniTS is a unified time series model that processes various tasks with shared parameters without resorting to any task-specific modules. UniTS achieves competitive performance in trained tasks and can perform zero-shot inference on novel tasks without the need for additional parameters. UniTS makes the following novel contributions:</p>
+<p>UniTS is a unified time series model that processes generative and predictive tasks with shared parameters. UniTS achieves competitive performance in trained tasks and can perform zero-shot inference on novel tasks without the need for additional parameters. This capability is achieved through the following model design:</p>
 
-<p>1) <strong>Universal task specification with prompting:</strong> UniTS uses a prompting-based framework to convert various tasks into a unified token representation, creating a universal specification for all tasks.</p>
+<p>1) <em>Task tokenization:</em> UniTS encodes task specifications into a unified token representation, enabling universal task specification without post-hoc architectural modifications.</p>
 
-<p>2) <strong>Data-domain agnostic network:</strong> UniTS employs self-attention across both sequence and variable dimensions to accommodate diverse data shapes. We introduce a dynamic linear operator to model dense relations between data points in sequences of any length. As a result, UniTS can process multi-domain time series with diverse variables and lengths without the need to modify the network structure.</p>
+<p>2) <em>Unified time series architecture:</em> UniTS processes heterogeneous time series data with varying numbers of variables and sequence lengths without altering its network structure. To accomplish this, UniTS employs self-attention across time and variable dimensions to adapt to diverse temporal dynamics. We introduce a dynamic linear operator to model complex relationships between data points along the time dimension and a module to reduce interference in the feature space of heterogeneous data.</p>
 
-<p>3) <strong>Unified model with fully shared weights:</strong> Leveraging the universal task specification and data-domain agnostic network, UniTS has shared weights across tasks. To improve UniTS’s generalization ability, a unified masked reconstruction pretraining scheme is introduced to handle both generative and recognition tasks within a unified model.</p>
+<p>3) <em>Support for generative and predictive tasks:</em> The combination of universal task specification and a unified time series architecture allows UniTS to share weights across tasks by co-training on multiple datasets. We use a masked reconstruction pre-training approach, enabling UniTS to be jointly optimized for generative and predictive tasks.</p>
 
 <center>
-<img src="/img/UniTS-2.png" />
+<img src="/img/UniTS-3.png" />
 </center>
 
 <p>In a challenging multi-domain/task setting, a single UniTS with fully shared weights successfully handles 38 diverse tasks, indicating its potential as a unified time series model. UniTS outperforms top-performing baselines, which require data and task-specific modules, by achieving the highest average performance and the best results on 27 out of the total 38 tasks.</p>
@@ -201,14 +201,14 @@ Across 38 multi-domain datasets, UniTS demonstrates superior performance compare
 
 <h2 id="publication">Publication</h2>
 
-<p><a href="https://arxiv.org/abs/2403.00131">UniTS: Building a Unified Time Series Model</a><br />
+<p><a href="https://arxiv.org/abs/2403.00131">UniTS: A Unified Multi-Task Time Series Model</a><br />
 Shanghua Gao, Teddy Koker, Owen Queen, Thomas Hartvigsen, Theodoros Tsiligkaridis, and Marinka Zitnik <br />
-<em>In Review</em> 2024 <a href="https://arxiv.org/abs/2403.00131">[arXiv]</a></p>
+<em>NeurIPS</em> 2024 <a href="https://arxiv.org/abs/2403.00131">[arXiv]</a></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{gao2024building,
-  title={UniTS: Building a Unified Time Series Model},
+  title={UniTS: A Unified Multi-Task Time Series Model},
   author={Gao, Shanghua and Koker, Teddy and Queen, Owen and Hartvigsen, Thomas and Tsiligkaridis, Theodoros and Zitnik, Marinka},
-  journal={arXiv},
+  journal={NeuIPS},
   url={https://arxiv.org/abs/2403.00131},
   year={2024}
 }
@@ -236,6 +236,230 @@ Shanghua Gao, Teddy Koker, Owen Queen, Thomas Hartvigsen, Theodoros Tsiligkaridi
                     <p class="title is-4">Latest News</p>
 
 <div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/11/15/PocketGen/">PocketGen in Nature Machine Intelligence</a>-->
+        <p class="card-header-title">Nov 2024: &nbsp; <span class="has-text-primary">PocketGen in Nature Machine Intelligence</span></p>
+<!--        <p class="card-header-item">Nov 2024</p>-->
+<!--        <p class="card-footer-item">Nov 15, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>PocketGen is a <a href="https://www.nature.com/articles/s42256-024-00920-9">multimodal sequence-structure generative model for designing full-atom ligand-binding protein pockets.</a></p>
+</p>-->
+            <p>PocketGen is a <a href="https://www.nature.com/articles/s42256-024-00920-9">multimodal sequence-structure generative model for designing full-atom ligand-binding protein pockets.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/11/15/PocketGen/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Nov 15, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/11/01/AIScientist/">Biomedical AI Agents in Cell</a>-->
+        <p class="card-header-title">Nov 2024: &nbsp; <span class="has-text-primary">Biomedical AI Agents in Cell</span></p>
+<!--        <p class="card-header-item">Nov 2024</p>-->
+<!--        <p class="card-footer-item">Nov 1, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>We envision “AI scientists” as <a href="https://www.cell.com/cell/fulltext/S0092-8674(24)01070-5">AI agents capable of skeptical learning and reasoning that empower biomedical research by integrating ML models and biomedical tools with experimental platforms.</a></p>
+</p>-->
+            <p>We envision “AI scientists” as <a href="https://www.cell.com/cell/fulltext/S0092-8674(24)01070-5">AI agents capable of skeptical learning and reasoning that empower biomedical research by integrating ML models and biomedical tools with experimental platforms.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/11/01/AIScientist/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Nov 1, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/10/19/ACAnet/">Activity Cliffs in Molecular Property Prediction</a>-->
+        <p class="card-header-title">Oct 2024: &nbsp; <span class="has-text-primary">Activity Cliffs in Molecular Property Prediction</span></p>
+<!--        <p class="card-header-item">Oct 2024</p>-->
+<!--        <p class="card-footer-item">Oct 19, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper on <a href="https://chemrxiv.org/engage/chemrxiv/article-details/6470c963be16ad5c57f5526c">activity-cliff informed contrastive learning for molecular property prediction.</a></p>
+</p>-->
+            <p>New paper on <a href="https://chemrxiv.org/engage/chemrxiv/article-details/6470c963be16ad5c57f5526c">activity-cliff informed contrastive learning for molecular property prediction.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/10/19/ACAnet/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Oct 19, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/10/09/KGARevion/">Knowledge Graph Agent for Medical Reasoning</a>-->
+        <p class="card-header-title">Oct 2024: &nbsp; <span class="has-text-primary">Knowledge Graph Agent for Medical Reasoning</span></p>
+<!--        <p class="card-header-item">Oct 2024</p>-->
+<!--        <p class="card-footer-item">Oct 9, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper introducing a <a href="https://arxiv.org/abs/2410.04660">knowledge graph agent for complex, knowledge-intensive medical reasoning.</a></p>
+</p>-->
+            <p>New paper introducing a <a href="https://arxiv.org/abs/2410.04660">knowledge graph agent for complex, knowledge-intensive medical reasoning.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/10/09/KGARevion/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Oct 9, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/09/27/NeurIPS2024Papers/">Three Papers Accepted to NeurIPS</a>-->
+        <p class="card-header-title">Sep 2024: &nbsp; <span class="has-text-primary">Three Papers Accepted to NeurIPS</span></p>
+<!--        <p class="card-header-item">Sep 2024</p>-->
+<!--        <p class="card-footer-item">Sep 27, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Exciting projects include a unified multi-task time series model, a flow-matching approach for generating protein pockets using geometric priors, and a tokenization method that produces invariant molecular representations for integration into large language models.</p>
+</p>-->
+            <p>Exciting projects include a unified multi-task time series model, a flow-matching approach for generating protein pockets using geometric priors, and a tokenization method that produces invariant molecular representations for integration into large language models.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/09/27/NeurIPS2024Papers/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 27, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/09/25/TxGNNNatureMedicine/">TxGNN Published in Nature Medicine</a>-->
+        <p class="card-header-title">Sep 2024: &nbsp; <span class="has-text-primary">TxGNN Published in Nature Medicine</span></p>
+<!--        <p class="card-header-item">Sep 2024</p>-->
+<!--        <p class="card-footer-item">Sep 25, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Graph foundation model for drug repurposing published in <a href="https://www.nature.com/articles/s41591-024-03233-x">Nature Medicine</a>. <a href="https://news.harvard.edu/gazette/story/2024/09/using-ai-to-repurpose-existing-drugs-for-treatment-of-rare-diseases/">[Harvard Gazette]</a> <a href="https://hms.harvard.edu/news/researchers-harness-ai-repurpose-existing-drugs-treatment-rare-diseases">[Harvard Medicine News]</a> <a href="https://www.forbes.com/sites/greglicholai/2024/09/26/ai-tool-speeds-drug-repurposing-and-its-free/">[Forbes]</a> <a href="https://developer.nvidia.com/blog/ai-uses-zero-shot-learning-to-find-existing-drugs-for-treating-rare-diseases/">[NVIDIA]</a></p>
+</p>-->
+            <p>Graph foundation model for drug repurposing published in <a href="https://www.nature.com/articles/s41591-024-03233-x">Nature Medicine</a>. <a href="https://news.harvard.edu/gazette/story/2024/09/using-ai-to-repurpose-existing-drugs-for-treatment-of-rare-diseases/">[Harvard Gazette]</a> <a href="https://hms.harvard.edu/news/researchers-harness-ai-repurpose-existing-drugs-treatment-rare-diseases">[Harvard Medicine News]</a> <a href="https://www.forbes.com/sites/greglicholai/2024/09/26/ai-tool-speeds-drug-repurposing-and-its-free/">[Forbes]</a> <a href="https://developer.nvidia.com/blog/ai-uses-zero-shot-learning-to-find-existing-drugs-for-treating-rare-diseases/">[NVIDIA]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/09/25/TxGNNNatureMedicine/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 25, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/08/28/GraphAI/">Graph AI in Medicine</a>-->
+        <p class="card-header-title">Aug 2024: &nbsp; <span class="has-text-primary">Graph AI in Medicine</span></p>
+<!--        <p class="card-header-item">Aug 2024</p>-->
+<!--        <p class="card-footer-item">Aug 28, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited to share a new perspective on <a href="https://go.shr.lc/4g0KpLV">Graph Artificial Intelligence in Medicine</a> in Annual Reviews.</p>
+</p>-->
+            <p>Excited to share a new perspective on <a href="https://go.shr.lc/4g0KpLV">Graph Artificial Intelligence in Medicine</a> in Annual Reviews.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/08/28/GraphAI/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Aug 28, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/08/15/PINNACLENews/">How Proteins Behave in Context</a>-->
+        <p class="card-header-title">Aug 2024: &nbsp; <span class="has-text-primary">How Proteins Behave in Context</span></p>
+<!--        <p class="card-header-item">Aug 2024</p>-->
+<!--        <p class="card-footer-item">Aug 15, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p><a href="https://hms.harvard.edu/news/new-ai-tool-captures-how-proteins-behave-context">Harvard Medicine News</a> on our new AI tool that captures how proteins behave in context. <a href="https://kempnerinstitute.harvard.edu/research/deeper-learning/context-matters-for-foundation-models-in-biology/">Kempner Institute</a> on how context matters for foundation models in biology.</p>
+</p>-->
+            <p><a href="https://hms.harvard.edu/news/new-ai-tool-captures-how-proteins-behave-context">Harvard Medicine News</a> on our new AI tool that captures how proteins behave in context. <a href="https://kempnerinstitute.harvard.edu/research/deeper-learning/context-matters-for-foundation-models-in-biology/">Kempner Institute</a> on how context matters for foundation models in biology.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/08/15/PINNACLENews/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Aug 15, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
     
     <div class="column is-12">
         <div class="card">
@@ -569,244 +793,6 @@ Shanghua Gao, Teddy Koker, Owen Queen, Thomas Hartvigsen, Theodoros Tsiligkaridi
     </div>
 <!--    <footer class="card-footer">-->
 <!--        <p class="card-footer-item">Published: Mar 1, 2024</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2024/02/28/SPECTRA-model-generalizability/">SPECTRA - Generalizability of Molecular AI</a>-->
-        <p class="card-header-title">Feb 2024: &nbsp; <span class="has-text-primary">SPECTRA - Generalizability of Molecular AI</span></p>
-<!--        <p class="card-header-item">Feb 2024</p>-->
-<!--        <p class="card-footer-item">Feb 28, 2024</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p><a href="https://www.biorxiv.org/content/10.1101/2024.02.25.581982v1">SPECTRA is an approach for holistic evaluation of how AI models</a> generalize to new molecular datasets. <a href="https://zitniklab.hms.harvard.edu/projects/SPECTRA/">Project website.</a></p>
-</p>-->
-            <p><a href="https://www.biorxiv.org/content/10.1101/2024.02.25.581982v1">SPECTRA is an approach for holistic evaluation of how AI models</a> generalize to new molecular datasets. <a href="https://zitniklab.hms.harvard.edu/projects/SPECTRA/">Project website.</a></p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2024/02/28/SPECTRA-model-generalizability/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Feb 28, 2024</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2024/02/02/KanebFellowship/">Kaneb Fellowship Award</a>-->
-        <p class="card-header-title">Feb 2024: &nbsp; <span class="has-text-primary">Kaneb Fellowship Award</span></p>
-<!--        <p class="card-header-item">Feb 2024</p>-->
-<!--        <p class="card-footer-item">Feb 2, 2024</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>The lab receives the <a href="#">John and Virginia Kaneb Fellowship Award at Harvard Medical School</a> to enhance research progress in the lab.</p>
-
-</p>-->
-            <p>The lab receives the <a href="#">John and Virginia Kaneb Fellowship Award at Harvard Medical School</a> to enhance research progress in the lab.</p>
-
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2024/02/02/KanebFellowship/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Feb 2, 2024</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2024/02/02/NSFCAREER/">NSF CAREER Award</a>-->
-        <p class="card-header-title">Feb 2024: &nbsp; <span class="has-text-primary">NSF CAREER Award</span></p>
-<!--        <p class="card-header-item">Feb 2024</p>-->
-<!--        <p class="card-footer-item">Feb 2, 2024</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>The lab receives the <a href="#">NSF CAREER Award</a> for our research in geometric deep learning to facilitate algorithmic and scientific advances in therapeutics.</p>
-
-</p>-->
-            <p>The lab receives the <a href="#">NSF CAREER Award</a> for our research in geometric deep learning to facilitate algorithmic and scientific advances in therapeutics.</p>
-
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2024/02/02/NSFCAREER/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Feb 2, 2024</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2024/02/01/HMSDeansAI/">Dean’s Innovation Award in AI</a>-->
-        <p class="card-header-title">Feb 2024: &nbsp; <span class="has-text-primary">Dean’s Innovation Award in AI</span></p>
-<!--        <p class="card-header-item">Feb 2024</p>-->
-<!--        <p class="card-footer-item">Feb 1, 2024</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>The lab receives <a href="#">Dean’s Innovation Award for the Use of Artificial Intelligence in Research</a>. <a href="https://hms.harvard.edu/news/dean-announces-winners-inaugural-ai-grants">HMS News Story.</a></p>
-
-</p>-->
-            <p>The lab receives <a href="#">Dean’s Innovation Award for the Use of Artificial Intelligence in Research</a>. <a href="https://hms.harvard.edu/news/dean-announces-winners-inaugural-ai-grants">HMS News Story.</a></p>
-
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2024/02/01/HMSDeansAI/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Feb 1, 2024</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2024/01/25/MultimodalLearning/">AI's Prospects in Nature Machine Intelligence</a>-->
-        <p class="card-header-title">Jan 2024: &nbsp; <span class="has-text-primary">AI's Prospects in Nature Machine Intelligence</span></p>
-<!--        <p class="card-header-item">Jan 2024</p>-->
-<!--        <p class="card-footer-item">Jan 25, 2024</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>We discussed <a href="https://www.nature.com/articles/s42256-023-00784-5">AI’s 2024 prospects with Nature Machine Intelligence</a>, covering LLM progress, multimodal AI, multi-task agents, and how to bridge the digital divide across communities and world regions.</p>
-
-</p>-->
-            <p>We discussed <a href="https://www.nature.com/articles/s42256-023-00784-5">AI’s 2024 prospects with Nature Machine Intelligence</a>, covering LLM progress, multimodal AI, multi-task agents, and how to bridge the digital divide across communities and world regions.</p>
-
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2024/01/25/MultimodalLearning/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Jan 25, 2024</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2024/01/01/PDGrapher/">Combinatorial Therapeutic Perturbations</a>-->
-        <p class="card-header-title">Jan 2024: &nbsp; <span class="has-text-primary">Combinatorial Therapeutic Perturbations</span></p>
-<!--        <p class="card-header-item">Jan 2024</p>-->
-<!--        <p class="card-footer-item">Jan 1, 2024</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>New paper introducing <a href="https://www.biorxiv.org/content/10.1101/2024.01.03.573985">PDGrapher for combinatorial prediction of chemical and genetic perturbations</a> using causally-inspired neural networks.</p>
-
-</p>-->
-            <p>New paper introducing <a href="https://www.biorxiv.org/content/10.1101/2024.01.03.573985">PDGrapher for combinatorial prediction of chemical and genetic perturbations</a> using causally-inspired neural networks.</p>
-
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2024/01/01/PDGrapher/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Jan 1, 2024</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2023/11/23/OpenPositions/">Next Generation of Therapeutics Commons</a>-->
-        <p class="card-header-title">Nov 2023: &nbsp; <span class="has-text-primary">Next Generation of Therapeutics Commons</span></p>
-<!--        <p class="card-header-item">Nov 2023</p>-->
-<!--        <p class="card-footer-item">Nov 23, 2023</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>We are building the next generation of <a href="https://tdcommons.ai/">Therapeutics Commons</a>! We are seeking <a href="/postdoc-TDC/">outstanding fellows who will lead AI research to advance molecular drug design and clinical drug development.</a></p>
-
-</p>-->
-            <p>We are building the next generation of <a href="https://tdcommons.ai/">Therapeutics Commons</a>! We are seeking <a href="/postdoc-TDC/">outstanding fellows who will lead AI research to advance molecular drug design and clinical drug development.</a></p>
-
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2023/11/23/OpenPositions/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Nov 23, 2023</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2023/10/24/SBDD/">Structure-Based Drug Design</a>-->
-        <p class="card-header-title">Oct 2023: &nbsp; <span class="has-text-primary">Structure-Based Drug Design</span></p>
-<!--        <p class="card-header-item">Oct 2023</p>-->
-<!--        <p class="card-footer-item">Oct 24, 2023</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p><a href="https://arxiv.org/abs/2306.11768">Geometric deep learning has emerged as a valuable tool</a> for structure-based drug design, to generate and refine biomolecules by leveraging detailed three-dimensional geometric and molecular interaction information.</p>
-
-</p>-->
-            <p><a href="https://arxiv.org/abs/2306.11768">Geometric deep learning has emerged as a valuable tool</a> for structure-based drug design, to generate and refine biomolecules by leveraging detailed three-dimensional geometric and molecular interaction information.</p>
-
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2023/10/24/SBDD/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Oct 24, 2023</p>-->
 <!--    </footer>-->
 </div>
     </div>

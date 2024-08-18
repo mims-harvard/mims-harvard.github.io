@@ -49,7 +49,9 @@
         "bioRxiv": "https://www.biorxiv.org/content/10.1101/2023.07.18.549602",
         "Research Briefing in Nature Methods": "https://www.nature.com/articles/s41592-024-02342-2",
         "project website": "https://zitniklab.hms.harvard.edu/projects/PINNACLE/",
-        "code": "https://github.com/mims-harvard/PINNACLE"
+        "code": "https://github.com/mims-harvard/PINNACLE",
+        "Harvard Medicine News": "https://hms.harvard.edu/news/new-ai-tool-captures-how-proteins-behave-context",
+        "Kempner Institute": "https://kempnerinstitute.harvard.edu/research/deeper-learning/context-matters-for-foundation-models-in-biology/"
       }
     },
 
@@ -57,18 +59,22 @@
       "key": "submission23d",
       "author": ["Kexin Huang*", "Payal Chandak*", "Qianwen Wang", "Shreyas Havaldar", "Akhil Vaid", "Jure Leskovec", "Girish Nadkarni", "Benjamin S. Glicksberg", "Nils Gehlenborg", "Marinka Zitnik"],
       "title": "A Foundation Model for Clinician Centered Drug Repurposing",
-      "venue": "Nature Medicine (in press)",
+      "venue": "Nature Medicine",
       "year": "2024",
       "thumbnail": "subgnn20.png",
-      "pdf": "",
-      "url": "https://www.medrxiv.org/content/10.1101/2023.03.19.23287458",
+      "pdf": "https://www.nature.com/articles/s41591-024-03233-x",
+      "url": "https://www.nature.com/articles/s41591-024-03233-x",
       "type": "journal",
       "supp":
       {
         "medRxiv": "https://www.medrxiv.org/content/10.1101/2023.03.19.23287458",
         "code": "https://github.com/mims-harvard/TxGNN",
         "project website": "/projects/TxGNN",
-        "TxGNN Explorer": "http://txgnn.org"
+        "TxGNN Explorer": "http://txgnn.org",
+        "Harvard Gazette": "https://news.harvard.edu/gazette/story/2024/09/using-ai-to-repurpose-existing-drugs-for-treatment-of-rare-diseases/",
+        "Harvard Medicine News": "https://hms.harvard.edu/news/researchers-harness-ai-repurpose-existing-drugs-treatment-rare-diseases",
+        "Forbes": "https://www.forbes.com/sites/greglicholai/2024/09/26/ai-tool-speeds-drug-repurposing-and-its-free/",
+        "NVIDIA": "https://developer.nvidia.com/blog/ai-uses-zero-shot-learning-to-find-existing-drugs-for-treating-rare-diseases/"
       }
     },
 
@@ -76,11 +82,11 @@
       "key": "submission24f",
       "author": ["Shanghua Gao", "Ada Fang*", "Yepeng Huang*", "Valentina Giunchiglia*", "Ayush Noori*", "Jonathan Richard Schwarz", "Yasha Ektefaie", "Jovana Kondic", "Marinka Zitnik"],
       "title": "Empowering Biomedical Discovery with AI Agents",
-      "venue": "In Review",
+      "venue": "Cell",
       "year": "2024",
       "thumbnail": "AIAgents.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2404.02831",
+      "pdf": "https://www.cell.com/cell/fulltext/S0092-8674(24)01070-5",
+      "url": "https://www.cell.com/cell/fulltext/S0092-8674(24)01070-5",
       "type": "journal",
       "supp":
       {
@@ -110,12 +116,12 @@
      {
       "key": "submission24d",
       "author": ["Zaixi Zhang", "Wanxiang Shen", "Qi Liu", "Marinka Zitnik"],
-      "title": "PocketGen: Generating Full-Atom Ligand-Binding Protein Pockets",
-      "venue": "In Review",
+      "title": "Efficient Generation of Protein Pockets with PocketGen",
+      "venue": "Nature Machine Intelligence",
       "year": "2024",
       "thumbnail": "PocketGen.png",
-      "pdf": "",
-      "url": "https://www.biorxiv.org/content/10.1101/2024.02.25.581968",
+      "pdf": "https://www.nature.com/articles/s42256-024-00920-9",
+      "url": "https://www.nature.com/articles/s42256-024-00920-9",
       "type": "journal",
       "supp":
       {
@@ -129,7 +135,7 @@
       "key": "submission24c",
       "author": ["Yasha Ektefaie", "Andrew Shen", "Daria Bykova", "Maximillian Marin", "Marinka Zitnik*", "Maha R Farhat*"],
       "title": "Evaluating Generalizability of Artificial Intelligence Models for Molecular Datasets",
-      "venue": "In Review",
+      "venue": "Nature Machine Intelligence (in press)",
       "year": "2024",
       "thumbnail": "SPECTRA.png",
       "pdf": "",
@@ -144,10 +150,28 @@
     },
 
      {
+      "key": "submission24p",
+      "author": ["Xiaorui Su", "Yibo Wang", "Shanghua Gao", "Xiaolong Liu", "Valentina Giunchiglia", "Djork-Arné Clevert", "Marinka Zitnik"],
+      "title": "Knowledge Graph Based Agent for Complex, Knowledge-Intensive QA in Medicine",
+      "venue": "In Review",
+      "year": "2024",
+      "thumbnail": "KGARevion.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2410.04660",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2410.04660",
+        "project website": "https://zitniklab.hms.harvard.edu/projects/KGARevion",
+        "code": ""
+      }
+    },
+
+     {
       "key": "submission24e",
       "author": ["Shanghua Gao", "Teddy Koker", "Owen Queen", "Thomas Hartvigsen", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
-      "title": "UniTS: Building a Unified Time Series Model",
-      "venue": "In Review",
+      "title": "UniTS: A Unified Multi-Task Time Series Model",
+      "venue": "NeurIPS",
       "year": "2024",
       "thumbnail": "UniTS.png",
       "pdf": "",
@@ -157,7 +181,63 @@
       {
         "arXiv": "https://arxiv.org/abs/2403.00131",
         "project website": "https://zitniklab.hms.harvard.edu/projects/UniTS/",
-        "code": "https://github.com/mims-harvard/UniTS"
+        "code": "https://github.com/mims-harvard/UniTS",
+        "poster": "https://neurips.cc/virtual/2024/poster/93709"
+      }
+    },
+
+     {
+      "key": "submission24n",
+      "author": ["Zaixi Zhang", "Marinka Zitnik*", "Qi Liu*"],
+      "title": "Generalized Protein Pocket Generation with Prior-Informed Flow Matching",
+      "venue": "NeurIPS",
+      "year": "2024",
+      "thumbnail": "PocketFlow.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2409.19520",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2409.19520",
+        "project website": "https://zitniklab.hms.harvard.edu/projects/PocketFlow",
+        "code": "https://github.com/zaixizhang/PocketFlow",
+        "NeurIPS Spotlight": "https://neurips.cc/virtual/2024/poster/94801"
+      }
+    },
+
+     {
+      "key": "submission24o",
+      "author": ["Keqiang Yan", "Xiner Li", "Hongyi Ling", "Kenna Ashen", "Carl Edwards", "Raymundo Arroyave", "Marinka Zitnik", "Heng Ji", "Xiaofeng Qian", "Xiaoning Qian", "Shuiwang Ji"],
+      "title": "Invariant Tokenization for Language Model Enabled Crystal Materials Generation",
+      "venue": "NeurIPS",
+      "year": "2024",
+      "thumbnail": "UniTS.png",
+      "pdf": "",
+      "url": "",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "",
+        "project website": "",
+        "code": "",
+        "poster": "https://nips.cc/virtual/2024/poster/96883"
+      }
+    },
+
+     {
+      "key": "submission24s",
+      "author": ["Wanxiang Shen", "Chao Cui", "Xiaorui Su", "Zaixi Zhang", "Alejandro Velez-Arce", "Jianming Wang", "Xiangcheng Shi", "Yanbing Zhang", "Jie Wu", "Yu Zong Chen", "Marinka Zitnik"],
+      "title": "Activity Cliff-Informed Contrastive Learning for Molecular Property Prediction",
+      "venue": "In Review",
+      "year": "2024",
+      "thumbnail": "MoExtend.png",
+      "pdf": "",
+      "url": "https://chemrxiv.org/engage/chemrxiv/article-details/6470c963be16ad5c57f5526c",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://chemrxiv.org/engage/chemrxiv/article-details/6470c963be16ad5c57f5526c",
+        "code": "https://github.com/shenwanxiang/ACANet"
       }
     },
 
@@ -183,10 +263,10 @@
       "key": "submission23j",
       "author": ["Ruth Johnson", "Michelle M. Li", "Ayush Noori", "Owen Queen", "Marinka Zitnik"],
       "title": "Graph Artificial Intelligence in Medicine",
-      "venue": "Annual Review of Biomedical Data Science (in press)",
+      "venue": "Annual Review of Biomedical Data Science",
       "year": "2024",
       "thumbnail": "GraphAIMedicine23.png",
-      "pdf": "",
+      "pdf": "papers/graphAIMedicine24.pdf",
       "url": "https://www.annualreviews.org/content/journals/10.1146/annurev-biodatasci-110723-024625",
       "type": "journal",
       "supp":
@@ -311,6 +391,23 @@
     },
 
      {
+      "key": "submission24r",
+      "author": ["Shanshan Zhong", "Shanghua Gao", "Zhongzhan Huang", "Wushao Wen", "Marinka Zitnik", "Pan Zhou"],
+      "title": "MoExtend: Tuning New Experts for Modality and Task Extension",
+      "venue": "ACL",
+      "year": "2024",
+      "thumbnail": "MoExtend.png",
+      "pdf": "https://aclanthology.org/2024.acl-srw.8.pdf",
+      "url": "https://aclanthology.org/2024.acl-srw.8.pdf",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2408.03511",
+        "code": "https://github.com/zhongshsh/MoExtend"
+      }
+    },
+
+     {
       "key": "submission23k",
       "author": ["Zaixi Zhang", "Jiaxian Yan", "Qi Liu", "Enhong Chen", "Marinka Zitnik"],
       "title": "Geometric Deep Learning for Structure-Based Drug Design: A Survey",
@@ -342,6 +439,39 @@
         "arXiv": "https://arxiv.org/abs/2312.02439",
         "code": "https://github.com/sail-sg/CLoT",
         "project website": "https://zhongshsh.github.io/CLoT/"
+      }
+    },
+
+     {
+      "key": "submission23h",
+      "author": ["Marinka Zitnik*", "Michelle M. Li*", "Aydin Wells*", "Kimberly Glass", "Deisy Morselli Gysi", "Arjun Krishnan", "T. M. Murali", "Predrag Radivojac", "Sushmita Roy", "Anaïs Baudot", "Serdar Bozdag", "Danny Z. Chen", "Lenore Cowen", "Kapil Devkota", "Anthony Gitter", "Sara Gosline", "Pengfei Gu", "Pietro H. Guzzi", "Heng Huang", "Meng Jiang", "Ziynet Nesibe Kesimoglu", "Mehmet Koyuturk", "Jian Ma", "Alexander R. Pico", "Natasa Przulj", "Teresa M. Przytycka", "Benjamin J. Raphael", "Anna Ritz", "Roded Sharan", "Yang Shen", "Mona Singh", "Donna K. Slonim", "Hanghang Tong", "Xinan Holly Yang", "Byung-Jun Yoon", "Haiyuan Yu", "Tijana Milenkovic"],
+      "title": "Current and Future Directions in Network Biology",
+      "venue": "Bioinformatics Advances",
+      "year": "2024",
+      "thumbnail": "Future-NetBio.png",
+      "pdf": "https://academic.oup.com/bioinformaticsadvances/article/4/1/vbae099/7732851",
+      "url": "https://academic.oup.com/bioinformaticsadvances/article/4/1/vbae099/7732851",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2309.08478"
+      }
+    },
+
+
+     {
+      "key": "submission24m",
+      "author": ["Leonid Komissarov", "Nenad Manevski", "Katrin Groebke Zbinden", "Torsten Schindler", "Marinka Zitnik", "Lisa Sach-Peltason"],
+      "title": "Actionable Predictions of Human Pharmacokinetics at the Drug Design Stage",
+      "venue": "Molecular Pharmaceutics",
+      "year": "2024",
+      "thumbnail": "pharmacokinetics24.png",
+      "pdf": "https://pubs.acs.org/doi/abs/10.1021/acs.molpharmaceut.4c00311",
+      "url": "https://pubs.acs.org/doi/abs/10.1021/acs.molpharmaceut.4c00311",
+      "type": "journal",
+      "supp":
+      {
+        "chemrXiv": "https://chemrxiv.org/engage/chemrxiv/article-details/65e5cb489138d23161a40164"
       }
     },
 
@@ -415,22 +545,6 @@
         "arXiv": "https://arxiv.org/abs/2310.02553",
         "code": "https://github.com/zaixizhang/FAIR",
         "NeurIPS Spotlight [Top 3%]": "https://neurips.cc/virtual/2023/papers.html?filter=titles"
-      }
-    },
-
-     {
-      "key": "submission23h",
-      "author": ["Marinka Zitnik*", "Michelle M. Li*", "Aydin Wells*", "Kimberly Glass", "Deisy Morselli Gysi", "Arjun Krishnan", "T. M. Murali", "Predrag Radivojac", "Sushmita Roy", "Anaïs Baudot", "Serdar Bozdag", "Danny Z. Chen", "Lenore Cowen", "Kapil Devkota", "Anthony Gitter", "Sara Gosline", "Pengfei Gu", "Pietro H. Guzzi", "Heng Huang", "Meng Jiang", "Ziynet Nesibe Kesimoglu", "Mehmet Koyuturk", "Jian Ma", "Alexander R. Pico", "Natasa Przulj", "Teresa M. Przytycka", "Benjamin J. Raphael", "Anna Ritz", "Roded Sharan", "Yang Shen", "Mona Singh", "Donna K. Slonim", "Hanghang Tong", "Xinan Holly Yang", "Byung-Jun Yoon", "Haiyuan Yu", "Tijana Milenkovic"],
-      "title": "Current and Future Directions in Network Biology",
-      "venue": "In Review",
-      "year": "2024",
-      "thumbnail": "Future-NetBio.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2309.08478",
-      "type": "journal",
-      "supp":
-      {
-        "arXiv": "https://arxiv.org/abs/2309.08478"
       }
     },
 

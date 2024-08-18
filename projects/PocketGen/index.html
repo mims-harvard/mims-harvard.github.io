@@ -4,16 +4,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PocketGen &#58; Generating Full-Atom Ligand-Binding Protein Pockets - Zitnik Lab</title>
+    <title>Efficient Generation of Protein Pockets with PocketGen - Zitnik Lab</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="shortcut icon" type="image/png"
            href="/favicon.png" 
     />
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>PocketGen : Generating Full-Atom Ligand-Binding Protein Pockets | Zitnik Lab</title>
+<title>Efficient Generation of Protein Pockets with PocketGen | Zitnik Lab</title>
 <meta name="generator" content="Jekyll v3.8.6" />
-<meta property="og:title" content="PocketGen : Generating Full-Atom Ligand-Binding Protein Pockets" />
+<meta property="og:title" content="Efficient Generation of Protein Pockets with PocketGen" />
 <meta name="author" content="Marinka Zitnik" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Protein design, geometric deep learning, generative models" />
@@ -22,11 +22,11 @@
 <meta property="og:url" content="https://zitniklab.hms.harvard.edu/projects/PocketGen/" />
 <meta property="og:site_name" content="Zitnik Lab" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="PocketGen : Generating Full-Atom Ligand-Binding Protein Pockets" />
+<meta property="twitter:title" content="Efficient Generation of Protein Pockets with PocketGen" />
 <meta name="twitter:site" content="@marinkazitnik" />
 <meta name="twitter:creator" content="@Marinka Zitnik" />
 <script type="application/ld+json">
-{"url":"https://zitniklab.hms.harvard.edu/projects/PocketGen/","author":{"@type":"Person","name":"Marinka Zitnik"},"headline":"PocketGen : Generating Full-Atom Ligand-Binding Protein Pockets","description":"Protein design, geometric deep learning, generative models","@type":"WebPage","@context":"https://schema.org"}</script>
+{"url":"https://zitniklab.hms.harvard.edu/projects/PocketGen/","author":{"@type":"Person","name":"Marinka Zitnik"},"headline":"Efficient Generation of Protein Pockets with PocketGen","description":"Protein design, geometric deep learning, generative models","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
 <script>
@@ -121,7 +121,7 @@
         <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
     <div class="hero-body">
         <div class="container">
-            <p class="title is-2">PocketGen &#58; Generating Full-Atom Ligand-Binding Protein Pockets</p>
+            <p class="title is-2">Efficient Generation of Protein Pockets with PocketGen</p>
             <p class="subtitle is-3"></p>
             
         </div>
@@ -143,15 +143,15 @@
     <div class="box has-background-info has-text-white">
 
 <p>
-Designing small-molecule-binding proteins, such as enzymes and biosensors, is crucial in protein biology and bioengineering. Generating the protein pocket—the area where the protein interacts with the ligand molecule—presents challenges due to the interactions between ligand molecules and proteins, the flexibility of ligand molecules, the chemistry of amino acid side chains, and multimodal sequence-structure dependencies.
+Designing ligand-binding proteins is critical for drug discovery. However, the AI-based design of such proteins is challenging due to the complexity of ligand-protein interactions, the flexibility of ligand molecules and amino acid side chains, and sequence-structure dependencies. 
 </p>
 
 <p>
-We introduce PocketGen, a deep generative method for generating the residue sequence and the full-atom structure within the protein pocket region that leverages sequence-structure consistency. PocketGen consists of a bilevel graph transformer for structural encoding and a sequence refinement module that uses a protein language model (pLM) for sequence prediction. The bilevel graph transformer captures interactions at multiple granularities (atom-level and residue/ligand-level) and aspects (intra-protein and protein-ligand) with bilevel attention mechanisms.
+We introduce PocketGen, a deep generative model that simultaneously produces both the residue sequence and atomic structure of the protein regions where ligand interactions occur. PocketGen ensures consistency between sequence and structure by using a graph transformer for structural encoding and a sequence refinement module based on a protein language model. The bilevel graph transformer captures interactions at multiple scales, including atom, residue, and ligand levels. To enhance sequence refinement, PocketGen integrates a structural adapter into the protein language model, ensuring that structure-based predictions align with sequence-based predictions. 
 </p>
 
 <p>
-Experiments and case studies indicate that PocketGen can efficiently generate protein pockets with higher binding affinity and validity than state-of-the-art methods. PocketGen is 10 times faster than physics-based methods and achieves a 95% success rate (the ratio of cases that generated pockets has higher binding affinity than the reference ones) with over 64% amino acid recovery rate on the Binding MOAD dataset.
+PocketGen can generate high-fidelity protein pockets with superior binding affinity and structural validity. It operates ten times faster than physics-based methods and achieves a 95% success rate, defined as the percentage of generated pockets with higher binding affinity than reference pockets. Additionally, it attains an amino acid recovery rate exceeding 64%.
 </p>
 </div>
 
@@ -199,15 +199,15 @@ Experiments and case studies indicate that PocketGen can efficiently generate pr
 
 <h2 id="publication">Publication</h2>
 
-<p><a href="https://www.biorxiv.org/content/10.1101/2024.02.25.581968">PocketGen: Generating Full-Atom Ligand-Binding Protein Pockets</a><br />
+<p><a href="https://www.nature.com/articles/s42256-024-00920-9">Efficient Generation of Protein Pockets with PocketGen</a><br />
 Zaixi Zhang, Wanxiang Shen, Qi Liu, Marinka Zitnik<br />
-<em>In Review</em> 2024 <a href="https://www.biorxiv.org/content/10.1101/2024.02.25.581968">[bioRxiv]</a></p>
+<em>Nature Machine Intelligence</em> 2024 <a href="https://www.biorxiv.org/content/10.1101/2024.02.25.581968">[bioRxiv]</a></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{zhang2024pocketgen,
-  title={PocketGen: Generating Full-Atom Ligand-Binding Protein Pockets},
+  title={Efficient Generation of Protein Pockets with PocketGen},
   author={Zhang, Zaixi and Shen, Wanxiang and Liu, Qi and Zitnik, Marinka},
-  journal={bioRxiv},
-  url={https://www.biorxiv.org/content/10.1101/2024.02.25.581968},
+  journal={Nature Machine Intelligence},
+  url={https://www.nature.com/articles/s42256-024-00920-9},
   year={2024}
 }
 </code></pre></div></div>
@@ -232,6 +232,230 @@ Zaixi Zhang, Wanxiang Shen, Qi Liu, Marinka Zitnik<br />
                     <p class="title is-4">Latest News</p>
 
 <div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/11/15/PocketGen/">PocketGen in Nature Machine Intelligence</a>-->
+        <p class="card-header-title">Nov 2024: &nbsp; <span class="has-text-primary">PocketGen in Nature Machine Intelligence</span></p>
+<!--        <p class="card-header-item">Nov 2024</p>-->
+<!--        <p class="card-footer-item">Nov 15, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>PocketGen is a <a href="https://www.nature.com/articles/s42256-024-00920-9">multimodal sequence-structure generative model for designing full-atom ligand-binding protein pockets.</a></p>
+</p>-->
+            <p>PocketGen is a <a href="https://www.nature.com/articles/s42256-024-00920-9">multimodal sequence-structure generative model for designing full-atom ligand-binding protein pockets.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/11/15/PocketGen/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Nov 15, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/11/01/AIScientist/">Biomedical AI Agents in Cell</a>-->
+        <p class="card-header-title">Nov 2024: &nbsp; <span class="has-text-primary">Biomedical AI Agents in Cell</span></p>
+<!--        <p class="card-header-item">Nov 2024</p>-->
+<!--        <p class="card-footer-item">Nov 1, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>We envision “AI scientists” as <a href="https://www.cell.com/cell/fulltext/S0092-8674(24)01070-5">AI agents capable of skeptical learning and reasoning that empower biomedical research by integrating ML models and biomedical tools with experimental platforms.</a></p>
+</p>-->
+            <p>We envision “AI scientists” as <a href="https://www.cell.com/cell/fulltext/S0092-8674(24)01070-5">AI agents capable of skeptical learning and reasoning that empower biomedical research by integrating ML models and biomedical tools with experimental platforms.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/11/01/AIScientist/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Nov 1, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/10/19/ACAnet/">Activity Cliffs in Molecular Property Prediction</a>-->
+        <p class="card-header-title">Oct 2024: &nbsp; <span class="has-text-primary">Activity Cliffs in Molecular Property Prediction</span></p>
+<!--        <p class="card-header-item">Oct 2024</p>-->
+<!--        <p class="card-footer-item">Oct 19, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper on <a href="https://chemrxiv.org/engage/chemrxiv/article-details/6470c963be16ad5c57f5526c">activity-cliff informed contrastive learning for molecular property prediction.</a></p>
+</p>-->
+            <p>New paper on <a href="https://chemrxiv.org/engage/chemrxiv/article-details/6470c963be16ad5c57f5526c">activity-cliff informed contrastive learning for molecular property prediction.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/10/19/ACAnet/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Oct 19, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/10/09/KGARevion/">Knowledge Graph Agent for Medical Reasoning</a>-->
+        <p class="card-header-title">Oct 2024: &nbsp; <span class="has-text-primary">Knowledge Graph Agent for Medical Reasoning</span></p>
+<!--        <p class="card-header-item">Oct 2024</p>-->
+<!--        <p class="card-footer-item">Oct 9, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper introducing a <a href="https://arxiv.org/abs/2410.04660">knowledge graph agent for complex, knowledge-intensive medical reasoning.</a></p>
+</p>-->
+            <p>New paper introducing a <a href="https://arxiv.org/abs/2410.04660">knowledge graph agent for complex, knowledge-intensive medical reasoning.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/10/09/KGARevion/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Oct 9, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/09/27/NeurIPS2024Papers/">Three Papers Accepted to NeurIPS</a>-->
+        <p class="card-header-title">Sep 2024: &nbsp; <span class="has-text-primary">Three Papers Accepted to NeurIPS</span></p>
+<!--        <p class="card-header-item">Sep 2024</p>-->
+<!--        <p class="card-footer-item">Sep 27, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Exciting projects include a unified multi-task time series model, a flow-matching approach for generating protein pockets using geometric priors, and a tokenization method that produces invariant molecular representations for integration into large language models.</p>
+</p>-->
+            <p>Exciting projects include a unified multi-task time series model, a flow-matching approach for generating protein pockets using geometric priors, and a tokenization method that produces invariant molecular representations for integration into large language models.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/09/27/NeurIPS2024Papers/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 27, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/09/25/TxGNNNatureMedicine/">TxGNN Published in Nature Medicine</a>-->
+        <p class="card-header-title">Sep 2024: &nbsp; <span class="has-text-primary">TxGNN Published in Nature Medicine</span></p>
+<!--        <p class="card-header-item">Sep 2024</p>-->
+<!--        <p class="card-footer-item">Sep 25, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Graph foundation model for drug repurposing published in <a href="https://www.nature.com/articles/s41591-024-03233-x">Nature Medicine</a>. <a href="https://news.harvard.edu/gazette/story/2024/09/using-ai-to-repurpose-existing-drugs-for-treatment-of-rare-diseases/">[Harvard Gazette]</a> <a href="https://hms.harvard.edu/news/researchers-harness-ai-repurpose-existing-drugs-treatment-rare-diseases">[Harvard Medicine News]</a> <a href="https://www.forbes.com/sites/greglicholai/2024/09/26/ai-tool-speeds-drug-repurposing-and-its-free/">[Forbes]</a> <a href="https://developer.nvidia.com/blog/ai-uses-zero-shot-learning-to-find-existing-drugs-for-treating-rare-diseases/">[NVIDIA]</a></p>
+</p>-->
+            <p>Graph foundation model for drug repurposing published in <a href="https://www.nature.com/articles/s41591-024-03233-x">Nature Medicine</a>. <a href="https://news.harvard.edu/gazette/story/2024/09/using-ai-to-repurpose-existing-drugs-for-treatment-of-rare-diseases/">[Harvard Gazette]</a> <a href="https://hms.harvard.edu/news/researchers-harness-ai-repurpose-existing-drugs-treatment-rare-diseases">[Harvard Medicine News]</a> <a href="https://www.forbes.com/sites/greglicholai/2024/09/26/ai-tool-speeds-drug-repurposing-and-its-free/">[Forbes]</a> <a href="https://developer.nvidia.com/blog/ai-uses-zero-shot-learning-to-find-existing-drugs-for-treating-rare-diseases/">[NVIDIA]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/09/25/TxGNNNatureMedicine/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 25, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/08/28/GraphAI/">Graph AI in Medicine</a>-->
+        <p class="card-header-title">Aug 2024: &nbsp; <span class="has-text-primary">Graph AI in Medicine</span></p>
+<!--        <p class="card-header-item">Aug 2024</p>-->
+<!--        <p class="card-footer-item">Aug 28, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited to share a new perspective on <a href="https://go.shr.lc/4g0KpLV">Graph Artificial Intelligence in Medicine</a> in Annual Reviews.</p>
+</p>-->
+            <p>Excited to share a new perspective on <a href="https://go.shr.lc/4g0KpLV">Graph Artificial Intelligence in Medicine</a> in Annual Reviews.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/08/28/GraphAI/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Aug 28, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/08/15/PINNACLENews/">How Proteins Behave in Context</a>-->
+        <p class="card-header-title">Aug 2024: &nbsp; <span class="has-text-primary">How Proteins Behave in Context</span></p>
+<!--        <p class="card-header-item">Aug 2024</p>-->
+<!--        <p class="card-footer-item">Aug 15, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p><a href="https://hms.harvard.edu/news/new-ai-tool-captures-how-proteins-behave-context">Harvard Medicine News</a> on our new AI tool that captures how proteins behave in context. <a href="https://kempnerinstitute.harvard.edu/research/deeper-learning/context-matters-for-foundation-models-in-biology/">Kempner Institute</a> on how context matters for foundation models in biology.</p>
+</p>-->
+            <p><a href="https://hms.harvard.edu/news/new-ai-tool-captures-how-proteins-behave-context">Harvard Medicine News</a> on our new AI tool that captures how proteins behave in context. <a href="https://kempnerinstitute.harvard.edu/research/deeper-learning/context-matters-for-foundation-models-in-biology/">Kempner Institute</a> on how context matters for foundation models in biology.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/08/15/PINNACLENews/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Aug 15, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
     
     <div class="column is-12">
         <div class="card">
@@ -565,244 +789,6 @@ Zaixi Zhang, Wanxiang Shen, Qi Liu, Marinka Zitnik<br />
     </div>
 <!--    <footer class="card-footer">-->
 <!--        <p class="card-footer-item">Published: Mar 1, 2024</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2024/02/28/SPECTRA-model-generalizability/">SPECTRA - Generalizability of Molecular AI</a>-->
-        <p class="card-header-title">Feb 2024: &nbsp; <span class="has-text-primary">SPECTRA - Generalizability of Molecular AI</span></p>
-<!--        <p class="card-header-item">Feb 2024</p>-->
-<!--        <p class="card-footer-item">Feb 28, 2024</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p><a href="https://www.biorxiv.org/content/10.1101/2024.02.25.581982v1">SPECTRA is an approach for holistic evaluation of how AI models</a> generalize to new molecular datasets. <a href="https://zitniklab.hms.harvard.edu/projects/SPECTRA/">Project website.</a></p>
-</p>-->
-            <p><a href="https://www.biorxiv.org/content/10.1101/2024.02.25.581982v1">SPECTRA is an approach for holistic evaluation of how AI models</a> generalize to new molecular datasets. <a href="https://zitniklab.hms.harvard.edu/projects/SPECTRA/">Project website.</a></p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2024/02/28/SPECTRA-model-generalizability/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Feb 28, 2024</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2024/02/02/KanebFellowship/">Kaneb Fellowship Award</a>-->
-        <p class="card-header-title">Feb 2024: &nbsp; <span class="has-text-primary">Kaneb Fellowship Award</span></p>
-<!--        <p class="card-header-item">Feb 2024</p>-->
-<!--        <p class="card-footer-item">Feb 2, 2024</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>The lab receives the <a href="#">John and Virginia Kaneb Fellowship Award at Harvard Medical School</a> to enhance research progress in the lab.</p>
-
-</p>-->
-            <p>The lab receives the <a href="#">John and Virginia Kaneb Fellowship Award at Harvard Medical School</a> to enhance research progress in the lab.</p>
-
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2024/02/02/KanebFellowship/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Feb 2, 2024</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2024/02/02/NSFCAREER/">NSF CAREER Award</a>-->
-        <p class="card-header-title">Feb 2024: &nbsp; <span class="has-text-primary">NSF CAREER Award</span></p>
-<!--        <p class="card-header-item">Feb 2024</p>-->
-<!--        <p class="card-footer-item">Feb 2, 2024</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>The lab receives the <a href="#">NSF CAREER Award</a> for our research in geometric deep learning to facilitate algorithmic and scientific advances in therapeutics.</p>
-
-</p>-->
-            <p>The lab receives the <a href="#">NSF CAREER Award</a> for our research in geometric deep learning to facilitate algorithmic and scientific advances in therapeutics.</p>
-
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2024/02/02/NSFCAREER/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Feb 2, 2024</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2024/02/01/HMSDeansAI/">Dean’s Innovation Award in AI</a>-->
-        <p class="card-header-title">Feb 2024: &nbsp; <span class="has-text-primary">Dean’s Innovation Award in AI</span></p>
-<!--        <p class="card-header-item">Feb 2024</p>-->
-<!--        <p class="card-footer-item">Feb 1, 2024</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>The lab receives <a href="#">Dean’s Innovation Award for the Use of Artificial Intelligence in Research</a>. <a href="https://hms.harvard.edu/news/dean-announces-winners-inaugural-ai-grants">HMS News Story.</a></p>
-
-</p>-->
-            <p>The lab receives <a href="#">Dean’s Innovation Award for the Use of Artificial Intelligence in Research</a>. <a href="https://hms.harvard.edu/news/dean-announces-winners-inaugural-ai-grants">HMS News Story.</a></p>
-
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2024/02/01/HMSDeansAI/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Feb 1, 2024</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2024/01/25/MultimodalLearning/">AI's Prospects in Nature Machine Intelligence</a>-->
-        <p class="card-header-title">Jan 2024: &nbsp; <span class="has-text-primary">AI's Prospects in Nature Machine Intelligence</span></p>
-<!--        <p class="card-header-item">Jan 2024</p>-->
-<!--        <p class="card-footer-item">Jan 25, 2024</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>We discussed <a href="https://www.nature.com/articles/s42256-023-00784-5">AI’s 2024 prospects with Nature Machine Intelligence</a>, covering LLM progress, multimodal AI, multi-task agents, and how to bridge the digital divide across communities and world regions.</p>
-
-</p>-->
-            <p>We discussed <a href="https://www.nature.com/articles/s42256-023-00784-5">AI’s 2024 prospects with Nature Machine Intelligence</a>, covering LLM progress, multimodal AI, multi-task agents, and how to bridge the digital divide across communities and world regions.</p>
-
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2024/01/25/MultimodalLearning/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Jan 25, 2024</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2024/01/01/PDGrapher/">Combinatorial Therapeutic Perturbations</a>-->
-        <p class="card-header-title">Jan 2024: &nbsp; <span class="has-text-primary">Combinatorial Therapeutic Perturbations</span></p>
-<!--        <p class="card-header-item">Jan 2024</p>-->
-<!--        <p class="card-footer-item">Jan 1, 2024</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>New paper introducing <a href="https://www.biorxiv.org/content/10.1101/2024.01.03.573985">PDGrapher for combinatorial prediction of chemical and genetic perturbations</a> using causally-inspired neural networks.</p>
-
-</p>-->
-            <p>New paper introducing <a href="https://www.biorxiv.org/content/10.1101/2024.01.03.573985">PDGrapher for combinatorial prediction of chemical and genetic perturbations</a> using causally-inspired neural networks.</p>
-
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2024/01/01/PDGrapher/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Jan 1, 2024</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2023/11/23/OpenPositions/">Next Generation of Therapeutics Commons</a>-->
-        <p class="card-header-title">Nov 2023: &nbsp; <span class="has-text-primary">Next Generation of Therapeutics Commons</span></p>
-<!--        <p class="card-header-item">Nov 2023</p>-->
-<!--        <p class="card-footer-item">Nov 23, 2023</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>We are building the next generation of <a href="https://tdcommons.ai/">Therapeutics Commons</a>! We are seeking <a href="/postdoc-TDC/">outstanding fellows who will lead AI research to advance molecular drug design and clinical drug development.</a></p>
-
-</p>-->
-            <p>We are building the next generation of <a href="https://tdcommons.ai/">Therapeutics Commons</a>! We are seeking <a href="/postdoc-TDC/">outstanding fellows who will lead AI research to advance molecular drug design and clinical drug development.</a></p>
-
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2023/11/23/OpenPositions/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Nov 23, 2023</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2023/10/24/SBDD/">Structure-Based Drug Design</a>-->
-        <p class="card-header-title">Oct 2023: &nbsp; <span class="has-text-primary">Structure-Based Drug Design</span></p>
-<!--        <p class="card-header-item">Oct 2023</p>-->
-<!--        <p class="card-footer-item">Oct 24, 2023</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p><a href="https://arxiv.org/abs/2306.11768">Geometric deep learning has emerged as a valuable tool</a> for structure-based drug design, to generate and refine biomolecules by leveraging detailed three-dimensional geometric and molecular interaction information.</p>
-
-</p>-->
-            <p><a href="https://arxiv.org/abs/2306.11768">Geometric deep learning has emerged as a valuable tool</a> for structure-based drug design, to generate and refine biomolecules by leveraging detailed three-dimensional geometric and molecular interaction information.</p>
-
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2023/10/24/SBDD/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Oct 24, 2023</p>-->
 <!--    </footer>-->
 </div>
     </div>
