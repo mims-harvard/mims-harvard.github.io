@@ -4,29 +4,29 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Research Directions - Zitnik Lab</title>
+    <title>Unified Clinical Vocabulary Embeddings for Advancing Precision Medicine - Zitnik Lab</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="shortcut icon" type="image/png"
            href="/favicon.png" 
     />
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Research Directions | Zitnik Lab</title>
+<title>Unified Clinical Vocabulary Embeddings for Advancing Precision Medicine | Zitnik Lab</title>
 <meta name="generator" content="Jekyll v3.8.6" />
-<meta property="og:title" content="Research Directions" />
+<meta property="og:title" content="Unified Clinical Vocabulary Embeddings for Advancing Precision Medicine" />
 <meta name="author" content="Marinka Zitnik" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Artificial Intelligence (AI), Machine Learning, Medicine, Science, and Drug Discovery at Harvard" />
-<meta property="og:description" content="Artificial Intelligence (AI), Machine Learning, Medicine, Science, and Drug Discovery at Harvard" />
-<link rel="canonical" href="https://zitniklab.hms.harvard.edu/research/" />
-<meta property="og:url" content="https://zitniklab.hms.harvard.edu/research/" />
+<meta name="description" content="drug combinations, LLM, safety modeling, therapeutics" />
+<meta property="og:description" content="drug combinations, LLM, safety modeling, therapeutics" />
+<link rel="canonical" href="https://zitniklab.hms.harvard.edu/projects/Clinical-knowledge-embeddings/" />
+<meta property="og:url" content="https://zitniklab.hms.harvard.edu/projects/Clinical-knowledge-embeddings/" />
 <meta property="og:site_name" content="Zitnik Lab" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Research Directions" />
+<meta property="twitter:title" content="Unified Clinical Vocabulary Embeddings for Advancing Precision Medicine" />
 <meta name="twitter:site" content="@marinkazitnik" />
 <meta name="twitter:creator" content="@Marinka Zitnik" />
 <script type="application/ld+json">
-{"url":"https://zitniklab.hms.harvard.edu/research/","author":{"@type":"Person","name":"Marinka Zitnik"},"headline":"Research Directions","description":"Artificial Intelligence (AI), Machine Learning, Medicine, Science, and Drug Discovery at Harvard","@type":"WebPage","@context":"https://schema.org"}</script>
+{"url":"https://zitniklab.hms.harvard.edu/projects/Clinical-knowledge-embeddings/","author":{"@type":"Person","name":"Marinka Zitnik"},"headline":"Unified Clinical Vocabulary Embeddings for Advancing Precision Medicine","description":"drug combinations, LLM, safety modeling, therapeutics","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
 <script>
@@ -72,7 +72,7 @@
                     
                 
                     
-                <a href="/research/" class="navbar-item is-active"><b>Research</b></a>
+                <a href="/research/" class="navbar-item "><b>Research</b></a>
                     
                 
                     
@@ -121,7 +121,7 @@
         <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
     <div class="hero-body">
         <div class="container">
-            <p class="title is-2">Research Directions</p>
+            <p class="title is-2">Unified Clinical Vocabulary Embeddings for Advancing Precision Medicine</p>
             <p class="subtitle is-3"></p>
             
         </div>
@@ -140,190 +140,109 @@
                     
                     
 <div class="content">
-    <h2 id="large-pretrained-ai-multimodal-knowledge-graph-and-biological-language-models">Large Pretrained AI: Multimodal Knowledge Graph and Biological Language Models</h2>
+    <div class="box has-background-info has-text-white">
 
-<p>The widespread use of AI in medicine and science requires us to incorporate increasingly complex descriptors, constraints, and causal structures into ML models. To achieve deeper reasoning, we must model knowledge in the form of compact mathematical statements of physical relationships, knowledge graphs, prior distributions, and other complex rationales. For example, human experts use knowledge about tasks, such as understanding the laws of chemical biology or molecular binding, to navigate these tasks seamlessly.</p>
-
-<p>We develop techniques to incorporate such inductive biases (the assumptions that algorithms use to make predictions for inputs they have not encountered during training) into AI models. The resulting foundational models trained on broad data at scale can be adapted to a wide range of downstream tasks and can handle multiple modalities, such as molecular structures and biological sequences.</p>
-
-<p>We are also developing techniques for self-supervised learning, particularly neural nets that can identify essential, compact features useful to solve many tasks simultaneously without relying on predefined labels. For example, pretraining large models on unlabeled data can transfer concepts learned in one domain to a different domain, even when no labels in the target domain are available. This strategy allows us to train neural nets on a large scale and to process different downstream tasks using shared parameters. These models can achieve competitive performance on pretraining tasks and perform zero-shot inference on novel tasks without introducing additional parameters.</p>
-
-<p>We are looking to transfer the prediction prowess of these models from one data type to another and design contextually adaptive AI that can extrapolate to new tasks and situations, such as new molecular scaffolds, new cell types, and new clinical diseases.</p>
-
-<div align="center">
-<img style="margin-top:20px;margin-bottom:20px;width:100%" src="/img/research-KG-LM.png" />
+<p>
+Integrating clinical knowledge into AI remains challenging despite standardized medical protocols and vocabularies. Medical codes, central to healthcare systems, often reflect operational patterns shaped by geographic factors, national policies, insurance frameworks, and physician practices rather than the precise representation of clinical knowledge. This disconnect hampers AI in representing clinical relationships, raising concerns about bias, transparency, and generalizability. 
+</p>
+<p>
+Here, we developed a resource of 67,124 clinical vocabulary embeddings derived from a clinical knowledge graph tailored to electronic health record vocabularies, spanning over 1.3 million edges. Using graph transformer neural networks, we generated clinical vocabulary embeddings that provide a new representation of clinical knowledge unified across seven medical vocabularies. We validated these embeddings through a phenotype risk score analysis involving 4.57 million patients from Clalit Healthcare Services, demonstrating their ability to stratify individuals by survival outcomes. Inter-institutional panels of clinicians evaluated the alignment of embedding with established clinical knowledge across 90 diseases and 3,000 clinical codes, confirming their robustness and transferability. 
+</p>
+<p>
+This resource addresses the gap in integrating clinical vocabularies in AI models and training datasets and supports population and patient modelsin precision medicine.
+</p>
 </div>
 
-<h4 id="perspectives">Perspectives:</h4>
+<h2 id="introduction">Introduction</h2>
 
-<p><a href="https://www.cell.com/cell/fulltext/S0092-8674(24)01070-5">Empowering Biomedical Discovery with AI Agents</a><br />
-<a href="https://www.nature.com/articles/s41586-023-06221-2">Scientific Discovery in the Age of Artificial Intelligence</a><br /></p>
+<p>Medicine is grounded in centuries of medical knowledge and the pursuit of individualized patient care through meticulous reasoning and evidence-based practice. The extensive development of standardized vocabularies and ontologies in the medical field has fostered a unified representation of clinical information, enabling interoperability and data exchange across healthcare systems globally. These standardized coding systems provide a consistent framework for effectively representing clinical knowledge, forming the backbone of precision medicine initiatives. With the widespread adoption of electronic health records (EHRs) and the standardization of medical data, precision medicine has shifted toward large-scale, data-driven approaches that directly leverage structured EHR data. More than half of healthcare foundation models now rely exclusively on structured clinical codes, such as billing data and medication records.</p>
 
-<h4 id="example-related-publications">Example related publications:</h4>
+<p>We developed a resource that constructs embeddings for 67,124 medical codes, defining a unifying latent space of clinical knowledge. Using state-of-the-art relational graph transformers and a clinical knowledge graph, we created a cohesive, machine-readable map that captures relationships among seven clinical vocabularies, including laboratory tests, diagnosis codes, and medications, without requiring manual curation. By integrating verified knowledge bases and medical ontologies into a knowledge graph of standardized EHR codes, this resource reduces the risk of propagating inaccuracies while ensuring interpretability and transparency.</p>
 
-<p><a href="https://arxiv.org/abs/2410.04660">Knowledge Graph Based Agent for Complex, Knowledge-Intensive QA in Medicine</a><br />
-<a href="https://www.nature.com/articles/s42256-023-00647-z">Structure Inducing Pre-Training</a><br />
-<a href="https://openreview.net/pdf?id=OJ4mMfGKLN">Self-Supervised Contrastive Pre-Training For Time Series via Time-Frequency Consistency</a><br />
-<a href="https://openreview.net/pdf?id=Kwm8I7dU-l5">Graph-Guided Network for Irregularly Sampled Multivariate Time Series</a><br />
-<a href="https://papers.nips.cc/paper/2020/hash/412604be30f701b1b1e3124c252065e6-Abstract.html">Graph Meta Learning via Local Subgraphs</a><br />
-<a href="https://doi.org/10.1016/j.inffus.2018.09.012">Machine Learning for Integrating Data in Biology and Medicine: Principles, Practice, and Opportunities</a><br />
-<a href="http://dx.doi.org/10.1109/TPAMI.2014.2343973">Data Fusion by Matrix Factorization</a></p>
+<center>
+<img src="/img/Clinical-knowledge-embeddings-1.png" />
+</center>
 
-<hr />
-
-<h2 id="geometric-deep-learning">Geometric Deep Learning</h2>
-
-<p>The critical capability expected of machine learning used in medicine and science is to incorporate structure, geometry, symmetry and be grounded in knowledge. The challenge, however, is that prevailing deep and representation learning algorithms are designed for data with a regular, grid-like structure (e.g., images have a 2D grid structure, and sequences have a linear 1D structure). As a result, these algorithms cannot truly exploit complex, interconnected data with irregular interactions between entities, i.e., edges, the essence of graphs.</p>
-
-<p>We are developing methods to address these challenges. The notion of flexible representations is at the technical core of these methods. We formalize this idea by specifying deep transformation functions, or graph neural networks, that map nodes, or larger graph structures, to points in a low-dimensional space, termed embeddings. Importantly, these functions are optimized to embed the input dataset to perform algebraic operations in the learned latent spaces reflecting the dataset’s structure and topology.</p>
-
-<p>Our research has been at the forefront of geometric deep learning research and pioneered graph neural networks (GNNs) for biology and medicine. This allows us to apply deep learning much more broadly and set sights on new frontiers beyond classic applications of deep learning in computer vision and natural language processing.</p>
-
-<div align="center">
-<img style="margin-top:20px;margin-bottom:20px;width:100%" src="/img/research-GDL.png" />
-</div>
-
-<h4 id="perspectives-1">Perspectives:</h4>
-
-<p><a href="https://www.nature.com/articles/s41551-022-00942-x">Graph Representation Learning for Biomedicine and Healthcare in Nature Biomedical Engineering</a><br />
-<a href="https://www.annualreviews.org/content/journals/10.1146/annurev-biodatasci-110723-024625">Graph Artificial Intelligence in Medicine</a><br /></p>
-
-<h4 id="example-related-publications-1">Example related publications:</h4>
-
-<p><a href="https://openreview.net/pdf?id=WyVTj77KEV">Generalized Protein Pocket Generation with Prior-Informed Flow Matching</a><br />
-<a href="https://arxiv.org/abs/2310.02553">Full-Atom Protein Pocket Design via Iterative Refinement</a><br />
-<a href="https://proceedings.mlr.press/v161/agarwal21b.html">Towards a Unified Framework for Fair and Stable Graph Representation Learning</a><br />
-<a href="https://www.nature.com/articles/s42256-023-00624-6">Multimodal Learning with Graphs</a><br />
-<a href="https://proceedings.mlr.press/v151/agarwal22b/agarwal22b.pdf">Probing GNN Explainers: A Rigorous Theoretical and Empirical Analysis of GNN Explanation Methods</a><br />
-<a href="https://papers.nips.cc/paper/9123-gnnexplainer-generating-explanations-for-graph-neural-networks">GNN Explainer: Generating Explanations for Graph Neural Networks</a><br />
-<a href="https://papers.nips.cc/paper/7473-embedding-logical-queries-on-knowledge-graphs">Embedding Logical Queries on Knowledge Graphs</a><br />
-<a href="https://openreview.net/pdf?id=HJlWWJSFDH">Pre-Training Graph Neural Networks</a><br />
-<a href="https://papers.nips.cc/paper/2020/hash/5bca8566db79f3788be9efd96c9ed70d-Abstract.html">Subgraph Neural Networks</a><br />
-<a href="https://dl.acm.org/citation.cfm?id=3220025">Learning Structural Node Embeddings via Diffusion Wavelets</a><br />
-<a href="https://academic.oup.com/bioinformatics/article/34/13/i457/5045770">Modeling Polypharmacy Side Effects with Graph Convolutional Networks</a><br />
-<a href="https://papers.nips.cc/paper/2020/hash/690d83983a63aa1818423fd6edd3bfdb-Abstract.html">GNNGuard: Defending Graph Neural Networks against Adversarial Attacks</a><br /></p>
-
-<h4 id="podcasts">Podcasts:</h4>
-
-<p><a href="https://mitharvardwai.github.io/">MITxHarvard Women in Artificial Intelligence</a> [<a href="https://www.youtube.com/watch?v=myv4E5gBnmQ">YouTube Interview</a>]</p>
-
-<h4 id="educational-resources">Educational resources:</h4>
-
-<p><a href="../publications/slides/marinka-zitnik-cs224w.pdf">Slides: Graph Neural Networks in Computational Biology</a><br />
-<a href="https://youtu.be/_hy9AgZXhbQ">Recording: Graph Neural Networks in Computational Biology</a>
-<a href="https://zitniklab.hms.harvard.edu/biomedgraphml/">Towards Precision Medicine with Graph Representation Learning</a></p>
-
-<hr />
-
-<h2 id="multi-scale-individualized-contextualized-and-network-learning-systems">Multi-Scale Individualized, Contextualized, and Network Learning Systems</h2>
-
-<p>Networks, or graphs, pervade biomedical data — from the molecular level to the level of connections between diseases in a person and the societal level encompassing all human interactions. These interactions at different levels give rise to a bewildering degree of complexity which is only likely to be fully understood through a holistic and integrated systems view and the study of combined, multi-level networks.</p>
-
-<p>We focus on designing algorithmic solutions to optimize and manipulate networked systems for useful purposes and to predict their behavior, such as how genomics influences human traits in a particular environment. We also actively develop methods to harness rich interaction data and network dynamics. We scale up the analyses to see structure in massive amounts of data that are too complex to be detected with other methods.</p>
-
-<p>Many diseases are controlled by more than one gene with very different patterns of mutations across different cells within the same disease. A powerful way to interpret these genetic events is to organize them into interactomes — networks of genes that participate in dysregulated processes. Disruptions of normal gene behavior may be infrequent at the nucleotide or gene level but can be substantially more common when considering impacts in a larger biological process. Understanding the disease in this way suggests that effective therapies might need to target biological systems — interactomes — larger than those encoded by single genes to successfully intervene against the disease.</p>
-
-<p>In our work, we develop geometric machine learning methods to study the impact of drugs on proteins perturbed in disease. Among others, we used the methods to predict drugs effective for coronavirus infections. We showed that 76 of the 77 predicted drugs that reduced viral infection in human cells do not bind the proteins targeted by the virus, indicating that these “network drugs” rely on network mechanisms, targeting proteins near the viral module.</p>
-
-<div align="center">
-<img style="margin-top:20px;margin-bottom:20px;width:100%" src="/img/research-reason.png" />
-</div>
-
-<h4 id="example-related-publications-2">Example related publications:</h4>
-
-<p><a href="https://www.medrxiv.org/content/10.1101/2022.12.07.22283238">Deep Learning for Diagnosing Patients with Rare Genetic Diseases</a><br />
-<a href="https://doi.org/10.1073/pnas.1818013116">Evolution of Resilience in Protein Interactomes Across the Tree of Life</a><br />
-<a href="https://www.nature.com/articles/s41467-021-21770-8">Identification of Disease Treatment Mechanisms through the Multiscale Interactome</a><br />
-<a href="https://www.nature.com/articles/s41467-018-05469-x">Network Enhancement as a General Method to Denoise Weighted Biological Networks</a><br />
-<a href="https://www.biorxiv.org/content/10.1101/2020.02.25.960302v1">Discovering Novel Cell Types Across Heterogeneous Single-Cell Experiments</a><br />
-<a href="http://psb.stanford.edu/psb-online/proceedings/psb23/eyuboglu.pdf">Mutual Interactors as a Principle for Phenotype Discovery in Molecular Interaction Networks</a><br />
-<a href="https://academic.oup.com/bioinformatics/article/33/14/i190/3953967/Predicting-multicellular-function-through-multi">Predicting Multicellular Function Through Multi-Layer Tissue Networks</a><br />
-<a href="https://www.cell.com/cell-systems/fulltext/S2405-4712(21)00488-9">Sparse Dictionary Learning Recovers Pleiotropy From Human Cell Fitness Screens</a></p>
-
-<hr />
-
-<h2 id="better-drug-design-molecule-optimization-high-throughput-perturbations-interaction-screening">Better Drug Design, Molecule Optimization, High-Throughput Perturbations, Interaction Screening</h2>
-
-<p>For centuries, the scientific method — the fundamental practice of science that scientists use to explain the natural world systematically and logically — has remained essentially the same. We have already made substantial progress in using machine learning to change that. Within the context of drug development, we develop methods that accelerate the discovery of safer and more effective medicines and advance therapeutic science. We ask fundamental questions about machine learning methods needed to advance therapeutic science, and, critically, also conduct in-depth work that integrates algorithmic advances with experimental collaborators.</p>
-
-<p>The study of how two or more molecular structures (e.g., drug and enzyme or protein) fit together is typically accomplished by either molecular docking or perturbation-response and chemo-genetic profiling, both of which are beginning to harness the power of existing machine learning. At this moment, however, molecular modeling is conducted in a highly constrained design space, owing to the lack of interactomes in different cell types and the limited power to explore larger design spaces. We study the role of cellular and tissue contexts in interactomes, particularly those affected by the disease, and design machine learning model to help design chemical and genetic perturbations that reverse disease effects. We develop predictive and generative AI models that produce interpretable outputs and actionable hypotheses to maximize the yield of downstream experiments in the lab.</p>
-
-<div align="center">
-<img style="margin-bottom:20px;margin-top:20px;width:100%" src="/img/research-drugxAI.png" />
-</div>
-
-<h4 id="example-related-publications-3">Example related publications:</h4>
-
-<p><a href="https://www.nature.com/articles/s42256-024-00920-9">Efficient Generation of Protein Pockets with PocketGen</a><br />
-<a href="https://www.nature.com/articles/s41591-024-03233-x">A Foundation Model for Clinician Centered Drug Repurposing</a><br />
-<a href="https://arxiv.org/abs/2004.07229">Network Medicine Framework for Identifying Drug Repurposing Opportunities for COVID-19</a><br />
-<a href="https://academic.oup.com/bioinformatics/article/34/13/i457/5045770">Modeling Polypharmacy Side Effects with Graph Convolutional Networks</a><br />
-<a href="https://www.nature.com/articles/s41467-018-04948-5">Prioritizing Network Communities</a><br />
-<a href="https://ieeexplore.ieee.org/document/9916585">Extending the Nested Model for User-Centric XAI: A Design Study on GNN-based Drug Repurposing</a><br />
-<a href="https://doi.org/10.1093/bioinformatics/btaa1005">DeepPurpose: A Deep Learning Library for Drug-Target Interaction Prediction</a><br />
-<a href="https://www.nature.com/articles/s43588-021-00138-4">Population-Scale Identification of Differential Adverse Events Before and During a Pandemic</a><br />
-<a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004552">Gene Prioritization by Compressive Data Fusion and Chaining</a><br />
-<a href="https://www.nature.com/articles/s41467-017-01642-w">A Comprehensive Structural, Biochemical and Biological Profiling of the Human NUDIX Hydrolase Family</a></p>
-
-<h4 id="podcasts-1">Podcasts:</h4>
-
-<p><a href="http://www.vision-concept.com/aktuell/Bayer_Foundation_Report_2020/">Bayer Foundation Report (Bayer’s Early Excellence in Science Award)</a><br /> 
-<a href="https://bioinformatics.chat/drug-development">Machine Learning for Drug Development</a><br />
-<a href="https://omny.fm/shows/pharmacy-podcast-network/data-science-a-i-futuredose-tech">FutureDose Tech</a><br />
-<a href="https://www.jclinic.mit.edu/post/a-sweeping-computational-search-for-drugs-against-covid-19">MIT AI Cures Blog</a></p>
-
-<h4 id="initiatives">Initiatives:</h4>
-
-<p><a href="http://txgnn.org/">TxGNN Explorer</a></p>
-
-<hr />
-
-<h2 id="robust-foundation-modern-data-management-scalable-infrastructure-for-discovery-in-the-age-of-ai">Robust Foundation, Modern Data Management, Scalable Infrastructure for Discovery in the Age of AI</h2>
-
-<p>Faced with skyrocketing costs and high failure rates, researchers are looking at ways to make drug discovery and development more efficient through automation, AI and new data modalities. AI has become woven into therapeutic discovery since the emergence of deep learning. To support the adoption of AI in therapeutic science, we need a composable machine learning foundation spanning the stages of drug discovery that can help implement AI methods most suitable for drug discovery applications.</p>
-
-<p>Although biological and chemical research generates a wealth of data, most generated datasets are not readily suitable for AI analyses because they are incomplete.</p>
+<p>Our resource provides a hypothesis-free approach to generating clinically insightful representations of medical codes. It offers three main applications:</p>
 
 <ul>
-  <li>
-    <p>First, the lack of AI-ready datasets and standardized knowledge representations prevent scientists from formulating relevant questions in drug discovery as solvable AI tasks — posing the challenge of how to link scientific workflows, protocols and other information into computable knowledge.</p>
-  </li>
-  <li>
-    <p>Second, datasets can be multimodal and of many different types, including experimental readouts, curated annotations and metadata, and are scattered around biochemical repositories — posing the challenge of how to collect and annotate datasets to establish best practices for AI analysis, as poor understanding of the data can lead to misinterpreted results and misused methods.</p>
-  </li>
-  <li>
-    <p>Finally, despite the promising in silico performance of AI methods, their use in practice, such as for rare diseases and novel drugs in development, has been limited — posing the challenge of how to assess methodological advances in a manner that allows robust and transparent comparison and represents what one would expect in a real-world implementation.</p>
-  </li>
+  <li>Integrating clinical knowledge into precision medicine patient models,</li>
+  <li>Enabling patient-agnostic generalizable models of populations that can be safely exchanged across institutions, and</li>
+  <li>Providing insights into the organization of clinical knowledge.</li>
 </ul>
 
-<p>To this end, AI methods and datasets must be integrated, and data stewardship strategies must be developed to reduce data-processing and data-sharing burdens. This includes optimally balanced and algorithmically sound approaches to ensure that biochemical information (including genomic data) is findable, accessible, interoperable and reusable10, as well as engaging communities in determining what data are needed.</p>
+<p>The latent space of medical codes reveals patterns consistent with human anatomy and disease presentations, capturing symptomatic and clinical presentations of diseases that can be decomposed into symptom embeddings. We demonstrate the predictive utility of these embeddings through a large-scale phenotype risk score analysis for three chronic diseases across 4.57 million patients from <a href="https://www.clalit-innovation.org/clalitresearchinstitute">Clalit Healthcare Services</a>.</p>
 
-<p>We founded <a href="https://tdcommons.ai/">Therapeutics Data Commons (TDC)</a>, an initiative to access and evaluate AI capability across therapeutic modalities and stages of discovery, establishing a foundation for understanding which AI methods are most suitable for advancing therapeutic science and why. At its core, the Commons is a collection of AI-solvable tasks, AI-ready datasets, and curated benchmarks that cover a wide range of therapeutic products (AI tasks for small molecules, including drug response and synergy prediction, AI tasks for macromolecules, including paratope and epitope prediction; and AI tasks for cell and gene therapies, including CRISPR repair prediction) across all stages of discovery (target-discovery tasks, such as identification of disease-associated therapeutic targets; activity-modeling tasks, such as quantum-mechanical energy prediction; drug efficacy and safety tasks, such as molecule generation; and manufacturing tasks, such as yield outcome prediction).</p>
+<p>An expert clinical evaluation across 90 diseases and 3,000 clinical codes conducted with clinician panels in the United States and Israel validates the alignment of these embeddings with established medical knowledge. Our findings establish unified medical code embeddings as a foundational resource for advancing AI-driven healthcare.</p>
 
-<p>Achieving broad use of AI in therapeutic science requires coordinated community initiatives that earn the trust of diverse groups of scientists. The Commons creates a meeting point between biochemical and AI scientists. This makes it possible to look at AI from different perspectives and with a wide variety of mindsets across traditional boundaries and multiple disciplines. We envision that the Commons can considerably accelerate machine learning model development, validation, and transition into biomedical and clinical implementation.</p>
+<p>Unified clinical vocabulary embeddings can facilitate collaborative, scalable efforts in clinical AI and offer a tool for deepening our understanding of disease relationships, laboratory tests, diagnosis codes, medications, and their underlying mechanisms.</p>
 
-<div align="center">
-<a href="https://zitniklab.hms.harvard.edu/TDC/"><img style="margin-bottom:20px;margin-top:20px;width:100%" src="/img/futuretx20-TDC.png" /></a>
-</div>
+<h2 id="clinical-embeddings-capture-knowledge-of-human-anatomy-and-clinical-subspecialties">Clinical embeddings capture knowledge of human anatomy and clinical subspecialties</h2>
 
-<h4 id="perspectives-2">Perspectives:</h4>
+<center>
+<img src="/img/Clinical-knowledge-embeddings-2.png" />
+</center>
 
-<p><a href="https://www.cell.com/cell/fulltext/S0092-8674(24)01070-5">Empowering Biomedical Discovery with AI Agents</a><br />
-<a href="https://www.nature.com/articles/s41586-023-06221-2">Scientific Discovery in the Age of Artificial Intelligence</a><br />
-<a href="https://www.nature.com/articles/s41589-022-01131-2">Artificial Intelligence Foundation for Therapeutic Science in Nature Chemical Biology</a><br /></p>
+<h2 id="latent-embedding-space-reflects-patterns-of-disease-presentation-and-diagnostic-processes">Latent embedding space reflects patterns of disease presentation and diagnostic processes</h2>
 
-<h4 id="example-related-publications-4">Example related publications:</h4>
+<center>
+<img src="/img/Clinical-knowledge-embeddings-3.png" />
+</center>
 
-<p><a href="https://www.biorxiv.org/content/10.1101/2024.06.12.598655">TDC-2: Multimodal Foundation for Therapeutic Science</a><br />
-<a href="https://arxiv.org/abs/2102.09548">Therapeutics Data Commons: Machine Learning Datasets and Tasks for Therapeutics</a> [<a href="/publications/slides/TDC-futuretx20.pdf">Slides</a>]<br />
-<a href="https://www.nature.com/articles/s41597-023-01960-3">Building a Knowledge Graph to Enable Precision Medicine</a><br />
-<a href="https://www.nature.com/articles/s41597-023-01974-x">Evaluating Explainability for Graph Neural Networks</a><br />
-<a href="https://jmlr.csail.mit.edu/papers/volume13/zitnik12a/zitnik12a.pdf">NIMFA: A Python Library for Non-negative Matrix Factorization</a></p>
+<h2 id="unified-vocabulary-embeddings-enable-disease-risk-stratification-and-severity-prediction">Unified vocabulary embeddings enable disease risk stratification and severity prediction</h2>
 
-<h4 id="initiatives-1">Initiatives:</h4>
+<center>
+<img src="/img/Clinical-knowledge-embeddings-5.png" />
+</center>
 
-<p><a href="https://zitniklab.hms.harvard.edu/TDC/">Therapeutics Data Commons</a><br />
-<a href="https://ai4sciencecommunity.github.io/">AI4Science</a></p>
+<h2 id="clinical-vocabulary-embeddings-capture-medical-knowledge-consensus-across-institutions">Clinical vocabulary embeddings capture medical knowledge consensus across institutions</h2>
+
+<center>
+<img src="/img/Clinical-knowledge-embeddings-4.png" />
+</center>
+
+<h2 id="publication">Publication</h2>
+
+<p><a href="#">Unified Clinical Vocabulary Embeddings for Advancing Precision Medicine</a><br />
+Ruth Johnson, Uri Gottlieb, Galit Shaham, Lihi Eisen, Jacob Waxman, Stav Devons-Sberro, Curtis R. Ginder, Peter Hong, Raheel Sayeed, Ben Y. Reis, Ran D. Balicer, Noa Dagan, and Marinka Zitnik<br />
+<em>In Review</em> 2024 <a href="#">[MedRxiv]</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{johnson2024unified,
+  title={Unified Clinical Vocabulary Embeddings for Advancing Precision Medicine},
+  author={Johnson, Ruth and Gottlieb, Uri and Shaham, Galit and Eisen, Lihi and Waxman, Jacob and Devons-Sberro, Stav and Ginder, Curtis R. and Hong, Peter and Sayeed, Raheel and Reis, Ben Y. and Balicer, Ran D. and Dagan, Noa and Zitnik, Marinka},
+  journal={medrxiv},
+  url={},
+  year={2024}
+}
+</code></pre></div></div>
+
+<h2 id="code-and-data-availability">Code and Data Availability</h2>
+
+<p>Pytorch implementation of PocketGen is available in the <a href="https://github.com/mims-harvard/Clinical-knowledge-embeddings">GitHub repository</a>.</p>
+
+<p>Data and clinical concept embeddings, as well as the PheKG knowledge graph, are available via <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/Z6H1A8">Harvard Dataverse</a>. Due to national and organizational data privacy regulations, CHS individual-level data from this study cannot be shared publicly.</p>
+
+<h2 id="authors">Authors</h2>
+
+<ul>
+  <li><a href="https://ruthjohnson95.github.io/">Ruth Johnson</a></li>
+  <li><a href="#">Uri Gottlieb</a></li>
+  <li><a href="#">Galit Shaham</a></li>
+  <li><a href="#">Lihi Eisen</a></li>
+  <li><a href="#">Jacob Waxman</a></li>
+  <li><a href="#">Stav Devons-Sberro</a></li>
+  <li><a href="#">Curtis R. Ginder</a></li>
+  <li><a href="#">Peter Hong</a></li>
+  <li><a href="#">Raheel Sayeed</a></li>
+  <li><a href="https://research.childrenshospital.org/reis">Ben Y. Reis</a></li>
+  <li><a href="https://il.linkedin.com/in/ranbalicer">Ran D. Balicer</a></li>
+  <li><a href="https://ben-gurion.theopenscholar.com/dagan-barda/about?language_content_entity=en">Noa Dagan</a></li>
+  <li><a href="https://zitniklab.hms.harvard.edu/">Marinka Zitnik</a></li>
+</ul>
+
+<hr />
+
+<p>This research would not be possible without the generous support by <a href="https://www.berkowitzlivinglaboratory.org/">The Ivan and Francesca Berkowitz Family Living Laboratory Collaboration</a> at Harvard Medical School and Clalit Research Institute.</p>
 
 </div>
                 </div>

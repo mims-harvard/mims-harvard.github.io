@@ -61,7 +61,7 @@
       "title": "A Foundation Model for Clinician Centered Drug Repurposing",
       "venue": "Nature Medicine",
       "year": "2024",
-      "thumbnail": "subgnn20.png",
+      "thumbnail": "txgnn.png",
       "pdf": "https://www.nature.com/articles/s41591-024-03233-x",
       "url": "https://www.nature.com/articles/s41591-024-03233-x",
       "type": "journal",
@@ -176,8 +176,8 @@
       "venue": "NeurIPS",
       "year": "2024",
       "thumbnail": "UniTS.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2403.00131",
+      "pdf": "https://openreview.net/pdf?id=nBOdYBptWW",
+      "url": "https://openreview.net/pdf?id=nBOdYBptWW",
       "type": "journal",
       "supp":
       {
@@ -195,8 +195,8 @@
       "venue": "NeurIPS",
       "year": "2024",
       "thumbnail": "PocketFlow.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2409.19520",
+      "pdf": "https://openreview.net/pdf?id=WyVTj77KEV",
+      "url": "https://openreview.net/pdf?id=WyVTj77KEV",
       "type": "journal",
       "supp":
       {
@@ -213,15 +213,13 @@
       "title": "Invariant Tokenization for Language Model Enabled Crystal Materials Generation",
       "venue": "NeurIPS",
       "year": "2024",
-      "thumbnail": "UniTS.png",
-      "pdf": "",
-      "url": "",
+      "thumbnail": "InvariantCrystals.png",
+      "pdf": "https://openreview.net/pdf?id=18FGRNd0wZ",
+      "url": "https://openreview.net/pdf?id=18FGRNd0wZ",
       "type": "journal",
       "supp":
       {
-        "arXiv": "",
-        "project website": "",
-        "code": "",
+        "arXiv": "https://openreview.net/pdf?id=18FGRNd0wZ",
         "poster": "https://nips.cc/virtual/2024/poster/96883"
       }
     },
@@ -249,13 +247,14 @@
       "title": "TDC-2: Multimodal Foundation for Therapeutic Science",
       "venue": "In Review",
       "year": "2024",
-      "thumbnail": "PINNACLE23.png",
+      "thumbnail": "tdc2.png",
       "pdf": "",
-      "url": "https://www.biorxiv.org/content/10.1101/2024.06.12.598655v2",
+      "url": "https://www.biorxiv.org/content/10.1101/2024.06.12.598655",
       "type": "journal",
       "supp":
       {
-        "bioRxiv": "https://www.biorxiv.org/content/10.1101/2024.06.12.598655v2",
+        "bioRxiv": "https://www.biorxiv.org/content/10.1101/2024.06.12.598655",
+        "NeurIPS AI for New Drug Modalities Workshop": "https://openreview.net/pdf?id=kL8dlYp6IM",
         "project website": "https://tdcommons.ai/",
         "code": "https://github.com/mims-harvard/TDC"
       }
