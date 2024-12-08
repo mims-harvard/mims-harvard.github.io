@@ -4,16 +4,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Evaluating Generalizability of Artificial Intelligence Models for Molecular Datasets - Zitnik Lab</title>
+    <title>Evaluating Generalizability of Molecular AI Models - Zitnik Lab</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="shortcut icon" type="image/png"
            href="/favicon.png" 
     />
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Evaluating Generalizability of Artificial Intelligence Models for Molecular Datasets | Zitnik Lab</title>
+<title>Evaluating Generalizability of Molecular AI Models | Zitnik Lab</title>
 <meta name="generator" content="Jekyll v3.8.6" />
-<meta property="og:title" content="Evaluating Generalizability of Artificial Intelligence Models for Molecular Datasets" />
+<meta property="og:title" content="Evaluating Generalizability of Molecular AI Models" />
 <meta name="author" content="Marinka Zitnik" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="SPECTRA paves the way for a more comprehensive evaluation of foundation models in molecular biology." />
@@ -22,11 +22,11 @@
 <meta property="og:url" content="https://zitniklab.hms.harvard.edu/projects/SPECTRA/" />
 <meta property="og:site_name" content="Zitnik Lab" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Evaluating Generalizability of Artificial Intelligence Models for Molecular Datasets" />
+<meta property="twitter:title" content="Evaluating Generalizability of Molecular AI Models" />
 <meta name="twitter:site" content="@marinkazitnik" />
 <meta name="twitter:creator" content="@Marinka Zitnik" />
 <script type="application/ld+json">
-{"url":"https://zitniklab.hms.harvard.edu/projects/SPECTRA/","author":{"@type":"Person","name":"Marinka Zitnik"},"headline":"Evaluating Generalizability of Artificial Intelligence Models for Molecular Datasets","description":"SPECTRA paves the way for a more comprehensive evaluation of foundation models in molecular biology.","@type":"WebPage","@context":"https://schema.org"}</script>
+{"url":"https://zitniklab.hms.harvard.edu/projects/SPECTRA/","author":{"@type":"Person","name":"Marinka Zitnik"},"headline":"Evaluating Generalizability of Molecular AI Models","description":"SPECTRA paves the way for a more comprehensive evaluation of foundation models in molecular biology.","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
 <script>
@@ -121,7 +121,7 @@
         <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
     <div class="hero-body">
         <div class="container">
-            <p class="title is-2">Evaluating Generalizability of Artificial Intelligence Models for Molecular Datasets</p>
+            <p class="title is-2">Evaluating Generalizability of Molecular AI Models</p>
             <p class="subtitle is-3"></p>
             
         </div>
@@ -143,23 +143,16 @@
     <div class="box has-background-info has-text-white">
 
 <p>
-Deep learning has made rapid advances in modeling molecular sequencing data. Despite achieving high performance on benchmarks, it remains unclear to what extent deep learning models learn general principles and generalize to previously unseen sequences. 
+Deep learning has made rapid advances in modelling molecular sequencing data. Despite achieving high performance on benchmarks, it remains unclear to what extent deep learning models learn general principles and generalize to previously unseen sequences. Benchmarks traditionally interrogate model generalizability by generating metadata- or sequence similarity-based train and test splits of input data before assessing model performance. 
 </p>
-
 <p>
-Benchmarks traditionally interrogate model generalizability by generating metadata based (MB) or sequence-similarity based (SB) train and test splits of input data before assessing model performance. Here, we show that this approach mischaracterizes model generalizability by failing to consider the full spectrum of cross-split overlap, i.e., similarity between train and test splits. 
+Here we show that this approach mischaracterizes model generalizability by failing to consider the full spectrum of cross-split overlap, that is, similarity between train and test splits. We introduce SPECTRA, the spectral framework for model evaluation. Given a model and a dataset, SPECTRA plots model performance as a function of decreasing cross-split overlap and reports the area under this curve as a measure of generalizability. 
 </p>
-
 <p>
-We introduce SPECTRA, a spectral framework for comprehensive model evaluation. For a given model and input data, SPECTRA plots model performance as a function of decreasing cross-split overlap and reports the area under this curve as a measure of generalizability. 
+We use SPECTRA with 18 sequencing datasets and phenotypes ranging from antibiotic resistance in tuberculosis to protein–ligand binding and evaluate the generalizability of 19 state-of-the-art deep learning models, including large language models, graph neural networks, diffusion models and convolutional neural networks. We show that sequence similarity- and metadata-based splits provide an incomplete assessment of model generalizability. 
 </p>
-
 <p>
-We use SPECTRA with 18 sequencing datasets and phenotypes ranging from antibiotic resistance in tuberculosis to protein-ligand binding to evaluate the generalizability of 19 state-of-the-art deep learning models, including large language models, graph neural networks, diffusion models, and convolutional neural networks. We show that SB and MB splits provide an incomplete assessment of model generalizability. 
-</p>
-
-<p>
-Using SPECTRA, we find as cross-split overlap decreases, deep learning models consistently exhibit a reduction in performance in a task- and model-dependent manner. Although no model consistently achieved the highest performance across all tasks, we show that deep learning models can, in some cases, generalize to previously unseen sequences on specific tasks. SPECTRA paves the way toward a better understanding of how foundation models generalize in biology.
+Using SPECTRA, we find that as cross-split overlap decreases, deep learning models consistently show reduced performance, varying by task and model. Although no model consistently achieved the highest performance across all tasks, deep learning models can, in some cases, generalize to previously unseen sequences on specific tasks. SPECTRA advances our understanding of how foundation models generalize in biological applications.
 </p>
 </div>
 
@@ -169,15 +162,15 @@ Using SPECTRA, we find as cross-split overlap decreases, deep learning models co
 
 <h2 id="publication">Publication</h2>
 
-<p><a href="https://www.biorxiv.org/content/10.1101/2024.02.25.581982">Evaluating Generalizability of Artificial Intelligence Models for Molecular Datasets</a><br />
+<p><a href="https://rdcu.be/d2D0z">Evaluating Generalizability of Artificial Intelligence Models for Molecular Datasets</a><br />
 Yasha Ektefaie, Andrew Shen, Daria Bykova, Maximillian Marin, Marinka Zitnik* and Maha Farhat*<br />
-<em>In Review</em> 2024 <a href="https://www.biorxiv.org/content/10.1101/2024.02.25.581982">[bioRxiv]</a></p>
+<em>Nature Machine Intelligence</em> 2024 <a href="https://www.biorxiv.org/content/10.1101/2024.02.25.581982">[bioRxiv]</a></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{ektefaie2024evaluating,
   title={Evaluating Generalizability of Artificial Intelligence Models for Molecular Datasets},
   author={Ektefaie, Yasha and Shen, Andrew and Bykova, Daria and Maximillian, Marin and Zitnik, Marinka* and Farhat, Maha*},
-  journal={bioRxiv},
-  url={https://www.biorxiv.org/content/10.1101/2024.02.25.581982v1},
+  journal={Nature Machine Intelligence},
+  url={https://rdcu.be/d2D0z},
   year={2024}
 }
 </code></pre></div></div>
@@ -204,6 +197,90 @@ Yasha Ektefaie, Andrew Shen, Daria Bykova, Maximillian Marin, Marinka Zitnik* an
                     <p class="title is-4">Latest News</p>
 
 <div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/12/16/ProCyon/">Foundation Model for Protein Phenotypes</a>-->
+        <p class="card-header-title">Dec 2024: &nbsp; <span class="has-text-primary">Foundation Model for Protein Phenotypes</span></p>
+<!--        <p class="card-header-item">Dec 2024</p>-->
+<!--        <p class="card-footer-item">Dec 16, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper: <a href="https://www.biorxiv.org/content/10.1101/2024.12.10.627665v1">ProCyon is a groundbreaking foundation model for modeling, generating, and predicting protein phenotypes</a>. <a href="https://zitniklab.hms.harvard.edu/ProCyon/">[Project website]</a> <a href="https://github.com/mims-harvard/ProCyon">[Code]</a></p>
+</p>-->
+            <p>New paper: <a href="https://www.biorxiv.org/content/10.1101/2024.12.10.627665v1">ProCyon is a groundbreaking foundation model for modeling, generating, and predicting protein phenotypes</a>. <a href="https://zitniklab.hms.harvard.edu/ProCyon/">[Project website]</a> <a href="https://github.com/mims-harvard/ProCyon">[Code]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/12/16/ProCyon/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 16, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/12/07/UnifiedClinicalVocabularyEmbeddings/">Unified Clinical Vocabulary Embeddings</a>-->
+        <p class="card-header-title">Dec 2024: &nbsp; <span class="has-text-primary">Unified Clinical Vocabulary Embeddings</span></p>
+<!--        <p class="card-header-item">Dec 2024</p>-->
+<!--        <p class="card-footer-item">Dec 7, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper: <a href="https://www.medrxiv.org/content/10.1101/2024.12.03.24318322">A unified resource provides a new representation of clinical knowledge by unifying medical vocabularies.</a> (1) Phenotype risk score analysis across 4.57 million patients, (2) Inter-institutional clinician panels evaluate alignment with clinical knowledge across 90 diseases and 3,000 clinical codes.</p>
+</p>-->
+            <p>New paper: <a href="https://www.medrxiv.org/content/10.1101/2024.12.03.24318322">A unified resource provides a new representation of clinical knowledge by unifying medical vocabularies.</a> (1) Phenotype risk score analysis across 4.57 million patients, (2) Inter-institutional clinician panels evaluate alignment with clinical knowledge across 90 diseases and 3,000 clinical codes.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/12/07/UnifiedClinicalVocabularyEmbeddings/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 7, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/12/07/SPECTRA/">SPECTRA in Nature Machine Intelligence</a>-->
+        <p class="card-header-title">Dec 2024: &nbsp; <span class="has-text-primary">SPECTRA in Nature Machine Intelligence</span></p>
+<!--        <p class="card-header-item">Dec 2024</p>-->
+<!--        <p class="card-footer-item">Dec 7, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Are biomedical AI models truly as smart as they seem? <a href="https://www.nature.com/articles/s42256-024-00931-6">SPECTRA is a framework that evaluates models by considering the full spectrum of cross-split overlap: train-test similarity.</a> SPECTRA reveals gaps in benchmarks for molecular sequence data across 19 models, including LLMs, GNNs, diffusion models, and conv nets.</p>
+</p>-->
+            <p>Are biomedical AI models truly as smart as they seem? <a href="https://www.nature.com/articles/s42256-024-00931-6">SPECTRA is a framework that evaluates models by considering the full spectrum of cross-split overlap: train-test similarity.</a> SPECTRA reveals gaps in benchmarks for molecular sequence data across 19 models, including LLMs, GNNs, diffusion models, and conv nets.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/12/07/SPECTRA/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 7, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
     
     <div class="column is-12">
         <div class="card">
@@ -293,8 +370,8 @@ Yasha Ektefaie, Andrew Shen, Daria Bykova, Maximillian Marin, Marinka Zitnik* an
         <div class="card">
     
     <header class="card-header">
-<!--        <a class="card-header-title" href="/2024/10/19/ACAnet/">Activity Cliffs in Molecular Property Prediction</a>-->
-        <p class="card-header-title">Oct 2024: &nbsp; <span class="has-text-primary">Activity Cliffs in Molecular Property Prediction</span></p>
+<!--        <a class="card-header-title" href="/2024/10/19/ACAnet/">Activity Cliffs in Molecular Properties</a>-->
+        <p class="card-header-title">Oct 2024: &nbsp; <span class="has-text-primary">Activity Cliffs in Molecular Properties</span></p>
 <!--        <p class="card-header-item">Oct 2024</p>-->
 <!--        <p class="card-footer-item">Oct 19, 2024</p>-->
     </header>
@@ -677,90 +754,6 @@ Yasha Ektefaie, Andrew Shen, Daria Bykova, Maximillian Marin, Marinka Zitnik* an
     </div>
 <!--    <footer class="card-footer">-->
 <!--        <p class="card-footer-item">Published: Apr 4, 2024</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2024/03/23/EfficientMLSeminar/">Efficient ML Seminar Series</a>-->
-        <p class="card-header-title">Mar 2024: &nbsp; <span class="has-text-primary">Efficient ML Seminar Series</span></p>
-<!--        <p class="card-header-item">Mar 2024</p>-->
-<!--        <p class="card-footer-item">Mar 23, 2024</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>We started a <a href="https://efficientml.org/">Harvard University Efficient ML Seminar Series</a>. Congrats to Jonathan for spearheading this initiative. <a href="https://www.harvardmagazine.com/2024/03/scaling-artificial-intelligence">Harvard Magazine</a> covered the first meeting focusing on LLMs.</p>
-</p>-->
-            <p>We started a <a href="https://efficientml.org/">Harvard University Efficient ML Seminar Series</a>. Congrats to Jonathan for spearheading this initiative. <a href="https://www.harvardmagazine.com/2024/03/scaling-artificial-intelligence">Harvard Magazine</a> covered the first meeting focusing on LLMs.</p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2024/03/23/EfficientMLSeminar/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Mar 23, 2024</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2024/03/04/UniTS/">UniTS - Unified Time Series Model</a>-->
-        <p class="card-header-title">Mar 2024: &nbsp; <span class="has-text-primary">UniTS - Unified Time Series Model</span></p>
-<!--        <p class="card-header-item">Mar 2024</p>-->
-<!--        <p class="card-footer-item">Mar 4, 2024</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p><a href="https://arxiv.org/abs/2403.00131">UniTS is a unified time series model</a> that can process classification, forecasting, anomaly detection and imputation tasks within a single model with no task-specific modules. UniTS has zero-shot, few-shot, and prompt learning capabilities. <a href="https://zitniklab.hms.harvard.edu/projects/UniTS/">Project website.</a></p>
-</p>-->
-            <p><a href="https://arxiv.org/abs/2403.00131">UniTS is a unified time series model</a> that can process classification, forecasting, anomaly detection and imputation tasks within a single model with no task-specific modules. UniTS has zero-shot, few-shot, and prompt learning capabilities. <a href="https://zitniklab.hms.harvard.edu/projects/UniTS/">Project website.</a></p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2024/03/04/UniTS/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Mar 4, 2024</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2024/03/02/WeintraubAward/">Weintraub Graduate Student Award</a>-->
-        <p class="card-header-title">Mar 2024: &nbsp; <span class="has-text-primary">Weintraub Graduate Student Award</span></p>
-<!--        <p class="card-header-item">Mar 2024</p>-->
-<!--        <p class="card-footer-item">Mar 2, 2024</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>Michelle receives the 2024 Harold M. Weintraub Graduate Student Award. The award recognizes exceptional achievement in graduate studies in biological sciences. <a href="https://dbmi.hms.harvard.edu/news/li-receives-weintraub-graduate-student-award">News Story.</a> Congratulations!</p>
-</p>-->
-            <p>Michelle receives the 2024 Harold M. Weintraub Graduate Student Award. The award recognizes exceptional achievement in graduate studies in biological sciences. <a href="https://dbmi.hms.harvard.edu/news/li-receives-weintraub-graduate-student-award">News Story.</a> Congratulations!</p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2024/03/02/WeintraubAward/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Mar 2, 2024</p>-->
 <!--    </footer>-->
 </div>
     </div>

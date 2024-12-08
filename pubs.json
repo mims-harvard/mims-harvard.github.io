@@ -35,6 +35,77 @@
     },
 
      {
+      "key": "submission24f",
+      "author": ["Shanghua Gao", "Ada Fang*", "Yepeng Huang*", "Valentina Giunchiglia*", "Ayush Noori*", "Jonathan Richard Schwarz", "Yasha Ektefaie", "Jovana Kondic", "Marinka Zitnik"],
+      "title": "Empowering Biomedical Discovery with AI Agents",
+      "venue": "Cell",
+      "year": "2024",
+      "thumbnail": "AIAgents.png",
+      "pdf": "https://www.cell.com/cell/fulltext/S0092-8674(24)01070-5",
+      "url": "https://www.cell.com/cell/fulltext/S0092-8674(24)01070-5",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2404.02831"
+      }
+    },
+
+     {
+      "key": "submission24u",
+      "author": ["Owen Queen*", "Yepeng Huang*", "Robert Calef*", "Valentina Giunchiglia", "Tianlong Chen", "George Dasoulas", "LeAnn Tai", "Yasha Ektefaie", "Ayush Noori", "Joseph Brown", "Tom Cobley", "Karin Hrovatin", "Tom Hartvigsen", "Fabian J. Theis", "Bradley L. Pentelute", "Vikram Khurana", "Manolis Kellis", "Marinka Zitnik"],
+      "title": "ProCyon: A multimodal foundation model for protein phenotypes",
+      "venue": "In Review",
+      "year": "2024",
+      "thumbnail": "ProCyon25.png",
+      "pdf": "",
+      "url": "https://www.biorxiv.org/content/10.1101/2024.12.10.627665",
+      "type": "journal",
+      "supp":
+      {
+        "bioRxiv": "https://www.biorxiv.org/content/10.1101/2024.12.10.627665",
+        "project website": "https://zitniklab.hms.harvard.edu/ProCyon/",
+        "code": "https://github.com/mims-harvard/ProCyon"
+      }
+    },
+
+     {
+      "key": "submission24a",
+      "author": ["Guadalupe Gonzalez", "Isuru Herath", "Kirill Veselkov", "Michael Bronstein", "Marinka Zitnik"],
+      "title": "Combinatorial Prediction of Therapeutic Perturbations Using Causally-Inspired Neural Networks",
+      "venue": "In Review",
+      "year": "2024",
+      "thumbnail": "PDGrapher24.png",
+      "pdf": "",
+      "url": "https://www.biorxiv.org/content/10.1101/2024.01.03.573985",
+      "type": "journal",
+      "supp":
+      {
+        "bioRxiv": "https://www.biorxiv.org/content/10.1101/2024.01.03.573985",
+        "project website": "https://zitniklab.hms.harvard.edu/projects/PDGrapher/",
+        "code": "https://github.com/mims-harvard/PDGrapher"
+      }
+    },
+
+     {
+      "key": "submission24t",
+      "author": ["Ruth Johnson", "Uri Gottlieb", "Galit Shaham", "Lihi Eisen", "Jacob Waxman", "Stav Devons-Sberro", "Curtis R. Ginder", "Peter Hong", "Raheel Sayeed", "Ben Y. Reis", "Ran D. Balicer", "Noa Dagan", "Marinka Zitnik"],
+      "title": "Unified Clinical Vocabulary Embeddings for Advancing Precision Medicine",
+      "venue": "In Review",
+      "year": "2024",
+      "thumbnail": "clinical-knowledge-embeddings.png",
+      "pdf": "",
+      "url": "https://www.medrxiv.org/content/10.1101/2024.12.03.24318322",
+      "type": "journal",
+      "supp":
+      {
+        "medRxiv": "https://www.medrxiv.org/content/10.1101/2024.12.03.24318322",
+        "code": "https://github.com/mims-harvard/Clinical-knowledge-embeddings",
+        "project website": "https://zitniklab.hms.harvard.edu/projects/Clinical-knowledge-embeddings"
+      }
+    },
+
+
+     {
       "key": "submission23g",
       "author": ["Michelle M Li", "Yepeng Huang", "Marissa Sumathipala", "Man Qing Liang", "Alberto Valdeolivas", "Ashwin N Ananthakrishnan",  "Katherine Liao", "Daniel Marbach", "Marinka Zitnik"],
       "title": "Contextual AI Models for Single-Cell Protein Biology",
@@ -81,41 +152,6 @@
     },
 
      {
-      "key": "submission24f",
-      "author": ["Shanghua Gao", "Ada Fang*", "Yepeng Huang*", "Valentina Giunchiglia*", "Ayush Noori*", "Jonathan Richard Schwarz", "Yasha Ektefaie", "Jovana Kondic", "Marinka Zitnik"],
-      "title": "Empowering Biomedical Discovery with AI Agents",
-      "venue": "Cell",
-      "year": "2024",
-      "thumbnail": "AIAgents.png",
-      "pdf": "https://www.cell.com/cell/fulltext/S0092-8674(24)01070-5",
-      "url": "https://www.cell.com/cell/fulltext/S0092-8674(24)01070-5",
-      "type": "journal",
-      "supp":
-      {
-        "arXiv": "https://arxiv.org/abs/2404.02831"
-      }
-    },
-
-
-     {
-      "key": "submission24a",
-      "author": ["Guadalupe Gonzalez", "Isuru Herath", "Kirill Veselkov", "Michael Bronstein", "Marinka Zitnik"],
-      "title": "Combinatorial Prediction of Therapeutic Perturbations Using Causally-Inspired Neural Networks",
-      "venue": "In Review",
-      "year": "2024",
-      "thumbnail": "PDGrapher24.png",
-      "pdf": "",
-      "url": "https://www.biorxiv.org/content/10.1101/2024.01.03.573985",
-      "type": "journal",
-      "supp":
-      {
-        "bioRxiv": "https://www.biorxiv.org/content/10.1101/2024.01.03.573985",
-        "project website": "https://zitniklab.hms.harvard.edu/projects/PDGrapher/",
-        "code": "https://github.com/mims-harvard/PDGrapher"
-      }
-    },
-
-     {
       "key": "submission24d",
       "author": ["Zaixi Zhang", "Wanxiang Shen", "Qi Liu", "Marinka Zitnik"],
       "title": "Efficient Generation of Protein Pockets with PocketGen",
@@ -137,11 +173,11 @@
       "key": "submission24c",
       "author": ["Yasha Ektefaie", "Andrew Shen", "Daria Bykova", "Maximillian Marin", "Marinka Zitnik*", "Maha R Farhat*"],
       "title": "Evaluating Generalizability of Artificial Intelligence Models for Molecular Datasets",
-      "venue": "Nature Machine Intelligence (in press)",
+      "venue": "Nature Machine Intelligence",
       "year": "2024",
       "thumbnail": "SPECTRA.png",
-      "pdf": "",
-      "url": "https://www.biorxiv.org/content/10.1101/2024.02.25.581982",
+      "pdf": "https://rdcu.be/d2D0z",
+      "url": "https://www.nature.com/articles/s42256-024-00931-6",
       "type": "journal",
       "supp":
       {
