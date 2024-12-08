@@ -96,7 +96,6 @@
       }
     },
 
-
      {
       "key": "submission24a",
       "author": ["Guadalupe Gonzalez", "Isuru Herath", "Kirill Veselkov", "Michael Bronstein", "Marinka Zitnik"],
@@ -112,6 +111,24 @@
         "bioRxiv": "https://www.biorxiv.org/content/10.1101/2024.01.03.573985",
         "project website": "https://zitniklab.hms.harvard.edu/projects/PDGrapher/",
         "code": "https://github.com/mims-harvard/PDGrapher"
+      }
+    },
+
+     {
+      "key": "submission24t",
+      "author": ["Ruth Johnson", "Uri Gottlieb", "Galit Shaham", "Lihi Eisen", "Jacob Waxman", "Stav Devons-Sberro", "Curtis R. Ginder", "Peter Hong", "Raheel Sayeed", "Ben Y. Reis", "Ran D. Balicer", "Noa Dagan", "Marinka Zitnik"],
+      "title": "Unified Clinical Vocabulary Embeddings for Advancing Precision Medicine",
+      "venue": "In Review",
+      "year": "2024",
+      "thumbnail": "clinical-knowledge-embeddings.png",
+      "pdf": "",
+      "url": "https://www.medrxiv.org/content/10.1101/2024.12.03.24318322",
+      "type": "journal",
+      "supp":
+      {
+        "medRxiv": "https://www.medrxiv.org/content/10.1101/2024.12.03.24318322",
+        "code": "https://github.com/mims-harvard/Clinical-knowledge-embeddings",
+        "project website": "https://zitniklab.hms.harvard.edu/projects/Clinical-knowledge-embeddings"
       }
     },
 
@@ -137,11 +154,11 @@
       "key": "submission24c",
       "author": ["Yasha Ektefaie", "Andrew Shen", "Daria Bykova", "Maximillian Marin", "Marinka Zitnik*", "Maha R Farhat*"],
       "title": "Evaluating Generalizability of Artificial Intelligence Models for Molecular Datasets",
-      "venue": "Nature Machine Intelligence (in press)",
+      "venue": "Nature Machine Intelligence",
       "year": "2024",
       "thumbnail": "SPECTRA.png",
-      "pdf": "",
-      "url": "https://www.biorxiv.org/content/10.1101/2024.02.25.581982",
+      "pdf": "https://rdcu.be/d2D0z",
+      "url": "https://www.nature.com/articles/s42256-024-00931-6",
       "type": "journal",
       "supp":
       {
