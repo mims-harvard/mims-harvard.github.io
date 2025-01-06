@@ -30,7 +30,8 @@
         "Harvard Medicine News": "https://dbmi.hms.harvard.edu/news/artificial-intelligence-beyond-clinic",
         "The Economist": "https://www.economist.com/leaders/2023/09/14/how-artificial-intelligence-can-revolutionise-science",
         "Chemical and Engineering News": "https://cen.acs.org/business/informatics/tricky-ethics-AI-lab/101/i31",
-        "Kempner Institute": "https://www.harvard.edu/kempner-institute/2023/09/15/zitnik-nature-publications/"
+        "Kempner Institute": "https://www.harvard.edu/kempner-institute/2023/09/15/zitnik-nature-publications/",
+        "ChatGPT and Science in Nature": "https://www.nature.com/articles/d41586-023-03930-6"
       }
     },
 
@@ -53,9 +54,9 @@
      {
       "key": "submission24u",
       "author": ["Owen Queen*", "Yepeng Huang*", "Robert Calef*", "Valentina Giunchiglia", "Tianlong Chen", "George Dasoulas", "LeAnn Tai", "Yasha Ektefaie", "Ayush Noori", "Joseph Brown", "Tom Cobley", "Karin Hrovatin", "Tom Hartvigsen", "Fabian J. Theis", "Bradley L. Pentelute", "Vikram Khurana", "Manolis Kellis", "Marinka Zitnik"],
-      "title": "ProCyon: A multimodal foundation model for protein phenotypes",
+      "title": "ProCyon: A Multimodal Foundation Model for Protein Phenotypes",
       "venue": "In Review",
-      "year": "2024",
+      "year": "2025",
       "thumbnail": "ProCyon25.png",
       "pdf": "",
       "url": "https://www.biorxiv.org/content/10.1101/2024.12.10.627665",
@@ -64,7 +65,78 @@
       {
         "bioRxiv": "https://www.biorxiv.org/content/10.1101/2024.12.10.627665",
         "project website": "https://zitniklab.hms.harvard.edu/ProCyon/",
-        "code": "https://github.com/mims-harvard/ProCyon"
+        "code": "https://github.com/mims-harvard/ProCyon",
+        "Kempner Institute": "https://kempnerinstitute.harvard.edu/research/deeper-learning/procyon-a-multimodal-foundation-model-for-protein-phenotypes/"
+      }
+    },
+
+     {
+      "key": "submission25d",
+      "author": ["Michelle M. Li", "Kevin Li", "Yasha Ektefaie", "Shvat Messica", "Marinka Zitnik"],
+      "title": "Controllable Sequence Editing for Counterfactual Generation",
+      "venue": "In Review",
+      "year": "2025",
+      "thumbnail": "clef25.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2502.03569",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2502.03569",
+        "code": "https://github.com/mims-harvard/CLEF",
+        "project website": "https://zitniklab.hms.harvard.edu/projects/CLEF"
+      }
+    },
+
+    {
+      "key": "submission25c",
+      "author": ["Xiaorui Su", "Shvat Messica", "Yepeng Huang", "Ruth Johnson", "Lukas Fesser", "Shanghua Gao", "Faryad Sahneh", "Marinka Zitnik"],
+      "title": "Multimodal Medical Code Tokenizer",
+      "venue": "In Review",
+      "year": "2025",
+      "thumbnail": "medtok25.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2502.04397",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2502.04397",
+        "project website": "https://zitniklab.hms.harvard.edu/projects/MedTok"
+      }
+    },
+
+     {
+      "key": "submission24p",
+      "author": ["Xiaorui Su", "Yibo Wang", "Shanghua Gao", "Xiaolong Liu", "Valentina Giunchiglia", "Djork-Arné Clevert", "Marinka Zitnik"],
+      "title": "Knowledge Graph Based Agent for Complex, Knowledge-Intensive QA in Medicine",
+      "venue": "International Conference on Learning Representations, ICLR",
+      "year": "2025",
+      "thumbnail": "KGARevion.png",
+      "pdf": "https://openreview.net/pdf?id=tnB94WQGrn",
+      "url": "https://arxiv.org/abs/2410.04660",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2410.04660",
+        "project website": "https://zitniklab.hms.harvard.edu/projects/KGARevion",
+        "code": "https://github.com/mims-harvard/KGARevion"
+      }
+    },
+
+     {
+      "key": "submission25b",
+      "author": ["Andrew Shen*", "Yasha Ektefaie*", "Lavik Jain", "Maha Farhat*", "Marinka Zitnik*"],
+      "title": "Phyla: Towards a Foundation Model for Phylogenetic Inference",
+      "venue": "In Review",
+      "year": "2025",
+      "thumbnail": "phyla.png",
+      "pdf": "",
+      "url": "https://www.biorxiv.org/content/10.1101/2025.01.17.633626",
+      "type": "journal",
+      "supp":
+      {
+        "bioRxiv": "https://www.biorxiv.org/content/10.1101/2025.01.17.633626",
+        "code": "https://github.com/mims-harvard/Phyla"
       }
     },
 
@@ -73,7 +145,7 @@
       "author": ["Guadalupe Gonzalez", "Isuru Herath", "Kirill Veselkov", "Michael Bronstein", "Marinka Zitnik"],
       "title": "Combinatorial Prediction of Therapeutic Perturbations Using Causally-Inspired Neural Networks",
       "venue": "In Review",
-      "year": "2024",
+      "year": "2025",
       "thumbnail": "PDGrapher24.png",
       "pdf": "",
       "url": "https://www.biorxiv.org/content/10.1101/2024.01.03.573985",
@@ -91,7 +163,7 @@
       "author": ["Ruth Johnson", "Uri Gottlieb", "Galit Shaham", "Lihi Eisen", "Jacob Waxman", "Stav Devons-Sberro", "Curtis R. Ginder", "Peter Hong", "Raheel Sayeed", "Ben Y. Reis", "Ran D. Balicer", "Noa Dagan", "Marinka Zitnik"],
       "title": "Unified Clinical Vocabulary Embeddings for Advancing Precision Medicine",
       "venue": "In Review",
-      "year": "2024",
+      "year": "2025",
       "thumbnail": "clinical-knowledge-embeddings.png",
       "pdf": "",
       "url": "https://www.medrxiv.org/content/10.1101/2024.12.03.24318322",
@@ -104,6 +176,21 @@
       }
     },
 
+     {
+      "key": "submission25a",
+      "author": ["Charlotte Bunne", "Yusuf Roohani", "Yanay Rosen", "and others", "Marinka Zitnik", "Theofanis Karaletsos", "Aviv Regev", "Emma Lundberg", "Jure Leskovec", "Stephen R Quake"],
+      "title": "How to Build the Virtual Cell with Artificial Intelligence: Priorities and Opportunities",
+      "venue": "Cell",
+      "year": "2024",
+      "thumbnail": "AIAgents.png",
+      "pdf": "https://www.cell.com/cell/fulltext/S0092-8674(24)01332-1",
+      "url": "https://www.cell.com/cell/fulltext/S0092-8674(24)01332-1",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2409.11654"
+      }
+    },
 
      {
       "key": "submission23g",
@@ -188,20 +275,66 @@
     },
 
      {
-      "key": "submission24p",
-      "author": ["Xiaorui Su", "Yibo Wang", "Shanghua Gao", "Xiaolong Liu", "Valentina Giunchiglia", "Djork-Arné Clevert", "Marinka Zitnik"],
-      "title": "Knowledge Graph Based Agent for Complex, Knowledge-Intensive QA in Medicine",
-      "venue": "In Review",
-      "year": "2024",
-      "thumbnail": "KGARevion.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2410.04660",
+      "key": "submission24l",
+      "author": ["Arinbjorn Kolbeinsson", "Kyle O'Brien", "Tianjin Huang", "Shanghua Gao", "Shiwei Liu", "Jonathan Richard Schwarz", "Anurag Vaidya", "Faisal Mahmood", "Marinka Zitnik", "Tianlong Chen", "Thomas Hartvigsen"],
+      "title": "Composable Interventions for Language Models",
+      "venue": "International Conference on Learning Representations, ICLR",
+      "year": "2025",
+      "thumbnail": "test-time-interventionsLLM.png",
+      "pdf": "https://openreview.net/pdf?id=tu3qwNjrtw",
+      "url": "https://arxiv.org/abs/2407.06483",
       "type": "journal",
       "supp":
       {
-        "arXiv": "https://arxiv.org/abs/2410.04660",
-        "project website": "https://zitniklab.hms.harvard.edu/projects/KGARevion",
-        "code": ""
+        "arXiv": "https://arxiv.org/abs/2407.06483"
+      }
+    },
+
+     {
+      "key": "submission24j",
+      "author": ["Xinxiu Li", "Joseph Loscalzo", "AKM Firoj Mahmud", "Dina Mansour Aly Aly", "Andrey Rzhetsky", "Marinka Zitnik", "Mikael Benson"],
+      "title": "Digital Twins as Global Learning Health and Disease Models for Preventive and Personalized Medicine",
+      "venue": "Genome Medicine",
+      "year": "2025",
+      "thumbnail": "digitaltwins25.png",
+      "pdf": "https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-025-01435-7",
+      "url": "https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-025-01435-7",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://www.preprints.org/manuscript/202406.0357"
+      }
+    },
+
+     {
+      "key": "submission24z",
+      "author": ["Zaixi Zhang", "Ruofan Jin", "Kaidi Fu", "Le Cong", "Marinka Zitnik", "Mengdi Wang"],
+      "title": "FoldMark: Protecting Protein Generative Models with Watermarking",
+      "venue": "In Review",
+      "year": "2025",
+      "thumbnail": "MultiscaleGNNAlzheimer.png",
+      "pdf": "",
+      "url": "https://www.biorxiv.org/content/10.1101/2024.10.23.619960",
+      "type": "journal",
+      "supp":
+      {
+        "bioRxiv": "https://www.biorxiv.org/content/10.1101/2024.10.23.619960"
+      }
+    },
+
+     {
+      "key": "submission24v",
+      "author": ["Anya Chauhan", "Ayush Noori", "Zhaozhi Li", "Yingnan He", "Michelle M Li", "Marinka Zitnik", "Sudeshna Das"],
+      "title": "Multi Scale Graph Neural Network for Alzheimer's Disease",
+      "venue": "Machine Learning for Health",
+      "year": "2024",
+      "thumbnail": "MultiscaleGNNAlzheimer.png",
+      "pdf": "https://arxiv.org/abs/2411.10720",
+      "url": "https://arxiv.org/abs/2411.10720",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2411.10720"
       }
     },
 
@@ -265,7 +398,7 @@
       "author": ["Wanxiang Shen", "Chao Cui", "Xiaorui Su", "Zaixi Zhang", "Alejandro Velez-Arce", "Jianming Wang", "Xiangcheng Shi", "Yanbing Zhang", "Jie Wu", "Yu Zong Chen", "Marinka Zitnik"],
       "title": "Activity Cliff-Informed Contrastive Learning for Molecular Property Prediction",
       "venue": "In Review",
-      "year": "2024",
+      "year": "2025",
       "thumbnail": "MoExtend.png",
       "pdf": "",
       "url": "https://chemrxiv.org/engage/chemrxiv/article-details/6470c963be16ad5c57f5526c",
@@ -282,7 +415,7 @@
       "author": ["Alejandro Velez-Arce", "Kexin Huang", "Michelle M Li", "Xiang Lin", "Wenhao Gao", "Tianfan Fu", "Manolis Kellis", "Bradley L. Pentelute", "Marinka Zitnik"],
       "title": "TDC-2: Multimodal Foundation for Therapeutic Science",
       "venue": "In Review",
-      "year": "2024",
+      "year": "2025",
       "thumbnail": "tdc2.png",
       "pdf": "",
       "url": "https://www.biorxiv.org/content/10.1101/2024.06.12.598655",
@@ -293,6 +426,22 @@
         "NeurIPS AI for New Drug Modalities Workshop": "https://openreview.net/pdf?id=kL8dlYp6IM",
         "project website": "https://tdcommons.ai/",
         "code": "https://github.com/mims-harvard/TDC"
+      }
+    },
+
+     {
+      "key": "submission24za",
+      "author": ["Shanshan Zhong", "Shanghua Gao", "Zhongzhan Huang", "Wushao Wen", "Marinka Zitnik", "Pan Zhou"],
+      "title": "MoExtend: Tuning New Experts for Modality and Task Extension",
+      "venue": "Association for Computational Linguistics, ACL SRW",
+      "year": "2024",
+      "thumbnail": "MoExtend.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2408.03511",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2408.03511"
       }
     },
 
@@ -367,7 +516,7 @@
       "author": ["Kangyu Zheng", "Yingzhou Lu", "Zaixi Zhang", "Zhongwei Wan", "Yao Ma", "Marinka Zitnik", "Tianfan Fu"],
       "title": "Structure-based Drug Design Benchmark: Do 3D Methods Really Dominate?",
       "venue": "In Review",
-      "year": "2024",
+      "year": "2025",
       "thumbnail": "GADC24.png",
       "pdf": "",
       "url": "https://arxiv.org/abs/2406.03403",
@@ -379,28 +528,11 @@
     },
 
      {
-      "key": "submission24j",
-      "author": ["Xinxiu Li", "Joseph Loscalzo", "AKM Firoj Mahmud", "Dina Mansour Aly Aly", "Andrey Rzhetsky", "Marinka Zitnik", "Mikael Benson"],
-      "title": "Digital Twins as Global Learning Health and Disease Models of Individuals",
-      "venue": "In Review",
-      "year": "2024",
-      "thumbnail": "GADC24.png",
-      "pdf": "",
-      "url": "https://www.preprints.org/manuscript/202406.0357",
-      "type": "journal",
-      "supp":
-      {
-        "arXiv": "https://www.preprints.org/manuscript/202406.0357"
-      }
-    },
-
-
-     {
       "key": "submission24k",
       "author": ["Jintai Chen", "Yaojun Hu", "Yue Wang", "Yingzhou Lu", "Xu Cao", "Miao Lin", "Hongxia Xu", "Jian Wu", "Cao Xiao", "Jimeng Sun", "Lucas Glass", "Kexin Huang", "Marinka Zitnik", "Tianfan Fu"],
       "title": "TrialBench: Multi-Modal Artificial Intelligence-Ready Clinical Trial Datasets",
       "venue": "In Review",
-      "year": "2024",
+      "year": "2025",
       "thumbnail": "GADC24.png",
       "pdf": "",
       "url": "https://arxiv.org/abs/2407.00631",
@@ -408,22 +540,6 @@
       "supp":
       {
         "arXiv": "https://arxiv.org/abs/2407.00631"
-      }
-    },
-
-     {
-      "key": "submission24l",
-      "author": ["Jintai Chen", "Yaojun Hu", "Yue Wang", "Yingzhou Lu", "Xu Cao", "Miao Lin", "Hongxia Xu", "Jian Wu", "Cao Xiao", "Jimeng Sun", "Lucas Glass", "Kexin Huang", "Marinka Zitnik", "Tianfan Fu"],
-      "title": "Composable Interventions for Language Models",
-      "venue": "In Review",
-      "year": "2024",
-      "thumbnail": "GADC24.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2407.06483",
-      "type": "journal",
-      "supp":
-      {
-        "arXiv": "https://arxiv.org/abs/2407.06483"
       }
     },
 
@@ -449,7 +565,7 @@
       "author": ["Zaixi Zhang", "Jiaxian Yan", "Qi Liu", "Enhong Chen", "Marinka Zitnik"],
       "title": "Geometric Deep Learning for Structure-Based Drug Design: A Survey",
       "venue": "In Review",
-      "year": "2024",
+      "year": "2025",
       "thumbnail": "SBDD23.png",
       "pdf": "",
       "url": "https://arxiv.org/abs/2306.11768",
@@ -639,10 +755,10 @@
 
      {
       "key": "submission22n",
-      "author": ["Emily Alsentzer*", "Michelle M. Li*", "Shilpa N. Kobren", "Undiagnosed Diseases Network", "Isaac S. Kohane", "Marinka Zitnik"],
-      "title": "Deep Learning for Diagnosing Patients with Rare Genetic Diseases",
+      "author": ["Emily Alsentzer*", "Michelle M. Li*", "Shilpa N. Kobren", "Ayush Noori", "Undiagnosed Diseases Network", "Isaac S. Kohane", "Marinka Zitnik"],
+      "title": "Few Shot Learning for Phenotype-Driven Diagnosis of Patients with Rare Genetic Diseases",
       "venue": "In Review ",
-      "year": "2024",
+      "year": "2025",
       "thumbnail": "SHEPHERD23.png",
       "pdf": "",
       "url": "https://www.medrxiv.org/content/10.1101/2022.12.07.22283238",

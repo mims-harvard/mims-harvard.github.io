@@ -1,0 +1,859 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Multimodal Medical Code Tokenizer - Zitnik Lab</title>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="shortcut icon" type="image/png"
+           href="/favicon.png" 
+    />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Multimodal Medical Code Tokenizer | Zitnik Lab</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Multimodal Medical Code Tokenizer" />
+<meta name="author" content="Marinka Zitnik" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Mutlimodal Learning, Medical QA, EHR foundation models, Precision medicine, Transformer models, Tokenization" />
+<meta property="og:description" content="Mutlimodal Learning, Medical QA, EHR foundation models, Precision medicine, Transformer models, Tokenization" />
+<link rel="canonical" href="https://zitniklab.hms.harvard.edu/projects/MedTok/" />
+<meta property="og:url" content="https://zitniklab.hms.harvard.edu/projects/MedTok/" />
+<meta property="og:site_name" content="Zitnik Lab" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Multimodal Medical Code Tokenizer" />
+<meta name="twitter:site" content="@marinkazitnik" />
+<meta name="twitter:creator" content="@Marinka Zitnik" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Marinka Zitnik"},"description":"Mutlimodal Learning, Medical QA, EHR foundation models, Precision medicine, Transformer models, Tokenization","headline":"Multimodal Medical Code Tokenizer","url":"https://zitniklab.hms.harvard.edu/projects/MedTok/"}</script>
+<!-- End Jekyll SEO tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
+<script>
+  window['ga-disable-UA-162129505-1'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-162129505-1');
+</script><!-- head scripts --></head>
+
+  <body>
+    
+<nav class="navbar is-primary" >
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item"><b>
+                Zitnik Lab
+            </b></a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+<!--                <a href="/" class="navbar-item "><b>Home</b></a>-->
+                
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a href="/#" class="navbar-link "><b>About</b></a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/bio/" class="navbar-item "><b>Bio</b></a>
+                            
+                            <a href="/contact/" class="navbar-item "><b>Contact</b></a>
+                            
+                            <a href="/talks/" class="navbar-item "><b>Recent Talks</b></a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                <a href="/research/" class="navbar-item "><b>Research</b></a>
+                    
+                
+                    
+                <a href="/publications/" class="navbar-item "><b>Publications</b></a>
+                    
+                
+                    
+                <a href="/people/" class="navbar-item "><b>Members</b></a>
+                    
+                
+                    
+                <a href="/meetings/" class="navbar-item "><b>Education</b></a>
+                    
+                
+                    
+                <a href="/DMAI/" class="navbar-item "><b>DMAI</b></a>
+                    
+                
+                    
+                <a href="/data/" class="navbar-item "><b>Datasets</b></a>
+                    
+                
+                    
+                <a href="/software/" class="navbar-item "><b>AI Models</b></a>
+                    
+                
+                    
+                <a href="https://zitniklab.hms.harvard.edu/TDC/" class="navbar-item "><b>TDC</b></a>
+                    
+                
+                    
+                <a href="/news/" class="navbar-item "><b>News</b></a>
+                    
+                
+                    
+                <a href="/jobs/" class="navbar-item "><b>Join Us</b></a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+
+    
+        <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
+    <div class="hero-body">
+        <div class="container">
+            <p class="title is-2">Multimodal Medical Code Tokenizer</p>
+            <p class="subtitle is-3"></p>
+            
+        </div>
+    </div>
+</section>
+    
+    
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+                <div class="column is-8">
+                    
+                    
+                    
+<div class="content">
+    <div class="box has-background-info has-text-white"> <p> Medical foundation models rely on tokenizing electronic health records (EHRs) into discrete sequences, but existing tokenizers treat medical codes as isolated text tokens, ignoring their structured relationships. With over 600,000 codes spanning diagnoses, treatments, and medications, capturing these dependencies is essential for accurate clinical reasoning. </p> <p> We introduce MedTok, a multimodal medical code tokenizer that integrates both text descriptions and relational context. MedTok encodes medical codes using a language model for textual meaning and a graph encoder for hierarchical structure, unifying both into a shared token space. This approach ensures that medical codes are represented with richer, more context-aware embeddings. </p> <p> Replacing standard tokenizers with MedTok significantly improves predictive performance across five EHR models, increasing AUPRC by 4.10% on MIMIC-III, 4.78% on MIMIC-IV, and 11.30% on EHRShot, with the largest gains in drug recommendation. Beyond EHR modeling, MedTok enhances medical QA systems, demonstrating its potential as a unified tokenizer for medical foundation models. </p> </div>
+
+<h2 id="motivation">Motivation</h2>
+
+<p>Medical codes are the foundation of structured electronic health records (EHRs), encoding diagnoses, treatments, medications, and procedures in a standardized format. However, existing tokenization strategies treat these codes as isolated text tokens, disregarding their hierarchical relationships, co-occurrences, and domain-specific dependencies. With over 600,000 unique codes spanning multiple coding systems like ICD-10, SNOMED CT, and ATC, conventional tokenization leads to inefficient vocabulary expansion, loss of relational context, and fragmented representations that hinder medical AI models. These limitations affect the performance of foundation models trained on EHR data, limiting their ability to make accurate predictions, generate meaningful representations, and generalize across clinical tasks.</p>
+
+<p>MedTok addresses this challenge by introducing a multimodal tokenizer that integrates both textual descriptions and relational knowledge from medical ontologies. Unlike traditional approaches that rely solely on text-based embeddings, MedTok combines language models with graph-based encodings to preserve the structure and semantics of medical codes. This unified tokenization framework enables foundation models to leverage both linguistic and ontological context, leading to more expressive token representations.</p>
+
+<center>
+<img src="/img/MedTok-1.png" />
+</center>
+
+<h2 id="overview-of-medtok">Overview of MedTok</h2>
+
+<p>MedTok is a multimodal tokenizer designed to transform medical codes into structured token representations that preserve both textual semantics and hierarchical relationships. It achieves this by combining a text encoder, which processes the natural language descriptions of medical codes, with a graph encoder, which captures the dependencies and structured relations among codes. By jointly optimizing these two modalities, MedTok generates token embeddings that are both semantically rich and context-aware, allowing AI models to better interpret and utilize medical data.</p>
+
+<p>MedTok operates through a three-step process:</p>
+
+<ol>
+  <li>First, it encodes the textual descriptions of medical codes using a pre-trained language model, extracting meaningful embeddings.</li>
+  <li>Next, it integrates graph-based representations from biomedical knowledge graphs, capturing relationships such as disease co-occurrence, drug interactions, and procedural hierarchies.</li>
+  <li>Finally, it applies vector quantization to map both modalities into a shared token space, ensuring that information is retained in a format compatible with transformer-based models.</li>
+</ol>
+
+<p>This process allows MedTok to serve as a drop-in replacement for existing tokenizers, improving model performance across a wide range of EHR-based applications.</p>
+
+<center>
+<img src="/img/MedTok-2.png" />
+</center>
+
+<h2 id="medtok-tokenizer-integrated-with-in-patient-ehr-transformer-models">MedTok tokenizer integrated with in-patient EHR transformer models</h2>
+
+<p>In the inpatient setting, MedTok is integrated with predictive models trained on ICU patient records from MIMIC-III and MIMIC-IV datasets. These datasets contain structured medical codes representing diagnoses, treatments, and lab results, which are critical for predicting clinical outcomes such as mortality risk, readmission likelihood, and length of stay. Standard tokenization approaches fail to capture dependencies between medical codes, leading to suboptimal performance in these predictive tasks.</p>
+
+<p>By replacing traditional tokenization methods with MedTok, we observe significant improvements across all clinical tasks. MedTok enhances AUPRC scores for mortality prediction, readmission prediction, and phenotype classification by up to 4.10% in MIMIC-III and 4.78% in MIMIC-IV. The largest gains are seen in drug recommendation tasks, where capturing the relationships between medications and diagnoses is crucial. These results demonstrate that MedTok enables more structured and context-aware tokenization, allowing transformer-based models to better understand inpatient EHR data.</p>
+
+<center>
+<img src="/img/MedTok-5.png" />
+</center>
+
+<h2 id="medtok-tokenizer-integrated-with-out-patient-ehr-transformer-models">MedTok tokenizer integrated with out-patient EHR transformer models</h2>
+
+<p>MedTok is also evaluated in outpatient settings using the EHRShot dataset, which includes longitudinal patient records spanning multiple visits across different healthcare facilities. Unlike inpatient datasets, outpatient records contain more diverse sequences of medical events, making it essential to capture long-term dependencies between medical codes. Standard tokenization methods often struggle with this variability, leading to inconsistencies in predictive performance.</p>
+
+<p>Integrating MedTok into outpatient models results in substantial improvements in both operational and clinical tasks. The most significant impact is observed in mortality prediction, where MedTok increases AUPRC by 11.30%, demonstrating its ability to better capture disease trajectories over time. MedTok also improves new disease diagnosis assignments, particularly in detecting conditions such as acute myocardial infarction (8.80% improvement).</p>
+
+<center>
+<img src="/img/MedTok-6.png" />
+</center>
+
+<h2 id="medtok-and-alternative-tokenization-strategies">MedTok and alternative tokenization strategies</h2>
+
+<p>Standard tokenization methods in EHR modeling either treat medical codes as isolated text tokens or rely on manually curated embeddings that lack adaptability. Traditional text-based tokenizers, such as BERT-based models, struggle with the sheer scale of medical vocabularies and fail to capture relational dependencies between codes. Graph-based tokenizers offer some advantages by incorporating structured relationships but often lose important textual semantics in the process.</p>
+
+<p>MedTok bridges this gap by integrating both modalities, ensuring that token representations retain the advantages of text-based semantics while embedding relational structures from medical ontologies. Compared to alternative tokenization strategies, MedTok consistently outperforms both text-only and graph-only approaches. Experimental results show that MedTok achieves higher AUPRC scores across inpatient and outpatient tasks, outperforming text-based tokenizers by up to 5.24% and graph-based tokenizers by up to 6.00%.</p>
+
+<center>
+<img src="/img/MedTok-3.png" />
+</center>
+
+<h2 id="benefits-of-multimodal-tokenization">Benefits of multimodal tokenization</h2>
+
+<p>Ablation studies confirm the importance of both modalities in MedTok’s design. Removing the graph-based component leads to a decline in performance on drug recommendation and disease co-occurrence tasks, while removing the text-based component degrades performance in readmission prediction and phenotype classification.</p>
+
+<center>
+<img src="/img/MedTok-4.png" />
+</center>
+
+<h2 id="medtok-is-a-general-purpose-tokenizer-medical-qa-systems">MedTok is a general purpose tokenizer: Medical QA systems</h2>
+
+<p>Beyond EHR-based tasks, MedTok demonstrates its versatility by improving performance in medical question-answering (QA) systems. Many medical QA models rely on large language models trained on free-text clinical data but lack structured knowledge from medical coding systems.</p>
+
+<p>We evaluate MedTok’s impact on the MedDDx dataset, which contains multiple-choice medical questions at different difficulty levels. Integrating MedTok with an LLM (LLaMA3.1-8B) leads to a 2.3% accuracy improvement on expert-level medical questions, demonstrating its ability to provide structured context for clinical reasoning.</p>
+
+<center>
+<img src="/img/MedTok-7.png" />
+</center>
+
+<h2 id="publication">Publication</h2>
+
+<p><a href="https://arxiv.org/abs/2502.04397">Multimodal Medical Code Tokenizer</a><br />
+Xiaorui Su, Shvat Messica, Yepeng Huang, Ruth Johnson, Lukas Fesser, Shanghua Gao, Faryad Sahneh, Marinka Zitnik<br />
+<em>In Review</em> 2025 <a href="https://arxiv.org/abs/2502.04397">[arXiv]</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{su2025multimodal,
+  title={Multimodal Medical Code Tokenizer},
+  author={Su, Xiaorui and Messica, Shvat and Huang, Yepeng and Johnson, Ruth and Fesser, Lukas and Gao, Shanghua and Sahneh, Faryad and Zitnik, Marinka},
+  journal={arXiv:2502.04397},
+  year={2025}
+}
+</code></pre></div></div>
+
+<h2 id="authors">Authors</h2>
+
+<ul>
+  <li><a href="">Xiaorui Su</a></li>
+  <li><a href="">Shvat Messica</a></li>
+  <li><a href="">Yepeng Huang</a></li>
+  <li><a href="">Ruth Johnson</a></li>
+  <li><a href="">Lukas Fesser</a></li>
+  <li><a href="">Shanghua Gao</a></li>
+  <li><a href="">Faryad Sahneh</a></li>
+  <li><a href="https://zitniklab.hms.harvard.edu/">Marinka Zitnik</a></li>
+</ul>
+
+</div>
+                </div>
+                
+                <div class="column is-4-desktop is-12-tablet">
+                    <p class="title is-4">Latest News</p>
+
+<div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/02/10/MedTok/">MedTok: Unlocking Medical Codes for GenAI</a>-->
+        <p class="card-header-title">Feb 2025: &nbsp; <span class="has-text-primary">MedTok: Unlocking Medical Codes for GenAI</span></p>
+<!--        <p class="card-header-item">Feb 2025</p>-->
+<!--        <p class="card-footer-item">Feb 10, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Meet <a href="https://arxiv.org/pdf/2502.04397">MedTok, a multimodal medical code tokenizer that transforms how AI understands structured medical data.</a> By integrating textual descriptions and relational contexts, MedTok enhances tokenization for transformer-based models—powering everything from EHR foundation models to medical QA. <a href="https://zitniklab.hms.harvard.edu/projects/MedTok">[Project website]</a></p>
+</p>-->
+            <p>Meet <a href="https://arxiv.org/pdf/2502.04397">MedTok, a multimodal medical code tokenizer that transforms how AI understands structured medical data.</a> By integrating textual descriptions and relational contexts, MedTok enhances tokenization for transformer-based models—powering everything from EHR foundation models to medical QA. <a href="https://zitniklab.hms.harvard.edu/projects/MedTok">[Project website]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/02/10/MedTok/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 10, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/02/10/CLEF/">What If You Could Rewrite Biology? Meet CLEF</a>-->
+        <p class="card-header-title">Feb 2025: &nbsp; <span class="has-text-primary">What If You Could Rewrite Biology? Meet CLEF</span></p>
+<!--        <p class="card-header-item">Feb 2025</p>-->
+<!--        <p class="card-footer-item">Feb 10, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>What if we could anticipate molecular and medical changes before they happen? Introducing <a href="https://arxiv.org/pdf/2502.03569">CLEF, an approach for counterfactual generation in biological and medical sequence models.</a> <a href="https://zitniklab.hms.harvard.edu/projects/CLEF">[Project website]</a></p>
+</p>-->
+            <p>What if we could anticipate molecular and medical changes before they happen? Introducing <a href="https://arxiv.org/pdf/2502.03569">CLEF, an approach for counterfactual generation in biological and medical sequence models.</a> <a href="https://zitniklab.hms.harvard.edu/projects/CLEF">[Project website]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/02/10/CLEF/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 10, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/02/05/DigitalTwins/">Digital Twins as Global Health and Disease Models</a>-->
+        <p class="card-header-title">Feb 2025: &nbsp; <span class="has-text-primary">Digital Twins as Global Health and Disease Models</span></p>
+<!--        <p class="card-header-item">Feb 2025</p>-->
+<!--        <p class="card-footer-item">Feb 5, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper on the role of digital twins as <a href="https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-025-01435-7">global health and disease learning models for preventive and personalized medicine.</a></p>
+</p>-->
+            <p>New paper on the role of digital twins as <a href="https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-025-01435-7">global health and disease learning models for preventive and personalized medicine.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/02/05/DigitalTwins/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 5, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/01/26/ICLRpapers/">LLM and KG+LLM agent papers at ICLR</a>-->
+        <p class="card-header-title">Jan 2025: &nbsp; <span class="has-text-primary">LLM and KG+LLM agent papers at ICLR</span></p>
+<!--        <p class="card-header-item">Jan 2025</p>-->
+<!--        <p class="card-footer-item">Jan 26, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New papers on <a href="https://arxiv.org/abs/2407.06483">test-time interventions in language models</a> and <a href="https://arxiv.org/abs/2410.04660">knowledge graph based LLM agents</a> accepted to ICLR. <a href="https://zitniklab.hms.harvard.edu/projects/KGARevion/">[KGARevion]</a></p>
+</p>-->
+            <p>New papers on <a href="https://arxiv.org/abs/2407.06483">test-time interventions in language models</a> and <a href="https://arxiv.org/abs/2410.04660">knowledge graph based LLM agents</a> accepted to ICLR. <a href="https://zitniklab.hms.harvard.edu/projects/KGARevion/">[KGARevion]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/01/26/ICLRpapers/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jan 26, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/01/25/AIM2/">Artificial Intelligence in Medicine 2</a>-->
+        <p class="card-header-title">Jan 2025: &nbsp; <span class="has-text-primary">Artificial Intelligence in Medicine 2</span></p>
+<!--        <p class="card-header-item">Jan 2025</p>-->
+<!--        <p class="card-footer-item">Jan 25, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited to share our new graduate course on <a href="https://zitniklab.hms.harvard.edu/AIM2/">Artificial Intelligence in Medicine 2</a>.</p>
+</p>-->
+            <p>Excited to share our new graduate course on <a href="https://zitniklab.hms.harvard.edu/AIM2/">Artificial Intelligence in Medicine 2</a>.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/01/25/AIM2/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jan 25, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/01/05/ProCyonKempnerBlog/">ProCyon AI Highlighted by Kempner</a>-->
+        <p class="card-header-title">Jan 2025: &nbsp; <span class="has-text-primary">ProCyon AI Highlighted by Kempner</span></p>
+<!--        <p class="card-header-item">Jan 2025</p>-->
+<!--        <p class="card-footer-item">Jan 5, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Thanks to Kempner Institute for highlighting our latest research, <a href="https://kempnerinstitute.harvard.edu/research/deeper-learning/procyon-a-multimodal-foundation-model-for-protein-phenotypes/">ProCyon, our protein-text foundation model for modeling protein functions.</a></p>
+</p>-->
+            <p>Thanks to Kempner Institute for highlighting our latest research, <a href="https://kempnerinstitute.harvard.edu/research/deeper-learning/procyon-a-multimodal-foundation-model-for-protein-phenotypes/">ProCyon, our protein-text foundation model for modeling protein functions.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/01/05/ProCyonKempnerBlog/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jan 5, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/01/05/CellSystemsVoices/">AI Design of Proteins for Therapeutics</a>-->
+        <p class="card-header-title">Jan 2025: &nbsp; <span class="has-text-primary">AI Design of Proteins for Therapeutics</span></p>
+<!--        <p class="card-header-item">Jan 2025</p>-->
+<!--        <p class="card-footer-item">Jan 5, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New Voices piece in Cell Systems: <a href="https://www.cell.com/cell-systems/abstract/S2405-4712(24)00309-0">How will computational protein design change biotechnology and therapeutic development?</a></p>
+</p>-->
+            <p>New Voices piece in Cell Systems: <a href="https://www.cell.com/cell-systems/abstract/S2405-4712(24)00309-0">How will computational protein design change biotechnology and therapeutic development?</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/01/05/CellSystemsVoices/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jan 5, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/12/16/ProCyon/">Foundation Model for Protein Phenotypes</a>-->
+        <p class="card-header-title">Dec 2024: &nbsp; <span class="has-text-primary">Foundation Model for Protein Phenotypes</span></p>
+<!--        <p class="card-header-item">Dec 2024</p>-->
+<!--        <p class="card-footer-item">Dec 16, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper: <a href="https://www.biorxiv.org/content/10.1101/2024.12.10.627665v1">ProCyon is a groundbreaking foundation model for modeling, generating, and predicting protein phenotypes</a>. <a href="https://zitniklab.hms.harvard.edu/ProCyon/">[Project website]</a> <a href="https://github.com/mims-harvard/ProCyon">[Code]</a></p>
+</p>-->
+            <p>New paper: <a href="https://www.biorxiv.org/content/10.1101/2024.12.10.627665v1">ProCyon is a groundbreaking foundation model for modeling, generating, and predicting protein phenotypes</a>. <a href="https://zitniklab.hms.harvard.edu/ProCyon/">[Project website]</a> <a href="https://github.com/mims-harvard/ProCyon">[Code]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/12/16/ProCyon/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 16, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/12/07/UnifiedClinicalVocabularyEmbeddings/">Unified Clinical Vocabulary Embeddings</a>-->
+        <p class="card-header-title">Dec 2024: &nbsp; <span class="has-text-primary">Unified Clinical Vocabulary Embeddings</span></p>
+<!--        <p class="card-header-item">Dec 2024</p>-->
+<!--        <p class="card-footer-item">Dec 7, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper: <a href="https://www.medrxiv.org/content/10.1101/2024.12.03.24318322">A unified resource provides a new representation of clinical knowledge by unifying medical vocabularies.</a> (1) Phenotype risk score analysis across 4.57 million patients, (2) Inter-institutional clinician panels evaluate alignment with clinical knowledge across 90 diseases and 3,000 clinical codes.</p>
+</p>-->
+            <p>New paper: <a href="https://www.medrxiv.org/content/10.1101/2024.12.03.24318322">A unified resource provides a new representation of clinical knowledge by unifying medical vocabularies.</a> (1) Phenotype risk score analysis across 4.57 million patients, (2) Inter-institutional clinician panels evaluate alignment with clinical knowledge across 90 diseases and 3,000 clinical codes.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/12/07/UnifiedClinicalVocabularyEmbeddings/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 7, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/12/07/SPECTRA/">SPECTRA in Nature Machine Intelligence</a>-->
+        <p class="card-header-title">Dec 2024: &nbsp; <span class="has-text-primary">SPECTRA in Nature Machine Intelligence</span></p>
+<!--        <p class="card-header-item">Dec 2024</p>-->
+<!--        <p class="card-footer-item">Dec 7, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Are biomedical AI models truly as smart as they seem? <a href="https://www.nature.com/articles/s42256-024-00931-6">SPECTRA is a framework that evaluates models by considering the full spectrum of cross-split overlap: train-test similarity.</a> SPECTRA reveals gaps in benchmarks for molecular sequence data across 19 models, including LLMs, GNNs, diffusion models, and conv nets.</p>
+</p>-->
+            <p>Are biomedical AI models truly as smart as they seem? <a href="https://www.nature.com/articles/s42256-024-00931-6">SPECTRA is a framework that evaluates models by considering the full spectrum of cross-split overlap: train-test similarity.</a> SPECTRA reveals gaps in benchmarks for molecular sequence data across 19 models, including LLMs, GNNs, diffusion models, and conv nets.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/12/07/SPECTRA/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 7, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/11/17/RhodesScholar/">Ayush Noori Selected as a Rhodes Scholar</a>-->
+        <p class="card-header-title">Nov 2024: &nbsp; <span class="has-text-primary">Ayush Noori Selected as a Rhodes Scholar</span></p>
+<!--        <p class="card-header-item">Nov 2024</p>-->
+<!--        <p class="card-footer-item">Nov 17, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Congratulations to <a href="https://www.thecrimson.com/article/2024/11/18/rhodes-scholars-announced-harvard-students/">Ayush Noori on being named a Rhodes Scholar</a>! Such an incredible achievement!</p>
+</p>-->
+            <p>Congratulations to <a href="https://www.thecrimson.com/article/2024/11/18/rhodes-scholars-announced-harvard-students/">Ayush Noori on being named a Rhodes Scholar</a>! Such an incredible achievement!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/11/17/RhodesScholar/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Nov 17, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/11/15/PocketGen/">PocketGen in Nature Machine Intelligence</a>-->
+        <p class="card-header-title">Nov 2024: &nbsp; <span class="has-text-primary">PocketGen in Nature Machine Intelligence</span></p>
+<!--        <p class="card-header-item">Nov 2024</p>-->
+<!--        <p class="card-footer-item">Nov 15, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>PocketGen is a <a href="https://www.nature.com/articles/s42256-024-00920-9">multimodal sequence-structure generative model for designing full-atom ligand-binding protein pockets.</a></p>
+</p>-->
+            <p>PocketGen is a <a href="https://www.nature.com/articles/s42256-024-00920-9">multimodal sequence-structure generative model for designing full-atom ligand-binding protein pockets.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/11/15/PocketGen/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Nov 15, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/11/01/AIScientist/">Biomedical AI Agents in Cell</a>-->
+        <p class="card-header-title">Nov 2024: &nbsp; <span class="has-text-primary">Biomedical AI Agents in Cell</span></p>
+<!--        <p class="card-header-item">Nov 2024</p>-->
+<!--        <p class="card-footer-item">Nov 1, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>We envision “AI scientists” as <a href="https://www.cell.com/cell/fulltext/S0092-8674(24)01070-5">AI agents capable of skeptical learning and reasoning that empower biomedical research by integrating ML models and biomedical tools with experimental platforms.</a></p>
+</p>-->
+            <p>We envision “AI scientists” as <a href="https://www.cell.com/cell/fulltext/S0092-8674(24)01070-5">AI agents capable of skeptical learning and reasoning that empower biomedical research by integrating ML models and biomedical tools with experimental platforms.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/11/01/AIScientist/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Nov 1, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/10/19/ACAnet/">Activity Cliffs in Molecular Properties</a>-->
+        <p class="card-header-title">Oct 2024: &nbsp; <span class="has-text-primary">Activity Cliffs in Molecular Properties</span></p>
+<!--        <p class="card-header-item">Oct 2024</p>-->
+<!--        <p class="card-footer-item">Oct 19, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper on <a href="https://chemrxiv.org/engage/chemrxiv/article-details/6470c963be16ad5c57f5526c">activity-cliff informed contrastive learning for molecular property prediction.</a></p>
+</p>-->
+            <p>New paper on <a href="https://chemrxiv.org/engage/chemrxiv/article-details/6470c963be16ad5c57f5526c">activity-cliff informed contrastive learning for molecular property prediction.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/10/19/ACAnet/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Oct 19, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/10/09/KGARevion/">Knowledge Graph Agent for Medical Reasoning</a>-->
+        <p class="card-header-title">Oct 2024: &nbsp; <span class="has-text-primary">Knowledge Graph Agent for Medical Reasoning</span></p>
+<!--        <p class="card-header-item">Oct 2024</p>-->
+<!--        <p class="card-footer-item">Oct 9, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper introducing a <a href="https://arxiv.org/abs/2410.04660">knowledge graph agent for complex, knowledge-intensive medical reasoning.</a></p>
+</p>-->
+            <p>New paper introducing a <a href="https://arxiv.org/abs/2410.04660">knowledge graph agent for complex, knowledge-intensive medical reasoning.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/10/09/KGARevion/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Oct 9, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/09/27/NeurIPS2024Papers/">Three Papers Accepted to NeurIPS</a>-->
+        <p class="card-header-title">Sep 2024: &nbsp; <span class="has-text-primary">Three Papers Accepted to NeurIPS</span></p>
+<!--        <p class="card-header-item">Sep 2024</p>-->
+<!--        <p class="card-footer-item">Sep 27, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Exciting projects include a unified multi-task time series model, a flow-matching approach for generating protein pockets using geometric priors, and a tokenization method that produces invariant molecular representations for integration into large language models.</p>
+</p>-->
+            <p>Exciting projects include a unified multi-task time series model, a flow-matching approach for generating protein pockets using geometric priors, and a tokenization method that produces invariant molecular representations for integration into large language models.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/09/27/NeurIPS2024Papers/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 27, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/09/25/TxGNNNatureMedicine/">TxGNN Published in Nature Medicine</a>-->
+        <p class="card-header-title">Sep 2024: &nbsp; <span class="has-text-primary">TxGNN Published in Nature Medicine</span></p>
+<!--        <p class="card-header-item">Sep 2024</p>-->
+<!--        <p class="card-footer-item">Sep 25, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Graph foundation model for drug repurposing published in <a href="https://www.nature.com/articles/s41591-024-03233-x">Nature Medicine</a>. <a href="https://news.harvard.edu/gazette/story/2024/09/using-ai-to-repurpose-existing-drugs-for-treatment-of-rare-diseases/">[Harvard Gazette]</a> <a href="https://hms.harvard.edu/news/researchers-harness-ai-repurpose-existing-drugs-treatment-rare-diseases">[Harvard Medicine News]</a> <a href="https://www.forbes.com/sites/greglicholai/2024/09/26/ai-tool-speeds-drug-repurposing-and-its-free/">[Forbes]</a> <a href="https://developer.nvidia.com/blog/ai-uses-zero-shot-learning-to-find-existing-drugs-for-treating-rare-diseases/">[NVIDIA]</a> <a href="https://kempnerinstitute.harvard.edu/news/txgnn-ai-dr-house-for-disease-treatment/">[Kempner Institute]</a> <a href="https://www.thecrimson.com/article/2024/10/9/drug-repurposing-ai-model/">[Harvard Crimson]</a></p>
+</p>-->
+            <p>Graph foundation model for drug repurposing published in <a href="https://www.nature.com/articles/s41591-024-03233-x">Nature Medicine</a>. <a href="https://news.harvard.edu/gazette/story/2024/09/using-ai-to-repurpose-existing-drugs-for-treatment-of-rare-diseases/">[Harvard Gazette]</a> <a href="https://hms.harvard.edu/news/researchers-harness-ai-repurpose-existing-drugs-treatment-rare-diseases">[Harvard Medicine News]</a> <a href="https://www.forbes.com/sites/greglicholai/2024/09/26/ai-tool-speeds-drug-repurposing-and-its-free/">[Forbes]</a> <a href="https://developer.nvidia.com/blog/ai-uses-zero-shot-learning-to-find-existing-drugs-for-treating-rare-diseases/">[NVIDIA]</a> <a href="https://kempnerinstitute.harvard.edu/news/txgnn-ai-dr-house-for-disease-treatment/">[Kempner Institute]</a> <a href="https://www.thecrimson.com/article/2024/10/9/drug-repurposing-ai-model/">[Harvard Crimson]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/09/25/TxGNNNatureMedicine/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 25, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/08/28/GraphAI/">Graph AI in Medicine</a>-->
+        <p class="card-header-title">Aug 2024: &nbsp; <span class="has-text-primary">Graph AI in Medicine</span></p>
+<!--        <p class="card-header-item">Aug 2024</p>-->
+<!--        <p class="card-footer-item">Aug 28, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited to share a new perspective on <a href="https://go.shr.lc/4g0KpLV">Graph Artificial Intelligence in Medicine</a> in Annual Reviews.</p>
+</p>-->
+            <p>Excited to share a new perspective on <a href="https://go.shr.lc/4g0KpLV">Graph Artificial Intelligence in Medicine</a> in Annual Reviews.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/08/28/GraphAI/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Aug 28, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/08/15/PINNACLENews/">How Proteins Behave in Context</a>-->
+        <p class="card-header-title">Aug 2024: &nbsp; <span class="has-text-primary">How Proteins Behave in Context</span></p>
+<!--        <p class="card-header-item">Aug 2024</p>-->
+<!--        <p class="card-footer-item">Aug 15, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p><a href="https://hms.harvard.edu/news/new-ai-tool-captures-how-proteins-behave-context">Harvard Medicine News</a> on our new AI tool that captures how proteins behave in context. <a href="https://kempnerinstitute.harvard.edu/research/deeper-learning/context-matters-for-foundation-models-in-biology/">Kempner Institute</a> on how context matters for foundation models in biology.</p>
+</p>-->
+            <p><a href="https://hms.harvard.edu/news/new-ai-tool-captures-how-proteins-behave-context">Harvard Medicine News</a> on our new AI tool that captures how proteins behave in context. <a href="https://kempnerinstitute.harvard.edu/research/deeper-learning/context-matters-for-foundation-models-in-biology/">Kempner Institute</a> on how context matters for foundation models in biology.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/08/15/PINNACLENews/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Aug 15, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/07/27/PINNACLENatureMethods/">PINNACLE in Nature Methods</a>-->
+        <p class="card-header-title">Jul 2024: &nbsp; <span class="has-text-primary">PINNACLE in Nature Methods</span></p>
+<!--        <p class="card-header-item">Jul 2024</p>-->
+<!--        <p class="card-footer-item">Jul 27, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>PINNACLE contextual AI model is published in Nature Methods. <a href="https://www.nature.com/articles/s41592-024-02341-3">Paper.</a> <a href="https://www.nature.com/articles/s41592-024-02342-2">Research Briefing.</a> <a href="https://zitniklab.hms.harvard.edu/projects/PINNACLE/">Project website.</a></p>
+</p>-->
+            <p>PINNACLE contextual AI model is published in Nature Methods. <a href="https://www.nature.com/articles/s41592-024-02341-3">Paper.</a> <a href="https://www.nature.com/articles/s41592-024-02342-2">Research Briefing.</a> <a href="https://zitniklab.hms.harvard.edu/projects/PINNACLE/">Project website.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/07/27/PINNACLENatureMethods/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jul 27, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+
+    <div class="column is-12">
+        <div class="card">
+            <header class="card-header">
+        <!--        <a class="card-header-title" href=""></a>-->
+            <p class="card-header-title"><span class="has-text-primary">Tweets</span></p>
+        <!--        <p class="card-header-item"></p>-->
+        <!--        <p class="card-footer-item"></p>-->
+            </header>
+        <div class="card-content">
+        <!--        <div class="content">-->
+        <!--            -->
+        <!--            <p></p>-->
+        <a class="twitter-timeline" data-width="500" data-height="500" data-theme="light" href="https://twitter.com/marinkazitnik?ref_src=twsrc%5Etfw" data-chrome="noheader transparent nofooter nofooter noborders">Tweets by marinkazitnik</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <!--        </div>-->
+        <!--        <div class="has-text-centered">-->
+        <!--            <a href="" class="button is-primary">Read more</a>-->
+        <!--        </div>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts -->
+<div style="background-color:#A41034">
+        <div class="content is-normal has-text-centered">
+            <p style="color:white;padding-top:20px;padding-bottom:20px;"><a href="https://scholar.harvard.edu/marinka" style="color:white"><b>Zitnik Lab</b></a>
+                &nbsp;&middot;&nbsp; <a href="#" style="color:white"><b>Artificial Intelligence in Medicine and Science</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://harvard.edu" style="color:white"><b>Harvard</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://dbmi.hms.harvard.edu/" style="color:white"><b>Department of Biomedical Informatics</b></a></p>
+        </div>
+</div></body>
+</html>
+
