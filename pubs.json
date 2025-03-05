@@ -52,6 +52,25 @@
     },
 
      {
+      "key": "submission25f",
+      "author": ["Shanghua Gao", "Richard Zhu", "Zhenglun Kong", "Ayush Noori", "Xiaorui Su", "Curtis Ginder", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
+      "title": "TxAgent: An AI Agent for Therapeutic Reasoning Across a Universe of Tools",
+      "venue": "In Review",
+      "year": "2025",
+      "thumbnail": "TxAgent25.png",
+      "pdf": "",
+      "url": "",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "",
+        "TxAgent code": "https://github.com/mims-harvard/TxAgent",
+        "ToolUniverse code": "https://github.com/mims-harvard/ToolUniverse",
+        "project website": "https://zitniklab.hms.harvard.edu/TxAgent"
+      }
+    },
+
+     {
       "key": "submission24u",
       "author": ["Owen Queen*", "Yepeng Huang*", "Robert Calef*", "Valentina Giunchiglia", "Tianlong Chen", "George Dasoulas", "LeAnn Tai", "Yasha Ektefaie", "Ayush Noori", "Joseph Brown", "Tom Cobley", "Karin Hrovatin", "Tom Hartvigsen", "Fabian J. Theis", "Bradley L. Pentelute", "Vikram Khurana", "Manolis Kellis", "Marinka Zitnik"],
       "title": "ProCyon: A Multimodal Foundation Model for Protein Phenotypes",
@@ -67,6 +86,24 @@
         "project website": "https://zitniklab.hms.harvard.edu/ProCyon/",
         "code": "https://github.com/mims-harvard/ProCyon",
         "Kempner Institute": "https://kempnerinstitute.harvard.edu/research/deeper-learning/procyon-a-multimodal-foundation-model-for-protein-phenotypes/"
+      }
+    },
+
+     {
+      "key": "submission25e",
+      "author": ["Yepeng Huang", "Xiaorui Su", "Varun Ullanat", "Ivy Liang", "Lindsay Clegg", "Damilola Olabode", "Nicholas Ho", "Bino John", "Megan Gibbs", "Marinka Zitnik"],
+      "title": "Multimodal AI Predicts Clinical Outcomes of Drug Combinations from Preclinical Data",
+      "venue": "In Review",
+      "year": "2025",
+      "thumbnail": "madrigal25.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2503.02781",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2503.02781",
+        "code": "https://github.com/mims-harvard/Madrigal",
+        "project website": "https://zitniklab.hms.harvard.edu/projects/Madrigal"
       }
     },
 
@@ -108,7 +145,7 @@
      {
       "key": "submission24p",
       "author": ["Xiaorui Su", "Yibo Wang", "Shanghua Gao", "Xiaolong Liu", "Valentina Giunchiglia", "Djork-Arné Clevert", "Marinka Zitnik"],
-      "title": "Knowledge Graph Based Agent for Complex, Knowledge-Intensive QA in Medicine",
+      "title": "KGARevion: An AI Agent for Knowledge-Intensive Biomedical QA",
       "venue": "International Conference on Learning Representations, ICLR",
       "year": "2025",
       "thumbnail": "KGARevion.png",

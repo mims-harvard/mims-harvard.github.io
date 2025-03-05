@@ -144,15 +144,13 @@
     <div class="box has-background-info has-text-white">
 
 <p>
-Combination therapies are widely used to treat diseases, from hypertension to cancer and infectious diseases. Computational models typically use structural data or target profiles to identify drug combinations with high efficacy and low toxicity, yet often overlook complex biological interactions. Addressing these gaps requires integrating diverse modalities—such as structural data, pathways, cell viability, and transcriptomics—to capture the complexity of clinical drug combinations from multimodal preclinical data.
+Predicting clinical outcomes from preclinical data is essential for identifying safe and effective drug combinations. Current models rely on structural or target-based features to identify high-efficacy, low-toxicity drug combinations. However, these approaches fail to incorporate the multimodal data necessary for accurate, clinically-relevant predictions. 
 </p>
 <p>
-Here, we introduce Madrigal, a unified multimodal AI model for predicting drug combinations across 953 clinical outcomes and 21,842 compounds, including approved drugs and novel compounds in development. Madrigal uses a bottleneck module with modality alignment to transfer information across modality-specific encoders and address the all-stage missing modality challenge, a problem that plagues multimodal learning in medicine.
+Here, we introduce MADRIGAL, a multimodal AI model that learns from structural, pathway, cell viability, and transcriptomic data to predict drug combination effects across 953 clinical outcomes and 21842 compounds, including combinations of approved drugs and novel compounds in development. MADRIGAL uses a transformer bottleneck module to unify preclinical drug data modalities while handling missing data during training and inference--a major challenge in multimodal learning. 
 </p>
 <p>
-Madrigal outperforms single-modality methods and state-of-the-art models in predicting adverse drug interactions. We demonstrate Madrigal for identifying transporter-mediated drug interactions, drug combination virtual screening of anti-cancer combinations, and identifying polypharmacy needs for type II diabetes and metabolic dysfunction-associated steatohepatitis (MASH). Madrigal ranks resmetirom, the first and only FDA-approved drug for metabolic dysfunction-associated steatohepatitis (MASH), among the safest candidates.
-
-Madrigal applies to individualized cancer therapies, as demonstrated in primary acute myeloid leukemia samples and patient-derived xenograft models, where it predicts personalized drug combination efficacy based on genomic profiles. By integrating Madrigal with a large language model, users can describe clinical outcomes in natural language. Madrigal offers a multimodal approach to designing safe combination therapies.
+It outperforms single-modality methods and state-of-the-art models in predicting adverse drug interactions. MADRIGAL performs virtual screening of anticancer drug combinations and supports polypharmacy management for type II diabetes and metabolic dysfunction-associated steatohepatitis (MASH). It identifies transporter-mediated drug interactions. MADRIGAL predicts resmetirom, the first and only FDA-approved drug for MASH, among therapies with the most favorable safety profile. It supports personalized cancer therapy by integrating genomic profiles from cancer patients. Using primary acute myeloid leukemia samples and patient-derived xenograft models, it predicts the efficacy of personalized drug combinations. Integrating MADRIGAL with a large language model allows users to describe clinical outcomes in natural language, improving safety assessment by identifying potential adverse interactions and toxicity risks. MADRIGAL provides a multimodal approach for designing combination therapies with improved predictive accuracy and clinical relevance.
 </p>
 </div>
 
@@ -162,16 +160,16 @@ Madrigal applies to individualized cancer therapies, as demonstrated in primary 
 
 <h2 id="publication">Publication</h2>
 
-<p><a href="#">Multimodal AI predicts clinical outcomes of drug combinations from preclinical data</a><br />
+<p><a href="https://arxiv.org/abs/2503.02781">Multimodal AI predicts clinical outcomes of drug combinations from preclinical data</a><br />
 Yepeng Huang, Xiaorui Su, Varun Ullanat, Ivy Liang, Lindsay Clegg, Damilola Olabode, Nicholas Ho, Bino John, Megan Gibbs, Marinka Zitnik<br />
-<em>In Review</em> 2024 <a href="#">[bioRxiv]</a></p>
+<em>In Review</em> 2025 <a href="https://arxiv.org/abs/2503.02781">[arXiv]</a></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{huang2024madrigal,
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{huang2025madrigal,
   title={Multimodal AI predicts clinical outcomes of drug combinations from preclinical data},
   author={Huang, Yepeng and Su, Xiaorui and Ullanat, Varun and Liang, Ivy and Clegg, Lindsay and Olabode, Damilola and  Ho, Nicholas and John, Bino and Gibbs, Megan and Zitnik, Marinka},
-  journal={biorxiv},
-  url={},
-  year={2024}
+  journal={arXiv:2503.02781},
+  url={https://arxiv.org/abs/2503.02781},
+  year={2025}
 }
 </code></pre></div></div>
 
@@ -201,6 +199,92 @@ Yepeng Huang, Xiaorui Su, Varun Ullanat, Ivy Liang, Lindsay Clegg, Damilola Olab
                     <p class="title is-4">Latest News</p>
 
 <div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/03/14/TxAgent/">TxAgent: AI Agent for Therapeutic Reasoning</a>-->
+        <p class="card-header-title">Mar 2025: &nbsp; <span class="has-text-primary">TxAgent: AI Agent for Therapeutic Reasoning</span></p>
+<!--        <p class="card-header-item">Mar 2025</p>-->
+<!--        <p class="card-footer-item">Mar 14, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>TxAgent is an AI agent for therapeutic reasoning that consolidates 211 tools from trusted sources,
+including all US FDA-approved drugs since 1939 and validated clinical insights. <a href="https://zitniklab.hms.harvard.edu/TxAgent">[Project website]</a> <a href="https://github.com/mims-harvard/TxAgent">[TxAgent]</a> <a href="https://github.com/mims-harvard/ToolUniverse">[ToolUniverse]</a></p>
+</p>-->
+            <p>TxAgent is an AI agent for therapeutic reasoning that consolidates 211 tools from trusted sources,
+including all US FDA-approved drugs since 1939 and validated clinical insights. <a href="https://zitniklab.hms.harvard.edu/TxAgent">[Project website]</a> <a href="https://github.com/mims-harvard/TxAgent">[TxAgent]</a> <a href="https://github.com/mims-harvard/ToolUniverse">[ToolUniverse]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/03/14/TxAgent/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 14, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/03/05/Madrigal/">Multimodal AI predicts clinical outcomes of drug combinations from preclinical data</a>-->
+        <p class="card-header-title">Mar 2025: &nbsp; <span class="has-text-primary">Multimodal AI predicts clinical outcomes of drug combinations from preclinical data</span></p>
+<!--        <p class="card-header-item">Mar 2025</p>-->
+<!--        <p class="card-footer-item">Mar 5, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper: <a href="https://arxiv.org/abs/2503.02781">Multimodal AI approach for designing combination therapies with improved predictive accuracy and clinical relevance.</a> <a href="https://zitniklab.hms.harvard.edu/projects/Madrigal">[Project website]</a></p>
+</p>-->
+            <p>New paper: <a href="https://arxiv.org/abs/2503.02781">Multimodal AI approach for designing combination therapies with improved predictive accuracy and clinical relevance.</a> <a href="https://zitniklab.hms.harvard.edu/projects/Madrigal">[Project website]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/03/05/Madrigal/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 5, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/03/04/KGARevion/">KGARevion: AI Agent for Knowledge-Intensive Biomedical QA</a>-->
+        <p class="card-header-title">Mar 2025: &nbsp; <span class="has-text-primary">KGARevion: AI Agent for Knowledge-Intensive Biomedical QA</span></p>
+<!--        <p class="card-header-item">Mar 2025</p>-->
+<!--        <p class="card-footer-item">Mar 4, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>KGARevion is an AI agent designed for complex biomedical QA that integrates the non-codified knowledge of LLMs with the structured, codified knowledge found in knowledge graphs. <a href="https://arxiv.org/abs/2410.04660">[ICLR 2025 publication]</a></p>
+</p>-->
+            <p>KGARevion is an AI agent designed for complex biomedical QA that integrates the non-codified knowledge of LLMs with the structured, codified knowledge found in knowledge graphs. <a href="https://arxiv.org/abs/2410.04660">[ICLR 2025 publication]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/03/04/KGARevion/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 4, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
     
     <div class="column is-12">
         <div class="card">
@@ -674,90 +758,6 @@ Yepeng Huang, Xiaorui Su, Varun Ullanat, Ivy Liang, Lindsay Clegg, Damilola Olab
     </div>
 <!--    <footer class="card-footer">-->
 <!--        <p class="card-footer-item">Published: Sep 25, 2024</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2024/08/28/GraphAI/">Graph AI in Medicine</a>-->
-        <p class="card-header-title">Aug 2024: &nbsp; <span class="has-text-primary">Graph AI in Medicine</span></p>
-<!--        <p class="card-header-item">Aug 2024</p>-->
-<!--        <p class="card-footer-item">Aug 28, 2024</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>Excited to share a new perspective on <a href="https://go.shr.lc/4g0KpLV">Graph Artificial Intelligence in Medicine</a> in Annual Reviews.</p>
-</p>-->
-            <p>Excited to share a new perspective on <a href="https://go.shr.lc/4g0KpLV">Graph Artificial Intelligence in Medicine</a> in Annual Reviews.</p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2024/08/28/GraphAI/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Aug 28, 2024</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2024/08/15/PINNACLENews/">How Proteins Behave in Context</a>-->
-        <p class="card-header-title">Aug 2024: &nbsp; <span class="has-text-primary">How Proteins Behave in Context</span></p>
-<!--        <p class="card-header-item">Aug 2024</p>-->
-<!--        <p class="card-footer-item">Aug 15, 2024</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p><a href="https://hms.harvard.edu/news/new-ai-tool-captures-how-proteins-behave-context">Harvard Medicine News</a> on our new AI tool that captures how proteins behave in context. <a href="https://kempnerinstitute.harvard.edu/research/deeper-learning/context-matters-for-foundation-models-in-biology/">Kempner Institute</a> on how context matters for foundation models in biology.</p>
-</p>-->
-            <p><a href="https://hms.harvard.edu/news/new-ai-tool-captures-how-proteins-behave-context">Harvard Medicine News</a> on our new AI tool that captures how proteins behave in context. <a href="https://kempnerinstitute.harvard.edu/research/deeper-learning/context-matters-for-foundation-models-in-biology/">Kempner Institute</a> on how context matters for foundation models in biology.</p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2024/08/15/PINNACLENews/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Aug 15, 2024</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2024/07/27/PINNACLENatureMethods/">PINNACLE in Nature Methods</a>-->
-        <p class="card-header-title">Jul 2024: &nbsp; <span class="has-text-primary">PINNACLE in Nature Methods</span></p>
-<!--        <p class="card-header-item">Jul 2024</p>-->
-<!--        <p class="card-footer-item">Jul 27, 2024</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>PINNACLE contextual AI model is published in Nature Methods. <a href="https://www.nature.com/articles/s41592-024-02341-3">Paper.</a> <a href="https://www.nature.com/articles/s41592-024-02342-2">Research Briefing.</a> <a href="https://zitniklab.hms.harvard.edu/projects/PINNACLE/">Project website.</a></p>
-</p>-->
-            <p>PINNACLE contextual AI model is published in Nature Methods. <a href="https://www.nature.com/articles/s41592-024-02341-3">Paper.</a> <a href="https://www.nature.com/articles/s41592-024-02342-2">Research Briefing.</a> <a href="https://zitniklab.hms.harvard.edu/projects/PINNACLE/">Project website.</a></p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2024/07/27/PINNACLENatureMethods/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Jul 27, 2024</p>-->
 <!--    </footer>-->
 </div>
     </div>

@@ -4,16 +4,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Knowledge Graph Based Agent for Knowledge-Intensive QA in Medicine - Zitnik Lab</title>
+    <title>KGARevion - An AI Agent for Knowledge-Intensive Biomedical QA - Zitnik Lab</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="shortcut icon" type="image/png"
            href="/favicon.png" 
     />
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Knowledge Graph Based Agent for Knowledge-Intensive QA in Medicine | Zitnik Lab</title>
+<title>KGARevion - An AI Agent for Knowledge-Intensive Biomedical QA | Zitnik Lab</title>
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Knowledge Graph Based Agent for Knowledge-Intensive QA in Medicine" />
+<meta property="og:title" content="KGARevion - An AI Agent for Knowledge-Intensive Biomedical QA" />
 <meta name="author" content="Marinka Zitnik" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="AI agent, knowledge graphs, LLM, large language models, compound system" />
@@ -23,11 +23,11 @@
 <meta property="og:site_name" content="Zitnik Lab" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Knowledge Graph Based Agent for Knowledge-Intensive QA in Medicine" />
+<meta property="twitter:title" content="KGARevion - An AI Agent for Knowledge-Intensive Biomedical QA" />
 <meta name="twitter:site" content="@marinkazitnik" />
 <meta name="twitter:creator" content="@Marinka Zitnik" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Marinka Zitnik"},"description":"AI agent, knowledge graphs, LLM, large language models, compound system","headline":"Knowledge Graph Based Agent for Knowledge-Intensive QA in Medicine","url":"https://zitniklab.hms.harvard.edu/projects/KGARevion/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Marinka Zitnik"},"description":"AI agent, knowledge graphs, LLM, large language models, compound system","headline":"KGARevion - An AI Agent for Knowledge-Intensive Biomedical QA","url":"https://zitniklab.hms.harvard.edu/projects/KGARevion/"}</script>
 <!-- End Jekyll SEO tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
 <script>
@@ -122,7 +122,7 @@
         <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
     <div class="hero-body">
         <div class="container">
-            <p class="title is-2">Knowledge Graph Based Agent for Knowledge-Intensive QA in Medicine</p>
+            <p class="title is-2">KGARevion - An AI Agent for Knowledge-Intensive Biomedical QA</p>
             <p class="subtitle is-3"></p>
             
         </div>
@@ -144,7 +144,13 @@
     <div class="box has-background-info has-text-white">
 
 <p>
-Biomedical knowledge is uniquely complex and structured, requiring distinct reasoning strategies compared to other scientific disciplines like physics or chemistry. Biomedical scientists do not rely on a single approach to reasoning; instead, they use various strategies, including rule-based, prototype-based, and case-based reasoning. This diversity calls for flexible approaches that accommodate multiple reasoning strategies while leveraging in-domain knowledge. We introduce KGARevion, a knowledge graph (KG) based agent designed to address the complexity of knowledge-intensive medical queries. Upon receiving a query, KGARevion generates relevant triplets by using the knowledge base of the LLM. These triplets are then verified against a grounded KG to filter out erroneous information and ensure that only accurate, relevant data contribute to the final answer. Unlike RAG-based models, this multi-step process ensures robustness in reasoning while adapting to different models of medical reasoning. Evaluations on four gold-standard medical QA datasets show that KGARevion improves accuracy by over 5.2%, outperforming 15 models in handling complex medical questions. To test its capabilities, we curated three new medical QA datasets with varying levels of semantic complexity, where KGARevion achieved a 10.4% improvement in accuracy.
+Biomedical reasoning integrates structured, codified knowledge with tacit, experience-driven insights. Depending on the context, quantity, and nature of available evidence, researchers and clinicians use diverse strategies, including rule-based, prototype-based, and case-based reasoning. Effective medical AI models must handle this complexity while ensuring reliability and adaptability. 
+</p>
+<p>
+We introduce KGARevion, a knowledge graph-based agent that answers knowledge-intensive questions. Upon receiving a query, KGARevion generates relevant triplets by leveraging the latent knowledge embedded in a large language model. It then verifies these triplets against a grounded knowledge graph, filtering out errors and retaining only accurate, contextually relevant information for the final answer. This multi-step process strengthens reasoning, adapts to different models of medical inference, and outperforms retrieval-augmented generation-based approaches that lack effective verification mechanisms. 
+</p>
+<p>
+Evaluations on medical QA benchmarks show that KGARevion improves accuracy by over 5.2% over 15 models in handling complex medical queries. To further assess its effectiveness, we curated three new medical QA datasets with varying levels of semantic complexity, where KGARevion improved accuracy by 10.4%. The agent integrates with different LLMs and biomedical knowledge graphs for broad applicability across knowledge-intensive tasks. We evaluated KGARevion on AfriMed-QA, a newly introduced dataset focused on African healthcare, demonstrating its strong zero-shot generalization to underrepresented medical contexts.
 </p>
 </div>
 
@@ -178,12 +184,12 @@ Biomedical knowledge is uniquely complex and structured, requiring distinct reas
 
 <h2 id="publication">Publication</h2>
 
-<p><a href="https://arxiv.org/abs/2410.04660">Knowledge Graph Based Agent for Complex, Knowledge-Intensive QA in Medicine</a><br />
+<p><a href="https://openreview.net/pdf?id=tnB94WQGrn">KGARevion: An AI Agent for Knowledge-Intensive Biomedical QA</a><br />
 Xiaorui Su, Yibo Wang, Shanghua Gao, Xiaolong Liu, Valentina Giunchiglia, Djork-Arné Clevert, Marinka Zitnik<br />
 <em>International Conference on Learning Representations, ICLR</em> 2025 <a href="https://arxiv.org/abs/2410.04660">[arXiv]</a> <a href="https://openreview.net/pdf?id=tnB94WQGrn">[OpenReview]</a></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{su2025knowledge,
-  title={Knowledge Graph Based Agent for Complex, Knowledge-Intensive QA in Medicine},
+  title={KGARevion: An AI Agent for Knowledge-Intensive Biomedical QA},
   author={Su, Xiaorui and Wang, Yibo and Gao, Shanghua and Liu, Xiaolong and Giunchiglia, Valentina and Clevert, Djork-Arn{\'e} and Zitnik, Marinka},
   journal={International Conference on Learning Representations, ICLR},
   year={2025}
@@ -213,6 +219,92 @@ Xiaorui Su, Yibo Wang, Shanghua Gao, Xiaolong Liu, Valentina Giunchiglia, Djork-
                     <p class="title is-4">Latest News</p>
 
 <div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/03/14/TxAgent/">TxAgent: AI Agent for Therapeutic Reasoning</a>-->
+        <p class="card-header-title">Mar 2025: &nbsp; <span class="has-text-primary">TxAgent: AI Agent for Therapeutic Reasoning</span></p>
+<!--        <p class="card-header-item">Mar 2025</p>-->
+<!--        <p class="card-footer-item">Mar 14, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>TxAgent is an AI agent for therapeutic reasoning that consolidates 211 tools from trusted sources,
+including all US FDA-approved drugs since 1939 and validated clinical insights. <a href="https://zitniklab.hms.harvard.edu/TxAgent">[Project website]</a> <a href="https://github.com/mims-harvard/TxAgent">[TxAgent]</a> <a href="https://github.com/mims-harvard/ToolUniverse">[ToolUniverse]</a></p>
+</p>-->
+            <p>TxAgent is an AI agent for therapeutic reasoning that consolidates 211 tools from trusted sources,
+including all US FDA-approved drugs since 1939 and validated clinical insights. <a href="https://zitniklab.hms.harvard.edu/TxAgent">[Project website]</a> <a href="https://github.com/mims-harvard/TxAgent">[TxAgent]</a> <a href="https://github.com/mims-harvard/ToolUniverse">[ToolUniverse]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/03/14/TxAgent/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 14, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/03/05/Madrigal/">Multimodal AI predicts clinical outcomes of drug combinations from preclinical data</a>-->
+        <p class="card-header-title">Mar 2025: &nbsp; <span class="has-text-primary">Multimodal AI predicts clinical outcomes of drug combinations from preclinical data</span></p>
+<!--        <p class="card-header-item">Mar 2025</p>-->
+<!--        <p class="card-footer-item">Mar 5, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper: <a href="https://arxiv.org/abs/2503.02781">Multimodal AI approach for designing combination therapies with improved predictive accuracy and clinical relevance.</a> <a href="https://zitniklab.hms.harvard.edu/projects/Madrigal">[Project website]</a></p>
+</p>-->
+            <p>New paper: <a href="https://arxiv.org/abs/2503.02781">Multimodal AI approach for designing combination therapies with improved predictive accuracy and clinical relevance.</a> <a href="https://zitniklab.hms.harvard.edu/projects/Madrigal">[Project website]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/03/05/Madrigal/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 5, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/03/04/KGARevion/">KGARevion: AI Agent for Knowledge-Intensive Biomedical QA</a>-->
+        <p class="card-header-title">Mar 2025: &nbsp; <span class="has-text-primary">KGARevion: AI Agent for Knowledge-Intensive Biomedical QA</span></p>
+<!--        <p class="card-header-item">Mar 2025</p>-->
+<!--        <p class="card-footer-item">Mar 4, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>KGARevion is an AI agent designed for complex biomedical QA that integrates the non-codified knowledge of LLMs with the structured, codified knowledge found in knowledge graphs. <a href="https://arxiv.org/abs/2410.04660">[ICLR 2025 publication]</a></p>
+</p>-->
+            <p>KGARevion is an AI agent designed for complex biomedical QA that integrates the non-codified knowledge of LLMs with the structured, codified knowledge found in knowledge graphs. <a href="https://arxiv.org/abs/2410.04660">[ICLR 2025 publication]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/03/04/KGARevion/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 4, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
     
     <div class="column is-12">
         <div class="card">
@@ -686,90 +778,6 @@ Xiaorui Su, Yibo Wang, Shanghua Gao, Xiaolong Liu, Valentina Giunchiglia, Djork-
     </div>
 <!--    <footer class="card-footer">-->
 <!--        <p class="card-footer-item">Published: Sep 25, 2024</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2024/08/28/GraphAI/">Graph AI in Medicine</a>-->
-        <p class="card-header-title">Aug 2024: &nbsp; <span class="has-text-primary">Graph AI in Medicine</span></p>
-<!--        <p class="card-header-item">Aug 2024</p>-->
-<!--        <p class="card-footer-item">Aug 28, 2024</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>Excited to share a new perspective on <a href="https://go.shr.lc/4g0KpLV">Graph Artificial Intelligence in Medicine</a> in Annual Reviews.</p>
-</p>-->
-            <p>Excited to share a new perspective on <a href="https://go.shr.lc/4g0KpLV">Graph Artificial Intelligence in Medicine</a> in Annual Reviews.</p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2024/08/28/GraphAI/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Aug 28, 2024</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2024/08/15/PINNACLENews/">How Proteins Behave in Context</a>-->
-        <p class="card-header-title">Aug 2024: &nbsp; <span class="has-text-primary">How Proteins Behave in Context</span></p>
-<!--        <p class="card-header-item">Aug 2024</p>-->
-<!--        <p class="card-footer-item">Aug 15, 2024</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p><a href="https://hms.harvard.edu/news/new-ai-tool-captures-how-proteins-behave-context">Harvard Medicine News</a> on our new AI tool that captures how proteins behave in context. <a href="https://kempnerinstitute.harvard.edu/research/deeper-learning/context-matters-for-foundation-models-in-biology/">Kempner Institute</a> on how context matters for foundation models in biology.</p>
-</p>-->
-            <p><a href="https://hms.harvard.edu/news/new-ai-tool-captures-how-proteins-behave-context">Harvard Medicine News</a> on our new AI tool that captures how proteins behave in context. <a href="https://kempnerinstitute.harvard.edu/research/deeper-learning/context-matters-for-foundation-models-in-biology/">Kempner Institute</a> on how context matters for foundation models in biology.</p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2024/08/15/PINNACLENews/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Aug 15, 2024</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2024/07/27/PINNACLENatureMethods/">PINNACLE in Nature Methods</a>-->
-        <p class="card-header-title">Jul 2024: &nbsp; <span class="has-text-primary">PINNACLE in Nature Methods</span></p>
-<!--        <p class="card-header-item">Jul 2024</p>-->
-<!--        <p class="card-footer-item">Jul 27, 2024</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>PINNACLE contextual AI model is published in Nature Methods. <a href="https://www.nature.com/articles/s41592-024-02341-3">Paper.</a> <a href="https://www.nature.com/articles/s41592-024-02342-2">Research Briefing.</a> <a href="https://zitniklab.hms.harvard.edu/projects/PINNACLE/">Project website.</a></p>
-</p>-->
-            <p>PINNACLE contextual AI model is published in Nature Methods. <a href="https://www.nature.com/articles/s41592-024-02341-3">Paper.</a> <a href="https://www.nature.com/articles/s41592-024-02342-2">Research Briefing.</a> <a href="https://zitniklab.hms.harvard.edu/projects/PINNACLE/">Project website.</a></p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2024/07/27/PINNACLENatureMethods/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Jul 27, 2024</p>-->
 <!--    </footer>-->
 </div>
     </div>
