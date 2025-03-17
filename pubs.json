@@ -59,11 +59,11 @@
       "year": "2025",
       "thumbnail": "TxAgent25.png",
       "pdf": "",
-      "url": "",
+      "url": "https://arxiv.org/abs/2503.10970",
       "type": "journal",
       "supp":
       {
-        "arXiv": "",
+        "arXiv": "https://arxiv.org/abs/2503.10970",
         "TxAgent code": "https://github.com/mims-harvard/TxAgent",
         "ToolUniverse code": "https://github.com/mims-harvard/ToolUniverse",
         "project website": "https://zitniklab.hms.harvard.edu/TxAgent"
