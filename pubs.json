@@ -66,7 +66,9 @@
         "arXiv": "https://arxiv.org/abs/2503.10970",
         "TxAgent code": "https://github.com/mims-harvard/TxAgent",
         "ToolUniverse code": "https://github.com/mims-harvard/ToolUniverse",
-        "project website": "https://zitniklab.hms.harvard.edu/TxAgent"
+        "project website": "https://zitniklab.hms.harvard.edu/TxAgent",
+        "Kempner Institute": "https://kempnerinstitute.harvard.edu/research/deeper-learning/txagent-an-ai-agent-for-therapeutic-reasoning-across-a-universe-of-211-tools",
+        "New York Times": "https://www.nytimes.com/2025/03/20/well/ai-drug-repurposing.html"
       }
     },
 
