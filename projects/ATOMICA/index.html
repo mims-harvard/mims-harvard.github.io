@@ -1,0 +1,844 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ATOMICA - Universal Geometric AI for Molecular Interactions across Biomolecular Modalities - Zitnik Lab</title>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="shortcut icon" type="image/png"
+           href="/favicon.png" 
+    />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ATOMICA - Universal Geometric AI for Molecular Interactions across Biomolecular Modalities | Zitnik Lab</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="ATOMICA - Universal Geometric AI for Molecular Interactions across Biomolecular Modalities" />
+<meta name="author" content="Marinka Zitnik" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="biomolecular interactions, geometric deep learning, proteins, small molecules, ions, nucleic acids" />
+<meta property="og:description" content="biomolecular interactions, geometric deep learning, proteins, small molecules, ions, nucleic acids" />
+<link rel="canonical" href="https://zitniklab.hms.harvard.edu/projects/ATOMICA/" />
+<meta property="og:url" content="https://zitniklab.hms.harvard.edu/projects/ATOMICA/" />
+<meta property="og:site_name" content="Zitnik Lab" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ATOMICA - Universal Geometric AI for Molecular Interactions across Biomolecular Modalities" />
+<meta name="twitter:site" content="@marinkazitnik" />
+<meta name="twitter:creator" content="@Marinka Zitnik" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Marinka Zitnik"},"description":"biomolecular interactions, geometric deep learning, proteins, small molecules, ions, nucleic acids","headline":"ATOMICA - Universal Geometric AI for Molecular Interactions across Biomolecular Modalities","url":"https://zitniklab.hms.harvard.edu/projects/ATOMICA/"}</script>
+<!-- End Jekyll SEO tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
+<script>
+  window['ga-disable-UA-162129505-1'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-162129505-1');
+</script><!-- head scripts --></head>
+
+  <body>
+    
+<nav class="navbar is-primary" >
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item"><b>
+                Zitnik Lab
+            </b></a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+<!--                <a href="/" class="navbar-item "><b>Home</b></a>-->
+                
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a href="/#" class="navbar-link "><b>About</b></a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/bio/" class="navbar-item "><b>Bio</b></a>
+                            
+                            <a href="/contact/" class="navbar-item "><b>Contact</b></a>
+                            
+                            <a href="/talks/" class="navbar-item "><b>Recent Talks</b></a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                <a href="/research/" class="navbar-item "><b>Research</b></a>
+                    
+                
+                    
+                <a href="/publications/" class="navbar-item "><b>Publications</b></a>
+                    
+                
+                    
+                <a href="/people/" class="navbar-item "><b>Members</b></a>
+                    
+                
+                    
+                <a href="/meetings/" class="navbar-item "><b>Education</b></a>
+                    
+                
+                    
+                <a href="/DMAI/" class="navbar-item "><b>DMAI</b></a>
+                    
+                
+                    
+                <a href="/data/" class="navbar-item "><b>Datasets</b></a>
+                    
+                
+                    
+                <a href="/software/" class="navbar-item "><b>AI Models</b></a>
+                    
+                
+                    
+                <a href="https://zitniklab.hms.harvard.edu/TDC/" class="navbar-item "><b>TDC</b></a>
+                    
+                
+                    
+                <a href="/news/" class="navbar-item "><b>News</b></a>
+                    
+                
+                    
+                <a href="/jobs/" class="navbar-item "><b>Join Us</b></a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+
+    
+        <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
+    <div class="hero-body">
+        <div class="container">
+            <p class="title is-2">ATOMICA - Universal Geometric AI for Molecular Interactions across Biomolecular Modalities</p>
+            <p class="subtitle is-3"></p>
+            
+        </div>
+    </div>
+</section>
+    
+    
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+                <div class="column is-8">
+                    
+                    
+                    
+<div class="content">
+    <div class="box has-background-info has-text-white">
+
+<p>
+Molecular interactions fundamentally influence all aspects of chemistry and biology. Prevailing machine learning approaches emphasize modeling molecules in isolation or typically model molecular interactions restricted to a specific type of interaction such as protein-ligand and protein-protein interactions. 
+</p>
+<p>
+Here, we present ATOMICA, a geometric deep learning model that learns representations of atomic structures of intermolecular interactions that are generalizable across interactions between many biomolecular modalities (small molecules, metals, amino acids, and nucleic acids) and is pretrained on 2,105,703 molecular interaction interfaces. We leverage an all-atom, denoising and masking pre-training objective to learn representations at the scale of atoms, blocks (amino acids, nucleic acids, chemical motifs), and whole interaction interfaces between molecular entities. 
+</p>
+<p>
+We demonstrate synergies between pre-training on molecules of different modalities in the quality of learned representations, with for the first time scaling laws observed when integrating datasets from across molecular modalities. In a self-supervised manner, ATOMICA representations capture critical residues on interaction interfaces, composition of interacting molecules, and chemical similarity. 
+</p>
+<p>
+ATOMICA is a general-purpose model that we adapt to fingerprint protein interfaces binding to ion, ligand, nucleic-acid, lipid and protein interfaces for which we show that proteins with similar interactions are likely to be associated with the same diseases. Thus, motivating ATOMICANet networks that capture protein disease pathways for 27 diseases across ion, small molecule, and lipid interfacomes, and is predictive for identifying disease proteins for autoimmune neuropathies and lymphoma. Applying ATOMICA to the dark proteome, we predict 2,646 high-confidence ligands and explore novel functions and binding motifs of previously functionally unknown protein clusters, including a cluster of Bacteria C4 zinc fingers and clusters of transmembrane cytochrome subunits, illustrating ATOMICA to help with understanding biomolecular interactions across the protein universe.
+</p>
+</div>
+
+<h2 id="motivation">Motivation</h2>
+
+<p>Current machine learning models in molecular biology often treat molecules in isolation or focus narrowly on specific types of molecular interactions, such as protein-ligand or protein-protein binding. These siloed models use separate architectures for different biomolecular classes, limiting their ability to transfer knowledge across modalities. This restriction hampers generalizability and reduces performance in low-data domains like rare interactions or uncharacterized proteins.</p>
+
+<p>ATOMICA addresses these limitations by unifying the modeling of intermolecular interactions across small molecules, ions, nucleic acids, peptides, and proteins. It leverages fundamental physicochemical principles common to all biomolecular interactions, such as hydrogen bonding, van der Waals forces, and π-stacking, to build a universal representation. The model is designed to operate at the atomic scale and capture multi-scale structural and chemical relationships, enabling accurate and transferable representations of molecular interfaces across diverse contexts.</p>
+
+<center>
+<img src="/img/ATOMICA-1.png" />
+</center>
+
+<h2 id="atomica-model">ATOMICA Model</h2>
+
+<p>ATOMICA is a hierarchical geometric deep learning model trained on over 2.1 million molecular interaction interfaces. It represents interaction complexes using an all-atom graph structure, where nodes correspond to atoms or grouped chemical blocks, and edges reflect both intra- and intermolecular spatial relationships. The model uses SE(3)-equivariant message passing to ensure that learned embeddings are invariant to rotations and translations of molecular structures.</p>
+
+<center>
+<img src="/img/ATOMICA-2.png" />
+</center>
+
+<p>The architecture produces embeddings at multiple scales—atom, block, and graph—that capture fine-grained structural detail and broader functional motifs. The pretraining strategy involves denoising transformations (rotation, translation, torsion) and masked block-type prediction, enabling the model to learn chemically grounded, transferable features. ATOMICA supports downstream tasks via plug-and-play adaptation with task-specific heads, including binding site prediction and protein interface fingerprinting.</p>
+
+<center>
+<img src="/img/ATOMICA-3.png" />
+</center>
+
+<h2 id="universal-representation-of-molecular-interactions">Universal Representation of Molecular Interactions</h2>
+
+<p>ATOMICA learns a shared latent space that encodes interaction features across all biomolecular modalities. Without explicit supervision on modality labels, the model organizes protein-protein, protein-ligand, protein-RNA, and protein-DNA interactions into chemically meaningful clusters in latent space. Embeddings show continuity across modalities—e.g., protein-peptide interactions lie close to protein-protein ones—demonstrating the model’s capacity to capture chemical and functional similarity.</p>
+
+<p>This universal embedding space supports compositional reasoning, akin to word analogies in NLP. For example, the model approximates a protein-small molecule complex by algebraically combining embeddings of related complexes, reflecting learned compositionality. ATOMICA also ranks interface residues by importance using ATOMICAScore, and these predictions align well with residues involved in intermolecular bonds, outperforming sequence-only language models like ESM2 in zero-shot settings.</p>
+
+<center>
+<img src="/img/ATOMICA-4.png" />
+</center>
+
+<h2 id="atomicas-interfaceome-networks">ATOMICA’s Interfaceome Networks</h2>
+
+<p>We use ATOMICA representations to construct interfaceome networks, which aregraphs linking proteins based on similarity in their interaction interfaces with ions, small molecules, nucleic acids, lipids, and proteins. These ATOMICANet modality-specific networks reveal that proteins sharing similar interface features often participate in the same disease pathways, even across different interaction types. This provides a new molecular-level view of disease mechanisms.</p>
+
+<p>By analyzing disease-associated proteins across 82 diseases, ATOMICANets uncover statistically significant pathway modules in lipid, ion, and small molecule networks. The model predicts disease-relevant interactions for autoimmune neurological disorders and cancer, identifying ion channels in multiple sclerosis and lymphoma-associated proteins across all five interface types. This demonstrates ATOMICA’s value in understanding protein function and disease involvement in a modality-specific, interpretable manner.</p>
+
+<center>
+<img src="/img/ATOMICA-5.png" />
+</center>
+
+<h2 id="publication">Publication</h2>
+
+<p><a href="#">ATOMICA: Universal Geometric AI for Molecular Interactions across Biomolecular Modalities</a><br />
+Ada Fang, Zaixi Zhang, Andrew Zhou, and Marinka Zitnik<br />
+<em>In Review</em> 2025 <a href="#">[arXiv]</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{fang2025atomica,
+  title={ATOMICA: Universal Geometric AI for Molecular Interactions across Biomolecular Modalities},
+  author={Fang, Ada and Zhang, Zaixi and Zhou, Andrew and Zitnik, Marinka},
+  journal={},
+  url={},
+  year={2025}
+}
+</code></pre></div></div>
+
+<h2 id="code-and-data-availability">Code and Data Availability</h2>
+
+<p>Pytorch implementation of ATOMICA is available in the <a href="https://github.com/mims-harvard/ATOMICA">GitHub repository</a>. Datasets are also available at <a href="https://doi.org/10.7910/DVN/4DUBJX">Harvard Dataverse repository</a>.</p>
+
+<h2 id="authors">Authors</h2>
+
+<ul>
+  <li><a href="#">Ada Fang</a></li>
+  <li><a href="#">Zaixi Zhang</a></li>
+  <li><a href="#">Andrew Zhou</a></li>
+  <li><a href="https://zitniklab.hms.harvard.edu/">Marinka Zitnik</a></li>
+</ul>
+
+</div>
+                </div>
+                
+                <div class="column is-4-desktop is-12-tablet">
+                    <p class="title is-4">Latest News</p>
+
+<div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/03/23/Gazette/">On Biomedical AI in Harvard Gazette</a>-->
+        <p class="card-header-title">Mar 2025: &nbsp; <span class="has-text-primary">On Biomedical AI in Harvard Gazette</span></p>
+<!--        <p class="card-header-item">Mar 2025</p>-->
+<!--        <p class="card-footer-item">Mar 23, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Read about AI in medicine in the <a href="https://news.harvard.edu/gazette/story/2025/03/how-ai-is-transforming-medicine-healthcare/">latest Harvard Gazette</a> and <a href="https://www.nytimes.com/2025/03/20/well/ai-drug-repurposing.html">New York Times.</a></p>
+</p>-->
+            <p>Read about AI in medicine in the <a href="https://news.harvard.edu/gazette/story/2025/03/how-ai-is-transforming-medicine-healthcare/">latest Harvard Gazette</a> and <a href="https://www.nytimes.com/2025/03/20/well/ai-drug-repurposing.html">New York Times.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/03/23/Gazette/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 23, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/03/14/TxAgent/">TxAgent: AI Agent for Therapeutic Reasoning</a>-->
+        <p class="card-header-title">Mar 2025: &nbsp; <span class="has-text-primary">TxAgent: AI Agent for Therapeutic Reasoning</span></p>
+<!--        <p class="card-header-item">Mar 2025</p>-->
+<!--        <p class="card-footer-item">Mar 14, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p><a href="https://arxiv.org/abs/2503.10970">TxAgent is an AI agent for therapeutic reasoning</a> that consolidates 211 tools from trusted sources,
+including all US FDA-approved drugs since 1939 and validated clinical insights. <a href="https://zitniklab.hms.harvard.edu/TxAgent">[Project website]</a> <a href="https://github.com/mims-harvard/TxAgent">[TxAgent]</a> <a href="https://github.com/mims-harvard/ToolUniverse">[ToolUniverse]</a></p>
+</p>-->
+            <p><a href="https://arxiv.org/abs/2503.10970">TxAgent is an AI agent for therapeutic reasoning</a> that consolidates 211 tools from trusted sources,
+including all US FDA-approved drugs since 1939 and validated clinical insights. <a href="https://zitniklab.hms.harvard.edu/TxAgent">[Project website]</a> <a href="https://github.com/mims-harvard/TxAgent">[TxAgent]</a> <a href="https://github.com/mims-harvard/ToolUniverse">[ToolUniverse]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/03/14/TxAgent/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 14, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/03/05/Madrigal/">Multimodal AI predicts clinical outcomes of drug combinations from preclinical data</a>-->
+        <p class="card-header-title">Mar 2025: &nbsp; <span class="has-text-primary">Multimodal AI predicts clinical outcomes of drug combinations from preclinical data</span></p>
+<!--        <p class="card-header-item">Mar 2025</p>-->
+<!--        <p class="card-footer-item">Mar 5, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper: <a href="https://arxiv.org/abs/2503.02781">Multimodal AI approach for designing combination therapies with improved predictive accuracy and clinical relevance.</a> <a href="https://zitniklab.hms.harvard.edu/projects/Madrigal">[Project website]</a></p>
+</p>-->
+            <p>New paper: <a href="https://arxiv.org/abs/2503.02781">Multimodal AI approach for designing combination therapies with improved predictive accuracy and clinical relevance.</a> <a href="https://zitniklab.hms.harvard.edu/projects/Madrigal">[Project website]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/03/05/Madrigal/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 5, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/03/04/KGARevion/">KGARevion: AI Agent for Knowledge-Intensive Biomedical QA</a>-->
+        <p class="card-header-title">Mar 2025: &nbsp; <span class="has-text-primary">KGARevion: AI Agent for Knowledge-Intensive Biomedical QA</span></p>
+<!--        <p class="card-header-item">Mar 2025</p>-->
+<!--        <p class="card-footer-item">Mar 4, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>KGARevion is an AI agent designed for complex biomedical QA that integrates the non-codified knowledge of LLMs with the structured, codified knowledge found in knowledge graphs. <a href="https://arxiv.org/abs/2410.04660">[ICLR 2025 publication]</a></p>
+</p>-->
+            <p>KGARevion is an AI agent designed for complex biomedical QA that integrates the non-codified knowledge of LLMs with the structured, codified knowledge found in knowledge graphs. <a href="https://arxiv.org/abs/2410.04660">[ICLR 2025 publication]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/03/04/KGARevion/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Mar 4, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/02/10/MedTok/">MedTok: Unlocking Medical Codes for GenAI</a>-->
+        <p class="card-header-title">Feb 2025: &nbsp; <span class="has-text-primary">MedTok: Unlocking Medical Codes for GenAI</span></p>
+<!--        <p class="card-header-item">Feb 2025</p>-->
+<!--        <p class="card-footer-item">Feb 10, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Meet <a href="https://arxiv.org/pdf/2502.04397">MedTok, a multimodal medical code tokenizer that transforms how AI understands structured medical data.</a> By integrating textual descriptions and relational contexts, MedTok enhances tokenization for transformer-based models—powering everything from EHR foundation models to medical QA. <a href="https://zitniklab.hms.harvard.edu/projects/MedTok">[Project website]</a></p>
+</p>-->
+            <p>Meet <a href="https://arxiv.org/pdf/2502.04397">MedTok, a multimodal medical code tokenizer that transforms how AI understands structured medical data.</a> By integrating textual descriptions and relational contexts, MedTok enhances tokenization for transformer-based models—powering everything from EHR foundation models to medical QA. <a href="https://zitniklab.hms.harvard.edu/projects/MedTok">[Project website]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/02/10/MedTok/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 10, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/02/10/CLEF/">What If You Could Rewrite Biology? Meet CLEF</a>-->
+        <p class="card-header-title">Feb 2025: &nbsp; <span class="has-text-primary">What If You Could Rewrite Biology? Meet CLEF</span></p>
+<!--        <p class="card-header-item">Feb 2025</p>-->
+<!--        <p class="card-footer-item">Feb 10, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>What if we could anticipate molecular and medical changes before they happen? Introducing <a href="https://arxiv.org/pdf/2502.03569">CLEF, an approach for counterfactual generation in biological and medical sequence models.</a> <a href="https://zitniklab.hms.harvard.edu/projects/CLEF">[Project website]</a></p>
+</p>-->
+            <p>What if we could anticipate molecular and medical changes before they happen? Introducing <a href="https://arxiv.org/pdf/2502.03569">CLEF, an approach for counterfactual generation in biological and medical sequence models.</a> <a href="https://zitniklab.hms.harvard.edu/projects/CLEF">[Project website]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/02/10/CLEF/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 10, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/02/05/DigitalTwins/">Digital Twins as Global Health and Disease Models</a>-->
+        <p class="card-header-title">Feb 2025: &nbsp; <span class="has-text-primary">Digital Twins as Global Health and Disease Models</span></p>
+<!--        <p class="card-header-item">Feb 2025</p>-->
+<!--        <p class="card-footer-item">Feb 5, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper on the role of digital twins as <a href="https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-025-01435-7">global health and disease learning models for preventive and personalized medicine.</a></p>
+</p>-->
+            <p>New paper on the role of digital twins as <a href="https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-025-01435-7">global health and disease learning models for preventive and personalized medicine.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/02/05/DigitalTwins/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 5, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/01/26/ICLRpapers/">LLM and KG+LLM agent papers at ICLR</a>-->
+        <p class="card-header-title">Jan 2025: &nbsp; <span class="has-text-primary">LLM and KG+LLM agent papers at ICLR</span></p>
+<!--        <p class="card-header-item">Jan 2025</p>-->
+<!--        <p class="card-footer-item">Jan 26, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New papers on <a href="https://arxiv.org/abs/2407.06483">test-time interventions in language models</a> and <a href="https://arxiv.org/abs/2410.04660">knowledge graph based LLM agents</a> accepted to ICLR. <a href="https://zitniklab.hms.harvard.edu/projects/KGARevion/">[KGARevion]</a></p>
+</p>-->
+            <p>New papers on <a href="https://arxiv.org/abs/2407.06483">test-time interventions in language models</a> and <a href="https://arxiv.org/abs/2410.04660">knowledge graph based LLM agents</a> accepted to ICLR. <a href="https://zitniklab.hms.harvard.edu/projects/KGARevion/">[KGARevion]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/01/26/ICLRpapers/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jan 26, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/01/25/AIM2/">Artificial Intelligence in Medicine 2</a>-->
+        <p class="card-header-title">Jan 2025: &nbsp; <span class="has-text-primary">Artificial Intelligence in Medicine 2</span></p>
+<!--        <p class="card-header-item">Jan 2025</p>-->
+<!--        <p class="card-footer-item">Jan 25, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited to share our new graduate course on <a href="https://zitniklab.hms.harvard.edu/AIM2/">Artificial Intelligence in Medicine 2</a>.</p>
+</p>-->
+            <p>Excited to share our new graduate course on <a href="https://zitniklab.hms.harvard.edu/AIM2/">Artificial Intelligence in Medicine 2</a>.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/01/25/AIM2/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jan 25, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/01/05/ProCyonKempnerBlog/">ProCyon AI Highlighted by Kempner</a>-->
+        <p class="card-header-title">Jan 2025: &nbsp; <span class="has-text-primary">ProCyon AI Highlighted by Kempner</span></p>
+<!--        <p class="card-header-item">Jan 2025</p>-->
+<!--        <p class="card-footer-item">Jan 5, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Thanks to Kempner Institute for highlighting our latest research, <a href="https://kempnerinstitute.harvard.edu/research/deeper-learning/procyon-a-multimodal-foundation-model-for-protein-phenotypes/">ProCyon, our protein-text foundation model for modeling protein functions.</a></p>
+</p>-->
+            <p>Thanks to Kempner Institute for highlighting our latest research, <a href="https://kempnerinstitute.harvard.edu/research/deeper-learning/procyon-a-multimodal-foundation-model-for-protein-phenotypes/">ProCyon, our protein-text foundation model for modeling protein functions.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/01/05/ProCyonKempnerBlog/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jan 5, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/01/05/CellSystemsVoices/">AI Design of Proteins for Therapeutics</a>-->
+        <p class="card-header-title">Jan 2025: &nbsp; <span class="has-text-primary">AI Design of Proteins for Therapeutics</span></p>
+<!--        <p class="card-header-item">Jan 2025</p>-->
+<!--        <p class="card-footer-item">Jan 5, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New Voices piece in Cell Systems: <a href="https://www.cell.com/cell-systems/abstract/S2405-4712(24)00309-0">How will computational protein design change biotechnology and therapeutic development?</a></p>
+</p>-->
+            <p>New Voices piece in Cell Systems: <a href="https://www.cell.com/cell-systems/abstract/S2405-4712(24)00309-0">How will computational protein design change biotechnology and therapeutic development?</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/01/05/CellSystemsVoices/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jan 5, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/12/16/ProCyon/">Foundation Model for Protein Phenotypes</a>-->
+        <p class="card-header-title">Dec 2024: &nbsp; <span class="has-text-primary">Foundation Model for Protein Phenotypes</span></p>
+<!--        <p class="card-header-item">Dec 2024</p>-->
+<!--        <p class="card-footer-item">Dec 16, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper: <a href="https://www.biorxiv.org/content/10.1101/2024.12.10.627665v1">ProCyon is a groundbreaking foundation model for modeling, generating, and predicting protein phenotypes</a>. <a href="https://zitniklab.hms.harvard.edu/ProCyon/">[Project website]</a> <a href="https://github.com/mims-harvard/ProCyon">[Code]</a></p>
+</p>-->
+            <p>New paper: <a href="https://www.biorxiv.org/content/10.1101/2024.12.10.627665v1">ProCyon is a groundbreaking foundation model for modeling, generating, and predicting protein phenotypes</a>. <a href="https://zitniklab.hms.harvard.edu/ProCyon/">[Project website]</a> <a href="https://github.com/mims-harvard/ProCyon">[Code]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/12/16/ProCyon/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 16, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/12/07/UnifiedClinicalVocabularyEmbeddings/">Unified Clinical Vocabulary Embeddings</a>-->
+        <p class="card-header-title">Dec 2024: &nbsp; <span class="has-text-primary">Unified Clinical Vocabulary Embeddings</span></p>
+<!--        <p class="card-header-item">Dec 2024</p>-->
+<!--        <p class="card-footer-item">Dec 7, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper: <a href="https://www.medrxiv.org/content/10.1101/2024.12.03.24318322">A unified resource provides a new representation of clinical knowledge by unifying medical vocabularies.</a> (1) Phenotype risk score analysis across 4.57 million patients, (2) Inter-institutional clinician panels evaluate alignment with clinical knowledge across 90 diseases and 3,000 clinical codes.</p>
+</p>-->
+            <p>New paper: <a href="https://www.medrxiv.org/content/10.1101/2024.12.03.24318322">A unified resource provides a new representation of clinical knowledge by unifying medical vocabularies.</a> (1) Phenotype risk score analysis across 4.57 million patients, (2) Inter-institutional clinician panels evaluate alignment with clinical knowledge across 90 diseases and 3,000 clinical codes.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/12/07/UnifiedClinicalVocabularyEmbeddings/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 7, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/12/07/SPECTRA/">SPECTRA in Nature Machine Intelligence</a>-->
+        <p class="card-header-title">Dec 2024: &nbsp; <span class="has-text-primary">SPECTRA in Nature Machine Intelligence</span></p>
+<!--        <p class="card-header-item">Dec 2024</p>-->
+<!--        <p class="card-footer-item">Dec 7, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Are biomedical AI models truly as smart as they seem? <a href="https://www.nature.com/articles/s42256-024-00931-6">SPECTRA is a framework that evaluates models by considering the full spectrum of cross-split overlap: train-test similarity.</a> SPECTRA reveals gaps in benchmarks for molecular sequence data across 19 models, including LLMs, GNNs, diffusion models, and conv nets.</p>
+</p>-->
+            <p>Are biomedical AI models truly as smart as they seem? <a href="https://www.nature.com/articles/s42256-024-00931-6">SPECTRA is a framework that evaluates models by considering the full spectrum of cross-split overlap: train-test similarity.</a> SPECTRA reveals gaps in benchmarks for molecular sequence data across 19 models, including LLMs, GNNs, diffusion models, and conv nets.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/12/07/SPECTRA/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 7, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/11/17/RhodesScholar/">Ayush Noori Selected as a Rhodes Scholar</a>-->
+        <p class="card-header-title">Nov 2024: &nbsp; <span class="has-text-primary">Ayush Noori Selected as a Rhodes Scholar</span></p>
+<!--        <p class="card-header-item">Nov 2024</p>-->
+<!--        <p class="card-footer-item">Nov 17, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Congratulations to <a href="https://www.thecrimson.com/article/2024/11/18/rhodes-scholars-announced-harvard-students/">Ayush Noori on being named a Rhodes Scholar</a>! Such an incredible achievement!</p>
+</p>-->
+            <p>Congratulations to <a href="https://www.thecrimson.com/article/2024/11/18/rhodes-scholars-announced-harvard-students/">Ayush Noori on being named a Rhodes Scholar</a>! Such an incredible achievement!</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/11/17/RhodesScholar/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Nov 17, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/11/15/PocketGen/">PocketGen in Nature Machine Intelligence</a>-->
+        <p class="card-header-title">Nov 2024: &nbsp; <span class="has-text-primary">PocketGen in Nature Machine Intelligence</span></p>
+<!--        <p class="card-header-item">Nov 2024</p>-->
+<!--        <p class="card-footer-item">Nov 15, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>PocketGen is a <a href="https://www.nature.com/articles/s42256-024-00920-9">multimodal sequence-structure generative model for designing full-atom ligand-binding protein pockets.</a></p>
+</p>-->
+            <p>PocketGen is a <a href="https://www.nature.com/articles/s42256-024-00920-9">multimodal sequence-structure generative model for designing full-atom ligand-binding protein pockets.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/11/15/PocketGen/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Nov 15, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/11/01/AIScientist/">Biomedical AI Agents in Cell</a>-->
+        <p class="card-header-title">Nov 2024: &nbsp; <span class="has-text-primary">Biomedical AI Agents in Cell</span></p>
+<!--        <p class="card-header-item">Nov 2024</p>-->
+<!--        <p class="card-footer-item">Nov 1, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>We envision “AI scientists” as <a href="https://www.cell.com/cell/fulltext/S0092-8674(24)01070-5">AI agents capable of skeptical learning and reasoning that empower biomedical research by integrating ML models and biomedical tools with experimental platforms.</a></p>
+</p>-->
+            <p>We envision “AI scientists” as <a href="https://www.cell.com/cell/fulltext/S0092-8674(24)01070-5">AI agents capable of skeptical learning and reasoning that empower biomedical research by integrating ML models and biomedical tools with experimental platforms.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/11/01/AIScientist/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Nov 1, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/10/19/ACAnet/">Activity Cliffs in Molecular Properties</a>-->
+        <p class="card-header-title">Oct 2024: &nbsp; <span class="has-text-primary">Activity Cliffs in Molecular Properties</span></p>
+<!--        <p class="card-header-item">Oct 2024</p>-->
+<!--        <p class="card-footer-item">Oct 19, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper on <a href="https://chemrxiv.org/engage/chemrxiv/article-details/6470c963be16ad5c57f5526c">activity-cliff informed contrastive learning for molecular property prediction.</a></p>
+</p>-->
+            <p>New paper on <a href="https://chemrxiv.org/engage/chemrxiv/article-details/6470c963be16ad5c57f5526c">activity-cliff informed contrastive learning for molecular property prediction.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/10/19/ACAnet/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Oct 19, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/10/09/KGARevion/">Knowledge Graph Agent for Medical Reasoning</a>-->
+        <p class="card-header-title">Oct 2024: &nbsp; <span class="has-text-primary">Knowledge Graph Agent for Medical Reasoning</span></p>
+<!--        <p class="card-header-item">Oct 2024</p>-->
+<!--        <p class="card-footer-item">Oct 9, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper introducing a <a href="https://arxiv.org/abs/2410.04660">knowledge graph agent for complex, knowledge-intensive medical reasoning.</a></p>
+</p>-->
+            <p>New paper introducing a <a href="https://arxiv.org/abs/2410.04660">knowledge graph agent for complex, knowledge-intensive medical reasoning.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/10/09/KGARevion/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Oct 9, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2024/09/27/NeurIPS2024Papers/">Three Papers Accepted to NeurIPS</a>-->
+        <p class="card-header-title">Sep 2024: &nbsp; <span class="has-text-primary">Three Papers Accepted to NeurIPS</span></p>
+<!--        <p class="card-header-item">Sep 2024</p>-->
+<!--        <p class="card-footer-item">Sep 27, 2024</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Exciting projects include a unified multi-task time series model, a flow-matching approach for generating protein pockets using geometric priors, and a tokenization method that produces invariant molecular representations for integration into large language models.</p>
+</p>-->
+            <p>Exciting projects include a unified multi-task time series model, a flow-matching approach for generating protein pockets using geometric priors, and a tokenization method that produces invariant molecular representations for integration into large language models.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2024/09/27/NeurIPS2024Papers/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 27, 2024</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+
+    <div class="column is-12">
+        <div class="card">
+            <header class="card-header">
+        <!--        <a class="card-header-title" href=""></a>-->
+            <p class="card-header-title"><span class="has-text-primary">Tweets</span></p>
+        <!--        <p class="card-header-item"></p>-->
+        <!--        <p class="card-footer-item"></p>-->
+            </header>
+        <div class="card-content">
+        <!--        <div class="content">-->
+        <!--            -->
+        <!--            <p></p>-->
+        <a class="twitter-timeline" data-width="500" data-height="500" data-theme="light" href="https://twitter.com/marinkazitnik?ref_src=twsrc%5Etfw" data-chrome="noheader transparent nofooter nofooter noborders">Tweets by marinkazitnik</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <!--        </div>-->
+        <!--        <div class="has-text-centered">-->
+        <!--            <a href="" class="button is-primary">Read more</a>-->
+        <!--        </div>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts -->
+<div style="background-color:#A41034">
+        <div class="content is-normal has-text-centered">
+            <p style="color:white;padding-top:20px;padding-bottom:20px;"><a href="https://scholar.harvard.edu/marinka" style="color:white"><b>Zitnik Lab</b></a>
+                &nbsp;&middot;&nbsp; <a href="#" style="color:white"><b>Artificial Intelligence in Medicine and Science</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://harvard.edu" style="color:white"><b>Harvard</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://dbmi.hms.harvard.edu/" style="color:white"><b>Department of Biomedical Informatics</b></a></p>
+        </div>
+</div></body>
+</html>
+
