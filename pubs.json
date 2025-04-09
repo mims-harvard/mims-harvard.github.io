@@ -52,6 +52,24 @@
     },
 
      {
+      "key": "submission25g",
+      "author": ["Ada Fang", "Zaixi Zhang", "Andrew Zhou", "Marinka Zitnik"],
+      "title": "ATOMICA: Learning Universal Representations of Intermolecular Interactions",
+      "venue": "In Review",
+      "year": "2025",
+      "thumbnail": "ATOMICA25.png",
+      "pdf": "",
+      "url": "https://www.biorxiv.org/content/10.1101/2025.04.02.646906",
+      "type": "journal",
+      "supp":
+      {
+        "bioRxiv": "https://www.biorxiv.org/content/10.1101/2025.04.02.646906",
+        "ATOMICA code": "https://github.com/mims-harvard/ATOMICA",
+        "project website": "https://zitniklab.hms.harvard.edu/projects/ATOMICA"
+      }
+    },
+
+     {
       "key": "submission25f",
       "author": ["Shanghua Gao", "Richard Zhu", "Zhenglun Kong", "Ayush Noori", "Xiaorui Su", "Curtis Ginder", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
       "title": "TxAgent: An AI Agent for Therapeutic Reasoning Across a Universe of Tools",
