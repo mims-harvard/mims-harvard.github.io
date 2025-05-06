@@ -4,16 +4,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Unified Clinical Vocabulary Embeddings for Advancing Precision Medicine - Zitnik Lab</title>
+    <title>ClinVec - Unified Embeddings of Clinical Codes Enable Knowledge-Grounded AI in Medicine - Zitnik Lab</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="shortcut icon" type="image/png"
            href="/favicon.png" 
     />
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Unified Clinical Vocabulary Embeddings for Advancing Precision Medicine | Zitnik Lab</title>
+<title>ClinVec - Unified Embeddings of Clinical Codes Enable Knowledge-Grounded AI in Medicine | Zitnik Lab</title>
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Unified Clinical Vocabulary Embeddings for Advancing Precision Medicine" />
+<meta property="og:title" content="ClinVec - Unified Embeddings of Clinical Codes Enable Knowledge-Grounded AI in Medicine" />
 <meta name="author" content="Marinka Zitnik" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="drug combinations, LLM, safety modeling, therapeutics" />
@@ -23,11 +23,11 @@
 <meta property="og:site_name" content="Zitnik Lab" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Unified Clinical Vocabulary Embeddings for Advancing Precision Medicine" />
+<meta property="twitter:title" content="ClinVec - Unified Embeddings of Clinical Codes Enable Knowledge-Grounded AI in Medicine" />
 <meta name="twitter:site" content="@marinkazitnik" />
 <meta name="twitter:creator" content="@Marinka Zitnik" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Marinka Zitnik"},"description":"drug combinations, LLM, safety modeling, therapeutics","headline":"Unified Clinical Vocabulary Embeddings for Advancing Precision Medicine","url":"https://zitniklab.hms.harvard.edu/projects/Clinical-knowledge-embeddings/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Marinka Zitnik"},"description":"drug combinations, LLM, safety modeling, therapeutics","headline":"ClinVec - Unified Embeddings of Clinical Codes Enable Knowledge-Grounded AI in Medicine","url":"https://zitniklab.hms.harvard.edu/projects/Clinical-knowledge-embeddings/"}</script>
 <!-- End Jekyll SEO tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
 <script>
@@ -122,7 +122,7 @@
         <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
     <div class="hero-body">
         <div class="container">
-            <p class="title is-2">Unified Clinical Vocabulary Embeddings for Advancing Precision Medicine</p>
+            <p class="title is-2">ClinVec - Unified Embeddings of Clinical Codes Enable Knowledge-Grounded AI in Medicine</p>
             <p class="subtitle is-3"></p>
             
         </div>
@@ -144,13 +144,13 @@
     <div class="box has-background-info has-text-white">
 
 <p>
-Integrating clinical knowledge into AI remains challenging despite numerous medical guidelines and vocabularies. Medical codes, central to healthcare systems, often reflect operational patterns shaped by geographic factors, national policies, insurance frameworks, and physician practices rather than the precise representation of clinical knowledge. This disconnect hampers AI in representing clinical relationships, raising concerns about bias, transparency, and generalizability.
+Integrating structured clinical knowledge into artificial intelligence (AI) models remains a major challenge. Medical codes primarily reflect administrative workflows rather than clinical reasoning, limiting AI models’ ability to capture true clinical relationships and undermining their generalizability. 
 </p>
 <p>
-Here, we developed a resource of 67,124 clinical vocabulary embeddings derived from a clinical knowledge graph tailored to electronic health record vocabularies, spanning over 1.3 million edges. Using graph transformer neural networks, we generated clinical vocabulary embeddings that provide a new representation of clinical knowledge by unifying seven medical vocabularies. These embeddings were validated through a phenotype risk score analysis involving 4.57 million patients from Clalit Healthcare Services, effectively stratifying individuals based on survival outcomes. Inter-institutional panels of clinicians evaluated the embeddings for alignment with clinical knowledge across 90 diseases and 3,000 clinical codes, confirming their robustness and transferability.
+To address this, we introduce ClinGraph, a clinical knowledge graph that integrates eight EHR-based vocabularies, and ClinVec, a set of 153,166 clinical code embeddings derived from ClinGraph using a graph transformer neural network. ClinVec provides a machine-readable representation of clinical knowledge that captures semantic relationships among diagnoses, medications, laboratory tests, and procedures. Panels of clinicians from multiple institutions evaluated the embeddings across 96 diseases and more than 3,000 clinical codes, confirming their alignment with expert knowledge. 
 </p>
 <p>
-This resource addresses gaps in integrating clinical vocabularies into AI models and training datasets, paving the way for knowledge-grounded population and patient-level models.
+In a retrospective analysis of 4.57 million patients from Clalit Health Services, we show that ClinVec supports phenotype risk scoring and stratifies individuals by survival outcomes. We further demonstrate that injecting ClinVec into large language models improves performance on medical question answering, including for region-specific clinical scenarios. ClinVec enables structured clinical knowledge to be injected into predictive and generative AI models, bridging the gap between EHR codes and clinical reasoning
 </p>
 </div>
 
@@ -158,7 +158,7 @@ This resource addresses gaps in integrating clinical vocabularies into AI models
 
 <p>Medicine is grounded in centuries of medical knowledge and the pursuit of individualized patient care through meticulous reasoning and evidence-based practice. The extensive development of standardized vocabularies and ontologies in the medical field has fostered a unified representation of clinical information, enabling interoperability and data exchange across healthcare systems globally. These standardized coding systems provide a consistent framework for effectively representing clinical knowledge, forming the backbone of precision medicine initiatives. With the widespread adoption of electronic health records (EHRs) and the standardization of medical data, precision medicine has shifted toward large-scale, data-driven approaches that directly leverage structured EHR data. More than half of healthcare foundation models now rely exclusively on structured clinical codes, such as billing data and medication records.</p>
 
-<p>We developed a resource that constructs embeddings for 67,124 medical codes, defining a unifying latent space of clinical knowledge. Using state-of-the-art relational graph transformers and a clinical knowledge graph, we created a cohesive, machine-readable map that captures relationships among seven clinical vocabularies, including laboratory tests, diagnosis codes, and medications, without requiring manual curation. By integrating verified knowledge bases and medical ontologies into a knowledge graph of standardized EHR codes, this resource reduces the risk of propagating inaccuracies while ensuring interpretability and transparency.</p>
+<p>we developed a <strong>ClinGraph</strong>, a clinical knowledge graph spanning eight standardized medical vocabularies, and <strong>ClinVec</strong>, a set of 153,166 clinical code embeddings derived from ClinGraph. Using state-of-the-art relational graph transformers and a clinical knowledge graph, we created a cohesive, machine-readable map that captures relationships among seven clinical vocabularies, including laboratory tests, diagnosis codes, and medications, without requiring manual curation. By integrating verified knowledge bases and medical ontologies into a knowledge graph of standardized EHR codes, this resource reduces the risk of propagating inaccuracies while ensuring interpretability and transparency.</p>
 
 <center>
 <img src="/img/Clinical-knowledge-embeddings-1.png" />
@@ -204,12 +204,12 @@ This resource addresses gaps in integrating clinical vocabularies into AI models
 
 <h2 id="publication">Publication</h2>
 
-<p><a href="https://www.medrxiv.org/content/10.1101/2024.12.03.24318322">Unified Clinical Vocabulary Embeddings for Advancing Precision Medicine</a><br />
-Ruth Johnson, Uri Gottlieb, Galit Shaham, Lihi Eisen, Jacob Waxman, Stav Devons-Sberro, Curtis R. Ginder, Peter Hong, Raheel Sayeed, Ben Y. Reis, Ran D. Balicer, Noa Dagan, and Marinka Zitnik<br />
-<em>In Review</em> 2024 <a href="https://www.medrxiv.org/content/10.1101/2024.12.03.24318322">[medRxiv]</a></p>
+<p><a href="https://www.medrxiv.org/content/10.1101/2024.12.03.24318322">ClinVec: Unified Embeddings of Clinical Codes Enable Knowledge-Grounded AI in Medicine</a><br />
+Ruth Johnson, Uri Gottlieb, Galit Shaham, Lihi Eisen, Jacob Waxman, Stav Devons-Sberro, Curtis R. Ginder, Peter Hong, Raheel Sayeed, Xiaorui Su, Ben Y. Reis, Ran D. Balicer, Noa Dagan, and Marinka Zitnik<br />
+<em>In Review</em> 2025 <a href="https://www.medrxiv.org/content/10.1101/2024.12.03.24318322">[medRxiv]</a></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{johnson2024unified,
-  title={Unified Clinical Vocabulary Embeddings for Advancing Precision Medicine},
+  title={ClinVec: Unified Embeddings of Clinical Codes Enable Knowledge-Grounded AI in Medicine},
   author={Johnson, Ruth and Gottlieb, Uri and Shaham, Galit and Eisen, Lihi and Waxman, Jacob and Devons-Sberro, Stav and Ginder, Curtis R. and Hong, Peter and Sayeed, Raheel and Reis, Ben Y. and Balicer, Ran D. and Dagan, Noa and Zitnik, Marinka},
   journal={medrxiv},
   url={https://www.medrxiv.org/content/10.1101/2024.12.03.24318322},
@@ -219,9 +219,9 @@ Ruth Johnson, Uri Gottlieb, Galit Shaham, Lihi Eisen, Jacob Waxman, Stav Devons-
 
 <h2 id="code-and-data-availability">Code and Data Availability</h2>
 
-<p>Pytorch implementation of unified clinical vocabulary embeddings is available in the <a href="https://github.com/mims-harvard/Clinical-knowledge-embeddings">GitHub repository</a>.</p>
+<p>Pytorch implementation of ClinVec and ClinGraph is available in the <a href="https://github.com/mims-harvard/Clinical-knowledge-embeddings">GitHub repository</a>.</p>
 
-<p>Data and clinical concept embeddings, as well as the PheKG knowledge graph, are available via <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/Z6H1A8">Harvard Dataverse</a>. Due to national and organizational data privacy regulations, CHS individual-level data from this study cannot be shared publicly.</p>
+<p>ClinVec embeddings and ClinGraph knowledge graph are available via <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/Z6H1A8">Harvard Dataverse</a>. Due to national and organizational data privacy regulations, CHS individual-level data from this study cannot be shared publicly.</p>
 
 <h2 id="authors">Authors</h2>
 
@@ -257,6 +257,62 @@ Ruth Johnson, Uri Gottlieb, Galit Shaham, Lihi Eisen, Jacob Waxman, Stav Devons-
         <div class="card">
     
     <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/05/05/COMPASS/">COMPASS: Immunotherapy Outcome Prediction</a>-->
+        <p class="card-header-title">May 2025: &nbsp; <span class="has-text-primary">COMPASS: Immunotherapy Outcome Prediction</span></p>
+<!--        <p class="card-header-item">May 2025</p>-->
+<!--        <p class="card-footer-item">May 5, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New preprint introducting <a href="https://www.medrxiv.org/content/10.1101/2025.05.01.25326820">COMPASS: A generalizable AI that predicts immunotherapy outcomes across cancers and treatments.</a> <a href="https://www.immuno-compass.com/">[Project website]</a> <a href="https://github.com/mims-harvard/COMPASS">[Code]</a></p>
+</p>-->
+            <p>New preprint introducting <a href="https://www.medrxiv.org/content/10.1101/2025.05.01.25326820">COMPASS: A generalizable AI that predicts immunotherapy outcomes across cancers and treatments.</a> <a href="https://www.immuno-compass.com/">[Project website]</a> <a href="https://github.com/mims-harvard/COMPASS">[Code]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/05/05/COMPASS/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: May 5, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/04/25/KempnerBlog/">ATOMICA and TxAgent on the Kempner Blog</a>-->
+        <p class="card-header-title">Apr 2025: &nbsp; <span class="has-text-primary">ATOMICA and TxAgent on the Kempner Blog</span></p>
+<!--        <p class="card-header-item">Apr 2025</p>-->
+<!--        <p class="card-footer-item">Apr 25, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Check out the Kempner Deeper Learning posts describing our latest <a href="https://kempnerinstitute.harvard.edu/research/deeper-learning/atomica-learning-universal-representations-of-molecular-interactions/">ATOMICA</a> and <a href="https://kempnerinstitute.harvard.edu/research/deeper-learning/txagent-an-ai-agent-for-therapeutic-reasoning-across-a-universe-of-211-tools/">TxAgent</a> AI models.</p>
+</p>-->
+            <p>Check out the Kempner Deeper Learning posts describing our latest <a href="https://kempnerinstitute.harvard.edu/research/deeper-learning/atomica-learning-universal-representations-of-molecular-interactions/">ATOMICA</a> and <a href="https://kempnerinstitute.harvard.edu/research/deeper-learning/txagent-an-ai-agent-for-therapeutic-reasoning-across-a-universe-of-211-tools/">TxAgent</a> AI models.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/04/25/KempnerBlog/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Apr 25, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
 <!--        <a class="card-header-title" href="/2025/04/09/ATOMICA/">ATOMICA - A Universal Model of Molecular Interactions</a>-->
         <p class="card-header-title">Apr 2025: &nbsp; <span class="has-text-primary">ATOMICA - A Universal Model of Molecular Interactions</span></p>
 <!--        <p class="card-header-item">Apr 2025</p>-->
@@ -266,9 +322,9 @@ Ruth Johnson, Uri Gottlieb, Galit Shaham, Lihi Eisen, Jacob Waxman, Stav Devons-
     <div class="card-content">
 <!--        <div class="content">-->
 <!--            -->
-<!--            <p><p>New preprint introducing <a href="https://www.biorxiv.org/content/10.1101/2025.04.02.646906">ATOMICA, a universal model of intermolecular interactions across proteins, small molecules, ions, peptides, RNA, and DNA.</a></p>
+<!--            <p><p>New preprint introducing <a href="https://www.biorxiv.org/content/10.1101/2025.04.02.646906">ATOMICA, a universal model of intermolecular interactions across proteins, small molecules, ions, peptides, RNA, and DNA.</a> <a href="https://kempnerinstitute.harvard.edu/research/deeper-learning/atomica-learning-universal-representations-of-molecular-interactions/">[Kempner Institute]</a></p>
 </p>-->
-            <p>New preprint introducing <a href="https://www.biorxiv.org/content/10.1101/2025.04.02.646906">ATOMICA, a universal model of intermolecular interactions across proteins, small molecules, ions, peptides, RNA, and DNA.</a></p>
+            <p>New preprint introducing <a href="https://www.biorxiv.org/content/10.1101/2025.04.02.646906">ATOMICA, a universal model of intermolecular interactions across proteins, small molecules, ions, peptides, RNA, and DNA.</a> <a href="https://kempnerinstitute.harvard.edu/research/deeper-learning/atomica-learning-universal-representations-of-molecular-interactions/">[Kempner Institute]</a></p>
 
 <!--        </div>-->
 <!--        <div class="has-text-centered">-->
@@ -755,62 +811,6 @@ including all US FDA-approved drugs since 1939 and validated clinical insights. 
     </div>
 <!--    <footer class="card-footer">-->
 <!--        <p class="card-footer-item">Published: Nov 1, 2024</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2024/10/19/ACAnet/">Activity Cliffs in Molecular Properties</a>-->
-        <p class="card-header-title">Oct 2024: &nbsp; <span class="has-text-primary">Activity Cliffs in Molecular Properties</span></p>
-<!--        <p class="card-header-item">Oct 2024</p>-->
-<!--        <p class="card-footer-item">Oct 19, 2024</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>New paper on <a href="https://chemrxiv.org/engage/chemrxiv/article-details/6470c963be16ad5c57f5526c">activity-cliff informed contrastive learning for molecular property prediction.</a></p>
-</p>-->
-            <p>New paper on <a href="https://chemrxiv.org/engage/chemrxiv/article-details/6470c963be16ad5c57f5526c">activity-cliff informed contrastive learning for molecular property prediction.</a></p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2024/10/19/ACAnet/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Oct 19, 2024</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2024/10/09/KGARevion/">Knowledge Graph Agent for Medical Reasoning</a>-->
-        <p class="card-header-title">Oct 2024: &nbsp; <span class="has-text-primary">Knowledge Graph Agent for Medical Reasoning</span></p>
-<!--        <p class="card-header-item">Oct 2024</p>-->
-<!--        <p class="card-footer-item">Oct 9, 2024</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>New paper introducing a <a href="https://arxiv.org/abs/2410.04660">knowledge graph agent for complex, knowledge-intensive medical reasoning.</a></p>
-</p>-->
-            <p>New paper introducing a <a href="https://arxiv.org/abs/2410.04660">knowledge graph agent for complex, knowledge-intensive medical reasoning.</a></p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2024/10/09/KGARevion/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Oct 9, 2024</p>-->
 <!--    </footer>-->
 </div>
     </div>

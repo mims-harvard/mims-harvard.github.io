@@ -52,6 +52,24 @@
     },
 
      {
+      "key": "submission25h",
+      "author": ["Wanxiang Shen", "Thinh H. Nguyen", "Michelle M. Li", "Yepeng Huang", "Intae Moon", "Nitya Nair", "Daniel Marbach", "Marinka Zitnik"],
+      "title": "Generalizable AI Predicts Immunotherapy Outcomes Across Cancers and Treatments",
+      "venue": "In Review",
+      "year": "2025",
+      "thumbnail": "COMPASS25.png",
+      "pdf": "",
+      "url": "https://www.medrxiv.org/content/10.1101/2025.05.01.25326820",
+      "type": "journal",
+      "supp":
+      {
+        "medRxiv": "https://www.medrxiv.org/content/10.1101/2025.05.01.25326820",
+        "COMPASS code": "https://github.com/mims-harvard/COMPASS",
+        "project website": "https://www.immuno-compass.com/"
+      }
+    },
+
+     {
       "key": "submission25g",
       "author": ["Ada Fang", "Zaixi Zhang", "Andrew Zhou", "Marinka Zitnik"],
       "title": "ATOMICA: Learning Universal Representations of Intermolecular Interactions",
@@ -65,6 +83,7 @@
       {
         "bioRxiv": "https://www.biorxiv.org/content/10.1101/2025.04.02.646906",
         "ATOMICA code": "https://github.com/mims-harvard/ATOMICA",
+        "Kempner Institute": "https://kempnerinstitute.harvard.edu/research/deeper-learning/atomica-learning-universal-representations-of-molecular-interactions/",
         "project website": "https://zitniklab.hms.harvard.edu/projects/ATOMICA"
       }
     },
@@ -149,7 +168,7 @@
       "key": "submission25c",
       "author": ["Xiaorui Su", "Shvat Messica", "Yepeng Huang", "Ruth Johnson", "Lukas Fesser", "Shanghua Gao", "Faryad Sahneh", "Marinka Zitnik"],
       "title": "Multimodal Medical Code Tokenizer",
-      "venue": "In Review",
+      "venue": "International Conference on Machine Learning, ICML",
       "year": "2025",
       "thumbnail": "medtok25.png",
       "pdf": "",
@@ -218,7 +237,7 @@
      {
       "key": "submission24t",
       "author": ["Ruth Johnson", "Uri Gottlieb", "Galit Shaham", "Lihi Eisen", "Jacob Waxman", "Stav Devons-Sberro", "Curtis R. Ginder", "Peter Hong", "Raheel Sayeed", "Ben Y. Reis", "Ran D. Balicer", "Noa Dagan", "Marinka Zitnik"],
-      "title": "Unified Clinical Vocabulary Embeddings for Advancing Precision Medicine",
+      "title": "ClinVec: Unified Embeddings of Clinical Codes Enable Knowledge-Grounded AI in Medicine",
       "venue": "In Review",
       "year": "2025",
       "thumbnail": "clinical-knowledge-embeddings.png",
