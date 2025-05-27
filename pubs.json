@@ -110,6 +110,22 @@
     },
 
      {
+      "key": "submission25i",
+      "author": ["Kevin Li", "Marinka Zitnik"],
+      "title": "Prompting Decision Transformers for Zero-Shot Reach-Avoid Policies",
+      "venue": "In Review",
+      "year": "2025",
+      "thumbnail": "RADT25.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2505.19337",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2505.19337"
+      }
+    },
+
+     {
       "key": "submission24u",
       "author": ["Owen Queen*", "Yepeng Huang*", "Robert Calef*", "Valentina Giunchiglia", "Tianlong Chen", "George Dasoulas", "LeAnn Tai", "Yasha Ektefaie", "Ayush Noori", "Joseph Brown", "Tom Cobley", "Karin Hrovatin", "Tom Hartvigsen", "Fabian J. Theis", "Bradley L. Pentelute", "Vikram Khurana", "Manolis Kellis", "Marinka Zitnik"],
       "title": "ProCyon: A Multimodal Foundation Model for Protein Phenotypes",
@@ -164,6 +180,21 @@
       }
     },
 
+     {
+      "key": "submission25l",
+      "author": ["Justin Kauffman", "Riccardo Miotto", "Eyal Klang", "Anthony Costa", "Beau Norgeot", "Marinka Zitnik", "Shameer Khader", "Fei Wang", "Girish N Nadkarni", "Benjamin S Glicksberg"],
+      "title": "Embedding Methods for Electronic Health Record Research",
+      "venue": "Annual Review of Biomedical Data Science",
+      "year": "2025",
+      "thumbnail": "EmbeddingEHR25.png",
+      "pdf": "https://www.annualreviews.org/content/journals/10.1146/annurev-biodatasci-103123-094729",
+      "url": "https://www.annualreviews.org/content/journals/10.1146/annurev-biodatasci-103123-094729",
+      "type": "journal",
+      "supp":
+      {
+      }
+    },
+
     {
       "key": "submission25c",
       "author": ["Xiaorui Su", "Shvat Messica", "Yepeng Huang", "Ruth Johnson", "Lukas Fesser", "Shanghua Gao", "Faryad Sahneh", "Marinka Zitnik"],
@@ -178,6 +209,38 @@
       {
         "arXiv": "https://arxiv.org/abs/2502.04397",
         "project website": "https://zitniklab.hms.harvard.edu/projects/MedTok"
+      }
+    },
+
+     {
+      "key": "submission25j",
+      "author": ["Zhenglun Kong", "Yize Li", "Fanhu Zeng", "Lei Xin", "Shvat Messica", "Xue Lin", "Pu Zhao", "Manolis Kellis", "Hao Tang", "Marinka Zitnik"],
+      "title": "Token Reduction Should Go Beyond Efficiency in Generative Models -- From Vision, Language to Multimodality",
+      "venue": "In Review",
+      "year": "2025",
+      "thumbnail": "TokenReduction25.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2505.18227",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2505.18227"
+      }
+    },
+
+     {
+      "key": "submission25k",
+      "author": ["Huyen N Nguyen", "Sehi L’Yi", "Thomas C Smits", "Shanghua Gao", "Marinka Zitnik", "Nils Gehlenborg"],
+      "title": "Multimodal Retrieval of Genomics Data Visualizations",
+      "venue": "In Review",
+      "year": "2025",
+      "thumbnail": "GenomicsDataVis25.png",
+      "pdf": "",
+      "url": "https://osf.io/zatw9_v1/",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://osf.io/zatw9_v1/"
       }
     },
 
@@ -213,6 +276,22 @@
       {
         "bioRxiv": "https://www.biorxiv.org/content/10.1101/2025.01.17.633626",
         "code": "https://github.com/mims-harvard/Phyla"
+      }
+    },
+
+     {
+      "key": "submission25m",
+      "author": ["Zhongzhan Huang", "Shanshan Zhong", "Pan Zhou", "Shanghua Gao", "Marinka Zitnik", "Liang Lin"],
+      "title": "A Causality-Aware Paradigm for Evaluating Creativity of Multimodal Large Language Models",
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "year": "2025",
+      "thumbnail": "CreativityLLM25.png",
+      "pdf": "https://ieeexplore.ieee.org/abstract/document/10876763",
+      "url": "https://ieeexplore.ieee.org/abstract/document/10876763",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2501.15147"
       }
     },
 
@@ -489,9 +568,9 @@
      {
       "key": "submission24h",
       "author": ["Alejandro Velez-Arce", "Kexin Huang", "Michelle M Li", "Xiang Lin", "Wenhao Gao", "Tianfan Fu", "Manolis Kellis", "Bradley L. Pentelute", "Marinka Zitnik"],
-      "title": "TDC-2: Multimodal Foundation for Therapeutic Science",
-      "venue": "In Review",
-      "year": "2025",
+      "title": "Signals in the Cells: Multimodal and Contextualized Machine Learning Foundations for Therapeutics",
+      "venue": "NeurIPS AI for New Drug Modalities",
+      "year": "2024",
       "thumbnail": "tdc2.png",
       "pdf": "",
       "url": "https://www.biorxiv.org/content/10.1101/2024.06.12.598655",
@@ -499,7 +578,7 @@
       "supp":
       {
         "bioRxiv": "https://www.biorxiv.org/content/10.1101/2024.06.12.598655",
-        "NeurIPS AI for New Drug Modalities Workshop": "https://openreview.net/pdf?id=kL8dlYp6IM",
+        "ICML 2025": "https://arxiv.org/abs/2505.05577",
         "project website": "https://tdcommons.ai/",
         "code": "https://github.com/mims-harvard/TDC"
       }
@@ -833,7 +912,7 @@
       "key": "submission22n",
       "author": ["Emily Alsentzer*", "Michelle M. Li*", "Shilpa N. Kobren", "Ayush Noori", "Undiagnosed Diseases Network", "Isaac S. Kohane", "Marinka Zitnik"],
       "title": "Few Shot Learning for Phenotype-Driven Diagnosis of Patients with Rare Genetic Diseases",
-      "venue": "In Review ",
+      "venue": "npj Digital Medicine",
       "year": "2025",
       "thumbnail": "SHEPHERD23.png",
       "pdf": "",
