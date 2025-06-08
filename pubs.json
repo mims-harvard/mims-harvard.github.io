@@ -52,6 +52,24 @@
     },
 
      {
+      "key": "submission24a",
+      "author": ["Guadalupe Gonzalez*", "Xiang Lin*", "Isuru Herath", "Kirill Veselkov", "Michael Bronstein", "Marinka Zitnik"],
+      "title": "Combinatorial Prediction of Therapeutic Perturbations Using Causally-Inspired Neural Networks",
+      "venue": "Nature Biomedical Engineering (in press)",
+      "year": "2025",
+      "thumbnail": "PDGrapher24.png",
+      "pdf": "",
+      "url": "https://www.biorxiv.org/content/10.1101/2024.01.03.573985",
+      "type": "journal",
+      "supp":
+      {
+        "bioRxiv": "https://www.biorxiv.org/content/10.1101/2024.01.03.573985",
+        "project website": "https://zitniklab.hms.harvard.edu/projects/PDGrapher/",
+        "code": "https://github.com/mims-harvard/PDGrapher"
+      }
+    },
+
+     {
       "key": "submission25h",
       "author": ["Wanxiang Shen", "Thinh H. Nguyen", "Michelle M. Li", "Yepeng Huang", "Intae Moon", "Nitya Nair", "Daniel Marbach", "Marinka Zitnik"],
       "title": "Generalizable AI Predicts Immunotherapy Outcomes Across Cancers and Treatments",
@@ -85,6 +103,22 @@
         "ATOMICA code": "https://github.com/mims-harvard/ATOMICA",
         "Kempner Institute": "https://kempnerinstitute.harvard.edu/research/deeper-learning/atomica-learning-universal-representations-of-molecular-interactions/",
         "project website": "https://zitniklab.hms.harvard.edu/projects/ATOMICA"
+      }
+    },
+
+     {
+      "key": "submission25p",
+      "author": ["Michelle M. Li", "Ben Y. Reis", "Adam Rodman", "Tianxi Cai", "Noa Dagan", "Ran D. Balicer", "Joseph Loscalzo", "Isaac S. Kohane", "Marinka Zitnik"],
+      "title": "One Patient, Many Contexts: Scaling Medical AI Through Contextual Intelligence",
+      "venue": "In Review",
+      "year": "2025",
+      "thumbnail": "contextswitching25.png",
+      "pdf": "https://arxiv.org/abs/2506.10157",
+      "url": "https://arxiv.org/abs/2506.10157",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2506.10157"
       }
     },
 
@@ -245,6 +279,22 @@
     },
 
      {
+      "key": "submission25n",
+      "author": ["Justin Kauffman", "Emma Holmes", "Akhil Vaid", "Alexander Charney", "Patricia Kovatch", "Joshua Lampert", "Ankit Sakhuja", "Marinka Zitnik", "Benjamin Glicksberg", "Ira Hofer", "Girish Nadkarni"],
+      "title": "InfEHR: Resolving Clinical Uncertainty through Deep Geometric Learning on Electronic Health Records",
+      "venue": "In Review",
+      "year": "2025",
+      "thumbnail": "infEHR25.png",
+      "pdf": "",
+      "url": "https://www.researchsquare.com/article/rs-5953885/v1",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://www.researchsquare.com/article/rs-5953885/v1"
+      }
+    },
+
+     {
       "key": "submission24p",
       "author": ["Xiaorui Su", "Yibo Wang", "Shanghua Gao", "Xiaolong Liu", "Valentina Giunchiglia", "Djork-Arné Clevert", "Marinka Zitnik"],
       "title": "KGARevion: An AI Agent for Knowledge-Intensive Biomedical QA",
@@ -296,20 +346,18 @@
     },
 
      {
-      "key": "submission24a",
-      "author": ["Guadalupe Gonzalez", "Isuru Herath", "Kirill Veselkov", "Michael Bronstein", "Marinka Zitnik"],
-      "title": "Combinatorial Prediction of Therapeutic Perturbations Using Causally-Inspired Neural Networks",
+      "key": "submission25o",
+      "author": ["Weijiang Li", "Xiaomin Li", "Ethan Lavallee", "Alice Saparov", "Marinka Zitnik", "Christopher Cassa"],
+      "title": "From Text to Translation: Using Language Models to Prioritize Variants for Clinical Review",
       "venue": "In Review",
       "year": "2025",
-      "thumbnail": "PDGrapher24.png",
+      "thumbnail": "infEHR25.png",
       "pdf": "",
-      "url": "https://www.biorxiv.org/content/10.1101/2024.01.03.573985",
+      "url": "https://www.medrxiv.org/content/10.1101/2024.12.31.24319792",
       "type": "journal",
       "supp":
       {
-        "bioRxiv": "https://www.biorxiv.org/content/10.1101/2024.01.03.573985",
-        "project website": "https://zitniklab.hms.harvard.edu/projects/PDGrapher/",
-        "code": "https://github.com/mims-harvard/PDGrapher"
+        "arXiv": "https://www.medrxiv.org/content/10.1101/2024.12.31.24319792"
       }
     },
 
