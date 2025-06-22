@@ -65,7 +65,7 @@
       {
         "bioRxiv": "https://www.biorxiv.org/content/10.1101/2024.01.03.573985",
         "project website": "https://zitniklab.hms.harvard.edu/projects/PDGrapher/",
-        "code": "https://github.com/mims-harvard/PDGrapher"
+        "PDGrapher code": "https://github.com/mims-harvard/PDGrapher"
       }
     },
 
@@ -173,7 +173,7 @@
       {
         "bioRxiv": "https://www.biorxiv.org/content/10.1101/2024.12.10.627665",
         "project website": "https://zitniklab.hms.harvard.edu/ProCyon/",
-        "code": "https://github.com/mims-harvard/ProCyon",
+        "ProCyon code": "https://github.com/mims-harvard/ProCyon",
         "Kempner Institute": "https://kempnerinstitute.harvard.edu/research/deeper-learning/procyon-a-multimodal-foundation-model-for-protein-phenotypes/"
       }
     },
@@ -191,7 +191,7 @@
       "supp":
       {
         "arXiv": "https://arxiv.org/abs/2503.02781",
-        "code": "https://github.com/mims-harvard/Madrigal",
+        "MADRIGAL code": "https://github.com/mims-harvard/Madrigal",
         "project website": "https://zitniklab.hms.harvard.edu/projects/Madrigal"
       }
     },
@@ -242,7 +242,8 @@
       "supp":
       {
         "arXiv": "https://arxiv.org/abs/2502.04397",
-        "project website": "https://zitniklab.hms.harvard.edu/projects/MedTok"
+        "project website": "https://zitniklab.hms.harvard.edu/projects/MedTok",
+        "MedTok code": "https://github.com/mims-harvard/MedTok"
       }
     },
 
@@ -275,6 +276,22 @@
       "supp":
       {
         "arXiv": "https://osf.io/zatw9_v1/"
+      }
+    },
+
+     {
+      "key": "submission25r",
+      "author": ["Devin Lange", "Pengwei Sui", "Shanghua Gao", "Marinka Zitnik", "Nils Gehlenborg"],
+      "title": "DQVis Dataset: Natural Language to Biomedical Visualization",
+      "venue": "In Review",
+      "year": "2025",
+      "thumbnail": "DQVis25.png",
+      "pdf": "https://osf.io/preprints/osf/rqb7u_v1",
+      "url": "https://osf.io/preprints/osf/rqb7u_v1",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://osf.io/preprints/osf/rqb7u_v1"
       }
     },
 
@@ -962,9 +979,9 @@
       "title": "Few Shot Learning for Phenotype-Driven Diagnosis of Patients with Rare Genetic Diseases",
       "venue": "npj Digital Medicine",
       "year": "2025",
-      "thumbnail": "SHEPHERD23.png",
-      "pdf": "",
-      "url": "https://www.medrxiv.org/content/10.1101/2022.12.07.22283238",
+      "thumbnail": "SHEPHERD25.png",
+      "pdf": "https://www.nature.com/articles/s41746-025-01749-1",
+      "url": "https://www.nature.com/articles/s41746-025-01749-1",
       "type": "journal",
       "supp":
       {
