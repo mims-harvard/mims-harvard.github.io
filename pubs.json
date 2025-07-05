@@ -123,6 +123,38 @@
     },
 
      {
+      "key": "submission25u",
+      "author": ["Zhenglun Kong", "Mufan Qiu", "John Boesen", "Xiang Lin", "Sukwon Yun", "Tianlong Chen", "Manolis Kellis", "Marinka Zitnik"],
+      "title": "SPATIA: Multimodal Model for Prediction and Generation of Spatial Cell Phenotypes",
+      "venue": "In Review",
+      "year": "2025",
+      "thumbnail": "SPATIA25.png",
+      "pdf": "https://www.arxiv.org/abs/2507.04704",
+      "url": "https://www.arxiv.org/abs/2507.04704",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://www.arxiv.org/abs/2507.04704"
+      }
+    },
+
+     {
+      "key": "submission25t",
+      "author": ["Marinka Zitnik"],
+      "title": "AI-Enabled Drug Discovery Reaches Clinical Milestone",
+      "venue": "Nature Medicine",
+      "year": "2025",
+      "thumbnail": "TNIKNatMedNewsViews25.png",
+      "pdf": "https://rdcu.be/euSI0",
+      "url": "https://www.nature.com/articles/s41591-025-03832-2",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://rdcu.be/euSI0"
+      }
+    },
+
+     {
       "key": "submission25f",
       "author": ["Shanghua Gao", "Richard Zhu", "Zhenglun Kong", "Ayush Noori", "Xiaorui Su", "Curtis Ginder", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
       "title": "TxAgent: An AI Agent for Therapeutic Reasoning Across a Universe of Tools",
@@ -260,6 +292,22 @@
       "supp":
       {
         "arXiv": "https://arxiv.org/abs/2505.18227"
+      }
+    },
+
+     {
+      "key": "submission25s",
+      "author": ["Grey Kuling", "Marinka Zitnik"],
+      "title": "Ken Utilization Layer: Hebbian Replay Within a Student's Ken for Adaptive Knowledge Tracing",
+      "venue": "In Review",
+      "year": "2025",
+      "thumbnail": "DQVis25.png",
+      "pdf": "https://arxiv.org/abs/2507.00032",
+      "url": "https://arxiv.org/abs/2507.00032",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2507.00032"
       }
     },
 
