@@ -31,7 +31,7 @@
         "The Economist": "https://www.economist.com/leaders/2023/09/14/how-artificial-intelligence-can-revolutionise-science",
         "Chemical and Engineering News": "https://cen.acs.org/business/informatics/tricky-ethics-AI-lab/101/i31",
         "Kempner Institute": "https://www.harvard.edu/kempner-institute/2023/09/15/zitnik-nature-publications/",
-        "ChatGPT and Science in Nature": "https://www.nature.com/articles/d41586-023-03930-6"
+        "ChatGPT Feature in Nature": "https://www.nature.com/articles/d41586-023-03930-6"
       }
     },
 
@@ -47,25 +47,68 @@
       "type": "journal",
       "supp":
       {
-        "arXiv": "https://arxiv.org/abs/2404.02831"
+        "arXiv": "https://arxiv.org/abs/2404.02831",
+        "https://aiscientist.tools": "https://aiscientist.tools"
       }
     },
+
+     {
+      "key": "submission25a1",
+      "author": ["Shanghua Gao", "Richard Zhu", "Pengwei Sui", "Zhenglun Kong", "Sufian Aldogom", "Yepeng Huang", "Ayush Noori", "Reza Shamji", "Krishna Parvataneni", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
+      "title": "Democratizing AI Scientists Using ToolUniverse",
+      "venue": "In Review",
+      "year": "2025",
+      "thumbnail": "ToolUniverse25.png",
+      "pdf": "https://arxiv.org/abs/2509.23426",
+      "url": "https://arxiv.org/abs/2509.23426",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2509.23426",
+        "https://aiscientist.tools": "https://aiscientist.tools",
+        "AI Agents in Nature": "https://www.nature.com/articles/d41586-025-03246-7",
+        "AI Cell Models in Science": "https://www.science.org/content/article/can-ai-capture-mind-boggling-complexity-human-cell",
+        "Kempner Institute": "https://kempnerinstitute.harvard.edu/research/deeper-learning/from-models-to-scientists-building-ai-agents-for-scientific-discovery/"
+      }
+    },
+
+
+     {
+      "key": "submission25f1",
+      "author": ["Ayush Noori", "Joaquín Polonuer", "Katharina Meyer", "Bogdan Budnik", "Shad Morton", "Xinyuan Wang", "Sumaiya Nazeen", "Yingnan He", "Iñaki Arango", "Lucas Vittor", "Matthew Woodworth", "Richard C. Krolewski", "Michelle M. Li", "Ninning Liu", "Tushar Kamath", "Evan Macosko", "Dylan Ritter", "Jalwa Afroz", "Alexander B. H. Henderson", "Lorenz Studer", "Samuel G. Rodriques", "Andrew White", "Noa Dagan", "David A. Clifton", "George M. Church", "Sudeshna Das", "Jenny M. Tam", "Vikram Khurana", "Marinka Zitnik"],
+      "title": "Graph AI Generates Neurological Hypotheses Validated in Molecular, Organoid, and Clinical Systems",
+      "venue": "In Review",
+      "year": "2025",
+      "thumbnail": "PROTON25.png",
+      "pdf": "https://arxiv.org/abs/2512.13724",
+      "url": "https://arxiv.org/abs/2512.13724",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2512.13724",
+        "code": "https://github.com/mims-harvard/PROTON",
+        "project website": "https://www.protonmodel.ai/"
+      }
+    },
+
 
      {
       "key": "submission24a",
       "author": ["Guadalupe Gonzalez*", "Xiang Lin*", "Isuru Herath", "Kirill Veselkov", "Michael Bronstein", "Marinka Zitnik"],
       "title": "Combinatorial Prediction of Therapeutic Perturbations Using Causally-Inspired Neural Networks",
-      "venue": "Nature Biomedical Engineering (in press)",
+      "venue": "Nature Biomedical Engineering",
       "year": "2025",
-      "thumbnail": "PDGrapher24.png",
-      "pdf": "",
-      "url": "https://www.biorxiv.org/content/10.1101/2024.01.03.573985",
+      "thumbnail": "PDGrapher25.png",
+      "pdf": "https://www.nature.com/articles/s41551-025-01481-x",
+      "url": "https://www.nature.com/articles/s41551-025-01481-x",
       "type": "journal",
       "supp":
       {
         "bioRxiv": "https://www.biorxiv.org/content/10.1101/2024.01.03.573985",
         "project website": "https://zitniklab.hms.harvard.edu/projects/PDGrapher/",
-        "PDGrapher code": "https://github.com/mims-harvard/PDGrapher"
+        "PDGrapher code": "https://github.com/mims-harvard/PDGrapher",
+        "Harvard Medicine News": "https://hms.harvard.edu/news/new-ai-tool-pinpoints-genes-drug-combos-restore-health-diseased-cells",
+        "Harvard Crimson": "https://www.thecrimson.com/article/2025/10/6/hms-tool-drug-discovery/"
       }
     },
 
@@ -83,7 +126,61 @@
       {
         "medRxiv": "https://www.medrxiv.org/content/10.1101/2025.05.01.25326820",
         "COMPASS code": "https://github.com/mims-harvard/COMPASS",
-        "project website": "https://www.immuno-compass.com/"
+        "project website": "https://www.immuno-compass.com/",
+        "Harvard Gazette": "https://news.harvard.edu/gazette/story/2025/12/your-digital-twin-might-save-your-life/"
+      }
+    },
+
+     {
+      "key": "submission25d1",
+      "author": ["Xiang Lin", "Zhenglun Kong", "Ghosh Soumya", "Manolis Kellis", "Marinka Zitnik"],
+      "title": "CONCERT Predicts Niche-Aware Perturbation Responses in Spatial Transcriptomics",
+      "venue": "In Review",
+      "year": "2025",
+      "thumbnail": "CONCERT25.png",
+      "pdf": "https://www.biorxiv.org/content/10.1101/2025.11.08.686890",
+      "url": "https://www.biorxiv.org/content/10.1101/2025.11.08.686890",
+      "type": "journal",
+      "supp":
+      {
+        "bioRxiv": "https://www.biorxiv.org/content/10.1101/2025.11.08.686890",
+        "project website": "https://zitniklab.hms.harvard.edu/projects/CONCERT/",
+        "code": "https://github.com/mims-harvard/CONCERT"
+      }
+    },
+
+     {
+      "key": "submission25g1",
+      "author": ["Robert Calef", "Arthur Liang", "Manolis Kellis", "Marinka Zitnik"],
+      "title": "Greater than the Sum of Its Parts: Building Substructure into Protein Encoding Models",
+      "venue": "In Review",
+      "year": "2025",
+      "thumbnail": "Magneton25.png",
+      "pdf": "https://arxiv.org/abs/2512.18114",
+      "url": "https://arxiv.org/abs/2512.18114",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2512.18114",
+        "code": "https://github.com/rcalef/magneton/",
+        "project website": "https://zitniklab.hms.harvard.edu/projects/Magneton"
+      }
+    },
+
+     {
+      "key": "submission25e1",
+      "author": ["Michael Sun", "Weize Yuan", "Gang Liu", "Wojciech Matusik", "Marinka Zitnik"],
+      "title": "Protein Structure Tokenization via Geometric Byte Pair Encoding",
+      "venue": "In Review",
+      "year": "2025",
+      "thumbnail": "GeoBPE25.png",
+      "pdf": "https://arxiv.org/abs/2511.11758",
+      "url": "https://arxiv.org/abs/2511.11758",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2511.11758",
+        "code": "https://github.com/shiningsunnyday/PT-BPE/"
       }
     },
 
@@ -110,7 +207,7 @@
       "key": "submission25p",
       "author": ["Michelle M. Li", "Ben Y. Reis", "Adam Rodman", "Tianxi Cai", "Noa Dagan", "Ran D. Balicer", "Joseph Loscalzo", "Isaac S. Kohane", "Marinka Zitnik"],
       "title": "One Patient, Many Contexts: Scaling Medical AI Through Contextual Intelligence",
-      "venue": "In Review",
+      "venue": "Nature Medicine, in press",
       "year": "2025",
       "thumbnail": "contextswitching25.png",
       "pdf": "https://arxiv.org/abs/2506.10157",
@@ -119,6 +216,38 @@
       "supp":
       {
         "arXiv": "https://arxiv.org/abs/2506.10157"
+      }
+    },
+
+     {
+      "key": "submission25c1",
+      "author": ["Ayush Noori", "Adam Rodman", "Alan Karthikesalingam", "Bilal A. Mateen", "Christopher A. Longhurst", "Daniel Yang", "Dave deBronkart", "Gauden Galea", "Harold F. Wolf III", "Jacob Waxman", "Joshua C. Mandel", "Juliana Rotich", "Kenneth D. Mandl", "Maryam Mustafa", "Melissa Miles", "Nigam H. Shah", "Peter Lee", "Robert Korom", "Scott Mahoney", "Seth Hain", "Tien Yin Wong", "Trevor Mundel", "Vivek Natarajan", "Noa Dagan", "David A. Clifton", "Ran D. Balicer", "Isaac S. Kohane", "Marinka Zitnik"],
+      "title": "A Global Log for Medical AI",
+      "venue": "In Review",
+      "year": "2025",
+      "thumbnail": "MedLog25.png",
+      "pdf": "https://arxiv.org/abs/2510.04033",
+      "url": "https://arxiv.org/abs/2510.04033",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2510.04033"
+      }
+    },
+
+     {
+      "key": "submission25b1",
+      "author": ["Xilin Dang", "Kexin Chen", "Xiaorui Su", "Ayush Noori", "Iñaki Arango", "Lucas Vittor", "Xinyi Long", "Yuyang Du", "Marinka Zitnik", "Pheng Ann Heng"],
+      "title": "KnowGuard: Knowledge-Driven Abstention for Multi-Round Clinical Reasoning",
+      "venue": "In Review",
+      "year": "2025",
+      "thumbnail": "KnowGuard25.png",
+      "pdf": "https://arxiv.org/abs/2509.24816",
+      "url": "https://arxiv.org/abs/2509.24816",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2509.24816"
       }
     },
 
@@ -151,6 +280,21 @@
       "supp":
       {
         "arXiv": "https://rdcu.be/euSI0"
+      }
+    },
+
+     {
+      "key": "submission25v",
+      "author": ["Lucia Altucci", "Lina Badimon", "Jean-Luc Balligand", "Jan Baumbach", "Alberico L. Catapano", "Feixong Cheng", "Dawn DeMeo", "Rajat Gupta", "Marcus Hacker", "Yang-Yu Liu", "Joseph Loscalzo", "Sabrina Maniscalco", "Jörg Menche", "Giulia Menichetti", "Paolo Parini", "Harald H. H. W. Schmidt", "Marinka Zitnik"],
+      "title": "Artificial Intelligence and Network Medicine: Path to Precision Medicine",
+      "venue": "NEJM AI",
+      "year": "2025",
+      "thumbnail": "NetworkMedicinePrecisionNEJM25.png",
+      "pdf": "https://ai.nejm.org/stoken/default+domain/AGEYPVA9IEY6DAHJ2INC/full?redirectUri=doi/full/10.1056/AIra2401229",
+      "url": "https://ai.nejm.org/stoken/default+domain/AGEYPVA9IEY6DAHJ2INC/full?redirectUri=doi/full/10.1056/AIra2401229",
+      "type": "journal",
+      "supp":
+      {
       }
     },
 
@@ -329,10 +473,26 @@
     },
 
      {
+      "key": "submission25z",
+      "author": ["Devin Lange", "Shanghua Gao", "Pengwei Sui", "Austen Money", "Priya Misner", "Marinka Zitnik", "Nils Gehlenborg"],
+      "title": "YAC: Bridging Natural Language and Interactive Visual Exploration with Generative AI for Biomedical Data Discovery",
+      "venue": "In Review",
+      "year": "2025",
+      "thumbnail": "YAC25.png",
+      "pdf": "",
+      "url": "https://arxiv.org/abs/2509.19182",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2509.19182"
+      }
+    },
+
+     {
       "key": "submission25r",
       "author": ["Devin Lange", "Pengwei Sui", "Shanghua Gao", "Marinka Zitnik", "Nils Gehlenborg"],
       "title": "DQVis Dataset: Natural Language to Biomedical Visualization",
-      "venue": "In Review",
+      "venue": "NeurIPS",
       "year": "2025",
       "thumbnail": "DQVis25.png",
       "pdf": "https://osf.io/preprints/osf/rqb7u_v1",
@@ -348,11 +508,11 @@
       "key": "submission25n",
       "author": ["Justin Kauffman", "Emma Holmes", "Akhil Vaid", "Alexander Charney", "Patricia Kovatch", "Joshua Lampert", "Ankit Sakhuja", "Marinka Zitnik", "Benjamin Glicksberg", "Ira Hofer", "Girish Nadkarni"],
       "title": "InfEHR: Resolving Clinical Uncertainty through Deep Geometric Learning on Electronic Health Records",
-      "venue": "In Review",
+      "venue": "Nature Communications",
       "year": "2025",
       "thumbnail": "infEHR25.png",
-      "pdf": "",
-      "url": "https://www.researchsquare.com/article/rs-5953885/v1",
+      "pdf": "https://www.nature.com/articles/s41467-025-63366-6",
+      "url": "https://www.nature.com/articles/s41467-025-63366-6",
       "type": "journal",
       "supp":
       {
@@ -380,9 +540,9 @@
 
      {
       "key": "submission25b",
-      "author": ["Andrew Shen*", "Yasha Ektefaie*", "Lavik Jain", "Maha Farhat*", "Marinka Zitnik*"],
-      "title": "Phyla: Towards a Foundation Model for Phylogenetic Inference",
-      "venue": "In Review",
+      "author": ["Yasha Ektefaie", "Andrew Shen", "Lavik Jain", "Maha Farhat", "Marinka Zitnik"],
+      "title": "Sequence Modeling Is Not Evolutionary Reasoning",
+      "venue": "NeurIPS",
       "year": "2025",
       "thumbnail": "phyla.png",
       "pdf": "",
@@ -424,6 +584,22 @@
       "supp":
       {
         "arXiv": "https://www.medrxiv.org/content/10.1101/2024.12.31.24319792"
+      }
+    },
+
+     {
+      "key": "submission24a",
+      "author": ["AI for Science Research Community"],
+      "title": "Artificial Intelligence for Science in Quantum, Atomistic, and Continuum Systems",
+      "venue": "Foundations and Trends in Machine Learning",
+      "year": "2025",
+      "thumbnail": "ATOMISTICReview25.png",
+      "pdf": "https://www.nowpublishers.com/article/Details/MAL-115",
+      "url": "https://arxiv.org/abs/2307.08423",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2307.08423"
       }
     },
 
@@ -478,7 +654,10 @@
         "project website": "https://zitniklab.hms.harvard.edu/projects/PINNACLE/",
         "code": "https://github.com/mims-harvard/PINNACLE",
         "Harvard Medicine News": "https://hms.harvard.edu/news/new-ai-tool-captures-how-proteins-behave-context",
-        "Kempner Institute": "https://kempnerinstitute.harvard.edu/research/deeper-learning/context-matters-for-foundation-models-in-biology/"
+        "Kempner Institute": "https://kempnerinstitute.harvard.edu/research/deeper-learning/context-matters-for-foundation-models-in-biology/",
+        "Harvard Gazette": "https://news.harvard.edu/gazette/story/2025/09/making-real-gains-in-war-on-alzheimers/",
+        "Cell Systems": "https://www.cell.com/cell-systems/fulltext/S2405-4712(24)00273-4",
+        "Nature Methods Editorial": "https://www.nature.com/articles/s41592-024-02391-7"
       }
     },
 
@@ -798,17 +977,18 @@
 
      {
       "key": "submission24k",
-      "author": ["Jintai Chen", "Yaojun Hu", "Yue Wang", "Yingzhou Lu", "Xu Cao", "Miao Lin", "Hongxia Xu", "Jian Wu", "Cao Xiao", "Jimeng Sun", "Lucas Glass", "Kexin Huang", "Marinka Zitnik", "Tianfan Fu"],
-      "title": "TrialBench: Multi-Modal Artificial Intelligence-Ready Clinical Trial Datasets",
-      "venue": "In Review",
+      "author": ["Jintai Chen", "Yaojun Hu", "Mingchen Cai", "Yingzhou Lu", "Yue Wang", "Xu Cao", "Miao Lin", "Hongxia Xu", "Jian Wu", "Xiao Cao", "Jimeng Sun", "Yuqiang Li", "Lucas Glass", "Kexin Huang", "Marinka Zitnik", "Tianfan Fu"],
+      "title": "TrialBench: Multi-Modal AI-Ready Datasets for Clinical Trial Prediction",
+      "venue": "Scientific Data",
       "year": "2025",
-      "thumbnail": "GADC24.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2407.00631",
+      "thumbnail": "TrialBench25.png",
+      "pdf": "https://www.nature.com/articles/s41597-025-05680-8",
+      "url": "https://www.nature.com/articles/s41597-025-05680-8",
       "type": "journal",
       "supp":
       {
-        "arXiv": "https://arxiv.org/abs/2407.00631"
+        "arXiv": "https://arxiv.org/abs/2407.00631",
+        "project website": "https://huyjj.github.io/Trialbench/"
       }
     },
 
@@ -832,12 +1012,12 @@
      {
       "key": "submission23k",
       "author": ["Zaixi Zhang", "Jiaxian Yan", "Qi Liu", "Enhong Chen", "Marinka Zitnik"],
-      "title": "Geometric Deep Learning for Structure-Based Drug Design: A Survey",
-      "venue": "In Review",
+      "title": "Structure-Based Drug Design with Geometric Deep Learning: A Comprehensive Survey",
+      "venue": "ACM Computing Surveys",
       "year": "2025",
       "thumbnail": "SBDD23.png",
-      "pdf": "",
-      "url": "https://arxiv.org/abs/2306.11768",
+      "pdf": "https://dl.acm.org/doi/full/10.1145/3769677",
+      "url": "https://dl.acm.org/doi/full/10.1145/3769677",
       "type": "journal",
       "supp":
       {
@@ -1038,7 +1218,8 @@
         "code": "https://github.com/mims-harvard/SHEPHERD",
         "project website": "https://zitniklab.hms.harvard.edu/projects/SHEPHERD/",
         "HuggingFace space": "https://huggingface.co/spaces/emilyalsentzer/SHEPHERD",
-        "Best Presentation Award in Translational Medicine at ISMB'23": "https://www.iscb.org/ismbeccb2023"
+        "Best Presentation Award in Translational Medicine at ISMB'23": "https://www.iscb.org/ismbeccb2023",
+        "Washington Post": "https://www.washingtonpost.com/opinions/2023/11/15/ai-rare-disease-diagnosis/"
       }
     },
 

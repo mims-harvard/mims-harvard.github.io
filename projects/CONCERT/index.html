@@ -1,0 +1,877 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CONCERT predicts niche-aware perturbation responses in spatial transcriptomics - Zitnik Lab</title>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="shortcut icon" type="image/png"
+           href="/favicon.png" 
+    />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>CONCERT predicts niche-aware perturbation responses in spatial transcriptomics | Zitnik Lab</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="CONCERT predicts niche-aware perturbation responses in spatial transcriptomics" />
+<meta name="author" content="Marinka Zitnik" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="virtual cell models, perturbation prediction, spatial modeling, generative model" />
+<meta property="og:description" content="virtual cell models, perturbation prediction, spatial modeling, generative model" />
+<link rel="canonical" href="https://zitniklab.hms.harvard.edu/projects/CONCERT/" />
+<meta property="og:url" content="https://zitniklab.hms.harvard.edu/projects/CONCERT/" />
+<meta property="og:site_name" content="Zitnik Lab" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="CONCERT predicts niche-aware perturbation responses in spatial transcriptomics" />
+<meta name="twitter:site" content="@marinkazitnik" />
+<meta name="twitter:creator" content="@Marinka Zitnik" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Marinka Zitnik"},"description":"virtual cell models, perturbation prediction, spatial modeling, generative model","headline":"CONCERT predicts niche-aware perturbation responses in spatial transcriptomics","url":"https://zitniklab.hms.harvard.edu/projects/CONCERT/"}</script>
+<!-- End Jekyll SEO tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
+<script>
+  window['ga-disable-UA-162129505-1'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-162129505-1');
+</script><!-- head scripts --></head>
+
+  <body>
+    
+<nav class="navbar is-primary" >
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item"><b>
+                Zitnik Lab
+            </b></a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+<!--                <a href="/" class="navbar-item "><b>Home</b></a>-->
+                
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a href="/#" class="navbar-link "><b>About</b></a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/bio/" class="navbar-item "><b>Bio</b></a>
+                            
+                            <a href="/contact/" class="navbar-item "><b>Contact</b></a>
+                            
+                            <a href="/talks/" class="navbar-item "><b>Recent Talks</b></a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                <a href="/research/" class="navbar-item "><b>Research</b></a>
+                    
+                
+                    
+                <a href="/publications/" class="navbar-item "><b>Publications</b></a>
+                    
+                
+                    
+                <a href="/people/" class="navbar-item "><b>Members</b></a>
+                    
+                
+                    
+                <a href="/meetings/" class="navbar-item "><b>Conferences & Courses</b></a>
+                    
+                
+                    
+                <a href="/DMAI/" class="navbar-item "><b>DMAI</b></a>
+                    
+                
+                    
+                <a href="/data/" class="navbar-item "><b>Datasets</b></a>
+                    
+                
+                    
+                <a href="/software/" class="navbar-item "><b>AI Models</b></a>
+                    
+                
+                    
+                <a href="https://zitniklab.hms.harvard.edu/TDC/" class="navbar-item "><b>TDC</b></a>
+                    
+                
+                    
+                <a href="/news/" class="navbar-item "><b>News</b></a>
+                    
+                
+                    
+                <a href="/jobs/" class="navbar-item "><b>Join Us</b></a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+
+    
+        <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
+    <div class="hero-body">
+        <div class="container">
+            <p class="title is-2">CONCERT predicts niche-aware perturbation responses in spatial transcriptomics</p>
+            <p class="subtitle is-3"></p>
+            
+        </div>
+    </div>
+</section>
+    
+    
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+                <div class="column is-8">
+                    
+                    
+                    
+<div class="content">
+    <div class="box has-background-info has-text-white">
+
+<p>
+Spatial perturbation transcriptomics measures how genetic or chemical edits alter gene expression while preserving tissue context. Perturbation outcomes depend on a cell's intrinsic state and also on how effects propagate across cellular microenvironments. 
+</p>
+<p>
+We present CONCERT, a niche-aware generative model that embeds perturbation context and learns spatial kernels with a Gaussian process variational autoencoder to predict perturbation effects across tissue. We formalize three tasks: patch, border, and niche, predicting responses in nearby unperturbed regions, at tissue interfaces, and as a function of surrounding microenvironments. We evaluate CONCERT on Perturb-map lung datasets. CONCERT outperforms state-of-the-art models (dissociated counterfactuals, spatialized perturbation models, and kNN), reducing E-distance by up to 33.77% (patch), 26.05% (border), and 33.74% (niche) versus the next best, with mean absolute error down by up to 23.28% and Pearson correlation up by up to 9.10%. 
+</p>
+<p>
+Two case studies go beyond benchmarking. In dextran sodium sulfate-induced colitis, CONCERT reconstructs spatial gene expression at unmeasured time points, produces longitudinal comparisons across unpaired mice, resolves inter-mouse heterogeneity, and recovers consistent temporal declines of inflammation-associated genes across regions. In ischemic stroke, CONCERT predicts responses under variable lesion sizes and in a 3D formulation across brain sections, capturing lesion-core and peri-lesion patterns. CONCERT performs niche-aware counterfactual prediction, reconstructs missing spatial data, and models perturbation responses across tissues.
+</p>
+</div>
+
+<h2 id="concert-niche-aware-virtual-cell-model">CONCERT: Niche-Aware Virtual Cell Model</h2>
+
+<p>CONCERT is a niche-aware generative counterfactual model that predicts how a perturbation’s effect disperses across tissue and alters local gene expression. It takes a tissue’s spatial transcriptomics slide(s) as input—spot/cell gene expression, 2D/3D coordinates, and attributes such as perturbation identity, disease state, dose, lesion size, or time—and outputs predicted post-perturbation expression (rGEX) at user-selected locations, including unseen or imputed spots.</p>
+
+<p>The <strong>perturbation module</strong> disentangles spot attributes into compact latent codes: categorical variables (e.g., CRISPR knockout, niche, slide ID) are embedded; continuous variables (e.g., time or lesion size) pass through small MLPs, enabling smooth interpolation and “what-if” edits by swapping only the perturbation code while holding cell state and position fixed. The <strong>spatial module</strong> then propagates the encoded perturbation through tissue with a perturbation-specific Gaussian-process kernel that has learnable, anisotropic length-scales and spot-specific cutoffs. This induces non-local, directionally aware dispersion that respects boundaries and niches rather than copying nearest neighbors. The <strong>generation module</strong> is a variational decoder that combines latent cell state and the propagated perturbation field to reconstruct rGEX; evaluating it at new coordinates or times enables resolution enhancement, in-painting, temporal interpolation, and 3D propagation across sections.</p>
+
+<p>CONCERT (i) performs counterfactual prediction for patch, border, niche, and cross-niche tasks; (ii) densifies slides and in-paints damaged regions while preserving plausible responses; (iii) interpolates time and lesion size; and (iv) supports 2D and 3D kernels for multi-section tissue. Predictions come with calibrated uncertainty (≈95% coverage in-distribution).</p>
+
+<center>
+<img src="/img/CONCERT-1.png" />
+</center>
+
+<h2 id="patch-predictions-within-the-same-niche">Patch Predictions Within the Same Niche</h2>
+
+<p>Given a patch of spots in source state A, predict their rGEX after perturbing them to target state B observed nearby within the same niche. This probes whether a model can reproduce local responses without crossing tissue interfaces.</p>
+
+<p>Across 12 conditions (4 slides × 3 patch sizes), CONCERT achieved the best E-distance in 9/12, closely approaching or surpassing the spatial kNN “upper bound” on multiple slides. Relative to the next-best method, E-distance dropped by up to 33.77%, with consistent gains in MAE and PCC. Average rank was 2.33, near the spatial kNN’s 2.08.</p>
+
+<center>
+<img src="/img/CONCERT-2.png" />
+</center>
+
+<h2 id="predictions-at-tissue-boundaries">Predictions at Tissue Boundaries</h2>
+
+<p>Perturb spots along the edge of a patch and predict their rGEX, a boundary-aware setting with sharp transitions at tissue interfaces.</p>
+
+<p>CONCERT topped 8/12 conditions and reduced E-distance by up to 26.05% versus the next-best model, with an average rank of 2.50, again approaching the spatial kNN bound (2.41). Improvements held across MAE and PCC.</p>
+
+<center>
+<img src="/img/CONCERT-3.png" />
+</center>
+
+<h2 id="perturb-the-niche-predict-the-core">Perturb the Niche, Predict the Core</h2>
+
+<p>Perturb the surrounding niche (border) from A to B and predict rGEX inside the core patch—requiring models to capture non-local propagation from neighbors. Only methods that model microenvironmental influence can perform this task.</p>
+
+<p>Only CONCERT and one spatialized baseline could run this task; CONCERT was best in all 9/9 conditions, lowering E-distance by up to 33.74% and achieving the top average rank (1.0) across slides and patch sizes.</p>
+
+<center>
+<img src="/img/CONCERT-4.png" />
+</center>
+
+<h2 id="patch-predictions-across-niches">Patch Predictions Across Niches</h2>
+
+<p>Perturb a patch in state A toward state B that is observed in a different niche, forcing extrapolation across microenvironments.</p>
+
+<p>CONCERT ranked first in 7/12 conditions and reduced E-distance by up to ~24% (with additional significant gains across MAE and PCC), yielding the best overall average rank (2.91) across all tests. Uncertainty calibration was near nominal 95% coverage.</p>
+
+<center>
+<img src="/img/CONCERT-5.png" />
+</center>
+
+<h2 id="in-vivo-case-studies-mouse-colitis-and-stroke">In Vivo Case Studies: Mouse Colitis and Stroke</h2>
+
+<p>We asked whether CONCERT can support causal <strong>“what-if” reasoning in vivo beyond what experiments can measure or control.</strong> Two case studies test distinct axes:</p>
+
+<ul>
+  <li>colitis time course: reconstruct unmeasured time points and enable longitudinal comparisons across different mice; and</li>
+  <li>ischemic stroke: simulate location and size-specific lesions in 2D and extend dispersion to 3D across brain sections.</li>
+</ul>
+
+<p>In colitis time course, CONCERT reconstructed spatial rGEX at day 30, an unseen day 50, and day 73 for each mouse, revealing consistent regional declines in inflammation markers (Clca4b, Ido1, Il1b) that were obscured by inter-mouse variability in the raw data. In stroke, CONCERT simulated multi-region ischemia and lesion-size effects on healthy slides, recovering known gene-level patterns (core-maximal Gm42418 and peri-lesion Lcn2/Spp1) and capturing z-axis propagation in a 3D kernel across sections.</p>
+
+<p>These studies demonstrate a practical virtual cell/tissue workflow: fill in missing spatial data, run counterfactual interventions at user-chosen locations, sizes, and times, and compare conditions that are otherwise unpaired or infeasible to acquire. The same engine also supports resolution enhancement and in-painting of damaged tissue while preserving biologically plausible responses.</p>
+
+<center>
+<img src="/img/CONCERT-6.png" />
+</center>
+
+<h2 id="publication">Publication</h2>
+
+<p><a href="https://www.biorxiv.org/content/10.1101/2025.11.08.686890">CONCERT predicts niche-aware perturbation responses in spatial transcriptomics</a><br />
+Xiang Lin, Zhenglun Kong, Ghosh Soumya, Manolis Kellis, Marinka Zitnik<br />
+<em>In Review</em> 2025 <a href="https://www.biorxiv.org/content/10.1101/2025.11.08.686890">[bioRxiv]</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{lin2025concert,
+  title={CONCERT predicts niche-aware perturbation responses in spatial transcriptomics},
+  author={Lin, Xiang and Kong, Zhenglun and Ghosh, Soumya and Kellis, Manolis and Zitnik, Marinka},
+  journal={In Review},
+  url={https://www.biorxiv.org/content/10.1101/2025.11.08.686890},
+  year={2025}
+}
+</code></pre></div></div>
+
+<h2 id="code-and-data-availability">Code and Data Availability</h2>
+
+<p>Pytorch implementation of CONCERT is available in the <a href="https://github.com/mims-harvard/CONCERT">GitHub repository</a>.</p>
+
+<h2 id="authors">Authors</h2>
+
+<ul>
+  <li><a href="">Xiang Lin</a></li>
+  <li><a href="">Zhenglun Kong</a></li>
+  <li><a href="">Soumya Ghosh</a></li>
+  <li><a href="https://compbio.mit.edu/">Manolis Kellis</a></li>
+  <li><a href="https://zitniklab.hms.harvard.edu/">Marinka Zitnik</a></li>
+</ul>
+
+</div>
+                </div>
+                
+                <div class="column is-4-desktop is-12-tablet">
+                    <p class="title is-4">Latest News</p>
+
+<div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/12/17/PROTON/">AI + Validation in Molecular, Organoid, and Clinical Systems</a>-->
+        <p class="card-header-title">Dec 2025: &nbsp; <span class="has-text-primary">AI + Validation in Molecular, Organoid, and Clinical Systems</span></p>
+<!--        <p class="card-header-item">Dec 2025</p>-->
+<!--        <p class="card-footer-item">Dec 17, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Pairing AI with experiments: Our latest PROTON AI <a href="https://arxiv.org/abs/2512.13724">generates neurological hypotheses that we validated across molecular, organoid, and clinical systems.</a> <a href="https://www.protonmodel.ai/">[Project website]</a></p>
+
+</p>-->
+            <p>Pairing AI with experiments: Our latest PROTON AI <a href="https://arxiv.org/abs/2512.13724">generates neurological hypotheses that we validated across molecular, organoid, and clinical systems.</a> <a href="https://www.protonmodel.ai/">[Project website]</a></p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/12/17/PROTON/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 17, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/12/16/Magneton/">Greater than the Sum of Its Parts</a>-->
+        <p class="card-header-title">Dec 2025: &nbsp; <span class="has-text-primary">Greater than the Sum of Its Parts</span></p>
+<!--        <p class="card-header-item">Dec 2025</p>-->
+<!--        <p class="card-footer-item">Dec 16, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New preprint on <a href="https://arxiv.org/abs/2512.18114">Greater than the Sum of Its Parts: Building Substructure into Protein Encoding Models</a>. <a href="https://zitniklab.hms.harvard.edu/projects/Magneton/">[Project website]</a></p>
+</p>-->
+            <p>New preprint on <a href="https://arxiv.org/abs/2512.18114">Greater than the Sum of Its Parts: Building Substructure into Protein Encoding Models</a>. <a href="https://zitniklab.hms.harvard.edu/projects/Magneton/">[Project website]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/12/16/Magneton/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 16, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/12/09/DigitalTwins/">Digital Twinning</a>-->
+        <p class="card-header-title">Dec 2025: &nbsp; <span class="has-text-primary">Digital Twinning</span></p>
+<!--        <p class="card-header-item">Dec 2025</p>-->
+<!--        <p class="card-footer-item">Dec 9, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>A piece in <a href="https://news.harvard.edu/gazette/story/2025/12/your-digital-twin-might-save-your-life/">Harvard Gazette</a> on digital twins, cellular chatbots, and building digital twins at a cellular scale.</p>
+
+</p>-->
+            <p>A piece in <a href="https://news.harvard.edu/gazette/story/2025/12/your-digital-twin-might-save-your-life/">Harvard Gazette</a> on digital twins, cellular chatbots, and building digital twins at a cellular scale.</p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/12/09/DigitalTwins/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 9, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/11/18/GeoBPE/">Protein Structure Tokenization</a>-->
+        <p class="card-header-title">Nov 2025: &nbsp; <span class="has-text-primary">Protein Structure Tokenization</span></p>
+<!--        <p class="card-header-item">Nov 2025</p>-->
+<!--        <p class="card-footer-item">Nov 18, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New preprint introducing <a href="https://arxiv.org/abs/2511.11758">GeoBPE - Protein structure tokenization via geometric byte pair encoding.</a></p>
+
+</p>-->
+            <p>New preprint introducing <a href="https://arxiv.org/abs/2511.11758">GeoBPE - Protein structure tokenization via geometric byte pair encoding.</a></p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/11/18/GeoBPE/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Nov 18, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/11/11/CONCERT/">Generative AI Model for Spatial Biology</a>-->
+        <p class="card-header-title">Nov 2025: &nbsp; <span class="has-text-primary">Generative AI Model for Spatial Biology</span></p>
+<!--        <p class="card-header-item">Nov 2025</p>-->
+<!--        <p class="card-footer-item">Nov 11, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New preprint introducing <a href="https://www.biorxiv.org/content/10.1101/2025.11.08.686890">CONCERT, a niche-aware generative model that predicts perturbation effects across spatial tissue contexts.</a></p>
+
+</p>-->
+            <p>New preprint introducing <a href="https://www.biorxiv.org/content/10.1101/2025.11.08.686890">CONCERT, a niche-aware generative model that predicts perturbation effects across spatial tissue contexts.</a></p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/11/11/CONCERT/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Nov 11, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/11/02/ScienceFeature/">AI Cell Models</a>-->
+        <p class="card-header-title">Nov 2025: &nbsp; <span class="has-text-primary">AI Cell Models</span></p>
+<!--        <p class="card-header-item">Nov 2025</p>-->
+<!--        <p class="card-footer-item">Nov 2, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>A piece in <a href="https://www.science.org/content/article/can-ai-capture-mind-boggling-complexity-human-cell">Science</a> explores how AI cell models could transform biomedicine (if they work as promised) and highlights <a href="https://aiscientist.tools/">ToolUniverse</a>. ToolUniverse lets AI co-scientists test, analyze, and build on AI cell models.</p>
+
+</p>-->
+            <p>A piece in <a href="https://www.science.org/content/article/can-ai-capture-mind-boggling-complexity-human-cell">Science</a> explores how AI cell models could transform biomedicine (if they work as promised) and highlights <a href="https://aiscientist.tools/">ToolUniverse</a>. ToolUniverse lets AI co-scientists test, analyze, and build on AI cell models.</p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/11/02/ScienceFeature/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Nov 2, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/10/25/NatureNewsFeature/">Is AI sycophancy holding science back?</a>-->
+        <p class="card-header-title">Oct 2025: &nbsp; <span class="has-text-primary">Is AI sycophancy holding science back?</span></p>
+<!--        <p class="card-header-item">Oct 2025</p>-->
+<!--        <p class="card-footer-item">Oct 25, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>A piece in <a href="https://www.nature.com/articles/d41586-025-03390-0">Nature</a> explores how AI sycophancy, in which models agree too much with users instead of reasoning on its own, could affect the use of AI in medical research.</p>
+
+</p>-->
+            <p>A piece in <a href="https://www.nature.com/articles/d41586-025-03390-0">Nature</a> explores how AI sycophancy, in which models agree too much with users instead of reasoning on its own, could affect the use of AI in medical research.</p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/10/25/NatureNewsFeature/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Oct 25, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/10/12/NewsFeature/">Our research featured by Kempner and Crimson</a>-->
+        <p class="card-header-title">Oct 2025: &nbsp; <span class="has-text-primary">Our research featured by Kempner and Crimson</span></p>
+<!--        <p class="card-header-item">Oct 2025</p>-->
+<!--        <p class="card-footer-item">Oct 12, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>A news story about <a href="https://www.nature.com/articles/s41551-025-01481-x">PDGrapher</a> in <a href="https://www.thecrimson.com/article/2025/10/6/hms-tool-drug-discovery/">Harvard Crimson.</a> <a href="https://aiscientist.tools/">ToolUniverse</a> featured on the <a href="https://kempnerinstitute.harvard.edu/research/deeper-learning/from-models-to-scientists-building-ai-agents-for-scientific-discovery/">Kempner Institute blog.</a></p>
+</p>-->
+            <p>A news story about <a href="https://www.nature.com/articles/s41551-025-01481-x">PDGrapher</a> in <a href="https://www.thecrimson.com/article/2025/10/6/hms-tool-drug-discovery/">Harvard Crimson.</a> <a href="https://aiscientist.tools/">ToolUniverse</a> featured on the <a href="https://kempnerinstitute.harvard.edu/research/deeper-learning/from-models-to-scientists-building-ai-agents-for-scientific-discovery/">Kempner Institute blog.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/10/12/NewsFeature/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Oct 12, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/10/05/AIAgentsForScience/">A Scientist's Guide to AI Agents in Nature</a>-->
+        <p class="card-header-title">Oct 2025: &nbsp; <span class="has-text-primary">A Scientist's Guide to AI Agents in Nature</span></p>
+<!--        <p class="card-header-item">Oct 2025</p>-->
+<!--        <p class="card-footer-item">Oct 5, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p><a href="https://www.nature.com/articles/d41586-025-03246-7">A piece on AI agents in Nature</a> highlights ongoing projects in our group, including methods for evaluating scientific hypotheses, challenges in benchmarking AI agents, and the open ToolUniverse ecosystem.</p>
+</p>-->
+            <p><a href="https://www.nature.com/articles/d41586-025-03246-7">A piece on AI agents in Nature</a> highlights ongoing projects in our group, including methods for evaluating scientific hypotheses, challenges in benchmarking AI agents, and the open ToolUniverse ecosystem.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/10/05/AIAgentsForScience/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Oct 5, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/09/29/ToolUniversePaper/">ToolUniverse: AI Agents for Science and Medicine</a>-->
+        <p class="card-header-title">Sep 2025: &nbsp; <span class="has-text-primary">ToolUniverse: AI Agents for Science and Medicine</span></p>
+<!--        <p class="card-header-item">Sep 2025</p>-->
+<!--        <p class="card-footer-item">Sep 29, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper: <a href="https://arxiv.org/abs/2509.23426">ToolUniverse</a> introduces an open ecosystem for building AI scientists with 600+ scientific and biomedical tools. Build your AI co-scientists at <a href="https://aiscientist.tools/">https://aiscientist.tools</a>.</p>
+</p>-->
+            <p>New paper: <a href="https://arxiv.org/abs/2509.23426">ToolUniverse</a> introduces an open ecosystem for building AI scientists with 600+ scientific and biomedical tools. Build your AI co-scientists at <a href="https://aiscientist.tools/">https://aiscientist.tools</a>.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/09/29/ToolUniversePaper/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 29, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/09/27/ToolUniverse/">Democratizing "AI Scientists" with ToolUniverse</a>-->
+        <p class="card-header-title">Sep 2025: &nbsp; <span class="has-text-primary">Democratizing "AI Scientists" with ToolUniverse</span></p>
+<!--        <p class="card-header-item">Sep 2025</p>-->
+<!--        <p class="card-footer-item">Sep 27, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Our new initiative: <strong>Use Tool Universe to build an AI scientist for yourself from any language or reasoning model, whether open or closed. <a href="https://aiscientist.tools/">https://aiscientist.tools</a></strong></p>
+</p>-->
+            <p>Our new initiative: <strong>Use Tool Universe to build an AI scientist for yourself from any language or reasoning model, whether open or closed. <a href="https://aiscientist.tools/">https://aiscientist.tools</a></strong></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/09/27/ToolUniverse/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 27, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/09/15/InfEHR/">InfEHR in Nature Communications</a>-->
+        <p class="card-header-title">Sep 2025: &nbsp; <span class="has-text-primary">InfEHR in Nature Communications</span></p>
+<!--        <p class="card-header-item">Sep 2025</p>-->
+<!--        <p class="card-footer-item">Sep 15, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Collaboration with Ben and Girish on <a href="https://www.nature.com/articles/s41467-025-63366-6">clinical phenotype resolution through deep geometric learning on electronic health records</a> published in Nature Communications.</p>
+</p>-->
+            <p>Collaboration with Ben and Girish on <a href="https://www.nature.com/articles/s41467-025-63366-6">clinical phenotype resolution through deep geometric learning on electronic health records</a> published in Nature Communications.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/09/15/InfEHR/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 15, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/09/10/PDGrapher/">PDGrapher in Nature Biomedical Engineering</a>-->
+        <p class="card-header-title">Sep 2025: &nbsp; <span class="has-text-primary">PDGrapher in Nature Biomedical Engineering</span></p>
+<!--        <p class="card-header-item">Sep 2025</p>-->
+<!--        <p class="card-footer-item">Sep 10, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper in Nature Biomedical Engineering introducing <a href="https://www.nature.com/articles/s41551-025-01481-x">PDGrapher, a model for phenotype-based target discovery</a>. <a href="https://hms.harvard.edu/news/new-ai-tool-pinpoints-genes-drug-combos-restore-health-diseased-cells">[Harvard Medicine News]</a></p>
+</p>-->
+            <p>New paper in Nature Biomedical Engineering introducing <a href="https://www.nature.com/articles/s41551-025-01481-x">PDGrapher, a model for phenotype-based target discovery</a>. <a href="https://hms.harvard.edu/news/new-ai-tool-pinpoints-genes-drug-combos-restore-health-diseased-cells">[Harvard Medicine News]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/09/10/PDGrapher/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 10, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/09/01/PrecisionMedicineNEJMAI/">AI and Net Medicine: Path to Precision Medicine</a>-->
+        <p class="card-header-title">Sep 2025: &nbsp; <span class="has-text-primary">AI and Net Medicine: Path to Precision Medicine</span></p>
+<!--        <p class="card-header-item">Sep 2025</p>-->
+<!--        <p class="card-footer-item">Sep 1, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New perspective published in NEJM AI on <a href="https://ai.nejm.org/stoken/default+domain/AGEYPVA9IEY6DAHJ2INC/full?redirectUri=doi/full/10.1056/AIra2401229">advancing AI and network medicine on a path to precision medicine.</a></p>
+</p>-->
+            <p>New perspective published in NEJM AI on <a href="https://ai.nejm.org/stoken/default+domain/AGEYPVA9IEY6DAHJ2INC/full?redirectUri=doi/full/10.1056/AIra2401229">advancing AI and network medicine on a path to precision medicine.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/09/01/PrecisionMedicineNEJMAI/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 1, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/08/27/CUREBenchUpdate/">CUREBench - Reasoning for Therapeutics</a>-->
+        <p class="card-header-title">Aug 2025: &nbsp; <span class="has-text-primary">CUREBench - Reasoning for Therapeutics</span></p>
+<!--        <p class="card-header-item">Aug 2025</p>-->
+<!--        <p class="card-footer-item">Aug 27, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Update from CUREBench: 650+ entrants, 100+ teams and 500+ submissions. Thank you to the CUREBench community. Working on AI for drug discovery and reasoning in medicine? New teams welcome. Tasks, rules, and leaderboard: <a href="https://curebench.ai">https://curebench.ai.</a></p>
+</p>-->
+            <p>Update from CUREBench: 650+ entrants, 100+ teams and 500+ submissions. Thank you to the CUREBench community. Working on AI for drug discovery and reasoning in medicine? New teams welcome. Tasks, rules, and leaderboard: <a href="https://curebench.ai">https://curebench.ai.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/08/27/CUREBenchUpdate/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Aug 27, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/08/26/NeurIPS-DrugDiscoveryWorkshop/">Drug Discovery Workshop at NeurIPS 2025</a>-->
+        <p class="card-header-title">Aug 2025: &nbsp; <span class="has-text-primary">Drug Discovery Workshop at NeurIPS 2025</span></p>
+<!--        <p class="card-header-item">Aug 2025</p>-->
+<!--        <p class="card-footer-item">Aug 26, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited to organize a NeurIPS workshop on <a href="https://ai4d3.github.io/2025/index.html">Virtual Cells and Digital Instruments</a>. <a href="https://ai4d3.github.io/2025/index.html">Submit your papers.</a></p>
+</p>-->
+            <p>Excited to organize a NeurIPS workshop on <a href="https://ai4d3.github.io/2025/index.html">Virtual Cells and Digital Instruments</a>. <a href="https://ai4d3.github.io/2025/index.html">Submit your papers.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/08/26/NeurIPS-DrugDiscoveryWorkshop/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Aug 26, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/08/26/NeurIPS-AI4ScienceWorkshop/">AI for Science Workshop at NeurIPS</a>-->
+        <p class="card-header-title">Aug 2025: &nbsp; <span class="has-text-primary">AI for Science Workshop at NeurIPS</span></p>
+<!--        <p class="card-header-item">Aug 2025</p>-->
+<!--        <p class="card-footer-item">Aug 26, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited to organize a NeurIPS workshop on <a href="https://ai4sciencecommunity.github.io/neurips25.html">AI for Science</a>. This is our 6th workshop in the AI for Science series. <a href="https://ai4sciencecommunity.github.io/neurips25.html">Submit your papers.</a></p>
+</p>-->
+            <p>Excited to organize a NeurIPS workshop on <a href="https://ai4sciencecommunity.github.io/neurips25.html">AI for Science</a>. This is our 6th workshop in the AI for Science series. <a href="https://ai4sciencecommunity.github.io/neurips25.html">Submit your papers.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/08/26/NeurIPS-AI4ScienceWorkshop/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Aug 26, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/07/12/CUREBench/">Launching CUREBench</a>-->
+        <p class="card-header-title">Jul 2025: &nbsp; <span class="has-text-primary">Launching CUREBench</span></p>
+<!--        <p class="card-header-item">Jul 2025</p>-->
+<!--        <p class="card-footer-item">Jul 12, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Launched <a href="https://curebench.ai/">CUREBench</a>, the first competition in AI reasoning for therapeutics. Colocated with <a href="https://neurips.cc/Conferences/2025">NeurIPS 2025.</a> Start at <a href="https://curebench.ai">https://curebench.ai</a>.</p>
+</p>-->
+            <p>Launched <a href="https://curebench.ai/">CUREBench</a>, the first competition in AI reasoning for therapeutics. Colocated with <a href="https://neurips.cc/Conferences/2025">NeurIPS 2025.</a> Start at <a href="https://curebench.ai">https://curebench.ai</a>.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/07/12/CUREBench/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jul 12, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/07/10/TxAgentEvals/">Launching TxAgent Evaluation Portal</a>-->
+        <p class="card-header-title">Jul 2025: &nbsp; <span class="has-text-primary">Launching TxAgent Evaluation Portal</span></p>
+<!--        <p class="card-header-item">Jul 2025</p>-->
+<!--        <p class="card-footer-item">Jul 10, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Launched <a href="https://agenticx-txagentcrowdsourcingeval.hf.space/">TxAgent evaluation portal</a>, our global evaluation of AI for drug decision-making and therapeutic reasoning. Participate in TxAgent evaluations! <a href="https://zitniklab.hms.harvard.edu/TxAgent/">[TxAgent project]</a></p>
+</p>-->
+            <p>Launched <a href="https://agenticx-txagentcrowdsourcingeval.hf.space/">TxAgent evaluation portal</a>, our global evaluation of AI for drug decision-making and therapeutic reasoning. Participate in TxAgent evaluations! <a href="https://zitniklab.hms.harvard.edu/TxAgent/">[TxAgent project]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/07/10/TxAgentEvals/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jul 10, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/07/08/SPATIA/">SPATIA Model of Spatial Cell Phenotypes</a>-->
+        <p class="card-header-title">Jul 2025: &nbsp; <span class="has-text-primary">SPATIA Model of Spatial Cell Phenotypes</span></p>
+<!--        <p class="card-header-item">Jul 2025</p>-->
+<!--        <p class="card-footer-item">Jul 8, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New preprint on <a href="https://www.arxiv.org/abs/2507.04704">SPATIA: a multimodal model for pediction and generation of spatial cell phenotypes.</a></p>
+</p>-->
+            <p>New preprint on <a href="https://www.arxiv.org/abs/2507.04704">SPATIA: a multimodal model for pediction and generation of spatial cell phenotypes.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/07/08/SPATIA/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jul 8, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+
+    <div class="column is-12">
+        <div class="card">
+            <header class="card-header">
+        <!--        <a class="card-header-title" href=""></a>-->
+            <p class="card-header-title"><span class="has-text-primary">Tweets</span></p>
+        <!--        <p class="card-header-item"></p>-->
+        <!--        <p class="card-footer-item"></p>-->
+            </header>
+        <div class="card-content">
+        <!--        <div class="content">-->
+        <!--            -->
+        <!--            <p></p>-->
+        <a class="twitter-timeline" data-width="500" data-height="500" data-theme="light" href="https://twitter.com/marinkazitnik?ref_src=twsrc%5Etfw" data-chrome="noheader transparent nofooter nofooter noborders">Tweets by marinkazitnik</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <!--        </div>-->
+        <!--        <div class="has-text-centered">-->
+        <!--            <a href="" class="button is-primary">Read more</a>-->
+        <!--        </div>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts -->
+<div style="background-color:#A41034">
+        <div class="content is-normal has-text-centered">
+            <p style="color:white;padding-top:20px;padding-bottom:20px;"><a href="https://scholar.harvard.edu/marinka" style="color:white"><b>Zitnik Lab</b></a>
+                &nbsp;&middot;&nbsp; <a href="#" style="color:white"><b>Artificial Intelligence in Medicine and Science</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://harvard.edu" style="color:white"><b>Harvard</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://dbmi.hms.harvard.edu/" style="color:white"><b>Department of Biomedical Informatics</b></a></p>
+        </div>
+</div></body>
+</html>
+
