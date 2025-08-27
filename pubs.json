@@ -55,7 +55,7 @@
       "key": "submission24a",
       "author": ["Guadalupe Gonzalez*", "Xiang Lin*", "Isuru Herath", "Kirill Veselkov", "Michael Bronstein", "Marinka Zitnik"],
       "title": "Combinatorial Prediction of Therapeutic Perturbations Using Causally-Inspired Neural Networks",
-      "venue": "Nature Biomedical Engineering (in press)",
+      "venue": "Nature Biomedical Engineering",
       "year": "2025",
       "thumbnail": "PDGrapher24.png",
       "pdf": "",
@@ -151,6 +151,21 @@
       "supp":
       {
         "arXiv": "https://rdcu.be/euSI0"
+      }
+    },
+
+     {
+      "key": "submission25v",
+      "author": ["Lucia Altucci", "Lina Badimon", "Jean-Luc Balligand", "Jan Baumbach", "Alberico L. Catapano", "Feixong Cheng", "Dawn DeMeo", "Rajat Gupta", "Marcus Hacker", "Yang-Yu Liu", "Joseph Loscalzo", "Sabrina Maniscalco", "Jörg Menche", "Giulia Menichetti", "Paolo Parini", "Harald H. H. W. Schmidt", "Marinka Zitnik"],
+      "title": "Artificial Intelligence and Network Medicine: Path to Precision Medicine",
+      "venue": "NEJM AI",
+      "year": "2025",
+      "thumbnail": "NetworkMedicinePrecisionNEJM25.png",
+      "pdf": "https://ai.nejm.org/stoken/default+domain/AGEYPVA9IEY6DAHJ2INC/full?redirectUri=doi/full/10.1056/AIra2401229",
+      "url": "https://ai.nejm.org/stoken/default+domain/AGEYPVA9IEY6DAHJ2INC/full?redirectUri=doi/full/10.1056/AIra2401229",
+      "type": "journal",
+      "supp":
+      {
       }
     },
 
