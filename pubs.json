@@ -55,17 +55,18 @@
       "key": "submission24a",
       "author": ["Guadalupe Gonzalez*", "Xiang Lin*", "Isuru Herath", "Kirill Veselkov", "Michael Bronstein", "Marinka Zitnik"],
       "title": "Combinatorial Prediction of Therapeutic Perturbations Using Causally-Inspired Neural Networks",
-      "venue": "Nature Biomedical Engineering (in press)",
+      "venue": "Nature Biomedical Engineering",
       "year": "2025",
-      "thumbnail": "PDGrapher24.png",
-      "pdf": "",
-      "url": "https://www.biorxiv.org/content/10.1101/2024.01.03.573985",
+      "thumbnail": "PDGrapher25.png",
+      "pdf": "https://www.nature.com/articles/s41551-025-01481-x",
+      "url": "https://www.nature.com/articles/s41551-025-01481-x",
       "type": "journal",
       "supp":
       {
         "bioRxiv": "https://www.biorxiv.org/content/10.1101/2024.01.03.573985",
         "project website": "https://zitniklab.hms.harvard.edu/projects/PDGrapher/",
-        "PDGrapher code": "https://github.com/mims-harvard/PDGrapher"
+        "PDGrapher code": "https://github.com/mims-harvard/PDGrapher",
+        "Harvard Medicine News": "https://hms.harvard.edu/news/new-ai-tool-pinpoints-genes-drug-combos-restore-health-diseased-cells"
       }
     },
 
@@ -151,6 +152,21 @@
       "supp":
       {
         "arXiv": "https://rdcu.be/euSI0"
+      }
+    },
+
+     {
+      "key": "submission25v",
+      "author": ["Lucia Altucci", "Lina Badimon", "Jean-Luc Balligand", "Jan Baumbach", "Alberico L. Catapano", "Feixong Cheng", "Dawn DeMeo", "Rajat Gupta", "Marcus Hacker", "Yang-Yu Liu", "Joseph Loscalzo", "Sabrina Maniscalco", "Jörg Menche", "Giulia Menichetti", "Paolo Parini", "Harald H. H. W. Schmidt", "Marinka Zitnik"],
+      "title": "Artificial Intelligence and Network Medicine: Path to Precision Medicine",
+      "venue": "NEJM AI",
+      "year": "2025",
+      "thumbnail": "NetworkMedicinePrecisionNEJM25.png",
+      "pdf": "https://ai.nejm.org/stoken/default+domain/AGEYPVA9IEY6DAHJ2INC/full?redirectUri=doi/full/10.1056/AIra2401229",
+      "url": "https://ai.nejm.org/stoken/default+domain/AGEYPVA9IEY6DAHJ2INC/full?redirectUri=doi/full/10.1056/AIra2401229",
+      "type": "journal",
+      "supp":
+      {
       }
     },
 
