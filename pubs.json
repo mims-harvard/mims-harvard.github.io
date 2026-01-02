@@ -150,6 +150,21 @@
     },
 
      {
+      "key": "submission26a",
+      "author": ["Yidong Zhou", "Jintai Chen", "Jinglei Cheng", "Xu Cao", "Yuanyuan Zhang", "Gopal Karemore", "Marinka Zitnik", "Frederic T. Chong", "Junyu Liu", "Tianfan Fu", "Zhiding Liang"],
+      "title": "Quantum Machine Assisted Drug Discovery",
+      "venue": "Npj Drug Discovery",
+      "year": "2026",
+      "thumbnail": "QuantumDrugDiscovery26.png",
+      "pdf": "https://www.nature.com/articles/s44386-025-00033-2",
+      "url": "https://www.nature.com/articles/s44386-025-00033-2",
+      "type": "journal",
+      "supp":
+      {
+      }
+    },
+
+     {
       "key": "submission25g1",
       "author": ["Robert Calef", "Arthur Liang", "Manolis Kellis", "Marinka Zitnik"],
       "title": "Greater than the Sum of Its Parts: Building Substructure into Protein Encoding Models",
@@ -338,7 +353,7 @@
 
      {
       "key": "submission24u",
-      "author": ["Owen Queen*", "Yepeng Huang*", "Robert Calef*", "Valentina Giunchiglia", "Tianlong Chen", "George Dasoulas", "LeAnn Tai", "Yasha Ektefaie", "Ayush Noori", "Joseph Brown", "Tom Cobley", "Karin Hrovatin", "Tom Hartvigsen", "Fabian J. Theis", "Bradley L. Pentelute", "Vikram Khurana", "Manolis Kellis", "Marinka Zitnik"],
+      "author": ["Owen Queen*", "Yepeng Huang*", "Robert Calef*", "Valentina Giunchiglia*", "Tianlong Chen", "George Dasoulas", "LeAnn Tai", "Gianmarco Abbadessa", "Owain Howell", "Michelle M. Li", "Yasha Ektefaie", "Ayush Noori", "Ildiko Farkas", "Joseph Brown", "Tom Cobley", "Karin Hrovatin", "Tom Hartvigsen", "Fabian J. Theis", "Bradley L. Pentelute", "James Zou", "Vikram Khurana", "David Owen", "Richard Nicholas", "Manolis Kellis", "Marinka Zitnik"],
       "title": "ProCyon: A Multimodal Foundation Model for Protein Phenotypes",
       "venue": "In Review",
       "year": "2025",
