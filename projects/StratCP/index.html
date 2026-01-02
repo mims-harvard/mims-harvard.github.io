@@ -1,0 +1,870 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Error Controlled Decisions for Safe Use of Medical Foundation Models - Zitnik Lab</title>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="shortcut icon" type="image/png"
+           href="/favicon.png" 
+    />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Error Controlled Decisions for Safe Use of Medical Foundation Models | Zitnik Lab</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Error Controlled Decisions for Safe Use of Medical Foundation Models" />
+<meta name="author" content="Marinka Zitnik" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Foundation models, generative models, calibration, conformal prediction" />
+<meta property="og:description" content="Foundation models, generative models, calibration, conformal prediction" />
+<link rel="canonical" href="https://zitniklab.hms.harvard.edu/projects/StratCP/" />
+<meta property="og:url" content="https://zitniklab.hms.harvard.edu/projects/StratCP/" />
+<meta property="og:site_name" content="Zitnik Lab" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Error Controlled Decisions for Safe Use of Medical Foundation Models" />
+<meta name="twitter:site" content="@marinkazitnik" />
+<meta name="twitter:creator" content="@Marinka Zitnik" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Marinka Zitnik"},"description":"Foundation models, generative models, calibration, conformal prediction","headline":"Error Controlled Decisions for Safe Use of Medical Foundation Models","url":"https://zitniklab.hms.harvard.edu/projects/StratCP/"}</script>
+<!-- End Jekyll SEO tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
+<script>
+  window['ga-disable-UA-162129505-1'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-162129505-1');
+</script><!-- head scripts --></head>
+
+  <body>
+    
+<nav class="navbar is-primary" >
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item"><b>
+                Zitnik Lab
+            </b></a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+<!--                <a href="/" class="navbar-item "><b>Home</b></a>-->
+                
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a href="/#" class="navbar-link "><b>About</b></a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/bio/" class="navbar-item "><b>Bio</b></a>
+                            
+                            <a href="/contact/" class="navbar-item "><b>Contact</b></a>
+                            
+                            <a href="/talks/" class="navbar-item "><b>Recent Talks</b></a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                <a href="/research/" class="navbar-item "><b>Research</b></a>
+                    
+                
+                    
+                <a href="/publications/" class="navbar-item "><b>Publications</b></a>
+                    
+                
+                    
+                <a href="/people/" class="navbar-item "><b>Members</b></a>
+                    
+                
+                    
+                <a href="/meetings/" class="navbar-item "><b>Conferences & Courses</b></a>
+                    
+                
+                    
+                <a href="/DMAI/" class="navbar-item "><b>DMAI</b></a>
+                    
+                
+                    
+                <a href="/data/" class="navbar-item "><b>Datasets</b></a>
+                    
+                
+                    
+                <a href="/software/" class="navbar-item "><b>AI Models</b></a>
+                    
+                
+                    
+                <a href="https://zitniklab.hms.harvard.edu/TDC/" class="navbar-item "><b>TDC</b></a>
+                    
+                
+                    
+                <a href="/news/" class="navbar-item "><b>News</b></a>
+                    
+                
+                    
+                <a href="/jobs/" class="navbar-item "><b>Join Us</b></a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+
+    
+        <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
+    <div class="hero-body">
+        <div class="container">
+            <p class="title is-2">Error Controlled Decisions for Safe Use of Medical Foundation Models</p>
+            <p class="subtitle is-3"></p>
+            
+        </div>
+    </div>
+</section>
+    
+    
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+                <div class="column is-8">
+                    
+                    
+                    
+<div class="content">
+    <div class="box has-background-info has-text-white">
+
+<p>
+Foundation models show promise in medicine, but clinical use requires outputs that clinicians can act on under pre-specified error budgets, such as a cap on false-positive clinical calls. Without error control, strong average accuracy can still lead to harmful errors among the very cases labeled confident and to inefficient use of follow-up testing. 
+</p>
+<p>
+Here we introduce StratCP, a stratified conformal framework that turns foundation-model predictions into decision-ready outputs by combining selective action with calibrated deferral. StratCP first selects a subset of patients for immediate clinical calls while controlling the false discovery rate among those calls at a user-chosen level. It then returns calibrated prediction sets for deferred patients that meet the target error rate and guide confirmatory evaluation. The procedure is model agnostic and can be applied to pretrained foundation models without retraining. 
+</p>
+<p>
+We validate StratCP in ophthalmology and neuro-oncology across diagnostic classification and time-to-event prognosis. Across tasks, StratCP maintains false discovery rate control on selected patients and produces coherent prediction sets for deferred patients. In neuro-oncology, it supports diagnosis from H&amp;E whole-slide images under a fixed error budget, reducing the need for reflex molecular assays and lowering laboratory cost and turnaround time.
+StratCP lays the groundwork for safe use of medical foundation models by converting predictions into error-controlled actions when evidence is strong and calibrated uncertainty otherwise.
+</p>
+</div>
+
+<h2 id="overview-of-stratcp">Overview of StratCP</h2>
+
+<p>Foundation models (FMs) perform well across clinical tasks, including retinal imaging, whole-slide histopathology, and clinical question answering. Some FMs have also been tested in prospective or health system settings, including language models evaluated on diagnosis and risk prediction tasks and a pathology FM assessed in silent use for EGFR screening. Routine clinical use, however, shifts the requirement from performing well on benchmarks to producing outputs that support safe action under pre-specified error budgets. The key challenge is not only how accurate a model is on average, but when it is appropriate to act on its output. Clinicians need guidance on when to make a call, when to defer, and what follow up to order. This requires decision policies with pre-specified error budgets. Without them, model driven decisions can trigger unnecessary or harmful interventions, delay appropriate care, and waste limited diagnostic resources.</p>
+
+<p>For safe clinical use of foundation models, uncertainty quantification should provide two guarantees. First, it should identify cases where a prediction is reliable enough to act on. Second, it should return calibrated candidate diagnoses for the remaining cases to guide confirmatory testing or expert review. The first requires error control within the acted upon selected subset. The second requires coverage within the deferred group. With guarantees aligned to clinical decisions, a clinician can make a call under a specified error budget or defer with calibrated differential diagnosis sets, enabling safe action when evidence is sufficient and follow up when it is not.</p>
+
+<p>To meet these guarantees, we introduce StratCP, a stratified conformal framework that combines selective action with calibrated deferral and can wrap any trained FM without retraining.</p>
+
+<ul>
+  <li>
+    <p>In the action arm, StratCP selects a subset of cases for immediate decisions while controlling the false-discovery rate (FDR), the expected fraction of incorrect acted-upon predictions, at a pre-specified level for task-specific outputs, such as tumor subtype or long-survivor status.</p>
+  </li>
+  <li>
+    <p>In the deferral arm, StratCP returns conformal prediction sets with selection-conditional coverage. This ensures that, among deferred patients, the true diagnosis falls within the set at the target frequency.</p>
+  </li>
+</ul>
+
+<p>When available, StratCP can use clinical diagnostic guidelines to produce clinically coherent prediction sets without sacrificing coverage.</p>
+
+<center>
+<img src="/img/StratCP-1.png" />
+</center>
+
+<h2 id="stratcp-provides-guarantees-for-safe-medical-decisions">StratCP Provides Guarantees for Safe Medical Decisions</h2>
+
+<p>StratCP builds on conformal prediction, a widely used approach for uncertainty quantification. Given a specified error tolerance, such as 5%, and a set of new patients, StratCP proceeds in two steps. First, it selects cases where the model prediction can be used for an immediate call, while keeping the error rate among these acted-upon cases below the pre-specified budget (for example, fewer than 5% of selected predictions are incorrect). Second, for cases not selected for an immediate call, StratCP returns a prediction set of plausible labels, such as <em>normal</em>, <em>mild</em>, with a guarantee that the true disease status lies in the set for 95% of deferred patients (see Methods for details and theoretical guarantees).</p>
+
+<p><strong>Step 1: Select confident predictions under an error budget:</strong> StratCP turns the model output into candidate decisions, such as assigning a specific disease status. For each candidate diagnosis, StratCP uses expert-labeled reference data to compute a confidence measure for each new patient and sets a decision threshold by testing against the reference data. Cases whose confidence exceeds this threshold are marked as confident. These confident calls can then be used directly for decision making under the chosen error budget.</p>
+
+<center>
+<img src="/img/StratCP-2.png" />
+</center>
+
+<p><strong>Step 2: Calibrated prediction sets for deferred cases:</strong> The second step of StratCP returns prediction sets for patients whose FM-predicted diagnoses are not confident enough for an immediate call. After Step 1, deferred cases differ from the full reference set because they are enriched for ambiguity. StratCP accounts for this shift by calibrating uncertainty using only expert-labeled cases with similar ambiguity, following recent work on post-selection conformal inference. Given an unconfident case, StratCP finds a subset of expert-diagnosed patients whose FM outputs are similarly ambiguous, using the same confidence criterion as in Step 1. It then forms a prediction set by including each candidate diagnosis for which the corresponding test statistic falls within the expected range when compared to these similarly ambiguous expert-labeled cases.</p>
+
+<center>
+<img src="/img/StratCP-3.png" />
+</center>
+
+<p><strong>Optional utility enhancement using diagnostic-guideline knowledge:</strong> When diagnostic-guideline knowledge about relationships among labels is available, StratCP includes an optional module that shapes prediction sets to better match clinical reasoning for deferred cases. StratCP changes the order in which candidate labels enter the prediction set by combining model scores with a CP utility graph derived from diagnostic guidelines that encodes which label combinations are preferred. Starting from the most probable model label, it iteratively adds the label that increases set utility the most, until the set reaches the size required for valid coverage.</p>
+
+<center>
+<img src="/img/StratCP-4.png" />
+</center>
+
+<h2 id="safe-use-of-medical-foundation-models-with-stratcp">Safe Use of Medical Foundation Models With StratCP</h2>
+
+<p>We evaluate StratCP in ophthalmology and oncology, pairing it with a vision foundation model on retinal images and a pathology foundation model on H&amp;E whole-slide images for diagnosis, biomarker prediction, and prognosis. StratCP controls error among acted-upon (selected) cases and returns valid coverage for deferred cases, so the outputs map to decision points.</p>
+
+<p>In eye-condition diagnosis, both StratCP and CP meet 95% coverage, but StratCP yields more actionable calls on average while keeping the selected-set error rate near the target.</p>
+
+<p>In IDH mutation status prediction, StratCP keeps the acted-upon error rate within the 5% budget for IDH-mutant calls (FDR 0.046), whereas a standard conformal prediction approach overspends the budget on its acted-upon subset (FDR 0.110).</p>
+
+<p>In time-to-event prognosis, StratCP reaches the nominal 95% coverage among selected long-survivors (0.952), while a threshold baseline falls short (0.797).</p>
+
+<p>We also show that utility graphs derived from expert diagnostic guidelines can shape prediction sets without sacrificing conformal coverage. This produces differential diagnosis sets that respect clinical adjacency, such as neighboring diabetic retinopathy stages or related CNS tumor categories, and better match the follow-up actions a clinician would take.</p>
+
+<p>Finally, in a neuro-oncology application, StratCP provides error-controlled diagnoses for adult-type diffuse glioma. By finalizing a subset of cases without reflex molecular testing within the error budget, it can reduce confirmatory assays, lowering laboratory cost and shortening time to diagnosis.</p>
+
+<h2 id="publication">Publication</h2>
+
+<p><a href="#">Error Controlled Decisions for Safe Use of Medical Foundation Models</a><br />
+Ying Jin*, Intae Moon*, Marinka Zitnik<br />
+<em>In Review</em> 2026 <a href="#">[arXiv]</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{jin26error,
+  title={Error Controlled Decisions for Safe Use of Medical Foundation Models},
+  author={Jin, Ying and Moon, Intae and Zitnik, Marinka},
+  journal={In Review},
+  url={},
+  year={2026}
+}
+</code></pre></div></div>
+
+<h2 id="code-and-data-availability">Code and Data Availability</h2>
+
+<p>Pytorch implementation of StratCP is available in the <a href="https://github.com/mims-harvard/StratCP/">GitHub repository</a>.</p>
+
+<h2 id="authors">Authors</h2>
+
+<ul>
+  <li><a href="https://ying531.github.io/">Ying Jin</a></li>
+  <li><a href="https://itmoon7.github.io/">Intae Moon</a></li>
+  <li><a href="https://zitniklab.hms.harvard.edu/">Marinka Zitnik</a></li>
+</ul>
+
+</div>
+                </div>
+                
+                <div class="column is-4-desktop is-12-tablet">
+                    <p class="title is-4">Latest News</p>
+
+<div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2026/01/12/ToolUniverse/">AI Scientists - LLMs Using Scientific Tools</a>-->
+        <p class="card-header-title">Jan 2026: &nbsp; <span class="has-text-primary">AI Scientists - LLMs Using Scientific Tools</span></p>
+<!--        <p class="card-header-item">Jan 2026</p>-->
+<!--        <p class="card-footer-item">Jan 12, 2026</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited about this <a href="https://anthropic.com/news/healthcare-life-sciences">academic collaboration with Anthropic</a> on adding connectors to <a href="https://aiscientist.tools/">ToolUniverse</a> to make Claude even more powerful for scientific discovery.</p>
+</p>-->
+            <p>Excited about this <a href="https://anthropic.com/news/healthcare-life-sciences">academic collaboration with Anthropic</a> on adding connectors to <a href="https://aiscientist.tools/">ToolUniverse</a> to make Claude even more powerful for scientific discovery.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2026/01/12/ToolUniverse/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Jan 12, 2026</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/12/17/PROTON/">AI + Validation in Molecular, Organoid, and Clinical Systems</a>-->
+        <p class="card-header-title">Dec 2025: &nbsp; <span class="has-text-primary">AI + Validation in Molecular, Organoid, and Clinical Systems</span></p>
+<!--        <p class="card-header-item">Dec 2025</p>-->
+<!--        <p class="card-footer-item">Dec 17, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Pairing AI with experiments: Our latest PROTON AI <a href="https://arxiv.org/abs/2512.13724">generates neurological hypotheses that we validated across molecular, organoid, and clinical systems.</a> <a href="https://www.protonmodel.ai/">[Project website]</a></p>
+
+</p>-->
+            <p>Pairing AI with experiments: Our latest PROTON AI <a href="https://arxiv.org/abs/2512.13724">generates neurological hypotheses that we validated across molecular, organoid, and clinical systems.</a> <a href="https://www.protonmodel.ai/">[Project website]</a></p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/12/17/PROTON/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 17, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/12/16/Magneton/">Greater than the Sum of Its Parts</a>-->
+        <p class="card-header-title">Dec 2025: &nbsp; <span class="has-text-primary">Greater than the Sum of Its Parts</span></p>
+<!--        <p class="card-header-item">Dec 2025</p>-->
+<!--        <p class="card-footer-item">Dec 16, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New preprint on <a href="https://arxiv.org/abs/2512.18114">Greater than the Sum of Its Parts: Building Substructure into Protein Encoding Models</a>. <a href="https://zitniklab.hms.harvard.edu/projects/Magneton/">[Project website]</a></p>
+</p>-->
+            <p>New preprint on <a href="https://arxiv.org/abs/2512.18114">Greater than the Sum of Its Parts: Building Substructure into Protein Encoding Models</a>. <a href="https://zitniklab.hms.harvard.edu/projects/Magneton/">[Project website]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/12/16/Magneton/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 16, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/12/09/DigitalTwins/">Digital Twinning</a>-->
+        <p class="card-header-title">Dec 2025: &nbsp; <span class="has-text-primary">Digital Twinning</span></p>
+<!--        <p class="card-header-item">Dec 2025</p>-->
+<!--        <p class="card-footer-item">Dec 9, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>A piece in <a href="https://news.harvard.edu/gazette/story/2025/12/your-digital-twin-might-save-your-life/">Harvard Gazette</a> on digital twins, cellular chatbots, and building digital twins at a cellular scale.</p>
+
+</p>-->
+            <p>A piece in <a href="https://news.harvard.edu/gazette/story/2025/12/your-digital-twin-might-save-your-life/">Harvard Gazette</a> on digital twins, cellular chatbots, and building digital twins at a cellular scale.</p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/12/09/DigitalTwins/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 9, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/12/09/NeurIPS-DrugDiscovery/">Virtual Cells and Instruments</a>-->
+        <p class="card-header-title">Dec 2025: &nbsp; <span class="has-text-primary">Virtual Cells and Instruments</span></p>
+<!--        <p class="card-header-item">Dec 2025</p>-->
+<!--        <p class="card-footer-item">Dec 9, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>We are excited to meet hundreds of researchers attending our <a href="https://ai4d3.github.io/2025/index.html">AI Virtual Cells and Instruments: A New Era in Drug Discovery and Development</a> workshop at NeurIPS 2025.</p>
+
+</p>-->
+            <p>We are excited to meet hundreds of researchers attending our <a href="https://ai4d3.github.io/2025/index.html">AI Virtual Cells and Instruments: A New Era in Drug Discovery and Development</a> workshop at NeurIPS 2025.</p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/12/09/NeurIPS-DrugDiscovery/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 9, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/12/07/NeurIPS-CUREBench/">CUREBench</a>-->
+        <p class="card-header-title">Dec 2025: &nbsp; <span class="has-text-primary">CUREBench</span></p>
+<!--        <p class="card-header-item">Dec 2025</p>-->
+<!--        <p class="card-footer-item">Dec 7, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited to see 1,622 researchers from around the world entering our <a href="https://curebench.ai/">CUREBench Challenge</a> with 398 participating teams that made 3,383 submissions to the competition and submitted 8,457,500+ AI reasoning traces for therapeutics. Join us at the Award Ceremony at NeurIPS.</p>
+</p>-->
+            <p>Excited to see 1,622 researchers from around the world entering our <a href="https://curebench.ai/">CUREBench Challenge</a> with 398 participating teams that made 3,383 submissions to the competition and submitted 8,457,500+ AI reasoning traces for therapeutics. Join us at the Award Ceremony at NeurIPS.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/12/07/NeurIPS-CUREBench/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 7, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/12/07/NeurIPS-AI4Science/">AI For Science at NeurIPS</a>-->
+        <p class="card-header-title">Dec 2025: &nbsp; <span class="has-text-primary">AI For Science at NeurIPS</span></p>
+<!--        <p class="card-header-item">Dec 2025</p>-->
+<!--        <p class="card-footer-item">Dec 7, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Join us and hundreds of other scientists at the <a href="https://ai4sciencecommunity.github.io/neurips25.html">6th AI for Science workshop at NeurIPS.</a></p>
+
+</p>-->
+            <p>Join us and hundreds of other scientists at the <a href="https://ai4sciencecommunity.github.io/neurips25.html">6th AI for Science workshop at NeurIPS.</a></p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/12/07/NeurIPS-AI4Science/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Dec 7, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/11/18/GeoBPE/">Protein Structure Tokenization</a>-->
+        <p class="card-header-title">Nov 2025: &nbsp; <span class="has-text-primary">Protein Structure Tokenization</span></p>
+<!--        <p class="card-header-item">Nov 2025</p>-->
+<!--        <p class="card-footer-item">Nov 18, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New preprint introducing <a href="https://arxiv.org/abs/2511.11758">GeoBPE - Protein structure tokenization via geometric byte pair encoding.</a></p>
+
+</p>-->
+            <p>New preprint introducing <a href="https://arxiv.org/abs/2511.11758">GeoBPE - Protein structure tokenization via geometric byte pair encoding.</a></p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/11/18/GeoBPE/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Nov 18, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/11/11/CONCERT/">Generative AI Model for Spatial Biology</a>-->
+        <p class="card-header-title">Nov 2025: &nbsp; <span class="has-text-primary">Generative AI Model for Spatial Biology</span></p>
+<!--        <p class="card-header-item">Nov 2025</p>-->
+<!--        <p class="card-footer-item">Nov 11, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New preprint introducing <a href="https://www.biorxiv.org/content/10.1101/2025.11.08.686890">CONCERT, a niche-aware generative model that predicts perturbation effects across spatial tissue contexts.</a></p>
+
+</p>-->
+            <p>New preprint introducing <a href="https://www.biorxiv.org/content/10.1101/2025.11.08.686890">CONCERT, a niche-aware generative model that predicts perturbation effects across spatial tissue contexts.</a></p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/11/11/CONCERT/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Nov 11, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/11/02/ScienceFeature/">AI Cell Models</a>-->
+        <p class="card-header-title">Nov 2025: &nbsp; <span class="has-text-primary">AI Cell Models</span></p>
+<!--        <p class="card-header-item">Nov 2025</p>-->
+<!--        <p class="card-footer-item">Nov 2, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>A piece in <a href="https://www.science.org/content/article/can-ai-capture-mind-boggling-complexity-human-cell">Science</a> explores how AI cell models could transform biomedicine (if they work as promised) and highlights <a href="https://aiscientist.tools/">ToolUniverse</a>. ToolUniverse lets AI co-scientists test, analyze, and build on AI cell models.</p>
+
+</p>-->
+            <p>A piece in <a href="https://www.science.org/content/article/can-ai-capture-mind-boggling-complexity-human-cell">Science</a> explores how AI cell models could transform biomedicine (if they work as promised) and highlights <a href="https://aiscientist.tools/">ToolUniverse</a>. ToolUniverse lets AI co-scientists test, analyze, and build on AI cell models.</p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/11/02/ScienceFeature/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Nov 2, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/10/25/NatureNewsFeature/">Is AI sycophancy holding science back?</a>-->
+        <p class="card-header-title">Oct 2025: &nbsp; <span class="has-text-primary">Is AI sycophancy holding science back?</span></p>
+<!--        <p class="card-header-item">Oct 2025</p>-->
+<!--        <p class="card-footer-item">Oct 25, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>A piece in <a href="https://www.nature.com/articles/d41586-025-03390-0">Nature</a> explores how AI sycophancy, in which models agree too much with users instead of reasoning on its own, could affect the use of AI in medical research.</p>
+
+</p>-->
+            <p>A piece in <a href="https://www.nature.com/articles/d41586-025-03390-0">Nature</a> explores how AI sycophancy, in which models agree too much with users instead of reasoning on its own, could affect the use of AI in medical research.</p>
+
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/10/25/NatureNewsFeature/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Oct 25, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/10/12/NewsFeature/">Our research featured by Kempner and Crimson</a>-->
+        <p class="card-header-title">Oct 2025: &nbsp; <span class="has-text-primary">Our research featured by Kempner and Crimson</span></p>
+<!--        <p class="card-header-item">Oct 2025</p>-->
+<!--        <p class="card-footer-item">Oct 12, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>A news story about <a href="https://www.nature.com/articles/s41551-025-01481-x">PDGrapher</a> in <a href="https://www.thecrimson.com/article/2025/10/6/hms-tool-drug-discovery/">Harvard Crimson.</a> <a href="https://aiscientist.tools/">ToolUniverse</a> featured on the <a href="https://kempnerinstitute.harvard.edu/research/deeper-learning/from-models-to-scientists-building-ai-agents-for-scientific-discovery/">Kempner Institute blog.</a></p>
+</p>-->
+            <p>A news story about <a href="https://www.nature.com/articles/s41551-025-01481-x">PDGrapher</a> in <a href="https://www.thecrimson.com/article/2025/10/6/hms-tool-drug-discovery/">Harvard Crimson.</a> <a href="https://aiscientist.tools/">ToolUniverse</a> featured on the <a href="https://kempnerinstitute.harvard.edu/research/deeper-learning/from-models-to-scientists-building-ai-agents-for-scientific-discovery/">Kempner Institute blog.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/10/12/NewsFeature/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Oct 12, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/10/05/AIAgentsForScience/">A Scientist's Guide to AI Agents in Nature</a>-->
+        <p class="card-header-title">Oct 2025: &nbsp; <span class="has-text-primary">A Scientist's Guide to AI Agents in Nature</span></p>
+<!--        <p class="card-header-item">Oct 2025</p>-->
+<!--        <p class="card-footer-item">Oct 5, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p><a href="https://www.nature.com/articles/d41586-025-03246-7">A piece on AI agents in Nature</a> highlights ongoing projects in our group, including methods for evaluating scientific hypotheses, challenges in benchmarking AI agents, and the open ToolUniverse ecosystem.</p>
+</p>-->
+            <p><a href="https://www.nature.com/articles/d41586-025-03246-7">A piece on AI agents in Nature</a> highlights ongoing projects in our group, including methods for evaluating scientific hypotheses, challenges in benchmarking AI agents, and the open ToolUniverse ecosystem.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/10/05/AIAgentsForScience/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Oct 5, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/09/29/ToolUniversePaper/">ToolUniverse: AI Agents for Science and Medicine</a>-->
+        <p class="card-header-title">Sep 2025: &nbsp; <span class="has-text-primary">ToolUniverse: AI Agents for Science and Medicine</span></p>
+<!--        <p class="card-header-item">Sep 2025</p>-->
+<!--        <p class="card-footer-item">Sep 29, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper: <a href="https://arxiv.org/abs/2509.23426">ToolUniverse</a> introduces an open ecosystem for building AI scientists with 600+ scientific and biomedical tools. Build your AI co-scientists at <a href="https://aiscientist.tools/">https://aiscientist.tools</a>.</p>
+</p>-->
+            <p>New paper: <a href="https://arxiv.org/abs/2509.23426">ToolUniverse</a> introduces an open ecosystem for building AI scientists with 600+ scientific and biomedical tools. Build your AI co-scientists at <a href="https://aiscientist.tools/">https://aiscientist.tools</a>.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/09/29/ToolUniversePaper/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 29, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/09/27/ToolUniverse/">Democratizing "AI Scientists" with ToolUniverse</a>-->
+        <p class="card-header-title">Sep 2025: &nbsp; <span class="has-text-primary">Democratizing "AI Scientists" with ToolUniverse</span></p>
+<!--        <p class="card-header-item">Sep 2025</p>-->
+<!--        <p class="card-footer-item">Sep 27, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Our new initiative: <strong>Use Tool Universe to build an AI scientist for yourself from any language or reasoning model, whether open or closed. <a href="https://aiscientist.tools/">https://aiscientist.tools</a></strong></p>
+</p>-->
+            <p>Our new initiative: <strong>Use Tool Universe to build an AI scientist for yourself from any language or reasoning model, whether open or closed. <a href="https://aiscientist.tools/">https://aiscientist.tools</a></strong></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/09/27/ToolUniverse/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 27, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/09/15/InfEHR/">InfEHR in Nature Communications</a>-->
+        <p class="card-header-title">Sep 2025: &nbsp; <span class="has-text-primary">InfEHR in Nature Communications</span></p>
+<!--        <p class="card-header-item">Sep 2025</p>-->
+<!--        <p class="card-footer-item">Sep 15, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Collaboration with Ben and Girish on <a href="https://www.nature.com/articles/s41467-025-63366-6">clinical phenotype resolution through deep geometric learning on electronic health records</a> published in Nature Communications.</p>
+</p>-->
+            <p>Collaboration with Ben and Girish on <a href="https://www.nature.com/articles/s41467-025-63366-6">clinical phenotype resolution through deep geometric learning on electronic health records</a> published in Nature Communications.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/09/15/InfEHR/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 15, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/09/10/PDGrapher/">PDGrapher in Nature Biomedical Engineering</a>-->
+        <p class="card-header-title">Sep 2025: &nbsp; <span class="has-text-primary">PDGrapher in Nature Biomedical Engineering</span></p>
+<!--        <p class="card-header-item">Sep 2025</p>-->
+<!--        <p class="card-footer-item">Sep 10, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New paper in Nature Biomedical Engineering introducing <a href="https://www.nature.com/articles/s41551-025-01481-x">PDGrapher, a model for phenotype-based target discovery</a>. <a href="https://hms.harvard.edu/news/new-ai-tool-pinpoints-genes-drug-combos-restore-health-diseased-cells">[Harvard Medicine News]</a></p>
+</p>-->
+            <p>New paper in Nature Biomedical Engineering introducing <a href="https://www.nature.com/articles/s41551-025-01481-x">PDGrapher, a model for phenotype-based target discovery</a>. <a href="https://hms.harvard.edu/news/new-ai-tool-pinpoints-genes-drug-combos-restore-health-diseased-cells">[Harvard Medicine News]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/09/10/PDGrapher/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 10, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/09/01/PrecisionMedicineNEJMAI/">AI and Net Medicine: Path to Precision Medicine</a>-->
+        <p class="card-header-title">Sep 2025: &nbsp; <span class="has-text-primary">AI and Net Medicine: Path to Precision Medicine</span></p>
+<!--        <p class="card-header-item">Sep 2025</p>-->
+<!--        <p class="card-footer-item">Sep 1, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New perspective published in NEJM AI on <a href="https://ai.nejm.org/stoken/default+domain/AGEYPVA9IEY6DAHJ2INC/full?redirectUri=doi/full/10.1056/AIra2401229">advancing AI and network medicine on a path to precision medicine.</a></p>
+</p>-->
+            <p>New perspective published in NEJM AI on <a href="https://ai.nejm.org/stoken/default+domain/AGEYPVA9IEY6DAHJ2INC/full?redirectUri=doi/full/10.1056/AIra2401229">advancing AI and network medicine on a path to precision medicine.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/09/01/PrecisionMedicineNEJMAI/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 1, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/08/27/CUREBenchUpdate/">CUREBench - Reasoning for Therapeutics</a>-->
+        <p class="card-header-title">Aug 2025: &nbsp; <span class="has-text-primary">CUREBench - Reasoning for Therapeutics</span></p>
+<!--        <p class="card-header-item">Aug 2025</p>-->
+<!--        <p class="card-footer-item">Aug 27, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Update from CUREBench: 650+ entrants, 100+ teams and 500+ submissions. Thank you to the CUREBench community. Working on AI for drug discovery and reasoning in medicine? New teams welcome. Tasks, rules, and leaderboard: <a href="https://curebench.ai">https://curebench.ai.</a></p>
+</p>-->
+            <p>Update from CUREBench: 650+ entrants, 100+ teams and 500+ submissions. Thank you to the CUREBench community. Working on AI for drug discovery and reasoning in medicine? New teams welcome. Tasks, rules, and leaderboard: <a href="https://curebench.ai">https://curebench.ai.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/08/27/CUREBenchUpdate/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Aug 27, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2025/08/26/NeurIPS-DrugDiscoveryWorkshop/">Drug Discovery Workshop at NeurIPS 2025</a>-->
+        <p class="card-header-title">Aug 2025: &nbsp; <span class="has-text-primary">Drug Discovery Workshop at NeurIPS 2025</span></p>
+<!--        <p class="card-header-item">Aug 2025</p>-->
+<!--        <p class="card-footer-item">Aug 26, 2025</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Excited to organize a NeurIPS workshop on <a href="https://ai4d3.github.io/2025/index.html">Virtual Cells and Digital Instruments</a>. <a href="https://ai4d3.github.io/2025/index.html">Submit your papers.</a></p>
+</p>-->
+            <p>Excited to organize a NeurIPS workshop on <a href="https://ai4d3.github.io/2025/index.html">Virtual Cells and Digital Instruments</a>. <a href="https://ai4d3.github.io/2025/index.html">Submit your papers.</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2025/08/26/NeurIPS-DrugDiscoveryWorkshop/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Aug 26, 2025</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+
+    <div class="column is-12">
+        <div class="card">
+            <header class="card-header">
+        <!--        <a class="card-header-title" href=""></a>-->
+            <p class="card-header-title"><span class="has-text-primary">Tweets</span></p>
+        <!--        <p class="card-header-item"></p>-->
+        <!--        <p class="card-footer-item"></p>-->
+            </header>
+        <div class="card-content">
+        <!--        <div class="content">-->
+        <!--            -->
+        <!--            <p></p>-->
+        <a class="twitter-timeline" data-width="500" data-height="500" data-theme="light" href="https://twitter.com/marinkazitnik?ref_src=twsrc%5Etfw" data-chrome="noheader transparent nofooter nofooter noborders">Tweets by marinkazitnik</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <!--        </div>-->
+        <!--        <div class="has-text-centered">-->
+        <!--            <a href="" class="button is-primary">Read more</a>-->
+        <!--        </div>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts -->
+<div style="background-color:#A41034">
+        <div class="content is-normal has-text-centered">
+            <p style="color:white;padding-top:20px;padding-bottom:20px;"><a href="https://scholar.harvard.edu/marinka" style="color:white"><b>Zitnik Lab</b></a>
+                &nbsp;&middot;&nbsp; <a href="#" style="color:white"><b>Artificial Intelligence in Medicine and Science</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://harvard.edu" style="color:white"><b>Harvard</b></a>
+                &nbsp;&middot;&nbsp; <a href="https://dbmi.hms.harvard.edu/" style="color:white"><b>Department of Biomedical Informatics</b></a></p>
+        </div>
+</div></body>
+</html>
+
