@@ -338,7 +338,7 @@
 
      {
       "key": "submission24u",
-      "author": ["Owen Queen*", "Yepeng Huang*", "Robert Calef*", "Valentina Giunchiglia", "Tianlong Chen", "George Dasoulas", "LeAnn Tai", "Yasha Ektefaie", "Ayush Noori", "Joseph Brown", "Tom Cobley", "Karin Hrovatin", "Tom Hartvigsen", "Fabian J. Theis", "Bradley L. Pentelute", "Vikram Khurana", "Manolis Kellis", "Marinka Zitnik"],
+      "author": ["Owen Queen*", "Yepeng Huang*", "Robert Calef*", "Valentina Giunchiglia*", "Tianlong Chen", "George Dasoulas", "LeAnn Tai", "Gianmarco Abbadessa", "Owain Howell", "Michelle M. Li", "Yasha Ektefaie", "Ayush Noori", "Ildiko Farkas", "Joseph Brown", "Tom Cobley", "Karin Hrovatin", "Tom Hartvigsen", "Fabian J. Theis", "Bradley L. Pentelute", "James Zou", "Vikram Khurana", "David Owen", "Richard Nicholas", "Manolis Kellis", "Marinka Zitnik"],
       "title": "ProCyon: A Multimodal Foundation Model for Protein Phenotypes",
       "venue": "In Review",
       "year": "2025",
