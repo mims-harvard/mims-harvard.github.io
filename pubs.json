@@ -113,6 +113,38 @@
     },
 
      {
+      "key": "submission26b",
+      "author": ["Pengwei Sui", "Michelle Li", "Shanghua Gao", "Wanxiang Shen", "Valentina Giunchiglia", "Andrew Shen", "Yepeng Huang", "Zhenglun Kong", "Marinka Zitnik"],
+      "title": "Medea: An Omics AI Agent for Therapeutic Discovery",
+      "venue": "In Review",
+      "year": "2026",
+      "thumbnail": "Medea26.png",
+      "pdf": "https://www.biorxiv.org/content/10.64898/2026.01.16.696667",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.01.16.696667",
+      "type": "journal",
+      "supp":
+      {
+        "project website": "https://medea.openscientist.ai/",
+        "code": "https://github.com/mims-harvard/MEDEA"
+      }
+    },
+
+     {
+      "key": "submission26c",
+      "author": ["Joaquín Polonuer", "Lucas Vittor", "Iñaki Arango", "Ayush Noori", "David A. Clifton", "Luciano Del Corro", "Marinka Zitnik"],
+      "title": "Autonomous Knowledge Graph Exploration with Adaptive Breadth-Depth Retrieval",
+      "venue": "In Review",
+      "year": "2026",
+      "thumbnail": "ARK26.png",
+      "pdf": "https://arxiv.org/abs/2601.13969",
+      "url": "https://arxiv.org/abs/2601.13969",
+      "type": "journal",
+      "supp":
+      {
+      }
+    },
+
+     {
       "key": "submission25h",
       "author": ["Wanxiang Shen", "Thinh H. Nguyen", "Michelle M. Li", "Yepeng Huang", "Intae Moon", "Nitya Nair", "Daniel Marbach", "Marinka Zitnik"],
       "title": "Generalizable AI Predicts Immunotherapy Outcomes Across Cancers and Treatments",
@@ -976,17 +1008,17 @@
 
      {
       "key": "submission24i",
-      "author": ["Kangyu Zheng", "Yingzhou Lu", "Zaixi Zhang", "Zhongwei Wan", "Yao Ma", "Marinka Zitnik", "Tianfan Fu"],
-      "title": "Structure-based Drug Design Benchmark: Do 3D Methods Really Dominate?",
+      "author": ["Kangyu Zheng", "Kai Zhang", "Jiale Tan", "Xuehan Chen", "Yingzhou Lu", "Zaixi Zhang", "Lichao Sun", "Marinka Zitnik", "Tianfan Fu", "Zhiding Liang"],
+      "title": "Beyond Affinity: A Benchmark of 1D, 2D, and 3D Methods Reveals Critical Trade-offs in Structure-Based Drug Design",
       "venue": "In Review",
-      "year": "2025",
+      "year": "2026",
       "thumbnail": "GADC24.png",
       "pdf": "",
-      "url": "https://arxiv.org/abs/2406.03403",
+      "url": "https://arxiv.org/abs/2601.14283",
       "type": "journal",
       "supp":
       {
-        "arXiv": "https://arxiv.org/abs/2406.03403"
+        "arXiv": "https://arxiv.org/abs/2601.14283"
       }
     },
 
