@@ -113,6 +113,22 @@
     },
 
      {
+      "key": "submission25p",
+      "author": ["Michelle M. Li", "Ben Y. Reis", "Adam Rodman", "Tianxi Cai", "Noa Dagan", "Ran D. Balicer", "Joseph Loscalzo", "Isaac S. Kohane", "Marinka Zitnik"],
+      "title": "Scaling Medical AI Across Clinical Contexts",
+      "venue": "Nature Medicine",
+      "year": "2026",
+      "thumbnail": "contextswitching26.png",
+      "pdf": "https://www.nature.com/articles/s41591-025-04184-7",
+      "url": "https://rdcu.be/e15sO",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2506.10157"
+      }
+    },
+
+     {
       "key": "submission26b",
       "author": ["Pengwei Sui", "Michelle Li", "Shanghua Gao", "Wanxiang Shen", "Valentina Giunchiglia", "Andrew Shen", "Yepeng Huang", "Zhenglun Kong", "Marinka Zitnik"],
       "title": "Medea: An Omics AI Agent for Therapeutic Discovery",
@@ -247,22 +263,6 @@
         "ATOMICA code": "https://github.com/mims-harvard/ATOMICA",
         "Kempner Institute": "https://kempnerinstitute.harvard.edu/research/deeper-learning/atomica-learning-universal-representations-of-molecular-interactions/",
         "project website": "https://zitniklab.hms.harvard.edu/projects/ATOMICA"
-      }
-    },
-
-     {
-      "key": "submission25p",
-      "author": ["Michelle M. Li", "Ben Y. Reis", "Adam Rodman", "Tianxi Cai", "Noa Dagan", "Ran D. Balicer", "Joseph Loscalzo", "Isaac S. Kohane", "Marinka Zitnik"],
-      "title": "One Patient, Many Contexts: Scaling Medical AI Through Contextual Intelligence",
-      "venue": "Nature Medicine, in press",
-      "year": "2025",
-      "thumbnail": "contextswitching25.png",
-      "pdf": "https://arxiv.org/abs/2506.10157",
-      "url": "https://arxiv.org/abs/2506.10157",
-      "type": "journal",
-      "supp":
-      {
-        "arXiv": "https://arxiv.org/abs/2506.10157"
       }
     },
 
