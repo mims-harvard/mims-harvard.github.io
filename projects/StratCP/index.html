@@ -4,16 +4,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Error Controlled Decisions for Safe Use of Medical Foundation Models - Zitnik Lab</title>
+    <title>Act or Defer - Error-Controlled Decision Policies for Medical Foundation Models - Zitnik Lab</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="shortcut icon" type="image/png"
            href="/favicon.png" 
     />
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Error Controlled Decisions for Safe Use of Medical Foundation Models | Zitnik Lab</title>
+<title>Act or Defer - Error-Controlled Decision Policies for Medical Foundation Models | Zitnik Lab</title>
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Error Controlled Decisions for Safe Use of Medical Foundation Models" />
+<meta property="og:title" content="Act or Defer - Error-Controlled Decision Policies for Medical Foundation Models" />
 <meta name="author" content="Marinka Zitnik" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Foundation models, generative models, calibration, conformal prediction" />
@@ -23,11 +23,11 @@
 <meta property="og:site_name" content="Zitnik Lab" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Error Controlled Decisions for Safe Use of Medical Foundation Models" />
+<meta property="twitter:title" content="Act or Defer - Error-Controlled Decision Policies for Medical Foundation Models" />
 <meta name="twitter:site" content="@marinkazitnik" />
 <meta name="twitter:creator" content="@Marinka Zitnik" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Marinka Zitnik"},"description":"Foundation models, generative models, calibration, conformal prediction","headline":"Error Controlled Decisions for Safe Use of Medical Foundation Models","url":"https://zitniklab.hms.harvard.edu/projects/StratCP/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Marinka Zitnik"},"description":"Foundation models, generative models, calibration, conformal prediction","headline":"Act or Defer - Error-Controlled Decision Policies for Medical Foundation Models","url":"https://zitniklab.hms.harvard.edu/projects/StratCP/"}</script>
 <!-- End Jekyll SEO tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
 <script>
@@ -101,6 +101,10 @@
                     
                 
                     
+                <a href="https://aiscientist.tools/" class="navbar-item "><b>ToolUniverse</b></a>
+                    
+                
+                    
                 <a href="https://zitniklab.hms.harvard.edu/TDC/" class="navbar-item "><b>TDC</b></a>
                     
                 
@@ -122,7 +126,7 @@
         <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
     <div class="hero-body">
         <div class="container">
-            <p class="title is-2">Error Controlled Decisions for Safe Use of Medical Foundation Models</p>
+            <p class="title is-2">Act or Defer - Error-Controlled Decision Policies for Medical Foundation Models</p>
             <p class="subtitle is-3"></p>
             
         </div>
@@ -144,35 +148,43 @@
     <div class="box has-background-info has-text-white">
 
 <p>
-Foundation models show promise in medicine, but clinical use requires outputs that clinicians can act on under pre-specified error budgets, such as a cap on false-positive clinical calls. Without error control, strong average accuracy can still lead to harmful errors among the very cases labeled confident and to inefficient use of follow-up testing. 
+Clinical deployment of foundation models requires decision policies that operate under explicit error budgets, such as a cap on false-positive clinical calls. Strong average accuracy alone does not guarantee safety: errors can concentrate among patients selected for action, leading to harm and inefficient use of healthcare resources.
 </p>
 <p>
-Here we introduce StratCP, a stratified conformal framework that turns foundation-model predictions into decision-ready outputs by combining selective action with calibrated deferral. StratCP first selects a subset of patients for immediate clinical calls while controlling the false discovery rate among those calls at a user-chosen level. It then returns calibrated prediction sets for deferred patients that meet the target error rate and guide confirmatory evaluation. The procedure is model agnostic and can be applied to pretrained foundation models without retraining. 
+Here we introduce StratCP, a stratified conformal framework that turns foundation model predictions into decision-ready outputs through error-controlled selection and calibrated deferral. StratCP first selects a subset of patients for immediate clinical action while controlling the false discovery rate at a user-specified level. For the remaining patients, it returns prediction sets that achieve target coverage conditional on deferral, supporting confirmatory testing or expert review. When clinical guidelines define relationships among disease states, StratCP incorporates a utility graph to produce clinically coherent prediction sets without sacrificing coverage guarantees.
 </p>
 <p>
-We validate StratCP in ophthalmology and neuro-oncology across diagnostic classification and time-to-event prognosis. Across tasks, StratCP maintains false discovery rate control on selected patients and produces coherent prediction sets for deferred patients. In neuro-oncology, it supports diagnosis from H&amp;E whole-slide images under a fixed error budget, reducing the need for reflex molecular assays and lowering laboratory cost and turnaround time.
-StratCP lays the groundwork for safe use of medical foundation models by converting predictions into error-controlled actions when evidence is strong and calibrated uncertainty otherwise.
+We evaluate StratCP in ophthalmology and neuro-oncology across diagnosis, biomarker prediction, and time-to-event prognosis. Across tasks, StratCP controls the false discovery rate among selected patients and provides valid, selection-conditional coverage for deferred patients. In neuro-oncology, it enables H&amp;E-based diagnosis under a fixed error budget, reducing reliance on reflex molecular assays and lowering laboratory cost and turnaround time. StratCP establishes error-controlled decision policies for safe deployment of medical foundation models.
 </p>
 </div>
 
 <h2 id="overview-of-stratcp">Overview of StratCP</h2>
 
-<p>Foundation models (FMs) perform well across clinical tasks, including retinal imaging, whole-slide histopathology, and clinical question answering. Some FMs have also been tested in prospective or health system settings, including language models evaluated on diagnosis and risk prediction tasks and a pathology FM assessed in silent use for EGFR screening. Routine clinical use, however, shifts the requirement from performing well on benchmarks to producing outputs that support safe action under pre-specified error budgets. The key challenge is not only how accurate a model is on average, but when it is appropriate to act on its output. Clinicians need guidance on when to make a call, when to defer, and what follow up to order. This requires decision policies with pre-specified error budgets. Without them, model driven decisions can trigger unnecessary or harmful interventions, delay appropriate care, and waste limited diagnostic resources.</p>
+<p>Medical foundation models (FMs) achieve strong performance across imaging, pathology, and clinical prediction tasks. Several models have progressed to prospective evaluation and health system integration. Clinical deployment, however, requires more than high average accuracy. It requires decision policies that operate under explicit error budgets.</p>
 
-<p>For safe clinical use of foundation models, uncertainty quantification should provide two guarantees. First, it should identify cases where a prediction is reliable enough to act on. Second, it should return calibrated candidate diagnoses for the remaining cases to guide confirmatory testing or expert review. The first requires error control within the acted upon selected subset. The second requires coverage within the deferred group. With guarantees aligned to clinical decisions, a clinician can make a call under a specified error budget or defer with calibrated differential diagnosis sets, enabling safe action when evidence is sufficient and follow up when it is not.</p>
+<p>The central question is not only how accurate a model is, but when it is appropriate to act on its prediction. Clinicians must decide when to make a call, when to defer, and what follow-up to pursue. Without explicit error control, errors can concentrate among acted-upon patients. This can trigger unnecessary interventions, delay appropriate care, and waste limited diagnostic resources.</p>
 
-<p>To meet these guarantees, we introduce StratCP, a stratified conformal framework that combines selective action with calibrated deferral and can wrap any trained FM without retraining.</p>
+<p>Safe clinical use of foundation models requires two guarantees:</p>
 
 <ul>
-  <li>
-    <p>In the action arm, StratCP selects a subset of cases for immediate decisions while controlling the false-discovery rate (FDR), the expected fraction of incorrect acted-upon predictions, at a pre-specified level for task-specific outputs, such as tumor subtype or long-survivor status.</p>
-  </li>
-  <li>
-    <p>In the deferral arm, StratCP returns conformal prediction sets with selection-conditional coverage. This ensures that, among deferred patients, the true diagnosis falls within the set at the target frequency.</p>
-  </li>
+  <li><strong>Action guarantee:</strong> Identify patients for whom a prediction supports immediate action under a pre-specified error budget.</li>
+  <li><strong>Deferral guarantee:</strong> Provide calibrated prediction sets for remaining patients, so the true disease status lies within the set at a target frequency.</li>
 </ul>
 
-<p>When available, StratCP can use clinical diagnostic guidelines to produce clinically coherent prediction sets without sacrificing coverage.</p>
+<p>The first requires error control within the acted-upon subset. The second requires coverage conditional on deferral. Marginal accuracy or marginal conformal coverage alone does not ensure these properties.</p>
+
+<p>To address this gap, we introduce StratCP, a stratified conformal framework that converts foundation model outputs into decision-ready recommendations. StratCP operates as a post-processing layer and does not require retraining the underlying FM.</p>
+
+<ol>
+  <li>
+    <p><strong>Action arm:</strong> StratCP selects patients for immediate clinical action while controlling the false discovery rate (FDR), the expected fraction of incorrect selected predictions, at a user-specified level (e.g., 5%). Selection can be defined per disease status (e.g., tumor subtype, IDH mutant, favorable early survival).</p>
+  </li>
+  <li>
+    <p><strong>Deferral arm:</strong> For remaining patients, StratCP returns prediction sets that achieve selection-conditional coverage. Among deferred patients, the true disease status lies within the set at the target rate (e.g., 95%).</p>
+  </li>
+</ol>
+
+<p>When diagnostic guidelines define relationships among disease states, StratCP can incorporate this structure through a utility graph. This produces clinically coherent prediction sets without sacrificing coverage guarantees.</p>
 
 <center>
 <img src="/img/StratCP-1.png" />
@@ -180,21 +192,75 @@ StratCP lays the groundwork for safe use of medical foundation models by convert
 
 <h2 id="stratcp-provides-guarantees-for-safe-medical-decisions">StratCP Provides Guarantees for Safe Medical Decisions</h2>
 
-<p>StratCP builds on conformal prediction, a widely used approach for uncertainty quantification. Given a specified error tolerance, such as 5%, and a set of new patients, StratCP proceeds in two steps. First, it selects cases where the model prediction can be used for an immediate call, while keeping the error rate among these acted-upon cases below the pre-specified budget (for example, fewer than 5% of selected predictions are incorrect). Second, for cases not selected for an immediate call, StratCP returns a prediction set of plausible labels, such as <em>normal</em>, <em>mild</em>, with a guarantee that the true disease status lies in the set for 95% of deferred patients (see Methods for details and theoretical guarantees).</p>
+<p>StratCP builds on conformal prediction but extends it from marginal guarantees to action-aligned guarantees. Given a user-specified error tolerance (e.g., 5%) and labeled calibration data from the deployment setting, StratCP proceeds in two stages.</p>
 
-<p><strong>Step 1: Select confident predictions under an error budget:</strong> StratCP turns the model output into candidate decisions, such as assigning a specific disease status. For each candidate diagnosis, StratCP uses expert-labeled reference data to compute a confidence measure for each new patient and sets a decision threshold by testing against the reference data. Cases whose confidence exceeds this threshold are marked as confident. These confident calls can then be used directly for decision making under the chosen error budget.</p>
+<h3 id="action-arm-select-confident-predictions-under-an-explicit-error-budget">Action Arm: Select Confident Predictions Under an Explicit Error Budget</h3>
+
+<p>StratCP converts model outputs into candidate clinical actions, such as assigning a specific diagnosis or declaring favorable early survival (≥18 months).</p>
+
+<p>For each candidate action, StratCP:</p>
+<ul>
+  <li>Computes a confidence score using expert-labeled calibration data.</li>
+  <li>Constructs conformal p-values.</li>
+  <li>Applies false discovery rate control to select patients for whom expected prediction error remains within the pre-specified budget.</li>
+</ul>
+
+<p>Predictions that pass this threshold enter the action arm. Clinicians can act on these decisions with an explicit FDR guarantee (e.g., ≤5% incorrect among selected patients).</p>
 
 <center>
 <img src="/img/StratCP-2.png" />
 </center>
 
-<p><strong>Step 2: Calibrated prediction sets for deferred cases:</strong> The second step of StratCP returns prediction sets for patients whose FM-predicted diagnoses are not confident enough for an immediate call. After Step 1, deferred cases differ from the full reference set because they are enriched for ambiguity. StratCP accounts for this shift by calibrating uncertainty using only expert-labeled cases with similar ambiguity, following recent work on post-selection conformal inference. Given an unconfident case, StratCP finds a subset of expert-diagnosed patients whose FM outputs are similarly ambiguous, using the same confidence criterion as in Step 1. It then forms a prediction set by including each candidate diagnosis for which the corresponding test statistic falls within the expected range when compared to these similarly ambiguous expert-labeled cases.</p>
+<h3 id="deferral-arm-calibrated-prediction-sets-for-deferred-patients">Deferral Arm: Calibrated Prediction Sets for Deferred Patients</h3>
+
+<p>Patients not selected in the action arm enter the deferral arm. These patients were not chosen for immediate action because their model scores did not meet the error-controlled threshold. As a result, the deferred group is not a random subset of the population. It is enriched for harder cases, those with lower top-class probability, smaller separation between leading labels, or survival scores close to the action cutoff.</p>
+
+<p>This creates a distribution shift. Standard conformal prediction calibrates over the entire population, but here we need guarantees that apply specifically within the deferred subset.</p>
+
+<p>StratCP addresses this by recalibrating only on calibration cases that would also have been deferred under the same action rule. Concretely, it reapplies the action-arm selection procedure to the calibration data and forms a reference group consisting of cases whose model scores fall below the selection threshold. It then constructs prediction sets using conformity scores computed within this deferral-matched reference group.</p>
+
+<p>This ensures that coverage guarantees hold conditional on deferral, not just on average across all patients.</p>
+
+<p>For each deferred patient, StratCP:</p>
+<ul>
+  <li>
+    <p><strong>Identifies patients who would also have been deferred under the same action rule.</strong> StratCP re-applies the action-arm selection procedure to the calibration data and forms a reference group consisting only of patients whose model scores fall below the action threshold. These patients reflect situations where the model is not confident enough to support immediate action.</p>
+  </li>
+  <li>
+    <p><strong>Computes conformity scores within this reference group.</strong> For each candidate label (or survival time), StratCP evaluates how well it aligns with the model’s prediction using a conformity score (e.g., cumulative probability for classification, model-based CDF values for survival). These scores quantify how typical or atypical each outcome is relative to similar deferred patients.</p>
+  </li>
+  <li>
+    <p><strong>Constructs a prediction set with selection-conditional coverage.</strong> StratCP calibrates a cutoff using only the deferred reference group and includes all candidate labels whose conformity scores fall within this calibrated range. This guarantees that, among deferred patients, the true disease status lies in the prediction set at the target frequency (e.g., 95%).</p>
+  </li>
+</ul>
+
+<p>This ensures that among deferred patients, the true disease status lies within the prediction set at the target rate. In time-to-event settings, StratCP returns a one-sided lower prediction bound on survival time, with coverage conditional on deferral.</p>
 
 <center>
 <img src="/img/StratCP-3.png" />
 </center>
 
-<p><strong>Optional utility enhancement using diagnostic-guideline knowledge:</strong> When diagnostic-guideline knowledge about relationships among labels is available, StratCP includes an optional module that shapes prediction sets to better match clinical reasoning for deferred cases. StratCP changes the order in which candidate labels enter the prediction set by combining model scores with a CP utility graph derived from diagnostic guidelines that encodes which label combinations are preferred. Starting from the most probable model label, it iteratively adds the label that increases set utility the most, until the set reaches the size required for valid coverage.</p>
+<h3 id="utility-enhancement-using-diagnostic-guidelines">Utility Enhancement Using Diagnostic Guidelines</h3>
+
+<p>Standard conformal prediction constructs prediction sets using model scores alone. Labels enter the set in descending order of predicted probability. While this preserves statistical coverage, it can group clinically unrelated disease states, especially when model probabilities are close.</p>
+
+<p>In clinical settings, however, labels are structured. Diabetic retinopathy follows an ordinal severity scale. CNS tumor subtypes are organized by WHO grade. Many eye conditions share downstream management pathways. Prediction sets should reflect this structure so that deferred outputs align with how clinicians reason about follow-up.</p>
+
+<p>StratCP includes an optional utility module that integrates this clinical knowledge without changing the coverage guarantee.</p>
+
+<ul>
+  <li>
+    <p><strong>Encodes guideline relationships as a utility graph.</strong> Disease statuses are treated as nodes in a graph, and edges quantify how desirable it is for two labels to appear together. Edge weights can reflect ordinal adjacency, shared tumor grade, or overlap in recommended management actions derived from guidelines.</p>
+  </li>
+  <li>
+    <p><strong>Reorders candidate labels by combining predicted probability with utility.</strong> StratCP starts from the highest-probability label and iteratively adds high-probability alternatives that maximize clinical coherence with labels already selected.</p>
+  </li>
+  <li>
+    <p><strong>Returns the smallest prefix that satisfies coverage.</strong> After reordering, StratCP applies standard conformal calibration and returns the minimal set needed to achieve the target coverage level.</p>
+  </li>
+</ul>
+
+<p>This procedure reshapes prediction sets for clinical coherence while preserving finite-sample guarantees.</p>
 
 <center>
 <img src="/img/StratCP-4.png" />
@@ -202,29 +268,37 @@ StratCP lays the groundwork for safe use of medical foundation models by convert
 
 <h2 id="safe-use-of-medical-foundation-models-with-stratcp">Safe Use of Medical Foundation Models With StratCP</h2>
 
-<p>We evaluate StratCP in ophthalmology and oncology, pairing it with a vision foundation model on retinal images and a pathology foundation model on H&amp;E whole-slide images for diagnosis, biomarker prediction, and prognosis. StratCP controls error among acted-upon (selected) cases and returns valid coverage for deferred cases, so the outputs map to decision points.</p>
+<p>We evaluate StratCP in ophthalmology and neuro-oncology, pairing it with RETFound on retinal images and UNI on H&amp;E whole-slide images across diagnosis, biomarker prediction, tumor subtyping, and time-to-event prognosis. StratCP controls false discoveries among selected patients in the action arm and provides selection-conditional coverage for deferred patients, so its outputs map to clinical decision points:</p>
 
-<p>In eye-condition diagnosis, both StratCP and CP meet 95% coverage, but StratCP yields more actionable calls on average while keeping the selected-set error rate near the target.</p>
-
-<p>In IDH mutation status prediction, StratCP keeps the acted-upon error rate within the 5% budget for IDH-mutant calls (FDR 0.046), whereas a standard conformal prediction approach overspends the budget on its acted-upon subset (FDR 0.110).</p>
-
-<p>In time-to-event prognosis, StratCP reaches the nominal 95% coverage among selected long-survivors (0.952), while a threshold baseline falls short (0.797).</p>
-
-<p>We also show that utility graphs derived from expert diagnostic guidelines can shape prediction sets without sacrificing conformal coverage. This produces differential diagnosis sets that respect clinical adjacency, such as neighboring diabetic retinopathy stages or related CNS tumor categories, and better match the follow-up actions a clinician would take.</p>
-
-<p>Finally, in a neuro-oncology application, StratCP provides error-controlled diagnoses for adult-type diffuse glioma. By finalizing a subset of cases without reflex molecular testing within the error budget, it can reduce confirmatory assays, lowering laboratory cost and shortening time to diagnosis.</p>
+<ul>
+  <li>
+    <p>In multi-class eye-condition diagnosis (39 classes), StratCP and standard conformal prediction both achieve valid coverage, but StratCP supports action on more patients under the same 5% error budget (119.2 selected with FDR 0.048 vs. 97.5 with FDR 0.040).</p>
+  </li>
+  <li>
+    <p>In IDH mutation status prediction, StratCP stays within the 5% budget for IDH-mutant calls (FDR 0.046), while standard conformal prediction exceeds the budget on its selected subset (FDR 0.096).</p>
+  </li>
+  <li>
+    <p>In time-to-event prognosis for adult-type diffuse glioma, StratCP meets the 95% target among selected favorable early survivors (0.954), whereas a Top-1 threshold baseline falls short (0.777). StratCP also selects substantially more patients than marginal conformal selection (36.6 vs. 2.1), improving efficiency under the same error budget.</p>
+  </li>
+  <li>
+    <p>Utility graphs derived from diagnostic guidelines reshape deferred prediction sets without sacrificing coverage, improving clinical coherence for ordinal stages and WHO-grade relationships.</p>
+  </li>
+  <li>
+    <p>In adult-type diffuse glioma triage, StratCP supports H&amp;E-only diagnosis for a subset of patients under a fixed 5% error budget, reducing reliance on reflex molecular testing and lowering turnaround time and assay cost.</p>
+  </li>
+</ul>
 
 <h2 id="publication">Publication</h2>
 
-<p><a href="#">Error Controlled Decisions for Safe Use of Medical Foundation Models</a><br />
+<p><a href="https://www.medrxiv.org/content/10.64898/2026.02.23.26346927">Act or Defer: Error-Controlled Decision Policies for Medical Foundation Models</a><br />
 Ying Jin*, Intae Moon*, Marinka Zitnik<br />
-<em>In Review</em> 2026 <a href="#">[arXiv]</a></p>
+<em>In Review</em> 2026 <a href="https://www.medrxiv.org/content/10.64898/2026.02.23.26346927">[medRxiv]</a></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{jin26error,
-  title={Error Controlled Decisions for Safe Use of Medical Foundation Models},
+  title={Act or Defer: Error-Controlled Decision Policies for Medical Foundation Models},
   author={Jin, Ying and Moon, Intae and Zitnik, Marinka},
   journal={In Review},
-  url={},
+  url={https://www.medrxiv.org/content/10.64898/2026.02.23.26346927},
   year={2026}
 }
 </code></pre></div></div>
@@ -248,6 +322,90 @@ Ying Jin*, Intae Moon*, Marinka Zitnik<br />
                     <p class="title is-4">Latest News</p>
 
 <div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2026/02/23/Overton/">Overton Prize</a>-->
+        <p class="card-header-title">Feb 2026: &nbsp; <span class="has-text-primary">Overton Prize</span></p>
+<!--        <p class="card-header-item">Feb 2026</p>-->
+<!--        <p class="card-footer-item">Feb 23, 2026</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Our research has been recognized with the <strong>2026 Overton Prize.</strong></p>
+</p>-->
+            <p>Our research has been recognized with the <strong>2026 Overton Prize.</strong></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2026/02/23/Overton/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 23, 2026</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2026/02/22/StratCP/">'Act or Defer' Foundation Models</a>-->
+        <p class="card-header-title">Feb 2026: &nbsp; <span class="has-text-primary">'Act or Defer' Foundation Models</span></p>
+<!--        <p class="card-header-item">Feb 2026</p>-->
+<!--        <p class="card-footer-item">Feb 22, 2026</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New preprint on the <a href="https://www.medrxiv.org/content/10.64898/2026.02.23.26346927">safe use of medical foundation models for real-world decision making</a>. <a href="https://zitniklab.hms.harvard.edu/projects/StratCP">[Project website]</a></p>
+</p>-->
+            <p>New preprint on the <a href="https://www.medrxiv.org/content/10.64898/2026.02.23.26346927">safe use of medical foundation models for real-world decision making</a>. <a href="https://zitniklab.hms.harvard.edu/projects/StratCP">[Project website]</a></p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2026/02/22/StratCP/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 22, 2026</p>-->
+<!--    </footer>-->
+</div>
+    </div>
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2026/02/22/ARTIST/">Reasoning Model for Longitudinal Data</a>-->
+        <p class="card-header-title">Feb 2026: &nbsp; <span class="has-text-primary">Reasoning Model for Longitudinal Data</span></p>
+<!--        <p class="card-header-item">Feb 2026</p>-->
+<!--        <p class="card-footer-item">Feb 22, 2026</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>New preprint on <a href="https://arxiv.org/abs/2602.18645">multimodal reasoning model for time series</a>.</p>
+</p>-->
+            <p>New preprint on <a href="https://arxiv.org/abs/2602.18645">multimodal reasoning model for time series</a>.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2026/02/22/ARTIST/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Feb 22, 2026</p>-->
+<!--    </footer>-->
+</div>
+    </div>
     
     <div class="column is-12">
         <div class="card">
@@ -737,90 +895,6 @@ Ying Jin*, Intae Moon*, Marinka Zitnik<br />
     </div>
 <!--    <footer class="card-footer">-->
 <!--        <p class="card-footer-item">Published: Oct 5, 2025</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2025/09/29/ToolUniversePaper/">ToolUniverse: AI Agents for Science and Medicine</a>-->
-        <p class="card-header-title">Sep 2025: &nbsp; <span class="has-text-primary">ToolUniverse: AI Agents for Science and Medicine</span></p>
-<!--        <p class="card-header-item">Sep 2025</p>-->
-<!--        <p class="card-footer-item">Sep 29, 2025</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>New paper: <a href="https://arxiv.org/abs/2509.23426">ToolUniverse</a> introduces an open ecosystem for building AI scientists with 600+ scientific and biomedical tools. Build your AI co-scientists at <a href="https://aiscientist.tools/">https://aiscientist.tools</a>.</p>
-</p>-->
-            <p>New paper: <a href="https://arxiv.org/abs/2509.23426">ToolUniverse</a> introduces an open ecosystem for building AI scientists with 600+ scientific and biomedical tools. Build your AI co-scientists at <a href="https://aiscientist.tools/">https://aiscientist.tools</a>.</p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2025/09/29/ToolUniversePaper/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Sep 29, 2025</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2025/09/27/ToolUniverse/">Democratizing "AI Scientists" with ToolUniverse</a>-->
-        <p class="card-header-title">Sep 2025: &nbsp; <span class="has-text-primary">Democratizing "AI Scientists" with ToolUniverse</span></p>
-<!--        <p class="card-header-item">Sep 2025</p>-->
-<!--        <p class="card-footer-item">Sep 27, 2025</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>Our new initiative: <strong>Use Tool Universe to build an AI scientist for yourself from any language or reasoning model, whether open or closed. <a href="https://aiscientist.tools/">https://aiscientist.tools</a></strong></p>
-</p>-->
-            <p>Our new initiative: <strong>Use Tool Universe to build an AI scientist for yourself from any language or reasoning model, whether open or closed. <a href="https://aiscientist.tools/">https://aiscientist.tools</a></strong></p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2025/09/27/ToolUniverse/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Sep 27, 2025</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2025/09/15/InfEHR/">InfEHR in Nature Communications</a>-->
-        <p class="card-header-title">Sep 2025: &nbsp; <span class="has-text-primary">InfEHR in Nature Communications</span></p>
-<!--        <p class="card-header-item">Sep 2025</p>-->
-<!--        <p class="card-footer-item">Sep 15, 2025</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>Collaboration with Ben and Girish on <a href="https://www.nature.com/articles/s41467-025-63366-6">clinical phenotype resolution through deep geometric learning on electronic health records</a> published in Nature Communications.</p>
-</p>-->
-            <p>Collaboration with Ben and Girish on <a href="https://www.nature.com/articles/s41467-025-63366-6">clinical phenotype resolution through deep geometric learning on electronic health records</a> published in Nature Communications.</p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2025/09/15/InfEHR/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Sep 15, 2025</p>-->
 <!--    </footer>-->
 </div>
     </div>

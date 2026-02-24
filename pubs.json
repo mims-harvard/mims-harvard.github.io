@@ -161,6 +161,39 @@
     },
 
      {
+      "key": "submission26f",
+      "author": ["Ying Jin*", "Intae Moon*", "Marinka Zitnik"],
+      "title": "Act or Defer: Error-Controlled Decision Policies for Medical Foundation Models",
+      "venue": "In Review",
+      "year": "2026",
+      "thumbnail": "StratCP26.png",
+      "pdf": "https://www.medrxiv.org/content/10.64898/2026.02.23.26346927",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.02.23.26346927",
+      "type": "journal",
+      "supp":
+      {
+        "project website": "https://zitniklab.hms.harvard.edu/projects/StratCP",
+        "code": "https://github.com/mims-harvard/StratCP"
+      }
+    },
+
+
+     {
+      "key": "submission26e",
+      "author": ["Shvat Messica", "Jiawen Zhang", "Kevin Li", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
+      "title": "Adaptive Time Series Reasoning via Segment Selection",
+      "venue": "In Review",
+      "year": "2026",
+      "thumbnail": "ARTIST26.png",
+      "pdf": "https://arxiv.org/abs/2602.18645",
+      "url": "https://arxiv.org/abs/2602.18645",
+      "type": "journal",
+      "supp":
+      {
+      }
+    },
+
+     {
       "key": "submission26c",
       "author": ["Joaquín Polonuer", "Lucas Vittor", "Iñaki Arango", "Ayush Noori", "David A. Clifton", "Luciano Del Corro", "Marinka Zitnik"],
       "title": "Autonomous Knowledge Graph Exploration with Adaptive Breadth-Depth Retrieval",
