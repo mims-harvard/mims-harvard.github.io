@@ -291,7 +291,8 @@
       "supp":
       {
         "arXiv": "https://arxiv.org/abs/2511.11758",
-        "code": "https://github.com/shiningsunnyday/PT-BPE/"
+        "code": "https://github.com/shiningsunnyday/PT-BPE/",
+        "project website": "https://zitniklab.hms.harvard.edu/projects/GeoBPE"
       }
     },
 
