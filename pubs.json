@@ -53,6 +53,23 @@
     },
 
      {
+      "key": "submission26n",
+      "author": ["Shanghua Gao*", "Ada Fang*", "Marinka Zitnik"],
+      "title": "AutoScientists: Self-Organizing Agent Teams for Long-Running Scientific Experimentation",
+      "venue": "In Review",
+      "year": "2026",
+      "thumbnail": "AutoScientists26.png",
+      "pdf": "https://arxiv.org/abs/2605.28655",
+      "url": "https://arxiv.org/abs/2605.28655",
+      "type": "journal",
+      "supp":
+      {
+        "code": "https://github.com/mims-harvard/AutoScientists",
+        "project website": "https://autoscientists.openscientist.ai"
+      }
+    },
+
+     {
       "key": "submission25a1",
       "author": ["Shanghua Gao", "Richard Zhu", "Pengwei Sui", "Zhenglun Kong", "Sufian Aldogom", "Yepeng Huang", "Ayush Noori", "Reza Shamji", "Krishna Parvataneni", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
       "title": "Democratizing AI Scientists Using ToolUniverse",
@@ -92,6 +109,39 @@
       }
     },
 
+     {
+      "key": "submission26p",
+      "author": ["Lukas Fesser", "Hanlin Zhang", "Michelle M. Li", "Eric Wang", "Bryan Perozzi", "Shekoofeh Azizi", "Sham M. Kakade", "Marinka Zitnik"],
+      "title": "How Post-Training Shapes Biological Reasoning Models",
+      "venue": "In Review",
+      "year": "2026",
+      "thumbnail": "posttrain26.png",
+      "pdf": "https://arxiv.org/abs/2606.16517",
+      "url": "https://arxiv.org/abs/2606.16517",
+      "type": "journal",
+      "supp":
+      {
+        "code": "https://github.com/mims-harvard/bio-posttrain",
+        "model checkpoints": "https://huggingface.co/collections/mims-harvard/bio-posttrain"
+      }
+    },
+
+     {
+      "key": "submission26m",
+      "author": ["Lucas Vittor*", "Ayush Noori*", "Iñaki Arango*", "Joaquín Polonuer", "Sam Rodriques", "Andrew White", "David A. Clifton", "Marinka Zitnik"],
+      "title": "OptimusKG: Unifying Biomedical Knowledge in a Modern Multimodal Graph",
+      "venue": "In Review",
+      "year": "2026",
+      "thumbnail": "OptimusKG26.png",
+      "pdf": "https://arxiv.org/abs/2604.27269",
+      "url": "https://arxiv.org/abs/2604.27269",
+      "type": "journal",
+      "supp":
+      {
+        "code": "https://github.com/mims-harvard/OptimusKG",
+        "project website": "https://optimuskg.ai/"
+      }
+    },
 
      {
       "key": "submission24a",
@@ -126,6 +176,21 @@
       "supp":
       {
         "arXiv": "https://arxiv.org/abs/2506.10157"
+      }
+    },
+
+     {
+      "key": "submission26r",
+      "author": ["Mengmeng Ji", "Linying Zhang", "Marinka Zitnik", "George Hripcsak", "Jason D. Buenrostro", "Yin Cao"],
+      "title": "Toward AI-Powered Cancer Etiology Research",
+      "venue": "Cancer Discovery",
+      "year": "2026",
+      "thumbnail": "cancerdiscovery26.png",
+      "pdf": "https://doi.org/10.1158/2159-8290.CD-25-2098",
+      "url": "https://doi.org/10.1158/2159-8290.CD-25-2098",
+      "type": "journal",
+      "supp":
+      {
       }
     },
 
@@ -198,7 +263,7 @@
       "key": "submission26l",
       "author": ["Lukas Fesser*", "Yasha Ektefaie*", "Ada Fang*", "Sham M. Kakade", "Marinka Zitnik"],
       "title": "Evaluating Relational Reasoning in LLMs with REL",
-      "venue": "In Review",
+      "venue": "International Conference on Machine Learning, ICML",
       "year": "2026",
       "thumbnail": "REL26.png",
       "pdf": "https://arxiv.org/abs/2604.12176",
@@ -206,8 +271,8 @@
       "type": "journal",
       "supp":
       {
-        "code": "https://github.com/ada-f/rel",
-        "HuggingFace dataset": "https://huggingface.co/datasets/ada-f/rel",
+        "code": "https://github.com/mims-harvard/rel-reasoning",
+        "HuggingFace dataset": "https://huggingface.co/datasets/mims-harvard/rel",
         "project website": "https://zitniklab.hms.harvard.edu/REL/",
         "Kempner Institute News": "https://kempnerinstitute.harvard.edu/news/new-study-sheds-light-on-the-kinds-of-reasoning-tasks-that-ai-systems-still-struggle-to-do-well/"
       }
@@ -231,10 +296,28 @@
     },
 
      {
+      "key": "submission26o",
+      "author": ["Michael Desgagné", "Amirabbas Kazeminia", "Kübra Kaygisiz", "Bradley L Pentelute", "Marinka Zitnik"],
+      "title": "StereoPep: Do Molecular Models Understand Stereochemistry? A Benchmark on Synthetic Diastereomeric Peptides",
+      "venue": "In Review",
+      "year": "2026",
+      "thumbnail": "StereoPep26.png",
+      "pdf": "https://chemrxiv.org/doi/full/10.26434/chemrxiv.15003812/",
+      "url": "https://chemrxiv.org/doi/full/10.26434/chemrxiv.15003812/",
+      "type": "journal",
+      "supp":
+      {
+        "code": "https://github.com/amirika20/StereoPep-Curation",
+        "dataset": "https://huggingface.co/datasets/amirka20/StereoPep",
+        "project website": "https://amirika20.github.io/StereoPep-website/"
+      }
+    },
+
+     {
       "key": "submission26e",
       "author": ["Shvat Messica", "Jiawen Zhang", "Kevin Li", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
       "title": "Adaptive Time Series Reasoning via Segment Selection",
-      "venue": "In Review",
+      "venue": "International Conference on Machine Learning, ICML",
       "year": "2026",
       "thumbnail": "ARTIST26.png",
       "pdf": "https://arxiv.org/abs/2602.18645",
@@ -242,6 +325,8 @@
       "type": "journal",
       "supp":
       {
+        "project website": "https://zitniklab.hms.harvard.edu/ARTIST/",
+        "code": "https://github.com/mims-harvard/ARTIST"
       }
     },
 
@@ -266,7 +351,7 @@
       "key": "submission25h",
       "author": ["Wanxiang Shen", "Thinh H. Nguyen", "Michelle M. Li", "Yepeng Huang", "Intae Moon", "Nitya Nair", "Daniel Marbach", "Marinka Zitnik"],
       "title": "Generalizable AI Predicts Immunotherapy Outcomes Across Cancers and Treatments",
-      "venue": "In Review",
+      "venue": "Nature Medicine",
       "year": "2026",
       "thumbnail": "COMPASS25.png",
       "pdf": "",
@@ -283,7 +368,7 @@
 
      {
       "key": "submission25d1",
-      "author": ["Xiang Lin", "Zhenglun Kong", "Ghosh Soumya", "Manolis Kellis", "Marinka Zitnik"],
+      "author": ["Xiang Lin", "Zhenglun Kong", "Soumya Ghosh", "Manolis Kellis", "Marinka Zitnik"],
       "title": "CONCERT Predicts Niche-Aware Perturbation Responses in Spatial Transcriptomics",
       "venue": "In Review",
       "year": "2026",
@@ -454,7 +539,7 @@
       "key": "submission25u",
       "author": ["Zhenglun Kong", "Mufan Qiu", "John Boesen", "Xiang Lin", "Sukwon Yun", "Tianlong Chen", "Manolis Kellis", "Marinka Zitnik"],
       "title": "SPATIA: Multimodal Model for Prediction and Generation of Spatial Cell Phenotypes",
-      "venue": "In Review",
+      "venue": "International Conference on Machine Learning, ICML",
       "year": "2026",
       "thumbnail": "SPATIA25.png",
       "pdf": "https://www.arxiv.org/abs/2507.04704",
@@ -462,7 +547,9 @@
       "type": "journal",
       "supp":
       {
-        "arXiv": "https://www.arxiv.org/abs/2507.04704"
+        "arXiv": "https://www.arxiv.org/abs/2507.04704",
+        "code": "https://github.com/mims-harvard/SPATIA/",
+        "project website": "https://zitniklab.hms.harvard.edu/SPATIA/"
       }
     },
 
@@ -640,30 +727,14 @@
     },
 
      {
-      "key": "submission25s",
-      "author": ["Grey Kuling", "Marinka Zitnik"],
-      "title": "Ken Utilization Layer: Hebbian Replay Within a Student's Ken for Adaptive Knowledge Tracing",
-      "venue": "In Review",
-      "year": "2026",
-      "thumbnail": "DQVis25.png",
-      "pdf": "https://arxiv.org/abs/2507.00032",
-      "url": "https://arxiv.org/abs/2507.00032",
-      "type": "journal",
-      "supp":
-      {
-        "arXiv": "https://arxiv.org/abs/2507.00032"
-      }
-    },
-
-     {
       "key": "submission25k",
       "author": ["Huyen N Nguyen", "Sehi L’Yi", "Thomas C Smits", "Shanghua Gao", "Marinka Zitnik", "Nils Gehlenborg"],
-      "title": "Multimodal Retrieval of Genomics Data Visualizations",
-      "venue": "In Review",
+      "title": "Geranium: Multimodal Retrieval of Genomics Data Visualizations",
+      "venue": "IEEE Transactions on Visualization and Computer Graphics",
       "year": "2026",
       "thumbnail": "GenomicsDataVis25.png",
-      "pdf": "",
-      "url": "https://osf.io/zatw9_v1/",
+      "pdf": "https://ieeexplore.ieee.org/abstract/document/11480764",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11480764",
       "type": "journal",
       "supp":
       {
@@ -806,18 +877,18 @@
      {
       "key": "submission24t",
       "author": ["Ruth Johnson", "Uri Gottlieb", "Galit Shaham", "Lihi Eisen", "Jacob Waxman", "Stav Devons-Sberro", "Curtis R. Ginder", "Peter Hong", "Raheel Sayeed", "Ben Y. Reis", "Ran D. Balicer", "Noa Dagan", "Marinka Zitnik"],
-      "title": "ClinVec: Unified Embeddings of Clinical Codes Enable Knowledge-Grounded AI in Medicine",
-      "venue": "In Review",
+      "title": "Embeddings of Clinical Codes Enable Knowledge-Grounded AI in Medicine",
+      "venue": "npj Digital Medicine",
       "year": "2026",
       "thumbnail": "clinical-knowledge-embeddings.png",
-      "pdf": "",
-      "url": "https://www.medrxiv.org/content/10.1101/2024.12.03.24318322",
+      "pdf": "https://www.nature.com/articles/s41746-026-02664-9",
+      "url": "https://www.nature.com/articles/s41746-026-02664-9",
       "type": "journal",
       "supp":
       {
         "medRxiv": "https://www.medrxiv.org/content/10.1101/2024.12.03.24318322",
-        "code": "https://github.com/mims-harvard/Clinical-knowledge-embeddings",
-        "project website": "https://zitniklab.hms.harvard.edu/projects/Clinical-knowledge-embeddings"
+        "code": "https://github.com/mims-harvard/ClinVec",
+        "project website": "https://zitniklab.hms.harvard.edu/projects/ClinVec"
       }
     },
 
