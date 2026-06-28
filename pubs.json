@@ -487,7 +487,7 @@
 
      {
       "key": "submission25c1",
-      "author": ["Ayush Noori", "Adam Rodman", "Alan Karthikesalingam", "Bilal A. Mateen", "Christopher A. Longhurst", "Daniel Yang", "Dave deBronkart", "Gauden Galea", "Harold F. Wolf III", "Jacob Waxman", "Joshua C. Mandel", "Juliana Rotich", "Kenneth D. Mandl", "Maryam Mustafa", "Melissa Miles", "Nigam H. Shah", "Peter Lee", "Robert Korom", "Scott Mahoney", "Seth Hain", "Tien Yin Wong", "Trevor Mundel", "Vivek Natarajan", "Noa Dagan", "David A. Clifton", "Ran D. Balicer", "Isaac S. Kohane", "Marinka Zitnik"],
+      "author": ["Ayush Noori", "Aaron E. Boussina", "Hai Ho Bich", "James Anibal", "Julia Maslinski", "Manuel Burger", "Martin Faltys", "Adam Rodman", "Alan Karthikesalingam", "Alessandro Blasimme", "Annelia Itwaru", "Ben Kaplan", "Bilal A. Mateen", "Christopher A. Longhurst", "Daniel Yang", "Dave deBronkart", "Effy Vayena", "Fedor Sergeev", "Gauden Galea", "Ha Thi Hai Duong", "Harold F. Wolf III", "Jacob Waxman", "Joerg C. Schefold", "Joshua C. Mandel", "Juliana Rotich", "Kenneth D. Mandl", "Lily Poursoltan", "Maryam Mustafa", "Melissa Miles", "Nigam H. Shah", "Noa Dagan", "Pavan Bodanki", "Peter Lee", "Philipp Koralus", "Prathamesh Parchure", "Prem Timsina", "Ran D. Balicer", "Robert Korom", "Scott Mahoney", "Seth Hain", "Tien Yin Wong", "Trevor Mundel", "Vivek Natarajan", "Ankit Sakhuja", "Benjamin Glicksberg", "C. Louise Thwaites", "Gunnar Rätsch", "Karandeep Singh", "David A. Clifton", "Isaac S. Kohane", "Marinka Zitnik"],
       "title": "A Global Log for Medical AI",
       "venue": "In Review",
       "year": "2026",
@@ -497,7 +497,9 @@
       "type": "journal",
       "supp":
       {
-        "arXiv": "https://arxiv.org/abs/2510.04033"
+        "arXiv": "https://arxiv.org/abs/2510.04033",
+        "code": "https://github.com/mims-harvard/MedLog",
+        "project website": "https://medlogprotocol.ai/"
       }
     },
 
