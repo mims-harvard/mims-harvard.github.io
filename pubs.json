@@ -53,6 +53,56 @@
     },
 
      {
+      "key": "submission26z",
+      "author": ["Ayush Noori*", "Nic Fishman*", "Ada Fang**", "Lukas Fesser**", "Marinka Zitnik"],
+      "title": "World Models for Biomedicine",
+      "venue": "Cell",
+      "year": "2026",
+      "thumbnail": "BWM26.png",
+      "pdf": "https://www.cell.com/cell/fulltext/S0092-8674(26)01005-6",
+      "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01005-6",
+      "type": "journal",
+      "supp":
+      {
+        "preprint": "https://www.cell.com/cell/fulltext/S0092-8674(26)01005-6"
+      }
+    },
+
+     {
+      "key": "submission26u",
+      "author": ["Ada Fang", "Kevin Li*", "Ayush Noori*", "Lukas Fesser*", "Marinka Zitnik"],
+      "title": "Closing the Loop in AI-Driven Biomedical Discovery",
+      "venue": "In Review",
+      "year": "2026",
+      "thumbnail": "ClosingLoop26.png",
+      "pdf": "https://www.preprints.org/frontend/manuscript/dd2228577a571695b0c3c18e1864ea72/download_pub",
+      "url": "https://www.preprints.org/manuscript/202608.2107",
+      "type": "journal",
+      "supp":
+      {
+        "preprint": "https://www.preprints.org/manuscript/202608.2107"
+      }
+    },
+
+     {
+      "key": "submission26s",
+      "author": ["Shanghua Gao", "Ayush Noori", "Richard Zhu", "Curtis Ginder", "Zhenglun Kong", "Xiaorui Su", "Justin Kauffman", "Benjamin S. Glicksberg", "Joshua Lampert", "Ankit Sakhuja", "Ashwin Sawant", "ATHENA-R1 Evaluation Consortium", "David A. Clifton", "Noa Dagan", "Ran Balicer", "Marinka Zitnik"],
+      "title": "An AI Agent for Treatment Reasoning Over a Biomedical Tool Universe",
+      "venue": "In Review",
+      "year": "2026",
+      "thumbnail": "ATHENA26.png",
+      "pdf": "https://arxiv.org/abs/2606.28692",
+      "url": "https://arxiv.org/abs/2606.28692",
+      "type": "journal",
+      "supp":
+      {
+        "code": "https://github.com/mims-harvard/ATHENA",
+        "project website": "https://athena.openscientist.ai/",
+        "AAMC story": "https://www.aamc.org/news/medical-school-lab-scientists-get-new-partner-ai"
+      }
+    },
+
+     {
       "key": "submission26n",
       "author": ["Shanghua Gao*", "Ada Fang*", "Marinka Zitnik"],
       "title": "AutoScientists: Self-Organizing Agent Teams for Long-Running Scientific Experimentation",
@@ -86,7 +136,27 @@
         "ClawInstitute": "https://clawinstitute.aiscientist.tools/",
         "AI Agents in Nature": "https://www.nature.com/articles/d41586-025-03246-7",
         "AI Cell Models in Science": "https://www.science.org/content/article/can-ai-capture-mind-boggling-complexity-human-cell",
-        "Kempner Institute": "https://kempnerinstitute.harvard.edu/research/deeper-learning/from-models-to-scientists-building-ai-agents-for-scientific-discovery/"
+        "AI Agents in Nature Methods": "https://www.nature.com/articles/s41592-026-03088-9",
+        "Kempner Institute": "https://kempnerinstitute.harvard.edu/research/deeper-learning/from-models-to-scientists-building-ai-agents-for-scientific-discovery/",
+        "Anthropic Healthcare and Life Sciences": "https://www.anthropic.com/news/healthcare-life-sciences",
+        "Anthropic AI agents": "https://www.anthropic.com/research/agents-in-biology"
+      }
+    },
+
+
+     {
+      "key": "submission26v",
+      "author": ["Allan Balmain", "René Bernards", "Hans Clevers", "Karen H. Vousden", "Paul Workman", "Marinka Zitnik"],
+      "title": "Reflecting on 25 Years of Cancer Research: Transformative Advances and Unmet Expectations",
+      "venue": "Nature Reviews Cancer",
+      "year": "2026",
+      "thumbnail": "ViewpointCancer26.png",
+      "pdf": "https://www.nature.com/articles/s41568-026-00974-4",
+      "url": "https://www.nature.com/articles/s41568-026-00974-4",
+      "type": "journal",
+      "supp":
+      {
+        "preprint": "https://rdcu.be/K96GvX7r4csa"
       }
     },
 
@@ -106,6 +176,61 @@
         "arXiv": "https://arxiv.org/abs/2512.13724",
         "code": "https://github.com/mims-harvard/PROTON",
         "project website": "https://www.protonmodel.ai/"
+      }
+    },
+
+     {
+      "key": "submission25h",
+      "author": ["Wanxiang Shen", "Thinh H. Nguyen", "Michelle M. Li", "Yepeng Huang", "Intae Moon", "Nitya Nair", "Daniel Marbach", "Marinka Zitnik"],
+      "title": "Generalizable AI Predicts Immunotherapy Outcomes Across Cancers and Treatments",
+      "venue": "Nature Medicine",
+      "year": "2026",
+      "thumbnail": "COMPASS25.png",
+      "pdf": "https://www.nature.com/articles/s41591-026-04502-7",
+      "url": "https://www.nature.com/articles/s41591-026-04502-7",
+      "type": "journal",
+      "supp":
+      {
+        "medRxiv": "https://www.medrxiv.org/content/10.1101/2025.05.01.25326820",
+        "COMPASS code": "https://github.com/mims-harvard/COMPASS",
+        "project website": "https://www.immuno-compass.com/",
+        "Harvard Gazette": "https://news.harvard.edu/gazette/story/2025/12/your-digital-twin-might-save-your-life/",
+        "Harvard Medicine": "https://hms.harvard.edu/news/ai-tool-improves-prediction-who-will-respond-cancer-immunotherapy-drugs",
+        "Harvard Magazine": "https://www.harvardmagazine.com/2026/09"
+      }
+    },
+
+     {
+      "key": "submission26b",
+      "author": ["Pengwei Sui", "Michelle Li", "Brenton P. Munson", "Shanghua Gao", "Wanxiang Shen", "Valentina Giunchiglia", "Andrew Shen", "Yepeng Huang", "Zhenglun Kong", "Katherine Licon", "Trey Ideker", "Marinka Zitnik"],
+      "title": "Medea: An AI Agent for Therapeutic Reasoning Across Biological Contexts",
+      "venue": "In Review",
+      "year": "2026",
+      "thumbnail": "Medea26.png",
+      "pdf": "https://www.biorxiv.org/content/10.64898/2026.01.16.696667",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.01.16.696667",
+      "type": "journal",
+      "supp":
+      {
+        "project website": "https://medea.openscientist.ai/",
+        "code": "https://github.com/mims-harvard/MEDEA"
+      }
+    },
+
+     {
+      "key": "submission26t",
+      "author": ["Yepeng Huang", "Jiawen Zhang", "Michelle Dai", "Xiaorui Su", "Shanghua Gao", "Zi Wang", "Marinka Zitnik"],
+      "title": "Do LLMs Know What to Ask and When? Evaluating Multi-Turn Information Seeking",
+      "venue": "In Review",
+      "year": "2026",
+      "thumbnail": "MT-InfoSeek26.png",
+      "pdf": "https://arxiv.org/abs/2608.14808",
+      "url": "https://arxiv.org/abs/2608.14808",
+      "type": "journal",
+      "supp":
+      {
+        "code": "https://github.com/mims-harvard/MT-InfoSeek/tree/main",
+        "project website": "https://zitniklab.hms.harvard.edu/MT-InfoSeek/"
       }
     },
 
@@ -211,23 +336,6 @@
     },
 
      {
-      "key": "submission26b",
-      "author": ["Pengwei Sui", "Michelle Li", "Shanghua Gao", "Wanxiang Shen", "Valentina Giunchiglia", "Andrew Shen", "Yepeng Huang", "Zhenglun Kong", "Marinka Zitnik"],
-      "title": "Medea: An Omics AI Agent for Therapeutic Discovery",
-      "venue": "In Review",
-      "year": "2026",
-      "thumbnail": "Medea26.png",
-      "pdf": "https://www.biorxiv.org/content/10.64898/2026.01.16.696667",
-      "url": "https://www.biorxiv.org/content/10.64898/2026.01.16.696667",
-      "type": "journal",
-      "supp":
-      {
-        "project website": "https://medea.openscientist.ai/",
-        "code": "https://github.com/mims-harvard/MEDEA"
-      }
-    },
-
-     {
       "key": "submission26d",
       "author": ["Boyang Fu", "George Dasoulas", "Sameer Gabbita", "Xiang Lin", "Shanghua Gao", "Xiaorui Su", "Soumya Ghosh", "Marinka Zitnik"],
       "title": "STRAND: Sequence-Conditioned Transport for Single-Cell Perturbations",
@@ -282,7 +390,7 @@
       "key": "submission26j",
       "author": ["Shanghua Gao*", "Yuchang Su*", "Pengwei Sui", "Curtis Ginder", "Marinka Zitnik"],
       "title": "Qworld: Question-Specific Evaluation Criteria for LLMs",
-      "venue": "In Review",
+      "venue": "Conference on Language Modeling, COLM",
       "year": "2026",
       "thumbnail": "Qworld26.png",
       "pdf": "https://arxiv.org/abs/2603.23522",
@@ -302,8 +410,8 @@
       "venue": "In Review",
       "year": "2026",
       "thumbnail": "StereoPep26.png",
-      "pdf": "https://chemrxiv.org/doi/full/10.26434/chemrxiv.15003812/",
-      "url": "https://chemrxiv.org/doi/full/10.26434/chemrxiv.15003812/",
+      "pdf": "https://chemrxiv.org/doi/full/10.26434/chemrxiv.15003812/v1",
+      "url": "https://chemrxiv.org/doi/full/10.26434/chemrxiv.15003812/v1",
       "type": "journal",
       "supp":
       {
@@ -344,25 +452,6 @@
       { 
         "arXiv": "https://arxiv.org/abs/2601.13969",
         "ARK Agent CLI": "https://github.com/mims-harvard/ark-agent-cli"
-      }
-    },
-
-     {
-      "key": "submission25h",
-      "author": ["Wanxiang Shen", "Thinh H. Nguyen", "Michelle M. Li", "Yepeng Huang", "Intae Moon", "Nitya Nair", "Daniel Marbach", "Marinka Zitnik"],
-      "title": "Generalizable AI Predicts Immunotherapy Outcomes Across Cancers and Treatments",
-      "venue": "Nature Medicine",
-      "year": "2026",
-      "thumbnail": "COMPASS25.png",
-      "pdf": "",
-      "url": "https://www.medrxiv.org/content/10.1101/2025.05.01.25326820",
-      "type": "journal",
-      "supp":
-      {
-        "medRxiv": "https://www.medrxiv.org/content/10.1101/2025.05.01.25326820",
-        "COMPASS code": "https://github.com/mims-harvard/COMPASS",
-        "project website": "https://www.immuno-compass.com/",
-        "Harvard Gazette": "https://news.harvard.edu/gazette/story/2025/12/your-digital-twin-might-save-your-life/"
       }
     },
 
@@ -487,7 +576,7 @@
 
      {
       "key": "submission25c1",
-      "author": ["Ayush Noori", "Adam Rodman", "Alan Karthikesalingam", "Bilal A. Mateen", "Christopher A. Longhurst", "Daniel Yang", "Dave deBronkart", "Gauden Galea", "Harold F. Wolf III", "Jacob Waxman", "Joshua C. Mandel", "Juliana Rotich", "Kenneth D. Mandl", "Maryam Mustafa", "Melissa Miles", "Nigam H. Shah", "Peter Lee", "Robert Korom", "Scott Mahoney", "Seth Hain", "Tien Yin Wong", "Trevor Mundel", "Vivek Natarajan", "Noa Dagan", "David A. Clifton", "Ran D. Balicer", "Isaac S. Kohane", "Marinka Zitnik"],
+      "author": ["Ayush Noori", "Aaron E. Boussina", "Hai Ho Bich", "James Anibal", "Julia Maslinski", "Manuel Burger", "Martin Faltys", "Adam Rodman", "Alan Karthikesalingam", "Alessandro Blasimme", "Annelia Itwaru", "Ben Kaplan", "Bilal A. Mateen", "Christopher A. Longhurst", "Daniel Yang", "Dave deBronkart", "Effy Vayena", "Fedor Sergeev", "Gauden Galea", "Ha Thi Hai Duong", "Harold F. Wolf III", "Jacob Waxman", "Joerg C. Schefold", "Joshua C. Mandel", "Juliana Rotich", "Kenneth D. Mandl", "Lily Poursoltan", "Maryam Mustafa", "Melissa Miles", "Nigam H. Shah", "Noa Dagan", "Pavan Bodanki", "Peter Lee", "Philipp Koralus", "Prathamesh Parchure", "Prem Timsina", "Ran D. Balicer", "Robert Korom", "Scott Mahoney", "Seth Hain", "Tien Yin Wong", "Trevor Mundel", "Vivek Natarajan", "Ankit Sakhuja", "Benjamin Glicksberg", "C. Louise Thwaites", "Gunnar Rätsch", "Karandeep Singh", "David A. Clifton", "Isaac S. Kohane", "Marinka Zitnik"],
       "title": "A Global Log for Medical AI",
       "venue": "In Review",
       "year": "2026",
@@ -497,7 +586,9 @@
       "type": "journal",
       "supp":
       {
-        "arXiv": "https://arxiv.org/abs/2510.04033"
+        "arXiv": "https://arxiv.org/abs/2510.04033",
+        "code": "https://github.com/mims-harvard/MedLog",
+        "project website": "https://medlogprotocol.ai/"
       }
     },
 
@@ -588,8 +679,8 @@
       "key": "submission25f",
       "author": ["Shanghua Gao", "Richard Zhu", "Zhenglun Kong", "Ayush Noori", "Xiaorui Su", "Curtis Ginder", "Theodoros Tsiligkaridis", "Marinka Zitnik"],
       "title": "TxAgent: An AI Agent for Therapeutic Reasoning Across a Universe of Tools",
-      "venue": "In Review",
-      "year": "2026",
+      "venue": "",
+      "year": "2025",
       "thumbnail": "TxAgent25.png",
       "pdf": "",
       "url": "https://arxiv.org/abs/2503.10970",
@@ -597,8 +688,7 @@
       "supp":
       {
         "arXiv": "https://arxiv.org/abs/2503.10970",
-        "TxAgent code": "https://github.com/mims-harvard/TxAgent",
-        "ToolUniverse code": "https://github.com/mims-harvard/ToolUniverse",
+        "code": "https://github.com/mims-harvard/TxAgent",
         "project website": "https://zitniklab.hms.harvard.edu/TxAgent",
         "Kempner Institute": "https://kempnerinstitute.harvard.edu/research/deeper-learning/txagent-an-ai-agent-for-therapeutic-reasoning-across-a-universe-of-211-tools",
         "New York Times": "https://www.nytimes.com/2025/03/20/well/ai-drug-repurposing.html",
@@ -636,7 +726,7 @@
       {
         "bioRxiv": "https://www.biorxiv.org/content/10.1101/2024.12.10.627665",
         "project website": "https://zitniklab.hms.harvard.edu/ProCyon/",
-        "ProCyon code": "https://github.com/mims-harvard/ProCyon",
+        "code": "https://github.com/mims-harvard/ProCyon",
         "Kempner Institute": "https://kempnerinstitute.harvard.edu/research/deeper-learning/procyon-a-multimodal-foundation-model-for-protein-phenotypes/"
       }
     },
@@ -846,11 +936,11 @@
       "key": "submission25o",
       "author": ["Weijiang Li", "Xiaomin Li", "Ethan Lavallee", "Alice Saparov", "Marinka Zitnik", "Christopher Cassa"],
       "title": "From Text to Translation: Using Language Models to Prioritize Variants for Clinical Review",
-      "venue": "In Review",
+      "venue": "Genome Medicine",
       "year": "2026",
-      "thumbnail": "infEHR25.png",
-      "pdf": "https://www.medrxiv.org/content/10.1101/2024.12.31.24319792",
-      "url": "https://www.medrxiv.org/content/10.1101/2024.12.31.24319792",
+      "thumbnail": "clinVarLLM26.png",
+      "pdf": "https://link.springer.com/article/10.1186/s13073-026-01661-7",
+      "url": "https://link.springer.com/article/10.1186/s13073-026-01661-7",
       "type": "journal",
       "supp":
       {
@@ -1114,17 +1204,17 @@
 
      {
       "key": "submission24s",
-      "author": ["Wanxiang Shen", "Chao Cui", "Xiaorui Su", "Zaixi Zhang", "Alejandro Velez-Arce", "Jianming Wang", "Xiangcheng Shi", "Yanbing Zhang", "Jie Wu", "Yu Zong Chen", "Marinka Zitnik"],
-      "title": "Activity Cliff-Informed Contrastive Learning for Molecular Property Prediction",
-      "venue": "In Review",
+      "author": ["Chao Cui", "Xiaorui Su", "Zaixi Zhang", "Alejandro Velez-Arce", "Jianmin Wang", "Xiangcheng Shi", "Yanbin Zhang", "Jie Wu", "Yu Zong Chen", "Marinka Zitnik", "Wanxiang Shen"],
+      "title": "Activity-Cliff Awareness Enables Robust Graph Learning for Molecular Property Prediction",
+      "venue": "Nature Communications",
       "year": "2026",
       "thumbnail": "MoExtend.png",
-      "pdf": "",
-      "url": "https://chemrxiv.org/engage/chemrxiv/article-details/6470c963be16ad5c57f5526c",
+      "pdf": "https://www.nature.com/articles/s41467-026-75713-2",
+      "url": "https://www.nature.com/articles/s41467-026-75713-2",
       "type": "journal",
       "supp":
       {
-        "arXiv": "https://chemrxiv.org/engage/chemrxiv/article-details/6470c963be16ad5c57f5526c",
+        "arXiv": "https://chemrxiv.org/doi/full/10.26434/chemrxiv-2023-5cz7s-v2",
         "code": "https://github.com/shenwanxiang/ACANet"
       }
     },
