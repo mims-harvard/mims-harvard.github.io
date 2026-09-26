@@ -106,7 +106,7 @@
       "key": "submission26n",
       "author": ["Shanghua Gao*", "Ada Fang*", "Marinka Zitnik"],
       "title": "AutoScientists: Self-Organizing Agent Teams for Long-Running Scientific Experimentation",
-      "venue": "In Review",
+      "venue": "NeurIPS",
       "year": "2026",
       "thumbnail": "AutoScientists26.png",
       "pdf": "https://arxiv.org/abs/2605.28655",
@@ -143,6 +143,90 @@
       }
     },
 
+     {
+      "key": "submission26a1",
+      "author": ["Ada Fang", "Nikitha Thoduguli", "Lukas Fesser", "Hanlin Zhang", "Sham M. Kakade", "Marinka Zitnik"],
+      "title": "When Do Biological Reasoning Models Use Their Biological Inputs?",
+      "venue": "In Review",
+      "year": "2026",
+      "thumbnail": "biomirage26.png",
+      "pdf": "https://arxiv.org/abs/2610.00898",
+      "url": "https://arxiv.org/abs/2610.00898",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2610.00898",
+        "code": "https://github.com/mims-harvard/bio-mirage", 
+        "project website": "https://zitniklab.hms.harvard.edu/biomirage/"
+      }
+    },
+
+    {
+      "key": "submission26f1",
+      "author": ["Amy Dong*", "Michelle M. Li*", "Kerr Ding", "Sumaiya Nazeen", "Ayush Noori", "Yepeng Huang", "Shanghua Gao", "Dylan Ritter", "Jalwa Afroz", "Alexander B. H. Henderson", "Lorenz Studer", "Yunan Luo", "Vikram Khurana", "Giovanni Parmigiani", "Marinka Zitnik"],
+      "title": "Multimodal Protein Representations Across Human Brain Cell Types",
+      "venue": "In Review",
+      "year": "2026",
+      "thumbnail": "SEMPER26.png",
+      "pdf": "https://www.biorxiv.org/content/10.64898/2026.11.10.765762",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.11.10.765762",
+      "type": "journal",
+      "supp":
+      {
+        "bioRxiv": "https://www.biorxiv.org/content/10.64898/2026.11.10.765762",
+        "code": "https://github.com/mims-harvard/SEMPER", 
+        "project website": "https://zitniklab.hms.harvard.edu/SEMPER/"
+      }
+    },
+
+     {
+      "key": "submission26c1",
+      "author": ["Gaurav Bhatt", "Marinka Zitnik"],
+      "title": "Latent Decision Flow Rewards for Clinical Guideline Reasoning",
+      "venue": "In Review",
+      "year": "2026",
+      "thumbnail": "guider26.png",
+      "pdf": "https://arxiv.org/abs/2610.38709",
+      "url": "https://arxiv.org/abs/2610.38709",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2610.38709",
+        "code": "https://github.com/mims-harvard/GUIDER", 
+        "project website": "https://zitniklab.hms.harvard.edu/GUIDER/"
+      }
+    },
+
+    {
+      "key": "submission26e1",
+      "author": ["Gokul Gowri", "Nic Fishman", "William N Colgan", "Minming Wang", "Yusuke Kijima", "Sachin A Kumar", "Aleksandr Zimin", "Luke W Koblan", "Marinka Zitnik", "Zachary D Smith", "Stephen Bates", "Philippe Rigollet", "Jonathan S Weissman"],
+      "title": "Learning Developmental Dynamics from Lineage Context",
+      "venue": "In Review",
+      "year": "2026",
+      "thumbnail": "DevelopmentDynamics26.png",
+      "pdf": "https://arxiv.org/abs/2610.40447",
+      "url": "https://arxiv.org/abs/2610.40447",
+      "type": "journal",
+      "supp":
+      {
+      }
+    },
+
+     {
+      "key": "submission26b1",
+      "author": ["Seffi Cohen", "Liat Antwarg Friedman", "Amir Anisman", "Ruth Johnson", "Michelle M. Li", "Ayush Noori", "Ben Reis", "Ran Balicer", "Noa Dagan", "Marinka Zitnik"],
+      "title": "Agentic Discovery of Blood Biomarker from Distilled Private Health Records",
+      "venue": "In Review",
+      "year": "2026",
+      "thumbnail": "agenticbiomarkers26.png",
+      "pdf": "https://arxiv.org/abs/2610.04749",
+      "url": "https://arxiv.org/abs/2610.04749",
+      "type": "journal",
+      "supp":
+      {
+        "arXiv": "https://arxiv.org/abs/2610.04749"
+      }
+    },
 
      {
       "key": "submission26v",
@@ -238,7 +322,7 @@
       "key": "submission26p",
       "author": ["Lukas Fesser", "Hanlin Zhang", "Michelle M. Li", "Eric Wang", "Bryan Perozzi", "Shekoofeh Azizi", "Sham M. Kakade", "Marinka Zitnik"],
       "title": "How Post-Training Shapes Biological Reasoning Models",
-      "venue": "In Review",
+      "venue": "NeurIPS",
       "year": "2026",
       "thumbnail": "posttrain26.png",
       "pdf": "https://arxiv.org/abs/2606.16517",
@@ -254,17 +338,33 @@
      {
       "key": "submission26m",
       "author": ["Lucas Vittor*", "Ayush Noori*", "Iñaki Arango*", "Joaquín Polonuer", "Sam Rodriques", "Andrew White", "David A. Clifton", "Marinka Zitnik"],
-      "title": "OptimusKG: Unifying Biomedical Knowledge in a Modern Multimodal Graph",
-      "venue": "In Review",
+      "title": "Unifying Biomedical Knowledge in a Modern Multimodal Graph",
+      "venue": "Scientific Data",
       "year": "2026",
       "thumbnail": "OptimusKG26.png",
-      "pdf": "https://arxiv.org/abs/2604.27269",
-      "url": "https://arxiv.org/abs/2604.27269",
+      "pdf": "https://www.nature.com/articles/s41597-026-08302-z",
+      "url": "https://www.nature.com/articles/s41597-026-08302-z",
       "type": "journal",
       "supp":
       {
         "code": "https://github.com/mims-harvard/OptimusKG",
+        "arXiv": "https://arxiv.org/abs/2604.27269",
         "project website": "https://optimuskg.ai/"
+      }
+    },
+
+    {
+      "key": "submission26d1",
+      "author": ["Benjamin S Glicksberg", "Morgan Cheatham", "Matteo Danieletto", "Julia Maslinski", "Joshua Lampert", "Felix Richter", "Amee Kapadia", "Ankit Sakhuja", "Beau Norgeot", "Eyal Klang", "Kenneth Nelson", "Bert Arnrich", "Ariel D Stern", "Marinka Zitnik", "Joel T Dudley", "Alexander W Charney", "Girish N Nadkarni", "Anthony Costa"],
+      "title": "Vision Wearables with Artificial Intelligence to Close the Sensory Gap in Patient Characterization",
+      "venue": "npj Digital Medicine",
+      "year": "2026",
+      "thumbnail": "Wearables26.png",
+      "pdf": "https://www.nature.com/articles/s41746-026-03156-6",
+      "url": "https://www.nature.com/articles/s41746-026-03156-6",
+      "type": "journal",
+      "supp":
+      {
       }
     },
 
@@ -339,7 +439,7 @@
       "key": "submission26d",
       "author": ["Boyang Fu", "George Dasoulas", "Sameer Gabbita", "Xiang Lin", "Shanghua Gao", "Xiaorui Su", "Soumya Ghosh", "Marinka Zitnik"],
       "title": "STRAND: Sequence-Conditioned Transport for Single-Cell Perturbations",
-      "venue": "In Review",
+      "venue": "NeurIPS",
       "year": "2026",
       "thumbnail": "STRAND26.png",
       "pdf": "https://www.arxiv.org/abs/2602.10156",
@@ -407,7 +507,7 @@
       "key": "submission26o",
       "author": ["Michael Desgagné", "Amirabbas Kazeminia", "Kübra Kaygisiz", "Bradley L Pentelute", "Marinka Zitnik"],
       "title": "StereoPep: Do Molecular Models Understand Stereochemistry? A Benchmark on Synthetic Diastereomeric Peptides",
-      "venue": "In Review",
+      "venue": "NeurIPS",
       "year": "2026",
       "thumbnail": "StereoPep26.png",
       "pdf": "https://chemrxiv.org/doi/full/10.26434/chemrxiv.15003812/v1",
@@ -457,8 +557,8 @@
 
      {
       "key": "submission25d1",
-      "author": ["Xiang Lin", "Zhenglun Kong", "Soumya Ghosh", "Manolis Kellis", "Marinka Zitnik"],
-      "title": "CONCERT Predicts Niche-Aware Perturbation Responses in Spatial Transcriptomics",
+      "author": ["Xiang Lin", "Zhenglun Kong", "Boyang Fu", "Soumya Ghosh", "Manolis Kellis", "Marinka Zitnik"],
+      "title": "Generative modeling of spatially resolved perturbation responses with CONCERT",
       "venue": "In Review",
       "year": "2026",
       "thumbnail": "CONCERT25.png",
@@ -508,7 +608,7 @@
       "key": "submission26a",
       "author": ["Yidong Zhou", "Jintai Chen", "Jinglei Cheng", "Xu Cao", "Yuanyuan Zhang", "Gopal Karemore", "Marinka Zitnik", "Frederic T. Chong", "Junyu Liu", "Tianfan Fu", "Zhiding Liang"],
       "title": "Quantum Machine Assisted Drug Discovery",
-      "venue": "Npj Drug Discovery",
+      "venue": "npj Drug Discovery",
       "year": "2026",
       "thumbnail": "QuantumDrugDiscovery26.png",
       "pdf": "https://www.nature.com/articles/s44386-025-00033-2",
@@ -557,7 +657,7 @@
 
      {
       "key": "submission25g",
-      "author": ["Ada Fang", "Zaixi Zhang", "Andrew Zhou", "Marinka Zitnik"],
+      "author": ["Ada Fang", "Michael Desgagné", "Zaixi Zhang", "Andrew Zhou", "Joseph Loscalzo", "Bradley L. Pentelute", "Marinka Zitnik"],
       "title": "ATOMICA: Learning Universal Representations of Intermolecular Interactions",
       "venue": "In Review",
       "year": "2026",
@@ -611,7 +711,7 @@
 
      {
       "key": "submission26g",
-      "author": ["Nan Huang", "Nan_Huang", "Haishuai Wang", "Zihuai He", "Marinka Zitnik", "Xiang Zhang"],
+      "author": ["Nan Huang", "Haishuai Wang", "Zihuai He", "Marinka Zitnik", "Xiang Zhang"],
       "title": "Repurposing Foundation Model for Generalizable Medical Time Series Classification",
       "venue": "International Conference on Learning Representations, ICLR",
       "year": "2026",
@@ -699,8 +799,8 @@
      {
       "key": "submission25i",
       "author": ["Kevin Li", "Marinka Zitnik"],
-      "title": "Prompting Decision Transformers for Zero-Shot Reach-Avoid Policies",
-      "venue": "In Review",
+      "title": "Hindsight Relabeling is All You Need for Reach-Avoid Learning",
+      "venue": "NeurIPS",
       "year": "2026",
       "thumbnail": "RADT25.png",
       "pdf": "",
