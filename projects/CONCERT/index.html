@@ -4,16 +4,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CONCERT predicts niche-aware perturbation responses in spatial transcriptomics - Zitnik Lab</title>
+    <title>Generative modeling of spatially resolved perturbation responses with CONCERT - Zitnik Lab</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="shortcut icon" type="image/png"
            href="/favicon.png" 
     />
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>CONCERT predicts niche-aware perturbation responses in spatial transcriptomics | Zitnik Lab</title>
+<title>Generative modeling of spatially resolved perturbation responses with CONCERT | Zitnik Lab</title>
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="CONCERT predicts niche-aware perturbation responses in spatial transcriptomics" />
+<meta property="og:title" content="Generative modeling of spatially resolved perturbation responses with CONCERT" />
 <meta name="author" content="Marinka Zitnik" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="virtual cell models, perturbation prediction, spatial modeling, generative model" />
@@ -23,11 +23,11 @@
 <meta property="og:site_name" content="Zitnik Lab" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="CONCERT predicts niche-aware perturbation responses in spatial transcriptomics" />
+<meta property="twitter:title" content="Generative modeling of spatially resolved perturbation responses with CONCERT" />
 <meta name="twitter:site" content="@marinkazitnik" />
 <meta name="twitter:creator" content="@Marinka Zitnik" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Marinka Zitnik"},"description":"virtual cell models, perturbation prediction, spatial modeling, generative model","headline":"CONCERT predicts niche-aware perturbation responses in spatial transcriptomics","url":"https://zitniklab.hms.harvard.edu/projects/CONCERT/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Marinka Zitnik"},"description":"virtual cell models, perturbation prediction, spatial modeling, generative model","headline":"Generative modeling of spatially resolved perturbation responses with CONCERT","url":"https://zitniklab.hms.harvard.edu/projects/CONCERT/"}</script>
 <!-- End Jekyll SEO tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162129505-1"></script>
 <script>
@@ -126,7 +126,7 @@
         <section class="hero  is-medium  is-bold is-primary"  style="background: url('/hero.jpg') no-repeat center center; background-size: cover;" >
     <div class="hero-body">
         <div class="container">
-            <p class="title is-2">CONCERT predicts niche-aware perturbation responses in spatial transcriptomics</p>
+            <p class="title is-2">Generative modeling of spatially resolved perturbation responses with CONCERT</p>
             <p class="subtitle is-3"></p>
             
         </div>
@@ -148,109 +148,109 @@
     <div class="box has-background-info has-text-white">
 
 <p>
-Spatial perturbation transcriptomics measures how genetic or chemical edits alter gene expression while preserving tissue context. Perturbation outcomes depend on a cell's intrinsic state and also on how effects propagate across cellular microenvironments. 
+Spatial perturbation transcriptomics measures gene expression responses to genetic or chemical perturbations in intact tissue. Each response depends on the intrinsic state of a cell and on its niche, the neighboring cells through which perturbation effects propagate. Spatial profiling requires fixed or lysed tissue, so the same cell cannot be measured before and after perturbation, and counterfactual prediction is central to the analysis of these data.
 </p>
 <p>
-We present CONCERT, a niche-aware generative model that embeds perturbation context and learns spatial kernels with a Gaussian process variational autoencoder to predict perturbation effects across tissue. We formalize three tasks: patch, border, and niche, predicting responses in nearby unperturbed regions, at tissue interfaces, and as a function of surrounding microenvironments. We evaluate CONCERT on Perturb-map lung datasets. CONCERT outperforms state-of-the-art models (dissociated counterfactuals, spatialized perturbation models, and kNN), reducing E-distance by up to 33.77% (patch), 26.05% (border), and 33.74% (niche) versus the next best, with mean absolute error down by up to 23.28% and Pearson correlation up by up to 9.10%. 
+We present CONCERT, a niche-aware Gaussian process variational autoencoder that embeds each perturbation with the niche of the receiving cell and learns a spatial kernel for each perturbation, whose lengthscale sets how far the effect extends in tissue. We evaluate CONCERT in within-niche prediction, for held-out cells in the niche where a perturbation was measured, and in cross-slide prediction, for a slide from which the perturbation was withheld during training. On a SPAC-seq screen of hundreds of knockouts at single-cell resolution and on Perturb-map lung tumors at spot resolution, CONCERT predicts response magnitude and gene ranking more accurately than counterfactual models trained on dissociated cells, spatial perturbation models and spatial nearest neighbor aggregation.
 </p>
 <p>
-Two case studies go beyond benchmarking. In dextran sodium sulfate-induced colitis, CONCERT reconstructs spatial gene expression at unmeasured time points, produces longitudinal comparisons across unpaired mice, resolves inter-mouse heterogeneity, and recovers consistent temporal declines of inflammation-associated genes across regions. In ischemic stroke, CONCERT predicts responses under variable lesion sizes and in a 3D formulation across brain sections, capturing lesion-core and peri-lesion patterns. CONCERT performs niche-aware counterfactual prediction, reconstructs missing spatial data, and models perturbation responses across tissues.
+In dextran sodium sulfate colitis, where each mouse is sampled once, CONCERT reconstructs spatial gene expression at unmeasured time points, enabling longitudinal comparison that separates changes over time from differences between mice. The predictions recover the nonmonotonic course of injury, which peaks at day 9 and resolves by day 21. In ischemic stroke, CONCERT predicts responses to lesions of different sizes and locations, in single sections and across serial sections in three dimensions, and reproduces the expression patterns of the lesion core and perilesional tissue. Across lung tumor, colon and brain tissue, CONCERT predicts niche-aware counterfactual responses at locations where a perturbation was not measured and reconstructs missing spatial data.
 </p>
 </div>
 
-<h2 id="concert-niche-aware-virtual-cell-model">CONCERT: Niche-Aware Virtual Cell Model</h2>
+<h2 id="concert-niche-aware-generative-model-of-spatial-perturbations">CONCERT: Niche-Aware Generative Model of Spatial Perturbations</h2>
 
-<p>CONCERT is a niche-aware generative counterfactual model that predicts how a perturbation’s effect disperses across tissue and alters local gene expression. It takes a tissue’s spatial transcriptomics slide(s) as input—spot/cell gene expression, 2D/3D coordinates, and attributes such as perturbation identity, disease state, dose, lesion size, or time—and outputs predicted post-perturbation expression (rGEX) at user-selected locations, including unseen or imputed spots.</p>
+<p>The response of a cell to a perturbation depends on its intrinsic state and on its spatial context. Paracrine signals, direct cell contacts, the local supply of nutrients and immune surveillance shape the transcriptional state of a cell, and dissociated single-cell assays remove cells from this context. Perturbation models trained on dissociated cells treat each cell independently of its neighbors, and existing methods for spatial perturbation data identify responsive regions and programs but cannot predict the effect of a perturbation at locations where it was not measured.</p>
 
-<p>The <strong>perturbation module</strong> disentangles spot attributes into compact latent codes: categorical variables (e.g., CRISPR knockout, niche, slide ID) are embedded; continuous variables (e.g., time or lesion size) pass through small MLPs, enabling smooth interpolation and “what-if” edits by swapping only the perturbation code while holding cell state and position fixed. The <strong>spatial module</strong> then propagates the encoded perturbation through tissue with a perturbation-specific Gaussian-process kernel that has learnable, anisotropic length-scales and spot-specific cutoffs. This induces non-local, directionally aware dispersion that respects boundaries and niches rather than copying nearest neighbors. The <strong>generation module</strong> is a variational decoder that combines latent cell state and the propagated perturbation field to reconstruct rGEX; evaluating it at new coordinates or times enables resolution enhancement, in-painting, temporal interpolation, and 3D propagation across sections.</p>
-
-<p>CONCERT (i) performs counterfactual prediction for patch, border, niche, and cross-niche tasks; (ii) densifies slides and in-paints damaged regions while preserving plausible responses; (iii) interpolates time and lesion size; and (iv) supports 2D and 3D kernels for multi-section tissue. Predictions come with calibrated uncertainty (≈95% coverage in-distribution).</p>
+<p>CONCERT predicts the response gene expression (rGEX) of a cell, the expression profile of the cell after perturbation, from its unperturbed expression, its spatial coordinates and its niche. For counterfactual prediction, the user changes the perturbation label of a cell, or a continuous attribute such as dose, time or lesion size. CONCERT adapts the new perturbation effect to the cell and its niche and decodes the corresponding rGEX.</p>
 
 <center>
-<img src="/img/CONCERT-1.png" />
+<img src="/img/CONCERT-Figure1c.png" />
 </center>
 
-<h2 id="patch-predictions-within-the-same-niche">Patch Predictions Within the Same Niche</h2>
+<p>CONCERT consists of three modules. The <strong>disentanglement module</strong> keeps the perturbation embedding separate from the basal embedding of the cell, which allows the model to apply a perturbation to a cell that was never exposed to it. The module further splits the basal embedding into a non-spatial component for intrinsic cell identity and state and a spatial component for variation associated with location. A basal spatial field models smooth anatomical variation with random Fourier features, and a perturbation field models how the effect of each perturbation varies across tissue as the sum of a core effect and a spatial adjustment. The adjustment uses a radial basis function kernel with a perturbation-specific lengthscale. A short lengthscale describes a localized effect, and a long lengthscale describes an effect that extends over a broad tissue region. A mapping shared across perturbations predicts the lengthscale from the perturbation embedding, so perturbations observed in few cells borrow their spatial range from related perturbations.</p>
 
-<p>Given a patch of spots in source state A, predict their rGEX after perturbing them to target state B observed nearby within the same niche. This probes whether a model can reproduce local responses without crossing tissue interfaces.</p>
+<p>The <strong>perturbation-signal module</strong> pools the basal states of neighboring cells into a niche embedding and uses a feature-wise linear modulation (FiLM) layer to rescale and shift the perturbation effect. The same perturbation can therefore act more strongly, more weakly or in the opposite direction in different niches. In screens with non-targeting controls, the module separates the biological effect from the expression shift caused by guide delivery, and a learned slide term absorbs residual technical variation between tissue sections. The <strong>generative module</strong> maps the latent state of a cell to basal expression and applies the perturbation effect, guide shift and slide term on the log scale to define a negative binomial distribution over gene counts.</p>
 
-<p>Across 12 conditions (4 slides × 3 patch sizes), CONCERT achieved the best E-distance in 9/12, closely approaching or surpassing the spatial kNN “upper bound” on multiple slides. Relative to the next-best method, E-distance dropped by up to 33.77%, with consistent gains in MAE and PCC. Average rank was 2.33, near the spatial kNN’s 2.08.</p>
+<p>The same model supports several in silico experiments. Changing the number and arrangement of perturbed cells predicts responses to lesion sizes and locations that were not measured, and changing a continuous attribute predicts responses at unmeasured times or doses. CONCERT infers the basal state at unmeasured locations from their coordinates and neighboring cells, which allows it to reconstruct damaged or missing tissue regions, deconvolve mixed spots into sub-spots and predict how the recovered cells respond to a perturbation. A three-dimensional formulation extends the perturbation field across serial tissue sections.</p>
 
 <center>
-<img src="/img/CONCERT-2.png" />
+<img src="/img/CONCERT-Figure1a.png" />
 </center>
 
-<h2 id="predictions-at-tissue-boundaries">Predictions at Tissue Boundaries</h2>
+<h2 id="within-niche-and-cross-slide-prediction">Within-Niche and Cross-Slide Prediction</h2>
 
-<p>Perturb spots along the edge of a patch and predict their rGEX, a boundary-aware setting with sharp transitions at tissue interfaces.</p>
+<p>We benchmarked CONCERT on SPAC-seq, a spatial perturbation screen of hundreds of knockouts measured at single-cell resolution across five tissue slides. Perturbations are introduced in vivo, so the locations that receive each perturbation cannot be controlled, and many combinations of perturbation and location are not measured. In within-niche prediction, a spatial patch of unperturbed cells is withheld from training and predicted into each target state measured in the same niche, which tests prediction at unmeasured locations. In cross-slide prediction, a perturbation is withheld from an entire target slide and its response is predicted from other slides, which tests whether the learned effect is a property of the perturbation and not of a single slide.</p>
 
-<p>CONCERT topped 8/12 conditions and reduced E-distance by up to 26.05% versus the next-best model, with an average rank of 2.50, again approaching the spatial kNN bound (2.41). Improvements held across MAE and PCC.</p>
+<p>We evaluate the root-mean-square error (RMSE) and the Spearman rank correlation between predicted and measured log-fold changes relative to unperturbed control cells. RMSE measures the magnitude of the predicted response, and the rank correlation measures whether the model orders the responding genes correctly. We compared CONCERT with reference strategies that average measured cells, perturbation models trained on dissociated cells (scGEN, BioLORD, GEARS and STATE), and spatial perturbation models (Celcomen, CellAgentChat and Steamboat).</p>
+
+<p>In within-niche prediction across 87 knockouts, CONCERT reaches a log-fold-change rank correlation of 0.427, compared with 0.340 for the target-mean baseline, 0.336 for scGEN, 0.305 for GEARS and 0.301 for BioLORD. The three spatial perturbation models and STATE reach correlations at or below zero. CONCERT has a mean rank of 1.54, ranks first on 78% of knockouts, and has the lowest mean RMSE among the twelve methods.</p>
 
 <center>
-<img src="/img/CONCERT-3.png" />
+<img src="/img/CONCERT-Figure2b.png" />
 </center>
 
-<h2 id="perturb-the-niche-predict-the-core">Perturb the Niche, Predict the Core</h2>
+<p>In cross-slide prediction across 85 knockout and target slide pairs, CONCERT reaches a rank correlation of 0.703, compared with 0.627 for the target-mean baseline, 0.602 for BioLORD, 0.532 for GEARS and 0.496 for scGEN and STATE. CONCERT ranks first on all 85 pairs and has the lowest RMSE (3.81). A control that predicts no change in expression has an RMSE of 4.47, and six of the seven published models have a higher RMSE than this control. Paired Wilcoxon signed-rank tests show that CONCERT improves significantly over every competing method in rank correlation and RMSE in each setting.</p>
 
-<p>Perturb the surrounding niche (border) from A to B and predict rGEX inside the core patch—requiring models to capture non-local propagation from neighbors. Only methods that model microenvironmental influence can perform this task.</p>
+<p>The learned spatial parameters are interpretable. Across the 87 knockouts, the niche gain increases and the lengthscale decreases with the fraction of section area reached by the knockout cells. CONCERT learns niche-dependent responses for knockouts spread across many microenvironments and spatially uniform responses for knockouts confined to a single cluster of cells. A model trained on a tumor section from Perturb-FISH, an imaging-based CRISPR screen, shows the same pattern.</p>
 
-<p>Only CONCERT and one spatialized baseline could run this task; CONCERT was best in all 9/9 conditions, lowering E-distance by up to 33.74% and achieving the top average rank (1.0) across slides and patch sizes.</p>
+<h2 id="deconvolution-of-mixed-spots-and-imputation-of-missing-regions">Deconvolution of Mixed Spots and Imputation of Missing Regions</h2>
+
+<p>Sequencing-based spatial assays such as Perturb-map measure several cells at each spot, so each observed profile is a mixture of cell states. CONCERT predicts the expression of a given cell state at a given position, which allows it to decompose a mixed spot into its component states and represent the recovered cells as sub-spots. On pseudo-bulk spots formed from SPAC-seq cells, non-negative least squares with the location-specific signatures of CONCERT reduced the mean absolute error of the estimated composition from 0.297 to 0.157 and increased the Pearson correlation with the true composition from 0.415 to 0.499.</p>
+
+<p>CONCERT also reconstructs tissue regions that were damaged or not measured. We withheld five contiguous knockout patches of SPAC-seq tissue, so reconstruction required inferring the basal state from the neighborhood and the perturbation effect from cells of the same knockout elsewhere on the slide. CONCERT reached a mean log-fold-change Spearman correlation of 0.65, compared with 0.61 for SpaIM, 0.56 for Tangram and 0.35 for SpatialScope. Unlike these imputation methods, CONCERT models the perturbation effect and predicts the response of the reconstructed cells.</p>
+
+<h2 id="niche-dependent-perturbation-responses-in-lung-tumors">Niche-Dependent Perturbation Responses in Lung Tumors</h2>
+
+<p>On Perturb-map Visium profiles of mouse lung tumors carrying CRISPR knockouts of Jak2, Tgfbr2 and Ifngr2, CONCERT achieved the highest log-fold-change rank correlation and the lowest RMSE for each knockout against five published methods. Its rank correlations were 0.475, 0.445 and 0.570 for Tgfbr2, Ifngr2 and Jak2, compared with 0.348, 0.339 and 0.256 for scGEN, the strongest competing method.</p>
+
+<p>We then moved the same Jak2 knockout in silico into a second tumor-core region and into a tumor surface region surrounded by normal tissue. The predicted profile agreed more closely with the observed Jak2 knockout profile in the tumor core than at the tumor surface (R<sup>2</sup> = 0.940 and 0.781), where basal Plac8 expression is lower. When each knockout was placed into 40 niches sampled across the slide, the magnitude of the predicted response decreased as the fraction of tumor cells in the niche increased (Spearman ρ = −0.82 for Tgfbr2, −0.73 for Ifngr2 and −0.85 for Jak2). Gene set enrichment analysis identified epithelial–mesenchymal transition (EMT) as the program most consistently associated with niche composition, with a weaker EMT response in tumor-rich niches for all three knockouts. For Tgfbr2, this result agrees with the established role of TGF-β signaling in EMT.</p>
+
+<h2 id="time-course-of-inflammation-and-recovery-in-colitis">Time Course of Inflammation and Recovery in Colitis</h2>
+
+<p>We applied CONCERT to a MERFISH atlas of colitis induced by dextran sodium sulfate (DSS), with colon tissue collected at day 0 and at days 3, 9 and 21. Sampling is terminal, so each of the 15 mice was measured at a single time point, and changes over time are confounded with differences between mice. Time enters CONCERT as a continuous attribute, so the model predicts the cells of each mouse at every time point while keeping the basal state and position of each cell. This gives a predicted time course for each mouse that preserves its cell states and tissue structure.</p>
+
+<p>Using a panel of 17 DSS damage and regeneration markers, the predicted course rose to a peak at day 9 and declined by day 21, as observed, with ratios of predicted to observed daily means of 1.00, 0.91, 1.00 and 1.02 for days 0, 3, 9 and 21. The predicted rate of change captured the switch from increasing to decreasing inflammation after day 9. Because each mouse is measured once, such a per-mouse trajectory cannot be obtained by interpolating its own measurements.</p>
+
+<p>For the eight markers whose expression increased at least 1.5-fold from day 0 to day 9, including Il1b, Mmp3 and Cxcl10, the predicted profiles agreed with the measured profiles across time points and individual mice. The predicted fraction of cells expressing each marker differed from the observed fraction by 1.79 percentage points. Maps of inflamed cells derived from the predictions followed the observed trend in each mouse, low at early time points, highest at day 9 and lower by day 21.</p>
 
 <center>
-<img src="/img/CONCERT-4.png" />
+<img src="/img/CONCERT-Figure5.png" />
 </center>
 
-<h2 id="patch-predictions-across-niches">Patch Predictions Across Niches</h2>
+<h2 id="responses-to-simulated-lesions-in-ischemic-stroke">Responses to Simulated Lesions in Ischemic Stroke</h2>
 
-<p>Perturb a patch in state A toward state B that is observed in a different niche, forcing extrapolation across microenvironments.</p>
+<p>We applied CONCERT to spatial transcriptomics of the mouse brain 3 days after photothrombosis, which induces a focal ischemic stroke in the cortex. The dataset contains four coronal sections from a stroke mouse and four from a sham control mouse, and all counterfactual predictions were made on the sham sections, which contain no lesion. Photothrombosis offers limited control over the location and size of a lesion, so we placed simulated lesions on sham tissue. For the same 200-spot lesion, CONCERT predicted a larger increase of the injury marker Lcn2 in the cortex than in the thalamus. Enlarging a cortical lesion from 25 to 400 spots increased predicted Lcn2 expression within each lesion spot from 0.57 to 0.74, which indicates that effects from neighboring lesion spots accumulate. CONCERT also predicted expression of the perilesional marker Spp1 in a rim around the lesion and not in its core, as measured in the stroke brain.</p>
 
-<p>CONCERT ranked first in 7/12 conditions and reduced E-distance by up to ~24% (with additional significant gains across MAE and PCC), yielding the best overall average rank (2.91) across all tests. Uncertainty calibration was near nominal 95% coverage.</p>
-
-<center>
-<img src="/img/CONCERT-5.png" />
-</center>
-
-<h2 id="in-vivo-case-studies-mouse-colitis-and-stroke">In Vivo Case Studies: Mouse Colitis and Stroke</h2>
-
-<p>We asked whether CONCERT can support causal <strong>“what-if” reasoning in vivo beyond what experiments can measure or control.</strong> Two case studies test distinct axes:</p>
-
-<ul>
-  <li>colitis time course: reconstruct unmeasured time points and enable longitudinal comparisons across different mice; and</li>
-  <li>ischemic stroke: simulate location and size-specific lesions in 2D and extend dispersion to 3D across brain sections.</li>
-</ul>
-
-<p>In colitis time course, CONCERT reconstructed spatial rGEX at day 30, an unseen day 50, and day 73 for each mouse, revealing consistent regional declines in inflammation markers (Clca4b, Ido1, Il1b) that were obscured by inter-mouse variability in the raw data. In stroke, CONCERT simulated multi-region ischemia and lesion-size effects on healthy slides, recovering known gene-level patterns (core-maximal Gm42418 and peri-lesion Lcn2/Spp1) and capturing z-axis propagation in a 3D kernel across sections.</p>
-
-<p>These studies demonstrate a practical virtual cell/tissue workflow: fill in missing spatial data, run counterfactual interventions at user-chosen locations, sizes, and times, and compare conditions that are otherwise unpaired or infeasible to acquire. The same engine also supports resolution enhancement and in-painting of damaged tissue while preserving biologically plausible responses.</p>
-
-<center>
-<img src="/img/CONCERT-6.png" />
-</center>
+<p>A three-dimensional version of CONCERT extends the perturbation field across sections. Predicted Lgals1 expression in the lesion region was highest in the first sham section and lowest in the fourth, and the fractions of spots called as lesion were 0.243, 0.188, 0.115 and 0.086 across the four sections, compared with 0.267, 0.208, 0.113 and 0.017 observed in the stroke brain. The 3D model predicted a stronger response than the 2D model, as expected when the effect extends and accumulates across sections.</p>
 
 <h2 id="publication">Publication</h2>
 
-<p><a href="https://www.biorxiv.org/content/10.1101/2025.11.08.686890">CONCERT predicts niche-aware perturbation responses in spatial transcriptomics</a><br />
-Xiang Lin, Zhenglun Kong, Ghosh Soumya, Manolis Kellis, Marinka Zitnik<br />
-<em>In Review</em> 2025 <a href="https://www.biorxiv.org/content/10.1101/2025.11.08.686890">[bioRxiv]</a></p>
+<p><a href="https://www.biorxiv.org/content/10.1101/2025.11.08.686890">Generative modeling of spatially resolved perturbation responses with CONCERT</a><br />
+Xiang Lin, Zhenglun Kong, Boyang Fu, Soumya Ghosh, Manolis Kellis, Marinka Zitnik<br />
+<em>In Review</em> 2026 <a href="https://www.biorxiv.org/content/10.1101/2025.11.08.686890">[bioRxiv]</a></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{lin2025concert,
-  title={CONCERT predicts niche-aware perturbation responses in spatial transcriptomics},
-  author={Lin, Xiang and Kong, Zhenglun and Ghosh, Soumya and Kellis, Manolis and Zitnik, Marinka},
+  title={Generative modeling of spatially resolved perturbation responses with CONCERT},
+  author={Lin, Xiang and Kong, Zhenglun and Fu, Boyang and Ghosh, Soumya and Kellis, Manolis and Zitnik, Marinka},
   journal={In Review},
   url={https://www.biorxiv.org/content/10.1101/2025.11.08.686890},
-  year={2025}
+  year={2026}
 }
 </code></pre></div></div>
 
 <h2 id="code-and-data-availability">Code and Data Availability</h2>
 
-<p>Pytorch implementation of CONCERT is available in the <a href="https://github.com/mims-harvard/CONCERT">GitHub repository</a>.</p>
+<p>Python implementation of CONCERT is available in the <a href="https://github.com/mims-harvard/CONCERT">GitHub repository</a>.</p>
+
+<p>Processed Perturb-map data are available on <a href="https://figshare.com/articles/dataset/Datasets_-_Perturb-Map/29198468">Figshare</a>, and the raw data are available via GEO under accession number <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE193460">GSE193460</a>. The Perturb-FISH dataset is available from the <a href="https://doi.org/10.35077/ace-gem-get">original study</a>. SPAC-seq data are available from the <a href="https://spac.pku-genomics.org">original study</a>. The processed DSS colitis MERFISH dataset is available on <a href="https://datadryad.org/dataset/doi:10.5061/dryad.rjdfn2zh3">Dryad</a>. Processed mouse brain stroke data are available on <a href="https://figshare.com/articles/dataset/Mouse_brain_stroke_dataset/29882900">Figshare</a>.</p>
 
 <h2 id="authors">Authors</h2>
 
 <ul>
   <li><a href="">Xiang Lin</a></li>
   <li><a href="">Zhenglun Kong</a></li>
+  <li><a href="">Boyang Fu</a></li>
   <li><a href="">Soumya Ghosh</a></li>
   <li><a href="https://compbio.mit.edu/">Manolis Kellis</a></li>
   <li><a href="https://zitniklab.hms.harvard.edu/">Marinka Zitnik</a></li>
@@ -263,6 +263,34 @@ Xiang Lin, Zhenglun Kong, Ghosh Soumya, Manolis Kellis, Marinka Zitnik<br />
                     <p class="title is-4">Latest News</p>
 
 <div class="columns is-multiline">
+    
+    <div class="column is-12">
+        <div class="card">
+    
+    <header class="card-header">
+<!--        <a class="card-header-title" href="/2026/09/26/NeurIPS-papers/">Five papers Accepted at NeurIPS 2026</a>-->
+        <p class="card-header-title">Sep 2026: &nbsp; <span class="has-text-primary">Five papers Accepted at NeurIPS 2026</span></p>
+<!--        <p class="card-header-item">Sep 2026</p>-->
+<!--        <p class="card-footer-item">Sep 26, 2026</p>-->
+    </header>
+    
+    <div class="card-content">
+<!--        <div class="content">-->
+<!--            -->
+<!--            <p><p>Five papers accepted to <a href="https://neurips.cc/">NeurIPS 2026:</a> (1) <a href="https://arxiv.org/abs/2605.28655">AutoScientists with self-organizing agent teams for long-running scientific experimentation</a>, (2) <a href="https://arxiv.org/abs/2505.19337">Prompting decision transformers for zero-shot reach-avoid policies</a>, (3) <a href="https://arxiv.org/abs/2606.16517">How post-training shapes biological reasoning models</a>, (4) <a href="https://www.arxiv.org/abs/2602.10156">STRAND with sequence-conditioned transport for single-cell perturbations</a>, and (5) <a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv.15003812/v1">StereoPep on molecular models for stereochemistry modeling</a>.</p>
+</p>-->
+            <p>Five papers accepted to <a href="https://neurips.cc/">NeurIPS 2026:</a> (1) <a href="https://arxiv.org/abs/2605.28655">AutoScientists with self-organizing agent teams for long-running scientific experimentation</a>, (2) <a href="https://arxiv.org/abs/2505.19337">Prompting decision transformers for zero-shot reach-avoid policies</a>, (3) <a href="https://arxiv.org/abs/2606.16517">How post-training shapes biological reasoning models</a>, (4) <a href="https://www.arxiv.org/abs/2602.10156">STRAND with sequence-conditioned transport for single-cell perturbations</a>, and (5) <a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv.15003812/v1">StereoPep on molecular models for stereochemistry modeling</a>.</p>
+
+<!--        </div>-->
+<!--        <div class="has-text-centered">-->
+<!--            <a href="/2026/09/26/NeurIPS-papers/" class="button is-primary">Read more</a>-->
+<!--        </div>-->
+    </div>
+<!--    <footer class="card-footer">-->
+<!--        <p class="card-footer-item">Published: Sep 26, 2026</p>-->
+<!--    </footer>-->
+</div>
+    </div>
     
     <div class="column is-12">
         <div class="card">
@@ -792,34 +820,6 @@ Xiang Lin, Zhenglun Kong, Ghosh Soumya, Manolis Kellis, Marinka Zitnik<br />
     </div>
 <!--    <footer class="card-footer">-->
 <!--        <p class="card-footer-item">Published: Apr 11, 2026</p>-->
-<!--    </footer>-->
-</div>
-    </div>
-    
-    <div class="column is-12">
-        <div class="card">
-    
-    <header class="card-header">
-<!--        <a class="card-header-title" href="/2026/03/21/OpenAIScientists/">Open 'AI Scientists' Initiative</a>-->
-        <p class="card-header-title">Mar 2026: &nbsp; <span class="has-text-primary">Open 'AI Scientists' Initiative</span></p>
-<!--        <p class="card-header-item">Mar 2026</p>-->
-<!--        <p class="card-footer-item">Mar 21, 2026</p>-->
-    </header>
-    
-    <div class="card-content">
-<!--        <div class="content">-->
-<!--            -->
-<!--            <p><p>Excited to launch <strong>Open AI Scientists, our initiative to empower scientific discovery with AI scientists.</strong> <a href="https://www.openscientist.ai">[https://www.openscientist.ai]</a></p>
-</p>-->
-            <p>Excited to launch <strong>Open AI Scientists, our initiative to empower scientific discovery with AI scientists.</strong> <a href="https://www.openscientist.ai">[https://www.openscientist.ai]</a></p>
-
-<!--        </div>-->
-<!--        <div class="has-text-centered">-->
-<!--            <a href="/2026/03/21/OpenAIScientists/" class="button is-primary">Read more</a>-->
-<!--        </div>-->
-    </div>
-<!--    <footer class="card-footer">-->
-<!--        <p class="card-footer-item">Published: Mar 21, 2026</p>-->
 <!--    </footer>-->
 </div>
     </div>
